@@ -15,9 +15,9 @@ Date: 2026-08-26
 - [x] Record hashes and limits of three sprint-start result anchors.
 - [x] Snapshot minimum source/test/example files into this repository.
 - [x] Validate schema JSON and run copied unit tests (7/7 passed).
-- [ ] Create the first Git commit.
-- [ ] Record the commit ID below.
+- [x] Create the first Git commit.
+- [x] Record the commit ID below.
 
-Day 1 Gate status: `READY_FOR_COMMIT`
+Day 1 Gate status: `PASS`
 
-Initial commit: `PENDING`
+Initial scope commit: `06cf18e0fceee8601e241d35b2c1d05e16fdb6d4`

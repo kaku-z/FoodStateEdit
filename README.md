@@ -34,6 +34,7 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `benchmark/`: anchor and future pilot/test manifests;
 - `results/CURRENT_RESULTS_INVENTORY.md`: evidence available at sprint start;
 - `DAY1_CHECKLIST.md`: completion evidence for the first sprint day.
+- `DAY2_CHECKLIST.md`: auditable entry point for the 60-case benchmark freeze.
 
 ## Local contract validation
 
