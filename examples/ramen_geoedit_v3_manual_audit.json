@@ -1,0 +1,14 @@
+{
+  "scene_id": "uec256_noodle_20_1897_insert_geoedit_v3",
+  "audit_resolution": "full image plus 200% source and target crops",
+  "exactly_two_chopsticks": true,
+  "no_forbidden_objects": true,
+  "continuous_noodle_bowl_to_grip": true,
+  "grip_between_chopsticks": true,
+  "correct_contact_z_order": true,
+  "old_source_duplicate_absent": true,
+  "source_hole_texture_natural": false,
+  "no_visible_source_hole_patch": false,
+  "contact_and_root_shadows_natural": true,
+  "notes": "Action is correct. The vacated source region is still locally over-smooth and remains visible at enlarged inspection."
+}

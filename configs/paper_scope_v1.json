@@ -1,0 +1,43 @@
+{
+  "schema_version": "foodstateedit.paper_scope.v1",
+  "freeze_id": "foodstateedit-scope-v1-20260826",
+  "task_type": "structured_control_food_manipulation_image_editing",
+  "training_free": true,
+  "text_only": false,
+  "fully_automatic": false,
+  "target_case_count": 60,
+  "formal_seeds": [1, 2, 3],
+  "families": [
+    {
+      "id": "liquid",
+      "dish": "soup",
+      "utensil": "spoon",
+      "action": "scoop_liquid"
+    },
+    {
+      "id": "granular",
+      "dish": "fried_rice",
+      "utensil": "spoon_or_spatula",
+      "action": "scoop_payload"
+    },
+    {
+      "id": "strand",
+      "dish": "ramen_or_udon",
+      "utensil": "chopsticks",
+      "action": "lift_strand"
+    },
+    {
+      "id": "strand_contact",
+      "dish": "pasta",
+      "utensil": "fork",
+      "action": "twirl_and_lift"
+    }
+  ],
+  "layers": ["rigid", "contact", "material", "hole", "protect"],
+  "primary_outcomes": [
+    "action_success",
+    "photo_success",
+    "preservation_success",
+    "strict_end_to_end_success"
+  ]
+}

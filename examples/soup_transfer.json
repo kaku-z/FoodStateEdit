@@ -1,0 +1,87 @@
+{
+  "schema_version": "foodstateedit.scene.v0.1",
+  "scene_id": "soup_transfer_v0_1",
+  "dish_type": "soup",
+  "metadata": {
+    "purpose": "state-level liquid transfer before image conditioning"
+  },
+  "objects": [
+    {
+      "id": "stockpot",
+      "material": "rigid",
+      "semantic_class": "pot",
+      "state": {}
+    },
+    {
+      "id": "serving_bowl",
+      "material": "rigid",
+      "semantic_class": "bowl",
+      "state": {}
+    },
+    {
+      "id": "broth_in_pot",
+      "material": "liquid",
+      "semantic_class": "broth",
+      "state": {
+        "volume_ml": 800.0,
+        "capacity_ml": 1000.0,
+        "fill_level": 0.8,
+        "viscosity": 0.12
+      }
+    },
+    {
+      "id": "broth_in_bowl",
+      "material": "liquid",
+      "semantic_class": "broth",
+      "state": {
+        "volume_ml": 100.0,
+        "capacity_ml": 500.0,
+        "fill_level": 0.2,
+        "viscosity": 0.12
+      }
+    }
+  ],
+  "relations": [
+    {"type": "contained_in", "subject": "broth_in_pot", "object": "stockpot"},
+    {"type": "contained_in", "subject": "broth_in_bowl", "object": "serving_bowl"}
+  ],
+  "actions": [
+    {
+      "id": "pour_one_serving",
+      "type": "transfer_liquid",
+      "source": "broth_in_pot",
+      "target": "broth_in_bowl",
+      "amount_ml": 250.0
+    }
+  ],
+  "constraints": [
+    {
+      "id": "broth_volume_conserved",
+      "type": "conserve_total",
+      "objects": ["broth_in_pot", "broth_in_bowl"],
+      "field": "volume_ml"
+    },
+    {
+      "id": "bowl_receives_serving",
+      "type": "equals",
+      "object": "broth_in_bowl",
+      "field": "volume_ml",
+      "value": 350.0
+    },
+    {
+      "id": "bowl_fill_level",
+      "type": "range",
+      "object": "broth_in_bowl",
+      "field": "fill_level",
+      "min": 0.69,
+      "max": 0.71
+    },
+    {
+      "id": "broth_remains_in_bowl",
+      "type": "relation_exists",
+      "relation": "contained_in",
+      "subject": "broth_in_bowl",
+      "object": "serving_bowl"
+    }
+  ]
+}

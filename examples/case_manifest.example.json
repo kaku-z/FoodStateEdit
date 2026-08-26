@@ -1,0 +1,53 @@
+{
+  "schema_version": "foodstateedit.case.v1",
+  "case_id": "soup_spoon_example",
+  "split": "pilot",
+  "source": {
+    "path": "benchmark/sources/soup_spoon_example.png",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "kind": "controlled",
+    "license": "example-only",
+    "has_target_utensil": false,
+    "width": 736,
+    "height": 592
+  },
+  "scene": {
+    "family": "liquid",
+    "dish": "clear_broth",
+    "container": "bowl",
+    "food_materials": ["liquid"]
+  },
+  "action": {
+    "type": "scoop_liquid",
+    "utensil": "spoon",
+    "payload_relation": "contained_by_spoon",
+    "amount": 20,
+    "amount_unit": "ml"
+  },
+  "controls": {
+    "contact_anchors": [[436, 278]],
+    "target_direction": [1, -1],
+    "manual_correction": true,
+    "annotation_seconds": 120
+  },
+  "layers": {
+    "rigid": "mask_rigid.png",
+    "contact": "mask_contact.png",
+    "material": "mask_material.png",
+    "hole": "mask_hole.png",
+    "protect": "mask_protect.png",
+    "edit_alpha": "edit_alpha.png"
+  },
+  "constraints": [
+    {
+      "id": "exactly_one_spoon",
+      "category": "action",
+      "criterion": "count == 1"
+    }
+  ],
+  "provenance": {
+    "builder": "foodstateedit-conditioning",
+    "builder_commit": "uncommitted-example",
+    "created_at": "2026-08-26T00:00:00+09:00"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "foodstateedit.scene.v0.1",
+  "scene_id": "fried_rice_scoop_mix_v0_1",
+  "dish_type": "fried_rice",
+  "metadata": {
+    "purpose": "granular mass and ingredient conservation prototype"
+  },
+  "objects": [
+    {
+      "id": "wok",
+      "material": "rigid",
+      "semantic_class": "wok",
+      "state": {}
+    },
+    {
+      "id": "spatula",
+      "material": "rigid",
+      "semantic_class": "spatula",
+      "state": {}
+    },
+    {
+      "id": "rice_in_wok",
+      "material": "granular",
+      "semantic_class": "fried_rice",
+      "state": {
+        "mass_g": 500.0,
+        "components_g": {
+          "rice": 390.0,
+          "egg": 55.0,
+          "scallion": 15.0,
+          "pork": 40.0
+        },
+        "mix_uniformity": 0.35,
+        "browning": 0.62
+      }
+    },
+    {
+      "id": "rice_on_spatula",
+      "material": "granular",
+      "semantic_class": "fried_rice",
+      "state": {
+        "mass_g": 0.0,
+        "components_g": {},
+        "mix_uniformity": 0.35,
+        "browning": 0.62
+      }
+    }
+  ],
+  "relations": [
+    {"type": "contained_in", "subject": "rice_in_wok", "object": "wok"},
+    {"type": "supported_by", "subject": "rice_on_spatula", "object": "spatula"}
+  ],
+  "actions": [
+    {
+      "id": "mix_rice",
+      "type": "mix_granular",
+      "target": "rice_in_wok",
+      "target_uniformity": 0.8
+    },
+    {
+      "id": "scoop_rice",
+      "type": "scoop_granular",
+      "source": "rice_in_wok",
+      "target": "rice_on_spatula",
+      "amount_g": 80.0
+    }
+  ],
+  "constraints": [
+    {
+      "id": "food_mass_conserved",
+      "type": "conserve_total",
+      "objects": ["rice_in_wok", "rice_on_spatula"],
+      "field": "mass_g"
+    },
+    {
+      "id": "ingredient_masses_conserved",
+      "type": "conserve_components",
+      "objects": ["rice_in_wok", "rice_on_spatula"]
+    },
+    {
+      "id": "spatula_payload",
+      "type": "equals",
+      "object": "rice_on_spatula",
+      "field": "mass_g",
+      "value": 80.0
+    },
+    {
+      "id": "mixing_completed",
+      "type": "range",
+      "object": "rice_in_wok",
+      "field": "mix_uniformity",
+      "min": 0.79,
+      "max": 0.81
+    },
+    {
+      "id": "payload_inherits_mix_state",
+      "type": "range",
+      "object": "rice_on_spatula",
+      "field": "mix_uniformity",
+      "min": 0.79,
+      "max": 0.81
+    },
+    {
+      "id": "scoop_supported",
+      "type": "relation_exists",
+      "relation": "supported_by",
+      "subject": "rice_on_spatula",
+      "object": "spatula"
+    }
+  ]
+}

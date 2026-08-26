@@ -1,0 +1,31 @@
+# Generated experiment data
+outputs/
+artifacts/
+cache/
+models/
+*.mp4
+*.safetensors
+*.pth
+
+# Local/runtime state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.log
+status.txt
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Paper build products
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.pdf

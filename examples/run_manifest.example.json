@@ -1,0 +1,39 @@
+{
+  "schema_version": "foodstateedit.run.v1",
+  "run_id": "soup_spoon_example__staged__seed1",
+  "case_id": "soup_spoon_example",
+  "method": "foodstateedit_staged",
+  "seed": 1,
+  "model": {
+    "name": "Wan2.2-VACE-Fun-A14B",
+    "root": "/host/space0/guo-z/models",
+    "files": [
+      {
+        "path": "PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "inference": {
+    "width": 736,
+    "height": 592,
+    "frames": 21,
+    "steps": 20,
+    "warm_start": false,
+    "schedule": {
+      "rigid": 18,
+      "contact": 15,
+      "material": 8,
+      "hole": 8
+    }
+  },
+  "environment": {
+    "host": "gp40",
+    "gpu": "NVIDIA RTX A6000",
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "code_commit": "uncommitted-example"
+  },
+  "status": "planned",
+  "outputs": []
+}

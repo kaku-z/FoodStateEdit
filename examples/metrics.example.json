@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.metrics.v1",
+  "run_id": "soup_spoon_example__staged__seed1",
+  "action_success": true,
+  "photo_success": null,
+  "preservation_success": true,
+  "strict_end_to_end_success": false,
+  "checks": [
+    {
+      "id": "exactly_one_spoon",
+      "category": "action",
+      "passed": true,
+      "actual": 1,
+      "criterion": "count == 1"
+    }
+  ],
+  "preservation": {
+    "outside_alpha_max_difference": 0,
+    "outside_alpha_rgb_mae": 0.0,
+    "feather_band_rgb_mae": null
+  },
+  "material_metrics": {
+    "payload_detected": true
+  },
+  "proxy_diagnostics": {},
+  "manual_review": {
+    "status": "not_reviewed",
+    "reviewer_count": 0,
+    "questions": []
+  },
+  "failure_tags": []
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://foodstateedit.local/schemas/metrics.schema.json",
+  "title": "FoodStateEdit evaluation metrics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "action_success",
+    "photo_success",
+    "preservation_success",
+    "strict_end_to_end_success",
+    "checks",
+    "preservation",
+    "manual_review"
+  ],
+  "properties": {
+    "schema_version": {"const": "foodstateedit.metrics.v1"},
+    "run_id": {"type": "string"},
+    "action_success": {"type": "boolean"},
+    "photo_success": {"type": ["boolean", "null"]},
+    "preservation_success": {"type": "boolean"},
+    "strict_end_to_end_success": {"type": "boolean"},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "passed", "actual", "criterion"],
+        "properties": {
+          "id": {"type": "string"},
+          "category": {"type": "string"},
+          "passed": {"type": ["boolean", "null"]},
+          "actual": {},
+          "criterion": {"type": "string"}
+        }
+      }
+    },
+    "preservation": {
+      "type": "object",
+      "required": ["outside_alpha_max_difference", "outside_alpha_rgb_mae", "feather_band_rgb_mae"],
+      "properties": {
+        "outside_alpha_max_difference": {"type": "number", "minimum": 0},
+        "outside_alpha_rgb_mae": {"type": "number", "minimum": 0},
+        "feather_band_rgb_mae": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "material_metrics": {"type": "object"},
+    "proxy_diagnostics": {"type": "object"},
+    "manual_review": {
+      "type": "object",
+      "required": ["status", "reviewer_count", "questions"],
+      "properties": {
+        "status": {"enum": ["not_reviewed", "pilot_audit", "blind_review"]},
+        "reviewer_count": {"type": "integer", "minimum": 0},
+        "questions": {"type": "array"}
+      }
+    },
+    "failure_tags": {"type": "array", "items": {"type": "string"}}
+  }
+}
