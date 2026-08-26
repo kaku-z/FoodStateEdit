@@ -5,29 +5,33 @@ Date opened: 2026-08-26
 The benchmark target is 60 traceable inputs: 15 cases in each of four
 families, split into 5 pilot and 10 held-out test cases per family.
 
+- Current manifest: `benchmark/data_manifest_provisional_v3.csv`
+- Final-review boards: `artifacts/day2_frozen_review_v3/`
+
 ## Automatic inventory
 
-- [ ] Inventory 20 or more candidates per family.
-- [ ] Record immutable source path and SHA-256 for every candidate.
-- [ ] Record image width, height, format, and source kind.
-- [ ] Record source URL/owner and usage license when applicable.
-- [ ] Reject corrupt, duplicate, or too-small inputs.
+- [x] Inventory 32 candidates per family (128 total).
+- [x] Record immutable source path and SHA-256 for every candidate.
+- [x] Record image width, height, format, and source kind.
+- [x] Verify official UECFOOD256 non-commercial research-only terms.
+- [x] Reject corrupt inputs and check exact/near duplicates (none in v1).
 
 ## Manual eligibility review
 
-- [ ] Confirm that the target manipulation utensil is absent.
-- [ ] Confirm that the source does not already depict the target action.
-- [ ] Confirm that the food and main container are sufficiently visible.
-- [ ] Confirm that the intended local edit has usable empty space.
-- [ ] Record exclusion reason instead of silently replacing a case.
+- [x] Complete Codex visual first pass for target-utensil absence.
+- [x] Complete Codex visual first pass for target-action absence.
+- [x] Complete Codex visual first pass for food/container visibility.
+- [x] Complete Codex visual first pass for local edit space.
+- [x] Record exclusion reasons instead of silently replacing cases.
+- [ ] Obtain final human confirmation from the four frozen review boards.
 
 ## Freeze and split
 
-- [ ] Select exactly 15 eligible cases per family.
-- [ ] Assign exactly 5 pilot and 10 test cases per family.
-- [ ] Mark all 60 selected rows `freeze_status=frozen`.
-- [ ] Record the deterministic split rule and random seed.
-- [ ] Check that no content duplicate crosses pilot/test.
+- [x] Provisionally select exactly 15 eligible cases per family.
+- [x] Provisionally assign exactly 5 pilot and 10 test cases per family.
+- [ ] Change all 60 rows from `provisional_frozen` to `frozen` after human review.
+- [x] Record deterministic SHA-256 split rule and seed `20260826`.
+- [x] Check that no exact/near content duplicate crosses pilot/test.
 
 ## Four primary anchors
 
@@ -36,6 +40,6 @@ families, split into 5 pilot and 10 held-out test cases per family.
 - [ ] `ramen_chopsticks_001`: complete five-layer structured action annotation.
 - [ ] `pasta_fork_001`: choose source and complete five-layer annotation.
 
-Day 2 Gate status: `NOT_STARTED`
+Day 2 Gate status: `PROVISIONAL_SPLIT_READY`
 
 Frozen manifest commit: `PENDING`

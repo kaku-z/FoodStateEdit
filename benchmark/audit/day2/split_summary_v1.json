@@ -1,0 +1,115 @@
+{
+  "schema_version": "foodstateedit.provisional_split.v1",
+  "status": "provisional_requires_human_confirmation",
+  "split_seed": 20260826,
+  "selection_rule": "forced development cases to pilot, then SHA-256 stable rank",
+  "total_frozen": 60,
+  "split_counts": {
+    "pilot": 20,
+    "test": 40
+  },
+  "family_counts": {
+    "granular": 15,
+    "liquid": 15,
+    "strand": 15,
+    "strand_contact": 15
+  },
+  "families": {
+    "liquid": {
+      "eligible": 23,
+      "excluded": 9,
+      "pilot": [
+        "soup_016",
+        "soup_015",
+        "soup_008",
+        "soup_002",
+        "soup_017"
+      ],
+      "test": [
+        "soup_028",
+        "soup_021",
+        "soup_004",
+        "soup_024",
+        "soup_009",
+        "soup_003",
+        "soup_006",
+        "soup_029",
+        "soup_031",
+        "soup_010"
+      ],
+      "reserve": 8
+    },
+    "granular": {
+      "eligible": 25,
+      "excluded": 7,
+      "pilot": [
+        "rice_031",
+        "rice_032",
+        "rice_015",
+        "rice_030",
+        "rice_007"
+      ],
+      "test": [
+        "rice_024",
+        "rice_020",
+        "rice_002",
+        "rice_011",
+        "rice_025",
+        "rice_012",
+        "rice_029",
+        "rice_017",
+        "rice_026",
+        "rice_003"
+      ],
+      "reserve": 10
+    },
+    "strand": {
+      "eligible": 20,
+      "excluded": 12,
+      "pilot": [
+        "noodle_001",
+        "noodle_002",
+        "noodle_013",
+        "noodle_003",
+        "noodle_009"
+      ],
+      "test": [
+        "noodle_030",
+        "noodle_006",
+        "noodle_023",
+        "noodle_024",
+        "noodle_010",
+        "noodle_018",
+        "noodle_032",
+        "noodle_017",
+        "noodle_021",
+        "noodle_027"
+      ],
+      "reserve": 5
+    },
+    "strand_contact": {
+      "eligible": 24,
+      "excluded": 8,
+      "pilot": [
+        "pasta_029",
+        "pasta_030",
+        "pasta_019",
+        "pasta_027",
+        "pasta_006"
+      ],
+      "test": [
+        "pasta_020",
+        "pasta_010",
+        "pasta_011",
+        "pasta_015",
+        "pasta_031",
+        "pasta_005",
+        "pasta_012",
+        "pasta_004",
+        "pasta_028",
+        "pasta_001"
+      ],
+      "reserve": 9
+    }
+  }
+}

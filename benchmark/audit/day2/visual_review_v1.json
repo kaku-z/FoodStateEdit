@@ -1,0 +1,96 @@
+{
+  "schema_version": "foodstateedit.visual_candidate_review.v1",
+  "review_date": "2026-08-26",
+  "reviewer": "codex_visual_review_v1",
+  "status": "provisional_requires_human_confirmation",
+  "source_inventory": "benchmark/candidate_inventory_v1.csv",
+  "review_boards": "artifacts/day2_review_v1/review_<family>.png",
+  "criteria": [
+    "no visible target utensil",
+    "no visible target manipulation action",
+    "food and primary container sufficiently visible",
+    "usable local edit space",
+    "conservative exclusion when utensil visibility is ambiguous"
+  ],
+  "families": {
+    "liquid": {
+      "eligible": [
+        "soup_002", "soup_003", "soup_004", "soup_006", "soup_008",
+        "soup_009", "soup_010", "soup_013", "soup_014", "soup_015",
+        "soup_016", "soup_017", "soup_018", "soup_019", "soup_020",
+        "soup_021", "soup_023", "soup_024", "soup_025", "soup_028",
+        "soup_029", "soup_030", "soup_031"
+      ],
+      "excluded": {
+        "soup_001": "food_not_dominant_multiple_dishes",
+        "soup_005": "target_utensil_visible",
+        "soup_007": "target_utensil_visible",
+        "soup_011": "utensil_visibility_ambiguous",
+        "soup_012": "target_utensil_visible",
+        "soup_022": "food_not_dominant_multiple_dishes",
+        "soup_026": "target_utensil_visible",
+        "soup_027": "target_utensil_visible",
+        "soup_032": "target_utensil_visible"
+      }
+    },
+    "granular": {
+      "eligible": [
+        "rice_001", "rice_002", "rice_003", "rice_004", "rice_006",
+        "rice_007", "rice_010", "rice_011", "rice_012", "rice_014",
+        "rice_015", "rice_016", "rice_017", "rice_020", "rice_021",
+        "rice_022", "rice_023", "rice_024", "rice_025", "rice_026",
+        "rice_028", "rice_029", "rice_030", "rice_031", "rice_032"
+      ],
+      "excluded": {
+        "rice_005": "target_utensil_visible",
+        "rice_008": "target_utensil_visible",
+        "rice_009": "target_utensil_visible",
+        "rice_013": "target_utensil_visible",
+        "rice_018": "other_utensil_visible",
+        "rice_019": "target_utensil_visible",
+        "rice_027": "target_utensil_visible"
+      }
+    },
+    "strand": {
+      "eligible": [
+        "noodle_001", "noodle_002", "noodle_003", "noodle_006", "noodle_009",
+        "noodle_010", "noodle_013", "noodle_014", "noodle_015", "noodle_017",
+        "noodle_018", "noodle_019", "noodle_021", "noodle_023", "noodle_024",
+        "noodle_026", "noodle_027", "noodle_028", "noodle_030", "noodle_032"
+      ],
+      "excluded": {
+        "noodle_004": "utensil_visibility_ambiguous",
+        "noodle_005": "target_utensil_visible",
+        "noodle_007": "target_utensil_visible",
+        "noodle_008": "target_utensil_visible",
+        "noodle_011": "other_utensil_visible",
+        "noodle_012": "target_utensil_visible",
+        "noodle_016": "other_utensil_visible",
+        "noodle_020": "other_utensil_visible",
+        "noodle_022": "other_utensil_visible",
+        "noodle_025": "other_utensil_visible",
+        "noodle_029": "target_utensil_visible",
+        "noodle_031": "target_utensil_visible"
+      }
+    },
+    "strand_contact": {
+      "eligible": [
+        "pasta_001", "pasta_002", "pasta_004", "pasta_005", "pasta_006",
+        "pasta_007", "pasta_010", "pasta_011", "pasta_012", "pasta_013",
+        "pasta_015", "pasta_017", "pasta_019", "pasta_020", "pasta_021",
+        "pasta_022", "pasta_023", "pasta_024", "pasta_026", "pasta_027",
+        "pasta_028", "pasta_029", "pasta_030", "pasta_031"
+      ],
+      "excluded": {
+        "pasta_003": "target_utensil_visible",
+        "pasta_008": "target_utensil_visible",
+        "pasta_009": "target_utensil_visible",
+        "pasta_014": "other_utensil_visible",
+        "pasta_016": "target_utensil_visible",
+        "pasta_018": "target_utensil_visible",
+        "pasta_025": "target_utensil_visible",
+        "pasta_032": "food_not_dominant_multiple_dishes"
+      }
+    }
+  }
+}
