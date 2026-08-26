@@ -42,4 +42,6 @@ families, split into 5 pilot and 10 held-out test cases per family.
 
 Day 2 Gate status: `PROVISIONAL_SPLIT_READY`
 
-Frozen manifest commit: `PENDING`
+Provisional manifest commit: `a8c95a52f5e7975950e4fc3da19c5c1b097d26c7`
+
+Final frozen manifest commit: `PENDING_HUMAN_CONFIRMATION`
