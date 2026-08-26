@@ -35,6 +35,10 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `results/CURRENT_RESULTS_INVENTORY.md`: evidence available at sprint start;
 - `DAY1_CHECKLIST.md`: completion evidence for the first sprint day.
 - `DAY2_CHECKLIST.md`: auditable entry point for the 60-case benchmark freeze.
+- `DAY3_CHECKLIST.md`: baseline availability, frozen comparison set, and open
+  common-proxy dependency;
+- `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
+- `results/DAY3_BASELINE_AUDIT.md`: evidence-backed reproducibility audit;
 - `benchmark/data_manifest_v1.csv`: frozen 60-case 5/10 split;
 - `benchmark/canonical_input_manifest_v1.csv`: hash-locked common x4-aligned
   editing inputs derived from the frozen sources;
