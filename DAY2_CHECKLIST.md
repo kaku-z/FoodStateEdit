@@ -50,8 +50,8 @@ families, split into 5 pilot and 10 held-out test cases per family.
   target/source centerline length ratio `1.005146`.
 - [x] `pasta_fork_001` -> `pasta_006`: source chosen and five-layer annotation complete.
 
-Day 2 Gate status: `READY_FOR_FINAL_COMMIT`
+Day 2 Gate status: `COMPLETE`
 
 Provisional manifest commit: `a8c95a52f5e7975950e4fc3da19c5c1b097d26c7`
 
-Final frozen manifest commit: `PENDING_DAY2_DATA_COMMIT`
+Final frozen manifest commit: `3a512ad1a996e7c0ae636854f3079cfe643282b2`

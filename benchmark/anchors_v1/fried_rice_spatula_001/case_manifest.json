@@ -93,7 +93,7 @@
   ],
   "provenance": {
     "builder": "scripts/build_anchor_annotations.py",
-    "builder_commit": "paper-sprint-day2-provisional-v3",
+    "builder_commit": "3a512ad1a996e7c0ae636854f3079cfe643282b2",
     "created_at": "2026-08-26T23:30:00+09:00"
   }
 }
