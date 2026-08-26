@@ -1,0 +1,93 @@
+{
+  "schema_version": "foodstateedit.case.v1",
+  "case_id": "soup_spoon_001",
+  "split": "pilot",
+  "source": {
+    "path": "/host/space0/ma-y/SR/UECFOOD256x4_osediff/37/3615.jpg",
+    "sha256": "6f633e7416d069c149fecfb37f5e67d7f4b568487788ee73cba75b4702d188e3",
+    "kind": "real",
+    "license": "UECFOOD256_noncommercial_research_only",
+    "has_target_utensil": false,
+    "width": 1800,
+    "height": 1352
+  },
+  "scene": {
+    "family": "liquid",
+    "dish": "potage",
+    "container": "handled_soup_crock",
+    "food_materials": [
+      "liquid"
+    ]
+  },
+  "action": {
+    "type": "scoop_liquid",
+    "utensil": "spoon",
+    "payload_relation": "liquid_contained_by_spoon",
+    "amount": 18,
+    "amount_unit": "ml"
+  },
+  "controls": {
+    "contact_anchors": [
+      [
+        360,
+        730
+      ]
+    ],
+    "target_direction": [
+      -0.24,
+      -0.28
+    ],
+    "manual_correction": true,
+    "annotation_seconds": 0
+  },
+  "layers": {
+    "rigid": "benchmark/anchors_v1/soup_spoon_001/mask_rigid.png",
+    "contact": "benchmark/anchors_v1/soup_spoon_001/mask_contact.png",
+    "material": "benchmark/anchors_v1/soup_spoon_001/mask_material.png",
+    "hole": "benchmark/anchors_v1/soup_spoon_001/mask_hole.png",
+    "protect": "benchmark/anchors_v1/soup_spoon_001/mask_protect.png",
+    "edit_alpha": "benchmark/anchors_v1/soup_spoon_001/edit_alpha.png"
+  },
+  "constraints": [
+    {
+      "id": "benchmark_source_case",
+      "category": "provenance",
+      "criterion": "soup_002"
+    },
+    {
+      "id": "one_spoon",
+      "category": "hard_action",
+      "criterion": "visible_spoon_count == 1"
+    },
+    {
+      "id": "liquid_payload",
+      "category": "hard_action",
+      "criterion": "liquid_is_visibly_contained_by_spoon"
+    },
+    {
+      "id": "no_surface_crater",
+      "category": "hard_action",
+      "criterion": "source_liquid_surface_is_level_and_hole_free"
+    },
+    {
+      "id": "preserve_crock",
+      "category": "hard_action",
+      "criterion": "crock_rim_handle_and_background_unchanged_outside_edit_alpha"
+    },
+    {
+      "id": "forbid_extras",
+      "category": "hard_action",
+      "criterion": "no_hand_arm_person_fork_chopsticks_or_second_spoon"
+    },
+    {
+      "id": "exact_protection",
+      "category": "preservation",
+      "criterion": "max_absolute_pixel_difference_where_mask_protect_is_255 == 0"
+    }
+  ],
+  "provenance": {
+    "builder": "scripts/build_anchor_annotations.py",
+    "builder_commit": "paper-sprint-day2-provisional-v3",
+    "created_at": "2026-08-26T23:30:00+09:00"
+  }
+}

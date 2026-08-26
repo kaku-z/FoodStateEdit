@@ -1,0 +1,14 @@
+{
+  "schema_version": "foodstateedit.benchmark_freeze_record.v1",
+  "freeze_date": "2026-08-26",
+  "confirmation_source": "user_continue_after_v3_review_boards",
+  "source_provisional_manifest": "benchmark/data_manifest_provisional_v3.csv",
+  "source_provisional_sha256": "c05e743a5e7c9f3d584f05bb11e9ae4538f1f24fbc6a45fe63c6f2cc4f5fcf7d",
+  "frozen_manifest": "benchmark/data_manifest_v1.csv",
+  "frozen_manifest_sha256": "886f3b9547de31adc7f718ee836d74e5cd6fc07d40ded3c790b01c119a009ad4",
+  "case_count": 60,
+  "pilot_count": 20,
+  "test_count": 40,
+  "family_count": 4,
+  "replacement_policy": "no replacement based on method results; corrections require a versioned erratum"
+}

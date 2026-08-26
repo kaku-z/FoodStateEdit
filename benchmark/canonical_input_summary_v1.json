@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "case_count": 60,
+  "family_counts": {
+    "granular": 15,
+    "liquid": 15,
+    "strand": 15,
+    "strand_contact": 15
+  },
+  "split_counts": {
+    "pilot": 20,
+    "test": 40
+  },
+  "canonical_root": "/host/space0/ma-y/SR/UECFOOD256x4_osediff",
+  "canonical_root_resolved": "/host/space0/ma-y/SR/UECFOOD256x4_osediff",
+  "preprocess_method": "existing_precomputed_osediff_x4",
+  "dimension_rule": "floor((source_dimension * 4) / 8) * 8",
+  "all_dimensions_x4_aligned_to_multiple_of_8": true,
+  "maximum_alignment_trim_pixels": 4,
+  "all_source_hashes_match_frozen_manifest": true,
+  "all_canonical_hashes_unique": true,
+  "maximum_allowed_dhash_distance": 8,
+  "all_dhash_distances_within_limit": true,
+  "minimum_canonical_width": 688,
+  "minimum_canonical_height": 600,
+  "dhash_distance": {
+    "minimum": 0,
+    "median": 1.0,
+    "maximum": 5
+  },
+  "bicubic_rgb_mae": {
+    "minimum": 4.1033,
+    "mean": 7.5211,
+    "maximum": 14.4166
+  },
+  "policy": "Every method consumes the same hash-locked canonical x4-aligned input. Frozen source images remain the identity and provenance layer."
+}

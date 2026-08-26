@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "anchor_count": 4,
+  "five_layer_order": [
+    "rigid",
+    "contact",
+    "material",
+    "hole",
+    "protect"
+  ],
+  "anchors": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "case_id": "soup_002",
+      "family": "liquid",
+      "canonical_width": 1800,
+      "canonical_height": 1352,
+      "canonical_input_sha256": "6f633e7416d069c149fecfb37f5e67d7f4b568487788ee73cba75b4702d188e3",
+      "coverage_fraction": {
+        "rigid": 0.011471,
+        "contact": 0.003735,
+        "material": 0.003806,
+        "hole": 0.011453
+      },
+      "edit_alpha_nonzero_fraction": 0.049834,
+      "protect_fraction": 0.950166,
+      "contact_rigid_intersection_pixels": 9089,
+      "contact_material_intersection_pixels": 8758,
+      "target_source_centerline_length_ratio": null,
+      "status": "five_layer_annotation_complete"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "case_id": "rice_007",
+      "family": "granular",
+      "canonical_width": 880,
+      "canonical_height": 656,
+      "canonical_input_sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc",
+      "coverage_fraction": {
+        "rigid": 0.026672,
+        "contact": 0.012474,
+        "material": 0.020368,
+        "hole": 0.026429
+      },
+      "edit_alpha_nonzero_fraction": 0.088515,
+      "protect_fraction": 0.911485,
+      "contact_rigid_intersection_pixels": 6712,
+      "contact_material_intersection_pixels": 6500,
+      "target_source_centerline_length_ratio": null,
+      "status": "five_layer_annotation_complete"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "case_id": "noodle_001",
+      "family": "strand",
+      "canonical_width": 2400,
+      "canonical_height": 1944,
+      "canonical_input_sha256": "44b4bc5461d6ac0d7a3a811859db4914e5cd0e29db14a66c12e2ec2a64ee89bf",
+      "coverage_fraction": {
+        "rigid": 0.007366,
+        "contact": 0.002155,
+        "material": 0.01655,
+        "hole": 0.022915
+      },
+      "edit_alpha_nonzero_fraction": 0.123558,
+      "protect_fraction": 0.876442,
+      "contact_rigid_intersection_pixels": 2643,
+      "contact_material_intersection_pixels": 3689,
+      "target_source_centerline_length_ratio": 1.005146,
+      "status": "five_layer_annotation_complete"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "case_id": "pasta_006",
+      "family": "strand_contact",
+      "canonical_width": 1024,
+      "canonical_height": 768,
+      "canonical_input_sha256": "9338301493ad89273ce5e881e5e45dac48eb5eb541b3809de9ebddde47b9a8a9",
+      "coverage_fraction": {
+        "rigid": 0.009167,
+        "contact": 0.010431,
+        "material": 0.016427,
+        "hole": 0.013449
+      },
+      "edit_alpha_nonzero_fraction": 0.058643,
+      "protect_fraction": 0.941357,
+      "contact_rigid_intersection_pixels": 2105,
+      "contact_material_intersection_pixels": 7962,
+      "target_source_centerline_length_ratio": null,
+      "status": "five_layer_annotation_complete"
+    }
+  ]
+}

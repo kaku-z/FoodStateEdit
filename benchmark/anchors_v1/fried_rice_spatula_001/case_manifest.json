@@ -1,0 +1,99 @@
+{
+  "schema_version": "foodstateedit.case.v1",
+  "case_id": "fried_rice_spatula_001",
+  "split": "pilot",
+  "source": {
+    "path": "/host/space0/ma-y/SR/UECFOOD256x4_osediff/9/830.jpg",
+    "sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc",
+    "kind": "real",
+    "license": "UECFOOD256_noncommercial_research_only",
+    "has_target_utensil": false,
+    "width": 880,
+    "height": 656
+  },
+  "scene": {
+    "family": "granular",
+    "dish": "fried_rice",
+    "container": "plate",
+    "food_materials": [
+      "granular",
+      "soft_chunk"
+    ]
+  },
+  "action": {
+    "type": "scoop_payload",
+    "utensil": "spatula",
+    "payload_relation": "fried_rice_supported_by_spatula",
+    "amount": 45,
+    "amount_unit": "g"
+  },
+  "controls": {
+    "contact_anchors": [
+      [
+        598,
+        308
+      ]
+    ],
+    "target_direction": [
+      0.12,
+      -0.18
+    ],
+    "manual_correction": true,
+    "annotation_seconds": 0
+  },
+  "layers": {
+    "rigid": "benchmark/anchors_v1/fried_rice_spatula_001/mask_rigid.png",
+    "contact": "benchmark/anchors_v1/fried_rice_spatula_001/mask_contact.png",
+    "material": "benchmark/anchors_v1/fried_rice_spatula_001/mask_material.png",
+    "hole": "benchmark/anchors_v1/fried_rice_spatula_001/mask_hole.png",
+    "protect": "benchmark/anchors_v1/fried_rice_spatula_001/mask_protect.png",
+    "edit_alpha": "benchmark/anchors_v1/fried_rice_spatula_001/edit_alpha.png"
+  },
+  "constraints": [
+    {
+      "id": "benchmark_source_case",
+      "category": "provenance",
+      "criterion": "rice_007"
+    },
+    {
+      "id": "one_spatula",
+      "category": "hard_action",
+      "criterion": "visible_spatula_count == 1"
+    },
+    {
+      "id": "supported_payload",
+      "category": "hard_action",
+      "criterion": "fried_rice_payload_contacts_and_is_supported_by_blade"
+    },
+    {
+      "id": "granular_identity",
+      "category": "hard_action",
+      "criterion": "payload_contains_distinct_rice_grains_and_source_ingredients"
+    },
+    {
+      "id": "source_reduction",
+      "category": "hard_action",
+      "criterion": "source_mound_has_one_plausible_shallow_scoop_without_duplicate_payload"
+    },
+    {
+      "id": "preserve_plate",
+      "category": "hard_action",
+      "criterion": "plate_pattern_rim_and_background_unchanged_outside_edit_alpha"
+    },
+    {
+      "id": "forbid_extras",
+      "category": "hard_action",
+      "criterion": "no_hand_arm_person_spoon_fork_chopsticks_or_second_spatula"
+    },
+    {
+      "id": "exact_protection",
+      "category": "preservation",
+      "criterion": "max_absolute_pixel_difference_where_mask_protect_is_255 == 0"
+    }
+  ],
+  "provenance": {
+    "builder": "scripts/build_anchor_annotations.py",
+    "builder_commit": "paper-sprint-day2-provisional-v3",
+    "created_at": "2026-08-26T23:30:00+09:00"
+  }
+}

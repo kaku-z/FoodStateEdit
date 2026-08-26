@@ -1,0 +1,109 @@
+{
+  "schema_version": "foodstateedit.case.v1",
+  "case_id": "ramen_chopsticks_001",
+  "split": "pilot",
+  "source": {
+    "path": "/host/space0/ma-y/SR/UECFOOD256x4_osediff/20/1897.jpg",
+    "sha256": "44b4bc5461d6ac0d7a3a811859db4914e5cd0e29db14a66c12e2ec2a64ee89bf",
+    "kind": "real",
+    "license": "UECFOOD256_noncommercial_research_only",
+    "has_target_utensil": false,
+    "width": 2400,
+    "height": 1944
+  },
+  "scene": {
+    "family": "strand",
+    "dish": "udon",
+    "container": "bowl",
+    "food_materials": [
+      "strand",
+      "liquid"
+    ]
+  },
+  "action": {
+    "type": "lift_strand",
+    "utensil": "chopsticks",
+    "payload_relation": "continuous_noodle_gripped_between_chopstick_tips",
+    "amount": 1,
+    "amount_unit": "strand"
+  },
+  "controls": {
+    "contact_anchors": [
+      [
+        1499,
+        291
+      ]
+    ],
+    "target_direction": [
+      0.08,
+      -0.35
+    ],
+    "manual_correction": true,
+    "annotation_seconds": 0
+  },
+  "layers": {
+    "rigid": "benchmark/anchors_v1/ramen_chopsticks_001/mask_rigid.png",
+    "contact": "benchmark/anchors_v1/ramen_chopsticks_001/mask_contact.png",
+    "material": "benchmark/anchors_v1/ramen_chopsticks_001/mask_material.png",
+    "hole": "benchmark/anchors_v1/ramen_chopsticks_001/mask_hole.png",
+    "protect": "benchmark/anchors_v1/ramen_chopsticks_001/mask_protect.png",
+    "edit_alpha": "benchmark/anchors_v1/ramen_chopsticks_001/edit_alpha.png"
+  },
+  "constraints": [
+    {
+      "id": "benchmark_source_case",
+      "category": "provenance",
+      "criterion": "noodle_001"
+    },
+    {
+      "id": "two_chopsticks",
+      "category": "hard_action",
+      "criterion": "visible_chopstick_count == 2_and_components_remain_separate"
+    },
+    {
+      "id": "valid_grip",
+      "category": "hard_action",
+      "criterion": "one_continuous_noodle_passes_between_and_contacts_both_tips"
+    },
+    {
+      "id": "strand_continuity",
+      "category": "hard_action",
+      "criterion": "lifted_strand_remains_connected_to_a_plausible_bowl_root"
+    },
+    {
+      "id": "length_conservation",
+      "category": "hard_action",
+      "criterion": "target_source_centerline_length_ratio_in_[0.95,1.05]"
+    },
+    {
+      "id": "contact_z_order",
+      "category": "hard_action",
+      "criterion": "rear_chopstick_then_noodle_then_front_chopstick"
+    },
+    {
+      "id": "source_repair",
+      "category": "hard_action",
+      "criterion": "vacated_source_is_filled_by_broth_or_neighboring_noodles_without_duplicate_strand"
+    },
+    {
+      "id": "forbid_extras",
+      "category": "hard_action",
+      "criterion": "no_hand_arm_person_third_chopstick_wood_block_spoon_or_fork"
+    },
+    {
+      "id": "preserve_scene",
+      "category": "hard_action",
+      "criterion": "bowl_tray_table_and_background_unchanged_outside_edit_alpha"
+    },
+    {
+      "id": "exact_protection",
+      "category": "preservation",
+      "criterion": "max_absolute_pixel_difference_where_mask_protect_is_255 == 0"
+    }
+  ],
+  "provenance": {
+    "builder": "scripts/build_anchor_annotations.py",
+    "builder_commit": "paper-sprint-day2-provisional-v3",
+    "created_at": "2026-08-26T23:30:00+09:00"
+  }
+}

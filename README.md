@@ -35,7 +35,12 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `results/CURRENT_RESULTS_INVENTORY.md`: evidence available at sprint start;
 - `DAY1_CHECKLIST.md`: completion evidence for the first sprint day.
 - `DAY2_CHECKLIST.md`: auditable entry point for the 60-case benchmark freeze.
-- `benchmark/data_manifest_provisional_v3.csv`: current 60-case 5/10 split;
+- `benchmark/data_manifest_v1.csv`: frozen 60-case 5/10 split;
+- `benchmark/canonical_input_manifest_v1.csv`: hash-locked common x4-aligned
+  editing inputs derived from the frozen sources;
+- `benchmark/anchor_manifest_v1.csv`: the four primary pilot anchors;
+- `benchmark/ANCHOR_ANNOTATION_PROTOCOL.md`: five-layer action annotation
+  semantics and hard constraints;
 - `benchmark/DATASET_PROVENANCE.md`: dataset terms, paths, and citation.
 
 ## Local contract validation

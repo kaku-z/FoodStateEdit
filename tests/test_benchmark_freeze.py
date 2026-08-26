@@ -33,8 +33,8 @@ class BenchmarkFreezeTests(unittest.TestCase):
             reviewed_ids.update(family_review["excluded"])
         self.assertEqual(reviewed_ids, {row["candidate_id"] for row in inventory})
 
-    def test_provisional_manifest_is_balanced_and_leakage_safe(self):
-        rows = self.load_csv("data_manifest_provisional_v3.csv")
+    def test_frozen_manifest_is_balanced_and_leakage_safe(self):
+        rows = self.load_csv("data_manifest_v1.csv")
         self.assertEqual(len(rows), 60)
         self.assertEqual(Counter(row["family"] for row in rows), Counter({
             "liquid": 15,
@@ -46,7 +46,7 @@ class BenchmarkFreezeTests(unittest.TestCase):
             family_rows = [row for row in rows if row["family"] == family]
             self.assertEqual(Counter(row["split"] for row in family_rows), Counter({"pilot": 5, "test": 10}))
         self.assertTrue(all(row["has_target_utensil"] == "false" for row in rows))
-        self.assertTrue(all(row["freeze_status"] == "provisional_frozen" for row in rows))
+        self.assertTrue(all(row["freeze_status"] == "frozen" for row in rows))
         self.assertEqual(len({row["source_sha256"] for row in rows}), 60)
         splits = {row["case_id"]: row["split"] for row in rows}
         self.assertEqual(splits["noodle_001"], "pilot")
