@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "method": "foodstateedit_staged_exclusive",
+  "seed": 1,
+  "worker_gpu": "0",
+  "case_count": 2,
+  "complete_count": 2,
+  "technical_failure_count": 0,
+  "pipeline_load_count": 1,
+  "resident_contract_passed": true,
+  "runs": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "status": "complete",
+      "run_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/soup_spoon_001/seed_1/run_manifest.json",
+      "wall_time_seconds": 1410.222
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "status": "complete",
+      "run_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/run_manifest.json",
+      "wall_time_seconds": 262.723
+    }
+  ]
+}

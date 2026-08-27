@@ -34,6 +34,7 @@ def main() -> None:
     parser.add_argument("--results-root", type=Path, required=True)
     parser.add_argument("--artifact-root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--method", default="foodstateedit_staged")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(f"Refusing to overwrite summary: {args.output}")
@@ -46,7 +47,7 @@ def main() -> None:
     manifests: dict[str, tuple[Path, dict[str, object]]] = {}
     for worker_dir in worker_dirs:
         worker = load_json(worker_dir / "worker_summary.json")
-        if worker["method"] != "foodstateedit_staged" or worker["seed"] != 1:
+        if worker["method"] != args.method or worker["seed"] != 1:
             raise ValueError(f"Worker identity mismatch: {worker_dir}")
         workers.append({
             "worker": worker_dir.name,
@@ -70,7 +71,7 @@ def main() -> None:
     runs = []
     for anchor in ANCHORS:
         path, manifest = manifests[anchor]
-        if manifest["method"] != "foodstateedit_staged" or manifest["seed"] != 1:
+        if manifest["method"] != args.method or manifest["seed"] != 1:
             raise ValueError(f"Run identity mismatch: {path}")
         edited_record = next(
             item for item in manifest["outputs"]
@@ -100,7 +101,7 @@ def main() -> None:
 
     summary = {
         "schema_version": "foodstateedit.staged_batch_summary.v1",
-        "method": "foodstateedit_staged",
+        "method": args.method,
         "seed": 1,
         "case_count": len(runs),
         "complete_count": sum(item["status"] == "complete" for item in runs),

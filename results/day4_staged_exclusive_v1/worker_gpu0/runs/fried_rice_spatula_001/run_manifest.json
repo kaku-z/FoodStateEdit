@@ -1,0 +1,126 @@
+{
+  "schema_version": "foodstateedit.run.v1",
+  "run_id": "fried_rice_spatula_001__foodstateedit_staged_exclusive__seed_1",
+  "case_id": "fried_rice_spatula_001",
+  "method": "foodstateedit_staged_exclusive",
+  "seed": 1,
+  "model": {
+    "name": "Wan2.2-VACE-Fun-A14B",
+    "root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "files": [
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/low_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"
+      },
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth",
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth",
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    ],
+    "verified_before_worker_start": true,
+    "full_file_hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "full_file_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+  },
+  "inference": {
+    "width": 736,
+    "height": 544,
+    "frames": 21,
+    "steps": 20,
+    "warm_start": false,
+    "schedule": {
+      "rigid": 18,
+      "contact": 15,
+      "material": 8,
+      "hole": 8
+    },
+    "tweak_index": 3,
+    "replace_mode": "mask_new",
+    "mask_mapping": {
+      "rigid": "mask_rigid.png",
+      "contact": "mask_contact.png",
+      "material": "mask_material.png",
+      "hole": "mask_hole.png"
+    },
+    "common_proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+    "projection_mask_manifest": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/projection_mask_manifest.json",
+    "projection_mask_manifest_sha256": "758c2c303c4e9ff75225ddbf0b06efc15632ab8b2dc5894822c096df135028a8",
+    "projection_mask_schema": "foodstateedit.exclusive_projection_masks.v1",
+    "projection_mask_ownership_priority_high_to_low": [
+      "hole",
+      "contact",
+      "material",
+      "rigid"
+    ],
+    "projection_masks_pairwise_disjoint": true,
+    "projection_union_coverage_preserved": true,
+    "exact_protection_projection": true,
+    "resident_pipeline": true,
+    "decoded_frames": 21,
+    "outside_edit_alpha_max_pixel_difference": 0,
+    "outside_edit_alpha_rgb_mae": 0.0,
+    "feather_band_rgb_mae": 17.859939548942105,
+    "pipeline_load_count_at_completion": 1,
+    "wall_time_seconds": 262.723
+  },
+  "environment": {
+    "host": "gp40.cs.uec.ac.jp",
+    "gpu": "NVIDIA RTX A6000; CUDA_VISIBLE_DEVICES=0",
+    "python": "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/bin/python3.12",
+    "code_commit": "91f4ea625c5c594f8cd2b01c29dec8cf04ad0f58",
+    "created_at": "2026-08-27T13:27:20+09:00",
+    "geoedit_files": [
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/geoedit/inference.py",
+        "size_bytes": 16900,
+        "sha256": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1"
+      },
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/diffsynth/pipelines/wan_video.py",
+        "size_bytes": 101256,
+        "sha256": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5"
+      },
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/diffsynth/utils/data/__init__.py",
+        "size_bytes": 8873,
+        "sha256": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360"
+      },
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/tests/test_masks.py",
+        "size_bytes": 4992,
+        "sha256": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+      }
+    ],
+    "worker_file": {
+      "path": "/tmp/foodstateedit_day4_exclusive_launchers_v2/run_geoedit_resident_batch_v2.py",
+      "size_bytes": 14463,
+      "sha256": "b59f4abb30f55d29a9f180b195b3412940eebe4e65e403eac109ab99a5a2fede"
+    }
+  },
+  "status": "complete",
+  "outputs": [
+    {
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/result.mp4",
+      "sha256": "b6c163eeb14d6aa96b9b940befeff5e0bfc858a5186c4694be5dfafaaf594db7"
+    },
+    {
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/raw_last_frame.png",
+      "sha256": "21635c46253eaed8df97bad5d9851e8b6b2a8d5cb113984dac29f9590ae74df8"
+    },
+    {
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/edited_2d.png",
+      "sha256": "64fcca50986871dbd0090aec242c075e08365af258a9b1e12fad0337a7e23c70"
+    }
+  ]
+}

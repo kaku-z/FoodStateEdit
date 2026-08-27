@@ -1,0 +1,71 @@
+{
+  "schema_version": "foodstateedit.same_seed_image_comparison.v1",
+  "seed": 1,
+  "left_method": "foodstateedit_staged",
+  "right_method": "foodstateedit_staged_exclusive",
+  "case_count": 4,
+  "all_hashes_different": true,
+  "all_outside_support_exact": true,
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "left_sha256": "bd6df07ac228529b76a053d7671e77336e27ceaff898126a19c6ac6299d04931",
+      "right_sha256": "0c18c3f18c57568f2e028f61bfa1848887c58af1d0500d752e107dda027b6fce",
+      "full_rgb_mae": 0.103281,
+      "full_max_pixel_difference": 76,
+      "full_changed_pixel_fraction": 0.037073,
+      "full_psnr_db": 49.182733,
+      "edit_support_pixel_count": 20546,
+      "edit_support_rgb_mae": 2.071855,
+      "edit_support_max_pixel_difference": 76,
+      "edit_support_changed_pixel_fraction": 0.743697,
+      "outside_support_rgb_mae": 0.0,
+      "outside_support_max_pixel_difference": 0
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "left_sha256": "67594aa2bdb000769dee82c3a783fb09a845aa4392324198cf85ea6274d45e6a",
+      "right_sha256": "64fcca50986871dbd0090aec242c075e08365af258a9b1e12fad0337a7e23c70",
+      "full_rgb_mae": 0.468993,
+      "full_max_pixel_difference": 181,
+      "full_changed_pixel_fraction": 0.07566,
+      "full_psnr_db": 37.044212,
+      "edit_support_pixel_count": 35428,
+      "edit_support_rgb_mae": 5.300252,
+      "edit_support_max_pixel_difference": 181,
+      "edit_support_changed_pixel_fraction": 0.855058,
+      "outside_support_rgb_mae": 0.0,
+      "outside_support_max_pixel_difference": 0
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "left_sha256": "cf4d5a440598776943ef9b9b5fc80cebff5da69f0695f9be92c3423f0174bd8e",
+      "right_sha256": "0cf9ccd69431d1bc6806fc6206f7c26d35754d29540ba0de0f8e604e65914d03",
+      "full_rgb_mae": 0.141821,
+      "full_max_pixel_difference": 81,
+      "full_changed_pixel_fraction": 0.082814,
+      "full_psnr_db": 48.192166,
+      "edit_support_pixel_count": 53851,
+      "edit_support_rgb_mae": 1.147481,
+      "edit_support_max_pixel_difference": 81,
+      "edit_support_changed_pixel_fraction": 0.670053,
+      "outside_support_rgb_mae": 0.0,
+      "outside_support_max_pixel_difference": 0
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "left_sha256": "69e5eb631ab0d4d85e4dd9f47b8477fd9573e4fc36bbcf91d81f07ddb9ac3c86",
+      "right_sha256": "d4d9cc2b64aa2efa98aa07021adf713713d339a413e8de6cd768b0a099938f78",
+      "full_rgb_mae": 0.254173,
+      "full_max_pixel_difference": 80,
+      "full_changed_pixel_fraction": 0.048758,
+      "full_psnr_db": 41.676208,
+      "edit_support_pixel_count": 23507,
+      "edit_support_rgb_mae": 4.329207,
+      "edit_support_max_pixel_difference": 80,
+      "edit_support_changed_pixel_fraction": 0.830476,
+      "outside_support_rgb_mae": 0.0,
+      "outside_support_max_pixel_difference": 0
+    }
+  ]
+}

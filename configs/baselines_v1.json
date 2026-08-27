@@ -91,8 +91,8 @@
       "role": "proposed_method_pilot_candidate",
       "inclusion": "pre_registered_pilot_only",
       "parent_method": "foodstateedit_staged",
-      "day4_engine_status": "local_contract_remote_mask_invariants_passed",
-      "formal_anchor_status": "exclusive_masks_v2_ready_inference_pending",
+      "day4_engine_status": "local_contract_remote_mask_invariants_and_seed1_batch_passed",
+      "formal_anchor_status": "exclusive_candidate_negative_0_of_4_do_not_expand",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "GeoEdit_with_material_aware_staged_projection",
@@ -142,6 +142,20 @@
     "provisional_photo_success": 0,
     "exact_preservation_success": 4,
     "resident_pipeline_contract": "passed_two_workers_one_load_each",
+    "status": "CLOSED_NEGATIVE_PILOT_DO_NOT_EXPAND"
+  },
+  "day4_exclusive_gate": {
+    "candidate": "foodstateedit_staged_exclusive",
+    "schedule_version": "configs/staged_schedule_v2_exclusive.json",
+    "isolated_factor": "semantic projection-mask ownership only",
+    "technical_complete": 4,
+    "technical_failure": 0,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_preservation_success": 4,
+    "resident_pipeline_contract": "passed_two_workers_one_load_each",
+    "same_seed_output_hashes_all_changed": true,
+    "action_success_delta_vs_staged_v1": 0,
     "status": "CLOSED_NEGATIVE_PILOT_DO_NOT_EXPAND"
   }
 }

@@ -85,6 +85,35 @@ windows, including 100% of soup contact/material pixels. See
 `results/DAY4_STAGED_REVIEW.md`; do not promote these pilot results into formal
 test statistics.
 
+## Day 4 exclusive-mask follow-up
+
+The ownership policy was frozen at commit
+`f1170db8481cd4bcb56067816c52c4ff77a7d204`, the deterministic mask packages
+were hash-locked at `91f4ea625c5c594f8cd2b01c29dec8cf04ad0f58`, and stochastic inference began
+only afterward. The exact worker SHA-256 was
+`b59f4abb30f55d29a9f180b195b3412940eebe4e65e403eac109ab99a5a2fede`.
+
+- Mask root: `/tmp/foodstateedit_day4_exclusive_masks_v2`.
+- Worker roots: `/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0` and
+  `/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1`.
+- Model files, common proxy, seed, frames, steps, endpoints, and exact 2D
+  protection were unchanged from staged v1.
+- Both workers processed two cases with one pipeline load; all four cases
+  completed without a technical failure or seed replacement.
+
+| Anchor | Exclusive edited-image SHA-256 |
+| --- | --- |
+| `soup_spoon_001` | `0c18c3f18c57568f2e028f61bfa1848887c58af1d0500d752e107dda027b6fce` |
+| `fried_rice_spatula_001` | `64fcca50986871dbd0090aec242c075e08365af258a9b1e12fad0337a7e23c70` |
+| `ramen_chopsticks_001` | `0cf9ccd69431d1bc6806fc6206f7c26d35754d29540ba0de0f8e604e65914d03` |
+| `pasta_fork_001` | `d4d9cc2b64aa2efa98aa07021adf713713d339a413e8de6cd768b0a099938f78` |
+
+All four hashes differ from staged v1, while the exact protected region remains
+unchanged. The internal action/photo outcome remains `0/4`; this is a closed
+negative pilot, not a formal test result. Full build and comparison evidence is
+under `results/day4_exclusive_masks_v2/` and
+`results/day4_staged_exclusive_v1/`.
+
 ## Model inventory
 
 Models are reused in place. Downloads are disabled in formal launchers.

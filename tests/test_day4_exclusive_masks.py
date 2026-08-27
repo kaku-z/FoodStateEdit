@@ -93,6 +93,35 @@ class ExclusiveProjectionMaskTests(unittest.TestCase):
                 ).hexdigest()
                 self.assertEqual(actual, record["sha256"])
 
+    def test_exclusive_batch_is_complete_exact_and_resident(self):
+        root = ROOT / "results" / "day4_staged_exclusive_v1"
+        summary = json.loads((root / "batch_summary_v1.json").read_text())
+        self.assertEqual(summary["method"], "foodstateedit_staged_exclusive")
+        self.assertEqual(summary["complete_count"], 4)
+        self.assertEqual(summary["technical_failure_count"], 0)
+        self.assertTrue(summary["all_protected_pixels_exact"])
+        self.assertTrue(summary["all_edited_images_hash_verified"])
+        self.assertTrue(summary["resident_contract_passed"])
+        self.assertEqual(
+            [worker["pipeline_load_count"] for worker in summary["workers"]],
+            [1, 1],
+        )
+
+    def test_same_seed_comparison_changed_only_edit_support(self):
+        root = ROOT / "results" / "day4_staged_exclusive_v1"
+        comparison = json.loads(
+            (root / "staged_v1_vs_exclusive_v1.json").read_text()
+        )
+        self.assertTrue(comparison["all_hashes_different"])
+        self.assertTrue(comparison["all_outside_support_exact"])
+        self.assertEqual(comparison["case_count"], 4)
+        self.assertTrue(
+            all(case["edit_support_rgb_mae"] > 0 for case in comparison["cases"])
+        )
+        review = json.loads((root / "internal_pilot_review_v1.json").read_text())
+        self.assertEqual(review["aggregate"]["provisional_action_success"], 0)
+        self.assertEqual(review["aggregate"]["provisional_photo_success"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

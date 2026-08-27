@@ -37,6 +37,8 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `DAY2_CHECKLIST.md`: auditable entry point for the 60-case benchmark freeze.
 - `DAY3_CHECKLIST.md`: closed baseline availability and four-anchor execution gate;
 - `DAY4_CHECKLIST.md`: four-layer staged integration and resident-worker gate;
+- `DAY4_EXCLUSIVE_V2_CHECKLIST.md`: closed same-seed non-shadowing-mask
+  follow-up gate;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up
@@ -48,6 +50,11 @@ text-only, fully automatic, universally general, or universally photorealistic.
   analysis, and no-expansion decision;
 - `results/day4_staged_v1/`: hash-verified resident-worker manifests, internal
   diagnostic labels, and the semantic-mask overlap audit;
+- `results/DAY4_EXCLUSIVE_REVIEW.md`: same-seed exclusive-mask follow-up and
+  representation/backend gate decision;
+- `results/day4_exclusive_masks_v2/` and
+  `results/day4_staged_exclusive_v1/`: frozen mask packages, run manifests,
+  pixel comparison, and internal diagnostic labels;
 - `results/day4_common_proxy_v1/`: machine-readable four-anchor common-proxy
   manifests and the internal review decision (source images are not tracked);
 - `benchmark/data_manifest_v1.csv`: frozen 60-case 5/10 split;

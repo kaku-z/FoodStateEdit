@@ -65,3 +65,6 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - The Day 4 overlap audit identifies shorter-window shadowing as the next
   implementation target. These remain pilot diagnostics, not formal held-out
   claims.
+- The controlled exclusive-mask follow-up removed that shadowing but retained
+  `0/4` action success. This isolates the next bottleneck to the proxy/backend
+  representation interface rather than mask overlap alone.
