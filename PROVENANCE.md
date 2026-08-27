@@ -15,8 +15,9 @@ Snapshot date: 2026-08-26 (Asia/Tokyo)
 - Local path: `third_party/GeoEdit`
 - Remote path: `/host/space0/guo-z/GeoEdit`
 - Upstream/base commit: `fa7583c60913d05754b6aa430b579d09dbc11ac8`
-- Snapshot was dirty in four known files; exact copies are tracked under
-  `vendor_overrides/GeoEdit/`.
+- Snapshot was dirty in four known files. The exact Day 3 baseline copies are
+  retained under `results/day3_geoedit_overrides_v1/GeoEdit/`; later staged
+  development continues under `vendor_overrides/GeoEdit/`.
 
 | File | SHA-256 at freeze |
 | --- | --- |
@@ -31,6 +32,24 @@ Known intent of the modifications:
 - expose controlled GeoEdit inference locally;
 - add staged rigid/material proxy masks and separate injection endpoints;
 - add argument validation and tests.
+
+## FoodStateEdit four-layer runtime v2
+
+The original remote GeoEdit worktree remains untouched. A detached, untracked
+runtime was composed from the upstream commit plus the four files below at
+`/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827`.
+
+| File | SHA-256 |
+| --- | --- |
+| `geoedit/inference.py` | `d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1` |
+| `diffsynth/pipelines/wan_video.py` | `50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5` |
+| `diffsynth/utils/data/__init__.py` | `fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360` |
+| `tests/test_masks.py` | `fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421` |
+
+Version v2 adds explicit contact and hole masks/endpoints to the existing
+rigid/material interface. Active semantic masks are composed by union over
+half-open windows `[tweak_index, endpoint)`. Ten offline unit tests passed in
+the existing GeoEdit environment before stochastic inference.
 
 ## Model inventory
 

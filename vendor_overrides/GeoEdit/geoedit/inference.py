@@ -52,6 +52,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--motion-signal-video", type=Path, default=None)
     parser.add_argument("--motion-signal-mask", type=Path, default=None)
     parser.add_argument(
+        "--contact-mask",
+        type=Path,
+        default=None,
+        help="Optional contact/topology layer with its own projection endpoint.",
+    )
+    parser.add_argument(
         "--material-mask",
         type=Path,
         default=None,
@@ -60,9 +66,21 @@ def build_parser() -> argparse.ArgumentParser:
             "use a shorter proxy-injection window than the rigid mask."
         ),
     )
+    parser.add_argument(
+        "--hole-mask",
+        type=Path,
+        default=None,
+        help="Optional source-repair layer with its own projection endpoint.",
+    )
     parser.add_argument("--mask-old", type=Path, default=None)
     parser.add_argument("--tweak-index", type=int, default=3)
     parser.add_argument("--tstrong-index", type=int, default=15)
+    parser.add_argument(
+        "--contact-tstrong-index",
+        type=int,
+        default=None,
+        help="Last denoising-step index for contact-mask proxy injection.",
+    )
     parser.add_argument(
         "--material-tstrong-index",
         type=int,
@@ -71,6 +89,12 @@ def build_parser() -> argparse.ArgumentParser:
             "Last denoising-step index for material-mask proxy injection. "
             "Defaults to --tstrong-index."
         ),
+    )
+    parser.add_argument(
+        "--hole-tstrong-index",
+        type=int,
+        default=None,
+        help="Last denoising-step index for hole-mask/source-repair injection.",
     )
     parser.add_argument(
         "--replace-mode",
@@ -187,8 +211,6 @@ def compute_hole_masks(
 
 
 def validate_args(args: argparse.Namespace) -> None:
-    material_mask = getattr(args, "material_mask", None)
-    material_tstrong_index = getattr(args, "material_tstrong_index", None)
     replace_mode = getattr(args, "replace_mode", "mask_new")
     if args.num_frames < 1 or (args.num_frames - 1) % 4 != 0:
         raise ValueError("--num-frames must be 4n+1 (for example 21, 41, 61, or 81).")
@@ -200,20 +222,36 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError(
             "--tstrong-index must be between tweak-index and num-inference-steps."
         )
-    if material_tstrong_index is not None:
-        if material_mask is None:
+    staged_layers = (
+        ("contact", getattr(args, "contact_mask", None), getattr(args, "contact_tstrong_index", None)),
+        ("material", getattr(args, "material_mask", None), getattr(args, "material_tstrong_index", None)),
+        ("hole", getattr(args, "hole_mask", None), getattr(args, "hole_tstrong_index", None)),
+    )
+    for name, mask, endpoint in staged_layers:
+        if endpoint is not None and mask is None:
+            raise ValueError(f"--{name}-tstrong-index requires --{name}-mask.")
+        if endpoint is not None and not (
+            args.tweak_index <= endpoint <= args.num_inference_steps
+        ):
             raise ValueError(
-                "--material-tstrong-index requires --material-mask."
-            )
-        if not args.tweak_index <= material_tstrong_index <= args.num_inference_steps:
-            raise ValueError(
-                "--material-tstrong-index must be between tweak-index and "
+                f"--{name}-tstrong-index must be between tweak-index and "
                 "num-inference-steps."
             )
-    if material_mask is not None and replace_mode != "mask_new":
-        raise ValueError(
-            "Staged material-mask injection currently requires --replace-mode mask_new."
-        )
+        if mask is not None and replace_mode != "mask_new":
+            raise ValueError(
+                f"Staged {name}-mask injection requires --replace-mode mask_new."
+            )
+
+
+def load_optional_layer_mask(
+    path: Path | None, height: int, width: int, num_frames: int
+) -> VideoData | list[Image.Image] | None:
+    if path is None:
+        return None
+    resolved = path.expanduser().resolve()
+    if not resolved.exists():
+        raise FileNotFoundError(f"Input does not exist: {resolved}")
+    return load_video_or_image(resolved, height, width, num_frames)
 
 
 def resolve_vram_limit(explicit_limit: float | None) -> float:
@@ -334,14 +372,15 @@ def main() -> None:
     motion_mask = load_video_or_image(
         new_mask_path, height, width, args.num_frames
     )
-    material_mask = None
-    if args.material_mask is not None:
-        material_mask_path = args.material_mask.expanduser().resolve()
-        if not material_mask_path.exists():
-            raise FileNotFoundError(f"Input does not exist: {material_mask_path}")
-        material_mask = load_video_or_image(
-            material_mask_path, height, width, args.num_frames
-        )
+    contact_mask = load_optional_layer_mask(
+        args.contact_mask, height, width, args.num_frames
+    )
+    material_mask = load_optional_layer_mask(
+        args.material_mask, height, width, args.num_frames
+    )
+    staged_hole_mask = load_optional_layer_mask(
+        args.hole_mask, height, width, args.num_frames
+    )
 
     old_mask_path = args.mask_old.expanduser().resolve() if args.mask_old else None
     if old_mask_path is not None and not old_mask_path.exists():
@@ -378,7 +417,9 @@ def main() -> None:
         enable_ttm=True,
         motion_signal_video=motion_video,
         motion_signal_mask=motion_mask,
+        ttm_contact_mask=contact_mask,
         ttm_material_mask=material_mask,
+        ttm_hole_mask=staged_hole_mask,
         ttm_mask_old=hole_masks,
         ttm_warm_start=not args.no_warm_start,
         ttm_replace_mode=args.replace_mode,
@@ -386,7 +427,9 @@ def main() -> None:
         ttm_initial_clean=args.initial_clean,
         tweak_index=args.tweak_index,
         tstrong_index=args.tstrong_index,
+        contact_tstrong_index=args.contact_tstrong_index,
         material_tstrong_index=args.material_tstrong_index,
+        hole_tstrong_index=args.hole_tstrong_index,
         seed=args.seed,
         tiled=True,
     )

@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+from diffsynth.pipelines.wan_video import active_ttm_layer_names
 from geoedit.inference import compute_hole_masks, load_video_or_image, validate_args
 
 
@@ -78,6 +79,69 @@ class MaskTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(ValueError, "requires --material-mask"):
             validate_args(args)
+
+    def test_valid_four_layer_schedule(self):
+        args = argparse.Namespace(
+            num_frames=21,
+            num_inference_steps=20,
+            tweak_index=3,
+            tstrong_index=18,
+            contact_mask=Path("mask_contact.png"),
+            contact_tstrong_index=15,
+            material_mask=Path("mask_material.png"),
+            material_tstrong_index=8,
+            hole_mask=Path("mask_hole.png"),
+            hole_tstrong_index=8,
+            replace_mode="mask_new",
+        )
+        validate_args(args)
+
+    def test_contact_schedule_requires_contact_mask(self):
+        args = argparse.Namespace(
+            num_frames=21,
+            num_inference_steps=20,
+            tweak_index=3,
+            tstrong_index=18,
+            contact_mask=None,
+            contact_tstrong_index=15,
+            material_mask=None,
+            material_tstrong_index=None,
+            hole_mask=None,
+            hole_tstrong_index=None,
+            replace_mode="mask_new",
+        )
+        with self.assertRaisesRegex(ValueError, "requires --contact-mask"):
+            validate_args(args)
+
+    def test_hole_endpoint_must_be_in_range(self):
+        args = argparse.Namespace(
+            num_frames=21,
+            num_inference_steps=20,
+            tweak_index=3,
+            tstrong_index=18,
+            contact_mask=None,
+            contact_tstrong_index=None,
+            material_mask=None,
+            material_tstrong_index=None,
+            hole_mask=Path("mask_hole.png"),
+            hole_tstrong_index=2,
+            replace_mode="mask_new",
+        )
+        with self.assertRaisesRegex(ValueError, "between tweak-index"):
+            validate_args(args)
+
+    def test_four_layer_active_windows(self):
+        endpoints = {"rigid": 18, "contact": 15, "material": 8, "hole": 8}
+        self.assertEqual(
+            active_ttm_layer_names(3, 3, endpoints),
+            ("rigid", "contact", "material", "hole"),
+        )
+        self.assertEqual(
+            active_ttm_layer_names(8, 3, endpoints),
+            ("rigid", "contact"),
+        )
+        self.assertEqual(active_ttm_layer_names(15, 3, endpoints), ("rigid",))
+        self.assertEqual(active_ttm_layer_names(18, 3, endpoints), ())
 
 
 if __name__ == "__main__":

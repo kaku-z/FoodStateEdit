@@ -32,6 +32,15 @@ from ..models.wav2vec import WanS2VAudioEncoder
 from ..models.longcat_video_dit import LongCatVideoTransformer3DModel
 
 
+def active_ttm_layer_names(global_step, replace_start, layer_endpoints):
+    """Return the deterministic set of semantic layers active at one step."""
+    return tuple(
+        name
+        for name, endpoint in layer_endpoints.items()
+        if endpoint is not None and replace_start <= global_step < endpoint
+    )
+
+
 class WanVideoPipeline(BasePipeline):
 
     def __init__(self, device=get_device_type(), torch_dtype=torch.bfloat16):
@@ -214,7 +223,9 @@ class WanVideoPipeline(BasePipeline):
         enable_ttm: Optional[bool] = False,
         motion_signal_video: Optional[list[Image.Image]] = None,
         motion_signal_mask: Optional[list[Image.Image]] = None,
+        ttm_contact_mask: Optional[list[Image.Image]] = None,
         ttm_material_mask: Optional[list[Image.Image]] = None,
+        ttm_hole_mask: Optional[list[Image.Image]] = None,
         ttm_mask_old: Optional[list[Image.Image]] = None,
         ttm_warm_start: Optional[bool] = True,
         ttm_replace_mode: Optional[str] = "mask_new",
@@ -222,7 +233,9 @@ class WanVideoPipeline(BasePipeline):
         ttm_initial_clean: Optional[bool] = False,
         tweak_index: Optional[int] = 0,
         tstrong_index: Optional[int] = None,
+        contact_tstrong_index: Optional[int] = None,
         material_tstrong_index: Optional[int] = None,
+        hole_tstrong_index: Optional[int] = None,
         # Animate
         animate_pose_video: Optional[list[Image.Image]] = None,
         animate_face_video: Optional[list[Image.Image]] = None,
@@ -287,11 +300,14 @@ class WanVideoPipeline(BasePipeline):
             "camera_control_direction": camera_control_direction, "camera_control_speed": camera_control_speed, "camera_control_origin": camera_control_origin,
             "vace_video": vace_video, "vace_video_mask": vace_video_mask, "vace_reference_image": vace_reference_image, "vace_scale": vace_scale,
             "enable_ttm": enable_ttm, "motion_signal_video": motion_signal_video, "motion_signal_mask": motion_signal_mask,
-            "ttm_material_mask": ttm_material_mask, "ttm_mask_old": ttm_mask_old,
+            "ttm_contact_mask": ttm_contact_mask, "ttm_material_mask": ttm_material_mask,
+            "ttm_hole_mask": ttm_hole_mask, "ttm_mask_old": ttm_mask_old,
             "ttm_warm_start": ttm_warm_start, "ttm_replace_mode": ttm_replace_mode,
             "ttm_disable_vhi": ttm_disable_vhi, "ttm_initial_clean": ttm_initial_clean,
             "tweak_index": tweak_index, "tstrong_index": tstrong_index,
+            "contact_tstrong_index": contact_tstrong_index,
             "material_tstrong_index": material_tstrong_index,
+            "hole_tstrong_index": hole_tstrong_index,
             "seed": seed, "rand_device": rand_device,
             "height": height, "width": width, "num_frames": num_frames,
             "cfg_scale": cfg_scale, "cfg_merge": cfg_merge,
@@ -365,16 +381,34 @@ class WanVideoPipeline(BasePipeline):
                 ttm_start = inputs_shared.get("ttm_start_index", 0)
                 replace_start = inputs_shared.get("ttm_replace_start_index", ttm_start)
                 ttm_tstrong = inputs_shared["ttm_tstrong_index"]
-                replace_primary = replace_start <= global_step < ttm_tstrong
-                material_mask = inputs_shared.get("ttm_material_mask")
-                material_tstrong = inputs_shared.get(
-                    "ttm_material_tstrong_index", ttm_tstrong
+                layer_masks = {
+                    "rigid": inputs_shared.get("ttm_motion_mask"),
+                    "contact": inputs_shared.get("ttm_contact_mask"),
+                    "material": inputs_shared.get("ttm_material_mask"),
+                    "hole": inputs_shared.get("ttm_hole_mask"),
+                }
+                layer_endpoints = {
+                    "rigid": ttm_tstrong,
+                    "contact": inputs_shared.get("ttm_contact_tstrong_index", ttm_tstrong),
+                    "material": inputs_shared.get("ttm_material_tstrong_index", ttm_tstrong),
+                    "hole": inputs_shared.get("ttm_hole_tstrong_index", ttm_tstrong),
+                }
+                active_names = active_ttm_layer_names(
+                    global_step,
+                    replace_start,
+                    {
+                        name: layer_endpoints[name]
+                        for name, mask in layer_masks.items()
+                        if mask is not None
+                    },
                 )
-                replace_material = (
-                    material_mask is not None
-                    and replace_start <= global_step < material_tstrong
-                )
-                if replace_primary or replace_material:
+                replace_primary = "rigid" in active_names
+                active_staged_masks = [
+                    layer_masks[name]
+                    for name in active_names
+                    if name != "rigid"
+                ]
+                if replace_primary or active_staged_masks:
                     ttm_disable_vhi = inputs_shared.get("ttm_disable_vhi", False)
                     if ttm_disable_vhi:
                         noisy_ref = inputs_shared["ttm_ref_latents"].to(
@@ -403,14 +437,14 @@ class WanVideoPipeline(BasePipeline):
                                 replace_mask = inputs_shared.get("ttm_motion_mask")
                         else:
                             replace_mask = inputs_shared.get("ttm_motion_mask")
-                    if replace_material:
-                        aligned_material = _align_temporal_cond(
-                            material_mask,
+                    for staged_mask in active_staged_masks:
+                        aligned_staged = _align_temporal_cond(
+                            staged_mask,
                             inputs_shared["latents"],
                             pad_value=0.0,
                         )
                         replace_mask = (
-                            aligned_material
+                            aligned_staged
                             if replace_mask is None
                             else torch.maximum(
                                 _align_temporal_cond(
@@ -418,7 +452,7 @@ class WanVideoPipeline(BasePipeline):
                                     inputs_shared["latents"],
                                     pad_value=0.0,
                                 ),
-                                aligned_material,
+                                aligned_staged,
                             )
                         )
                     if replace_mask is not None:
@@ -543,14 +577,18 @@ class WanVideoUnit_TTM(PipelineUnit):
                 "enable_ttm",
                 "motion_signal_video",
                 "motion_signal_mask",
+                "ttm_contact_mask",
                 "ttm_material_mask",
+                "ttm_hole_mask",
                 "ttm_mask_old",
                 "ttm_warm_start",
                 "ttm_disable_vhi",
                 "ttm_initial_clean",
                 "tweak_index",
                 "tstrong_index",
+                "contact_tstrong_index",
                 "material_tstrong_index",
+                "hole_tstrong_index",
                 "latents",
                 "height",
                 "width",
@@ -566,13 +604,17 @@ class WanVideoUnit_TTM(PipelineUnit):
                 "ttm_enabled",
                 "ttm_ref_latents",
                 "ttm_motion_mask",
+                "ttm_contact_mask",
                 "ttm_material_mask",
+                "ttm_hole_mask",
                 "ttm_background_mask",
                 "ttm_mask_old",
                 "ttm_fixed_noise",
                 "ttm_start_index",
                 "ttm_tstrong_index",
+                "ttm_contact_tstrong_index",
                 "ttm_material_tstrong_index",
+                "ttm_hole_tstrong_index",
                 "latents",
             ),
             onload_model_names=("vae",),
@@ -616,14 +658,18 @@ class WanVideoUnit_TTM(PipelineUnit):
         enable_ttm,
         motion_signal_video,
         motion_signal_mask,
+        ttm_contact_mask,
         ttm_material_mask,
+        ttm_hole_mask,
         ttm_mask_old,
         ttm_warm_start,
         ttm_disable_vhi,
         ttm_initial_clean,
         tweak_index,
         tstrong_index,
+        contact_tstrong_index,
         material_tstrong_index,
+        hole_tstrong_index,
         latents,
         height,
         width,
@@ -658,27 +704,39 @@ class WanVideoUnit_TTM(PipelineUnit):
                 f"tstrong_index ({ttm_tstrong_index}) must be >= tweak_index ({tweak_index})."
             )
 
-        material_mask_provided = ttm_material_mask is not None
-        ttm_material_tstrong_index = (
-            ttm_tstrong_index
-            if material_tstrong_index is None
-            else int(material_tstrong_index)
-        )
-        if ttm_material_tstrong_index > total_steps:
-            raise ValueError(
-                f"material_tstrong_index ({ttm_material_tstrong_index}) must be <= {total_steps}."
+        layer_masks = {
+            "contact": ttm_contact_mask,
+            "material": ttm_material_mask,
+            "hole": ttm_hole_mask,
+        }
+        requested_endpoints = {
+            "contact": contact_tstrong_index,
+            "material": material_tstrong_index,
+            "hole": hole_tstrong_index,
+        }
+        layer_endpoints = {}
+        for name, requested_endpoint in requested_endpoints.items():
+            endpoint = (
+                ttm_tstrong_index
+                if requested_endpoint is None
+                else int(requested_endpoint)
             )
-        if ttm_material_tstrong_index < replace_start_index:
-            raise ValueError(
-                "material_tstrong_index "
-                f"({ttm_material_tstrong_index}) must be >= replacement start "
-                f"({replace_start_index})."
-            )
+            if endpoint > total_steps:
+                raise ValueError(
+                    f"{name}_tstrong_index ({endpoint}) must be <= {total_steps}."
+                )
+            if endpoint < replace_start_index:
+                raise ValueError(
+                    f"{name}_tstrong_index ({endpoint}) must be >= replacement "
+                    f"start ({replace_start_index})."
+                )
+            layer_endpoints[name] = endpoint
 
         motion_signal_video = self._coerce_video(motion_signal_video, height, width)
         motion_signal_mask = self._coerce_video(motion_signal_mask, height, width)
-        if material_mask_provided:
-            ttm_material_mask = self._coerce_video(ttm_material_mask, height, width)
+        for name, layer_mask in layer_masks.items():
+            if layer_mask is not None:
+                layer_masks[name] = self._coerce_video(layer_mask, height, width)
 
         if len(motion_signal_video) < num_frames:
             raise ValueError(f"motion_signal_video has {len(motion_signal_video)} frames, expected >= {num_frames}.")
@@ -688,18 +746,18 @@ class WanVideoUnit_TTM(PipelineUnit):
             motion_signal_video = self._limit_length(motion_signal_video, num_frames)
         if len(motion_signal_mask) > num_frames:
             motion_signal_mask = self._limit_length(motion_signal_mask, num_frames)
-        if material_mask_provided:
-            if len(ttm_material_mask) == 1 and num_frames > 1:
-                ttm_material_mask = ttm_material_mask * num_frames
-            elif len(ttm_material_mask) < num_frames:
+        for name, layer_mask in layer_masks.items():
+            if layer_mask is None:
+                continue
+            if len(layer_mask) == 1 and num_frames > 1:
+                layer_masks[name] = layer_mask * num_frames
+            elif len(layer_mask) < num_frames:
                 raise ValueError(
-                    f"ttm_material_mask has {len(ttm_material_mask)} frames, "
+                    f"ttm_{name}_mask has {len(layer_mask)} frames, "
                     f"expected >= {num_frames}."
                 )
-            elif len(ttm_material_mask) > num_frames:
-                ttm_material_mask = self._limit_length(
-                    ttm_material_mask, num_frames
-                )
+            elif len(layer_mask) > num_frames:
+                layer_masks[name] = self._limit_length(layer_mask, num_frames)
 
         mask_old_provided = ttm_mask_old is not None
         if mask_old_provided:
@@ -736,23 +794,24 @@ class WanVideoUnit_TTM(PipelineUnit):
         ).to(dtype=pipe.torch_dtype, device=pipe.device)
         background_mask = 1.0 - motion_mask
 
-        material_mask_latent = None
-        if material_mask_provided:
-            material_mask_video = pipe.preprocess_video(
-                ttm_material_mask, min_value=0, max_value=1
+        layer_mask_latents = {"contact": None, "material": None, "hole": None}
+        for name, layer_mask in layer_masks.items():
+            if layer_mask is None:
+                continue
+            layer_mask_video = pipe.preprocess_video(
+                layer_mask, min_value=0, max_value=1
             )
-            material_mask_tc_hw = material_mask_video[0].permute(
+            layer_mask_tc_hw = layer_mask_video[0].permute(
                 1, 0, 2, 3
             ).contiguous()
-            material_mask_t1_hw = (
-                (material_mask_tc_hw > 0.5).any(dim=1, keepdim=True).float()
+            layer_mask_t1_hw = (
+                (layer_mask_tc_hw > 0.5).any(dim=1, keepdim=True).float()
             )
-            material_mask_latent = self._mask_to_latent(
-                material_mask_t1_hw,
+            layer_mask_latents[name] = self._mask_to_latent(
+                layer_mask_t1_hw,
                 temporal_downsample=pipe.time_division_factor,
                 spatial_downsample=pipe.vae.upsampling_factor,
-            ).to(dtype=pipe.torch_dtype, device=pipe.device)
-            material_mask_latent = material_mask_latent.clamp(0, 1)
+            ).to(dtype=pipe.torch_dtype, device=pipe.device).clamp(0, 1)
 
         mask_old_latent = None
         if mask_old_provided:
@@ -782,20 +841,22 @@ class WanVideoUnit_TTM(PipelineUnit):
                 )
                 motion_mask = torch.cat([pad_mask, motion_mask], dim=2)
                 background_mask = 1.0 - motion_mask
-                if material_mask_latent is not None:
-                    pad_material = torch.zeros(
+                for name, layer_mask_latent in layer_mask_latents.items():
+                    if layer_mask_latent is None:
+                        continue
+                    pad_layer = torch.zeros(
                         (
-                            material_mask_latent.shape[0],
-                            material_mask_latent.shape[1],
+                            layer_mask_latent.shape[0],
+                            layer_mask_latent.shape[1],
                             prefix,
-                            material_mask_latent.shape[3],
-                            material_mask_latent.shape[4],
+                            layer_mask_latent.shape[3],
+                            layer_mask_latent.shape[4],
                         ),
-                        device=material_mask_latent.device,
-                        dtype=material_mask_latent.dtype,
+                        device=layer_mask_latent.device,
+                        dtype=layer_mask_latent.dtype,
                     )
-                    material_mask_latent = torch.cat(
-                        [pad_material, material_mask_latent], dim=2
+                    layer_mask_latents[name] = torch.cat(
+                        [pad_layer, layer_mask_latent], dim=2
                     )
                 if mask_old_latent is not None:
                     pad_old = torch.zeros(
@@ -808,10 +869,11 @@ class WanVideoUnit_TTM(PipelineUnit):
                 ref_latents = ref_latents[:, :, : latents.shape[2]]
                 motion_mask = motion_mask[:, :, : latents.shape[2]]
                 background_mask = 1.0 - motion_mask
-                if material_mask_latent is not None:
-                    material_mask_latent = material_mask_latent[
-                        :, :, : latents.shape[2]
-                    ]
+                for name, layer_mask_latent in layer_mask_latents.items():
+                    if layer_mask_latent is not None:
+                        layer_mask_latents[name] = layer_mask_latent[
+                            :, :, : latents.shape[2]
+                        ]
                 if mask_old_latent is not None:
                     mask_old_latent = mask_old_latent[:, :, : latents.shape[2]]
 
@@ -827,14 +889,18 @@ class WanVideoUnit_TTM(PipelineUnit):
             "ttm_enabled": True,
             "ttm_ref_latents": ref_latents,
             "ttm_motion_mask": motion_mask,
-            "ttm_material_mask": material_mask_latent,
+            "ttm_contact_mask": layer_mask_latents["contact"],
+            "ttm_material_mask": layer_mask_latents["material"],
+            "ttm_hole_mask": layer_mask_latents["hole"],
             "ttm_background_mask": background_mask,
             "ttm_mask_old": mask_old_latent,
             "ttm_fixed_noise": fixed_noise,
             "ttm_start_index": ttm_start_index,
             "ttm_replace_start_index": replace_start_index,
             "ttm_tstrong_index": ttm_tstrong_index,
-            "ttm_material_tstrong_index": ttm_material_tstrong_index,
+            "ttm_contact_tstrong_index": layer_endpoints["contact"],
+            "ttm_material_tstrong_index": layer_endpoints["material"],
+            "ttm_hole_tstrong_index": layer_endpoints["hole"],
         }
 
         # Warm start: align initial latents to tweak_index when enabled.

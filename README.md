@@ -36,7 +36,9 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `DAY1_CHECKLIST.md`: completion evidence for the first sprint day.
 - `DAY2_CHECKLIST.md`: auditable entry point for the 60-case benchmark freeze.
 - `DAY3_CHECKLIST.md`: closed baseline availability and four-anchor execution gate;
+- `DAY4_CHECKLIST.md`: four-layer staged integration and resident-worker gate;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
+- `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `results/DAY3_BASELINE_AUDIT.md`: evidence-backed reproducibility audit;
 - `results/DAY3_SMOKE_REVIEW.md`: separate technical and provisional visual
   outcomes for the eight GeoEdit baseline runs;
