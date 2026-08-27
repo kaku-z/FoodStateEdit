@@ -51,6 +51,40 @@ rigid/material interface. Active semantic masks are composed by union over
 half-open windows `[tweak_index, endpoint)`. Ten offline unit tests passed in
 the existing GeoEdit environment before stochastic inference.
 
+## Day 4 staged-v1 execution
+
+- Paper-release commit: `eb0c0b01174f3d873db295f1168c5bfc14e45489`.
+- Exact launcher directory:
+  `/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_launchers_v1`.
+- `run_geoedit_anchor.py` SHA-256:
+  `4fcc4baca473dd5b7a3b116af7536cdfbd0f0472b0ca2e3c53dfd00f50e4ccf2`.
+- `run_geoedit_resident_batch.py` SHA-256:
+  `1f36f28696409f48a939c1ece0530ebc77913545d7c1487404397e99446ae1cb`.
+- Completed worker roots:
+  `/tmp/foodstateedit_day4_staged_v1_gpu0` and
+  `/tmp/foodstateedit_day4_staged_v1_gpu1`.
+- Both workers processed two cases with one pipeline load. All four cases
+  completed at seed `1`, and exact projection changed no protected pixel.
+
+| Anchor | Final edited-image SHA-256 |
+| --- | --- |
+| `soup_spoon_001` | `bd6df07ac228529b76a053d7671e77336e27ceaff898126a19c6ac6299d04931` |
+| `fried_rice_spatula_001` | `67594aa2bdb000769dee82c3a783fb09a845aa4392324198cf85ea6274d45e6a` |
+| `ramen_chopsticks_001` | `cf4d5a440598776943ef9b9b5fc80cebff5da69f0695f9be92c3423f0174bd8e` |
+| `pasta_fork_001` | `69e5eb631ab0d4d85e4dd9f47b8477fd9573e4fc36bbcf91d81f07ddb9ac3c86` |
+
+The first space0 launch was stopped before image generation after the second
+worker log hit the user's disk quota. The partial directory remains at
+`outputs/paper_sprint_day4_20260827_staged_v1_gpu0`; its command and manifest
+are copied under `results/day4_staged_v1/preflight_quota_abort/`. The completed
+workers used new `/tmp` roots and did not overwrite that incident record.
+
+The staged-v1 visual review is a negative pilot (`0/4` provisional action
+success). A post-run audit found that overlapping masks shadow shorter semantic
+windows, including 100% of soup contact/material pixels. See
+`results/DAY4_STAGED_REVIEW.md`; do not promote these pilot results into formal
+test statistics.
+
 ## Model inventory
 
 Models are reused in place. Downloads are disabled in formal launchers.

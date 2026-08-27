@@ -1,0 +1,67 @@
+{
+  "schema_version": "foodstateedit.internal_pilot_review.v1",
+  "review_date": "2026-08-27",
+  "method": "foodstateedit_staged",
+  "seed": 1,
+  "review_status": "single_internal_nonblind_diagnostic_not_formal_human_evaluation",
+  "decision_rule": "action_success requires every declared hard-action constraint to pass; technical completion alone is never action success",
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["liquid_payload", "preserve_crock", "exact_protection"],
+      "failed": ["one_spoon", "no_surface_crater", "forbid_extras"],
+      "failure_tags": ["duplicate_spoon_bowl", "ghost_rigid_fragment", "surface_artifact"],
+      "note": "The intended spoon is visible, but a second bowl-shaped rigid fragment remains on the liquid surface."
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["preserve_plate", "exact_protection"],
+      "failed": ["one_spatula", "supported_payload", "granular_identity", "source_reduction", "forbid_extras"],
+      "failure_tags": ["broken_handle_blade_topology", "detached_rigid_fragment", "large_source_blur", "smeared_grains"],
+      "note": "The handle and blade do not form one coherent spatula, while the center becomes a broad blurred patch rather than a plausible scoop."
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["preserve_scene", "exact_protection"],
+      "failed": ["two_chopsticks", "valid_grip", "strand_continuity", "contact_z_order", "source_repair"],
+      "unassessed": ["length_conservation"],
+      "failure_tags": ["transparent_chopsticks", "missing_lifted_strand", "collapsed_contact_topology"],
+      "note": "The utensil traces are translucent and no stable continuous noodle is visibly gripped and lifted."
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["preserve_plate", "forbid_extras", "exact_protection"],
+      "failed": ["one_fork", "twirl_contact", "strand_continuity", "source_reduction"],
+      "failure_tags": ["missing_four_tines", "blurred_contact", "no_visible_twirl", "weak_utensil_identity"],
+      "note": "A metallic trace is present, but it has no readable four-tine fork geometry or wrapped strand relation."
+    }
+  ],
+  "aggregate": {
+    "technical_complete": 4,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_preservation_success": 4
+  },
+  "pilot_comparison": {
+    "vanilla_geoedit_action_success": 1,
+    "geoedit_unified_action_mask_action_success": 0,
+    "foodstateedit_staged_action_success": 0,
+    "decision": "do_not_expand_staged_v1"
+  }
+}

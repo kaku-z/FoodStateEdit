@@ -76,14 +76,15 @@
       "role": "proposed_method",
       "inclusion": "frozen",
       "day3_engine_status": "four_layer_unit_contract_passed",
-      "formal_anchor_status": "common_proxy_v1_ready_resident_worker_pending",
+      "day4_pilot_status": "seed1_complete_4_of_4_action_0_of_4",
+      "formal_anchor_status": "staged_v1_negative_pilot_do_not_expand",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "GeoEdit_with_material_aware_staged_projection",
       "controls": "five_semantic_layers",
       "pilot_schedule_candidate": {"rigid": 18, "contact": 15, "material": 8, "hole": 8},
       "warm_start": false,
-      "rationale": "Proposed method; family schedules remain pilot-only until the Day 8 freeze."
+      "rationale": "Staged v1 is a closed negative pilot. Overlapping masks shadow shorter windows; the next candidate must use non-shadowing projection masks and remain pilot-only until the Day 8 freeze."
     }
   ],
   "audited_nonprimary_methods": [
@@ -114,5 +115,16 @@
     "engine_contract_ready_count": 3,
     "four_anchor_batch_complete_count": 3,
     "status": "CLOSED_COMPLETE"
+  },
+  "day4_gate": {
+    "candidate": "foodstateedit_staged",
+    "schedule_version": "configs/staged_schedule_v1.json",
+    "technical_complete": 4,
+    "technical_failure": 0,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_preservation_success": 4,
+    "resident_pipeline_contract": "passed_two_workers_one_load_each",
+    "status": "CLOSED_NEGATIVE_PILOT_DO_NOT_EXPAND"
   }
 }

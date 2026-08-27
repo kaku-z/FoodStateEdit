@@ -50,3 +50,18 @@ Historical report: `../BENCHMARK_V2_REPORT.md` in the experiment root.
 
 Pilot metrics may motivate hypotheses and schedule choices. They may not be
 combined with the future frozen test set as if they were held-out evidence.
+
+## Sprint additions through Day 4
+
+This section updates the dated sprint-start snapshot without rewriting it.
+
+- The frozen 60-case benchmark, canonical input hashes, four pilot anchors, and
+  Day 3 no-edit/vanilla/unified smoke runs are now tracked in this repository.
+- Day 3 stochastic controls completed `8/8`; provisional action success was
+  `1/4` for vanilla GeoEdit and `0/4` for the unified same-proxy control.
+- Day 4 staged v1 completed `4/4` with exact outside-mask preservation but had
+  `0/4` provisional action and photo success, so it is closed as a negative
+  pilot and is not eligible for seed/test expansion.
+- The Day 4 overlap audit identifies shorter-window shadowing as the next
+  implementation target. These remain pilot diagnostics, not formal held-out
+  claims.

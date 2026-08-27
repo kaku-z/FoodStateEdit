@@ -42,6 +42,10 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `results/DAY3_BASELINE_AUDIT.md`: evidence-backed reproducibility audit;
 - `results/DAY3_SMOKE_REVIEW.md`: separate technical and provisional visual
   outcomes for the eight GeoEdit baseline runs;
+- `results/DAY4_STAGED_REVIEW.md`: four-layer staged-pilot outcome, failure
+  analysis, and no-expansion decision;
+- `results/day4_staged_v1/`: hash-verified resident-worker manifests, internal
+  diagnostic labels, and the semantic-mask overlap audit;
 - `results/day4_common_proxy_v1/`: machine-readable four-anchor common-proxy
   manifests and the internal review decision (source images are not tracked);
 - `benchmark/data_manifest_v1.csv`: frozen 60-case 5/10 split;

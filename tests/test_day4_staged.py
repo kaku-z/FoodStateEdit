@@ -71,6 +71,41 @@ class Day4StagedTests(unittest.TestCase):
         self.assertIn('"--contact-mask"', inference)
         self.assertIn('"--hole-mask"', inference)
 
+    def test_completed_batch_summary_is_hash_verified(self):
+        summary = json.loads(
+            (ROOT / "results" / "day4_staged_v1" / "batch_summary_v1.json").read_text()
+        )
+        self.assertEqual(summary["complete_count"], 4)
+        self.assertEqual(summary["technical_failure_count"], 0)
+        self.assertTrue(summary["all_protected_pixels_exact"])
+        self.assertTrue(summary["all_edited_images_hash_verified"])
+        self.assertTrue(summary["resident_contract_passed"])
+        self.assertEqual(
+            [worker["pipeline_load_count"] for worker in summary["workers"]],
+            [1, 1],
+        )
+
+    def test_overlap_audit_exposes_shadowed_windows(self):
+        audit = json.loads(
+            (
+                ROOT
+                / "results"
+                / "day4_staged_v1"
+                / "mask_schedule_overlap_audit_v1.json"
+            ).read_text()
+        )
+        self.assertTrue(audit["any_semantic_overlap"])
+        self.assertTrue(audit["any_shorter_window_shadowed"])
+        soup = next(
+            case for case in audit["cases"]
+            if case["anchor_id"] == "soup_spoon_001"
+        )
+        shadowing = {
+            item["layer"]: item for item in soup["later_endpoint_shadowing"]
+        }
+        self.assertEqual(shadowing["contact"]["shadowed_fraction"], 1.0)
+        self.assertEqual(shadowing["material"]["shadowed_fraction"], 1.0)
+
 
 if __name__ == "__main__":
     unittest.main()

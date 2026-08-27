@@ -1,0 +1,619 @@
+{
+  "schema_version": "foodstateedit.mask_schedule_audit.v1",
+  "schedule": {
+    "rigid": 18,
+    "contact": 15,
+    "material": 8,
+    "hole": 8
+  },
+  "window_semantics": "half-open [tweak_index, endpoint)",
+  "case_count": 4,
+  "any_semantic_overlap": true,
+  "any_shorter_window_shadowed": true,
+  "cases": [
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "image_height": 544,
+      "image_width": 736,
+      "layer_pixel_counts": {
+        "rigid": 10681,
+        "contact": 4989,
+        "material": 8146,
+        "hole": 10595
+      },
+      "full_union_pixel_count": 23652,
+      "rigid_equals_full_union": false,
+      "pairwise_overlaps": [
+        {
+          "layers": [
+            "rigid",
+            "contact"
+          ],
+          "pixel_count": 4651,
+          "fraction_of_left": 0.435446,
+          "fraction_of_right": 0.932251
+        },
+        {
+          "layers": [
+            "rigid",
+            "material"
+          ],
+          "pixel_count": 5414,
+          "fraction_of_left": 0.506881,
+          "fraction_of_right": 0.664621
+        },
+        {
+          "layers": [
+            "rigid",
+            "hole"
+          ],
+          "pixel_count": 356,
+          "fraction_of_left": 0.03333,
+          "fraction_of_right": 0.033601
+        },
+        {
+          "layers": [
+            "contact",
+            "material"
+          ],
+          "pixel_count": 4496,
+          "fraction_of_left": 0.901183,
+          "fraction_of_right": 0.551927
+        },
+        {
+          "layers": [
+            "contact",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        },
+        {
+          "layers": [
+            "material",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        }
+      ],
+      "later_endpoint_shadowing": [
+        {
+          "layer": "rigid",
+          "endpoint": 18,
+          "later_endpoint_layers": [],
+          "shadowed_pixel_count": 0,
+          "shadowed_fraction": 0.0
+        },
+        {
+          "layer": "contact",
+          "endpoint": 15,
+          "later_endpoint_layers": [
+            "rigid"
+          ],
+          "shadowed_pixel_count": 4651,
+          "shadowed_fraction": 0.932251
+        },
+        {
+          "layer": "material",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 5752,
+          "shadowed_fraction": 0.706113
+        },
+        {
+          "layer": "hole",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 356,
+          "shadowed_fraction": 0.033601
+        }
+      ],
+      "active_segments": [
+        {
+          "step_window": [
+            3,
+            8
+          ],
+          "active_layers": [
+            "rigid",
+            "contact",
+            "material",
+            "hole"
+          ],
+          "active_union_pixel_count": 23652
+        },
+        {
+          "step_window": [
+            8,
+            15
+          ],
+          "active_layers": [
+            "rigid",
+            "contact"
+          ],
+          "active_union_pixel_count": 11019
+        },
+        {
+          "step_window": [
+            15,
+            18
+          ],
+          "active_layers": [
+            "rigid"
+          ],
+          "active_union_pixel_count": 10681
+        },
+        {
+          "step_window": [
+            18,
+            20
+          ],
+          "active_layers": [],
+          "active_union_pixel_count": 0
+        }
+      ]
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "image_height": 544,
+      "image_width": 736,
+      "layer_pixel_counts": {
+        "rigid": 3674,
+        "contact": 4178,
+        "material": 6578,
+        "hole": 5378
+      },
+      "full_union_pixel_count": 13142,
+      "rigid_equals_full_union": false,
+      "pairwise_overlaps": [
+        {
+          "layers": [
+            "rigid",
+            "contact"
+          ],
+          "pixel_count": 1070,
+          "fraction_of_left": 0.291236,
+          "fraction_of_right": 0.256103
+        },
+        {
+          "layers": [
+            "rigid",
+            "material"
+          ],
+          "pixel_count": 1226,
+          "fraction_of_left": 0.333696,
+          "fraction_of_right": 0.186379
+        },
+        {
+          "layers": [
+            "rigid",
+            "hole"
+          ],
+          "pixel_count": 75,
+          "fraction_of_left": 0.020414,
+          "fraction_of_right": 0.013946
+        },
+        {
+          "layers": [
+            "contact",
+            "material"
+          ],
+          "pixel_count": 4064,
+          "fraction_of_left": 0.972714,
+          "fraction_of_right": 0.617817
+        },
+        {
+          "layers": [
+            "contact",
+            "hole"
+          ],
+          "pixel_count": 256,
+          "fraction_of_left": 0.061273,
+          "fraction_of_right": 0.047601
+        },
+        {
+          "layers": [
+            "material",
+            "hole"
+          ],
+          "pixel_count": 1303,
+          "fraction_of_left": 0.198085,
+          "fraction_of_right": 0.242283
+        }
+      ],
+      "later_endpoint_shadowing": [
+        {
+          "layer": "rigid",
+          "endpoint": 18,
+          "later_endpoint_layers": [],
+          "shadowed_pixel_count": 0,
+          "shadowed_fraction": 0.0
+        },
+        {
+          "layer": "contact",
+          "endpoint": 15,
+          "later_endpoint_layers": [
+            "rigid"
+          ],
+          "shadowed_pixel_count": 1070,
+          "shadowed_fraction": 0.256103
+        },
+        {
+          "layer": "material",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 4239,
+          "shadowed_fraction": 0.644421
+        },
+        {
+          "layer": "hole",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 289,
+          "shadowed_fraction": 0.053737
+        }
+      ],
+      "active_segments": [
+        {
+          "step_window": [
+            3,
+            8
+          ],
+          "active_layers": [
+            "rigid",
+            "contact",
+            "material",
+            "hole"
+          ],
+          "active_union_pixel_count": 13142
+        },
+        {
+          "step_window": [
+            8,
+            15
+          ],
+          "active_layers": [
+            "rigid",
+            "contact"
+          ],
+          "active_union_pixel_count": 6782
+        },
+        {
+          "step_window": [
+            15,
+            18
+          ],
+          "active_layers": [
+            "rigid"
+          ],
+          "active_union_pixel_count": 3674
+        },
+        {
+          "step_window": [
+            18,
+            20
+          ],
+          "active_layers": [],
+          "active_union_pixel_count": 0
+        }
+      ]
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "image_height": 592,
+      "image_width": 736,
+      "layer_pixel_counts": {
+        "rigid": 3208,
+        "contact": 940,
+        "material": 7210,
+        "hole": 9988
+      },
+      "full_union_pixel_count": 19264,
+      "rigid_equals_full_union": false,
+      "pairwise_overlaps": [
+        {
+          "layers": [
+            "rigid",
+            "contact"
+          ],
+          "pixel_count": 248,
+          "fraction_of_left": 0.077307,
+          "fraction_of_right": 0.26383
+        },
+        {
+          "layers": [
+            "rigid",
+            "material"
+          ],
+          "pixel_count": 44,
+          "fraction_of_left": 0.013716,
+          "fraction_of_right": 0.006103
+        },
+        {
+          "layers": [
+            "rigid",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        },
+        {
+          "layers": [
+            "contact",
+            "material"
+          ],
+          "pixel_count": 344,
+          "fraction_of_left": 0.365957,
+          "fraction_of_right": 0.047712
+        },
+        {
+          "layers": [
+            "contact",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        },
+        {
+          "layers": [
+            "material",
+            "hole"
+          ],
+          "pixel_count": 1490,
+          "fraction_of_left": 0.206657,
+          "fraction_of_right": 0.149179
+        }
+      ],
+      "later_endpoint_shadowing": [
+        {
+          "layer": "rigid",
+          "endpoint": 18,
+          "later_endpoint_layers": [],
+          "shadowed_pixel_count": 0,
+          "shadowed_fraction": 0.0
+        },
+        {
+          "layer": "contact",
+          "endpoint": 15,
+          "later_endpoint_layers": [
+            "rigid"
+          ],
+          "shadowed_pixel_count": 248,
+          "shadowed_fraction": 0.26383
+        },
+        {
+          "layer": "material",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 344,
+          "shadowed_fraction": 0.047712
+        },
+        {
+          "layer": "hole",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 0,
+          "shadowed_fraction": 0.0
+        }
+      ],
+      "active_segments": [
+        {
+          "step_window": [
+            3,
+            8
+          ],
+          "active_layers": [
+            "rigid",
+            "contact",
+            "material",
+            "hole"
+          ],
+          "active_union_pixel_count": 19264
+        },
+        {
+          "step_window": [
+            8,
+            15
+          ],
+          "active_layers": [
+            "rigid",
+            "contact"
+          ],
+          "active_union_pixel_count": 3900
+        },
+        {
+          "step_window": [
+            15,
+            18
+          ],
+          "active_layers": [
+            "rigid"
+          ],
+          "active_union_pixel_count": 3208
+        },
+        {
+          "step_window": [
+            18,
+            20
+          ],
+          "active_layers": [],
+          "active_union_pixel_count": 0
+        }
+      ]
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "image_height": 560,
+      "image_width": 736,
+      "layer_pixel_counts": {
+        "rigid": 4733,
+        "contact": 1538,
+        "material": 1574,
+        "hole": 4724
+      },
+      "full_union_pixel_count": 9457,
+      "rigid_equals_full_union": false,
+      "pairwise_overlaps": [
+        {
+          "layers": [
+            "rigid",
+            "contact"
+          ],
+          "pixel_count": 1538,
+          "fraction_of_left": 0.324952,
+          "fraction_of_right": 1.0
+        },
+        {
+          "layers": [
+            "rigid",
+            "material"
+          ],
+          "pixel_count": 1574,
+          "fraction_of_left": 0.332559,
+          "fraction_of_right": 1.0
+        },
+        {
+          "layers": [
+            "rigid",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        },
+        {
+          "layers": [
+            "contact",
+            "material"
+          ],
+          "pixel_count": 1485,
+          "fraction_of_left": 0.96554,
+          "fraction_of_right": 0.943456
+        },
+        {
+          "layers": [
+            "contact",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        },
+        {
+          "layers": [
+            "material",
+            "hole"
+          ],
+          "pixel_count": 0,
+          "fraction_of_left": 0.0,
+          "fraction_of_right": 0.0
+        }
+      ],
+      "later_endpoint_shadowing": [
+        {
+          "layer": "rigid",
+          "endpoint": 18,
+          "later_endpoint_layers": [],
+          "shadowed_pixel_count": 0,
+          "shadowed_fraction": 0.0
+        },
+        {
+          "layer": "contact",
+          "endpoint": 15,
+          "later_endpoint_layers": [
+            "rigid"
+          ],
+          "shadowed_pixel_count": 1538,
+          "shadowed_fraction": 1.0
+        },
+        {
+          "layer": "material",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 1574,
+          "shadowed_fraction": 1.0
+        },
+        {
+          "layer": "hole",
+          "endpoint": 8,
+          "later_endpoint_layers": [
+            "rigid",
+            "contact"
+          ],
+          "shadowed_pixel_count": 0,
+          "shadowed_fraction": 0.0
+        }
+      ],
+      "active_segments": [
+        {
+          "step_window": [
+            3,
+            8
+          ],
+          "active_layers": [
+            "rigid",
+            "contact",
+            "material",
+            "hole"
+          ],
+          "active_union_pixel_count": 9457
+        },
+        {
+          "step_window": [
+            8,
+            15
+          ],
+          "active_layers": [
+            "rigid",
+            "contact"
+          ],
+          "active_union_pixel_count": 4733
+        },
+        {
+          "step_window": [
+            15,
+            18
+          ],
+          "active_layers": [
+            "rigid"
+          ],
+          "active_union_pixel_count": 4733
+        },
+        {
+          "step_window": [
+            18,
+            20
+          ],
+          "active_layers": [],
+          "active_union_pixel_count": 0
+        }
+      ]
+    }
+  ]
+}
