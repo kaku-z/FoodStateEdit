@@ -1,0 +1,302 @@
+{
+  "schema_version": "foodstateedit.exclusive_projection_mask_summary.v1",
+  "case_count": 4,
+  "ownership_priority_high_to_low": [
+    "hole",
+    "contact",
+    "material",
+    "rigid"
+  ],
+  "all_union_coverage_preserved": true,
+  "all_pairwise_disjoint": true,
+  "cases": [
+    {
+      "schema_version": "foodstateedit.exclusive_projection_masks.v1",
+      "anchor_id": "fried_rice_spatula_001",
+      "source_proxy_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/proxy_manifest.json",
+      "source_proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+      "ownership_priority_high_to_low": [
+        "hole",
+        "contact",
+        "material",
+        "rigid"
+      ],
+      "rule": "Each union pixel is assigned once to the first matching layer in ownership_priority_high_to_low.",
+      "source_union_pixel_count": 23652,
+      "exclusive_union_pixel_count": 23652,
+      "union_coverage_preserved": true,
+      "pairwise_overlap_pixel_count": 0,
+      "source_layer_pixel_counts": {
+        "rigid": 10681,
+        "contact": 4989,
+        "material": 8146,
+        "hole": 10595
+      },
+      "exclusive_layer_pixel_counts": {
+        "rigid": 4418,
+        "contact": 4989,
+        "material": 3650,
+        "hole": 10595
+      },
+      "reassigned_from_layer_pixel_counts": {
+        "rigid": 6263,
+        "contact": 0,
+        "material": 4496,
+        "hole": 0
+      },
+      "source_mask_files": {
+        "rigid": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_rigid.png",
+          "sha256": "4dc726bd3c26ca2874d0ab5da88cf2972332fb0e09850cc34087ba1664589251"
+        },
+        "contact": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_contact.png",
+          "sha256": "0454dd3725d9bfed92c0c5d4b8c02a090630072b09021f98a2d81ba13e7aabab"
+        },
+        "material": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_material.png",
+          "sha256": "131d530be75d7046c89f06b375072d658a9b5b6b0fdeb9e087ebad834313136a"
+        },
+        "hole": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_hole.png",
+          "sha256": "b515ed714f79c232f2b11ce7716cbf49023e6d4750d9a0ac622ce9af31123bc7"
+        }
+      },
+      "projection_mask_files": {
+        "rigid": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_rigid.png",
+          "sha256": "1394950d40f4e51d4a2f614c54241416a53f04323806b352093a65af7a078bf0"
+        },
+        "contact": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_contact.png",
+          "sha256": "0454dd3725d9bfed92c0c5d4b8c02a090630072b09021f98a2d81ba13e7aabab"
+        },
+        "material": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_material.png",
+          "sha256": "b378847eb65431b3c9cdefdb42b3fb868c3831fa8d2e5fac491a08ff3b8f0822"
+        },
+        "hole": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_hole.png",
+          "sha256": "b515ed714f79c232f2b11ce7716cbf49023e6d4750d9a0ac622ce9af31123bc7"
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.exclusive_projection_masks.v1",
+      "anchor_id": "pasta_fork_001",
+      "source_proxy_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/proxy_manifest.json",
+      "source_proxy_manifest_sha256": "c015176876261dc41629225775f28d4ac30f589d2b64f0ed068c10b6fbfa89e3",
+      "ownership_priority_high_to_low": [
+        "hole",
+        "contact",
+        "material",
+        "rigid"
+      ],
+      "rule": "Each union pixel is assigned once to the first matching layer in ownership_priority_high_to_low.",
+      "source_union_pixel_count": 13142,
+      "exclusive_union_pixel_count": 13142,
+      "union_coverage_preserved": true,
+      "pairwise_overlap_pixel_count": 0,
+      "source_layer_pixel_counts": {
+        "rigid": 3674,
+        "contact": 4178,
+        "material": 6578,
+        "hole": 5378
+      },
+      "exclusive_layer_pixel_counts": {
+        "rigid": 2415,
+        "contact": 3922,
+        "material": 1427,
+        "hole": 5378
+      },
+      "reassigned_from_layer_pixel_counts": {
+        "rigid": 1259,
+        "contact": 256,
+        "material": 5151,
+        "hole": 0
+      },
+      "source_mask_files": {
+        "rigid": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_rigid.png",
+          "sha256": "aa0269df25ff3622a6bf86d74db5c85a35c1d9e7a8e323716f1c7390aa117146"
+        },
+        "contact": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_contact.png",
+          "sha256": "a4be19c24ce4a9c4375082330befa213607402585b56458a1d87da03e0a8f648"
+        },
+        "material": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_material.png",
+          "sha256": "8a7ce7c8061d279f939c735e038f25731a4cad8b406588edcd5a6f8962b5aec5"
+        },
+        "hole": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_hole.png",
+          "sha256": "66eb321e5e3f532b5a0a13802e66a0e972c78145661452f46182212bc4019844"
+        }
+      },
+      "projection_mask_files": {
+        "rigid": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/pasta_fork_001/mask_rigid.png",
+          "sha256": "352d79f208aed7300a6d05ed89116a8b486a1c31142a65312452beea9dd03b1b"
+        },
+        "contact": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/pasta_fork_001/mask_contact.png",
+          "sha256": "48a2959cc9373a519160dd377b75ee18ed81abce7999be94bb86ab4552462d10"
+        },
+        "material": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/pasta_fork_001/mask_material.png",
+          "sha256": "481be00a3c447296c5a95ba1c481cdb2902e5ceb15bbbdc06f45d4287fe48d47"
+        },
+        "hole": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/pasta_fork_001/mask_hole.png",
+          "sha256": "66eb321e5e3f532b5a0a13802e66a0e972c78145661452f46182212bc4019844"
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.exclusive_projection_masks.v1",
+      "anchor_id": "ramen_chopsticks_001",
+      "source_proxy_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/proxy_manifest.json",
+      "source_proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+      "ownership_priority_high_to_low": [
+        "hole",
+        "contact",
+        "material",
+        "rigid"
+      ],
+      "rule": "Each union pixel is assigned once to the first matching layer in ownership_priority_high_to_low.",
+      "source_union_pixel_count": 19264,
+      "exclusive_union_pixel_count": 19264,
+      "union_coverage_preserved": true,
+      "pairwise_overlap_pixel_count": 0,
+      "source_layer_pixel_counts": {
+        "rigid": 3208,
+        "contact": 940,
+        "material": 7210,
+        "hole": 9988
+      },
+      "exclusive_layer_pixel_counts": {
+        "rigid": 2960,
+        "contact": 940,
+        "material": 5376,
+        "hole": 9988
+      },
+      "reassigned_from_layer_pixel_counts": {
+        "rigid": 248,
+        "contact": 0,
+        "material": 1834,
+        "hole": 0
+      },
+      "source_mask_files": {
+        "rigid": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_rigid.png",
+          "sha256": "f13de8a336d5c465246a2f0f6eeb5b6ad62e9ff30d7b9454e27a0553ff50a361"
+        },
+        "contact": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_contact.png",
+          "sha256": "9dc802c6ec716c20dec530e4a7cef652ab0273790474c03957c9043424b15f47"
+        },
+        "material": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_material.png",
+          "sha256": "8f5c6242b661f4fcdc0cefdcd280ae2bf83652ee5ea23913bfff0c0addd08398"
+        },
+        "hole": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_hole.png",
+          "sha256": "1277afe36788c92aa16e75e1cbb920ca23db4fac60da940190d91140435ea48b"
+        }
+      },
+      "projection_mask_files": {
+        "rigid": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_rigid.png",
+          "sha256": "87317ae07a760c36ca6a7610bc6aa38e3de595edf3ba23b531e2f67bc6a9ba7b"
+        },
+        "contact": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_contact.png",
+          "sha256": "9dc802c6ec716c20dec530e4a7cef652ab0273790474c03957c9043424b15f47"
+        },
+        "material": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_material.png",
+          "sha256": "27e6532a494d85bb2d63d446b04accc87de16257ec019f303d79e69a5e2fcb28"
+        },
+        "hole": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_hole.png",
+          "sha256": "1277afe36788c92aa16e75e1cbb920ca23db4fac60da940190d91140435ea48b"
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.exclusive_projection_masks.v1",
+      "anchor_id": "soup_spoon_001",
+      "source_proxy_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/proxy_manifest.json",
+      "source_proxy_manifest_sha256": "1fa5862bd8ef7ebf8313ee1c1485963b27ad72d3e0f9e77d1cc1d62d461853d9",
+      "ownership_priority_high_to_low": [
+        "hole",
+        "contact",
+        "material",
+        "rigid"
+      ],
+      "rule": "Each union pixel is assigned once to the first matching layer in ownership_priority_high_to_low.",
+      "source_union_pixel_count": 9457,
+      "exclusive_union_pixel_count": 9457,
+      "union_coverage_preserved": true,
+      "pairwise_overlap_pixel_count": 0,
+      "source_layer_pixel_counts": {
+        "rigid": 4733,
+        "contact": 1538,
+        "material": 1574,
+        "hole": 4724
+      },
+      "exclusive_layer_pixel_counts": {
+        "rigid": 3106,
+        "contact": 1538,
+        "material": 89,
+        "hole": 4724
+      },
+      "reassigned_from_layer_pixel_counts": {
+        "rigid": 1627,
+        "contact": 0,
+        "material": 1485,
+        "hole": 0
+      },
+      "source_mask_files": {
+        "rigid": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/mask_rigid.png",
+          "sha256": "6658aaf5a1199d0f296c1d9074b07d8297c4337a38eaee41a92cb60ae98d84b0"
+        },
+        "contact": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/mask_contact.png",
+          "sha256": "c37da7ff8d7c3e8c931c5318978191daebe26cd1de39f30b016d9d13ae2599ae"
+        },
+        "material": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/mask_material.png",
+          "sha256": "29d6850bd5bb402608a085fcfa1889862975631072ee0f3eca2dadbf0afdf358"
+        },
+        "hole": {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/mask_hole.png",
+          "sha256": "a8e1e7da51679a5980fe6bb045032faa3a1bc534fb3453c5abd8a7f5850babfd"
+        }
+      },
+      "projection_mask_files": {
+        "rigid": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/soup_spoon_001/mask_rigid.png",
+          "sha256": "146a4c477559c20c4ae7c73fb34a6ebb6d82ea4ffdc396d1ff1eacc949b032fd"
+        },
+        "contact": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/soup_spoon_001/mask_contact.png",
+          "sha256": "c37da7ff8d7c3e8c931c5318978191daebe26cd1de39f30b016d9d13ae2599ae"
+        },
+        "material": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/soup_spoon_001/mask_material.png",
+          "sha256": "5858739f5b08d0e918ab270dbe01336c27c46c8dbbf2df5294e136bd748f6141"
+        },
+        "hole": {
+          "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/soup_spoon_001/mask_hole.png",
+          "sha256": "a8e1e7da51679a5980fe6bb045032faa3a1bc534fb3453c5abd8a7f5850babfd"
+        }
+      },
+      "status": "complete"
+    }
+  ]
+}

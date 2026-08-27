@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import sys
 import unittest
@@ -66,6 +67,31 @@ class ExclusiveProjectionMaskTests(unittest.TestCase):
             list(worker["OWNERSHIP_PRIORITY"]),
         )
         self.assertIn("before any exclusive-mask stochastic output", config["freeze_rule"])
+
+    def test_tracked_remote_masks_are_hash_locked_and_valid(self):
+        root = ROOT / "results" / "day4_exclusive_masks_v2"
+        summary = json.loads(
+            (root / "exclusive_projection_mask_summary.json").read_text()
+        )
+        self.assertEqual(summary["case_count"], 4)
+        self.assertTrue(summary["all_union_coverage_preserved"])
+        self.assertTrue(summary["all_pairwise_disjoint"])
+        for case in summary["cases"]:
+            self.assertTrue(case["union_coverage_preserved"])
+            self.assertEqual(case["pairwise_overlap_pixel_count"], 0)
+            self.assertEqual(
+                case["source_union_pixel_count"],
+                case["exclusive_union_pixel_count"],
+            )
+            self.assertTrue(
+                all(count > 0 for count in case["exclusive_layer_pixel_counts"].values())
+            )
+            case_root = root / case["anchor_id"]
+            for layer, record in case["projection_mask_files"].items():
+                actual = hashlib.sha256(
+                    (case_root / f"mask_{layer}.png").read_bytes()
+                ).hexdigest()
+                self.assertEqual(actual, record["sha256"])
 
 
 if __name__ == "__main__":

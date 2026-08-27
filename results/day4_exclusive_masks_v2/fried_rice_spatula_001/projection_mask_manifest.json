@@ -1,0 +1,72 @@
+{
+  "schema_version": "foodstateedit.exclusive_projection_masks.v1",
+  "anchor_id": "fried_rice_spatula_001",
+  "source_proxy_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/proxy_manifest.json",
+  "source_proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+  "ownership_priority_high_to_low": [
+    "hole",
+    "contact",
+    "material",
+    "rigid"
+  ],
+  "rule": "Each union pixel is assigned once to the first matching layer in ownership_priority_high_to_low.",
+  "source_union_pixel_count": 23652,
+  "exclusive_union_pixel_count": 23652,
+  "union_coverage_preserved": true,
+  "pairwise_overlap_pixel_count": 0,
+  "source_layer_pixel_counts": {
+    "rigid": 10681,
+    "contact": 4989,
+    "material": 8146,
+    "hole": 10595
+  },
+  "exclusive_layer_pixel_counts": {
+    "rigid": 4418,
+    "contact": 4989,
+    "material": 3650,
+    "hole": 10595
+  },
+  "reassigned_from_layer_pixel_counts": {
+    "rigid": 6263,
+    "contact": 0,
+    "material": 4496,
+    "hole": 0
+  },
+  "source_mask_files": {
+    "rigid": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_rigid.png",
+      "sha256": "4dc726bd3c26ca2874d0ab5da88cf2972332fb0e09850cc34087ba1664589251"
+    },
+    "contact": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_contact.png",
+      "sha256": "0454dd3725d9bfed92c0c5d4b8c02a090630072b09021f98a2d81ba13e7aabab"
+    },
+    "material": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_material.png",
+      "sha256": "131d530be75d7046c89f06b375072d658a9b5b6b0fdeb9e087ebad834313136a"
+    },
+    "hole": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_hole.png",
+      "sha256": "b515ed714f79c232f2b11ce7716cbf49023e6d4750d9a0ac622ce9af31123bc7"
+    }
+  },
+  "projection_mask_files": {
+    "rigid": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_rigid.png",
+      "sha256": "1394950d40f4e51d4a2f614c54241416a53f04323806b352093a65af7a078bf0"
+    },
+    "contact": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_contact.png",
+      "sha256": "0454dd3725d9bfed92c0c5d4b8c02a090630072b09021f98a2d81ba13e7aabab"
+    },
+    "material": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_material.png",
+      "sha256": "b378847eb65431b3c9cdefdb42b3fb868c3831fa8d2e5fac491a08ff3b8f0822"
+    },
+    "hole": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/fried_rice_spatula_001/mask_hole.png",
+      "sha256": "b515ed714f79c232f2b11ce7716cbf49023e6d4750d9a0ac622ce9af31123bc7"
+    }
+  },
+  "status": "complete"
+}

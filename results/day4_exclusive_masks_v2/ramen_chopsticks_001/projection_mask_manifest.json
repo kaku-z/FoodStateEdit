@@ -1,0 +1,72 @@
+{
+  "schema_version": "foodstateedit.exclusive_projection_masks.v1",
+  "anchor_id": "ramen_chopsticks_001",
+  "source_proxy_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/proxy_manifest.json",
+  "source_proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+  "ownership_priority_high_to_low": [
+    "hole",
+    "contact",
+    "material",
+    "rigid"
+  ],
+  "rule": "Each union pixel is assigned once to the first matching layer in ownership_priority_high_to_low.",
+  "source_union_pixel_count": 19264,
+  "exclusive_union_pixel_count": 19264,
+  "union_coverage_preserved": true,
+  "pairwise_overlap_pixel_count": 0,
+  "source_layer_pixel_counts": {
+    "rigid": 3208,
+    "contact": 940,
+    "material": 7210,
+    "hole": 9988
+  },
+  "exclusive_layer_pixel_counts": {
+    "rigid": 2960,
+    "contact": 940,
+    "material": 5376,
+    "hole": 9988
+  },
+  "reassigned_from_layer_pixel_counts": {
+    "rigid": 248,
+    "contact": 0,
+    "material": 1834,
+    "hole": 0
+  },
+  "source_mask_files": {
+    "rigid": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_rigid.png",
+      "sha256": "f13de8a336d5c465246a2f0f6eeb5b6ad62e9ff30d7b9454e27a0553ff50a361"
+    },
+    "contact": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_contact.png",
+      "sha256": "9dc802c6ec716c20dec530e4a7cef652ab0273790474c03957c9043424b15f47"
+    },
+    "material": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_material.png",
+      "sha256": "8f5c6242b661f4fcdc0cefdcd280ae2bf83652ee5ea23913bfff0c0addd08398"
+    },
+    "hole": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/mask_hole.png",
+      "sha256": "1277afe36788c92aa16e75e1cbb920ca23db4fac60da940190d91140435ea48b"
+    }
+  },
+  "projection_mask_files": {
+    "rigid": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_rigid.png",
+      "sha256": "87317ae07a760c36ca6a7610bc6aa38e3de595edf3ba23b531e2f67bc6a9ba7b"
+    },
+    "contact": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_contact.png",
+      "sha256": "9dc802c6ec716c20dec530e4a7cef652ab0273790474c03957c9043424b15f47"
+    },
+    "material": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_material.png",
+      "sha256": "27e6532a494d85bb2d63d446b04accc87de16257ec019f303d79e69a5e2fcb28"
+    },
+    "hole": {
+      "path": "/tmp/foodstateedit_day4_exclusive_masks_v2/ramen_chopsticks_001/mask_hole.png",
+      "sha256": "1277afe36788c92aa16e75e1cbb920ca23db4fac60da940190d91140435ea48b"
+    }
+  },
+  "status": "complete"
+}

@@ -15,10 +15,10 @@ Date opened: 2026-08-27
 
 ## Remote preparation
 
-- [ ] Build four exclusive mask packages in a new output root.
-- [ ] Verify source proxy hashes, pairwise overlap `0`, union preservation, and
+- [x] Build four exclusive mask packages in a new output root.
+- [x] Verify source proxy hashes, pairwise overlap `0`, union preservation, and
   nonempty masks for every anchor.
-- [ ] Deploy the exact committed worker to a new launcher directory.
+- [x] Deploy the exact committed worker to a new launcher directory.
 
 ## Pilot and gate
 
@@ -28,6 +28,6 @@ Date opened: 2026-08-27
 - [ ] Review action/photo success against vanilla, unified, and staged v1.
 - [ ] Expand only if v2 improves action success without losing preservation.
 
-Status: `FROZEN_REMOTE_MASK_BUILD_PENDING`
+Status: `MASKS_FROZEN_INFERENCE_PENDING`
 
 Frozen candidate: `configs/staged_schedule_v2_exclusive.json`
