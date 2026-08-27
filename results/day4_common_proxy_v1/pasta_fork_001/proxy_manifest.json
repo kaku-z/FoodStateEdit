@@ -1,0 +1,68 @@
+{
+  "schema_version": "foodstateedit.common_proxy.v1",
+  "anchor_id": "pasta_fork_001",
+  "source_case_id": "pasta_006",
+  "canonical_input_path": "/host/space0/ma-y/SR/UECFOOD256x4_osediff/84/8915.jpg",
+  "canonical_input_sha256": "9338301493ad89273ce5e881e5e45dac48eb5eb541b3809de9ebddde47b9a8a9",
+  "working_width": 736,
+  "working_height": 544,
+  "depth_mode": "deterministic_relative_layer_depth_no_learned_model",
+  "texture_mode": "source_hole_texture_warp_with_procedural_utensil_shading",
+  "outside_edit_alpha_max_pixel_difference": 0,
+  "changed_fraction": 0.037964,
+  "files": {
+    "first_frame.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/first_frame.png",
+      "sha256": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a"
+    },
+    "motion_signal.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/motion_signal.png",
+      "sha256": "d204a7ee32674b4890dbd2017805691a0861929530cf156b9d60f94d386a5504"
+    },
+    "depth.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/depth.png",
+      "sha256": "e354033c174ee24938dd4a896c32ff31f22274d89cca575a2973c2b8eb12b690"
+    },
+    "mask.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask.png",
+      "sha256": "2f609c43fc01d19020362756974effc0b24a57e3d758c933d518e637f275d621"
+    },
+    "mask_old.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_old.png",
+      "sha256": "66eb321e5e3f532b5a0a13802e66a0e972c78145661452f46182212bc4019844"
+    },
+    "mask_rigid.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_rigid.png",
+      "sha256": "aa0269df25ff3622a6bf86d74db5c85a35c1d9e7a8e323716f1c7390aa117146"
+    },
+    "mask_contact.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_contact.png",
+      "sha256": "a4be19c24ce4a9c4375082330befa213607402585b56458a1d87da03e0a8f648"
+    },
+    "mask_material.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_material.png",
+      "sha256": "8a7ce7c8061d279f939c735e038f25731a4cad8b406588edcd5a6f8962b5aec5"
+    },
+    "mask_hole.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_hole.png",
+      "sha256": "66eb321e5e3f532b5a0a13802e66a0e972c78145661452f46182212bc4019844"
+    },
+    "mask_protect.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/mask_protect.png",
+      "sha256": "091acfdee6533d2f64c5acc1c7d75d2a639fef9cead645531ab9cfc192a4417b"
+    },
+    "edit_alpha.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/edit_alpha.png",
+      "sha256": "ff2b13074bc74246640bd3f0f0cdf41c6aad2d8f1c707ea169fc8f7af32499a0"
+    },
+    "prompt.txt": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/prompt.txt",
+      "sha256": "30ad2ad38b494b27204b4cabea7ec2cb71b4bc0b9885c3091e8c5f69d928f7ab"
+    },
+    "negative_prompt.txt": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/negative_prompt.txt",
+      "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+    }
+  },
+  "status": "provisional_geometry_proxy_requires_visual_confirmation"
+}

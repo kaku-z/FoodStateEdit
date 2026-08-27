@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "method": "geoedit_unified_action_mask",
+  "seed": 1,
+  "case_count": 4,
+  "complete_count": 4,
+  "technical_failure_count": 0,
+  "all_protected_pixels_exact": true,
+  "runs": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/soup_spoon_001/seed_1/run_manifest.json",
+      "status": "complete",
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "outputs": [
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/soup_spoon_001/seed_1/result.mp4",
+          "sha256": "a49c11879c938292d8cc4c63c4bfa6358e2eacdc55ae2574c236157a0412f956"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/soup_spoon_001/seed_1/raw_last_frame.png",
+          "sha256": "8b85a847bcf12f4f97ed7859eac4d6335a605d6fc23d1181fa33714efd9c6cb9"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/soup_spoon_001/seed_1/edited_2d.png",
+          "sha256": "74a25268c5b7b6502d51373b4f4434c5d598649fe1cec3e2efaadba6ef791488"
+        }
+      ]
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/fried_rice_spatula_001/seed_1/run_manifest.json",
+      "status": "complete",
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "outputs": [
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/fried_rice_spatula_001/seed_1/result.mp4",
+          "sha256": "3184d1cac9f1ee4c368cb4f4687472a6fa4335a8b0828c9504a52c1981037d4e"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/fried_rice_spatula_001/seed_1/raw_last_frame.png",
+          "sha256": "5fc7b4bccc3409bfff260766619194a9f4ad74ed88f33129df78e58c660c2115"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/fried_rice_spatula_001/seed_1/edited_2d.png",
+          "sha256": "8607a01141a6e3fbcd8dcebf208783d9beb73ab4189ecaba7aa1fd45c7f07dfb"
+        }
+      ]
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/ramen_chopsticks_001/seed_1/run_manifest.json",
+      "status": "complete",
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "outputs": [
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/ramen_chopsticks_001/seed_1/result.mp4",
+          "sha256": "f48ae656199391eff47d1b93f9ea41a2d42b0986ef127f0eb5f2cf7bb01bf6b4"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/ramen_chopsticks_001/seed_1/raw_last_frame.png",
+          "sha256": "a7244fb691da7b67d6cb11c2e1222c7f18e3472d96c2dcc5538e6e932e116d22"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/ramen_chopsticks_001/seed_1/edited_2d.png",
+          "sha256": "c5433e407780ba1f75663f877effc217543a5ea89cf5425479270863119c6ca6"
+        }
+      ]
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/pasta_fork_001/seed_1/run_manifest.json",
+      "status": "complete",
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "outputs": [
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/pasta_fork_001/seed_1/result.mp4",
+          "sha256": "8d203c05586fffecbbcfca3ef7b0d4bc487db785c1564eaa600e04c5e65952ab"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/pasta_fork_001/seed_1/raw_last_frame.png",
+          "sha256": "62a8bdce5039ffb3e2192a7ec8b6c6584e68c595b4b35a4f8e959059b63113d0"
+        },
+        {
+          "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/pasta_fork_001/seed_1/edited_2d.png",
+          "sha256": "89a61fcf3f4befe929093d98cfbff6d7589992e09bc926004443ec10da86321c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "foodstateedit.internal_pilot_review.v1",
+  "review_date": "2026-08-27",
+  "method": "vanilla_geoedit",
+  "seed": 1,
+  "review_status": "single_internal_nonblind_diagnostic_not_formal_human_evaluation",
+  "decision_rule": "action_success requires every declared hard-action constraint to pass; technical completion alone is never action success",
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "technical_status": "complete",
+      "action_success_provisional": true,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["one_spoon", "liquid_payload", "no_surface_crater", "preserve_crock", "forbid_extras", "exact_protection"],
+      "failed": [],
+      "failure_tags": ["proxy_like_metal_outline", "thin_handle"],
+      "note": "The scoop relation is visible, but the utensil remains synthetic rather than publication-quality photorealistic."
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["one_spatula", "supported_payload", "granular_identity", "preserve_plate", "forbid_extras", "exact_protection"],
+      "failed": ["source_reduction"],
+      "failure_tags": ["no_clear_source_reduction", "weak_spatula_category"],
+      "note": "Rice is supported, but the source mound does not show one clear plausible scoop and the blade reads ambiguously."
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["two_chopsticks", "forbid_extras", "preserve_scene", "exact_protection"],
+      "failed": ["valid_grip", "strand_continuity", "contact_z_order", "source_repair"],
+      "unassessed": ["length_conservation"],
+      "failure_tags": ["transparent_chopsticks", "translucent_strand", "ambiguous_grip", "broken_contact_topology"],
+      "note": "Two sticks are visible, but the contact and continuous lifted-strand relation are not reliable."
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "technical_status": "complete",
+      "action_success_provisional": false,
+      "photo_success_provisional": false,
+      "preservation_success": true,
+      "passed": ["preserve_plate", "forbid_extras", "exact_protection"],
+      "failed": ["one_fork", "twirl_contact", "strand_continuity", "source_reduction"],
+      "failure_tags": ["fork_collapsed_to_spoon_bowl", "missing_four_tines", "no_visible_twirl"],
+      "note": "The utensil category collapses to a spoon-like bowl, so the fork action fails even though inference completed."
+    }
+  ],
+  "aggregate": {
+    "technical_complete": 4,
+    "provisional_action_success": 1,
+    "provisional_photo_success": 0,
+    "exact_preservation_success": 4
+  }
+}

@@ -1,0 +1,3 @@
+# Preserve byte-exact remote audit snapshots used in provenance checks.
+results/day3_launchers/*.py -text
+results/day3_model_hash_v1/*.txt -text

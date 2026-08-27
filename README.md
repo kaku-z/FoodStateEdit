@@ -35,10 +35,13 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `results/CURRENT_RESULTS_INVENTORY.md`: evidence available at sprint start;
 - `DAY1_CHECKLIST.md`: completion evidence for the first sprint day.
 - `DAY2_CHECKLIST.md`: auditable entry point for the 60-case benchmark freeze.
-- `DAY3_CHECKLIST.md`: baseline availability, frozen comparison set, and open
-  common-proxy dependency;
+- `DAY3_CHECKLIST.md`: closed baseline availability and four-anchor execution gate;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `results/DAY3_BASELINE_AUDIT.md`: evidence-backed reproducibility audit;
+- `results/DAY3_SMOKE_REVIEW.md`: separate technical and provisional visual
+  outcomes for the eight GeoEdit baseline runs;
+- `results/day4_common_proxy_v1/`: machine-readable four-anchor common-proxy
+  manifests and the internal review decision (source images are not tracked);
 - `benchmark/data_manifest_v1.csv`: frozen 60-case 5/10 split;
 - `benchmark/canonical_input_manifest_v1.csv`: hash-locked common x4-aligned
   editing inputs derived from the frozen sources;

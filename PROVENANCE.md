@@ -36,15 +36,19 @@ Known intent of the modifications:
 
 Models are reused in place. Downloads are disabled in formal launchers.
 
-| Remote file | Size in bytes | Recorded mtime |
-| --- | ---: | --- |
-| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors` | 34,675,325,000 | 2026-08-19 22:30:11 +0900 |
-| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/low_noise_model/diffusion_pytorch_model.safetensors` | 34,675,325,000 | 2026-08-20 14:44:17 +0900 |
-| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth` | 11,361,920,418 | 2026-08-20 22:20:48 +0900 |
-| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth` | 507,609,880 | 2026-08-20 22:23:16 +0900 |
+| Remote file | Size in bytes | Recorded mtime | SHA-256 completed 2026-08-27 |
+| --- | ---: | --- | --- |
+| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors` | 34,675,325,000 | 2026-08-19 22:30:11 +0900 | `66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007` |
+| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/low_noise_model/diffusion_pytorch_model.safetensors` | 34,675,325,000 | 2026-08-20 14:44:17 +0900 | `0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d` |
+| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth` | 11,361,920,418 | 2026-08-20 22:20:48 +0900 | `7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d` |
+| `/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth` | 507,609,880 | 2026-08-20 22:23:16 +0900 | `38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981` |
 
-Large model SHA-256 hashes are intentionally deferred to a background audit;
-formal run manifests must not leave the model identity field empty.
+The one-time full-file audit is retained remotely at
+`outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt`.
+Its tracked text copy is `results/day3_model_hash_v1/wan_model_sha256.txt`
+(SHA-256 `4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b`).
+Launchers validate that audit and current file sizes instead of rereading
+81.2 GiB before every run. Formal manifests record all four audited hashes.
 
 ## Key result anchors
 

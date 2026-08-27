@@ -1,0 +1,68 @@
+{
+  "schema_version": "foodstateedit.common_proxy.v1",
+  "anchor_id": "fried_rice_spatula_001",
+  "source_case_id": "rice_007",
+  "canonical_input_path": "/host/space0/ma-y/SR/UECFOOD256x4_osediff/9/830.jpg",
+  "canonical_input_sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc",
+  "working_width": 736,
+  "working_height": 544,
+  "depth_mode": "deterministic_relative_layer_depth_no_learned_model",
+  "texture_mode": "source_hole_texture_warp_with_procedural_utensil_shading",
+  "outside_edit_alpha_max_pixel_difference": 0,
+  "changed_fraction": 0.063659,
+  "files": {
+    "first_frame.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/first_frame.png",
+      "sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f"
+    },
+    "motion_signal.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/motion_signal.png",
+      "sha256": "34d7b35819a3a515653067dd7c792a48183a59defd9cb57791a4b121a311a81a"
+    },
+    "depth.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/depth.png",
+      "sha256": "fa16aefefc7a7319ec9be0901054a322b80c284c6f4a1afeede8c2d1fb51a96a"
+    },
+    "mask.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask.png",
+      "sha256": "78138d3a051ec91f2460eb8151cb353135b619023987bbb7eab0416791a7811f"
+    },
+    "mask_old.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_old.png",
+      "sha256": "b515ed714f79c232f2b11ce7716cbf49023e6d4750d9a0ac622ce9af31123bc7"
+    },
+    "mask_rigid.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_rigid.png",
+      "sha256": "4dc726bd3c26ca2874d0ab5da88cf2972332fb0e09850cc34087ba1664589251"
+    },
+    "mask_contact.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_contact.png",
+      "sha256": "0454dd3725d9bfed92c0c5d4b8c02a090630072b09021f98a2d81ba13e7aabab"
+    },
+    "mask_material.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_material.png",
+      "sha256": "131d530be75d7046c89f06b375072d658a9b5b6b0fdeb9e087ebad834313136a"
+    },
+    "mask_hole.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_hole.png",
+      "sha256": "b515ed714f79c232f2b11ce7716cbf49023e6d4750d9a0ac622ce9af31123bc7"
+    },
+    "mask_protect.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/mask_protect.png",
+      "sha256": "159d6274114cb186c967dc693a3eba096cc441014d9761bbb59039bcb82f63f0"
+    },
+    "edit_alpha.png": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/edit_alpha.png",
+      "sha256": "a632d982090c5df593a41355cd63d48cc79b07b22f22ce0b12c8c02ae1b481ee"
+    },
+    "prompt.txt": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/prompt.txt",
+      "sha256": "1e01121446bdd874aca255aebca479d811f051cd735682b9bc48b56b8cb1883c"
+    },
+    "negative_prompt.txt": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/negative_prompt.txt",
+      "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+    }
+  },
+  "status": "provisional_geometry_proxy_requires_visual_confirmation"
+}

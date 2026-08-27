@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "method": "input_no_edit",
+  "deterministic": true,
+  "case_count": 4,
+  "complete_count": 4,
+  "all_outputs_bit_exact": true,
+  "code_commit": "87244e1c8e7a0c235be1f3e467ae3674a5561566",
+  "created_at": "2026-08-27T00:15:00+09:00",
+  "runs": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "source_case_id": "soup_002",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/soup_spoon_001/deterministic/run_manifest.json",
+      "output": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/soup_spoon_001/deterministic/edited_2d.jpg",
+      "source_sha256": "6f633e7416d069c149fecfb37f5e67d7f4b568487788ee73cba75b4702d188e3",
+      "output_sha256": "6f633e7416d069c149fecfb37f5e67d7f4b568487788ee73cba75b4702d188e3",
+      "bit_exact": true,
+      "status": "complete"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "source_case_id": "rice_007",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/fried_rice_spatula_001/deterministic/run_manifest.json",
+      "output": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/fried_rice_spatula_001/deterministic/edited_2d.jpg",
+      "source_sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc",
+      "output_sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc",
+      "bit_exact": true,
+      "status": "complete"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "source_case_id": "noodle_001",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/ramen_chopsticks_001/deterministic/run_manifest.json",
+      "output": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/ramen_chopsticks_001/deterministic/edited_2d.jpg",
+      "source_sha256": "44b4bc5461d6ac0d7a3a811859db4914e5cd0e29db14a66c12e2ec2a64ee89bf",
+      "output_sha256": "44b4bc5461d6ac0d7a3a811859db4914e5cd0e29db14a66c12e2ec2a64ee89bf",
+      "bit_exact": true,
+      "status": "complete"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "source_case_id": "pasta_006",
+      "run_manifest": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/pasta_fork_001/deterministic/run_manifest.json",
+      "output": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/pasta_fork_001/deterministic/edited_2d.jpg",
+      "source_sha256": "9338301493ad89273ce5e881e5e45dac48eb5eb541b3809de9ebddde47b9a8a9",
+      "output_sha256": "9338301493ad89273ce5e881e5e45dac48eb5eb541b3809de9ebddde47b9a8a9",
+      "bit_exact": true,
+      "status": "complete"
+    }
+  ]
+}

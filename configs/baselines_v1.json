@@ -6,8 +6,8 @@
   "anchor_manifest": "benchmark/anchor_manifest_v1.csv",
   "seed_policy": {
     "deterministic_methods": [0],
-    "stochastic_pilot_smoke": [20260826],
-    "stochastic_formal_test": [20260826, 20260827, 20260828],
+    "stochastic_pilot_smoke": [1],
+    "stochastic_formal_test": [1, 2, 3],
     "selection_rule": "No output-dependent seed replacement. Technical reruns retain the same seed."
   },
   "working_resolution": {
@@ -34,7 +34,7 @@
       "role": "primary_baseline",
       "inclusion": "frozen",
       "day3_engine_status": "cli_and_unit_smoke_passed",
-      "formal_anchor_status": "awaiting_common_proxy_v1",
+      "formal_anchor_status": "smoke_seed1_complete_4_of_4",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "Heey731_GeoEdit_Wan2.2_VACE",
@@ -48,7 +48,7 @@
       "role": "primary_baseline",
       "inclusion": "frozen",
       "day3_engine_status": "cli_and_unit_smoke_passed",
-      "formal_anchor_status": "awaiting_common_proxy_v1",
+      "formal_anchor_status": "smoke_seed1_complete_4_of_4",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "Heey731_GeoEdit_Wan2.2_VACE",
@@ -62,7 +62,7 @@
       "role": "secondary_baseline",
       "inclusion": "conditional",
       "day3_engine_status": "model_assets_present_launcher_pending",
-      "formal_anchor_status": "awaiting_common_proxy_v1_and_launcher",
+      "formal_anchor_status": "common_proxy_v1_ready_launcher_pending",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "Wan2.2_VACE_without_TTM_projection",
@@ -76,7 +76,7 @@
       "role": "proposed_method",
       "inclusion": "frozen",
       "day3_engine_status": "two_layer_smoke_passed_four_layer_integration_pending",
-      "formal_anchor_status": "awaiting_common_proxy_v1",
+      "formal_anchor_status": "common_proxy_v1_ready_four_layer_integration_pending",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "GeoEdit_with_material_aware_staged_projection",
@@ -112,7 +112,7 @@
     "minimum_frozen_primary_controls_or_baselines": 3,
     "frozen_primary_count": 3,
     "engine_contract_ready_count": 3,
-    "four_anchor_batch_complete_count": 0,
-    "status": "OPEN_AWAITING_COMMON_PROXY_V1"
+    "four_anchor_batch_complete_count": 3,
+    "status": "CLOSED_COMPLETE"
   }
 }

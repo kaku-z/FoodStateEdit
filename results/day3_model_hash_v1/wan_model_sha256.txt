@@ -1,0 +1,4 @@
+66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007  /host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors
+0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d  /host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/low_noise_model/diffusion_pytorch_model.safetensors
+7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d  /host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth
+38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981  /host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth

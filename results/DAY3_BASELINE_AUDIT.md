@@ -7,15 +7,21 @@ Audit date: 2026-08-26 (Asia/Tokyo)
 The formal comparison set is frozen to three primary controls/baselines plus
 the proposed method: `input_no_edit`, `vanilla_geoedit`,
 `geoedit_unified_action_mask`, and `foodstateedit_staged`. A direct VACE
-same-proxy baseline is conditional on a small offline launcher. The Day 3 batch
-gate remains open until `common_proxy_v1` exists for all four anchors; engine
-readiness must not be confused with completed image inference.
+same-proxy baseline is conditional on a small offline launcher. The common
+proxy now exists for all four anchors and passed the structural and internal
+visual gate. Both GeoEdit smoke batches subsequently completed 4/4 at seed `1`,
+with zero technical failures and no seed replacement. Engine readiness is kept
+separate from the diagnostic action-success review.
+
+Formal stochastic seeds remain the Day 1 values `[1, 2, 3]`; the Day 3 audit
+does not create a second seed policy.
 
 ## Reusable assets verified
 
 - Eight NVIDIA RTX A6000 GPUs were visible and idle at audit time.
 - The existing Wan2.2-VACE-Fun-A14B high-noise, low-noise, T5, VAE, and tokenizer
-  assets are present; no model was downloaded or rerun during the audit.
+  assets are present; no model was downloaded or rerun during the audit. All
+  four large component SHA-256 hashes are now frozen in `PROVENANCE.md`.
 - The remote GeoEdit override hashes exactly match `PROVENANCE.md`.
 - `python -m geoedit.inference --help` imports successfully with downloads
   disabled.
@@ -30,14 +36,16 @@ readiness must not be confused with completed image inference.
 
 | Method | Decision | Day 3 evidence | Remaining prerequisite |
 | --- | --- | --- | --- |
-| Input / no edit | frozen primary control | deterministic batch runner | none |
+| Input / no edit | frozen primary control | 4/4 bit-exact remote runs and valid manifests | none |
 | Vanilla GeoEdit | frozen primary baseline | CLI import + six unit tests + historical runs | four common RGB/depth proxies |
 | GeoEdit + unified action mask | frozen primary baseline | same tested engine; union-mask contract frozen | four common RGB/depth proxies |
 | VACE direct/static proxy | conditional secondary | all Wan assets present | common proxies and offline launcher |
 | FoodStateEdit staged | frozen proposed method | prior two-layer spoon run and tested staged arguments | four-layer integration and common proxies |
 
-The common proxy is deliberately a prerequisite. Running flat colored shapes or
-method-specific emergency proxies would make the comparison uninterpretable.
+The common proxy is deliberately shared. Running method-specific emergency
+proxies would make the comparison uninterpretable. `common_proxy_v1` uses the
+same deterministic RGB proxy, relative layer depth, and semantic edit support
+for every compatible method; its protected pixels are exactly unchanged.
 
 ## Audited exclusions
 
@@ -66,7 +74,10 @@ denoising structure directly matches the project interface
 
 ## Gate rule
 
-The gate closes only after the three frozen primary controls/baselines produce
-non-overwritten run manifests for all four anchors. At this checkpoint the
-contract-ready count is three, but the four-anchor batch-complete count is zero.
-The next dependency is `common_proxy_v1`, not a prompt or seed sweep.
+The no-edit evidence is stored in `results/day3_no_edit_v1/`; restricted output
+images remain on the remote host and under ignored local artifacts. All three
+frozen primary controls/baselines produced non-overwritten run manifests for
+all four anchors, so the four-anchor batch-complete count is three and the Day 3
+gate is closed. `results/DAY3_SMOKE_REVIEW.md` records the separate provisional
+quality diagnosis. The next engineering dependency is a resident per-GPU
+pipeline worker, followed by the proposed staged-schedule smoke test.

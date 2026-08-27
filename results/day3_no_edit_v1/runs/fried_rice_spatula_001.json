@@ -1,0 +1,45 @@
+{
+  "schema_version": "foodstateedit.run.v1",
+  "run_id": "fried_rice_spatula_001__input_no_edit__deterministic",
+  "case_id": "fried_rice_spatula_001",
+  "method": "input_no_edit",
+  "seed": 0,
+  "model": {
+    "name": "identity_copy_v1",
+    "root": "/tmp",
+    "files": [
+      {
+        "path": "/tmp/tfufi_run_no_edit_baseline_v1.py",
+        "size_bytes": 5815,
+        "sha256": "7338203eb6d3d13c4a1a9097eeac5b5290f46c82f576fc866194150a634b9f78"
+      }
+    ]
+  },
+  "inference": {
+    "width": 880,
+    "height": 656,
+    "frames": 1,
+    "steps": 1,
+    "warm_start": false,
+    "schedule": {
+      "rigid": 0,
+      "contact": 0,
+      "material": 0,
+      "hole": 0
+    }
+  },
+  "environment": {
+    "host": "gp40.cs.uec.ac.jp",
+    "gpu": "none_identity_copy",
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "code_commit": "87244e1c8e7a0c235be1f3e467ae3674a5561566",
+    "created_at": "2026-08-27T00:15:00+09:00"
+  },
+  "status": "complete",
+  "outputs": [
+    {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_no_edit_v1/fried_rice_spatula_001/deterministic/edited_2d.jpg",
+      "sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc"
+    }
+  ]
+}
