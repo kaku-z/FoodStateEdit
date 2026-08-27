@@ -1,0 +1,33 @@
+# Day 4 follow-up: exclusive projection masks v2
+
+Date opened: 2026-08-27
+
+## Pre-inference contract
+
+- [x] Freeze staged v1 as a negative pilot and preserve its tag/results.
+- [x] Keep the common proxy, model, seed, steps, frames, endpoints, and 2D
+  protection projection unchanged.
+- [x] Isolate one factor: semantic projection-mask ownership.
+- [x] Define global ownership priority `hole > contact > material > rigid`.
+- [x] Require pairwise-disjoint masks with exactly preserved union coverage.
+- [x] Add a deterministic builder, fail-closed manifest checks, and unit tests.
+- [x] Commit this contract before the first v2 stochastic output.
+
+## Remote preparation
+
+- [ ] Build four exclusive mask packages in a new output root.
+- [ ] Verify source proxy hashes, pairwise overlap `0`, union preservation, and
+  nonempty masks for every anchor.
+- [ ] Deploy the exact committed worker to a new launcher directory.
+
+## Pilot and gate
+
+- [ ] Run the same four anchors at seed `1` with two resident workers.
+- [ ] Verify `4/4` technical status, exact protection, and one pipeline load per
+  worker.
+- [ ] Review action/photo success against vanilla, unified, and staged v1.
+- [ ] Expand only if v2 improves action success without losing preservation.
+
+Status: `FROZEN_REMOTE_MASK_BUILD_PENDING`
+
+Frozen candidate: `configs/staged_schedule_v2_exclusive.json`

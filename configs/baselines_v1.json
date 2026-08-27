@@ -85,6 +85,23 @@
       "pilot_schedule_candidate": {"rigid": 18, "contact": 15, "material": 8, "hole": 8},
       "warm_start": false,
       "rationale": "Staged v1 is a closed negative pilot. Overlapping masks shadow shorter windows; the next candidate must use non-shadowing projection masks and remain pilot-only until the Day 8 freeze."
+    },
+    {
+      "method_id": "foodstateedit_staged_exclusive",
+      "role": "proposed_method_pilot_candidate",
+      "inclusion": "pre_registered_pilot_only",
+      "parent_method": "foodstateedit_staged",
+      "day4_engine_status": "local_contract_and_tests_passed",
+      "formal_anchor_status": "remote_mask_build_pending",
+      "stochastic": true,
+      "requires_common_proxy": true,
+      "backend": "GeoEdit_with_material_aware_staged_projection",
+      "controls": "same_common_proxy_v1_with_pairwise_disjoint_projection_masks",
+      "pilot_schedule_candidate": {"rigid": 18, "contact": 15, "material": 8, "hole": 8},
+      "projection_mask_ownership_priority_high_to_low": ["hole", "contact", "material", "rigid"],
+      "warm_start": false,
+      "isolated_factor": "semantic projection-mask ownership only",
+      "rationale": "Tests the staged-v1 failure diagnosis while holding the proxy, model, seed, endpoints, and exact protection projection fixed."
     }
   ],
   "audited_nonprimary_methods": [
