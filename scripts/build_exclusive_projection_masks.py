@@ -61,6 +61,7 @@ def make_exclusive(masks: dict[str, np.ndarray]) -> dict[str, np.ndarray]:
 
 
 def save_mask(mask: np.ndarray, path: Path) -> None:
+    import numpy as np
     from PIL import Image
 
     Image.fromarray(mask.astype(np.uint8) * 255, mode="L").save(path, optimize=True)

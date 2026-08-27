@@ -50,6 +50,8 @@ class ExclusiveProjectionMaskTests(unittest.TestCase):
         self.assertIn("Exclusive masks changed union coverage", source)
         self.assertIn("Exclusive masks overlap", source)
         self.assertIn("Exclusive mask became empty", source)
+        self.assertIn("def save_mask", source)
+        self.assertIn("import numpy as np\n    from PIL import Image", source)
 
     def test_frozen_v2_config_matches_worker(self):
         config = json.loads(
