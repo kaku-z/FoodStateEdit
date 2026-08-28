@@ -1,0 +1,18 @@
+{
+  "schema_version": "foodstateedit.vace_direct_static_proxy.v1",
+  "freeze_date": "2026-08-28",
+  "freeze_rule": "Committed before any VACE-direct static-proxy v1 stochastic output was generated.",
+  "method": "vace_direct_static_proxy",
+  "model": "Wan2.2-VACE-Fun-A14B",
+  "seed": 1,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "vace_scale": 1.0,
+  "vace_video": "common_proxy_v1 motion_signal.png repeated for all frames",
+  "vace_video_mask": "common_proxy_v1 edit_alpha.png repeated for all frames",
+  "vace_reference_image": "common_proxy_v1 first_frame.png",
+  "enable_ttm": false,
+  "postprocess": "exact source projection outside edit_alpha",
+  "selection_policy": "One global setup for all four anchors; no seed replacement or output-dependent tuning.",
+  "isolated_question": "Can native VACE materialize the static action proxy without GeoEdit dual-branch TTM replacement?"
+}
