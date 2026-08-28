@@ -1,0 +1,160 @@
+{
+  "schema_version": "foodstateedit.paper_figure.v1",
+  "figure": "day5_method_grid",
+  "code_commit": "c74a252c8f3058af97b610fb940f4d95cead4830",
+  "rows": 4,
+  "columns": 6,
+  "sources": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "source",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/first_frame.png",
+      "sha256": "92c064768c4b8f0dee95d92265cbdd48b95e97a39fa852594383532043b102f4"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "proxy",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/soup_spoon_001/motion_signal.png",
+      "sha256": "a14cbfab8942da547dd2e68d0d45d98e32c7b39f3028cf243639c2473c1053a3"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "unified",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/soup_spoon_001/seed_1/edited_2d.png",
+      "sha256": "74a25268c5b7b6502d51373b4f4434c5d598649fe1cec3e2efaadba6ef791488"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "exclusive",
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/soup_spoon_001/seed_1/edited_2d.png",
+      "sha256": "0c18c3f18c57568f2e028f61bfa1848887c58af1d0500d752e107dda027b6fce"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "geometry",
+      "path": "/tmp/foodstateedit_day5_geometry_lock_v1/soup_spoon_001/edited_2d.png",
+      "sha256": "621fb8e9c8c27375c86ea628b01b92706e34b38ed2ff9ae5b50397bbf75e883a"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "material",
+      "path": "/tmp/foodstateedit_day5_material_render_v1/soup_spoon_001/edited_2d.png",
+      "sha256": "cb51143f3ac3a711039e37bfcc6a68860023d73acf1990e28f01353968264d46"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "source",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/first_frame.png",
+      "sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "proxy",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/fried_rice_spatula_001/motion_signal.png",
+      "sha256": "34d7b35819a3a515653067dd7c792a48183a59defd9cb57791a4b121a311a81a"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "unified",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/fried_rice_spatula_001/seed_1/edited_2d.png",
+      "sha256": "8607a01141a6e3fbcd8dcebf208783d9beb73ab4189ecaba7aa1fd45c7f07dfb"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "exclusive",
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/edited_2d.png",
+      "sha256": "64fcca50986871dbd0090aec242c075e08365af258a9b1e12fad0337a7e23c70"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "geometry",
+      "path": "/tmp/foodstateedit_day5_geometry_lock_v1/fried_rice_spatula_001/edited_2d.png",
+      "sha256": "a2010a2b6642dde118c56d331c55a4df70c3c9449eced093a3b9894fa674efd3"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "material",
+      "path": "/tmp/foodstateedit_day5_material_render_v1/fried_rice_spatula_001/edited_2d.png",
+      "sha256": "f5d7a07761f2f989f240250d751127ffe394cf992dd0d08f84471a38bac7efed"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "source",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/first_frame.png",
+      "sha256": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "proxy",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/motion_signal.png",
+      "sha256": "954e8fdba9579eb45505b0b26262135131a95c652edfeab029412b9a19568798"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "unified",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/ramen_chopsticks_001/seed_1/edited_2d.png",
+      "sha256": "c5433e407780ba1f75663f877effc217543a5ea89cf5425479270863119c6ca6"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "exclusive",
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1/ramen_chopsticks_001/seed_1/edited_2d.png",
+      "sha256": "0cf9ccd69431d1bc6806fc6206f7c26d35754d29540ba0de0f8e604e65914d03"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "geometry",
+      "path": "/tmp/foodstateedit_day5_geometry_lock_v1/ramen_chopsticks_001/edited_2d.png",
+      "sha256": "1f3824e167e22af9e0782980bce49ade77f48b60ded108da96bc569726c40179"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "material",
+      "path": "/tmp/foodstateedit_day5_material_render_v1/ramen_chopsticks_001/edited_2d.png",
+      "sha256": "eb5b586279ae4c2a2fa5c0f057782ad6380a6e28cbd12b2e068f5c4318021ac6"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "source",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/first_frame.png",
+      "sha256": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "proxy",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/pasta_fork_001/motion_signal.png",
+      "sha256": "d204a7ee32674b4890dbd2017805691a0861929530cf156b9d60f94d386a5504"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "unified",
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_unified_geoedit_smoke_v1/pasta_fork_001/seed_1/edited_2d.png",
+      "sha256": "89a61fcf3f4befe929093d98cfbff6d7589992e09bc926004443ec10da86321c"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "exclusive",
+      "path": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1/pasta_fork_001/seed_1/edited_2d.png",
+      "sha256": "d4d9cc2b64aa2efa98aa07021adf713713d339a413e8de6cd768b0a099938f78"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "geometry",
+      "path": "/tmp/foodstateedit_day5_geometry_lock_v1/pasta_fork_001/edited_2d.png",
+      "sha256": "4c06e309869d04dcadc9797b0261cae758c5eca30273d52224183f881b2ae7f8"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "material",
+      "path": "/tmp/foodstateedit_day5_material_render_v1/pasta_fork_001/edited_2d.png",
+      "sha256": "37ea247d6bec3f866202cea30f07afb4a997c4141fa0b2b30957995678ab1244"
+    }
+  ],
+  "output": {
+    "path": "/tmp/foodstateedit_day5_paper_figure_v1/day5_method_grid.png",
+    "sha256": "483b88b14b8dbd2a1df7635f75b28fdcf66c09a6ce00dc6d3257ca6b88166cef",
+    "width": 2484,
+    "height": 1218
+  },
+  "status": "complete"
+}
