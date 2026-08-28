@@ -102,6 +102,23 @@
       "warm_start": false,
       "isolated_factor": "semantic projection-mask ownership only",
       "rationale": "Tests the staged-v1 failure diagnosis while holding the proxy, model, seed, endpoints, and exact protection projection fixed."
+    },
+    {
+      "method_id": "foodstateedit_geometry_lock",
+      "role": "proposed_method_pilot_candidate",
+      "inclusion": "pre_registered_pilot_only",
+      "parent_method": "foodstateedit_staged_exclusive",
+      "day5_engine_status": "local_contract_ready_remote_execution_pending",
+      "formal_anchor_status": "geometry_lock_v1_pending_four_anchor_review",
+      "stochastic": false,
+      "requires_common_proxy": true,
+      "backend": "Deterministic_proxy_core_with_bounded_generated_contact_halo",
+      "controls": "same_common_proxy_v1_and_exclusive_seed1_appearance_donor",
+      "source_proxy": "common_proxy_v1",
+      "appearance_donor": "foodstateedit_staged_exclusive_seed1",
+      "warm_start": false,
+      "isolated_factor": "representation lock after repeated topology destruction by diffusion",
+      "rationale": "Tests whether exact action topology from the common proxy can be retained while a failed stochastic edit contributes only a bounded non-core contact halo; no model rerun or case-specific tuning is allowed."
     }
   ],
   "audited_nonprimary_methods": [

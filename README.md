@@ -39,6 +39,7 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `DAY4_CHECKLIST.md`: four-layer staged integration and resident-worker gate;
 - `DAY4_EXCLUSIVE_V2_CHECKLIST.md`: closed same-seed non-shadowing-mask
   follow-up gate;
+- `DAY5_CHECKLIST.md`: geometry-locked harmonization contract and gate;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up

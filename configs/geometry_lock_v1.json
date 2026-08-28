@@ -1,0 +1,31 @@
+{
+  "schema_version": "foodstateedit.geometry_lock.v1",
+  "freeze_date": "2026-08-28",
+  "freeze_rule": "Committed before any geometry-lock v1 output was generated.",
+  "method": "foodstateedit_geometry_lock",
+  "source_proxy": "common_proxy_v1",
+  "appearance_donor": "foodstateedit_staged_exclusive seed 1",
+  "binary_mask_threshold": 127,
+  "foreground_layers": ["rigid", "contact", "material"],
+  "composition_order": [
+    "source",
+    "proxy source-hole repair",
+    "bounded generated contact halo",
+    "proxy foreground with outer feather",
+    "exact proxy semantic core",
+    "exact source outside edit_alpha"
+  ],
+  "hole_outer_feather_sigma": 2.0,
+  "foreground_outer_feather_sigma": 0.8,
+  "contact_halo_sigma": 4.0,
+  "contact_halo_strength": 0.35,
+  "generated_contact_donor_weight": 0.25,
+  "required_invariants": [
+    "all rigid/contact/material/hole core pixels equal motion_signal exactly",
+    "all pixels outside edit_alpha equal first_frame exactly",
+    "generated pixels can influence only the non-core contact halo",
+    "one global parameter set is used for all four families"
+  ],
+  "selection_policy": "No case-specific parameters or output-dependent tuning before the four-anchor review.",
+  "rationale": "The proxy already satisfies action topology; generated outputs repeatedly destroy it. Lock semantic cores and constrain generative influence to a bounded harmonization halo."
+}
