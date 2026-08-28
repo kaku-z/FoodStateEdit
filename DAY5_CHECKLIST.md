@@ -14,12 +14,12 @@ Date opened: 2026-08-28
 
 ## Execution and gate
 
-- [ ] Generate all four deterministic outputs in a new root.
-- [ ] Verify core and protected-region maximum pixel difference `0`.
-- [ ] Review action success separately from photo success.
-- [ ] Compare against proxy-only and stochastic GeoEdit outputs.
-- [ ] Decide whether the locked representation is the paper method direction.
+- [x] Generate all four deterministic outputs in a new root.
+- [x] Verify core and protected-region maximum pixel difference `0`.
+- [x] Review action success separately from photo success.
+- [x] Compare against proxy-only and stochastic GeoEdit outputs.
+- [x] Decide whether the locked representation is the paper method direction.
 
-Status: `FROZEN_REMOTE_EXECUTION_PENDING`
+Status: `CLOSED_GEOMETRY_POSITIVE_APPEARANCE_NEGATIVE`
 
 Frozen config: `configs/geometry_lock_v1.json`

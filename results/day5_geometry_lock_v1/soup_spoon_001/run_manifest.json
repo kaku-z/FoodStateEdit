@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.geometry_lock_run.v1",
+  "anchor_id": "soup_spoon_001",
+  "method": "foodstateedit_geometry_lock",
+  "deterministic": true,
+  "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+  "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+  "proxy_manifest_sha256": "1fa5862bd8ef7ebf8313ee1c1485963b27ad72d3e0f9e77d1cc1d62d461853d9",
+  "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+  "donor_method": "foodstateedit_staged_exclusive",
+  "donor_seed": 1,
+  "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/soup_spoon_001/seed_1/run_manifest.json",
+  "donor_manifest_sha256": "3cb908e85c42c0025487e471a0a38f5023cb84b4efb819a13698b6690ec4876a",
+  "donor_image_sha256": "0c18c3f18c57568f2e028f61bfa1848887c58af1d0500d752e107dda027b6fce",
+  "invariants": {
+    "semantic_core_pixel_count": 9457,
+    "semantic_core_vs_proxy_max_pixel_difference": 0,
+    "protected_pixel_count": 391614,
+    "outside_edit_alpha_max_pixel_difference": 0,
+    "generated_influence_pixel_count": 2466,
+    "generated_influence_outside_semantic_core": true
+  },
+  "metrics": {
+    "changed_pixel_fraction": 0.025049,
+    "edit_support_pixel_count": 20546
+  },
+  "outputs": {
+    "edited_2d.png": "621fb8e9c8c27375c86ea628b01b92706e34b38ed2ff9ae5b50397bbf75e883a",
+    "review_board.png": "572fa63c86e3efe5f92c80b1338d20adf79e6ee18105d39f3518064511364cef"
+  },
+  "status": "complete"
+}

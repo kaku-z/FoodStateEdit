@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.geometry_lock_run.v1",
+  "anchor_id": "pasta_fork_001",
+  "method": "foodstateedit_geometry_lock",
+  "deterministic": true,
+  "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+  "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+  "proxy_manifest_sha256": "c015176876261dc41629225775f28d4ac30f589d2b64f0ed068c10b6fbfa89e3",
+  "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+  "donor_method": "foodstateedit_staged_exclusive",
+  "donor_seed": 1,
+  "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1/pasta_fork_001/seed_1/run_manifest.json",
+  "donor_manifest_sha256": "e18b6dcb33cdeb3b81bcf8287c86f4e10913b5ae6921422d085b39399b493bec",
+  "donor_image_sha256": "d4d9cc2b64aa2efa98aa07021adf713713d339a413e8de6cd768b0a099938f78",
+  "invariants": {
+    "semantic_core_pixel_count": 13142,
+    "semantic_core_vs_proxy_max_pixel_difference": 0,
+    "protected_pixel_count": 376877,
+    "outside_edit_alpha_max_pixel_difference": 0,
+    "generated_influence_pixel_count": 2556,
+    "generated_influence_outside_semantic_core": true
+  },
+  "metrics": {
+    "changed_pixel_fraction": 0.035596,
+    "edit_support_pixel_count": 23507
+  },
+  "outputs": {
+    "edited_2d.png": "4c06e309869d04dcadc9797b0261cae758c5eca30273d52224183f881b2ae7f8",
+    "review_board.png": "1bb845b5b0e77d92f3f3ed85ac1159503859c7ce7d0c186e9a6b8be730c34377"
+  },
+  "status": "complete"
+}

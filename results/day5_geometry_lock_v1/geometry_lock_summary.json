@@ -1,0 +1,139 @@
+{
+  "schema_version": "foodstateedit.geometry_lock_summary.v1",
+  "method": "foodstateedit_geometry_lock",
+  "case_count": 4,
+  "complete_count": 4,
+  "all_semantic_cores_exact": true,
+  "all_protected_pixels_exact": true,
+  "all_generated_influence_outside_core": true,
+  "cases": [
+    {
+      "schema_version": "foodstateedit.geometry_lock_run.v1",
+      "anchor_id": "soup_spoon_001",
+      "method": "foodstateedit_geometry_lock",
+      "deterministic": true,
+      "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+      "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+      "proxy_manifest_sha256": "1fa5862bd8ef7ebf8313ee1c1485963b27ad72d3e0f9e77d1cc1d62d461853d9",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "donor_method": "foodstateedit_staged_exclusive",
+      "donor_seed": 1,
+      "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/soup_spoon_001/seed_1/run_manifest.json",
+      "donor_manifest_sha256": "3cb908e85c42c0025487e471a0a38f5023cb84b4efb819a13698b6690ec4876a",
+      "donor_image_sha256": "0c18c3f18c57568f2e028f61bfa1848887c58af1d0500d752e107dda027b6fce",
+      "invariants": {
+        "semantic_core_pixel_count": 9457,
+        "semantic_core_vs_proxy_max_pixel_difference": 0,
+        "protected_pixel_count": 391614,
+        "outside_edit_alpha_max_pixel_difference": 0,
+        "generated_influence_pixel_count": 2466,
+        "generated_influence_outside_semantic_core": true
+      },
+      "metrics": {
+        "changed_pixel_fraction": 0.025049,
+        "edit_support_pixel_count": 20546
+      },
+      "outputs": {
+        "edited_2d.png": "621fb8e9c8c27375c86ea628b01b92706e34b38ed2ff9ae5b50397bbf75e883a",
+        "review_board.png": "572fa63c86e3efe5f92c80b1338d20adf79e6ee18105d39f3518064511364cef"
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.geometry_lock_run.v1",
+      "anchor_id": "fried_rice_spatula_001",
+      "method": "foodstateedit_geometry_lock",
+      "deterministic": true,
+      "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+      "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+      "proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "donor_method": "foodstateedit_staged_exclusive",
+      "donor_seed": 1,
+      "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/run_manifest.json",
+      "donor_manifest_sha256": "44da262d7b27779e5acfd6d2fcb9e9211dc3b4f6720a0b780d439ed3a8800bf4",
+      "donor_image_sha256": "64fcca50986871dbd0090aec242c075e08365af258a9b1e12fad0337a7e23c70",
+      "invariants": {
+        "semantic_core_pixel_count": 23652,
+        "semantic_core_vs_proxy_max_pixel_difference": 0,
+        "protected_pixel_count": 364956,
+        "outside_edit_alpha_max_pixel_difference": 0,
+        "generated_influence_pixel_count": 1172,
+        "generated_influence_outside_semantic_core": true
+      },
+      "metrics": {
+        "changed_pixel_fraction": 0.062542,
+        "edit_support_pixel_count": 35428
+      },
+      "outputs": {
+        "edited_2d.png": "a2010a2b6642dde118c56d331c55a4df70c3c9449eced093a3b9894fa674efd3",
+        "review_board.png": "dbf80962fcabc13fc79eecf6b5882a2d8a60967fdd3960c933a3a24704776e9a"
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.geometry_lock_run.v1",
+      "anchor_id": "ramen_chopsticks_001",
+      "method": "foodstateedit_geometry_lock",
+      "deterministic": true,
+      "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+      "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+      "proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "donor_method": "foodstateedit_staged_exclusive",
+      "donor_seed": 1,
+      "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1/ramen_chopsticks_001/seed_1/run_manifest.json",
+      "donor_manifest_sha256": "4ec50ed40a1b8ad0ceda38ef689e56ea3cd8640af203bdee4305d7f540588835",
+      "donor_image_sha256": "0cf9ccd69431d1bc6806fc6206f7c26d35754d29540ba0de0f8e604e65914d03",
+      "invariants": {
+        "semantic_core_pixel_count": 19264,
+        "semantic_core_vs_proxy_max_pixel_difference": 0,
+        "protected_pixel_count": 381861,
+        "outside_edit_alpha_max_pixel_difference": 0,
+        "generated_influence_pixel_count": 1981,
+        "generated_influence_outside_semantic_core": true
+      },
+      "metrics": {
+        "changed_pixel_fraction": 0.051702,
+        "edit_support_pixel_count": 53851
+      },
+      "outputs": {
+        "edited_2d.png": "1f3824e167e22af9e0782980bce49ade77f48b60ded108da96bc569726c40179",
+        "review_board.png": "90618e3020bd3af95914e8c8de0531f686a6e8787adc5c416dc24dab8b613f3d"
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.geometry_lock_run.v1",
+      "anchor_id": "pasta_fork_001",
+      "method": "foodstateedit_geometry_lock",
+      "deterministic": true,
+      "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+      "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+      "proxy_manifest_sha256": "c015176876261dc41629225775f28d4ac30f589d2b64f0ed068c10b6fbfa89e3",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "donor_method": "foodstateedit_staged_exclusive",
+      "donor_seed": 1,
+      "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1/pasta_fork_001/seed_1/run_manifest.json",
+      "donor_manifest_sha256": "e18b6dcb33cdeb3b81bcf8287c86f4e10913b5ae6921422d085b39399b493bec",
+      "donor_image_sha256": "d4d9cc2b64aa2efa98aa07021adf713713d339a413e8de6cd768b0a099938f78",
+      "invariants": {
+        "semantic_core_pixel_count": 13142,
+        "semantic_core_vs_proxy_max_pixel_difference": 0,
+        "protected_pixel_count": 376877,
+        "outside_edit_alpha_max_pixel_difference": 0,
+        "generated_influence_pixel_count": 2556,
+        "generated_influence_outside_semantic_core": true
+      },
+      "metrics": {
+        "changed_pixel_fraction": 0.035596,
+        "edit_support_pixel_count": 23507
+      },
+      "outputs": {
+        "edited_2d.png": "4c06e309869d04dcadc9797b0261cae758c5eca30273d52224183f881b2ae7f8",
+        "review_board.png": "1bb845b5b0e77d92f3f3ed85ac1159503859c7ce7d0c186e9a6b8be730c34377"
+      },
+      "status": "complete"
+    }
+  ]
+}

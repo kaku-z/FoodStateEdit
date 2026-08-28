@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.geometry_lock_run.v1",
+  "anchor_id": "fried_rice_spatula_001",
+  "method": "foodstateedit_geometry_lock",
+  "deterministic": true,
+  "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+  "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+  "proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+  "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+  "donor_method": "foodstateedit_staged_exclusive",
+  "donor_seed": 1,
+  "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu0/fried_rice_spatula_001/seed_1/run_manifest.json",
+  "donor_manifest_sha256": "44da262d7b27779e5acfd6d2fcb9e9211dc3b4f6720a0b780d439ed3a8800bf4",
+  "donor_image_sha256": "64fcca50986871dbd0090aec242c075e08365af258a9b1e12fad0337a7e23c70",
+  "invariants": {
+    "semantic_core_pixel_count": 23652,
+    "semantic_core_vs_proxy_max_pixel_difference": 0,
+    "protected_pixel_count": 364956,
+    "outside_edit_alpha_max_pixel_difference": 0,
+    "generated_influence_pixel_count": 1172,
+    "generated_influence_outside_semantic_core": true
+  },
+  "metrics": {
+    "changed_pixel_fraction": 0.062542,
+    "edit_support_pixel_count": 35428
+  },
+  "outputs": {
+    "edited_2d.png": "a2010a2b6642dde118c56d331c55a4df70c3c9449eced093a3b9894fa674efd3",
+    "review_board.png": "dbf80962fcabc13fc79eecf6b5882a2d8a60967fdd3960c933a3a24704776e9a"
+  },
+  "status": "complete"
+}

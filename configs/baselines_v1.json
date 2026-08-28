@@ -108,8 +108,8 @@
       "role": "proposed_method_pilot_candidate",
       "inclusion": "pre_registered_pilot_only",
       "parent_method": "foodstateedit_staged_exclusive",
-      "day5_engine_status": "local_contract_ready_remote_execution_pending",
-      "formal_anchor_status": "geometry_lock_v1_pending_four_anchor_review",
+      "day5_engine_status": "deterministic_four_anchor_batch_and_invariants_passed",
+      "formal_anchor_status": "geometry_lock_v1_action_topology_4_of_4_photo_0_of_4",
       "stochastic": false,
       "requires_common_proxy": true,
       "backend": "Deterministic_proxy_core_with_bounded_generated_contact_halo",
@@ -174,5 +174,17 @@
     "same_seed_output_hashes_all_changed": true,
     "action_success_delta_vs_staged_v1": 0,
     "status": "CLOSED_NEGATIVE_PILOT_DO_NOT_EXPAND"
+  },
+  "day5_geometry_lock_gate": {
+    "candidate": "foodstateedit_geometry_lock",
+    "config_version": "configs/geometry_lock_v1.json",
+    "technical_complete": 4,
+    "technical_failure": 0,
+    "provisional_action_topology_success": 4,
+    "provisional_photo_success": 0,
+    "exact_proxy_semantic_core_success": 4,
+    "exact_source_protection_success": 4,
+    "generated_influence_outside_core_success": 4,
+    "status": "CLOSED_GEOMETRY_POSITIVE_APPEARANCE_NEGATIVE"
   }
 }

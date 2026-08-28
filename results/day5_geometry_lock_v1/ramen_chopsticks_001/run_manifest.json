@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.geometry_lock_run.v1",
+  "anchor_id": "ramen_chopsticks_001",
+  "method": "foodstateedit_geometry_lock",
+  "deterministic": true,
+  "code_commit": "29531326cf74aa1f9533a42cf0cb154baf4e011a",
+  "config_sha256": "85c9a27178f5aac9d687fe060e9fc449e7d8ab59181fc0c9587faf04c473c640",
+  "proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+  "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+  "donor_method": "foodstateedit_staged_exclusive",
+  "donor_seed": 1,
+  "donor_manifest": "/tmp/foodstateedit_day4_staged_exclusive_v1_gpu1/ramen_chopsticks_001/seed_1/run_manifest.json",
+  "donor_manifest_sha256": "4ec50ed40a1b8ad0ceda38ef689e56ea3cd8640af203bdee4305d7f540588835",
+  "donor_image_sha256": "0cf9ccd69431d1bc6806fc6206f7c26d35754d29540ba0de0f8e604e65914d03",
+  "invariants": {
+    "semantic_core_pixel_count": 19264,
+    "semantic_core_vs_proxy_max_pixel_difference": 0,
+    "protected_pixel_count": 381861,
+    "outside_edit_alpha_max_pixel_difference": 0,
+    "generated_influence_pixel_count": 1981,
+    "generated_influence_outside_semantic_core": true
+  },
+  "metrics": {
+    "changed_pixel_fraction": 0.051702,
+    "edit_support_pixel_count": 53851
+  },
+  "outputs": {
+    "edited_2d.png": "1f3824e167e22af9e0782980bce49ade77f48b60ded108da96bc569726c40179",
+    "review_board.png": "90618e3020bd3af95914e8c8de0531f686a6e8787adc5c416dc24dab8b613f3d"
+  },
+  "status": "complete"
+}
