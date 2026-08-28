@@ -14,12 +14,12 @@ Date opened: 2026-08-28
 
 ## Execution and gate
 
-- [ ] Generate all four outputs in a new remote root without a learned model.
-- [ ] Verify topology-mask hashes and exact outside-mask preservation.
-- [ ] Review action success and photo success independently.
-- [ ] Compare against common proxy and geometry-lock v1.
-- [ ] Decide whether material rendering should condition the next VACE run.
+- [x] Generate all four outputs in a new remote root without a learned model.
+- [x] Verify topology-mask hashes and exact outside-mask preservation.
+- [x] Review action success and photo success independently.
+- [x] Compare against common proxy and geometry-lock v1.
+- [x] Decide whether material rendering should condition the next VACE run.
 
-Status: `FROZEN_REMOTE_EXECUTION_PENDING`
+Status: `CLOSED_RIGID_APPEARANCE_IMPROVED_PAYLOAD_APPEARANCE_NEGATIVE`
 
 Frozen config: `configs/material_render_v1.json`

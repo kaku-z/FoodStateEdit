@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -47,6 +48,35 @@ class MaterialRenderTests(unittest.TestCase):
         self.assertLess(config["wood_environment_mix"], 0.15)
         self.assertGreater(config["foreground_outer_feather_sigma"], 0)
         self.assertLessEqual(config["foreground_outer_feather_sigma"], 1.0)
+
+    def test_completed_batch_and_review_are_traceable(self):
+        root = ROOT / "results" / "day5_material_render_v1"
+        summary = json.loads((root / "material_render_summary.json").read_text())
+        self.assertEqual(summary["method"], "foodstateedit_material_render")
+        self.assertEqual(summary["case_count"], 4)
+        self.assertEqual(summary["complete_count"], 4)
+        self.assertTrue(summary["all_protected_pixels_exact"])
+        self.assertTrue(summary["all_topology_partitions_exact"])
+        config_hash = hashlib.sha256(
+            (ROOT / "configs" / "material_render_v1.json").read_bytes()
+        ).hexdigest()
+        for case in summary["cases"]:
+            manifest = json.loads(
+                (root / case["anchor_id"] / "run_manifest.json").read_text()
+            )
+            self.assertEqual(manifest, case)
+            self.assertEqual(
+                manifest["code_commit"],
+                "019b3f8eaaaa1f749e38098f74e85e682dcf694a",
+            )
+            self.assertEqual(manifest["config_sha256"], config_hash)
+            self.assertEqual(
+                manifest["invariants"]["outside_edit_alpha_max_pixel_difference"],
+                0,
+            )
+        review = json.loads((root / "internal_pilot_review_v1.json").read_text())
+        self.assertEqual(review["aggregate"]["provisional_action_topology_success"], 4)
+        self.assertEqual(review["aggregate"]["provisional_photo_success"], 0)
 
 
 if __name__ == "__main__":

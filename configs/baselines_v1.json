@@ -125,8 +125,8 @@
       "role": "proposed_method_pilot_candidate",
       "inclusion": "pre_registered_pilot_only",
       "parent_method": "foodstateedit_geometry_lock",
-      "day5_engine_status": "local_contract_ready_remote_execution_pending",
-      "formal_anchor_status": "material_render_v1_pending_four_anchor_review",
+      "day5_engine_status": "deterministic_four_anchor_batch_and_invariants_passed",
+      "formal_anchor_status": "material_render_v1_action_topology_4_of_4_photo_0_of_4",
       "stochastic": false,
       "requires_common_proxy": true,
       "backend": "Topology_preserving_2.5D_material_renderer",
@@ -201,5 +201,17 @@
     "exact_source_protection_success": 4,
     "generated_influence_outside_core_success": 4,
     "status": "CLOSED_GEOMETRY_POSITIVE_APPEARANCE_NEGATIVE"
+  },
+  "day5_material_render_gate": {
+    "candidate": "foodstateedit_material_render",
+    "config_version": "configs/material_render_v1.json",
+    "technical_complete": 4,
+    "technical_failure": 0,
+    "provisional_action_topology_success": 4,
+    "provisional_photo_success": 0,
+    "exact_topology_partition_success": 4,
+    "exact_source_protection_success": 4,
+    "diagnostic": "Rigid utensil shading improved, but warped payload texture and contact occlusion remain non-photographic.",
+    "status": "CLOSED_RIGID_APPEARANCE_IMPROVED_PAYLOAD_APPEARANCE_NEGATIVE"
   }
 }

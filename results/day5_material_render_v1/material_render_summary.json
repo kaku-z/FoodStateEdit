@@ -1,0 +1,114 @@
+{
+  "schema_version": "foodstateedit.material_render_summary.v1",
+  "method": "foodstateedit_material_render",
+  "case_count": 4,
+  "complete_count": 4,
+  "all_protected_pixels_exact": true,
+  "all_topology_partitions_exact": true,
+  "cases": [
+    {
+      "schema_version": "foodstateedit.material_render_run.v1",
+      "anchor_id": "soup_spoon_001",
+      "method": "foodstateedit_material_render",
+      "deterministic": true,
+      "code_commit": "019b3f8eaaaa1f749e38098f74e85e682dcf694a",
+      "config_sha256": "f6a3232741e46ae5633a4a2affd8ff25dac2c3287ba399ce3675b4814e1e2ef0",
+      "anchor_specs_sha256": "ea9292d15a863f2d7dc7525b38ace0878555d6c8781dd6fcc32f5ccc1d05d514",
+      "proxy_manifest_sha256": "1fa5862bd8ef7ebf8313ee1c1485963b27ad72d3e0f9e77d1cc1d62d461853d9",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "utensil": "spoon",
+      "utensil_material": "metal",
+      "invariants": {
+        "rigid_mask_sha256": "6658aaf5a1199d0f296c1d9074b07d8297c4337a38eaee41a92cb60ae98d84b0",
+        "material_mask_sha256": "29d6850bd5bb402608a085fcfa1889862975631072ee0f3eca2dadbf0afdf358",
+        "rigid_pixel_count": 4733,
+        "material_pixel_count": 1574,
+        "chopstick_partition_exact": true,
+        "outside_edit_alpha_max_pixel_difference": 0
+      },
+      "outputs": {
+        "edited_2d.png": "cb51143f3ac3a711039e37bfcc6a68860023d73acf1990e28f01353968264d46",
+        "review_board.png": "76854aece2a4384033da460111862ed615d305160085178f19f25a0443167df6"
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.material_render_run.v1",
+      "anchor_id": "fried_rice_spatula_001",
+      "method": "foodstateedit_material_render",
+      "deterministic": true,
+      "code_commit": "019b3f8eaaaa1f749e38098f74e85e682dcf694a",
+      "config_sha256": "f6a3232741e46ae5633a4a2affd8ff25dac2c3287ba399ce3675b4814e1e2ef0",
+      "anchor_specs_sha256": "ea9292d15a863f2d7dc7525b38ace0878555d6c8781dd6fcc32f5ccc1d05d514",
+      "proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "utensil": "spatula",
+      "utensil_material": "metal",
+      "invariants": {
+        "rigid_mask_sha256": "4dc726bd3c26ca2874d0ab5da88cf2972332fb0e09850cc34087ba1664589251",
+        "material_mask_sha256": "131d530be75d7046c89f06b375072d658a9b5b6b0fdeb9e087ebad834313136a",
+        "rigid_pixel_count": 10681,
+        "material_pixel_count": 8146,
+        "chopstick_partition_exact": true,
+        "outside_edit_alpha_max_pixel_difference": 0
+      },
+      "outputs": {
+        "edited_2d.png": "f5d7a07761f2f989f240250d751127ffe394cf992dd0d08f84471a38bac7efed",
+        "review_board.png": "6a9a5203072aae69214acae9ec89d60e43ed2dcc388aabc53dfaaeec25fb9155"
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.material_render_run.v1",
+      "anchor_id": "ramen_chopsticks_001",
+      "method": "foodstateedit_material_render",
+      "deterministic": true,
+      "code_commit": "019b3f8eaaaa1f749e38098f74e85e682dcf694a",
+      "config_sha256": "f6a3232741e46ae5633a4a2affd8ff25dac2c3287ba399ce3675b4814e1e2ef0",
+      "anchor_specs_sha256": "ea9292d15a863f2d7dc7525b38ace0878555d6c8781dd6fcc32f5ccc1d05d514",
+      "proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "utensil": "chopsticks",
+      "utensil_material": "wood",
+      "invariants": {
+        "rigid_mask_sha256": "f13de8a336d5c465246a2f0f6eeb5b6ad62e9ff30d7b9454e27a0553ff50a361",
+        "material_mask_sha256": "8f5c6242b661f4fcdc0cefdcd280ae2bf83652ee5ea23913bfff0c0addd08398",
+        "rigid_pixel_count": 3208,
+        "material_pixel_count": 7210,
+        "chopstick_partition_exact": true,
+        "outside_edit_alpha_max_pixel_difference": 0
+      },
+      "outputs": {
+        "edited_2d.png": "eb5b586279ae4c2a2fa5c0f057782ad6380a6e28cbd12b2e068f5c4318021ac6",
+        "review_board.png": "33ccb8f147eda45860d48aec2addbff7715fd2cdf93213c0aae3f7136c30f431"
+      },
+      "status": "complete"
+    },
+    {
+      "schema_version": "foodstateedit.material_render_run.v1",
+      "anchor_id": "pasta_fork_001",
+      "method": "foodstateedit_material_render",
+      "deterministic": true,
+      "code_commit": "019b3f8eaaaa1f749e38098f74e85e682dcf694a",
+      "config_sha256": "f6a3232741e46ae5633a4a2affd8ff25dac2c3287ba399ce3675b4814e1e2ef0",
+      "anchor_specs_sha256": "ea9292d15a863f2d7dc7525b38ace0878555d6c8781dd6fcc32f5ccc1d05d514",
+      "proxy_manifest_sha256": "c015176876261dc41629225775f28d4ac30f589d2b64f0ed068c10b6fbfa89e3",
+      "proxy_status": "provisional_geometry_proxy_requires_visual_confirmation",
+      "utensil": "fork",
+      "utensil_material": "metal",
+      "invariants": {
+        "rigid_mask_sha256": "aa0269df25ff3622a6bf86d74db5c85a35c1d9e7a8e323716f1c7390aa117146",
+        "material_mask_sha256": "8a7ce7c8061d279f939c735e038f25731a4cad8b406588edcd5a6f8962b5aec5",
+        "rigid_pixel_count": 3674,
+        "material_pixel_count": 6578,
+        "chopstick_partition_exact": true,
+        "outside_edit_alpha_max_pixel_difference": 0
+      },
+      "outputs": {
+        "edited_2d.png": "37ea247d6bec3f866202cea30f07afb4a997c4141fa0b2b30957995678ab1244",
+        "review_board.png": "c4449cb3fbde10f756754a9d0f32d6fdbd9540d1c54ee70f23f01e6c6af5b855"
+      },
+      "status": "complete"
+    }
+  ]
+}
