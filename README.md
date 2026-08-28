@@ -41,6 +41,7 @@ text-only, fully automatic, universally general, or universally photorealistic.
   follow-up gate;
 - `DAY5_CHECKLIST.md`: geometry-locked harmonization contract and gate;
 - `DAY5_VACE_DIRECT_CHECKLIST.md`: native VACE static-proxy baseline gate;
+- `DAY5_MATERIAL_RENDER_CHECKLIST.md`: topology-preserving 2.5D material-render gate;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up

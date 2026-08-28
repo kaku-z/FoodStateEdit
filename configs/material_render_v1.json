@@ -1,0 +1,34 @@
+{
+  "schema_version": "foodstateedit.material_render.v1",
+  "freeze_date": "2026-08-28",
+  "freeze_rule": "Committed before any material-render v1 output was generated.",
+  "method": "foodstateedit_material_render",
+  "source_proxy": "common_proxy_v1",
+  "utensil_material_rule": {
+    "wood": ["chopsticks"],
+    "metal": ["spoon", "spatula", "fork"]
+  },
+  "hole_outer_feather_sigma": 2.0,
+  "foreground_outer_feather_sigma": 0.7,
+  "cast_shadow_offset_xy": [3, 5],
+  "cast_shadow_sigma": 3.5,
+  "cast_shadow_opacity": 0.18,
+  "contact_shadow_sigma": 2.5,
+  "contact_shadow_opacity": 0.12,
+  "surface_edge_radius": 3.0,
+  "steel_base_rgb": [168, 172, 180],
+  "steel_environment_mix": 0.16,
+  "steel_specular_strength": 0.28,
+  "wood_base_rgb": [150, 91, 43],
+  "wood_environment_mix": 0.08,
+  "food_detail_gain": 1.35,
+  "food_saturation_scale": 1.05,
+  "required_invariants": [
+    "the exact frozen rigid and material masks define the rendered silhouettes",
+    "chopstick rear/material/front ordering partitions the exact rigid mask",
+    "all pixels outside edit_alpha equal first_frame exactly",
+    "one global renderer and material-class rule are used for all four families"
+  ],
+  "selection_policy": "No anchor-specific parameter values or stochastic inputs.",
+  "rationale": "Test whether explicit topology plus material-aware 2.5D shading reduces the flat procedural appearance without allowing a generative model to alter geometry."
+}

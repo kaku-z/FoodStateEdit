@@ -119,6 +119,21 @@
       "warm_start": false,
       "isolated_factor": "representation lock after repeated topology destruction by diffusion",
       "rationale": "Tests whether exact action topology from the common proxy can be retained while a failed stochastic edit contributes only a bounded non-core contact halo; no model rerun or case-specific tuning is allowed."
+    },
+    {
+      "method_id": "foodstateedit_material_render",
+      "role": "proposed_method_pilot_candidate",
+      "inclusion": "pre_registered_pilot_only",
+      "parent_method": "foodstateedit_geometry_lock",
+      "day5_engine_status": "local_contract_ready_remote_execution_pending",
+      "formal_anchor_status": "material_render_v1_pending_four_anchor_review",
+      "stochastic": false,
+      "requires_common_proxy": true,
+      "backend": "Topology_preserving_2.5D_material_renderer",
+      "controls": "same_common_proxy_v1_masks_and_anchor_specs",
+      "warm_start": false,
+      "isolated_factor": "material shading texture detail shadows and antialiasing",
+      "rationale": "Tests whether deterministic material-aware appearance synthesis reduces the flat proxy artifact while preserving the exact frozen topology masks and protected background."
     }
   ],
   "audited_nonprimary_methods": [
