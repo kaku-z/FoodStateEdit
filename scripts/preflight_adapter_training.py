@@ -133,9 +133,19 @@ def main() -> int:
     trainer = config["trainer"]
     trainer_root = Path(trainer["remote_root"])
     train_script = trainer_root / trainer["train_script"]
+    runtime_root = args.config.resolve().parents[1]
+    no_audio_wrapper = runtime_root / trainer["no_audio_wrapper"]
     commit_marker = trainer_root / "SOURCE_COMMIT"
     archive_marker = trainer_root / "SOURCE_ARCHIVE_SHA256"
     add_check(checks, "trainer_script", train_script.is_file(), str(train_script), "Frozen training entry point exists.")
+    add_check(checks, "no_audio_wrapper", no_audio_wrapper.is_file(), str(no_audio_wrapper), "Frozen no-audio wrapper exists.")
+    add_check(
+        checks,
+        "no_audio_wrapper_sha256",
+        no_audio_wrapper.is_file() and sha256_file(no_audio_wrapper) == trainer["no_audio_wrapper_sha256"],
+        sha256_file(no_audio_wrapper) if no_audio_wrapper.is_file() else None,
+        trainer["no_audio_wrapper_sha256"],
+    )
     add_check(
         checks,
         "trainer_script_sha256",
@@ -286,6 +296,32 @@ def main() -> int:
         help_result is not None and help_result.returncode == 0,
         help_result.stderr[-2000:] if help_result is not None else None,
         "Frozen trainer imports and --help exits 0 under offline environment.",
+    )
+    wrapper_help_result = None
+    if train_script.is_file() and no_audio_wrapper.is_file():
+        wrapper_help_result = subprocess.run(
+            [
+                trainer["python"],
+                str(no_audio_wrapper),
+                "--upstream-script",
+                str(train_script),
+                "--",
+                "--data_file_keys",
+                "video,vace_video,vace_reference_image",
+                "--help",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            env=help_env,
+            timeout=60,
+        )
+    add_check(
+        checks,
+        "no_audio_wrapper_help",
+        wrapper_help_result is not None and wrapper_help_result.returncode == 0,
+        wrapper_help_result.stderr[-2000:] if wrapper_help_result is not None else None,
+        "Frozen wrapper imports the trainer and --help exits 0 without librosa.",
     )
 
     available_mib = available_memory_mib()

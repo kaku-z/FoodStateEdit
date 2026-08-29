@@ -1,0 +1,437 @@
+{
+  "schema_version": "foodstateedit.adapter_preflight.v0",
+  "ready": true,
+  "selected_gpu": 0,
+  "config_sha256": "1ce8d8965a571fd7d30733c0dfd58e0ee0d3c04f71c4b357272cf89f42d89023",
+  "dataset_manifest_sha256": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
+  "checks": [
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "infrastructure_smoke_not_quality_evidence",
+      "criterion": "The two-sample run must be claim-limited to infrastructure smoke evidence."
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "trainer_script",
+      "passed": true,
+      "actual": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py",
+      "criterion": "Frozen training entry point exists."
+    },
+    {
+      "id": "trainer_script_sha256",
+      "passed": true,
+      "actual": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+      "criterion": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41"
+    },
+    {
+      "id": "trainer_commit_marker",
+      "passed": true,
+      "actual": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+      "criterion": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191"
+    },
+    {
+      "id": "trainer_archive_marker",
+      "passed": true,
+      "actual": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228",
+      "criterion": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228"
+    },
+    {
+      "id": "model_audit",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_recorded_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full SHA-256 is present in the frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_recorded_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full SHA-256 is present in the frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_recorded_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full SHA-256 is present in the frozen audit."
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": 6623,
+      "criterion": "6623"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "criterion": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": 4548313,
+      "criterion": "4548313"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "criterion": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": 16837417,
+      "criterion": "16837417"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "criterion": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": 61728,
+      "criterion": "61728"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "criterion": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05"
+    },
+    {
+      "id": "dataset_manifest_hash",
+      "passed": true,
+      "actual": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
+      "criterion": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae"
+    },
+    {
+      "id": "dataset_builder_hash",
+      "passed": true,
+      "actual": {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_adapter_v0_62fcff9/scripts/build_adapter_smoke_dataset.py",
+        "sha256_lf_normalized": "ee4da2f5128b37727f138ba28f25d006c5a9660c6d29283a5c8ace59fe94a095"
+      },
+      "criterion": "ee4da2f5128b37727f138ba28f25d006c5a9660c6d29283a5c8ace59fe94a095"
+    },
+    {
+      "id": "dataset_status",
+      "passed": true,
+      "actual": "infrastructure_smoke_not_quality_evidence",
+      "criterion": "infrastructure_smoke_not_quality_evidence"
+    },
+    {
+      "id": "dataset_sample_count",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "metadata_hash",
+      "passed": true,
+      "actual": "9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652",
+      "criterion": "9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652"
+    },
+    {
+      "id": "metadata_rows",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "manifest_samples",
+      "passed": true,
+      "actual": 2,
+      "criterion": "Exactly 2 samples."
+    },
+    {
+      "id": "dataset_path:0:video",
+      "passed": true,
+      "actual": "video/ramen_chopsticks_001.mp4",
+      "criterion": "video/ramen_chopsticks_001.mp4"
+    },
+    {
+      "id": "dataset_size:0:video",
+      "passed": true,
+      "actual": 299082,
+      "criterion": "299082"
+    },
+    {
+      "id": "dataset_hash:0:video",
+      "passed": true,
+      "actual": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346",
+      "criterion": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+    },
+    {
+      "id": "dataset_path:0:vace_video",
+      "passed": true,
+      "actual": "vace_video/ramen_chopsticks_001.mp4",
+      "criterion": "vace_video/ramen_chopsticks_001.mp4"
+    },
+    {
+      "id": "dataset_size:0:vace_video",
+      "passed": true,
+      "actual": 299082,
+      "criterion": "299082"
+    },
+    {
+      "id": "dataset_hash:0:vace_video",
+      "passed": true,
+      "actual": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346",
+      "criterion": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+    },
+    {
+      "id": "dataset_path:0:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/ramen_chopsticks_001.png",
+      "criterion": "vace_reference_image/ramen_chopsticks_001.png"
+    },
+    {
+      "id": "dataset_size:0:vace_reference_image",
+      "passed": true,
+      "actual": 667830,
+      "criterion": "667830"
+    },
+    {
+      "id": "dataset_hash:0:vace_reference_image",
+      "passed": true,
+      "actual": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011",
+      "criterion": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011"
+    },
+    {
+      "id": "identity_target:0",
+      "passed": true,
+      "actual": {
+        "video": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346",
+        "vace_video": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+      },
+      "criterion": "Infrastructure-smoke target and control hashes are identical."
+    },
+    {
+      "id": "dataset_path:1:video",
+      "passed": true,
+      "actual": "video/pasta_fork_001.mp4",
+      "criterion": "video/pasta_fork_001.mp4"
+    },
+    {
+      "id": "dataset_size:1:video",
+      "passed": true,
+      "actual": 225740,
+      "criterion": "225740"
+    },
+    {
+      "id": "dataset_hash:1:video",
+      "passed": true,
+      "actual": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1",
+      "criterion": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+    },
+    {
+      "id": "dataset_path:1:vace_video",
+      "passed": true,
+      "actual": "vace_video/pasta_fork_001.mp4",
+      "criterion": "vace_video/pasta_fork_001.mp4"
+    },
+    {
+      "id": "dataset_size:1:vace_video",
+      "passed": true,
+      "actual": 225740,
+      "criterion": "225740"
+    },
+    {
+      "id": "dataset_hash:1:vace_video",
+      "passed": true,
+      "actual": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1",
+      "criterion": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+    },
+    {
+      "id": "dataset_path:1:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/pasta_fork_001.png",
+      "criterion": "vace_reference_image/pasta_fork_001.png"
+    },
+    {
+      "id": "dataset_size:1:vace_reference_image",
+      "passed": true,
+      "actual": 670369,
+      "criterion": "670369"
+    },
+    {
+      "id": "dataset_hash:1:vace_reference_image",
+      "passed": true,
+      "actual": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a",
+      "criterion": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a"
+    },
+    {
+      "id": "identity_target:1",
+      "passed": true,
+      "actual": {
+        "video": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1",
+        "vace_video": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+      },
+      "criterion": "Infrastructure-smoke target and control hashes are identical."
+    },
+    {
+      "id": "python_modules",
+      "passed": true,
+      "actual": {
+        "torch": true,
+        "torchvision": true,
+        "accelerate": true,
+        "peft": true,
+        "transformers": true,
+        "safetensors": true,
+        "pandas": true,
+        "PIL": true,
+        "imageio": true,
+        "einops": true,
+        "ftfy": true
+      },
+      "criterion": "All required modules importable."
+    },
+    {
+      "id": "trainer_help",
+      "passed": true,
+      "actual": "",
+      "criterion": "Frozen trainer imports and --help exits 0 under offline environment."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 192478,
+      "criterion": ">=80000 MiB available"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": true,
+      "actual": {
+        "requested": null,
+        "safe_gpu_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "gpus": [
+          {
+            "index": 0,
+            "uuid": "GPU-e18a6f51-7f14-da5d-45f8-e1adc61338d3",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 1,
+            "uuid": "GPU-50a76049-6955-9af3-0b99-15edd12da263",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 2,
+            "uuid": "GPU-19d67ac1-c74e-0ad8-9f96-97f1aa63fedc",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 3,
+            "uuid": "GPU-7216fc4d-bd58-0bd1-21d8-49d3774c9d28",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 4,
+            "uuid": "GPU-bb365dd9-8000-7d14-a39f-b5baca73d4d6",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 5,
+            "uuid": "GPU-9b5470ea-20ce-49ad-d004-dc629687dcdf",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 6,
+            "uuid": "GPU-97dd18b2-f0c3-188e-7dbf-1e991702cd3f",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 7,
+            "uuid": "GPU-d0dc9a96-72da-f953-7188-d3d9687e537d",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          }
+        ],
+        "processes": []
+      },
+      "criterion": "At least one explicitly safe A6000 with no compute process."
+    }
+  ]
+}

@@ -23,6 +23,10 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(config["training"]["epochs"], 1)
         self.assertEqual(config["training"]["dataset_repeat"], 1)
         self.assertFalse(config["training"]["overwrite"])
+        self.assertEqual(
+            config["training"]["output_root"],
+            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2",
+        )
         self.assertEqual(config["offline_environment"]["DIFFSYNTH_SKIP_DOWNLOAD"], "True")
         self.assertEqual(config["offline_environment"]["HF_HUB_OFFLINE"], "1")
         self.assertEqual(
@@ -38,6 +42,11 @@ class AdapterV0Tests(unittest.TestCase):
             "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
         )
         self.assertIn("torch 2.4", config["trainer"]["selection_reason"])
+        self.assertEqual(config["trainer"]["no_audio_wrapper"], "scripts/run_diffsynth_wan_train_no_audio.py")
+        self.assertEqual(
+            config["trainer"]["no_audio_wrapper_sha256"],
+            "559a9810c2eb833990e43470b4d9d22f3dd51c753eb29dc496fc957f156821b7",
+        )
 
     def test_dataset_builder_is_deterministic_proxy_only_and_fail_closed(self):
         source = (ROOT / "scripts" / "build_adapter_smoke_dataset.py").read_text(encoding="utf-8")
@@ -67,6 +76,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn("require_no_compute_process", preflight)
         self.assertIn("nvidia-smi", preflight)
         self.assertIn("trainer_help", preflight)
+        self.assertIn("no_audio_wrapper_help", preflight)
         self.assertIn("dataset_manifest_hash", preflight)
         self.assertIn("dataset_builder_hash", preflight)
         self.assertIn("dataset_hash:", preflight)
@@ -77,6 +87,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn('"HF_HUB_OFFLINE"', launcher)
         self.assertIn('"TRANSFORMERS_OFFLINE"', launcher)
         self.assertIn('"--model_paths"', launcher)
+        self.assertIn('trainer["no_audio_wrapper"]', launcher)
         self.assertNotIn("modelscope download", launcher.lower())
         self.assertIn("Refusing to overwrite report", validator)
         self.assertIn('os.environ["CUDA_VISIBLE_DEVICES"] = ""', validator)
@@ -103,6 +114,25 @@ class AdapterV0Tests(unittest.TestCase):
         gpu_gate = next(check for check in report["checks"] if check["id"] == "gpu_gate")
         self.assertEqual(gpu_gate["actual"]["safe_gpu_indices"], [])
         self.assertEqual({process["owner"] for process in gpu_gate["actual"]["processes"]}, {"chen-q"})
+
+    def test_gp39_v1_failure_is_preserved_and_pre_model_load(self):
+        result_root = ROOT / "results" / "day7_adapter_v0_gp39_failure_missing_librosa_v1"
+        manifest = json.loads((result_root / "run_manifest.json").read_text(encoding="utf-8"))
+        preflight = json.loads((ROOT / "results" / "day7_adapter_v0_preflight_gp39_v1.json").read_text(encoding="utf-8"))
+        log = (result_root / "train.log").read_text(encoding="utf-8")
+        self.assertEqual(manifest["status"], "technical_failure")
+        self.assertEqual(manifest["return_code"], 1)
+        self.assertEqual(manifest["checkpoints"], [])
+        self.assertTrue(preflight["ready"])
+        self.assertEqual(preflight["selected_gpu"], 0)
+        self.assertIn("No module named 'librosa'", log)
+
+    def test_no_audio_wrapper_is_narrow_and_fail_closed(self):
+        wrapper = (ROOT / "scripts" / "run_diffsynth_wan_train_no_audio.py").read_text(encoding="utf-8")
+        self.assertIn("No-audio wrapper refuses datasets containing input_audio", wrapper)
+        self.assertIn('sys.modules["librosa"] = sentinel', wrapper)
+        self.assertIn("runpy.run_path", wrapper)
+        self.assertNotIn("pip install", wrapper)
 
 
 if __name__ == "__main__":

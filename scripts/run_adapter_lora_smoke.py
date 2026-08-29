@@ -76,6 +76,7 @@ def main() -> int:
     trainer = config["trainer"]
     trainer_root = Path(trainer["remote_root"])
     train_script = trainer_root / trainer["train_script"]
+    no_audio_wrapper = config_path.parents[1] / trainer["no_audio_wrapper"]
     model_root = Path(config["model"]["root"])
     model_paths = [str(model_root / path) for path in config["training"]["model_paths"]]
     training = config["training"]
@@ -89,7 +90,10 @@ def main() -> int:
         "1",
         "--mixed_precision",
         "bf16",
+        str(no_audio_wrapper),
+        "--upstream-script",
         str(train_script),
+        "--",
         "--dataset_base_path",
         str(dataset_root),
         "--dataset_metadata_path",
@@ -209,6 +213,7 @@ def main() -> int:
         "dataset_manifest_sha256": sha256_file(dataset_root / config["dataset"]["manifest"]),
         "trainer_commit": trainer["commit"],
         "trainer_script_sha256": sha256_file(train_script),
+        "no_audio_wrapper_sha256": sha256_file(no_audio_wrapper),
         "model_hash_audit_sha256": sha256_file(Path(config["model"]["hash_audit"])),
         "command_sha256": sha256_file(output_root / "command.json"),
         "log_sha256": sha256_file(log_path),

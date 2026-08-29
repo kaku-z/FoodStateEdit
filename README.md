@@ -55,6 +55,8 @@ text-only, fully automatic, universally general, or universally photorealistic.
   resource gate, and the boundary between smoke evidence and generalization;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
+- `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved
+  pre-model-load failure caused by the upstream trainer's unused audio operator;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up

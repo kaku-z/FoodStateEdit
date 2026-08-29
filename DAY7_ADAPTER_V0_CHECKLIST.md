@@ -33,3 +33,12 @@ count as a visual result.
 ## Current resource state
 
 At the initial 2026-08-29 preflight, 51/52 checks passed. All eight A6000 GPUs were occupied by `chen-q` at approximately 44.5 GiB per card and 99--100% utilization, so `gpu_gate` was the sole failed check. No training was started and the frozen output directory remains absent.
+
+The host pool was expanded to `gp38`--`gp42`. `gp39` had eight idle A6000s
+and passed all 52 original checks, but the upstream trainer then failed before
+model loading because it instantiated an unused audio operator and `librosa`
+is not installed. The full v1 failure is preserved under
+`results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`; it produced no
+checkpoint and did not occupy the GPU. The corrected v2 run uses a hash-frozen
+no-audio wrapper and a new output directory rather than installing a package or
+overwriting the failure.

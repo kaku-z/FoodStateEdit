@@ -15,6 +15,8 @@
     "remote_root": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle",
     "train_script": "examples/wanvideo/model_training/train.py",
     "train_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+    "no_audio_wrapper": "scripts/run_diffsynth_wan_train_no_audio.py",
+    "no_audio_wrapper_sha256": "559a9810c2eb833990e43470b4d9d22f3dd51c753eb29dc496fc957f156821b7",
     "python": "/host/space0/guo-z/envs/geoedit/bin/python",
     "help_smoke_sha256": "dcbe7da2107fb7416a931a37e27d3ccc3bb6d4accd677ab12a16d20fb31e62eb"
   },
@@ -86,7 +88,7 @@
     "gradient_checkpointing_offload": true,
     "model_cpu_offload": true,
     "optimizer_cpu_offload": false,
-    "output_root": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v1",
+    "output_root": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2",
     "overwrite": false
   },
   "resource_gate": {

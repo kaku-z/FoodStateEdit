@@ -98,3 +98,32 @@ conditions per utensil/action, held-out food instances, and separate reporting
 of action correctness, photo realism, source removal, and protected-region
 preservation. Deterministic geometry and final 2D protection remain outside the
 LoRA.
+
+## Multi-host execution and preserved v1 failure
+
+After expanding the resource search to `gp38`, `gp39`, `gp40`, `gp41`, and
+`gp42`, `gp39` was the only machine satisfying the frozen A6000 gate: all eight
+cards reported 48,539 MiB free, 0% utilization, and no compute process. The
+other A6000/Blackwell hosts were occupied; `gp41` provides A40 cards whose total
+memory cannot satisfy the 48,000 MiB free threshold.
+
+The `gp39` preflight passed all 52 checks and selected physical GPU 0. The
+upstream training script then exited before loading any model because it
+unconditionally constructed `LoadAudio`, whose initializer imports the absent
+optional package `librosa`. This is unrelated to the FoodStateEdit media, which
+contains only `video`, `vace_video`, and `vace_reference_image` fields.
+
+- Failed run manifest SHA-256:
+  `39b273c1f00787c408407357183124161bc2622db149281a8af5daa834a0e234`.
+- Passing `gp39` preflight SHA-256:
+  `feb1c5d3e36e81a7df566ed78747a3a1d4e3e05a905aabc38d9f9c88c92d8bf2`.
+- Failure log SHA-256:
+  `c5cd99dee38a7a06ad55d6a167a4f951c5b6ff0cb8205b83fb17ca77197a5cbf`.
+- Checkpoints: zero.
+
+The failure directory remains untouched. The v2 fix does not install or
+download `librosa`; a frozen wrapper rejects any dataset containing
+`input_audio`, provides a sentinel only for the upstream unused import, and
+then runs the unchanged, hash-verified trainer. Preflight now verifies both the
+wrapper hash and its offline `--help` path. V2 writes to the new-only output
+`/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2`.
