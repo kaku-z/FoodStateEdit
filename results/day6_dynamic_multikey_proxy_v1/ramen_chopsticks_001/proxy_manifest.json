@@ -1,0 +1,269 @@
+{
+  "schema_version": "foodstateedit.dynamic_multikey_proxy.v1",
+  "anchor_id": "ramen_chopsticks_001",
+  "method": "vace_direct_dynamic_multikey",
+  "deterministic": true,
+  "frame_count": 21,
+  "fps": 15.0,
+  "selected_frame_index": 18,
+  "phase_schedule": {
+    "source_anchor": [
+      0,
+      0
+    ],
+    "approach": [
+      1,
+      5
+    ],
+    "contact_hold": [
+      6,
+      8
+    ],
+    "lift": [
+      9,
+      16
+    ],
+    "final_hold": [
+      17,
+      20
+    ]
+  },
+  "geometry_policy": "translated rigid approach; source-contact hold; root-weighted deformable lift; exact static-proxy final hold",
+  "keyframe_policy": "deterministic_geometry_only_no_image_generation",
+  "z_order": "rear_chopstick -> deformable payload -> front_chopstick",
+  "motion_support_fraction": 0.258641,
+  "first_frame_vs_source_max_pixel_difference": 0,
+  "final_hold_vs_static_proxy_max_pixel_difference": 0,
+  "selected_control_outside_final_edit_alpha_max_pixel_difference": 0,
+  "static_proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+  "frames": [
+    {
+      "index": 0,
+      "phase": "source_anchor",
+      "changed_pixels": 0,
+      "rigid_pixels": 0,
+      "contact_pixels": 0,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 1,
+      "phase": "approach",
+      "changed_pixels": 3767,
+      "rigid_pixels": 1616,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 2,
+      "phase": "approach",
+      "changed_pixels": 4204,
+      "rigid_pixels": 2043,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 3,
+      "phase": "approach",
+      "changed_pixels": 5154,
+      "rigid_pixels": 3003,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 4,
+      "phase": "approach",
+      "changed_pixels": 5482,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 5,
+      "phase": "approach",
+      "changed_pixels": 5483,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 6,
+      "phase": "contact_hold",
+      "changed_pixels": 5483,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 7,
+      "phase": "contact_hold",
+      "changed_pixels": 5483,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 8,
+      "phase": "contact_hold",
+      "changed_pixels": 5483,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 9,
+      "phase": "lift",
+      "changed_pixels": 8706,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 3883,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 10,
+      "phase": "lift",
+      "changed_pixels": 16435,
+      "rigid_pixels": 3320,
+      "contact_pixels": 975,
+      "material_pixels": 3998,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 11,
+      "phase": "lift",
+      "changed_pixels": 18265,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 4602,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 12,
+      "phase": "lift",
+      "changed_pixels": 18950,
+      "rigid_pixels": 3332,
+      "contact_pixels": 975,
+      "material_pixels": 5238,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 13,
+      "phase": "lift",
+      "changed_pixels": 17837,
+      "rigid_pixels": 3323,
+      "contact_pixels": 975,
+      "material_pixels": 5983,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 14,
+      "phase": "lift",
+      "changed_pixels": 19696,
+      "rigid_pixels": 3326,
+      "contact_pixels": 975,
+      "material_pixels": 6608,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 15,
+      "phase": "lift",
+      "changed_pixels": 20403,
+      "rigid_pixels": 3317,
+      "contact_pixels": 975,
+      "material_pixels": 7122,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 16,
+      "phase": "lift",
+      "changed_pixels": 20597,
+      "rigid_pixels": 3323,
+      "contact_pixels": 975,
+      "material_pixels": 7268,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 17,
+      "phase": "final_hold",
+      "changed_pixels": 24275,
+      "rigid_pixels": 3208,
+      "contact_pixels": 940,
+      "material_pixels": 7210,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 18,
+      "phase": "final_hold",
+      "changed_pixels": 24275,
+      "rigid_pixels": 3208,
+      "contact_pixels": 940,
+      "material_pixels": 7210,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 19,
+      "phase": "final_hold",
+      "changed_pixels": 24275,
+      "rigid_pixels": 3208,
+      "contact_pixels": 940,
+      "material_pixels": 7210,
+      "hole_pixels": 9988
+    },
+    {
+      "index": 20,
+      "phase": "final_hold",
+      "changed_pixels": 24275,
+      "rigid_pixels": 3208,
+      "contact_pixels": 940,
+      "material_pixels": 7210,
+      "hole_pixels": 9988
+    }
+  ],
+  "files": {
+    "first_frame.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/first_frame.png",
+      "sha256": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011"
+    },
+    "final_proxy.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/final_proxy.png",
+      "sha256": "954e8fdba9579eb45505b0b26262135131a95c652edfeab029412b9a19568798"
+    },
+    "edit_alpha.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/edit_alpha.png",
+      "sha256": "748b52fb3bdf903cefead53735ec7818e165ffc95b158846e1f83eb880bfc19f"
+    },
+    "motion_union_alpha.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/motion_union_alpha.png",
+      "sha256": "23098bb98bc71ef6c274f8536662e5dfbff364f50d55113313848b5d909b576e"
+    },
+    "dynamic_control.mp4": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/dynamic_control.mp4",
+      "sha256": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+    },
+    "dynamic_mask.mp4": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/dynamic_mask.mp4",
+      "sha256": "b17d6556a9164631ff6acf26626e976bda322878021dc810dd309f83bbb2e1dc"
+    },
+    "control_review.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/control_review.png",
+      "sha256": "4feac863b174ba9f70de7fd075093f688ed6f5a94c022c573823cbe1c615cd5e"
+    },
+    "prompt.txt": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/prompt.txt",
+      "sha256": "fe65ae3bfda8ff0a1438eb827566513ad842892d699c196aaae12439634c745b"
+    },
+    "negative_prompt.txt": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/negative_prompt.txt",
+      "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+    }
+  },
+  "status": "frozen_deterministic_control_requires_visual_confirmation"
+}

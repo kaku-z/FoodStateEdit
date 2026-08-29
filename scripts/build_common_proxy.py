@@ -226,9 +226,14 @@ def build_case(
     spec: dict[str, object],
     anchor_root: Path,
     output_root: Path,
+    source_root: Path | None = None,
 ) -> dict[str, object]:
     anchor_id = anchor["anchor_id"]
-    source_path = Path(canonical["canonical_input_path"])
+    source_path = (
+        source_root / f"{anchor['case_id']}.jpg"
+        if source_root is not None
+        else Path(canonical["canonical_input_path"])
+    )
     if sha256_file(source_path) != canonical["canonical_input_sha256"]:
         raise ValueError(f"Canonical source hash mismatch: {anchor_id}")
     with Image.open(source_path) as source_file:
@@ -297,6 +302,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--anchor-manifest", type=Path, required=True)
     parser.add_argument("--anchor-specs", type=Path, required=True)
     parser.add_argument("--anchor-root", type=Path, required=True)
+    parser.add_argument(
+        "--source-root",
+        type=Path,
+        help=(
+            "Optional portable mirror containing <case_id>.jpg files. Each file "
+            "must still match canonical_input_sha256."
+        ),
+    )
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--summary", type=Path, required=True)
     return parser.parse_args()
@@ -314,7 +327,14 @@ def main() -> None:
         raise ValueError("Expected the same four anchors in manifest and specs")
     args.output_root.mkdir(parents=True, exist_ok=True)
     results = [
-        build_case(anchor, canonical[anchor["case_id"]], specs[anchor["anchor_id"]], args.anchor_root, args.output_root)
+        build_case(
+            anchor,
+            canonical[anchor["case_id"]],
+            specs[anchor["anchor_id"]],
+            args.anchor_root,
+            args.output_root,
+            args.source_root,
+        )
         for anchor in anchors
     ]
     summary = {

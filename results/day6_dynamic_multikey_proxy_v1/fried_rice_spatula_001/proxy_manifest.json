@@ -1,0 +1,269 @@
+{
+  "schema_version": "foodstateedit.dynamic_multikey_proxy.v1",
+  "anchor_id": "fried_rice_spatula_001",
+  "method": "vace_direct_dynamic_multikey",
+  "deterministic": true,
+  "frame_count": 21,
+  "fps": 15.0,
+  "selected_frame_index": 18,
+  "phase_schedule": {
+    "source_anchor": [
+      0,
+      0
+    ],
+    "approach": [
+      1,
+      5
+    ],
+    "contact_hold": [
+      6,
+      8
+    ],
+    "lift": [
+      9,
+      16
+    ],
+    "final_hold": [
+      17,
+      20
+    ]
+  },
+  "geometry_policy": "translated rigid approach; source-contact hold; root-weighted deformable lift; exact static-proxy final hold",
+  "keyframe_policy": "deterministic_geometry_only_no_image_generation",
+  "z_order": "rigid utensil -> supported payload",
+  "motion_support_fraction": 0.158675,
+  "first_frame_vs_source_max_pixel_difference": 0,
+  "final_hold_vs_static_proxy_max_pixel_difference": 0,
+  "selected_control_outside_final_edit_alpha_max_pixel_difference": 0,
+  "static_proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+  "frames": [
+    {
+      "index": 0,
+      "phase": "source_anchor",
+      "changed_pixels": 0,
+      "rigid_pixels": 0,
+      "contact_pixels": 0,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 1,
+      "phase": "approach",
+      "changed_pixels": 10724,
+      "rigid_pixels": 9142,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 2,
+      "phase": "approach",
+      "changed_pixels": 11137,
+      "rigid_pixels": 9542,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 3,
+      "phase": "approach",
+      "changed_pixels": 11892,
+      "rigid_pixels": 10218,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 4,
+      "phase": "approach",
+      "changed_pixels": 12026,
+      "rigid_pixels": 10384,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 5,
+      "phase": "approach",
+      "changed_pixels": 12105,
+      "rigid_pixels": 10496,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 6,
+      "phase": "contact_hold",
+      "changed_pixels": 12105,
+      "rigid_pixels": 10496,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 7,
+      "phase": "contact_hold",
+      "changed_pixels": 12105,
+      "rigid_pixels": 10496,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 8,
+      "phase": "contact_hold",
+      "changed_pixels": 12105,
+      "rigid_pixels": 10496,
+      "contact_pixels": 4967,
+      "material_pixels": 0,
+      "hole_pixels": 0
+    },
+    {
+      "index": 9,
+      "phase": "lift",
+      "changed_pixels": 13473,
+      "rigid_pixels": 10496,
+      "contact_pixels": 4967,
+      "material_pixels": 8059,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 10,
+      "phase": "lift",
+      "changed_pixels": 14716,
+      "rigid_pixels": 10460,
+      "contact_pixels": 4967,
+      "material_pixels": 8007,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 11,
+      "phase": "lift",
+      "changed_pixels": 16440,
+      "rigid_pixels": 10470,
+      "contact_pixels": 4967,
+      "material_pixels": 8059,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 12,
+      "phase": "lift",
+      "changed_pixels": 18605,
+      "rigid_pixels": 10460,
+      "contact_pixels": 4967,
+      "material_pixels": 8059,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 13,
+      "phase": "lift",
+      "changed_pixels": 20704,
+      "rigid_pixels": 10440,
+      "contact_pixels": 4967,
+      "material_pixels": 8007,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 14,
+      "phase": "lift",
+      "changed_pixels": 22381,
+      "rigid_pixels": 10460,
+      "contact_pixels": 4967,
+      "material_pixels": 7971,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 15,
+      "phase": "lift",
+      "changed_pixels": 23291,
+      "rigid_pixels": 10460,
+      "contact_pixels": 4967,
+      "material_pixels": 8007,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 16,
+      "phase": "lift",
+      "changed_pixels": 23604,
+      "rigid_pixels": 10496,
+      "contact_pixels": 4967,
+      "material_pixels": 8007,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 17,
+      "phase": "final_hold",
+      "changed_pixels": 25488,
+      "rigid_pixels": 10681,
+      "contact_pixels": 4989,
+      "material_pixels": 8146,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 18,
+      "phase": "final_hold",
+      "changed_pixels": 25488,
+      "rigid_pixels": 10681,
+      "contact_pixels": 4989,
+      "material_pixels": 8146,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 19,
+      "phase": "final_hold",
+      "changed_pixels": 25488,
+      "rigid_pixels": 10681,
+      "contact_pixels": 4989,
+      "material_pixels": 8146,
+      "hole_pixels": 10595
+    },
+    {
+      "index": 20,
+      "phase": "final_hold",
+      "changed_pixels": 25488,
+      "rigid_pixels": 10681,
+      "contact_pixels": 4989,
+      "material_pixels": 8146,
+      "hole_pixels": 10595
+    }
+  ],
+  "files": {
+    "first_frame.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/first_frame.png",
+      "sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f"
+    },
+    "final_proxy.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/final_proxy.png",
+      "sha256": "34d7b35819a3a515653067dd7c792a48183a59defd9cb57791a4b121a311a81a"
+    },
+    "edit_alpha.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/edit_alpha.png",
+      "sha256": "a632d982090c5df593a41355cd63d48cc79b07b22f22ce0b12c8c02ae1b481ee"
+    },
+    "motion_union_alpha.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/motion_union_alpha.png",
+      "sha256": "ac21fee4972adcb748ba0caf6472d0b125c46c97a031583fdc08e6d9788c50aa"
+    },
+    "dynamic_control.mp4": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/dynamic_control.mp4",
+      "sha256": "e7eb4876590c2397e05b28fdfbfaef8fdc0f2a1d3fc6509ac60c7248aef218ac"
+    },
+    "dynamic_mask.mp4": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/dynamic_mask.mp4",
+      "sha256": "76809cd509207a2f3e13cf922d7e77cb2eac8e36d8a9e329e8c89ba1b3e5c0c4"
+    },
+    "control_review.png": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/control_review.png",
+      "sha256": "ee35e88bed49ebcb33f1791c089a3c633b4381ad5b4ea5dd784f1c21e4b8241b"
+    },
+    "prompt.txt": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/prompt.txt",
+      "sha256": "1e01121446bdd874aca255aebca479d811f051cd735682b9bc48b56b8cb1883c"
+    },
+    "negative_prompt.txt": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/negative_prompt.txt",
+      "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+    }
+  },
+  "status": "frozen_deterministic_control_requires_visual_confirmation"
+}

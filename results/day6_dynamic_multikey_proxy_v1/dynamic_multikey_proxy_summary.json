@@ -1,0 +1,1087 @@
+{
+  "schema_version": "foodstateedit.dynamic_multikey_proxy_summary.v1",
+  "method": "vace_direct_dynamic_multikey",
+  "case_count": 4,
+  "all_deterministic": true,
+  "all_source_anchors_exact": true,
+  "all_final_holds_exact": true,
+  "all_selected_controls_exact_outside_final_edit_alpha": true,
+  "cases": [
+    {
+      "schema_version": "foodstateedit.dynamic_multikey_proxy.v1",
+      "anchor_id": "soup_spoon_001",
+      "method": "vace_direct_dynamic_multikey",
+      "deterministic": true,
+      "frame_count": 21,
+      "fps": 15.0,
+      "selected_frame_index": 18,
+      "phase_schedule": {
+        "source_anchor": [
+          0,
+          0
+        ],
+        "approach": [
+          1,
+          5
+        ],
+        "contact_hold": [
+          6,
+          8
+        ],
+        "lift": [
+          9,
+          16
+        ],
+        "final_hold": [
+          17,
+          20
+        ]
+      },
+      "geometry_policy": "translated rigid approach; source-contact hold; root-weighted deformable lift; exact static-proxy final hold",
+      "keyframe_policy": "deterministic_geometry_only_no_image_generation",
+      "z_order": "rigid utensil -> supported payload",
+      "motion_support_fraction": 0.126429,
+      "first_frame_vs_source_max_pixel_difference": 0,
+      "final_hold_vs_static_proxy_max_pixel_difference": 0,
+      "selected_control_outside_final_edit_alpha_max_pixel_difference": 0,
+      "static_proxy_manifest_sha256": "1fa5862bd8ef7ebf8313ee1c1485963b27ad72d3e0f9e77d1cc1d62d461853d9",
+      "frames": [
+        {
+          "index": 0,
+          "phase": "source_anchor",
+          "changed_pixels": 0,
+          "rigid_pixels": 0,
+          "contact_pixels": 0,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 1,
+          "phase": "approach",
+          "changed_pixels": 5545,
+          "rigid_pixels": 4712,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 2,
+          "phase": "approach",
+          "changed_pixels": 5536,
+          "rigid_pixels": 4703,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 3,
+          "phase": "approach",
+          "changed_pixels": 5545,
+          "rigid_pixels": 4712,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 4,
+          "phase": "approach",
+          "changed_pixels": 5545,
+          "rigid_pixels": 4712,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 5,
+          "phase": "approach",
+          "changed_pixels": 5535,
+          "rigid_pixels": 4702,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 6,
+          "phase": "contact_hold",
+          "changed_pixels": 5535,
+          "rigid_pixels": 4702,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 7,
+          "phase": "contact_hold",
+          "changed_pixels": 5535,
+          "rigid_pixels": 4702,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 8,
+          "phase": "contact_hold",
+          "changed_pixels": 5535,
+          "rigid_pixels": 4702,
+          "contact_pixels": 1633,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 9,
+          "phase": "lift",
+          "changed_pixels": 5472,
+          "rigid_pixels": 4702,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 10,
+          "phase": "lift",
+          "changed_pixels": 5518,
+          "rigid_pixels": 4714,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 11,
+          "phase": "lift",
+          "changed_pixels": 6958,
+          "rigid_pixels": 4714,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 12,
+          "phase": "lift",
+          "changed_pixels": 8671,
+          "rigid_pixels": 4714,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 13,
+          "phase": "lift",
+          "changed_pixels": 10064,
+          "rigid_pixels": 4714,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 14,
+          "phase": "lift",
+          "changed_pixels": 10228,
+          "rigid_pixels": 4714,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 15,
+          "phase": "lift",
+          "changed_pixels": 10228,
+          "rigid_pixels": 4712,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 16,
+          "phase": "lift",
+          "changed_pixels": 10228,
+          "rigid_pixels": 4714,
+          "contact_pixels": 1633,
+          "material_pixels": 1619,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 17,
+          "phase": "final_hold",
+          "changed_pixels": 11328,
+          "rigid_pixels": 4733,
+          "contact_pixels": 1538,
+          "material_pixels": 1574,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 18,
+          "phase": "final_hold",
+          "changed_pixels": 11328,
+          "rigid_pixels": 4733,
+          "contact_pixels": 1538,
+          "material_pixels": 1574,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 19,
+          "phase": "final_hold",
+          "changed_pixels": 11328,
+          "rigid_pixels": 4733,
+          "contact_pixels": 1538,
+          "material_pixels": 1574,
+          "hole_pixels": 4724
+        },
+        {
+          "index": 20,
+          "phase": "final_hold",
+          "changed_pixels": 11328,
+          "rigid_pixels": 4733,
+          "contact_pixels": 1538,
+          "material_pixels": 1574,
+          "hole_pixels": 4724
+        }
+      ],
+      "files": {
+        "first_frame.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/first_frame.png",
+          "sha256": "92c064768c4b8f0dee95d92265cbdd48b95e97a39fa852594383532043b102f4"
+        },
+        "final_proxy.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/final_proxy.png",
+          "sha256": "a14cbfab8942da547dd2e68d0d45d98e32c7b39f3028cf243639c2473c1053a3"
+        },
+        "edit_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/edit_alpha.png",
+          "sha256": "bfacdf46f41a9eb269bca7a851851bf4acbcce60df816cda68882cb8d56f9ee6"
+        },
+        "motion_union_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/motion_union_alpha.png",
+          "sha256": "e7a0fcf08abc2a0c54e4521b35acb598c31ca164e580743e65a8a5b887af63ec"
+        },
+        "dynamic_control.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/dynamic_control.mp4",
+          "sha256": "cd06bd023b7b1a81b52ae62a0ed0b24fecd13f2877d37216d09ca3c51dc3cc14"
+        },
+        "dynamic_mask.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/dynamic_mask.mp4",
+          "sha256": "5b998b952c0d6e04d93dec26854e92599f0ea0cd7ad62cb03d0750d8397593c3"
+        },
+        "control_review.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/control_review.png",
+          "sha256": "cf013d85664467c473106efd4d70093cdad7769e695c5e5faa1d9a51efb67427"
+        },
+        "prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/prompt.txt",
+          "sha256": "c6e2403b1793dab17ceb8698b05fb7035d32f2ed3a3171f45fe547a5d3c18ad0"
+        },
+        "negative_prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/soup_spoon_001/negative_prompt.txt",
+          "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+        }
+      },
+      "status": "frozen_deterministic_control_requires_visual_confirmation"
+    },
+    {
+      "schema_version": "foodstateedit.dynamic_multikey_proxy.v1",
+      "anchor_id": "fried_rice_spatula_001",
+      "method": "vace_direct_dynamic_multikey",
+      "deterministic": true,
+      "frame_count": 21,
+      "fps": 15.0,
+      "selected_frame_index": 18,
+      "phase_schedule": {
+        "source_anchor": [
+          0,
+          0
+        ],
+        "approach": [
+          1,
+          5
+        ],
+        "contact_hold": [
+          6,
+          8
+        ],
+        "lift": [
+          9,
+          16
+        ],
+        "final_hold": [
+          17,
+          20
+        ]
+      },
+      "geometry_policy": "translated rigid approach; source-contact hold; root-weighted deformable lift; exact static-proxy final hold",
+      "keyframe_policy": "deterministic_geometry_only_no_image_generation",
+      "z_order": "rigid utensil -> supported payload",
+      "motion_support_fraction": 0.158675,
+      "first_frame_vs_source_max_pixel_difference": 0,
+      "final_hold_vs_static_proxy_max_pixel_difference": 0,
+      "selected_control_outside_final_edit_alpha_max_pixel_difference": 0,
+      "static_proxy_manifest_sha256": "9bb59a424b7b043a3f143906ce6c65fd7f208969691a5eb36e7f269a3a782296",
+      "frames": [
+        {
+          "index": 0,
+          "phase": "source_anchor",
+          "changed_pixels": 0,
+          "rigid_pixels": 0,
+          "contact_pixels": 0,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 1,
+          "phase": "approach",
+          "changed_pixels": 10724,
+          "rigid_pixels": 9142,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 2,
+          "phase": "approach",
+          "changed_pixels": 11137,
+          "rigid_pixels": 9542,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 3,
+          "phase": "approach",
+          "changed_pixels": 11892,
+          "rigid_pixels": 10218,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 4,
+          "phase": "approach",
+          "changed_pixels": 12026,
+          "rigid_pixels": 10384,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 5,
+          "phase": "approach",
+          "changed_pixels": 12105,
+          "rigid_pixels": 10496,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 6,
+          "phase": "contact_hold",
+          "changed_pixels": 12105,
+          "rigid_pixels": 10496,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 7,
+          "phase": "contact_hold",
+          "changed_pixels": 12105,
+          "rigid_pixels": 10496,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 8,
+          "phase": "contact_hold",
+          "changed_pixels": 12105,
+          "rigid_pixels": 10496,
+          "contact_pixels": 4967,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 9,
+          "phase": "lift",
+          "changed_pixels": 13473,
+          "rigid_pixels": 10496,
+          "contact_pixels": 4967,
+          "material_pixels": 8059,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 10,
+          "phase": "lift",
+          "changed_pixels": 14716,
+          "rigid_pixels": 10460,
+          "contact_pixels": 4967,
+          "material_pixels": 8007,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 11,
+          "phase": "lift",
+          "changed_pixels": 16440,
+          "rigid_pixels": 10470,
+          "contact_pixels": 4967,
+          "material_pixels": 8059,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 12,
+          "phase": "lift",
+          "changed_pixels": 18605,
+          "rigid_pixels": 10460,
+          "contact_pixels": 4967,
+          "material_pixels": 8059,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 13,
+          "phase": "lift",
+          "changed_pixels": 20704,
+          "rigid_pixels": 10440,
+          "contact_pixels": 4967,
+          "material_pixels": 8007,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 14,
+          "phase": "lift",
+          "changed_pixels": 22381,
+          "rigid_pixels": 10460,
+          "contact_pixels": 4967,
+          "material_pixels": 7971,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 15,
+          "phase": "lift",
+          "changed_pixels": 23291,
+          "rigid_pixels": 10460,
+          "contact_pixels": 4967,
+          "material_pixels": 8007,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 16,
+          "phase": "lift",
+          "changed_pixels": 23604,
+          "rigid_pixels": 10496,
+          "contact_pixels": 4967,
+          "material_pixels": 8007,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 17,
+          "phase": "final_hold",
+          "changed_pixels": 25488,
+          "rigid_pixels": 10681,
+          "contact_pixels": 4989,
+          "material_pixels": 8146,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 18,
+          "phase": "final_hold",
+          "changed_pixels": 25488,
+          "rigid_pixels": 10681,
+          "contact_pixels": 4989,
+          "material_pixels": 8146,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 19,
+          "phase": "final_hold",
+          "changed_pixels": 25488,
+          "rigid_pixels": 10681,
+          "contact_pixels": 4989,
+          "material_pixels": 8146,
+          "hole_pixels": 10595
+        },
+        {
+          "index": 20,
+          "phase": "final_hold",
+          "changed_pixels": 25488,
+          "rigid_pixels": 10681,
+          "contact_pixels": 4989,
+          "material_pixels": 8146,
+          "hole_pixels": 10595
+        }
+      ],
+      "files": {
+        "first_frame.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/first_frame.png",
+          "sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f"
+        },
+        "final_proxy.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/final_proxy.png",
+          "sha256": "34d7b35819a3a515653067dd7c792a48183a59defd9cb57791a4b121a311a81a"
+        },
+        "edit_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/edit_alpha.png",
+          "sha256": "a632d982090c5df593a41355cd63d48cc79b07b22f22ce0b12c8c02ae1b481ee"
+        },
+        "motion_union_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/motion_union_alpha.png",
+          "sha256": "ac21fee4972adcb748ba0caf6472d0b125c46c97a031583fdc08e6d9788c50aa"
+        },
+        "dynamic_control.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/dynamic_control.mp4",
+          "sha256": "e7eb4876590c2397e05b28fdfbfaef8fdc0f2a1d3fc6509ac60c7248aef218ac"
+        },
+        "dynamic_mask.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/dynamic_mask.mp4",
+          "sha256": "76809cd509207a2f3e13cf922d7e77cb2eac8e36d8a9e329e8c89ba1b3e5c0c4"
+        },
+        "control_review.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/control_review.png",
+          "sha256": "ee35e88bed49ebcb33f1791c089a3c633b4381ad5b4ea5dd784f1c21e4b8241b"
+        },
+        "prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/prompt.txt",
+          "sha256": "1e01121446bdd874aca255aebca479d811f051cd735682b9bc48b56b8cb1883c"
+        },
+        "negative_prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/negative_prompt.txt",
+          "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+        }
+      },
+      "status": "frozen_deterministic_control_requires_visual_confirmation"
+    },
+    {
+      "schema_version": "foodstateedit.dynamic_multikey_proxy.v1",
+      "anchor_id": "ramen_chopsticks_001",
+      "method": "vace_direct_dynamic_multikey",
+      "deterministic": true,
+      "frame_count": 21,
+      "fps": 15.0,
+      "selected_frame_index": 18,
+      "phase_schedule": {
+        "source_anchor": [
+          0,
+          0
+        ],
+        "approach": [
+          1,
+          5
+        ],
+        "contact_hold": [
+          6,
+          8
+        ],
+        "lift": [
+          9,
+          16
+        ],
+        "final_hold": [
+          17,
+          20
+        ]
+      },
+      "geometry_policy": "translated rigid approach; source-contact hold; root-weighted deformable lift; exact static-proxy final hold",
+      "keyframe_policy": "deterministic_geometry_only_no_image_generation",
+      "z_order": "rear_chopstick -> deformable payload -> front_chopstick",
+      "motion_support_fraction": 0.258641,
+      "first_frame_vs_source_max_pixel_difference": 0,
+      "final_hold_vs_static_proxy_max_pixel_difference": 0,
+      "selected_control_outside_final_edit_alpha_max_pixel_difference": 0,
+      "static_proxy_manifest_sha256": "a65441d868f8f6ee7d416c255eb9ee7b75cab02765f043fc6a5023d218325862",
+      "frames": [
+        {
+          "index": 0,
+          "phase": "source_anchor",
+          "changed_pixels": 0,
+          "rigid_pixels": 0,
+          "contact_pixels": 0,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 1,
+          "phase": "approach",
+          "changed_pixels": 3767,
+          "rigid_pixels": 1616,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 2,
+          "phase": "approach",
+          "changed_pixels": 4204,
+          "rigid_pixels": 2043,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 3,
+          "phase": "approach",
+          "changed_pixels": 5154,
+          "rigid_pixels": 3003,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 4,
+          "phase": "approach",
+          "changed_pixels": 5482,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 5,
+          "phase": "approach",
+          "changed_pixels": 5483,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 6,
+          "phase": "contact_hold",
+          "changed_pixels": 5483,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 7,
+          "phase": "contact_hold",
+          "changed_pixels": 5483,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 8,
+          "phase": "contact_hold",
+          "changed_pixels": 5483,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 9,
+          "phase": "lift",
+          "changed_pixels": 8706,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 3883,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 10,
+          "phase": "lift",
+          "changed_pixels": 16435,
+          "rigid_pixels": 3320,
+          "contact_pixels": 975,
+          "material_pixels": 3998,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 11,
+          "phase": "lift",
+          "changed_pixels": 18265,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 4602,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 12,
+          "phase": "lift",
+          "changed_pixels": 18950,
+          "rigid_pixels": 3332,
+          "contact_pixels": 975,
+          "material_pixels": 5238,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 13,
+          "phase": "lift",
+          "changed_pixels": 17837,
+          "rigid_pixels": 3323,
+          "contact_pixels": 975,
+          "material_pixels": 5983,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 14,
+          "phase": "lift",
+          "changed_pixels": 19696,
+          "rigid_pixels": 3326,
+          "contact_pixels": 975,
+          "material_pixels": 6608,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 15,
+          "phase": "lift",
+          "changed_pixels": 20403,
+          "rigid_pixels": 3317,
+          "contact_pixels": 975,
+          "material_pixels": 7122,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 16,
+          "phase": "lift",
+          "changed_pixels": 20597,
+          "rigid_pixels": 3323,
+          "contact_pixels": 975,
+          "material_pixels": 7268,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 17,
+          "phase": "final_hold",
+          "changed_pixels": 24275,
+          "rigid_pixels": 3208,
+          "contact_pixels": 940,
+          "material_pixels": 7210,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 18,
+          "phase": "final_hold",
+          "changed_pixels": 24275,
+          "rigid_pixels": 3208,
+          "contact_pixels": 940,
+          "material_pixels": 7210,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 19,
+          "phase": "final_hold",
+          "changed_pixels": 24275,
+          "rigid_pixels": 3208,
+          "contact_pixels": 940,
+          "material_pixels": 7210,
+          "hole_pixels": 9988
+        },
+        {
+          "index": 20,
+          "phase": "final_hold",
+          "changed_pixels": 24275,
+          "rigid_pixels": 3208,
+          "contact_pixels": 940,
+          "material_pixels": 7210,
+          "hole_pixels": 9988
+        }
+      ],
+      "files": {
+        "first_frame.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/first_frame.png",
+          "sha256": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011"
+        },
+        "final_proxy.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/final_proxy.png",
+          "sha256": "954e8fdba9579eb45505b0b26262135131a95c652edfeab029412b9a19568798"
+        },
+        "edit_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/edit_alpha.png",
+          "sha256": "748b52fb3bdf903cefead53735ec7818e165ffc95b158846e1f83eb880bfc19f"
+        },
+        "motion_union_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/motion_union_alpha.png",
+          "sha256": "23098bb98bc71ef6c274f8536662e5dfbff364f50d55113313848b5d909b576e"
+        },
+        "dynamic_control.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/dynamic_control.mp4",
+          "sha256": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+        },
+        "dynamic_mask.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/dynamic_mask.mp4",
+          "sha256": "b17d6556a9164631ff6acf26626e976bda322878021dc810dd309f83bbb2e1dc"
+        },
+        "control_review.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/control_review.png",
+          "sha256": "4feac863b174ba9f70de7fd075093f688ed6f5a94c022c573823cbe1c615cd5e"
+        },
+        "prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/prompt.txt",
+          "sha256": "fe65ae3bfda8ff0a1438eb827566513ad842892d699c196aaae12439634c745b"
+        },
+        "negative_prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/ramen_chopsticks_001/negative_prompt.txt",
+          "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+        }
+      },
+      "status": "frozen_deterministic_control_requires_visual_confirmation"
+    },
+    {
+      "schema_version": "foodstateedit.dynamic_multikey_proxy.v1",
+      "anchor_id": "pasta_fork_001",
+      "method": "vace_direct_dynamic_multikey",
+      "deterministic": true,
+      "frame_count": 21,
+      "fps": 15.0,
+      "selected_frame_index": 18,
+      "phase_schedule": {
+        "source_anchor": [
+          0,
+          0
+        ],
+        "approach": [
+          1,
+          5
+        ],
+        "contact_hold": [
+          6,
+          8
+        ],
+        "lift": [
+          9,
+          16
+        ],
+        "final_hold": [
+          17,
+          20
+        ]
+      },
+      "geometry_policy": "translated rigid approach; source-contact hold; root-weighted deformable lift; exact static-proxy final hold",
+      "keyframe_policy": "deterministic_geometry_only_no_image_generation",
+      "z_order": "rigid utensil -> supported payload",
+      "motion_support_fraction": 0.147668,
+      "first_frame_vs_source_max_pixel_difference": 0,
+      "final_hold_vs_static_proxy_max_pixel_difference": 0,
+      "selected_control_outside_final_edit_alpha_max_pixel_difference": 0,
+      "static_proxy_manifest_sha256": "c015176876261dc41629225775f28d4ac30f589d2b64f0ed068c10b6fbfa89e3",
+      "frames": [
+        {
+          "index": 0,
+          "phase": "source_anchor",
+          "changed_pixels": 0,
+          "rigid_pixels": 0,
+          "contact_pixels": 0,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 1,
+          "phase": "approach",
+          "changed_pixels": 7118,
+          "rigid_pixels": 1759,
+          "contact_pixels": 4131,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 2,
+          "phase": "approach",
+          "changed_pixels": 8035,
+          "rigid_pixels": 2003,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 3,
+          "phase": "approach",
+          "changed_pixels": 8595,
+          "rigid_pixels": 2546,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 4,
+          "phase": "approach",
+          "changed_pixels": 9133,
+          "rigid_pixels": 3077,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 5,
+          "phase": "approach",
+          "changed_pixels": 9386,
+          "rigid_pixels": 3330,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 6,
+          "phase": "contact_hold",
+          "changed_pixels": 9386,
+          "rigid_pixels": 3330,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 7,
+          "phase": "contact_hold",
+          "changed_pixels": 9386,
+          "rigid_pixels": 3330,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 8,
+          "phase": "contact_hold",
+          "changed_pixels": 9386,
+          "rigid_pixels": 3330,
+          "contact_pixels": 4253,
+          "material_pixels": 0,
+          "hole_pixels": 0
+        },
+        {
+          "index": 9,
+          "phase": "lift",
+          "changed_pixels": 9965,
+          "rigid_pixels": 3330,
+          "contact_pixels": 4253,
+          "material_pixels": 6303,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 10,
+          "phase": "lift",
+          "changed_pixels": 10068,
+          "rigid_pixels": 3363,
+          "contact_pixels": 4253,
+          "material_pixels": 6322,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 11,
+          "phase": "lift",
+          "changed_pixels": 10313,
+          "rigid_pixels": 3381,
+          "contact_pixels": 4253,
+          "material_pixels": 6380,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 12,
+          "phase": "lift",
+          "changed_pixels": 11051,
+          "rigid_pixels": 3380,
+          "contact_pixels": 4253,
+          "material_pixels": 6460,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 13,
+          "phase": "lift",
+          "changed_pixels": 12130,
+          "rigid_pixels": 3375,
+          "contact_pixels": 4253,
+          "material_pixels": 6532,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 14,
+          "phase": "lift",
+          "changed_pixels": 13188,
+          "rigid_pixels": 3383,
+          "contact_pixels": 4253,
+          "material_pixels": 6612,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 15,
+          "phase": "lift",
+          "changed_pixels": 13807,
+          "rigid_pixels": 3392,
+          "contact_pixels": 4253,
+          "material_pixels": 6683,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 16,
+          "phase": "lift",
+          "changed_pixels": 14053,
+          "rigid_pixels": 3394,
+          "contact_pixels": 4253,
+          "material_pixels": 6686,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 17,
+          "phase": "final_hold",
+          "changed_pixels": 15200,
+          "rigid_pixels": 3674,
+          "contact_pixels": 4178,
+          "material_pixels": 6578,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 18,
+          "phase": "final_hold",
+          "changed_pixels": 15200,
+          "rigid_pixels": 3674,
+          "contact_pixels": 4178,
+          "material_pixels": 6578,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 19,
+          "phase": "final_hold",
+          "changed_pixels": 15200,
+          "rigid_pixels": 3674,
+          "contact_pixels": 4178,
+          "material_pixels": 6578,
+          "hole_pixels": 5378
+        },
+        {
+          "index": 20,
+          "phase": "final_hold",
+          "changed_pixels": 15200,
+          "rigid_pixels": 3674,
+          "contact_pixels": 4178,
+          "material_pixels": 6578,
+          "hole_pixels": 5378
+        }
+      ],
+      "files": {
+        "first_frame.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/first_frame.png",
+          "sha256": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a"
+        },
+        "final_proxy.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/final_proxy.png",
+          "sha256": "d204a7ee32674b4890dbd2017805691a0861929530cf156b9d60f94d386a5504"
+        },
+        "edit_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/edit_alpha.png",
+          "sha256": "ff2b13074bc74246640bd3f0f0cdf41c6aad2d8f1c707ea169fc8f7af32499a0"
+        },
+        "motion_union_alpha.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/motion_union_alpha.png",
+          "sha256": "bd310adff6cbaab25d062322de2e09af99b1b838acca4e20612555e0781c16fa"
+        },
+        "dynamic_control.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/dynamic_control.mp4",
+          "sha256": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+        },
+        "dynamic_mask.mp4": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/dynamic_mask.mp4",
+          "sha256": "69fc8193759acaae3d2efb59c5e0a0419742c8fa6bf57cc99f1c58146cd16efb"
+        },
+        "control_review.png": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/control_review.png",
+          "sha256": "d8d15809e97022e9d14d98f17e99d080467b3580771b663a22b2f9aff2bab07c"
+        },
+        "prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/prompt.txt",
+          "sha256": "30ad2ad38b494b27204b4cabea7ec2cb71b4bc0b9885c3091e8c5f69d928f7ab"
+        },
+        "negative_prompt.txt": {
+          "path": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/pasta_fork_001/negative_prompt.txt",
+          "sha256": "658ebc388edea1b7c82947e2ce52e52ba45b6782c8827f4e3a65eb2a2e5b7a10"
+        }
+      },
+      "status": "frozen_deterministic_control_requires_visual_confirmation"
+    }
+  ]
+}

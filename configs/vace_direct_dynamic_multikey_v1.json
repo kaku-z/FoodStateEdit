@@ -1,0 +1,26 @@
+{
+  "schema_version": "foodstateedit.vace_direct_dynamic_multikey.v1",
+  "freeze_date": "2026-08-29",
+  "freeze_rule": "Commit the builder, worker, schedule, prompts, and deterministic controls before generating any dynamic-multikey v1 stochastic output.",
+  "method": "vace_direct_dynamic_multikey",
+  "model": "Wan2.2-VACE-Fun-A14B",
+  "seed": 1,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "vace_scale": 1.0,
+  "phase_schedule": {
+    "source_anchor": [0, 0],
+    "approach": [1, 5],
+    "contact_hold": [6, 8],
+    "lift": [9, 16],
+    "final_hold": [17, 20]
+  },
+  "selected_frame_index": 18,
+  "vace_video": "deterministic 21-frame source/approach/contact/lift/final-hold RGB control",
+  "vace_video_mask": "black source-anchor frame followed by one deterministic union support",
+  "vace_reference_image": "unchanged canonical source",
+  "enable_ttm": false,
+  "postprocess": "fixed frame 18; exact source projection outside final edit_alpha",
+  "selection_policy": "One global schedule and seed for all four anchors; frame 18 is frozen before inference; no output-dependent tuning or replacement.",
+  "isolated_question": "Does deterministic action-phase motion recover utensil identity and food-contact topology that repeated static conditioning lost?"
+}
