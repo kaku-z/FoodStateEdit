@@ -62,6 +62,7 @@ class AdapterV0Tests(unittest.TestCase):
     def test_preflight_and_launcher_are_fail_closed(self):
         preflight = (ROOT / "scripts" / "preflight_adapter_training.py").read_text(encoding="utf-8")
         launcher = (ROOT / "scripts" / "run_adapter_lora_smoke.py").read_text(encoding="utf-8")
+        validator = (ROOT / "scripts" / "validate_adapter_lora_checkpoint.py").read_text(encoding="utf-8")
         self.assertIn("output_absent", preflight)
         self.assertIn("require_no_compute_process", preflight)
         self.assertIn("nvidia-smi", preflight)
@@ -77,6 +78,14 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn('"TRANSFORMERS_OFFLINE"', launcher)
         self.assertIn('"--model_paths"', launcher)
         self.assertNotIn("modelscope download", launcher.lower())
+        self.assertIn("Refusing to overwrite report", validator)
+        self.assertIn('os.environ["CUDA_VISIBLE_DEVICES"] = ""', validator)
+        self.assertIn("safe_open", validator)
+        self.assertIn("torch.isfinite", validator)
+        self.assertIn("pipe.load_lora(pipe.vace", validator)
+        self.assertIn("tokenizer_config=None", validator)
+        self.assertIn("redirect_common_files=False", validator)
+        self.assertIn("no visual-quality claim", validator)
 
     def test_initial_remote_preflight_is_blocked_only_by_gpu(self):
         report_path = ROOT / "results" / "day7_adapter_v0_preflight_initial_v2.json"

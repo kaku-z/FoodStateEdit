@@ -25,6 +25,11 @@
 - [ ] Preserve command, log, preflight, failure state, and checkpoint hashes.
 - [ ] Load the resulting LoRA in an offline validation smoke before any visual comparison.
 
+The loadability smoke is frozen in `scripts/validate_adapter_lora_checkpoint.py`.
+It requires complete finite rank-8 LoRA A/B pairs and a positive tensor-update
+count from the official `pipe.load_lora(pipe.vace, ...)` path. This does not
+count as a visual result.
+
 ## Current resource state
 
 At the initial 2026-08-29 preflight, 51/52 checks passed. All eight A6000 GPUs were occupied by `chen-q` at approximately 44.5 GiB per card and 99--100% utilization, so `gpu_gate` was the sole failed check. No training was started and the frozen output directory remains absent.
