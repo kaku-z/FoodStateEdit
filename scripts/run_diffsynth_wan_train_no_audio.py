@@ -6,6 +6,7 @@ from __future__ import annotations
 import runpy
 import sys
 import types
+from importlib.machinery import ModuleSpec
 from pathlib import Path
 
 
@@ -42,6 +43,7 @@ def main() -> None:
     # irrelevant dependency without changing the VACE data or training path.
     sentinel = types.ModuleType("librosa")
     sentinel.__doc__ = "FoodStateEdit no-audio sentinel; no audio operation is permitted."
+    sentinel.__spec__ = ModuleSpec("librosa", loader=None)
     sys.modules["librosa"] = sentinel
     sys.argv = [str(upstream_script), *forwarded]
     runpy.run_path(str(upstream_script), run_name="__main__")

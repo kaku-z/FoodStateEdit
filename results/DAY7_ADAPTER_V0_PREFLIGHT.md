@@ -127,3 +127,10 @@ download `librosa`; a frozen wrapper rejects any dataset containing
 then runs the unchanged, hash-verified trainer. Preflight now verifies both the
 wrapper hash and its offline `--help` path. V2 writes to the new-only output
 `/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2`.
+
+The first wrapper preflight was also preserved. It failed only
+`no_audio_wrapper_help` because Transformers calls `find_spec("librosa")` and a
+plain sentinel module has no import specification. Report SHA-256:
+`f16496557337cc491620e305b1049a407031bd8fbccce8c28ec653cb5ab65efb`.
+No output directory was created. The corrected wrapper assigns a standard
+`ModuleSpec` to the sentinel and is frozen under a new source commit.

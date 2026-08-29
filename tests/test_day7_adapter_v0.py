@@ -45,7 +45,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(config["trainer"]["no_audio_wrapper"], "scripts/run_diffsynth_wan_train_no_audio.py")
         self.assertEqual(
             config["trainer"]["no_audio_wrapper_sha256"],
-            "559a9810c2eb833990e43470b4d9d22f3dd51c753eb29dc496fc957f156821b7",
+            "fc6e0d24a90aa1891fe0841b05e64b44de4808a58195d7922bf5a9bd951d28ae",
         )
 
     def test_dataset_builder_is_deterministic_proxy_only_and_fail_closed(self):
@@ -131,8 +131,20 @@ class AdapterV0Tests(unittest.TestCase):
         wrapper = (ROOT / "scripts" / "run_diffsynth_wan_train_no_audio.py").read_text(encoding="utf-8")
         self.assertIn("No-audio wrapper refuses datasets containing input_audio", wrapper)
         self.assertIn('sys.modules["librosa"] = sentinel', wrapper)
+        self.assertIn('ModuleSpec("librosa", loader=None)', wrapper)
         self.assertIn("runpy.run_path", wrapper)
         self.assertNotIn("pip install", wrapper)
+
+    def test_first_wrapper_preflight_failure_is_preserved(self):
+        report = json.loads(
+            (ROOT / "results" / "day7_adapter_v0_preflight_gp39_wrapper_spec_failure_v2.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertFalse(report["ready"])
+        self.assertEqual([check["id"] for check in report["checks"] if not check["passed"]], ["no_audio_wrapper_help"])
+        output_absent = next(check for check in report["checks"] if check["id"] == "output_absent")
+        self.assertTrue(output_absent["passed"])
 
 
 if __name__ == "__main__":
