@@ -1,0 +1,41 @@
+{
+  "schema_version": "foodstateedit.internal_pilot_review.v1",
+  "review_date": "2026-08-29",
+  "timezone": "Asia/Tokyo",
+  "review_type": "single_internal_nonblind_diagnostic",
+  "method": "vace_direct_static_proxy",
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "action": "fail",
+      "photo": "fail",
+      "diagnostic": "Only a faint translucent spoon outline remains; no convincing lifted spoon bowl or contained soup payload is visible."
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "action": "fail",
+      "photo": "fail",
+      "diagnostic": "The spatula is removed and replaced by a blurred food patch; no readable blade, handle, or coherent lifted payload remains."
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "action": "fail",
+      "photo": "fail",
+      "diagnostic": "The sticks and lifted strand are translucent and duplicated/ghosted rather than two solid chopsticks holding one continuous noodle."
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "action": "fail",
+      "photo": "fail",
+      "diagnostic": "A faint handle-like streak and blurred patch remain, but four tines and a readable spaghetti twirl are absent."
+    }
+  ],
+  "aggregate": {
+    "case_count": 4,
+    "technical_complete": 4,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_source_protection_success": 4
+  },
+  "decision": "Close VACE-direct v1 and do not expand to additional seeds or the 60-case set. The result rejects the hypothesis that TTM alone caused topology loss; native direct VACE conditioning also fails on thin utensils and food-contact relations."
+}

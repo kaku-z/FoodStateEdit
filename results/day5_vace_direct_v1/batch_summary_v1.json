@@ -1,0 +1,66 @@
+{
+  "schema_version": "foodstateedit.vace_direct_batch_summary.v1",
+  "method": "vace_direct_static_proxy",
+  "seed": 1,
+  "code_commit": "a9c72f51d97e504dce7cfdb50c1ce212b683ceb0",
+  "worker_sha256": "1c41d1dfca356575b8781a9ef8cb5cfdb15d8487035e56d4cffb19635ff14e9c",
+  "config_sha256": "9e4d51e740a9c80e5afe77f8cf69fb0e93888758f65c58f93f3f00afb7d15dc4",
+  "case_count": 4,
+  "complete_count": 4,
+  "technical_failure_count": 0,
+  "worker_count": 2,
+  "resident_contract_passed": true,
+  "all_protected_pixels_exact": true,
+  "all_output_hashes_verified_after_transfer": true,
+  "workers": [
+    {
+      "gpu": "0",
+      "tracked_path": "gpu0/worker_summary.json",
+      "sha256": "4584d75d1f4b035cd3f10d60a7683f9d76cd1737dad8c71f57f9d810b48b35e8",
+      "pipeline_load_count": 1,
+      "resident_contract_passed": true
+    },
+    {
+      "gpu": "1",
+      "tracked_path": "gpu1/worker_summary.json",
+      "sha256": "4a32187ff6fbe46519621c963085b1228fe90555b408c353afe2d658eeb3651f",
+      "pipeline_load_count": 1,
+      "resident_contract_passed": true
+    }
+  ],
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "gpu": "0",
+      "wall_time_seconds": 1399.496,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "99742ed50317d968aea9535a734e0800e493972de2a0d26fbb3e4ab3d35956dc",
+      "edited_2d_sha256": "6ff1a2a02cf8d297834741cc628d32aad6d94a6e6c777c51128e80c79b6469a8"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "gpu": "0",
+      "wall_time_seconds": 247.412,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "652235e6249bbc062edc5781ef47905d20285cc70a02754a58817307891d9016",
+      "edited_2d_sha256": "7f57a72a619efc4ee380722be2ae2e8a43087c99a7d43882945060b152eb963b"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "gpu": "1",
+      "wall_time_seconds": 1408.383,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "ea505ff3e9213945f92926ac734eb57f20f87db75f2a861215b3d22f500ca5ea",
+      "edited_2d_sha256": "ac05281d2e30fe92aec50f4b82c3fd6e59b4090d9b99856ea636b7dc6ed6264d"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "gpu": "1",
+      "wall_time_seconds": 246.731,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "6eab6c044f7de7ac6d3c56c6b46e810898b32de334ec08823e9011625fbf03f7",
+      "edited_2d_sha256": "a0902755ecf6d062529ff32d00485c113e38d18638ebaed624766023ea86ad0c"
+    }
+  ],
+  "status": "CLOSED_NEGATIVE_DIRECT_CONDITIONING_PILOT_DO_NOT_EXPAND"
+}

@@ -61,8 +61,8 @@
       "method_id": "vace_direct_static_proxy",
       "role": "secondary_baseline",
       "inclusion": "conditional",
-      "day3_engine_status": "model_assets_present_day5_resident_worker_frozen",
-      "formal_anchor_status": "common_proxy_v1_pre_output_contract_frozen",
+      "day3_engine_status": "day5_direct_vace_seed1_batch_complete_4_of_4",
+      "formal_anchor_status": "direct_static_proxy_negative_0_of_4_do_not_expand",
       "stochastic": true,
       "requires_common_proxy": true,
       "backend": "Wan2.2_VACE_without_TTM_projection",
@@ -213,5 +213,17 @@
     "exact_source_protection_success": 4,
     "diagnostic": "Rigid utensil shading improved, but warped payload texture and contact occlusion remain non-photographic.",
     "status": "CLOSED_RIGID_APPEARANCE_IMPROVED_PAYLOAD_APPEARANCE_NEGATIVE"
+  },
+  "day5_vace_direct_gate": {
+    "candidate": "vace_direct_static_proxy",
+    "config_version": "configs/vace_direct_static_proxy_v1.json",
+    "technical_complete": 4,
+    "technical_failure": 0,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_source_protection_success": 4,
+    "resident_pipeline_contract": "passed_two_workers_one_load_each",
+    "diagnostic": "Disabling TTM did not preserve thin utensil identity or food-contact topology; the failure is not attributable to TTM alone.",
+    "status": "CLOSED_NEGATIVE_DIRECT_CONDITIONING_PILOT_DO_NOT_EXPAND"
   }
 }

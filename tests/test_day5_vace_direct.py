@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -49,6 +50,44 @@ class VaceDirectTests(unittest.TestCase):
         self.assertIn("Refusing to reuse output root", source)
         self.assertIn("verify_model_audit", source)
         self.assertIn("extract_and_project", source)
+
+    def test_completed_batch_and_review_are_traceable(self):
+        root = ROOT / "results" / "day5_vace_direct_v1"
+        summary = json.loads((root / "batch_summary_v1.json").read_text())
+        self.assertEqual(summary["method"], "vace_direct_static_proxy")
+        self.assertEqual(summary["case_count"], 4)
+        self.assertEqual(summary["complete_count"], 4)
+        self.assertEqual(summary["technical_failure_count"], 0)
+        self.assertTrue(summary["resident_contract_passed"])
+        self.assertTrue(summary["all_protected_pixels_exact"])
+        self.assertTrue(summary["all_output_hashes_verified_after_transfer"])
+        manifests = sorted(root.glob("gpu*/*/seed_1/run_manifest.json"))
+        self.assertEqual(len(manifests), 4)
+        for path in manifests:
+            manifest = json.loads(path.read_text())
+            self.assertEqual(manifest["method"], "vace_direct_static_proxy")
+            self.assertEqual(manifest["status"], "complete")
+            self.assertFalse(manifest["inference"]["enable_ttm"])
+            self.assertEqual(
+                manifest["inference"]["outside_edit_alpha_max_pixel_difference"], 0
+            )
+            self.assertEqual(
+                manifest["inference"]["pipeline_load_count_at_completion"], 1
+            )
+            self.assertEqual(
+                manifest["environment"]["code_commit"],
+                "a9c72f51d97e504dce7cfdb50c1ce212b683ceb0",
+            )
+            self.assertEqual(
+                manifest["environment"]["worker_file"]["sha256"],
+                "1c41d1dfca356575b8781a9ef8cb5cfdb15d8487035e56d4cffb19635ff14e9c",
+            )
+        for worker in summary["workers"]:
+            path = root / worker["tracked_path"]
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), worker["sha256"])
+        review = json.loads((root / "internal_pilot_review_v1.json").read_text())
+        self.assertEqual(review["aggregate"]["provisional_action_success"], 0)
+        self.assertEqual(review["aggregate"]["provisional_photo_success"], 0)
 
 
 if __name__ == "__main__":

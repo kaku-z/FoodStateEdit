@@ -1,0 +1,11 @@
+{
+  "call": "WanVideoPipeline.__call__",
+  "vace_video": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/motion_signal.png",
+  "vace_video_mask": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/edit_alpha.png",
+  "vace_reference_image": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day4_20260827_common_proxy_v1/ramen_chopsticks_001/first_frame.png",
+  "enable_ttm": false,
+  "vace_scale": 1.0,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "seed": 1
+}

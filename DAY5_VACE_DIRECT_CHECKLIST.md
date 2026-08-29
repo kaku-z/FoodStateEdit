@@ -15,12 +15,12 @@ Date opened: 2026-08-28
 
 ## Execution and gate
 
-- [ ] Generate all four anchors in two resident workers.
-- [ ] Verify one pipeline load per worker and exact outside-mask preservation.
-- [ ] Review action success separately from photo success.
-- [ ] Compare against unified GeoEdit, staged/exclusive, and geometry lock.
-- [ ] Decide whether native VACE is a viable appearance backend.
+- [x] Generate all four anchors in two resident workers.
+- [x] Verify one pipeline load per worker and exact outside-mask preservation.
+- [x] Review action success separately from photo success.
+- [x] Compare against unified GeoEdit, staged/exclusive, and geometry lock.
+- [x] Decide whether native VACE is a viable appearance backend.
 
-Status: `FROZEN_REMOTE_EXECUTION_PENDING`
+Status: `CLOSED_NEGATIVE_DIRECT_CONDITIONING_PILOT`
 
 Frozen config: `configs/vace_direct_static_proxy_v1.json`
