@@ -39,6 +39,12 @@ and passed all 52 original checks, but the upstream trainer then failed before
 model loading because it instantiated an unused audio operator and `librosa`
 is not installed. The full v1 failure is preserved under
 `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`; it produced no
-checkpoint and did not occupy the GPU. The corrected v2 run uses a hash-frozen
-no-audio wrapper and a new output directory rather than installing a package or
-overwriting the failure.
+checkpoint and did not occupy the GPU. The correction series uses a hash-frozen
+no-audio wrapper and new output directories rather than installing a package or
+overwriting a failure.
+
+The first complete wrapper run is also preserved as v2: `LoadAudio.__init__`
+looked up `librosa.load`, so a sentinel with only `ModuleSpec` was insufficient.
+It again failed before model loading and produced no checkpoint. V3 supplies a
+forbidden `load` callable that raises if audio is ever processed; the frozen
+metadata contains no audio key, so the VACE path never calls it.

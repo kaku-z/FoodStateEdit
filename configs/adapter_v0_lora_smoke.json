@@ -16,7 +16,7 @@
     "train_script": "examples/wanvideo/model_training/train.py",
     "train_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
     "no_audio_wrapper": "scripts/run_diffsynth_wan_train_no_audio.py",
-    "no_audio_wrapper_sha256": "fc6e0d24a90aa1891fe0841b05e64b44de4808a58195d7922bf5a9bd951d28ae",
+    "no_audio_wrapper_sha256": "36ca5dbb68cd9364096ff7bee4743bcfb3136d6434ca802f397d1df6d5a50aaa",
     "python": "/host/space0/guo-z/envs/geoedit/bin/python",
     "help_smoke_sha256": "dcbe7da2107fb7416a931a37e27d3ccc3bb6d4accd677ab12a16d20fb31e62eb"
   },
@@ -88,7 +88,7 @@
     "gradient_checkpointing_offload": true,
     "model_cpu_offload": true,
     "optimizer_cpu_offload": false,
-    "output_root": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2",
+    "output_root": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3",
     "overwrite": false
   },
   "resource_gate": {

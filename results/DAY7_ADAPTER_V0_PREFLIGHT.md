@@ -124,9 +124,8 @@ contains only `video`, `vace_video`, and `vace_reference_image` fields.
 The failure directory remains untouched. The v2 fix does not install or
 download `librosa`; a frozen wrapper rejects any dataset containing
 `input_audio`, provides a sentinel only for the upstream unused import, and
-then runs the unchanged, hash-verified trainer. Preflight now verifies both the
-wrapper hash and its offline `--help` path. V2 writes to the new-only output
-`/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2`.
+then runs the unchanged, hash-verified trainer. Preflight verifies both the
+wrapper hash and its offline `--help` path.
 
 The first wrapper preflight was also preserved. It failed only
 `no_audio_wrapper_help` because Transformers calls `find_spec("librosa")` and a
@@ -134,3 +133,20 @@ plain sentinel module has no import specification. Report SHA-256:
 `f16496557337cc491620e305b1049a407031bd8fbccce8c28ec653cb5ab65efb`.
 No output directory was created. The corrected wrapper assigns a standard
 `ModuleSpec` to the sentinel and is frozen under a new source commit.
+
+The next complete v2 launch passed every preflight check, then exposed one more
+constructor-only access: `LoadAudio.__init__` stores `librosa.load` even when no
+audio field is present. It failed before model loading and produced no
+checkpoint.
+
+- V2 failed run manifest SHA-256:
+  `ecd105fc088666eafd58e93b8bd04af8e1e139f3e9f066fcb98e9ee124760a3a`.
+- V2 passing preflight SHA-256:
+  `09d9fb748fdaffb3d40638af918c9f10ba3a172db22488f28287a9fb1e126636`.
+- V2 failure log SHA-256:
+  `23cccd67ddd536f540510fb56c1637b01d7f9dc0da7051379a38c11fd901a28c`.
+
+V3 provides a `librosa.load` callable that immediately raises if invoked. The
+wrapper still rejects `input_audio` in `--data_file_keys`, so this callable can
+only expose a contract violation; it cannot silently process audio. V3 uses the
+new-only output `/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3`.

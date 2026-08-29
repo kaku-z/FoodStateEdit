@@ -44,6 +44,11 @@ def main() -> None:
     sentinel = types.ModuleType("librosa")
     sentinel.__doc__ = "FoodStateEdit no-audio sentinel; no audio operation is permitted."
     sentinel.__spec__ = ModuleSpec("librosa", loader=None)
+
+    def forbidden_audio_load(*_args, **_kwargs):
+        raise RuntimeError("FoodStateEdit no-audio wrapper forbids librosa.load")
+
+    sentinel.load = forbidden_audio_load
     sys.modules["librosa"] = sentinel
     sys.argv = [str(upstream_script), *forwarded]
     runpy.run_path(str(upstream_script), run_name="__main__")

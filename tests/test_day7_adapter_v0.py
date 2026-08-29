@@ -25,7 +25,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertFalse(config["training"]["overwrite"])
         self.assertEqual(
             config["training"]["output_root"],
-            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v2",
+            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3",
         )
         self.assertEqual(config["offline_environment"]["DIFFSYNTH_SKIP_DOWNLOAD"], "True")
         self.assertEqual(config["offline_environment"]["HF_HUB_OFFLINE"], "1")
@@ -45,7 +45,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(config["trainer"]["no_audio_wrapper"], "scripts/run_diffsynth_wan_train_no_audio.py")
         self.assertEqual(
             config["trainer"]["no_audio_wrapper_sha256"],
-            "fc6e0d24a90aa1891fe0841b05e64b44de4808a58195d7922bf5a9bd951d28ae",
+            "36ca5dbb68cd9364096ff7bee4743bcfb3136d6434ca802f397d1df6d5a50aaa",
         )
 
     def test_dataset_builder_is_deterministic_proxy_only_and_fail_closed(self):
@@ -132,6 +132,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn("No-audio wrapper refuses datasets containing input_audio", wrapper)
         self.assertIn('sys.modules["librosa"] = sentinel', wrapper)
         self.assertIn('ModuleSpec("librosa", loader=None)', wrapper)
+        self.assertIn("FoodStateEdit no-audio wrapper forbids librosa.load", wrapper)
         self.assertIn("runpy.run_path", wrapper)
         self.assertNotIn("pip install", wrapper)
 
@@ -145,6 +146,16 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual([check["id"] for check in report["checks"] if not check["passed"]], ["no_audio_wrapper_help"])
         output_absent = next(check for check in report["checks"] if check["id"] == "output_absent")
         self.assertTrue(output_absent["passed"])
+
+    def test_gp39_v2_failure_is_preserved_and_pre_model_load(self):
+        result_root = ROOT / "results" / "day7_adapter_v0_gp39_failure_librosa_load_v2"
+        manifest = json.loads((result_root / "run_manifest.json").read_text(encoding="utf-8"))
+        preflight = json.loads((ROOT / "results" / "day7_adapter_v0_preflight_gp39_v2final.json").read_text(encoding="utf-8"))
+        log = (result_root / "train.log").read_text(encoding="utf-8")
+        self.assertEqual(manifest["status"], "technical_failure")
+        self.assertEqual(manifest["checkpoints"], [])
+        self.assertTrue(preflight["ready"])
+        self.assertIn("module 'librosa' has no attribute 'load'", log)
 
 
 if __name__ == "__main__":
