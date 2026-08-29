@@ -78,6 +78,23 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn('"--model_paths"', launcher)
         self.assertNotIn("modelscope download", launcher.lower())
 
+    def test_initial_remote_preflight_is_blocked_only_by_gpu(self):
+        report_path = ROOT / "results" / "day7_adapter_v0_preflight_initial_v2.json"
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        self.assertFalse(report["ready"])
+        self.assertIsNone(report["selected_gpu"])
+        self.assertEqual(
+            report["dataset_manifest_sha256"],
+            "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
+        )
+        failed = [check["id"] for check in report["checks"] if not check["passed"]]
+        self.assertEqual(failed, ["gpu_gate"])
+        output_absent = next(check for check in report["checks"] if check["id"] == "output_absent")
+        self.assertTrue(output_absent["passed"])
+        gpu_gate = next(check for check in report["checks"] if check["id"] == "gpu_gate")
+        self.assertEqual(gpu_gate["actual"]["safe_gpu_indices"], [])
+        self.assertEqual({process["owner"] for process in gpu_gate["actual"]["processes"]}, {"chen-q"})
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -53,6 +53,8 @@ text-only, fully automatic, universally general, or universally photorealistic.
   exact-protection audit, and claim limits;
 - `results/DAY7_ADAPTER_V0_PREFLIGHT.md`: frozen trainer, dataset hashes,
   resource gate, and the boundary between smoke evidence and generalization;
+- `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
+  preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up

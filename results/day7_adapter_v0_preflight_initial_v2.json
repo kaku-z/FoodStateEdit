@@ -1,0 +1,549 @@
+{
+  "schema_version": "foodstateedit.adapter_preflight.v0",
+  "ready": false,
+  "selected_gpu": null,
+  "config_sha256": "1ce8d8965a571fd7d30733c0dfd58e0ee0d3c04f71c4b357272cf89f42d89023",
+  "dataset_manifest_sha256": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
+  "checks": [
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "infrastructure_smoke_not_quality_evidence",
+      "criterion": "The two-sample run must be claim-limited to infrastructure smoke evidence."
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "trainer_script",
+      "passed": true,
+      "actual": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py",
+      "criterion": "Frozen training entry point exists."
+    },
+    {
+      "id": "trainer_script_sha256",
+      "passed": true,
+      "actual": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+      "criterion": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41"
+    },
+    {
+      "id": "trainer_commit_marker",
+      "passed": true,
+      "actual": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+      "criterion": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191"
+    },
+    {
+      "id": "trainer_archive_marker",
+      "passed": true,
+      "actual": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228",
+      "criterion": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228"
+    },
+    {
+      "id": "model_audit",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_recorded_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full SHA-256 is present in the frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_recorded_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full SHA-256 is present in the frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_recorded_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full SHA-256 is present in the frozen audit."
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": 6623,
+      "criterion": "6623"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "criterion": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": 4548313,
+      "criterion": "4548313"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "criterion": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": 16837417,
+      "criterion": "16837417"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "criterion": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": 61728,
+      "criterion": "61728"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "criterion": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05"
+    },
+    {
+      "id": "dataset_manifest_hash",
+      "passed": true,
+      "actual": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
+      "criterion": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae"
+    },
+    {
+      "id": "dataset_builder_hash",
+      "passed": true,
+      "actual": {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_adapter_v0_29bf716/scripts/build_adapter_smoke_dataset.py",
+        "sha256_lf_normalized": "ee4da2f5128b37727f138ba28f25d006c5a9660c6d29283a5c8ace59fe94a095"
+      },
+      "criterion": "ee4da2f5128b37727f138ba28f25d006c5a9660c6d29283a5c8ace59fe94a095"
+    },
+    {
+      "id": "dataset_status",
+      "passed": true,
+      "actual": "infrastructure_smoke_not_quality_evidence",
+      "criterion": "infrastructure_smoke_not_quality_evidence"
+    },
+    {
+      "id": "dataset_sample_count",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "metadata_hash",
+      "passed": true,
+      "actual": "9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652",
+      "criterion": "9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652"
+    },
+    {
+      "id": "metadata_rows",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "manifest_samples",
+      "passed": true,
+      "actual": 2,
+      "criterion": "Exactly 2 samples."
+    },
+    {
+      "id": "dataset_path:0:video",
+      "passed": true,
+      "actual": "video/ramen_chopsticks_001.mp4",
+      "criterion": "video/ramen_chopsticks_001.mp4"
+    },
+    {
+      "id": "dataset_size:0:video",
+      "passed": true,
+      "actual": 299082,
+      "criterion": "299082"
+    },
+    {
+      "id": "dataset_hash:0:video",
+      "passed": true,
+      "actual": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346",
+      "criterion": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+    },
+    {
+      "id": "dataset_path:0:vace_video",
+      "passed": true,
+      "actual": "vace_video/ramen_chopsticks_001.mp4",
+      "criterion": "vace_video/ramen_chopsticks_001.mp4"
+    },
+    {
+      "id": "dataset_size:0:vace_video",
+      "passed": true,
+      "actual": 299082,
+      "criterion": "299082"
+    },
+    {
+      "id": "dataset_hash:0:vace_video",
+      "passed": true,
+      "actual": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346",
+      "criterion": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+    },
+    {
+      "id": "dataset_path:0:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/ramen_chopsticks_001.png",
+      "criterion": "vace_reference_image/ramen_chopsticks_001.png"
+    },
+    {
+      "id": "dataset_size:0:vace_reference_image",
+      "passed": true,
+      "actual": 667830,
+      "criterion": "667830"
+    },
+    {
+      "id": "dataset_hash:0:vace_reference_image",
+      "passed": true,
+      "actual": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011",
+      "criterion": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011"
+    },
+    {
+      "id": "identity_target:0",
+      "passed": true,
+      "actual": {
+        "video": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346",
+        "vace_video": "4fbc2d4e91fa6dcbfe38e25786dd321b6f098afb9f17fc704c62e38efd2c1346"
+      },
+      "criterion": "Infrastructure-smoke target and control hashes are identical."
+    },
+    {
+      "id": "dataset_path:1:video",
+      "passed": true,
+      "actual": "video/pasta_fork_001.mp4",
+      "criterion": "video/pasta_fork_001.mp4"
+    },
+    {
+      "id": "dataset_size:1:video",
+      "passed": true,
+      "actual": 225740,
+      "criterion": "225740"
+    },
+    {
+      "id": "dataset_hash:1:video",
+      "passed": true,
+      "actual": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1",
+      "criterion": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+    },
+    {
+      "id": "dataset_path:1:vace_video",
+      "passed": true,
+      "actual": "vace_video/pasta_fork_001.mp4",
+      "criterion": "vace_video/pasta_fork_001.mp4"
+    },
+    {
+      "id": "dataset_size:1:vace_video",
+      "passed": true,
+      "actual": 225740,
+      "criterion": "225740"
+    },
+    {
+      "id": "dataset_hash:1:vace_video",
+      "passed": true,
+      "actual": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1",
+      "criterion": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+    },
+    {
+      "id": "dataset_path:1:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/pasta_fork_001.png",
+      "criterion": "vace_reference_image/pasta_fork_001.png"
+    },
+    {
+      "id": "dataset_size:1:vace_reference_image",
+      "passed": true,
+      "actual": 670369,
+      "criterion": "670369"
+    },
+    {
+      "id": "dataset_hash:1:vace_reference_image",
+      "passed": true,
+      "actual": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a",
+      "criterion": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a"
+    },
+    {
+      "id": "identity_target:1",
+      "passed": true,
+      "actual": {
+        "video": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1",
+        "vace_video": "16184d6b998c756c5e2a9d7687cbbaa553cb205721c6d9171e3c9cbcc4b25ef1"
+      },
+      "criterion": "Infrastructure-smoke target and control hashes are identical."
+    },
+    {
+      "id": "python_modules",
+      "passed": true,
+      "actual": {
+        "torch": true,
+        "torchvision": true,
+        "accelerate": true,
+        "peft": true,
+        "transformers": true,
+        "safetensors": true,
+        "pandas": true,
+        "PIL": true,
+        "imageio": true,
+        "einops": true,
+        "ftfy": true
+      },
+      "criterion": "All required modules importable."
+    },
+    {
+      "id": "trainer_help",
+      "passed": true,
+      "actual": "",
+      "criterion": "Frozen trainer imports and --help exits 0 under offline environment."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 209950,
+      "criterion": ">=80000 MiB available"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": false,
+      "actual": {
+        "requested": null,
+        "safe_gpu_indices": [],
+        "gpus": [
+          {
+            "index": 0,
+            "uuid": "GPU-9e2ec4a5-21aa-825b-b84b-d78f8dd3e89f",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44540,
+            "memory_free_mib": 4000,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 0,
+                "pid": 2217189,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44528
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "uuid": "GPU-191763ca-94ee-8906-9485-00f52f52c32d",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44620,
+            "memory_free_mib": 3920,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 1,
+                "pid": 2217190,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44608
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "uuid": "GPU-141f48c0-65f6-6eef-8977-0e54dca9b56c",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44568,
+            "memory_free_mib": 3972,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 2,
+                "pid": 2217191,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44556
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "uuid": "GPU-afd14fbe-7a3d-a5c1-ad92-777b727e5246",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44548,
+            "memory_free_mib": 3992,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 3,
+                "pid": 2217192,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44536
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "uuid": "GPU-a2db3d45-9099-3005-38a3-f4fe71404ee1",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44566,
+            "memory_free_mib": 3974,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 4,
+                "pid": 2217193,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44554
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "uuid": "GPU-bf46ee00-2f66-ce42-39c7-b41a2b807d94",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44548,
+            "memory_free_mib": 3992,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 5,
+                "pid": 2217194,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44536
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "uuid": "GPU-2e8f30c9-9cad-ee0d-069d-0ec188432bd3",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44636,
+            "memory_free_mib": 3904,
+            "utilization_percent": 100,
+            "compute_processes": [
+              {
+                "gpu_index": 6,
+                "pid": 2217195,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44624
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "uuid": "GPU-62a5b757-d0e6-161a-f635-257eec845e4e",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 44526,
+            "memory_free_mib": 4014,
+            "utilization_percent": 99,
+            "compute_processes": [
+              {
+                "gpu_index": 7,
+                "pid": 2217196,
+                "owner": "chen-q",
+                "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+                "used_memory_mib": 44514
+              }
+            ]
+          }
+        ],
+        "processes": [
+          {
+            "gpu_index": 0,
+            "pid": 2217189,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44528
+          },
+          {
+            "gpu_index": 1,
+            "pid": 2217190,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44608
+          },
+          {
+            "gpu_index": 2,
+            "pid": 2217191,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44556
+          },
+          {
+            "gpu_index": 3,
+            "pid": 2217192,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44536
+          },
+          {
+            "gpu_index": 4,
+            "pid": 2217193,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44554
+          },
+          {
+            "gpu_index": 5,
+            "pid": 2217194,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44536
+          },
+          {
+            "gpu_index": 6,
+            "pid": 2217195,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44624
+          },
+          {
+            "gpu_index": 7,
+            "pid": 2217196,
+            "owner": "chen-q",
+            "process_name": "/host/space0/chen-q/HybridHOT/.venv/bin/python3",
+            "used_memory_mib": 44514
+          }
+        ]
+      },
+      "criterion": "At least one explicitly safe A6000 with no compute process."
+    }
+  ]
+}

@@ -19,12 +19,12 @@
 ## Execution gate
 
 - [x] Materialize and hash the local two-case smoke dataset.
-- [ ] Transfer it to a new remote directory and verify every hash.
-- [ ] Require one A6000 with at least 48,000 MiB free, <=5% utilization, and no compute process.
+- [x] Transfer it to a new remote directory and verify every hash.
+- [x] Enforce one A6000 with at least 48,000 MiB free, <=5% utilization, and no compute process.
 - [ ] Run exactly one epoch over two samples with rank-8 high-noise VACE LoRA.
 - [ ] Preserve command, log, preflight, failure state, and checkpoint hashes.
 - [ ] Load the resulting LoRA in an offline validation smoke before any visual comparison.
 
 ## Current resource state
 
-At the initial 2026-08-29 preflight, all eight A6000 GPUs were occupied by another user's eight-GPU training job at approximately 44.5 GiB per card and near 100% utilization. No training was started.
+At the initial 2026-08-29 preflight, 51/52 checks passed. All eight A6000 GPUs were occupied by `chen-q` at approximately 44.5 GiB per card and 99--100% utilization, so `gpu_gate` was the sole failed check. No training was started and the frozen output directory remains absent.

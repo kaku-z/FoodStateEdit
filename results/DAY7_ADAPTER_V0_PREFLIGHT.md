@@ -71,6 +71,24 @@ job at roughly 44.5 GiB per card and near 100% utilization. No adapter training
 was launched. A fresh remote preflight is required after the exact dataset and
 code snapshot are transferred.
 
+## Remote preflight outcome
+
+The corrected snapshot was transferred and checked on `gp40`:
+
+- FoodStateEdit commit: `29bf716`.
+- Code archive SHA-256:
+  `e347e589c8f89f144fbd3303762c38add4938cee895e348dfe788448211ddfbf`.
+- Config SHA-256:
+  `1ce8d8965a571fd7d30733c0dfd58e0ee0d3c04f71c4b357272cf89f42d89023`.
+- Preflight report SHA-256:
+  `1eb8ef0751ef668910e9cc33218a3121328afbff727b4a40b2db91d15194bf74`.
+- Result: 51 of 52 checks passed. The sole failure was `gpu_gate`.
+- Available host memory was 209,950 MiB. All eight A6000s had only 3,904--4,014
+  MiB free and 99--100% utilization. Each card was owned by one process from
+  user `chen-q` under `HybridHOT`.
+- The training output path remained absent. No process was interrupted and no
+  checkpoint was produced.
+
 ## Generalization gate after smoke
 
 A successful two-step run only opens the data pipeline. The first publishable
