@@ -32,16 +32,22 @@ The dataset contains two 21-frame plumbing-only samples:
 | `pasta_fork_001_proxy_identity_smoke` | strand-contact/twirl-and-lift | fork | proxy target equals VACE control |
 
 - Dataset manifest SHA-256:
-  `d250726a2d6a752dc934b5d7492f58cd9387eff7ecf9c6f97d32dd3cde8dc9d9`.
+  `5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae`.
 - Metadata SHA-256:
   `9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652`.
 - Every media file records a byte size and SHA-256 in the manifest.
+- Builder provenance uses SHA-256 after CRLF-to-LF normalization so the same
+  committed source is verifiable on Windows and Linux.
 - Preflight requires metadata paths to agree with the manifest, validates every
   media size and hash, and confirms that each identity-smoke target/control pair
   is byte-identical.
 - A failed initial materialization caused by selecting the wrong manifest root
   is preserved in the ignored local artifact directory
   `artifacts/day7_adapter_v0_smoke_dataset_failed_missing_manifest_20260829`.
+- The first transferred freeze (`7fe820c`) is also retained locally and remotely:
+  archive extraction converted source line endings, exposing that its raw
+  builder hash was not cross-platform. It was not extracted as a runtime and no
+  training was started. The corrected dataset uses a new `_v2` directory.
 
 ## Frozen run and safety gate
 

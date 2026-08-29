@@ -16,7 +16,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(config["dataset"]["sample_count"], 2)
         self.assertEqual(
             config["dataset"]["manifest_sha256"],
-            "d250726a2d6a752dc934b5d7492f58cd9387eff7ecf9c6f97d32dd3cde8dc9d9",
+            "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
         )
         self.assertEqual(config["training"]["stage"], "high_noise")
         self.assertEqual(config["training"]["lora_base_model"], "vace")
@@ -46,6 +46,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertNotIn("diffusers", lowered)
         self.assertNotIn("imagegen", lowered)
         self.assertIn("deterministic_proxy_identity_plumbing_only", source)
+        self.assertIn("sha256_lf_normalized", source)
         self.assertIn("Refusing to reuse output root", source)
         tree = ast.parse(source)
         constants = {
@@ -66,6 +67,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn("nvidia-smi", preflight)
         self.assertIn("trainer_help", preflight)
         self.assertIn("dataset_manifest_hash", preflight)
+        self.assertIn("dataset_builder_hash", preflight)
         self.assertIn("dataset_hash:", preflight)
         self.assertIn("identity_target:", preflight)
         self.assertIn("Refusing to reuse output root", launcher)

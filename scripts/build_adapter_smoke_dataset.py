@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 SCHEMA_VERSION = "foodstateedit.adapter_dataset.v1"
-DATASET_ID = "day7_adapter_v0_smoke_dataset"
+DATASET_ID = "day7_adapter_v0_smoke_dataset_v2"
 SOURCE_METHOD = "vace_direct_dynamic_multikey"
 TARGET_POLICY = "deterministic_proxy_identity_plumbing_only"
 CASES = {
@@ -48,6 +48,11 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def sha256_text_lf(path: Path) -> str:
+    """Hash source text after CRLF normalization for cross-platform provenance."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def file_record(root: Path, path: Path) -> dict[str, object]:
@@ -106,7 +111,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-root",
         type=Path,
-        default=root / "artifacts" / "day7_adapter_v0_smoke_dataset",
+        default=root / "artifacts" / "day7_adapter_v0_smoke_dataset_v2",
     )
     return parser.parse_args()
 
@@ -237,7 +242,8 @@ def main() -> None:
         "samples": samples,
         "provenance": {
             "builder": builder_path.name,
-            "builder_sha256": sha256_file(builder_path),
+            "builder_sha256": sha256_text_lf(builder_path),
+            "builder_hash_policy": "sha256_lf_normalized",
             "source_method": SOURCE_METHOD,
             "created_at": datetime.now(timezone.utc).isoformat(),
         },

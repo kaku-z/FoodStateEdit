@@ -22,6 +22,10 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def sha256_text_lf(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
 def add_check(checks: list[dict[str, object]], check_id: str, passed: bool, actual: object, criterion: str) -> None:
     checks.append({"id": check_id, "passed": passed, "actual": actual, "criterion": criterion})
 
@@ -189,6 +193,17 @@ def main() -> int:
         dataset_manifest_hash == config["dataset"]["manifest_sha256"],
         dataset_manifest_hash,
         config["dataset"]["manifest_sha256"],
+    )
+    provenance = dataset_manifest.get("provenance", {})
+    dataset_builder = Path(__file__).resolve().with_name(str(provenance.get("builder", "")))
+    builder_hash = sha256_text_lf(dataset_builder) if dataset_builder.is_file() else None
+    add_check(
+        checks,
+        "dataset_builder_hash",
+        provenance.get("builder_hash_policy") == "sha256_lf_normalized"
+        and builder_hash == provenance.get("builder_sha256"),
+        {"path": str(dataset_builder), "sha256_lf_normalized": builder_hash},
+        str(provenance.get("builder_sha256")),
     )
     add_check(
         checks,

@@ -107,10 +107,11 @@
     "provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["builder", "builder_sha256", "source_method", "created_at"],
+      "required": ["builder", "builder_sha256", "builder_hash_policy", "source_method", "created_at"],
       "properties": {
         "builder": {"type": "string"},
         "builder_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "builder_hash_policy": {"const": "sha256_lf_normalized"},
         "source_method": {"type": "string"},
         "created_at": {"type": "string", "format": "date-time"}
       }

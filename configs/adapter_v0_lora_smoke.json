@@ -52,12 +52,12 @@
     ]
   },
   "dataset": {
-    "local_root": "artifacts/day7_adapter_v0_smoke_dataset",
-    "remote_root": "/tmp/foodstateedit_day7_adapter_v0_smoke_dataset",
+    "local_root": "artifacts/day7_adapter_v0_smoke_dataset_v2",
+    "remote_root": "/tmp/foodstateedit_day7_adapter_v0_smoke_dataset_v2",
     "metadata": "metadata.csv",
     "metadata_sha256": "9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652",
     "manifest": "dataset_manifest.json",
-    "manifest_sha256": "d250726a2d6a752dc934b5d7492f58cd9387eff7ecf9c6f97d32dd3cde8dc9d9",
+    "manifest_sha256": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
     "target_policy": "deterministic_proxy_identity_plumbing_only",
     "sample_count": 2,
     "frames": 21,
