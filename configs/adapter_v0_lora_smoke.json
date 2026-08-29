@@ -1,0 +1,118 @@
+{
+  "schema_version": "foodstateedit.adapter_lora_smoke.v0",
+  "freeze_date": "2026-08-29",
+  "scientific_status": "infrastructure_smoke_not_quality_evidence",
+  "claim_limit": "This two-sample identity-target run may validate data loading, gradients, checkpoint saving, and offline model reuse only. It is not evidence of action generalization or photo realism.",
+  "method": "foodstateedit_vace_lora_high_noise_smoke",
+  "families": ["strand", "strand_contact"],
+  "anchors": ["ramen_chopsticks_001", "pasta_fork_001"],
+  "trainer": {
+    "name": "DiffSynth-Studio",
+    "source_url": "https://github.com/modelscope/DiffSynth-Studio",
+    "commit": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+    "selection_reason": "Newest inspected official commit before Wan Animate introduced torch.nn.attention.flex_attention; retains Wan2.2-VACE-Fun-A14B VACE-LoRA training and imports under the existing torch 2.4 environment.",
+    "source_archive_sha256": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228",
+    "remote_root": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle",
+    "train_script": "examples/wanvideo/model_training/train.py",
+    "train_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "help_smoke_sha256": "dcbe7da2107fb7416a931a37e27d3ccc3bb6d4accd677ab12a16d20fb31e62eb"
+  },
+  "model": {
+    "name": "PAI/Wan2.2-VACE-Fun-A14B",
+    "root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+    "files": [
+      {
+        "path": "high_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007",
+        "validation": "recorded_full_hash_and_current_size"
+      },
+      {
+        "path": "models_t5_umt5-xxl-enc-bf16.pth",
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d",
+        "validation": "recorded_full_hash_and_current_size"
+      },
+      {
+        "path": "Wan2.1_VAE.pth",
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+        "validation": "recorded_full_hash_and_current_size"
+      }
+    ],
+    "tokenizer_root": "google/umt5-xxl",
+    "tokenizer_files": [
+      {"path": "google/umt5-xxl/special_tokens_map.json", "size_bytes": 6623, "sha256": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d"},
+      {"path": "google/umt5-xxl/spiece.model", "size_bytes": 4548313, "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"},
+      {"path": "google/umt5-xxl/tokenizer.json", "size_bytes": 16837417, "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"},
+      {"path": "google/umt5-xxl/tokenizer_config.json", "size_bytes": 61728, "sha256": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05"}
+    ]
+  },
+  "dataset": {
+    "local_root": "artifacts/day7_adapter_v0_smoke_dataset",
+    "remote_root": "/tmp/foodstateedit_day7_adapter_v0_smoke_dataset",
+    "metadata": "metadata.csv",
+    "metadata_sha256": "9e4c4fb663a01707cf91aa5bdb24c0b2b392e802f47dea37d73958df257c7652",
+    "manifest": "dataset_manifest.json",
+    "manifest_sha256": "d250726a2d6a752dc934b5d7492f58cd9387eff7ecf9c6f97d32dd3cde8dc9d9",
+    "target_policy": "deterministic_proxy_identity_plumbing_only",
+    "sample_count": 2,
+    "frames": 21,
+    "formal_training_minimum_not_met": true
+  },
+  "training": {
+    "stage": "high_noise",
+    "question": "Can the existing offline Wan2.2 VACE branch accept FoodStateEdit paired controls, backpropagate through a VACE LoRA, and save a loadable checkpoint?",
+    "model_paths": [
+      "high_noise_model/diffusion_pytorch_model.safetensors",
+      "models_t5_umt5-xxl-enc-bf16.pth",
+      "Wan2.1_VAE.pth"
+    ],
+    "lora_base_model": "vace",
+    "lora_target_modules": "q,k,v,o,ffn.0,ffn.2",
+    "lora_rank": 8,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "epochs": 1,
+    "dataset_repeat": 1,
+    "save_steps": 1,
+    "num_frames": 21,
+    "max_pixels": 153600,
+    "min_timestep_boundary": 0.0,
+    "max_timestep_boundary": 0.358,
+    "gradient_checkpointing_offload": true,
+    "model_cpu_offload": true,
+    "optimizer_cpu_offload": false,
+    "output_root": "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v1",
+    "overwrite": false
+  },
+  "resource_gate": {
+    "gpu_count": 1,
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "require_no_compute_process": true,
+    "min_available_system_memory_mib": 80000
+  },
+  "offline_environment": {
+    "DIFFSYNTH_SKIP_DOWNLOAD": "True",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HOME": "/host/space0/guo-z/cache/huggingface"
+  },
+  "required_modules": [
+    "torch",
+    "torchvision",
+    "accelerate",
+    "peft",
+    "transformers",
+    "safetensors",
+    "pandas",
+    "PIL",
+    "imageio",
+    "einops",
+    "ftfy"
+  ]
+}

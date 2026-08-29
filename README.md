@@ -43,6 +43,7 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `DAY5_VACE_DIRECT_CHECKLIST.md`: native VACE static-proxy baseline gate;
 - `DAY5_MATERIAL_RENDER_CHECKLIST.md`: topology-preserving 2.5D material-render gate;
 - `DAY6_DYNAMIC_MULTIKEY_CHECKLIST.md`: deterministic action-phase VACE gate;
+- `DAY7_ADAPTER_V0_CHECKLIST.md`: claim-limited VACE-LoRA infrastructure-smoke gate;
 - `results/DAY5_METHOD_GRID_CAPTION.md`: hash-traceable qualitative comparison caption;
 - `results/DAY6_DYNAMIC_MULTIKEY_PREFLIGHT.md`: pre-output schedule, hashes, and
   deterministic-control invariants;
@@ -50,6 +51,8 @@ text-only, fully automatic, universally general, or universally photorealistic.
   ramen support-mismatch diagnosis;
 - `results/DAY6_MOTION_UNION_PROJECTION_DIAGNOSTIC.md`: post-hoc support test,
   exact-protection audit, and claim limits;
+- `results/DAY7_ADAPTER_V0_PREFLIGHT.md`: frozen trainer, dataset hashes,
+  resource gate, and the boundary between smoke evidence and generalization;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up
