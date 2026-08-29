@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -137,6 +138,50 @@ class DynamicMultikeyTests(unittest.TestCase):
         self.assertNotIn("imagegen", source)
         self.assertIn("no_image_generation", source)
         self.assertIn("final-hold controls are exact copies", source)
+
+    def test_completed_batch_and_review_are_traceable(self):
+        root = ROOT / "results" / "day6_vace_dynamic_multikey_v1"
+        summary = json.loads((root / "batch_summary_v1.json").read_text())
+        self.assertEqual(summary["method"], "vace_direct_dynamic_multikey")
+        self.assertEqual(summary["selected_frame_index"], 18)
+        self.assertEqual(summary["case_count"], 4)
+        self.assertEqual(summary["complete_count"], 4)
+        self.assertEqual(summary["technical_failure_count"], 0)
+        self.assertTrue(summary["resident_contract_passed"])
+        self.assertTrue(summary["all_protected_pixels_exact"])
+        self.assertTrue(summary["all_output_hashes_verified_after_transfer"])
+        manifests = sorted(root.glob("gpu*/*/seed_1/run_manifest.json"))
+        self.assertEqual(len(manifests), 4)
+        for path in manifests:
+            manifest = json.loads(path.read_text())
+            self.assertEqual(manifest["method"], "vace_direct_dynamic_multikey")
+            self.assertEqual(manifest["status"], "complete")
+            self.assertFalse(manifest["inference"]["enable_ttm"])
+            self.assertEqual(manifest["inference"]["selected_frame_index"], 18)
+            self.assertEqual(
+                manifest["inference"]["outside_edit_alpha_max_pixel_difference"],
+                0,
+            )
+            self.assertEqual(
+                manifest["inference"]["pipeline_load_count_at_completion"], 1
+            )
+            self.assertEqual(
+                manifest["environment"]["code_commit"],
+                "7f11962f039136c0bf0e596265fc8b4f768fab26",
+            )
+            self.assertEqual(
+                manifest["environment"]["worker_file"]["sha256"],
+                "80b9d4b29a6fd7542a44d1fe5d9defba1cab9c6eb64218028a48d0345d0b1b30",
+            )
+        for worker in summary["workers"]:
+            path = root / worker["tracked_path"]
+            self.assertEqual(
+                hashlib.sha256(path.read_bytes()).hexdigest(), worker["sha256"]
+            )
+        review = json.loads((root / "internal_pilot_review_v1.json").read_text())
+        self.assertEqual(review["aggregate"]["provisional_action_success"], 0)
+        self.assertEqual(review["aggregate"]["provisional_photo_success"], 0)
+        self.assertEqual(review["aggregate"]["raw_topology_signal_count"], 1)
 
 
 if __name__ == "__main__":

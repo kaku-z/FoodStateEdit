@@ -1,0 +1,12 @@
+{
+  "call": "WanVideoPipeline.__call__",
+  "vace_video": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/dynamic_control.mp4",
+  "vace_video_mask": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/dynamic_mask.mp4",
+  "vace_reference_image": "/tmp/foodstateedit_day6_dynamic_multikey_proxy_v1/fried_rice_spatula_001/first_frame.png",
+  "enable_ttm": false,
+  "vace_scale": 1.0,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "seed": 1,
+  "selected_frame_index": 18
+}

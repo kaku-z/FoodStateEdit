@@ -17,12 +17,12 @@ Date opened: 2026-08-29
 
 ## Execution and gate
 
-- [ ] Run the four-anchor pilot only when two GPUs have safe free capacity.
-- [ ] Verify one pipeline load per worker, artifact hashes, and exact protection.
-- [ ] Review action success and photo success separately.
-- [ ] Compare directly with static-proxy VACE-direct v1.
-- [ ] Decide whether dynamic action phases justify appearance-backend development.
+- [x] Run the four-anchor pilot only when two GPUs have safe free capacity.
+- [x] Verify one pipeline load per worker, artifact hashes, and exact protection.
+- [x] Review action success and photo success separately.
+- [x] Compare directly with static-proxy VACE-direct v1.
+- [x] Decide whether dynamic action phases justify appearance-backend development.
 
-Status: `PRE_OUTPUT_FROZEN`
+Status: `CLOSED_PROJECTED_NEGATIVE_WITH_RAW_TOPOLOGY_SIGNAL`
 
 Frozen config: `configs/vace_direct_dynamic_multikey_v1.json`

@@ -1,0 +1,48 @@
+{
+  "schema_version": "foodstateedit.internal_pilot_review.v1",
+  "review_date": "2026-08-29",
+  "timezone": "Asia/Tokyo",
+  "review_type": "single_internal_nonblind_diagnostic",
+  "method": "vace_direct_dynamic_multikey",
+  "reviewed_output": "fixed_frame_18_with_exact_final_edit_alpha_projection",
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "action": "fail",
+      "photo": "fail",
+      "partial_signal": "solid_single_spoon_identity_and_stable_motion",
+      "diagnostic": "The dynamic input materializes one substantially more solid spoon than static v1, but the bowl remains on the soup surface and does not visibly contain a lifted liquid payload."
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "action": "fail",
+      "photo": "fail",
+      "partial_signal": "persistent_metal_handle_and_early_blade",
+      "diagnostic": "The utensil persists through the trajectory, but the blade and rice payload merge into a glossy blurred patch without distinct supported grains."
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "action": "fail",
+      "photo": "fail",
+      "partial_signal": "raw_frame_has_two_chopsticks_and_one_lifted_connected_noodle",
+      "diagnostic": "The unprojected fixed frame recovers two separated chopsticks and a lifted continuous noodle, but the generated sticks drift outside the frozen final edit support and are mostly removed by exact source projection. The reported projected output therefore fails the two-chopstick and grip constraints."
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "action": "fail",
+      "photo": "fail",
+      "partial_signal": "solid_single_metal_utensil_handle",
+      "diagnostic": "One solid metal utensil appears, but its head is spoon-like/malformed; four readable tines and spaghetti wrapped around them are absent."
+    }
+  ],
+  "aggregate": {
+    "case_count": 4,
+    "technical_complete": 4,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_source_protection_success": 4,
+    "partial_rigid_identity_improvement_vs_static_v1": 4,
+    "raw_topology_signal_count": 1
+  },
+  "decision": "Do not expand this projected v1 to more seeds or the 60-case set. Dynamic phases improve utensil persistence and recover a promising raw ramen topology, but the final-support/projection mismatch and payload rendering remain unresolved. Run only a frozen support-aware diagnostic next."
+}

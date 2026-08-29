@@ -42,7 +42,12 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `DAY5_CHECKLIST.md`: geometry-locked harmonization contract and gate;
 - `DAY5_VACE_DIRECT_CHECKLIST.md`: native VACE static-proxy baseline gate;
 - `DAY5_MATERIAL_RENDER_CHECKLIST.md`: topology-preserving 2.5D material-render gate;
+- `DAY6_DYNAMIC_MULTIKEY_CHECKLIST.md`: deterministic action-phase VACE gate;
 - `results/DAY5_METHOD_GRID_CAPTION.md`: hash-traceable qualitative comparison caption;
+- `results/DAY6_DYNAMIC_MULTIKEY_PREFLIGHT.md`: pre-output schedule, hashes, and
+  deterministic-control invariants;
+- `results/DAY6_VACE_DYNAMIC_MULTIKEY_REVIEW.md`: projected outcome and the raw
+  ramen support-mismatch diagnosis;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up

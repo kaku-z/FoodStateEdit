@@ -1,0 +1,76 @@
+{
+  "schema_version": "foodstateedit.vace_dynamic_multikey_batch_summary.v1",
+  "method": "vace_direct_dynamic_multikey",
+  "seed": 1,
+  "selected_frame_index": 18,
+  "code_commit": "7f11962f039136c0bf0e596265fc8b4f768fab26",
+  "worker_sha256": "80b9d4b29a6fd7542a44d1fe5d9defba1cab9c6eb64218028a48d0345d0b1b30",
+  "config_sha256": "bf230d6addd24040eae44fabd495630681bdab5269c52c7a978d74cd0a0c97f2",
+  "control_summary_sha256": "95993c77a82188f6b22a65b38e5a6a480a328952b2f0626af2963909dea15c60",
+  "case_count": 4,
+  "complete_count": 4,
+  "technical_failure_count": 0,
+  "worker_count": 2,
+  "resident_contract_passed": true,
+  "all_protected_pixels_exact": true,
+  "all_output_hashes_verified_after_transfer": true,
+  "workers": [
+    {
+      "gpu": "0",
+      "tracked_path": "gpu0/worker_summary.json",
+      "sha256": "95fb34573cd1a70dee08267746d4148b0c2eb4de268298ad166c5723e5d64b8c",
+      "pipeline_load_count": 1,
+      "resident_contract_passed": true
+    },
+    {
+      "gpu": "1",
+      "tracked_path": "gpu1/worker_summary.json",
+      "sha256": "57d14009b016af9ad9d97f2f669dd6e0c60f67e38b06318da2b1e5ffce0f9664",
+      "pipeline_load_count": 1,
+      "resident_contract_passed": true
+    }
+  ],
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "gpu": "0",
+      "wall_time_seconds": 380.38,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "a564de52b1c0ae366dbddd1fff2b29408ea7ad3adc9493d2e157ed6709a63f81",
+      "result_video_sha256": "e97bc93e32dc2deb8111a46ee8f24e3e8c6589c27d80b62b68f1929e528f8ce6",
+      "raw_selected_frame_sha256": "6e47f387bc9549625fb4f756cf5fca0d6793bcc2e3c2996a501aff0d421e4428",
+      "edited_2d_sha256": "58692258dbb5b691d17ff498287a88b299c60b375b74baeef257bff7f857f085"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "gpu": "0",
+      "wall_time_seconds": 264.524,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "988bd58160f8d7330aee2d4b74c90ce53503f2539d5de0b9a3d6147bbeabad31",
+      "result_video_sha256": "d4576b739cc0742f210144187d1773a865deb58306e37eec53a549e517100d45",
+      "raw_selected_frame_sha256": "9643579025e48c1ae54d93ee9cb52c8fd2ca03e7e21f3695d0e66ebe5912411b",
+      "edited_2d_sha256": "55550cac1e3ddef3000f49043b00bc9f378708b06f4224ec02f91c5d763eade5"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "gpu": "1",
+      "wall_time_seconds": 386.479,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "1c512312a2008489a43870dd400c9cc7d973975033092a576e8d29f57945f3e6",
+      "result_video_sha256": "cc75d24c287b8fedb2675407128e106b494ad12312b347a84c226f5219d9a56d",
+      "raw_selected_frame_sha256": "9ea3e1c0938b0bf1f19376ff3a6fa319dd201200512228f21f5468a22698f0a8",
+      "edited_2d_sha256": "a012a0387ee9bfc4fe447da7794b4d9c2782d1ed0fcfb690ef9f63481427a49c"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "gpu": "1",
+      "wall_time_seconds": 251.695,
+      "outside_edit_alpha_max_pixel_difference": 0,
+      "run_manifest_sha256": "97b5c2fbd48b8edf318c524ab77c60192f2805d3d64c082fac6277cab1f86dc7",
+      "result_video_sha256": "f9fcecf25e9fed9eddaf6e7b38eaca2e7be9f0dc2f9cea74211680fbf7520cda",
+      "raw_selected_frame_sha256": "be99b543bed78111f5c28994f65e250aee2a5f90d29517b0c670549366628afe",
+      "edited_2d_sha256": "8d9fd19d034e51e6afba8a66f7a5bc7d2a73752c7810111504228c1cb1950f63"
+    }
+  ],
+  "status": "CLOSED_PROJECTED_NEGATIVE_WITH_RAW_TOPOLOGY_SIGNAL"
+}

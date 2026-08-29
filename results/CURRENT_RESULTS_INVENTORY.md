@@ -68,3 +68,18 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - The controlled exclusive-mask follow-up removed that shadowing but retained
   `0/4` action success. This isolates the next bottleneck to the proxy/backend
   representation interface rather than mask overlap alone.
+
+## Sprint additions through Day 6
+
+- Geometry lock and material render preserve the declared action topology on
+  `4/4` anchors, but both remain `0/4` for strict photo realism.
+- Native VACE with a repeated static proxy is `0/4` for action and photo
+  success, so disabling GeoEdit TTM does not solve thin-structure loss.
+- Deterministic dynamic-multikey VACE is also `0/4` after the frozen final-mask
+  projection, but it retains a solid utensil trajectory on all four anchors.
+- The raw frozen ramen frame contains two separate chopsticks and one lifted,
+  bowl-connected noodle. Exact final-mask projection removes most of the sticks
+  because the generated geometry drifts outside that narrower support. This is
+  a positive diagnostic signal, not a reported action success.
+- The next eligible work is one support-aware diagnostic. No current negative
+  pilot is eligible for additional seeds or the frozen 60-case test set.

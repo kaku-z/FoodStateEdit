@@ -1,0 +1,107 @@
+{
+  "schema_version": "foodstateedit.run.v1",
+  "run_id": "ramen_chopsticks_001__vace_direct_dynamic_multikey__seed_1",
+  "case_id": "ramen_chopsticks_001",
+  "method": "vace_direct_dynamic_multikey",
+  "seed": 1,
+  "model": {
+    "name": "Wan2.2-VACE-Fun-A14B",
+    "root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "files": [
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/low_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"
+      },
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth",
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      {
+        "path": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth",
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    ],
+    "verified_before_worker_start": true,
+    "full_file_hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "full_file_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+  },
+  "inference": {
+    "width": 736,
+    "height": 592,
+    "frames": 21,
+    "steps": 20,
+    "vace_scale": 1.0,
+    "vace_video": "dynamic_control.mp4",
+    "vace_video_mask": "dynamic_mask.mp4",
+    "vace_reference_image": "first_frame.png",
+    "enable_ttm": false,
+    "selected_frame_index": 18,
+    "selection_policy": "fixed_before_inference",
+    "dynamic_proxy_manifest_sha256": "e1a0ebb9eaad804327de10fe712e5e52e400943bce68d5a9d32007e35ce156b1",
+    "exact_protection_projection": true,
+    "resident_pipeline": true,
+    "decoded_frames": 21,
+    "outside_edit_alpha_max_pixel_difference": 0,
+    "outside_edit_alpha_rgb_mae": 0.0,
+    "feather_band_rgb_mae": 9.086451189214976,
+    "pipeline_load_count_at_completion": 1,
+    "wall_time_seconds": 386.479
+  },
+  "environment": {
+    "host": "gp40.cs.uec.ac.jp",
+    "gpu": "NVIDIA RTX A6000; CUDA_VISIBLE_DEVICES=1",
+    "python": "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/bin/python3.12",
+    "code_commit": "7f11962f039136c0bf0e596265fc8b4f768fab26",
+    "created_at": "2026-08-29T11:10:49+09:00",
+    "geoedit_files": [
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/geoedit/inference.py",
+        "size_bytes": 16900,
+        "sha256": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1"
+      },
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/diffsynth/pipelines/wan_video.py",
+        "size_bytes": 101256,
+        "sha256": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5"
+      },
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/diffsynth/utils/data/__init__.py",
+        "size_bytes": 8873,
+        "sha256": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360"
+      },
+      {
+        "path": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827/tests/test_masks.py",
+        "size_bytes": 4992,
+        "sha256": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+      }
+    ],
+    "worker_file": {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_launchers_v1/run_vace_dynamic_multikey_resident_batch.py",
+      "size_bytes": 16518,
+      "sha256": "80b9d4b29a6fd7542a44d1fe5d9defba1cab9c6eb64218028a48d0345d0b1b30"
+    }
+  },
+  "status": "complete",
+  "outputs": [
+    {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_v1_gpu1/ramen_chopsticks_001/seed_1/result.mp4",
+      "sha256": "cc75d24c287b8fedb2675407128e106b494ad12312b347a84c226f5219d9a56d"
+    },
+    {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_v1_gpu1/ramen_chopsticks_001/seed_1/raw_selected_frame.png",
+      "sha256": "9ea3e1c0938b0bf1f19376ff3a6fa319dd201200512228f21f5468a22698f0a8"
+    },
+    {
+      "path": "/tmp/foodstateedit_day6_dynamic_multikey_v1_gpu1/ramen_chopsticks_001/seed_1/edited_2d.png",
+      "sha256": "a012a0387ee9bfc4fe447da7794b4d9c2782d1ed0fcfb690ef9f63481427a49c"
+    }
+  ]
+}

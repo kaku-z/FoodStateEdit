@@ -72,6 +72,23 @@
       "rationale": "Tests whether state/proxy alone is sufficient without GeoEdit projection."
     },
     {
+      "method_id": "vace_direct_dynamic_multikey",
+      "role": "secondary_baseline_diagnostic",
+      "inclusion": "pre_registered_pilot_only",
+      "parent_method": "vace_direct_static_proxy",
+      "day6_engine_status": "deterministic_controls_and_seed1_batch_complete_4_of_4",
+      "formal_anchor_status": "projected_action_0_of_4_raw_ramen_topology_signal_do_not_expand",
+      "stochastic": true,
+      "requires_common_proxy": true,
+      "backend": "Wan2.2_VACE_without_TTM_projection",
+      "controls": "deterministic_source_approach_contact_lift_final_hold_video",
+      "schedule": {"source": [0, 0], "approach": [1, 5], "contact": [6, 8], "lift": [9, 16], "final_hold": [17, 20]},
+      "selected_frame_index": 18,
+      "warm_start": false,
+      "isolated_factor": "dynamic action-phase conditioning versus repeated static conditioning",
+      "rationale": "Tests whether dense deterministic motion recovers utensil identity and food-contact topology without ImageGen semantic keyframes. Projected outputs remain negative, but raw ramen reveals a support/projection mismatch worth one diagnostic follow-up."
+    },
+    {
       "method_id": "foodstateedit_staged",
       "role": "proposed_method",
       "inclusion": "frozen",
@@ -225,5 +242,20 @@
     "resident_pipeline_contract": "passed_two_workers_one_load_each",
     "diagnostic": "Disabling TTM did not preserve thin utensil identity or food-contact topology; the failure is not attributable to TTM alone.",
     "status": "CLOSED_NEGATIVE_DIRECT_CONDITIONING_PILOT_DO_NOT_EXPAND"
+  },
+  "day6_dynamic_multikey_gate": {
+    "candidate": "vace_direct_dynamic_multikey",
+    "config_version": "configs/vace_direct_dynamic_multikey_v1.json",
+    "isolated_factor": "dynamic action-phase conditioning only",
+    "technical_complete": 4,
+    "technical_failure": 0,
+    "provisional_projected_action_success": 0,
+    "provisional_projected_photo_success": 0,
+    "exact_source_protection_success": 4,
+    "partial_rigid_identity_improvement_vs_static_v1": 4,
+    "raw_topology_signal_count": 1,
+    "resident_pipeline_contract": "passed_two_workers_one_load_each",
+    "diagnostic": "Dynamic conditioning retained solid utensils and recovered two chopsticks plus one lifted noodle in the raw ramen frame, but exact final-mask projection removed displaced sticks; payload realism remains negative.",
+    "status": "CLOSED_PROJECTED_NEGATIVE_WITH_RAW_TOPOLOGY_SIGNAL"
   }
 }
