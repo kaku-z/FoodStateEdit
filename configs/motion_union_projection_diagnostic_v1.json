@@ -1,0 +1,16 @@
+{
+  "schema_version": "foodstateedit.motion_union_projection_diagnostic.v1",
+  "freeze_date": "2026-08-29",
+  "method": "motion_union_projection_diagnostic",
+  "scientific_status": "post_hoc_exploratory_not_preregistered",
+  "source_method": "vace_direct_dynamic_multikey",
+  "source_seed": 1,
+  "source_selected_frame_index": 18,
+  "projection_alpha": "pre_inference_frozen_motion_union_alpha",
+  "comparison_alpha": "pre_inference_frozen_final_edit_alpha",
+  "stochastic_rerun": false,
+  "selection_policy": "Reuse all four fixed raw frame-18 outputs; no case, seed, or frame replacement.",
+  "invariant": "Output must equal the canonical source exactly wherever motion_union_alpha is zero.",
+  "question": "Did the narrower final edit_alpha remove action geometry that VACE placed within the deterministic motion support?",
+  "claim_limit": "Diagnostic evidence only; any gain must be confirmed prospectively on a new seed or held-out case."
+}
