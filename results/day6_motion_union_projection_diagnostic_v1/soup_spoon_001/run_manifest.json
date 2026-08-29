@@ -1,0 +1,34 @@
+{
+  "schema_version": "foodstateedit.motion_union_projection_run.v1",
+  "anchor_id": "soup_spoon_001",
+  "method": "motion_union_projection_diagnostic",
+  "scientific_status": "post_hoc_exploratory_not_preregistered",
+  "deterministic": true,
+  "stochastic_rerun": false,
+  "source_method": "vace_direct_dynamic_multikey",
+  "source_seed": 1,
+  "source_selected_frame_index": 18,
+  "code_commit": "c0bcc9adae171180dc57c3e4ec1d91cef81a6b61",
+  "config_sha256": "7dec3de0a4334548b32ad7cb4433a666bbe4e45046bcb49ef5703b3014a44c98",
+  "source_run_manifest_sha256": "a564de52b1c0ae366dbddd1fff2b29408ea7ad3adc9493d2e157ed6709a63f81",
+  "dynamic_proxy_manifest_sha256": "8a61314ef275d65d75d2cc3796ee81666bc2f3c132b9790a6e25d80557c0d426",
+  "invariants": {
+    "outside_motion_union_alpha_max_pixel_difference": 0,
+    "motion_union_support_pixel_count": 52109,
+    "final_edit_support_pixel_count": 20546,
+    "extra_motion_support_pixel_count": 31563,
+    "recovered_changed_pixel_count_outside_final_support": 27719
+  },
+  "inputs": {
+    "raw_selected_frame_sha256": "6e47f387bc9549625fb4f756cf5fca0d6793bcc2e3c2996a501aff0d421e4428",
+    "reported_final_projection_sha256": "58692258dbb5b691d17ff498287a88b299c60b375b74baeef257bff7f857f085",
+    "source_sha256": "92c064768c4b8f0dee95d92265cbdd48b95e97a39fa852594383532043b102f4",
+    "final_edit_alpha_sha256": "bfacdf46f41a9eb269bca7a851851bf4acbcce60df816cda68882cb8d56f9ee6",
+    "motion_union_alpha_sha256": "e7a0fcf08abc2a0c54e4521b35acb598c31ca164e580743e65a8a5b887af63ec"
+  },
+  "outputs": {
+    "edited_2d_motion_union.png": "ea7644fb8df835ed06d530cfcf7c3184925eaaf490096a375e463e2edc663ab0",
+    "review_board.png": "f17e479b2ebd8c2d319592d5c7a9433ddd44558f192ad205180a6b9bf584905c"
+  },
+  "status": "complete_post_hoc_diagnostic_not_formal"
+}

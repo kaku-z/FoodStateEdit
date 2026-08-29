@@ -83,3 +83,7 @@ This section updates the dated sprint-start snapshot without rewriting it.
   a positive diagnostic signal, not a reported action success.
 - The next eligible work is one support-aware diagnostic. No current negative
   pilot is eligible for additional seeds or the frozen 60-case test set.
+- The post-hoc motion-union projection diagnostic confirms the support mismatch
+  for ramen: two chopsticks and a lifted noodle are retained, but the broader
+  support and residual noodle ghosting prevent a formal success claim. The
+  larger support does not repair soup, rice, or pasta semantics.

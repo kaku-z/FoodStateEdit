@@ -1,0 +1,48 @@
+{
+  "schema_version": "foodstateedit.internal_diagnostic_review.v1",
+  "review_date": "2026-08-29",
+  "timezone": "Asia/Tokyo",
+  "review_type": "single_internal_nonblind_post_hoc_diagnostic",
+  "method": "motion_union_projection_diagnostic",
+  "scientific_status": "post_hoc_exploratory_not_preregistered",
+  "formal_success_claims": 0,
+  "cases": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "diagnostic_action": "fail",
+      "photo": "fail",
+      "support_mismatch_explains_failure": false,
+      "diagnostic": "The larger support preserves the same solid spoon, but it remains at the liquid surface without a visibly lifted or contained payload."
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "diagnostic_action": "fail",
+      "photo": "fail",
+      "support_mismatch_explains_failure": false,
+      "diagnostic": "The enlarged support does not repair the melted blade/payload region or restore distinct supported grains."
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "diagnostic_action": "near_pass_not_formal",
+      "photo": "fail",
+      "support_mismatch_explains_failure": true,
+      "diagnostic": "The motion-union projection retains exactly two separated chopsticks contacting a lifted bowl-connected noodle. The noodle remains soft/ghosted and the support is post-hoc and broader than the formal final edit region, so this is diagnostic topology recovery rather than a reported success."
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "diagnostic_action": "fail",
+      "photo": "fail",
+      "support_mismatch_explains_failure": false,
+      "diagnostic": "The larger support retains one solid metal utensil but does not produce a four-tine fork or a readable spaghetti twirl."
+    }
+  ],
+  "aggregate": {
+    "case_count": 4,
+    "formal_action_success": 0,
+    "formal_photo_success": 0,
+    "diagnostic_topology_near_pass": 1,
+    "support_mismatch_confirmed": 1,
+    "exact_outside_motion_union_success": 4
+  },
+  "decision": "The full motion union is too broad for formal use, but it confirms that final support mismatch is the dominant projected-output failure for ramen only. A prospective follow-up should use a fixed narrow final-geometry tolerance corridor and validate it on a new seed or held-out case. Soup, rice, and pasta still require payload/utensil-head appearance improvements."
+}

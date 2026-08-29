@@ -257,5 +257,18 @@
     "resident_pipeline_contract": "passed_two_workers_one_load_each",
     "diagnostic": "Dynamic conditioning retained solid utensils and recovered two chopsticks plus one lifted noodle in the raw ramen frame, but exact final-mask projection removed displaced sticks; payload realism remains negative.",
     "status": "CLOSED_PROJECTED_NEGATIVE_WITH_RAW_TOPOLOGY_SIGNAL"
+  },
+  "day6_motion_union_diagnostic_gate": {
+    "candidate": "motion_union_projection_diagnostic",
+    "scientific_status": "post_hoc_exploratory_not_preregistered",
+    "config_version": "configs/motion_union_projection_diagnostic_v1.json",
+    "stochastic_rerun": false,
+    "formal_action_success_claims": 0,
+    "formal_photo_success_claims": 0,
+    "diagnostic_topology_near_pass": 1,
+    "support_mismatch_confirmed": 1,
+    "exact_outside_motion_union_success": 4,
+    "diagnostic": "The full motion union retains two chopsticks and a bowl-connected lifted noodle for ramen but is too broad and post-hoc for formal use; other material families remain semantic failures.",
+    "status": "CLOSED_DIAGNOSTIC_SUPPORT_MISMATCH_CONFIRMED_FOR_RAMEN_ONLY"
   }
 }

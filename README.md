@@ -48,6 +48,8 @@ text-only, fully automatic, universally general, or universally photorealistic.
   deterministic-control invariants;
 - `results/DAY6_VACE_DYNAMIC_MULTIKEY_REVIEW.md`: projected outcome and the raw
   ramen support-mismatch diagnosis;
+- `results/DAY6_MOTION_UNION_PROJECTION_DIAGNOSTIC.md`: post-hoc support test,
+  exact-protection audit, and claim limits;
 - `configs/baselines_v1.json`: formal methods, seeds, schedules, and exclusions;
 - `configs/staged_schedule_v1.json`: pre-inference frozen four-layer pilot schedule;
 - `configs/staged_schedule_v2_exclusive.json`: pre-inference frozen follow-up

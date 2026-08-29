@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -48,6 +49,46 @@ class MotionUnionProjectionTests(unittest.TestCase):
         self.assertIn("outside_motion_union_alpha_max_pixel_difference", source)
         self.assertIn("post_hoc_exploratory_not_preregistered", source)
         self.assertIn("verify_hash", source)
+
+    def test_completed_diagnostic_is_traceable_and_claim_limited(self):
+        root = ROOT / "results" / "day6_motion_union_projection_diagnostic_v1"
+        summary_path = root / "motion_union_projection_summary.json"
+        summary = json.loads(summary_path.read_text())
+        self.assertEqual(summary["method"], "motion_union_projection_diagnostic")
+        self.assertEqual(
+            summary["scientific_status"],
+            "post_hoc_exploratory_not_preregistered",
+        )
+        self.assertFalse(summary["stochastic_rerun"])
+        self.assertEqual(summary["case_count"], 4)
+        self.assertEqual(summary["complete_count"], 4)
+        self.assertTrue(summary["all_outside_motion_union_exact"])
+        self.assertEqual(
+            hashlib.sha256(summary_path.read_bytes()).hexdigest(),
+            "225dffe81f6cbb0165d337fd1eaaa0de40deff31d65758cd63f6db0ebe6cfedd",
+        )
+        manifests = sorted(root.glob("*/run_manifest.json"))
+        self.assertEqual(len(manifests), 4)
+        for path in manifests:
+            manifest = json.loads(path.read_text())
+            self.assertTrue(manifest["deterministic"])
+            self.assertFalse(manifest["stochastic_rerun"])
+            self.assertEqual(
+                manifest["scientific_status"],
+                "post_hoc_exploratory_not_preregistered",
+            )
+            self.assertEqual(
+                manifest["invariants"][
+                    "outside_motion_union_alpha_max_pixel_difference"
+                ],
+                0,
+            )
+        review = json.loads(
+            (root / "internal_diagnostic_review_v1.json").read_text()
+        )
+        self.assertEqual(review["formal_success_claims"], 0)
+        self.assertEqual(review["aggregate"]["diagnostic_topology_near_pass"], 1)
+        self.assertEqual(review["aggregate"]["support_mismatch_confirmed"], 1)
 
 
 if __name__ == "__main__":

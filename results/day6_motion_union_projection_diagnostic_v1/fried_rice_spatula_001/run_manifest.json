@@ -1,0 +1,34 @@
+{
+  "schema_version": "foodstateedit.motion_union_projection_run.v1",
+  "anchor_id": "fried_rice_spatula_001",
+  "method": "motion_union_projection_diagnostic",
+  "scientific_status": "post_hoc_exploratory_not_preregistered",
+  "deterministic": true,
+  "stochastic_rerun": false,
+  "source_method": "vace_direct_dynamic_multikey",
+  "source_seed": 1,
+  "source_selected_frame_index": 18,
+  "code_commit": "c0bcc9adae171180dc57c3e4ec1d91cef81a6b61",
+  "config_sha256": "7dec3de0a4334548b32ad7cb4433a666bbe4e45046bcb49ef5703b3014a44c98",
+  "source_run_manifest_sha256": "988bd58160f8d7330aee2d4b74c90ce53503f2539d5de0b9a3d6147bbeabad31",
+  "dynamic_proxy_manifest_sha256": "7c8b0b0bf588d5bcf227973babcb97e3c89c22661009f48fd4c7dbf0e921def6",
+  "invariants": {
+    "outside_motion_union_alpha_max_pixel_difference": 0,
+    "motion_union_support_pixel_count": 63531,
+    "final_edit_support_pixel_count": 35428,
+    "extra_motion_support_pixel_count": 28103,
+    "recovered_changed_pixel_count_outside_final_support": 24840
+  },
+  "inputs": {
+    "raw_selected_frame_sha256": "9643579025e48c1ae54d93ee9cb52c8fd2ca03e7e21f3695d0e66ebe5912411b",
+    "reported_final_projection_sha256": "55550cac1e3ddef3000f49043b00bc9f378708b06f4224ec02f91c5d763eade5",
+    "source_sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f",
+    "final_edit_alpha_sha256": "a632d982090c5df593a41355cd63d48cc79b07b22f22ce0b12c8c02ae1b481ee",
+    "motion_union_alpha_sha256": "ac21fee4972adcb748ba0caf6472d0b125c46c97a031583fdc08e6d9788c50aa"
+  },
+  "outputs": {
+    "edited_2d_motion_union.png": "8c7ab2d34b7e5e0aedfde6a5d463b1d2c318bb222b7d179d522928a9bc277dbe",
+    "review_board.png": "218b24e7d91484fd97ff394dd39012653c171cb6fc13a296565675ede41be975"
+  },
+  "status": "complete_post_hoc_diagnostic_not_formal"
+}

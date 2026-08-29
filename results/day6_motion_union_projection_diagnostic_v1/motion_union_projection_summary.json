@@ -1,0 +1,147 @@
+{
+  "schema_version": "foodstateedit.motion_union_projection_summary.v1",
+  "method": "motion_union_projection_diagnostic",
+  "scientific_status": "post_hoc_exploratory_not_preregistered",
+  "case_count": 4,
+  "complete_count": 4,
+  "stochastic_rerun": false,
+  "all_outside_motion_union_exact": true,
+  "cases": [
+    {
+      "schema_version": "foodstateedit.motion_union_projection_run.v1",
+      "anchor_id": "soup_spoon_001",
+      "method": "motion_union_projection_diagnostic",
+      "scientific_status": "post_hoc_exploratory_not_preregistered",
+      "deterministic": true,
+      "stochastic_rerun": false,
+      "source_method": "vace_direct_dynamic_multikey",
+      "source_seed": 1,
+      "source_selected_frame_index": 18,
+      "code_commit": "c0bcc9adae171180dc57c3e4ec1d91cef81a6b61",
+      "config_sha256": "7dec3de0a4334548b32ad7cb4433a666bbe4e45046bcb49ef5703b3014a44c98",
+      "source_run_manifest_sha256": "a564de52b1c0ae366dbddd1fff2b29408ea7ad3adc9493d2e157ed6709a63f81",
+      "dynamic_proxy_manifest_sha256": "8a61314ef275d65d75d2cc3796ee81666bc2f3c132b9790a6e25d80557c0d426",
+      "invariants": {
+        "outside_motion_union_alpha_max_pixel_difference": 0,
+        "motion_union_support_pixel_count": 52109,
+        "final_edit_support_pixel_count": 20546,
+        "extra_motion_support_pixel_count": 31563,
+        "recovered_changed_pixel_count_outside_final_support": 27719
+      },
+      "inputs": {
+        "raw_selected_frame_sha256": "6e47f387bc9549625fb4f756cf5fca0d6793bcc2e3c2996a501aff0d421e4428",
+        "reported_final_projection_sha256": "58692258dbb5b691d17ff498287a88b299c60b375b74baeef257bff7f857f085",
+        "source_sha256": "92c064768c4b8f0dee95d92265cbdd48b95e97a39fa852594383532043b102f4",
+        "final_edit_alpha_sha256": "bfacdf46f41a9eb269bca7a851851bf4acbcce60df816cda68882cb8d56f9ee6",
+        "motion_union_alpha_sha256": "e7a0fcf08abc2a0c54e4521b35acb598c31ca164e580743e65a8a5b887af63ec"
+      },
+      "outputs": {
+        "edited_2d_motion_union.png": "ea7644fb8df835ed06d530cfcf7c3184925eaaf490096a375e463e2edc663ab0",
+        "review_board.png": "f17e479b2ebd8c2d319592d5c7a9433ddd44558f192ad205180a6b9bf584905c"
+      },
+      "status": "complete_post_hoc_diagnostic_not_formal"
+    },
+    {
+      "schema_version": "foodstateedit.motion_union_projection_run.v1",
+      "anchor_id": "fried_rice_spatula_001",
+      "method": "motion_union_projection_diagnostic",
+      "scientific_status": "post_hoc_exploratory_not_preregistered",
+      "deterministic": true,
+      "stochastic_rerun": false,
+      "source_method": "vace_direct_dynamic_multikey",
+      "source_seed": 1,
+      "source_selected_frame_index": 18,
+      "code_commit": "c0bcc9adae171180dc57c3e4ec1d91cef81a6b61",
+      "config_sha256": "7dec3de0a4334548b32ad7cb4433a666bbe4e45046bcb49ef5703b3014a44c98",
+      "source_run_manifest_sha256": "988bd58160f8d7330aee2d4b74c90ce53503f2539d5de0b9a3d6147bbeabad31",
+      "dynamic_proxy_manifest_sha256": "7c8b0b0bf588d5bcf227973babcb97e3c89c22661009f48fd4c7dbf0e921def6",
+      "invariants": {
+        "outside_motion_union_alpha_max_pixel_difference": 0,
+        "motion_union_support_pixel_count": 63531,
+        "final_edit_support_pixel_count": 35428,
+        "extra_motion_support_pixel_count": 28103,
+        "recovered_changed_pixel_count_outside_final_support": 24840
+      },
+      "inputs": {
+        "raw_selected_frame_sha256": "9643579025e48c1ae54d93ee9cb52c8fd2ca03e7e21f3695d0e66ebe5912411b",
+        "reported_final_projection_sha256": "55550cac1e3ddef3000f49043b00bc9f378708b06f4224ec02f91c5d763eade5",
+        "source_sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f",
+        "final_edit_alpha_sha256": "a632d982090c5df593a41355cd63d48cc79b07b22f22ce0b12c8c02ae1b481ee",
+        "motion_union_alpha_sha256": "ac21fee4972adcb748ba0caf6472d0b125c46c97a031583fdc08e6d9788c50aa"
+      },
+      "outputs": {
+        "edited_2d_motion_union.png": "8c7ab2d34b7e5e0aedfde6a5d463b1d2c318bb222b7d179d522928a9bc277dbe",
+        "review_board.png": "218b24e7d91484fd97ff394dd39012653c171cb6fc13a296565675ede41be975"
+      },
+      "status": "complete_post_hoc_diagnostic_not_formal"
+    },
+    {
+      "schema_version": "foodstateedit.motion_union_projection_run.v1",
+      "anchor_id": "ramen_chopsticks_001",
+      "method": "motion_union_projection_diagnostic",
+      "scientific_status": "post_hoc_exploratory_not_preregistered",
+      "deterministic": true,
+      "stochastic_rerun": false,
+      "source_method": "vace_direct_dynamic_multikey",
+      "source_seed": 1,
+      "source_selected_frame_index": 18,
+      "code_commit": "c0bcc9adae171180dc57c3e4ec1d91cef81a6b61",
+      "config_sha256": "7dec3de0a4334548b32ad7cb4433a666bbe4e45046bcb49ef5703b3014a44c98",
+      "source_run_manifest_sha256": "1c512312a2008489a43870dd400c9cc7d973975033092a576e8d29f57945f3e6",
+      "dynamic_proxy_manifest_sha256": "e1a0ebb9eaad804327de10fe712e5e52e400943bce68d5a9d32007e35ce156b1",
+      "invariants": {
+        "outside_motion_union_alpha_max_pixel_difference": 0,
+        "motion_union_support_pixel_count": 112693,
+        "final_edit_support_pixel_count": 53851,
+        "extra_motion_support_pixel_count": 58842,
+        "recovered_changed_pixel_count_outside_final_support": 53720
+      },
+      "inputs": {
+        "raw_selected_frame_sha256": "9ea3e1c0938b0bf1f19376ff3a6fa319dd201200512228f21f5468a22698f0a8",
+        "reported_final_projection_sha256": "a012a0387ee9bfc4fe447da7794b4d9c2782d1ed0fcfb690ef9f63481427a49c",
+        "source_sha256": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011",
+        "final_edit_alpha_sha256": "748b52fb3bdf903cefead53735ec7818e165ffc95b158846e1f83eb880bfc19f",
+        "motion_union_alpha_sha256": "23098bb98bc71ef6c274f8536662e5dfbff364f50d55113313848b5d909b576e"
+      },
+      "outputs": {
+        "edited_2d_motion_union.png": "e8249eaf2326f64e5e1200d593cbd52aa567910f8c0fc450a602223c015a0979",
+        "review_board.png": "0ad22e44279166e4c4b1bd943f2017975eb184cb8a0442770cac8049a8a9f593"
+      },
+      "status": "complete_post_hoc_diagnostic_not_formal"
+    },
+    {
+      "schema_version": "foodstateedit.motion_union_projection_run.v1",
+      "anchor_id": "pasta_fork_001",
+      "method": "motion_union_projection_diagnostic",
+      "scientific_status": "post_hoc_exploratory_not_preregistered",
+      "deterministic": true,
+      "stochastic_rerun": false,
+      "source_method": "vace_direct_dynamic_multikey",
+      "source_seed": 1,
+      "source_selected_frame_index": 18,
+      "code_commit": "c0bcc9adae171180dc57c3e4ec1d91cef81a6b61",
+      "config_sha256": "7dec3de0a4334548b32ad7cb4433a666bbe4e45046bcb49ef5703b3014a44c98",
+      "source_run_manifest_sha256": "97b5c2fbd48b8edf318c524ab77c60192f2805d3d64c082fac6277cab1f86dc7",
+      "dynamic_proxy_manifest_sha256": "bee1a316f07e7f094b74400d9bb1a2724b18a340124fc6fa747eb5ce2a35cc13",
+      "invariants": {
+        "outside_motion_union_alpha_max_pixel_difference": 0,
+        "motion_union_support_pixel_count": 59124,
+        "final_edit_support_pixel_count": 23507,
+        "extra_motion_support_pixel_count": 35617,
+        "recovered_changed_pixel_count_outside_final_support": 32995
+      },
+      "inputs": {
+        "raw_selected_frame_sha256": "be99b543bed78111f5c28994f65e250aee2a5f90d29517b0c670549366628afe",
+        "reported_final_projection_sha256": "8d9fd19d034e51e6afba8a66f7a5bc7d2a73752c7810111504228c1cb1950f63",
+        "source_sha256": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a",
+        "final_edit_alpha_sha256": "ff2b13074bc74246640bd3f0f0cdf41c6aad2d8f1c707ea169fc8f7af32499a0",
+        "motion_union_alpha_sha256": "bd310adff6cbaab25d062322de2e09af99b1b838acca4e20612555e0781c16fa"
+      },
+      "outputs": {
+        "edited_2d_motion_union.png": "47bb4ac17a0d9d57175742dd5c0301c0ba24ad412f588846f9b6171856ae0a5f",
+        "review_board.png": "81ee4dd4464ae4664614cfb613e7443cc56f0f1e3a05bc3fbe06d4c8b0b4afad"
+      },
+      "status": "complete_post_hoc_diagnostic_not_formal"
+    }
+  ]
+}
