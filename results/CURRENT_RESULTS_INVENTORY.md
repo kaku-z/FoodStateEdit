@@ -114,3 +114,6 @@ This section updates the dated sprint-start snapshot without rewriting it.
   experiment currently contains reconstructed VGGT scene geometry.
 - Photo realism remains unevaluated until the frozen 3-D control is passed
   through VACE and compared at the same seed against the Day 6 2-D control.
+- That same-seed comparison is now frozen, including input, prompt, runtime,
+  model, selected frame, output, and resource gates. No GPU run has started:
+  gp38--42 were all occupied at the latest read-only audit.

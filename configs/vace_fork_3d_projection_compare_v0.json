@@ -1,0 +1,80 @@
+{
+  "schema_version": "foodstateedit.vace_fork_3d_projection_compare.v0",
+  "freeze_date": "2026-08-31",
+  "source_parent_commit": "63fa633",
+  "method": "vace_fork_relative_3d_projection_compare_v0",
+  "scientific_status": "single_anchor_same_seed_render_comparison_not_generalization",
+  "hypothesis": "Replacing the Day 6 planar fork control with a depth-aware 3-D projected fork/spaghetti control improves visible fork-twirl contact topology under the same renderer, prompt, seed, schedule, and selected frame.",
+  "claim_limit": "One pilot anchor can isolate a representation effect. It cannot establish category generalization, recovered metric depth, or publication-level photo realism.",
+  "control": {
+    "anchor_id": "pasta_fork_001",
+    "geometry_source": "relative_3d_normalized_pinhole",
+    "local_manifest_sha256": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15",
+    "remote_root": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0",
+    "files": {
+      "run_manifest.json": {"size_bytes": 12440, "sha256": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15"},
+      "first_frame.png": {"size_bytes": 692053, "sha256": "505cba86cda5d10139381491bba3d17add095fca2d8d2c445352373d532cf684"},
+      "dynamic_control.mp4": {"size_bytes": 226748, "sha256": "3ea7b30f0cd3de411fff9c47c41fd4348768f5e3d8652a35860ab16ae1b55b87"},
+      "dynamic_mask.mp4": {"size_bytes": 29737, "sha256": "ee4fa6bd5a7a10dce7561dd66e97753cc213985bf7f9b9096b27a02f929c8b5a"},
+      "motion_union_alpha.png": {"size_bytes": 7849, "sha256": "3776195165bd150d96c08287cc788278faabef93a484b865e2ee138ab7099d43"}
+    }
+  },
+  "baseline": {
+    "method": "vace_direct_dynamic_multikey",
+    "seed": 1,
+    "run_manifest_sha256": "97b5c2fbd48b8edf318c524ab77c60192f2805d3d64c082fac6277cab1f86dc7",
+    "edited_2d_sha256": "8d9fd19d034e51e6afba8a66f7a5bc7d2a73752c7810111504228c1cb1950f63"
+  },
+  "inference": {
+    "model": "Wan2.2-VACE-Fun-A14B",
+    "width": 736,
+    "height": 544,
+    "num_frames": 21,
+    "fps": 15,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "seed": 1,
+    "selected_frame_index": 18,
+    "enable_ttm": false,
+    "projection_alpha": "motion_union_alpha.png",
+    "selection_policy": "frozen_before_inference_no_output_dependent_selection",
+    "prompt": "A realistic close-up food photograph of exactly one stainless-steel fork twirling and lifting several continuous spaghetti strands. Pasta visibly wraps the four tines and at least one strand remains connected to the plate. Preserve the sauce, eggplant, parsley, decorated plate, lighting, and background.",
+    "prompt_sha256_utf8": "5db4ee46812ad0230b02f699e719773e90be385166f9991b5529c3dfcfb0e1af",
+    "negative_prompt": "hand, arm, person, fingers, duplicate utensil, extra utensil, malformed utensil, fused chopsticks, third chopstick, disconnected food, duplicated food, floating payload, spill, source crater, background change, plate change, bowl change, blur, ghosting, text, watermark",
+    "negative_prompt_sha256_utf8": "ad22a27fd527b991dd227551b31f3b002e4aac784657227f1b3deef032dc2d7e"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "model_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"},
+      "low_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"},
+      "models_t5_umt5-xxl-enc-bf16.pth": {"size_bytes": 11361920418, "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"},
+      "Wan2.1_VAE.pth": {"size_bytes": 507609880, "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"}
+    },
+    "cache_root": "/tmp/foodstateedit_day8_fork_3d_vace_cache_v0",
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "output_root": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0",
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "require_no_compute_process": true,
+    "min_available_system_memory_mib": 80000
+  }
+}

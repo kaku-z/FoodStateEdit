@@ -20,6 +20,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "fork_3d_projection_v0.json"
+VACE_COMPARE_CONFIG = ROOT / "configs" / "vace_fork_3d_projection_compare_v0.json"
 RESULT_ROOT = ROOT / "results" / "day8_fork_3d_projection_v0"
 
 
@@ -130,6 +131,38 @@ class Projection3DTests(unittest.TestCase):
         self.assertNotIn("from_pretrained", source)
         self.assertNotIn("requests", source)
         self.assertNotIn("download", source.lower())
+
+    def test_vace_comparison_is_same_seed_claim_limited_and_frozen(self):
+        config = json.loads(VACE_COMPARE_CONFIG.read_text(encoding="utf-8"))
+        self.assertEqual(config["source_parent_commit"], "63fa633")
+        self.assertEqual(config["control"]["anchor_id"], "pasta_fork_001")
+        self.assertEqual(config["control"]["geometry_source"], "relative_3d_normalized_pinhole")
+        self.assertEqual(config["baseline"]["seed"], config["inference"]["seed"])
+        self.assertEqual(config["inference"]["seed"], 1)
+        self.assertEqual(config["inference"]["selected_frame_index"], 18)
+        self.assertEqual(config["inference"]["num_inference_steps"], 20)
+        self.assertFalse(config["inference"]["enable_ttm"])
+        self.assertEqual(
+            hashlib.sha256(config["inference"]["prompt"].encode("utf-8")).hexdigest(),
+            config["inference"]["prompt_sha256_utf8"],
+        )
+        self.assertIn("not_generalization", config["scientific_status"])
+
+    def test_vace_comparison_preflight_and_runner_are_offline_and_fail_closed(self):
+        preflight = (ROOT / "scripts" / "preflight_vace_fork_3d_compare.py").read_text(encoding="utf-8")
+        runner = (ROOT / "scripts" / "run_vace_fork_3d_compare.py").read_text(encoding="utf-8")
+        self.assertIn("Refusing to overwrite preflight report", preflight)
+        self.assertIn("require_no_compute_process", preflight)
+        self.assertIn("required_gpu_name", preflight)
+        self.assertIn("output_absent", preflight)
+        self.assertIn("Preflight blocked inference; no output directory was created", runner)
+        self.assertIn("Refusing to reuse output root", runner)
+        self.assertIn("motion_union_alpha.png", runner)
+        self.assertIn("outside_motion_support_max_pixel_difference", runner)
+        for source in (preflight, runner):
+            self.assertNotIn("from_pretrained", source)
+            self.assertNotIn("snapshot_download", source)
+            self.assertNotIn("requests", source)
 
 
 if __name__ == "__main__":

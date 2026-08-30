@@ -75,3 +75,6 @@
 - retained the strict evidence label `relative_3d`: this run does not replace
   the unavailable VGGT reconstruction and does not establish action success or
   photo realism.
+- froze a one-anchor, same-seed VACE comparison against the Day 6 planar
+  control; all gp38--42 candidates were occupied, so the fail-closed resource
+  gate correctly prevented inference.

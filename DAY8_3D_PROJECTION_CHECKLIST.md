@@ -27,7 +27,9 @@ remains the only preserved `VGGT -> reconstructed 3-D -> projection` example.
 
 ## Next gate
 
-- [ ] Run one frozen VACE rendering comparison using this 3-D control.
+- [x] Freeze one same-seed VACE rendering configuration and fail-closed GPU
+  preflight before seeing stochastic output.
+- [ ] Run the frozen VACE rendering comparison when one A6000 is genuinely idle.
 - [ ] Compare action/contact and photo realism separately against the Day 6 2-D
   dynamic-multikey control without changing seed or frame selection.
 - [ ] Add recovered depth for soup, rice, and fork only if an existing audited
