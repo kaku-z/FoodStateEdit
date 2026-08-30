@@ -1,0 +1,46 @@
+{
+  "schema_version": "foodstateedit.fork_3d_projection.v0",
+  "freeze_date": "2026-08-31",
+  "scientific_status": "relative_3d_geometry_pilot_not_reconstructed_scene_depth",
+  "claim_limit": "This pilot proves deterministic 3-D fork/spaghetti motion, depth crossing, camera projection, and 2-D control generation. It does not claim monocular scene reconstruction, photo realism, or action generalization.",
+  "anchor_id": "pasta_fork_001",
+  "geometry_source": "relative_3d_from_sparse_anchor_and_normalized_pinhole",
+  "camera": {
+    "focal_scale": 1.2
+  },
+  "timeline": {
+    "frame_count": 21,
+    "fps": 15.0,
+    "source_anchor": [0, 0],
+    "approach": [1, 5],
+    "contact_twirl": [6, 8],
+    "lift": [9, 16],
+    "final_hold": [17, 20],
+    "selected_frame_index": 18
+  },
+  "relative_depth": {
+    "approach_start": 1.04,
+    "source_contact": 0.94,
+    "fork_final": 0.82,
+    "plate_anchor": 1.0
+  },
+  "fork": {
+    "approach_direction_scale": 1.6
+  },
+  "spaghetti": {
+    "strand_count": 4,
+    "helix_turns": 2.25,
+    "helix_radius": 0.018,
+    "helix_pitch": 0.012,
+    "helix_samples": 160,
+    "tail_samples": 100,
+    "line_width_px": 5,
+    "tail_anchor_normalized": [[0.82, 0.65], [0.86, 0.61], [0.79, 0.68], [0.88, 0.64]]
+  },
+  "projection": {
+    "motion_support_dilation_fraction_min_dimension": 0.014,
+    "frame_zero_must_equal_source": true,
+    "depth_crossing_required": true,
+    "minimum_projected_turns": 2.0
+  }
+}

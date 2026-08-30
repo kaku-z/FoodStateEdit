@@ -19,6 +19,24 @@ constraints.
 The task is structured-control image editing. It is not currently claimed to be
 text-only, fully automatic, universally general, or universally photorealistic.
 
+## Current method core
+
+FoodStateEdit is organized as a `3-D action -> 2-D control -> learned render`
+pipeline:
+
+1. lift a sparse food/utensil action specification into reconstructed or
+   explicitly labelled relative 3-D;
+2. solve rigid utensil motion, deformable food motion, contact, and conservation
+   in that 3-D action space;
+3. project with one camera and depth-aware visibility into a temporal 2-D
+   control;
+4. render appearance with VACE, optionally conditioned by a task adapter; and
+5. enforce exact scene preservation outside the declared motion support.
+
+The historical ramen case contains reconstructed VGGT geometry. The current
+fork pilot uses a normalized relative-3-D camera because its audited depth
+checkpoint is unavailable; the two evidence levels are not interchangeable.
+
 ## Planned material/action families
 
 - liquid: spoon scooping soup;
@@ -44,6 +62,7 @@ text-only, fully automatic, universally general, or universally photorealistic.
 - `DAY5_MATERIAL_RENDER_CHECKLIST.md`: topology-preserving 2.5D material-render gate;
 - `DAY6_DYNAMIC_MULTIKEY_CHECKLIST.md`: deterministic action-phase VACE gate;
 - `DAY7_ADAPTER_V0_CHECKLIST.md`: claim-limited VACE-LoRA infrastructure-smoke gate;
+- `DAY8_3D_PROJECTION_CHECKLIST.md`: relative-3-D fork motion/projection gate;
 - `results/DAY5_METHOD_GRID_CAPTION.md`: hash-traceable qualitative comparison caption;
 - `results/DAY6_DYNAMIC_MULTIKEY_PREFLIGHT.md`: pre-output schedule, hashes, and
   deterministic-control invariants;
@@ -53,6 +72,9 @@ text-only, fully automatic, universally general, or universally photorealistic.
   exact-protection audit, and claim limits;
 - `results/DAY7_ADAPTER_V0_PREFLIGHT.md`: frozen trainer, dataset hashes,
   resource gate, and the boundary between smoke evidence and generalization;
+- `results/DAY8_3D_PROJECTION_PILOT.md`: fork/spaghetti 3-D geometry result,
+  depth-crossing evidence, and the strict reconstructed-versus-relative claim
+  boundary;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved

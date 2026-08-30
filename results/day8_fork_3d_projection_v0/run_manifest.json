@@ -1,0 +1,421 @@
+{
+  "schema_version": "foodstateedit.fork_3d_projection_run.v0",
+  "method": "fork_relative_3d_projection_v0",
+  "scientific_status": "relative_3d_geometry_pilot_not_reconstructed_scene_depth",
+  "claim_limit": "This pilot proves deterministic 3-D fork/spaghetti motion, depth crossing, camera projection, and 2-D control generation. It does not claim monocular scene reconstruction, photo realism, or action generalization.",
+  "anchor_id": "pasta_fork_001",
+  "geometry_source": "relative_3d_normalized_pinhole",
+  "camera_intrinsic": [
+    [
+      883.1999999999999,
+      0.0,
+      368.0
+    ],
+    [
+      0.0,
+      883.1999999999999,
+      272.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "frame_count": 21,
+  "fps": 15.0,
+  "selected_frame_index": 18,
+  "fork_final_reprojection_max_error_px": 1.2710574864626038e-13,
+  "fork_final_reprojection_mean_error_px": 4.0265026388802423e-14,
+  "selected_depth_crosses_fork": true,
+  "selected_helix_depth_range": [
+    0.80128,
+    0.8387199999999999
+  ],
+  "selected_fork_depth": 0.82,
+  "selected_strand_lengths_3d": [
+    0.47011324662250537,
+    0.47067505042657964,
+    0.47584138968109435,
+    0.5413195520097338
+  ],
+  "outside_motion_support_max_pixel_difference": 0,
+  "motion_support_fraction": 0.16032109175191817,
+  "source_sha256": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a",
+  "final_proxy_sha256": "d204a7ee32674b4890dbd2017805691a0861929530cf156b9d60f94d386a5504",
+  "config_sha256": "e737caa96490edee7e37babd5ee11af699c249a8e639235289e9fbe5f1be681a",
+  "anchor_specs_sha256": "ea9292d15a863f2d7dc7525b38ace0878555d6c8781dd6fcc32f5ccc1d05d514",
+  "frames": [
+    {
+      "index": 0,
+      "phase": "source_anchor",
+      "changed_pixels": 0
+    },
+    {
+      "index": 1,
+      "phase": "approach",
+      "phase_amount": 0.0,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.0,
+      "fork_depth_median": 1.04,
+      "fork_visible_splat_fraction": 0.8962983124659771,
+      "changed_pixels": 3293
+    },
+    {
+      "index": 2,
+      "phase": "approach",
+      "phase_amount": 0.25,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.0,
+      "fork_depth_median": 1.024375,
+      "fork_visible_splat_fraction": 0.9150789330430049,
+      "changed_pixels": 3362
+    },
+    {
+      "index": 3,
+      "phase": "approach",
+      "phase_amount": 0.5,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.0,
+      "fork_depth_median": 0.99,
+      "fork_visible_splat_fraction": 0.9586281981491562,
+      "changed_pixels": 3522
+    },
+    {
+      "index": 4,
+      "phase": "approach",
+      "phase_amount": 0.75,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.0,
+      "fork_depth_median": 0.955625,
+      "fork_visible_splat_fraction": 0.9961894393032118,
+      "changed_pixels": 3660
+    },
+    {
+      "index": 5,
+      "phase": "approach",
+      "phase_amount": 1.0,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.0,
+      "fork_depth_median": 0.94,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 3674
+    },
+    {
+      "index": 6,
+      "phase": "contact_twirl",
+      "phase_amount": 0.333333,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.259259,
+      "fork_depth_median": 0.94,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 5019,
+      "helix_depth_min": 0.9212804060105009,
+      "helix_depth_max": 0.9587199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.14399976036326206,
+        0.1757482932966148,
+        0.16082686531961254,
+        0.2029076474168723
+      ]
+    },
+    {
+      "index": 7,
+      "phase": "contact_twirl",
+      "phase_amount": 0.666667,
+      "lift_amount": 0.0,
+      "twirl_amount": 0.740741,
+      "fork_depth_median": 0.94,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 5139,
+      "helix_depth_min": 0.9212804060105009,
+      "helix_depth_max": 0.9587199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.24288590152194317,
+        0.2894428729413396,
+        0.2864006698178915,
+        0.32119440538955263
+      ]
+    },
+    {
+      "index": 8,
+      "phase": "contact_twirl",
+      "phase_amount": 1.0,
+      "lift_amount": 0.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.94,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 5215,
+      "helix_depth_min": 0.92128,
+      "helix_depth_max": 0.9587199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.32074931912852334,
+        0.3461141639361886,
+        0.32510799605414736,
+        0.397294485114581
+      ]
+    },
+    {
+      "index": 9,
+      "phase": "lift",
+      "phase_amount": 0.0,
+      "lift_amount": 0.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.94,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 5215,
+      "helix_depth_min": 0.92128,
+      "helix_depth_max": 0.9587199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.32074931912852334,
+        0.3461141639361886,
+        0.32510799605414736,
+        0.397294485114581
+      ]
+    },
+    {
+      "index": 10,
+      "phase": "lift",
+      "phase_amount": 0.142857,
+      "lift_amount": 0.055394,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.9389361516059765,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 8569,
+      "helix_depth_min": 0.9202161516059766,
+      "helix_depth_max": 0.9576561516059765,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.3215882146070423,
+        0.3463379361567779,
+        0.3255446960747263,
+        0.3984505924169515
+      ]
+    },
+    {
+      "index": 11,
+      "phase": "lift",
+      "phase_amount": 0.285714,
+      "lift_amount": 0.198251,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.9277208538012475,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 8998,
+      "helix_depth_min": 0.9090008538012475,
+      "helix_depth_max": 0.9464408538012474,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.3315255211457841,
+        0.3516497542812626,
+        0.33327484649097017,
+        0.4086258109885593
+      ]
+    },
+    {
+      "index": 12,
+      "phase": "lift",
+      "phase_amount": 0.428571,
+      "lift_amount": 0.393586,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.8988653128331254,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 8299,
+      "helix_depth_min": 0.8801453128331255,
+      "helix_depth_max": 0.9175853128331254,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.3638198106028818,
+        0.3749255177412789,
+        0.36595052593990274,
+        0.43919298985450184
+      ]
+    },
+    {
+      "index": 13,
+      "phase": "lift",
+      "phase_amount": 0.571429,
+      "lift_amount": 0.606414,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.8611346871668746,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 9156,
+      "helix_depth_min": 0.8424146871668746,
+      "helix_depth_max": 0.8798546871668745,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.4129000634863552,
+        0.4173041650853724,
+        0.41714587886071586,
+        0.48579064699186336
+      ]
+    },
+    {
+      "index": 14,
+      "phase": "lift",
+      "phase_amount": 0.714286,
+      "lift_amount": 0.801749,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.8322791461987524,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10351,
+      "helix_depth_min": 0.8135591461987525,
+      "helix_depth_max": 0.8509991461987524,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.4526113181043514,
+        0.4541012056281478,
+        0.45796919847800655,
+        0.5241589766674075
+      ]
+    },
+    {
+      "index": 15,
+      "phase": "lift",
+      "phase_amount": 0.857143,
+      "lift_amount": 0.944606,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.8210638483940234,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10746,
+      "helix_depth_min": 0.8023438483940234,
+      "helix_depth_max": 0.8397838483940233,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.4684848818582674,
+        0.4691248274699627,
+        0.4741806091836084,
+        0.5396825210566227
+      ]
+    },
+    {
+      "index": 16,
+      "phase": "lift",
+      "phase_amount": 1.0,
+      "lift_amount": 1.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.82,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10790,
+      "helix_depth_min": 0.80128,
+      "helix_depth_max": 0.8387199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.47011324662250537,
+        0.47067505042657964,
+        0.47584138968109435,
+        0.5413195520097338
+      ]
+    },
+    {
+      "index": 17,
+      "phase": "final_hold",
+      "phase_amount": 1.0,
+      "lift_amount": 1.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.82,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10790,
+      "helix_depth_min": 0.80128,
+      "helix_depth_max": 0.8387199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.47011324662250537,
+        0.47067505042657964,
+        0.47584138968109435,
+        0.5413195520097338
+      ]
+    },
+    {
+      "index": 18,
+      "phase": "final_hold",
+      "phase_amount": 1.0,
+      "lift_amount": 1.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.82,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10790,
+      "helix_depth_min": 0.80128,
+      "helix_depth_max": 0.8387199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.47011324662250537,
+        0.47067505042657964,
+        0.47584138968109435,
+        0.5413195520097338
+      ]
+    },
+    {
+      "index": 19,
+      "phase": "final_hold",
+      "phase_amount": 1.0,
+      "lift_amount": 1.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.82,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10790,
+      "helix_depth_min": 0.80128,
+      "helix_depth_max": 0.8387199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.47011324662250537,
+        0.47067505042657964,
+        0.47584138968109435,
+        0.5413195520097338
+      ]
+    },
+    {
+      "index": 20,
+      "phase": "final_hold",
+      "phase_amount": 1.0,
+      "lift_amount": 1.0,
+      "twirl_amount": 1.0,
+      "fork_depth_median": 0.82,
+      "fork_visible_splat_fraction": 1.0,
+      "changed_pixels": 10790,
+      "helix_depth_min": 0.80128,
+      "helix_depth_max": 0.8387199999999999,
+      "depth_crosses_fork": true,
+      "strand_lengths_3d": [
+        0.47011324662250537,
+        0.47067505042657964,
+        0.47584138968109435,
+        0.5413195520097338
+      ]
+    }
+  ],
+  "files": {
+    "first_frame.png": {
+      "size_bytes": 692053,
+      "sha256": "505cba86cda5d10139381491bba3d17add095fca2d8d2c445352373d532cf684"
+    },
+    "projected_frame_18.png": {
+      "size_bytes": 687403,
+      "sha256": "7ebfd9b6f0af7e87aa9d37d79eb695b328b6999e10ddd0596f59e80d241f21d0"
+    },
+    "motion_union_alpha.png": {
+      "size_bytes": 7849,
+      "sha256": "3776195165bd150d96c08287cc788278faabef93a484b865e2ee138ab7099d43"
+    },
+    "dynamic_control.mp4": {
+      "size_bytes": 226748,
+      "sha256": "3ea7b30f0cd3de411fff9c47c41fd4348768f5e3d8652a35860ab16ae1b55b87"
+    },
+    "dynamic_mask.mp4": {
+      "size_bytes": 29737,
+      "sha256": "ee4fa6bd5a7a10dce7561dd66e97753cc213985bf7f9b9096b27a02f929c8b5a"
+    },
+    "control_review.png": {
+      "size_bytes": 823327,
+      "sha256": "61a0d57d44b39faa235b233415aa53eadfe394956869e8e1acd384c6ab77e03d"
+    },
+    "geometry_3d.npz": {
+      "size_bytes": 29903,
+      "sha256": "f73effbf63d89c0977a00e31c5ead8f278d231c177cd0dea1947a325edbdfbb0"
+    }
+  },
+  "status": "complete_relative_3d_projection_pilot_requires_visual_and_learned_render_review"
+}

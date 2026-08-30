@@ -61,3 +61,17 @@
   loader: 160 finite tensors, 80 complete A/B pairs, and 80 updated tensors;
 - retained the strict claim limit: infrastructure success is not action,
   generalization, or photo-realism evidence.
+
+## 2026-08-31 — Day 8 relative-3-D fork projection pilot
+
+- made `3-D action -> camera/depth projection -> 2-D control -> learned render`
+  the explicit FoodStateEdit method decomposition;
+- added a deterministic normalized pinhole camera, 3-D curve primitives, and
+  nearest-depth z-buffer splatting;
+- produced a 21-frame pasta/fork control with one rigid fork, four 3-D helices,
+  four plate-connected tails, and depth-tested front/back crossings;
+- verified sub-pixel numerical reprojection, zero change outside motion
+  support, stored 3-D arrays, and hash-locked review evidence;
+- retained the strict evidence label `relative_3d`: this run does not replace
+  the unavailable VGGT reconstruction and does not establish action success or
+  photo realism.

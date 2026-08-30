@@ -97,3 +97,20 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - This closes only the adapter plumbing gate. Targets equal controls, so the
   run supplies no evidence for action correctness, generalization, or photo
   realism and is not a new visual baseline.
+
+## Sprint additions through Day 8
+
+- The method core is now explicit: construct the utensil and food motion in
+  3-D, resolve contact and visibility there, project it into a temporal 2-D
+  control, and use the learned backend only for appearance rendering.
+- The first non-noodle 3-D pilot covers the frozen pasta/fork anchor. It
+  projects one rigid fork plus four plate-connected spaghetti strands over 21
+  frames with depth-tested front/back crossings around the fork.
+- The selected frame has fork depth `0.82`, helix depth range
+  `[0.80128, 0.83872]`, reprojection error below `1.3e-13` pixels, and zero
+  pixel change outside the declared motion support.
+- This is a geometry-control pass, not an image-editing success. The fork case
+  uses relative 3-D and a normalized pinhole camera; only the preserved ramen
+  experiment currently contains reconstructed VGGT scene geometry.
+- Photo realism remains unevaluated until the frozen 3-D control is passed
+  through VACE and compared at the same seed against the Day 6 2-D control.

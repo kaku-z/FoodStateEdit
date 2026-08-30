@@ -7,7 +7,7 @@ name = "foodstateedit-paper"
 version = "0.1.0"
 description = "Paper sprint workspace for physically constrained food manipulation editing"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["numpy>=1.26"]
 
 [project.optional-dependencies]
 dev = ["jsonschema>=4.23"]
