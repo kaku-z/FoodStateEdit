@@ -1,0 +1,159 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_machines` was set to a value of `1`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py:31: UserWarning: Gradient checkpointing is detected as disabled. To prevent out-of-memory errors, the training framework will forcibly enable gradient checkpointing.
+  warnings.warn("Gradient checkpointing is detected as disabled. To prevent out-of-memory errors, the training framework will forcibly enable gradient checkpointing.")
+┌──────────────────────────────────────────────────────────────────────┐
+│ DiffSynth-Studio Model Downloader Configuration:                     │
+│                                                                      │
+│ [ ] Download from https://modelscope.cn/                             │
+│     (default behavior)                                               │
+│ [ ] Download from https://modelscope.ai/                             │
+│     (enabled via `export MODELSCOPE_ENDPOINT=https://modelscope.ai`) │
+│ [ ] Download from https://huggingface.co/                            │
+│     (enabled via `export DIFFSYNTH_DOWNLOAD_SOURCE=HuggingFace`)     │
+│ [√] Skip download and load only pre-downloaded model files           │
+│     (enabled via `export DIFFSYNTH_SKIP_DOWNLOAD=True`)              │
+└──────────────────────────────────────────────────────────────────────┘
+Loading models from: "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors"
+Loaded model: {
+    "model_name": "wan_video_dit",
+    "model_class": "diffsynth.models.wan_video_dit.WanModel",
+    "extra_kwargs": {
+        "has_image_input": false,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "in_dim": 16,
+        "dim": 5120,
+        "ffn_dim": 13824,
+        "freq_dim": 256,
+        "text_dim": 4096,
+        "out_dim": 16,
+        "num_heads": 40,
+        "num_layers": 40,
+        "eps": 1e-06
+    }
+}
+Loaded model: {
+    "model_name": "wan_video_vace",
+    "model_class": "diffsynth.models.wan_video_vace.VaceWanModel",
+    "extra_kwargs": {
+        "vace_layers": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35
+        ],
+        "vace_in_dim": 96,
+        "patch_size": [
+            1,
+            2,
+            2
+        ],
+        "has_image_input": false,
+        "dim": 5120,
+        "num_heads": 40,
+        "ffn_dim": 13824,
+        "eps": 1e-06
+    }
+}
+Loading models from: "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth"
+Detected non-safetensors files, which may cause slower loading. It's recommended to convert it to a safetensors file.
+Loaded model: {
+    "model_name": "wan_video_text_encoder",
+    "model_class": "diffsynth.models.wan_video_text_encoder.WanTextEncoder",
+    "extra_kwargs": null
+}
+Loading models from: "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth"
+Detected non-safetensors files, which may cause slower loading. It's recommended to convert it to a safetensors file.
+Loaded model: {
+    "model_name": "wan_video_vae",
+    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE",
+    "extra_kwargs": null
+}
+Using wan_video_text_encoder from "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth".
+Using wan_video_dit from "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors".
+Using wan_video_vae from "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth".
+No wan_video_image_encoder models available. This is not an error.
+No wan_video_motion_controller models available. This is not an error.
+Using wan_video_vace from "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors".
+No wan_video_vap models available. This is not an error.
+No wans2v_audio_encoder models available. This is not an error.
+No wan_video_animate_adapter models available. This is not an error.
+Training arguments saved to `/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3/training_args.json`.
+
+  0%|          | 0/2 [00:00<?, ?it/s]
+  0%|          | 0/2 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_adapter_v0_55ebc36/scripts/run_diffsynth_wan_train_no_audio.py", line 58, in <module>
+    main()
+  File "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_adapter_v0_55ebc36/scripts/run_diffsynth_wan_train_no_audio.py", line 54, in main
+    runpy.run_path(str(upstream_script), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py", line 199, in <module>
+    launcher_map[args.task](accelerator, dataset, model, model_logger, args=args)
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/diffsynth/diffusion/runner.py", line 79, in launch_training_task
+    for data in tqdm(dataloader):
+                ^^^^^^^^^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/accelerate/data_loader.py", line 557, in __iter__
+    current_batch = next(dataloader_iter)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/diffsynth/core/data/unified_dataset.py", line 100, in __getitem__
+    data[key] = self.main_data_operator(data[key])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/diffsynth/core/data/operators.py", line 255, in __call__
+    return operator(data)
+           ^^^^^^^^^^^^^^
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/diffsynth/core/data/operators.py", line 36, in __call__
+    data = operator(data)
+           ^^^^^^^^^^^^^^
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/diffsynth/core/data/operators.py", line 244, in __call__
+    return operator(data)
+           ^^^^^^^^^^^^^^
+  File "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/diffsynth/core/data/operators.py", line 184, in __call__
+    raw_frame_rate = reader.get_meta_data()['fps']
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/imageio/v2.py", line 162, in get_meta_data
+    return self.instance.metadata(index=index, exclude_applied=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/imageio/plugins/pyav.py", line 798, in metadata
+    self._seek(index, constant_framerate=constant_framerate)
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/imageio/plugins/pyav.py", line 1199, in _seek
+    index_pts = int(index * pts_delta)
+                    ~~~~~~^~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'Fraction'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1184, in <module>
+    main()
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1180, in main
+    launch_command(args)
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1174, in launch_command
+    simple_launcher(args)
+  File "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/accelerate/commands/launch.py", line 769, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/host/space0/guo-z/envs/geoedit/bin/python', '/host/space0/guo-z/tf-ufi/runtime/foodstateedit_adapter_v0_55ebc36/scripts/run_diffsynth_wan_train_no_audio.py', '--upstream-script', '/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py', '--', '--dataset_base_path', '/tmp/foodstateedit_day7_adapter_v0_smoke_dataset_v2', '--dataset_metadata_path', '/tmp/foodstateedit_day7_adapter_v0_smoke_dataset_v2/metadata.csv', '--dataset_repeat', '1', '--dataset_num_workers', '0', '--data_file_keys', 'video,vace_video,vace_reference_image', '--max_pixels', '153600', '--num_frames', '21', '--model_paths', '["/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors", "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/models_t5_umt5-xxl-enc-bf16.pth", "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/Wan2.1_VAE.pth"]', '--tokenizer_path', '/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/google/umt5-xxl', '--learning_rate', '0.0001', '--weight_decay', '0.01', '--num_epochs', '1', '--save_steps', '1', '--remove_prefix_in_ckpt', 'pipe.vace.', '--output_path', '/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3', '--lora_base_model', 'vace', '--lora_target_modules', 'q,k,v,o,ffn.0,ffn.2', '--lora_rank', '8', '--extra_inputs', 'vace_video,vace_reference_image', '--task', 'sft', '--max_timestep_boundary', '0.358', '--min_timestep_boundary', '0.0', '--use_gradient_checkpointing_offload', '--enable_model_cpu_offload']' returned non-zero exit status 1.

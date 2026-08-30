@@ -237,6 +237,7 @@ def main() -> int:
         metadata_hash,
         config["dataset"]["metadata_sha256"],
     )
+    rows: list[dict[str, str]] = []
     if metadata_path.is_file():
         with metadata_path.open("r", encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
@@ -275,13 +276,54 @@ def main() -> int:
                 "Infrastructure-smoke target and control hashes are identical.",
             )
 
+    help_env = os.environ.copy()
+    help_env.update(config["offline_environment"])
+    help_env["PYTHONPATH"] = str(trainer_root)
+    video_path_set: set[Path] = set()
+    for row in rows:
+        for key in ("video", "vace_video"):
+            if not row.get(key):
+                continue
+            try:
+                video_path_set.add(resolve_dataset_file(dataset_root, row[key]))
+            except ValueError:
+                pass
+    video_paths = sorted(video_path_set)
+    for video_path in video_paths:
+        decode_result = None
+        decoded = None
+        if no_audio_wrapper.is_file():
+            decode_result = subprocess.run(
+                [trainer["python"], str(no_audio_wrapper), "--video-decode-smoke", str(video_path)],
+                check=False,
+                capture_output=True,
+                text=True,
+                env=help_env,
+                timeout=60,
+            )
+            if decode_result.returncode == 0:
+                try:
+                    decoded = json.loads(decode_result.stdout)
+                except json.JSONDecodeError:
+                    decoded = None
+        relative_video_path = video_path.relative_to(dataset_root).as_posix()
+        add_check(
+            checks,
+            f"video_decode:{relative_video_path}",
+            decode_result is not None
+            and decode_result.returncode == 0
+            and decoded is not None
+            and decoded.get("frame_count") == config["dataset"]["frames"]
+            and decoded.get("fps", 0) > 0
+            and decoded.get("first_shape") == decoded.get("last_shape"),
+            decoded if decoded is not None else (decode_result.stderr[-2000:] if decode_result is not None else None),
+            f"Wrapper decodes first/last pixels and exactly {config['dataset']['frames']} frames with positive fps.",
+        )
+
     module_status = {name: importlib.util.find_spec(name) is not None for name in config["required_modules"]}
     add_check(checks, "python_modules", all(module_status.values()), module_status, "All required modules importable.")
     help_result = None
     if train_script.is_file():
-        help_env = os.environ.copy()
-        help_env.update(config["offline_environment"])
-        help_env["PYTHONPATH"] = str(trainer_root)
         help_result = subprocess.run(
             [trainer["python"], str(train_script), "--help"],
             check=False,

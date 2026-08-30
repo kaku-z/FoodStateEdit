@@ -25,7 +25,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertFalse(config["training"]["overwrite"])
         self.assertEqual(
             config["training"]["output_root"],
-            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3",
+            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v4",
         )
         self.assertEqual(config["offline_environment"]["DIFFSYNTH_SKIP_DOWNLOAD"], "True")
         self.assertEqual(config["offline_environment"]["HF_HUB_OFFLINE"], "1")
@@ -45,7 +45,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(config["trainer"]["no_audio_wrapper"], "scripts/run_diffsynth_wan_train_no_audio.py")
         self.assertEqual(
             config["trainer"]["no_audio_wrapper_sha256"],
-            "36ca5dbb68cd9364096ff7bee4743bcfb3136d6434ca802f397d1df6d5a50aaa",
+            "17313ad864aee69b2a8b5fd9ad8b7d9d75769d1f298474b508cafccba1b88c06",
         )
 
     def test_dataset_builder_is_deterministic_proxy_only_and_fail_closed(self):
@@ -77,6 +77,8 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn("nvidia-smi", preflight)
         self.assertIn("trainer_help", preflight)
         self.assertIn("no_audio_wrapper_help", preflight)
+        self.assertIn("video_decode:", preflight)
+        self.assertIn("--video-decode-smoke", preflight)
         self.assertIn("dataset_manifest_hash", preflight)
         self.assertIn("dataset_builder_hash", preflight)
         self.assertIn("dataset_hash:", preflight)
@@ -133,6 +135,10 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn('sys.modules["librosa"] = sentinel', wrapper)
         self.assertIn('ModuleSpec("librosa", loader=None)', wrapper)
         self.assertIn("FoodStateEdit no-audio wrapper forbids librosa.load", wrapper)
+        self.assertIn("install_imageio_pyav_metadata_compatibility", wrapper)
+        self.assertIn('metadata.update({"fps": fps, "duration": frame_count / fps, "nframes": frame_count})', wrapper)
+        self.assertIn("reader.get_data(0)", wrapper)
+        self.assertIn("reader.get_data(frame_count - 1)", wrapper)
         self.assertIn("runpy.run_path", wrapper)
         self.assertNotIn("pip install", wrapper)
 
@@ -156,6 +162,18 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(manifest["checkpoints"], [])
         self.assertTrue(preflight["ready"])
         self.assertIn("module 'librosa' has no attribute 'load'", log)
+
+    def test_gp39_v3_failure_is_preserved_after_model_load(self):
+        result_root = ROOT / "results" / "day7_adapter_v0_gp39_failure_pyav_metadata_v3"
+        manifest = json.loads((result_root / "run_manifest.json").read_text(encoding="utf-8"))
+        preflight = json.loads((ROOT / "results" / "day7_adapter_v0_preflight_gp39_v3.json").read_text(encoding="utf-8"))
+        log = (result_root / "train.log").read_text(encoding="utf-8")
+        self.assertEqual(manifest["status"], "technical_failure")
+        self.assertEqual(manifest["checkpoints"], [])
+        self.assertTrue(preflight["ready"])
+        self.assertEqual(manifest["log_sha256"], "a698a927b52f826e012eb09a814c83a0d80ceb234b4599a8f1534c45b11df65c")
+        self.assertIn("Loading models from", log)
+        self.assertIn("unsupported operand type(s) for *: 'NoneType' and 'Fraction'", log)
 
 
 if __name__ == "__main__":

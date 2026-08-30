@@ -1,0 +1,21 @@
+{
+  "schema_version": "foodstateedit.adapter_smoke_run.v0",
+  "method": "foodstateedit_vace_lora_high_noise_smoke",
+  "scientific_status": "infrastructure_smoke_not_quality_evidence",
+  "status": "technical_failure",
+  "return_code": 1,
+  "started_at": "2026-08-30T00:58:56.644104+00:00",
+  "finished_at": "2026-08-30T01:07:24.148022+00:00",
+  "duration_seconds": 507.503918,
+  "selected_physical_gpu": 0,
+  "config_sha256": "4f45133176c1fd6fc6ed03c4449a7534cdf2dc4f791e152be8af3347428759dc",
+  "preflight_report_sha256": "5c8176a9dbb78d9f20a83b768944f23a4b9d0eeb540477538402451cfb3caa45",
+  "dataset_manifest_sha256": "5483f03bd79295f62cc961c3411198fe4c221a0979dbf833f76ba28c6f97b9ae",
+  "trainer_commit": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+  "trainer_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+  "no_audio_wrapper_sha256": "36ca5dbb68cd9364096ff7bee4743bcfb3136d6434ca802f397d1df6d5a50aaa",
+  "model_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+  "command_sha256": "244996b05dfea2b9d6576e59dca5183d8d525fbc6de15be2bf5562c09797d119",
+  "log_sha256": "a698a927b52f826e012eb09a814c83a0d80ceb234b4599a8f1534c45b11df65c",
+  "checkpoints": []
+}

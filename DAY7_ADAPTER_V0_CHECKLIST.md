@@ -48,3 +48,13 @@ looked up `librosa.load`, so a sentinel with only `ModuleSpec` was insufficient.
 It again failed before model loading and produced no checkpoint. V3 supplies a
 forbidden `load` callable that raises if audio is ever processed; the frozen
 metadata contains no audio key, so the VACE path never calls it.
+
+V3 passed preflight and loaded the frozen DiT, VACE, T5, and VAE components,
+then failed at the first dataloader item. ImageIO 2.37.2 selected its PyAV
+backend, whose container-level metadata calculation multiplied a missing
+duration by the stream time base. Frame-level decoding itself remains valid.
+The full failure is preserved under
+`results/day7_adapter_v0_gp39_failure_pyav_metadata_v3/`. V4 adds a narrow
+metadata compatibility layer that derives fps and duration from the same PyAV
+stream while leaving `get_data` unchanged, and preflight now decodes the first
+and last frame of every training/control video before model loading.

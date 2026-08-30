@@ -150,3 +150,25 @@ V3 provides a `librosa.load` callable that immediately raises if invoked. The
 wrapper still rejects `input_audio` in `--data_file_keys`, so this callable can
 only expose a contract violation; it cannot silently process audio. V3 uses the
 new-only output `/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v3`.
+
+V3 passed all preflight checks and loaded the frozen DiT, VACE, T5, and VAE,
+then failed on the first dataloader item. ImageIO 2.37.2 selected PyAV; its
+container-level `get_meta_data()` attempted to multiply a missing duration by a
+stream time base and raised `TypeError`. Direct first-frame decoding and the
+stream's rate/count are valid, so this is a decoder metadata compatibility
+failure rather than corrupt media or a model/LoRA failure.
+
+- V3 failed run manifest SHA-256:
+  `dee053bacd170bfed98831cb505c47d11d48a73b156c47df2aa040dbcf679cba`.
+- V3 passing preflight SHA-256:
+  `5c8176a9dbb78d9f20a83b768944f23a4b9d0eeb540477538402451cfb3caa45`.
+- V3 failure log SHA-256:
+  `a698a927b52f826e012eb09a814c83a0d80ceb234b4599a8f1534c45b11df65c`.
+- Checkpoints: zero.
+
+V4 keeps PyAV's actual `get_data` frame decoder untouched and only supplies
+missing video-level `fps`, `duration`, and `nframes` from the same stream. The
+preflight now runs that exact wrapper path over the first and last pixels of
+every target/control MP4 and requires the frozen 21-frame count before any
+model is loaded. V4 uses the new-only output
+`/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v4`.
