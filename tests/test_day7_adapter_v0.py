@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -6,6 +7,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "adapter_v0_lora_smoke.json"
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 class AdapterV0Tests(unittest.TestCase):
@@ -175,6 +184,38 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(manifest["log_sha256"], "a698a927b52f826e012eb09a814c83a0d80ceb234b4599a8f1534c45b11df65c")
         self.assertIn("Loading models from", log)
         self.assertIn("unsupported operand type(s) for *: 'NoneType' and 'Fraction'", log)
+
+    def test_gp39_v5_smoke_and_official_checkpoint_load_are_complete(self):
+        result_root = ROOT / "results" / "day7_adapter_v0_gp39_complete_v5"
+        manifest = json.loads((result_root / "run_manifest.json").read_text(encoding="utf-8"))
+        command = json.loads((result_root / "command.json").read_text(encoding="utf-8"))
+        preflight = json.loads((ROOT / "results" / "day7_adapter_v0_preflight_gp39_v5.json").read_text(encoding="utf-8"))
+        validation = json.loads(
+            (ROOT / "results" / "day7_adapter_v0_checkpoint_validation_v1.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(manifest["status"], "complete")
+        self.assertEqual(manifest["return_code"], 0)
+        self.assertEqual(manifest["selected_physical_gpu"], 0)
+        self.assertTrue(preflight["ready"])
+        video_checks = [check for check in preflight["checks"] if check["id"].startswith("video_decode:")]
+        self.assertEqual(len(video_checks), 4)
+        self.assertTrue(all(check["passed"] for check in video_checks))
+        self.assertTrue(all(check["actual"]["frame_count"] == 21 for check in video_checks))
+        self.assertEqual(command["environment"]["DIFFSYNTH_SKIP_DOWNLOAD"], "True")
+        self.assertEqual(command["environment"]["HF_HUB_OFFLINE"], "1")
+        self.assertNotIn("input_audio", command["command"])
+        self.assertEqual([record["path"] for record in manifest["checkpoints"]], ["step-1.safetensors", "step-2.safetensors"])
+        for record in manifest["checkpoints"]:
+            checkpoint = result_root / record["path"]
+            self.assertEqual(checkpoint.stat().st_size, record["size_bytes"])
+            self.assertEqual(sha256_file(checkpoint), record["sha256"])
+        self.assertEqual(validation["status"], "complete")
+        self.assertEqual(validation["checkpoint_sha256"], manifest["checkpoints"][-1]["sha256"])
+        self.assertEqual(validation["tensor_count"], 160)
+        self.assertEqual(validation["pair_count"], 80)
+        self.assertEqual(validation["rank"], 8)
+        self.assertEqual(validation["official_loader_updated_tensor_count"], 80)
+        self.assertIn("no visual-quality claim", validation["claim_limit"])
 
 
 if __name__ == "__main__":

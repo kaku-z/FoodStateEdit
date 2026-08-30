@@ -87,3 +87,13 @@ This section updates the dated sprint-start snapshot without rewriting it.
   for ramen: two chopsticks and a lifted noodle are retained, but the broader
   support and residual noodle ghosting prevent a formal success claim. The
   larger support does not repair soup, rice, or pasta semantics.
+
+## Sprint additions through Day 7
+
+- The two-sample high-noise VACE-LoRA infrastructure smoke completed on gp39:
+  two optimizer steps, two hash-locked checkpoints, and a normal exit.
+- The final rank-8 adapter has 160 finite BF16 tensors in 80 complete A/B
+  pairs; the offline official VACE loader updated all 80 targeted tensor pairs.
+- This closes only the adapter plumbing gate. Targets equal controls, so the
+  run supplies no evidence for action correctness, generalization, or photo
+  realism and is not a new visual baseline.

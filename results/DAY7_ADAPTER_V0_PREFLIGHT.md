@@ -175,3 +175,30 @@ that same stream. Preflight runs this exact wrapper path over the first and last
 pixels of every target/control MP4 and requires the frozen 21-frame count before
 any model is loaded. V5 uses the new-only output
 `/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v5`.
+
+## Completed v5 infrastructure smoke
+
+The frozen v5 run passed every preflight check on gp39 and selected physical
+GPU 0. It completed one epoch over the two identity-target samples in 99.095
+seconds and exited with code 0. Because `save_steps=1`, the upstream trainer
+created `step-1.safetensors` and `step-2.safetensors`; the earlier expected
+`epoch-0.safetensors` name was not part of the actual trainer contract.
+
+- Runtime source commit: `18d4d25782a7ae580f3e4bb658a2d8bf9b6e3a38`.
+- Runtime archive SHA-256:
+  `a72ce0c64b80d084b37dae3897a39ee330c413d94800ca7b60af7f647f323b30`.
+- Config SHA-256:
+  `6b5f32bc7261d14679a119d3335b541f1cea99d82e96be35c9f3f12b673a2682`.
+- Passing preflight SHA-256:
+  `4bc6fec39892f47438d26cd8e742963ae097ed59ac9a012a68245ea51019cc59`.
+- Complete run manifest SHA-256:
+  `5ba4f706d555701e37e897bb827e5904cb8a9a0d3a81f191bc66397c62170257`.
+- Final `step-2.safetensors` SHA-256:
+  `b01efb7dd7734a17cd8c4e983f616e3e01d483e44de19f38be26ecebe57a4465`.
+
+The offline checkpoint validation completed against the final step: 160 finite
+BF16 tensors, 80 complete LoRA A/B pairs, rank 8, and 80 tensors updated by the
+official `pipe.load_lora(pipe.vace, ...)` loader. Validation-report SHA-256:
+`f44e5caea2dff6cd4ad3b6d947b6a040b826bf1b1e0d932dc6e5f3d949ddcbfa`.
+This is infrastructure evidence only. It does not establish action success,
+food-family generalization, or photo realism.

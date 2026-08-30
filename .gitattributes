@@ -2,3 +2,5 @@
 results/day3_launchers/*.py -text
 results/day3_model_hash_v1/*.txt -text
 results/day3_geoedit_overrides_v1/GeoEdit/** -text
+results/day7_adapter_v0_*.json -text
+results/day7_adapter_v0_*/** -text

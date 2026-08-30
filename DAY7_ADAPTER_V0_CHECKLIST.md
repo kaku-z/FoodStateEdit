@@ -21,9 +21,9 @@
 - [x] Materialize and hash the local two-case smoke dataset.
 - [x] Transfer it to a new remote directory and verify every hash.
 - [x] Enforce one A6000 with at least 48,000 MiB free, <=5% utilization, and no compute process.
-- [ ] Run exactly one epoch over two samples with rank-8 high-noise VACE LoRA.
-- [ ] Preserve command, log, preflight, failure state, and checkpoint hashes.
-- [ ] Load the resulting LoRA in an offline validation smoke before any visual comparison.
+- [x] Run exactly one epoch over two samples with rank-8 high-noise VACE LoRA.
+- [x] Preserve command, log, preflight, failure state, and checkpoint hashes.
+- [x] Load the resulting LoRA in an offline validation smoke before any visual comparison.
 
 The loadability smoke is frozen in `scripts/validate_adapter_lora_checkpoint.py`.
 It requires complete finite rank-8 LoRA A/B pairs and a positive tensor-update
@@ -61,3 +61,10 @@ start training or create an output directory. V5 supplies both metadata and
 frame count from the same PyAV stream while leaving `get_data` unchanged, and
 preflight now decodes the first and last frame of every training/control video
 before model loading.
+
+V5 completed both optimizer steps in 99.1 seconds on gp39 GPU 0 and saved
+`step-1.safetensors` and `step-2.safetensors`. The final checkpoint contains
+160 finite BF16 tensors forming 80 complete rank-8 LoRA A/B pairs. The offline
+official `pipe.load_lora(pipe.vace, ...)` path updated 80 tensors. This closes
+the infrastructure smoke only; the identity targets provide no action or photo
+quality evidence.

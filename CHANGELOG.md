@@ -48,3 +48,16 @@
   provisional visual diagnosis separately from technical success;
 - identified repeated dual-denoiser loading as a scaling bottleneck and made a
   resident per-GPU worker the next engineering gate.
+
+## 2026-08-30 — Day 7 VACE-LoRA infrastructure smoke
+
+- expanded safe resource discovery from gp40 to gp38--gp42 and selected an idle
+  gp39 A6000 without modifying another user's process;
+- preserved three complete technical-failure stages and moved video decoding
+  into preflight before expensive model loading;
+- completed two high-noise VACE-LoRA optimizer steps over the frozen two-sample
+  identity-target dataset without downloading a model;
+- validated the final rank-8 checkpoint through the official offline VACE LoRA
+  loader: 160 finite tensors, 80 complete A/B pairs, and 80 updated tensors;
+- retained the strict claim limit: infrastructure success is not action,
+  generalization, or photo-realism evidence.
