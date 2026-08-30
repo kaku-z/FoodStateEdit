@@ -43,6 +43,16 @@ def install_imageio_pyav_metadata_compatibility() -> None:
         reader = original_get_reader(*args, **kwargs)
         original_get_meta_data = reader.get_meta_data
 
+        if not hasattr(reader, "count_frames"):
+            def compatible_count_frames() -> int:
+                stream = getattr(getattr(reader, "instance", None), "_video_stream", None)
+                frame_count = int(getattr(stream, "frames", 0) or 0)
+                if frame_count <= 0:
+                    raise RuntimeError("FoodStateEdit could not derive a positive PyAV frame count")
+                return frame_count
+
+            reader.count_frames = compatible_count_frames
+
         def compatible_get_meta_data(index=None):
             if index is not None:
                 return original_get_meta_data(index=index)
@@ -71,7 +81,7 @@ def install_imageio_pyav_metadata_compatibility() -> None:
             if rate is None:
                 raise RuntimeError("FoodStateEdit could not derive a positive PyAV frame rate")
             fps = float(rate)
-            frame_count = int(getattr(stream, "frames", 0) or reader.count_frames())
+            frame_count = int(reader.count_frames())
             if frame_count <= 0:
                 raise RuntimeError("FoodStateEdit could not derive a positive PyAV frame count")
             metadata.update({"fps": fps, "duration": frame_count / fps, "nframes": frame_count})

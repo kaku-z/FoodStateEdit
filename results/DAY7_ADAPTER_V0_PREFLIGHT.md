@@ -166,9 +166,12 @@ failure rather than corrupt media or a model/LoRA failure.
   `a698a927b52f826e012eb09a814c83a0d80ceb234b4599a8f1534c45b11df65c`.
 - Checkpoints: zero.
 
-V4 keeps PyAV's actual `get_data` frame decoder untouched and only supplies
-missing video-level `fps`, `duration`, and `nframes` from the same stream. The
-preflight now runs that exact wrapper path over the first and last pixels of
-every target/control MP4 and requires the frozen 21-frame count before any
-model is loaded. V4 uses the new-only output
-`/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v4`.
+The first V4 decoder-only smoke caught another API mismatch before model load:
+ImageIO's PyAV `LegacyReader` has no `count_frames()` method, although its
+stream reports the frozen count of 21. It created no training output. V5 keeps
+PyAV's actual `get_data` frame decoder untouched and supplies the missing
+`count_frames()` method plus video-level `fps`, `duration`, and `nframes` from
+that same stream. Preflight runs this exact wrapper path over the first and last
+pixels of every target/control MP4 and requires the frozen 21-frame count before
+any model is loaded. V5 uses the new-only output
+`/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v5`.

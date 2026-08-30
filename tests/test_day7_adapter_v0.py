@@ -25,7 +25,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertFalse(config["training"]["overwrite"])
         self.assertEqual(
             config["training"]["output_root"],
-            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v4",
+            "/tmp/foodstateedit_day7_adapter_v0_high_noise_lora_smoke_v5",
         )
         self.assertEqual(config["offline_environment"]["DIFFSYNTH_SKIP_DOWNLOAD"], "True")
         self.assertEqual(config["offline_environment"]["HF_HUB_OFFLINE"], "1")
@@ -45,7 +45,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertEqual(config["trainer"]["no_audio_wrapper"], "scripts/run_diffsynth_wan_train_no_audio.py")
         self.assertEqual(
             config["trainer"]["no_audio_wrapper_sha256"],
-            "17313ad864aee69b2a8b5fd9ad8b7d9d75769d1f298474b508cafccba1b88c06",
+            "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90",
         )
 
     def test_dataset_builder_is_deterministic_proxy_only_and_fail_closed(self):
@@ -136,6 +136,7 @@ class AdapterV0Tests(unittest.TestCase):
         self.assertIn('ModuleSpec("librosa", loader=None)', wrapper)
         self.assertIn("FoodStateEdit no-audio wrapper forbids librosa.load", wrapper)
         self.assertIn("install_imageio_pyav_metadata_compatibility", wrapper)
+        self.assertIn("compatible_count_frames", wrapper)
         self.assertIn('metadata.update({"fps": fps, "duration": frame_count / fps, "nframes": frame_count})', wrapper)
         self.assertIn("reader.get_data(0)", wrapper)
         self.assertIn("reader.get_data(frame_count - 1)", wrapper)

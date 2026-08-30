@@ -54,7 +54,10 @@ then failed at the first dataloader item. ImageIO 2.37.2 selected its PyAV
 backend, whose container-level metadata calculation multiplied a missing
 duration by the stream time base. Frame-level decoding itself remains valid.
 The full failure is preserved under
-`results/day7_adapter_v0_gp39_failure_pyav_metadata_v3/`. V4 adds a narrow
-metadata compatibility layer that derives fps and duration from the same PyAV
-stream while leaving `get_data` unchanged, and preflight now decodes the first
-and last frame of every training/control video before model loading.
+`results/day7_adapter_v0_gp39_failure_pyav_metadata_v3/`. The first V4 decoder
+smoke then showed that ImageIO's PyAV `LegacyReader` also omits the
+`count_frames()` method expected by the frozen upstream trainer; it did not
+start training or create an output directory. V5 supplies both metadata and
+frame count from the same PyAV stream while leaving `get_data` unchanged, and
+preflight now decodes the first and last frame of every training/control video
+before model loading.
