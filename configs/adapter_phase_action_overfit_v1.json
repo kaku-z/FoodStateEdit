@@ -26,7 +26,9 @@
   },
   "launcher": {
     "preflight": "scripts/preflight_phase_action_overfit_training.py",
-    "preflight_sha256": "4b882515d4ef31a05871912dae3e0e222aa2c571d167a46457c96bbece619f58",
+    "preflight_sha256": "274d8d8a4c4f3d924f6936c96f0cf1e2fa5affc9f4664b47950e96d2fbe9cf86",
+    "preflight_dependency": "scripts/preflight_adapter_action_training.py",
+    "preflight_dependency_sha256": "655a74a41acfec32d959c1697836f6538b89f2726d9afc5bdf35358e09a32d35",
     "runner": "scripts/run_phase_action_overfit_training.py",
     "runner_sha256": "4dab62370b6c66edf47e00fdb077fe2ac147382a5f09d7335fac00a1369f4e38"
   },

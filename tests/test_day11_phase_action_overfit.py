@@ -65,9 +65,14 @@ class Day11PhaseActionOverfitTests(unittest.TestCase):
         config = json.loads(CONFIG.read_text(encoding="utf-8"))
         builder = ROOT / config["trainer"]["dataset_builder"]
         preflight = ROOT / config["launcher"]["preflight"]
+        preflight_dependency = ROOT / config["launcher"]["preflight_dependency"]
         runner = ROOT / config["launcher"]["runner"]
         self.assertEqual(sha256_lf(builder), config["trainer"]["dataset_builder_sha256_lf"])
         self.assertEqual(sha256_file(preflight), config["launcher"]["preflight_sha256"])
+        self.assertEqual(
+            sha256_file(preflight_dependency),
+            config["launcher"]["preflight_dependency_sha256"],
+        )
         self.assertEqual(sha256_file(runner), config["launcher"]["runner_sha256"])
         builder_text = builder.read_text(encoding="utf-8")
         runner_text = runner.read_text(encoding="utf-8")
