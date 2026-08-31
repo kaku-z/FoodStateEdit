@@ -1,0 +1,48 @@
+{
+  "schema_version": "foodstateedit.internal_visual_review.v0",
+  "method": "vace_fork_relative_3d_projection_compare_v0",
+  "anchor_id": "pasta_fork_001",
+  "seed": 1,
+  "selected_frame_index": 18,
+  "review_status": "complete_internal_diagnostic_not_blind_formal_review",
+  "comparison_policy": {
+    "raw_frames": "primary representation comparison before different exact-projection supports",
+    "projected_frames": "preservation and final deliverable comparison",
+    "temporal_frames": [0, 5, 8, 12, 16, 18, 20]
+  },
+  "technical": {
+    "pipeline_load_count": 1,
+    "decoded_frames": 21,
+    "outside_motion_support_max_pixel_difference": 0,
+    "pass": true
+  },
+  "day6_planar": {
+    "one_fork_with_four_tines": false,
+    "twirl_contact": false,
+    "lifted_plate_connected_strands": false,
+    "source_reduction_without_duplicate_bundle": false,
+    "no_extra_utensil": true,
+    "action_success": false,
+    "photo_success": false,
+    "diagnosis": "The generated utensil terminates in a broad spoon-like metal blob with small fused prongs. No spaghetti wraps, lifts, or remains connected to the plate."
+  },
+  "day8_relative_3d": {
+    "one_fork_with_four_tines": true,
+    "twirl_contact": false,
+    "lifted_plate_connected_strands": false,
+    "source_reduction_without_duplicate_bundle": false,
+    "no_extra_utensil": true,
+    "action_success": false,
+    "photo_success": false,
+    "diagnosis": "One recognizable fork and a coherent approach/lift trajectory are visible, but the conditioned 3-D spaghetti helices disappear. The tines contact only a translucent local smear, with no wrapped or lifted food and no coherent contact shadow."
+  },
+  "relative_conclusion": {
+    "utensil_identity_improved": true,
+    "utensil_trajectory_improved": true,
+    "food_motion_improved": false,
+    "strict_action_improved_to_pass": false,
+    "strict_photo_improved_to_pass": false
+  },
+  "decision": "CLOSED_SINGLE_ANCHOR_RENDER_NEGATIVE_WITH_RIGID_TOPOLOGY_SIGNAL_DO_NOT_EXPAND_SEEDS",
+  "next_gate": "Train or adapt the renderer with non-identity action targets that explicitly supervise utensil-food binding and thin lifted strands; additional hand-designed 3-D control detail alone is not justified by this result."
+}

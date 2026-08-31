@@ -1,0 +1,66 @@
+{
+  "schema_version": "foodstateedit.day8_fork_3d_vace_evidence.v0",
+  "method": "vace_fork_relative_3d_projection_compare_v0",
+  "scientific_status": "single_anchor_same_seed_render_comparison_not_generalization",
+  "technical_status": "complete_hash_verified_requires_human_visual_review",
+  "source_video": {
+    "size_bytes": 174393,
+    "sha256": "dbac7be2a7ffb4c1cb996f960e04f799542f1875e7fd16d231155af863b045c4",
+    "tracked_in_git": false
+  },
+  "review_frame_indices": [
+    0,
+    5,
+    8,
+    12,
+    16,
+    18,
+    20
+  ],
+  "pipeline_load_count": 1,
+  "decoded_frames": 21,
+  "outside_motion_support_max_pixel_difference": 0,
+  "builder_sha256": "6a66b9cbe2ce2966324cc31fe8bf602c9dda66d4166dcf61a42a82ffa67c755c",
+  "files": {
+    "command.json": {
+      "size_bytes": 668,
+      "sha256": "8770d14bfdaaeef56fe77eacc75753c96067885bb69061e5ed66c1699a03d8b0"
+    },
+    "comparison_review.png": {
+      "size_bytes": 1030785,
+      "sha256": "aefa25071cf74ae2f2186373948c2899fa4cdb496d2867e82584ba58aa41cfd2"
+    },
+    "day6_planar_edited_2d.png": {
+      "size_bytes": 745175,
+      "sha256": "8d9fd19d034e51e6afba8a66f7a5bc7d2a73752c7810111504228c1cb1950f63"
+    },
+    "day6_planar_raw_selected_frame.png": {
+      "size_bytes": 700198,
+      "sha256": "be99b543bed78111f5c28994f65e250aee2a5f90d29517b0c670549366628afe"
+    },
+    "edited_2d.png": {
+      "size_bytes": 745283,
+      "sha256": "727071883fc3727d3597b67e3e9ba55da3de8f21428a3bc87daee4491b476bf8"
+    },
+    "preflight.json": {
+      "size_bytes": 10294,
+      "sha256": "ff4597e26707d64f32f18e243e6c5a995f4b2e68d422b030d380ca6585b20e10"
+    },
+    "raw_selected_frame.png": {
+      "size_bytes": 700242,
+      "sha256": "a0c3091e8e70935400fb6cb190b55f38deb3f45d1cbac50c4a0753408522df1f"
+    },
+    "run_manifest.json": {
+      "size_bytes": 4080,
+      "sha256": "832c644b00db6a3eaadc556ee55b628d4a5248e86a42d75d68b21d91f42e7c9c"
+    },
+    "stderr.log": {
+      "size_bytes": 4794,
+      "sha256": "998f5da8ea4b8ed09c7df25e05f14406ed179eb7d25777177b4f99173902972a"
+    },
+    "stdout.log": {
+      "size_bytes": 4587,
+      "sha256": "84ce863b6cf935ea1001db1626db8e977947a5b0543a2041b046e5a3dfa0abdc"
+    }
+  }
+}

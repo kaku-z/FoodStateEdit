@@ -112,8 +112,16 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - This is a geometry-control pass, not an image-editing success. The fork case
   uses relative 3-D and a normalized pinhole camera; only the preserved ramen
   experiment currently contains reconstructed VGGT scene geometry.
-- Photo realism remains unevaluated until the frozen 3-D control is passed
-  through VACE and compared at the same seed against the Day 6 2-D control.
-- That same-seed comparison is now frozen, including input, prompt, runtime,
-  model, selected frame, output, and resource gates. No GPU run has started:
-  gp38--42 were all occupied at the latest read-only audit.
+- The frozen same-seed VACE comparison completed on gp39: 36/36 passing
+  preflight checks, one pipeline load, 21 decoded frames, and zero pixel change
+  outside the Day 8 motion support.
+- Relative-3-D conditioning improves the Day 6 malformed spoon-like head into
+  one recognizable fork with a coherent trajectory. It still produces no
+  wrapped, lifted, plate-connected spaghetti, so strict action and photo
+  success remain `0/1`.
+- The raw comparison shows the same conclusion before exact projection. The
+  positive result is therefore limited to rigid utensil topology; the current
+  bottleneck is deformable food rendering and utensil-food binding.
+- This negative single-anchor render is closed without seed or test-set
+  expansion. The next eligible gate is non-identity action supervision for the
+  VACE adapter, not additional hand-designed geometry alone.

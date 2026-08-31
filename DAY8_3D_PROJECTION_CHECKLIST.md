@@ -31,8 +31,20 @@ remains the only preserved `VGGT -> reconstructed 3-D -> projection` example.
   preflight before seeing stochastic output.
 - [x] Upload and hash-verify the frozen inputs/launchers on gp39; remote
   preflight passed 35/36 checks and failed only the occupied-GPU gate.
-- [ ] Run the frozen VACE rendering comparison when one A6000 is genuinely idle.
-- [ ] Compare action/contact and photo realism separately against the Day 6 2-D
+- [x] Run the frozen VACE rendering comparison on a safely idle gp39 A6000.
+- [x] Verify one pipeline load, 21 decoded frames, all hashes, and exact pixels
+  outside the motion support.
+- [x] Compare action/contact and photo realism separately against the Day 6 2-D
   dynamic-multikey control without changing seed or frame selection.
+- [x] Close the single-anchor render gate without seed expansion: rigid fork
+  topology improved, but the wrapped/lifted spaghetti payload is absent and
+  both strict action and photo verdicts remain false.
 - [ ] Add recovered depth for soup, rice, and fork only if an existing audited
   depth model becomes available; do not download a replacement silently.
+
+## Next eligible renderer gate
+
+- [ ] Build non-identity supervision targets that explicitly contain
+  utensil-food binding and thin lifted strands.
+- [ ] Train/evaluate one claim-limited VACE adapter against the frozen Day 8
+  control before adding geometry detail, seeds, or held-out cases.

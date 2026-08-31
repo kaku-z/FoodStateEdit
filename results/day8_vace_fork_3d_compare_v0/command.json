@@ -1,0 +1,15 @@
+{
+  "call": "WanVideoPipeline.__call__",
+  "vace_video": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/dynamic_control.mp4",
+  "vace_video_mask": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/dynamic_mask.mp4",
+  "vace_reference_image": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/first_frame.png",
+  "prompt_sha256_utf8": "5db4ee46812ad0230b02f699e719773e90be385166f9991b5529c3dfcfb0e1af",
+  "negative_prompt_sha256_utf8": "ad22a27fd527b991dd227551b31f3b002e4aac784657227f1b3deef032dc2d7e",
+  "seed": 1,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "vace_scale": 1.0,
+  "enable_ttm": false,
+  "selected_frame_index": 18,
+  "cuda_visible_devices": "0"
+}

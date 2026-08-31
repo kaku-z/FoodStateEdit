@@ -77,6 +77,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
   boundary;
 - `results/DAY8_VACE_3D_COMPARE_PREFLIGHT.md`: frozen same-seed 2-D-versus-3-D
   control comparison and fail-closed GPU gate;
+- `results/DAY8_VACE_FORK_3D_REVIEW.md`: completed same-seed render, separate
+  action/photo verdicts, and the renderer-bottleneck decision;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved

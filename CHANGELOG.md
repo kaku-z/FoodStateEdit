@@ -78,3 +78,11 @@
 - froze a one-anchor, same-seed VACE comparison against the Day 6 planar
   control; all gp38--42 candidates were occupied, so the fail-closed resource
   gate correctly prevented inference.
+- launched only after gp39 became fully idle; the final preflight passed 36/36
+  checks, the pipeline loaded once, all 21 frames decoded, and exact outside-
+  support preservation passed;
+- closed the render as a strict action/photo negative: relative 3-D recovered a
+  recognizable fork and trajectory versus the Day 6 spoon-like blob, but VACE
+  discarded the wrapped and lifted spaghetti payload;
+- made non-identity action-target supervision the next renderer gate and
+  rejected seed/test expansion for this single-anchor negative pilot.

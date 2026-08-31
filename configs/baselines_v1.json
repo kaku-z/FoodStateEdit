@@ -270,5 +270,20 @@
     "exact_outside_motion_union_success": 4,
     "diagnostic": "The full motion union retains two chopsticks and a bowl-connected lifted noodle for ramen but is too broad and post-hoc for formal use; other material families remain semantic failures.",
     "status": "CLOSED_DIAGNOSTIC_SUPPORT_MISMATCH_CONFIRMED_FOR_RAMEN_ONLY"
+  },
+  "day8_fork_3d_vace_gate": {
+    "candidate": "vace_fork_relative_3d_projection_compare_v0",
+    "scientific_status": "single_anchor_same_seed_render_comparison_not_generalization",
+    "config_version": "configs/vace_fork_3d_projection_compare_v0.json",
+    "comparison_baseline": "vace_direct_dynamic_multikey",
+    "technical_complete": 1,
+    "technical_failure": 0,
+    "provisional_action_success": 0,
+    "provisional_photo_success": 0,
+    "exact_source_protection_success": 1,
+    "rigid_utensil_topology_signal": 1,
+    "deformable_payload_signal": 0,
+    "diagnostic": "Relative-3-D conditioning changes the Day 6 spoon-like metal blob into one recognizable moving fork, but VACE discards the projected helical spaghetti and renders no wrapped, lifted, plate-connected payload.",
+    "status": "CLOSED_SINGLE_ANCHOR_RENDER_NEGATIVE_WITH_RIGID_TOPOLOGY_SIGNAL_DO_NOT_EXPAND_SEEDS"
   }
 }

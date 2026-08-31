@@ -1,0 +1,96 @@
+{
+  "schema_version": "foodstateedit.vace_fork_3d_compare_run.v0",
+  "method": "vace_fork_relative_3d_projection_compare_v0",
+  "scientific_status": "single_anchor_same_seed_render_comparison_not_generalization",
+  "claim_limit": "One pilot anchor can isolate a representation effect. It cannot establish category generalization, recovered metric depth, or publication-level photo realism.",
+  "status": "complete_requires_separate_action_and_photo_review",
+  "host": "gp39.cs.uec.ac.jp",
+  "selected_physical_gpu": 0,
+  "started_at": "2026-08-31T00:48:13.182359+00:00",
+  "config_sha256": "e3776437767663a82e48fa980cfc7e2bc187162d7dcf827207529d381e64a219",
+  "preflight_report_sha256": "ff4597e26707d64f32f18e243e6c5a995f4b2e68d422b030d380ca6585b20e10",
+  "worker_sha256": "c247301ba4744c398de0e821b26ac14f7f29ab6d14a88d2c4607d4b5f2908202",
+  "control_manifest_sha256": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15",
+  "verified_inputs": [
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/run_manifest.json",
+      "size_bytes": 12440,
+      "sha256": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/first_frame.png",
+      "size_bytes": 692053,
+      "sha256": "505cba86cda5d10139381491bba3d17add095fca2d8d2c445352373d532cf684"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/dynamic_control.mp4",
+      "size_bytes": 226748,
+      "sha256": "3ea7b30f0cd3de411fff9c47c41fd4348768f5e3d8652a35860ab16ae1b55b87"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/dynamic_mask.mp4",
+      "size_bytes": 29737,
+      "sha256": "ee4fa6bd5a7a10dce7561dd66e97753cc213985bf7f9b9096b27a02f929c8b5a"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0/motion_union_alpha.png",
+      "size_bytes": 7849,
+      "sha256": "3776195165bd150d96c08287cc788278faabef93a484b865e2ee138ab7099d43"
+    }
+  ],
+  "baseline": {
+    "method": "vace_direct_dynamic_multikey",
+    "seed": 1,
+    "run_manifest_sha256": "97b5c2fbd48b8edf318c524ab77c60192f2805d3d64c082fac6277cab1f86dc7",
+    "edited_2d_sha256": "8d9fd19d034e51e6afba8a66f7a5bc7d2a73752c7810111504228c1cb1950f63"
+  },
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "selected_frame_index": 18,
+    "selection_policy": "frozen_before_inference_no_output_dependent_selection",
+    "projection_alpha": "motion_union_alpha.png",
+    "pipeline_load_count": 1,
+    "decoded_frames": 21,
+    "outside_motion_support_max_pixel_difference": 0,
+    "outside_motion_support_rgb_mae": 0.0,
+    "feather_band_rgb_mae": 2.3665518268044745
+  },
+  "outputs": [
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0/result.mp4",
+      "size_bytes": 174393,
+      "sha256": "dbac7be2a7ffb4c1cb996f960e04f799542f1875e7fd16d231155af863b045c4"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0/raw_selected_frame.png",
+      "size_bytes": 700242,
+      "sha256": "a0c3091e8e70935400fb6cb190b55f38deb3f45d1cbac50c4a0753408522df1f"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0/edited_2d.png",
+      "size_bytes": 745283,
+      "sha256": "727071883fc3727d3597b67e3e9ba55da3de8f21428a3bc87daee4491b476bf8"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0/stdout.log",
+      "size_bytes": 4587,
+      "sha256": "84ce863b6cf935ea1001db1626db8e977947a5b0543a2041b046e5a3dfa0abdc"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0/stderr.log",
+      "size_bytes": 4794,
+      "sha256": "998f5da8ea4b8ed09c7df25e05f14406ed179eb7d25777177b4f99173902972a"
+    },
+    {
+      "path": "/tmp/foodstateedit_day8_fork_3d_vace_compare_v0/command.json",
+      "size_bytes": 668,
+      "sha256": "8770d14bfdaaeef56fe77eacc75753c96067885bb69061e5ed66c1699a03d8b0"
+    }
+  ],
+  "finished_at": "2026-08-31T01:04:11.971621+00:00",
+  "wall_time_seconds": 958.789
+}

@@ -59,3 +59,12 @@ continuous wrap/contact, plate-connected lifted strands, source reduction, and
 absence of duplicate utensils; and (2) metal/food texture, lighting, seam,
 shadow, and background realism. Exact protection outside the Day 8 motion
 support is a technical invariant, not a substitute for either visual verdict.
+
+## Completion update
+
+gp39 later became fully idle and the same frozen launcher passed all `36/36`
+checks on physical GPU 0. The run completed with one pipeline load, 21 decoded
+frames, and zero change outside motion support. The separate visual verdict is
+recorded in `DAY8_VACE_FORK_3D_REVIEW.md`: fork identity improved, but wrapped
+and lifted spaghetti remained absent, so strict action and photo success are
+both false.

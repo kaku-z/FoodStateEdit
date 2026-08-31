@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "fork_3d_projection_v0.json"
 VACE_COMPARE_CONFIG = ROOT / "configs" / "vace_fork_3d_projection_compare_v0.json"
 VACE_PREFLIGHT_REPORT = ROOT / "results" / "day8_vace_fork_3d_compare_preflight_gp39_v0.json"
+VACE_RESULT_ROOT = ROOT / "results" / "day8_vace_fork_3d_compare_v0"
 RESULT_ROOT = ROOT / "results" / "day8_fork_3d_projection_v0"
 
 
@@ -178,6 +179,47 @@ class Projection3DTests(unittest.TestCase):
             {process["owner"] for process in failed[0]["actual"]["processes"]},
             {"xiong-p"},
         )
+
+    def test_completed_vace_comparison_is_hash_verified_and_exactly_protected(self):
+        run = json.loads((VACE_RESULT_ROOT / "run_manifest.json").read_text(encoding="utf-8"))
+        passing_preflight = json.loads((VACE_RESULT_ROOT / "preflight.json").read_text(encoding="utf-8"))
+        evidence = json.loads((VACE_RESULT_ROOT / "evidence_manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(run["status"], "complete_requires_separate_action_and_photo_review")
+        self.assertTrue(passing_preflight["ready"])
+        self.assertTrue(all(check["passed"] for check in passing_preflight["checks"]))
+        self.assertEqual(len(passing_preflight["checks"]), 36)
+        self.assertEqual(run["inference"]["pipeline_load_count"], 1)
+        self.assertEqual(run["inference"]["decoded_frames"], 21)
+        self.assertEqual(run["inference"]["outside_motion_support_max_pixel_difference"], 0)
+        self.assertEqual(evidence["source_video"]["sha256"], "dbac7be2a7ffb4c1cb996f960e04f799542f1875e7fd16d231155af863b045c4")
+        self.assertFalse(evidence["source_video"]["tracked_in_git"])
+        self.assertEqual(
+            evidence["builder_sha256"],
+            sha256_file(ROOT / "scripts" / "make_day8_fork_3d_vace_review.py"),
+        )
+        for name, record in evidence["files"].items():
+            path = VACE_RESULT_ROOT / name
+            self.assertEqual(path.stat().st_size, record["size_bytes"])
+            self.assertEqual(sha256_file(path), record["sha256"])
+        self.assertFalse((VACE_RESULT_ROOT / "result.mp4").exists())
+
+    def test_completed_vace_review_separates_rigid_signal_from_action_failure(self):
+        review = json.loads((VACE_RESULT_ROOT / "internal_visual_review_v0.json").read_text(encoding="utf-8"))
+        self.assertFalse(review["day6_planar"]["action_success"])
+        self.assertFalse(review["day8_relative_3d"]["action_success"])
+        self.assertFalse(review["day8_relative_3d"]["photo_success"])
+        self.assertTrue(review["relative_conclusion"]["utensil_identity_improved"])
+        self.assertTrue(review["relative_conclusion"]["utensil_trajectory_improved"])
+        self.assertFalse(review["relative_conclusion"]["food_motion_improved"])
+        self.assertIn("DO_NOT_EXPAND_SEEDS", review["decision"])
+
+        baselines = json.loads((ROOT / "configs" / "baselines_v1.json").read_text(encoding="utf-8"))
+        gate = baselines["day8_fork_3d_vace_gate"]
+        self.assertEqual(gate["technical_complete"], 1)
+        self.assertEqual(gate["provisional_action_success"], 0)
+        self.assertEqual(gate["provisional_photo_success"], 0)
+        self.assertEqual(gate["rigid_utensil_topology_signal"], 1)
+        self.assertEqual(gate["deformable_payload_signal"], 0)
 
 
 if __name__ == "__main__":
