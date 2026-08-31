@@ -86,6 +86,18 @@ class Day9ActionAdapterTests(unittest.TestCase):
         self.assertEqual(config["launcher"]["preflight_sha256"], sha256_file(preflight_path))
         self.assertEqual(config["launcher"]["runner_sha256"], sha256_file(runner_path))
 
+    def test_action_checkpoint_validator_is_offline_and_claim_limited(self):
+        validator = (ROOT / "scripts" / "validate_adapter_action_lora_checkpoint.py").read_text(encoding="utf-8")
+        self.assertIn("--expected-sha256", validator)
+        self.assertIn("Refusing to overwrite report", validator)
+        self.assertIn('os.environ["CUDA_VISIBLE_DEVICES"] = ""', validator)
+        self.assertIn("safe_open", validator)
+        self.assertIn("torch.isfinite", validator)
+        self.assertIn("pipe.load_lora(pipe.vace", validator)
+        self.assertIn("tokenizer_config=None", validator)
+        self.assertIn("redirect_common_files=False", validator)
+        self.assertIn("synthetic pseudo-targets", validator)
+
 
 if __name__ == "__main__":
     unittest.main()
