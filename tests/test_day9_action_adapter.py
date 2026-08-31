@@ -10,6 +10,7 @@ AUDIT = ROOT / "results" / "day9_action_target_audit_v1.json"
 SUMMARY = ROOT / "results" / "day9_action_pseudo_dataset_v3" / "summary.json"
 FORK_EVAL_CONFIG = ROOT / "configs" / "vace_fork_action_lora_eval_v1.json"
 FORK_EVAL_V2_CONFIG = ROOT / "configs" / "vace_fork_action_lora_eval_v2.json"
+RESULT = ROOT / "results" / "day9_action_adapter_result_v1.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -156,6 +157,32 @@ class Day9ActionAdapterTests(unittest.TestCase):
         self.assertIn("torch.nn.functional.linear(torch.nn.functional.linear", runner)
         self.assertIn("Expected {EXPECTED_INJECTIONS} LoRA pairs", runner)
         self.assertIn("Completed inference did not record all expected LoRA injections", runner)
+
+    def test_completed_blind_result_separates_execution_from_action_failure(self):
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        self.assertEqual(result["training"]["checkpoint_pair_count"], 80)
+        self.assertTrue(result["training"]["all_checkpoint_tensors_nonzero"])
+        self.assertEqual(result["zero_effect_v1"]["runtime_hotload_count"], 0)
+        self.assertTrue(result["zero_effect_v1"]["edited_2d_equal_to_day8"])
+        self.assertEqual(result["corrected_v2"]["runtime_injected_linear_count"], 80)
+        self.assertEqual(result["corrected_v2"]["decoded_frames"], 21)
+        self.assertEqual(result["corrected_v2"]["outside_motion_support_max_pixel_difference"], 0)
+        self.assertTrue(result["corrected_v2"]["lora_on_differs_from_lora_off"])
+        self.assertGreater(result["corrected_v2"]["selected_projected_rgb_mae_vs_lora_off_inside_support"], 0)
+        self.assertFalse(result["blind_review"]["action_success"])
+        self.assertFalse(result["blind_review"]["contact_success"])
+        self.assertFalse(result["blind_review"]["photo_realism_success"])
+        self.assertFalse(result["blind_review"]["semantic_improvement_over_lora_off"])
+        self.assertTrue(result["decision"]["adapter_execution_problem_resolved"])
+        self.assertFalse(result["decision"]["blind_cross_family_action_problem_resolved"])
+        self.assertFalse(result["decision"]["generalization_claim_allowed"])
+
+        baselines = json.loads((ROOT / "configs" / "baselines_v1.json").read_text(encoding="utf-8"))
+        gate = baselines["day9_action_adapter_gate"]
+        self.assertEqual(gate["corrected_runtime_injected_linear_count"], 80)
+        self.assertEqual(gate["provisional_action_success"], 0)
+        self.assertEqual(gate["provisional_photo_success"], 0)
+        self.assertEqual(gate["status"], "CLOSED_BLIND_NEGATIVE_NEXT_GATE_SEEN_FAMILY_UNDERFIT_CHECK")
 
 
 if __name__ == "__main__":

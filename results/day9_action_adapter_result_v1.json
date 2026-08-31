@@ -1,0 +1,72 @@
+{
+  "schema_version": "foodstateedit.day9_action_adapter_result.v1",
+  "review_date": "2026-08-31",
+  "scientific_status": "closed_negative_blind_mechanism_pilot_not_generalization",
+  "training": {
+    "status": "complete",
+    "sample_count": 2,
+    "real_photo_target_count": 0,
+    "synthetic_pseudotarget_count": 2,
+    "optimizer_steps": 16,
+    "run_manifest_sha256": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e",
+    "step_8_sha256": "28501eb58ee80dd3b3fa92283b49b344af22b8fab0dd1f99fb0876ab15c8864d",
+    "step_16_sha256": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0",
+    "checkpoint_validation_sha256": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c",
+    "checkpoint_tensor_count": 160,
+    "checkpoint_pair_count": 80,
+    "all_checkpoint_tensors_nonzero": true,
+    "official_single_model_loader_updated_tensor_count": 80
+  },
+  "held_out": {
+    "family": "fork_twirl_and_lift",
+    "anchor": "pasta_fork_001",
+    "training_occurrences": 0,
+    "seed": 1,
+    "selected_frame_index": 18
+  },
+  "zero_effect_v1": {
+    "run_manifest_sha256": "a36c75bb5f2eb451753d39ac72361e48911e16c7d99ea5e52597890a7191aab7",
+    "runtime_hotload_count": 0,
+    "result_mp4_equal_to_day8": true,
+    "raw_selected_frame_equal_to_day8": true,
+    "edited_2d_equal_to_day8": true,
+    "cause": "The low-VRAM runtime wraps full VACE attention blocks, so the stock hot-loader sees no AutoWrappedLinear descendant and applies zero LoRA pairs."
+  },
+  "corrected_v2": {
+    "config_sha256": "d93f9cadf39f19e1f7d47e36d318562db0edd26f55237d466a6fd933212ebba1",
+    "preflight_sha256": "c27fba4a68cf3e1e5ac38c1eeaf9ad8e72aca8fa0e89909df6231903d9f7c02d",
+    "run_manifest_sha256": "80470f2a15ae1fd5310f1d727a591b22f6c6676191dbd29ff576f3d484c5be67",
+    "result_mp4_sha256": "85f170e2b6b795a8afd4fd9fb952b2d47348a926fa3572b7f87a0a1927fc382c",
+    "raw_selected_frame_sha256": "b28e7f192d0e21c4a40af1895bc1122c21149b8e3afc95157e7f715e1a79d0bf",
+    "edited_2d_sha256": "c7709af7cc2288b6be627852204893b371928788b808575ea8d957a1fb19ee5e",
+    "pipeline_load_count": 1,
+    "lora_load_count": 1,
+    "runtime_injected_linear_count": 80,
+    "checkpoint_pair_count": 80,
+    "decoded_frames": 21,
+    "outside_motion_support_max_pixel_difference": 0,
+    "lora_on_differs_from_lora_off": true,
+    "selected_raw_rgb_mae_vs_lora_off": 2.554098898390878,
+    "selected_projected_rgb_mae_vs_lora_off_global": 0.40711000772591643,
+    "selected_projected_rgb_mae_vs_lora_off_inside_support": 2.5393415381419744,
+    "selected_projected_changed_pixel_fraction_inside_support": 0.908210001557875
+  },
+  "blind_review": {
+    "frames_reviewed": [0, 5, 10, 15, 18, 20],
+    "action_success": false,
+    "contact_success": false,
+    "photo_realism_success": false,
+    "rigid_fork_visible": true,
+    "wrapped_spaghetti_visible": false,
+    "lifted_payload_visible": false,
+    "plate_connected_strand_visible": false,
+    "semantic_improvement_over_lora_off": false,
+    "diagnostic": "LoRA-on makes a small, distributed pixel change but preserves the LoRA-off action semantics: one fork enters from the right and presses into sauce near the plate edge. No spaghetti wraps the tines, rises with the fork, or remains visibly connected to the plate."
+  },
+  "decision": {
+    "adapter_execution_problem_resolved": true,
+    "blind_cross_family_action_problem_resolved": false,
+    "generalization_claim_allowed": false,
+    "next_required_gate": "Evaluate LoRA-off/on on the two seen training families. If seen-family binding does not improve, increase supervision/optimization; if it improves only on seen families, expand balanced action data before a new held-out test."
+  }
+}

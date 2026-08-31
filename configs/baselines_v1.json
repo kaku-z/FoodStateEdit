@@ -285,5 +285,27 @@
     "deformable_payload_signal": 0,
     "diagnostic": "Relative-3-D conditioning changes the Day 6 spoon-like metal blob into one recognizable moving fork, but VACE discards the projected helical spaghetti and renders no wrapped, lifted, plate-connected payload.",
     "status": "CLOSED_SINGLE_ANCHOR_RENDER_NEGATIVE_WITH_RIGID_TOPOLOGY_SIGNAL_DO_NOT_EXPAND_SEEDS"
+  },
+  "day9_action_adapter_gate": {
+    "candidate": "foodstateedit_vace_lora_action_pseudo_v1",
+    "scientific_status": "blind_cross_family_mechanism_pilot_not_generalization",
+    "training_config": "configs/adapter_action_pseudo_v1.json",
+    "evaluation_config": "configs/vace_fork_action_lora_eval_v2.json",
+    "real_photo_target_count": 0,
+    "synthetic_pseudotarget_count": 2,
+    "optimizer_steps": 16,
+    "checkpoint_validation_complete": 1,
+    "held_out_fork_training_occurrences": 0,
+    "preserved_zero_patch_runtime_failures": 1,
+    "corrected_runtime_injected_linear_count": 80,
+    "technical_complete": 1,
+    "technical_failure": 0,
+    "lora_on_differs_numerically_from_lora_off": true,
+    "provisional_action_success": 0,
+    "provisional_contact_success": 0,
+    "provisional_photo_success": 0,
+    "exact_source_protection_success": 1,
+    "diagnostic": "Corrected LoRA injection changes pixels but not fork-pasta topology: the fork presses into sauce without wrapped, lifted, plate-connected spaghetti.",
+    "status": "CLOSED_BLIND_NEGATIVE_NEXT_GATE_SEEN_FAMILY_UNDERFIT_CHECK"
   }
 }

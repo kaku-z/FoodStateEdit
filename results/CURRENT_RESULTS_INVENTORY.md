@@ -126,7 +126,7 @@ This section updates the dated sprint-start snapshot without rewriting it.
   expansion. The next eligible gate is non-identity action supervision for the
   VACE adapter, not additional hand-designed geometry alone.
 
-## Sprint additions through the Day 9 freeze
+## Sprint additions through the Day 9 result
 
 - A stricter target audit found zero real-photo action targets suitable for
   formal adapter training. Exactly two synthetic ImageGen pseudo-targets are
@@ -142,5 +142,18 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - Pasta/fork occurs zero times in training. It remains the blind same-seed
   LoRA-off/on mechanism test after checkpoint validation.
 - The adapter pilot is frozen at two pseudo-targets, rank 8, 16 optimizer steps,
-  offline existing models only. Even a positive fork result will not establish
-  real-data training, broad action generalization, or paper-level photo realism.
+  offline existing models only. Training and official checkpoint validation
+  completed on gp39; the final checkpoint has 80 finite, nonzero LoRA pairs.
+- The first full-pipeline LoRA run exposed a frozen-runtime incompatibility:
+  the stock low-VRAM hot-loader patched zero VACE layers, producing files
+  byte-identical to Day 8. The failure is preserved and excluded from adapter
+  quality conclusions.
+- Corrected inner-block injection reached all 80 high-noise VACE targets. The
+  LoRA-on result then differed numerically from LoRA-off while preserving every
+  pixel outside the motion support, proving that the adapter reached inference.
+- The blind action still failed. Across six key frames, the fork presses into
+  sauce but never wraps, lifts, or retains a plate-connected spaghetti strand.
+  Strict action/contact and photo success remain `0/1`; no generalization claim
+  is allowed.
+- The next gate is a seen-family LoRA-off/on evaluation on the udon and broth
+  training anchors, separating underfitting from cross-family transfer failure.
