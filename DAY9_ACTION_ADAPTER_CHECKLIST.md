@@ -9,6 +9,7 @@
 - [x] Freeze offline trainer/model/data/resource/claim contracts.
 - [x] Add fail-closed preflight and launcher.
 - [x] Pass the Day 9 tests and the full 75-test regression suite.
+- [x] Preserve the v1 remote preflight blocked by a 62-character copied tokenizer hash; correct it to the previously verified 64-character Day 7 hash without creating a training output.
 - [ ] Upload and hash-verify a new immutable runtime bundle and v3 dataset.
 - [ ] Run only on a safe idle RTX A6000; preserve any failure directory.
 - [ ] Validate the final checkpoint with the official offline VACE LoRA loader.
