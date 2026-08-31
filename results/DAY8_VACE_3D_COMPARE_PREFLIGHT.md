@@ -41,6 +41,11 @@ utilization with active `VLLM::Worker` processes owned by another user. This
 fails the no-process and utilization gates even though the processes reserve
 little VRAM.
 
+The frozen package was uploaded to gp39 and verified byte for byte. The
+machine-readable preflight passed `35/36` checks; `gpu_gate` was the sole
+failure, and the output directory remained absent. Preserved report SHA-256:
+`ee425d1742dcd33e0c4e8db235dfc83cabc81a02c3aeebabce57bceedc607b1a`.
+
 The launcher therefore remains blocked. It requires an A6000 with at least
 48,000 MiB free, at most 5% utilization, no compute process, and at least
 80,000 MiB available host memory. It never terminates or modifies another

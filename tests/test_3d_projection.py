@@ -21,6 +21,7 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "fork_3d_projection_v0.json"
 VACE_COMPARE_CONFIG = ROOT / "configs" / "vace_fork_3d_projection_compare_v0.json"
+VACE_PREFLIGHT_REPORT = ROOT / "results" / "day8_vace_fork_3d_compare_preflight_gp39_v0.json"
 RESULT_ROOT = ROOT / "results" / "day8_fork_3d_projection_v0"
 
 
@@ -163,6 +164,20 @@ class Projection3DTests(unittest.TestCase):
             self.assertNotIn("from_pretrained", source)
             self.assertNotIn("snapshot_download", source)
             self.assertNotIn("requests", source)
+
+    def test_remote_vace_preflight_failed_only_the_occupied_gpu_gate(self):
+        report = json.loads(VACE_PREFLIGHT_REPORT.read_text(encoding="utf-8"))
+        self.assertFalse(report["ready"])
+        self.assertIsNone(report["selected_gpu"])
+        self.assertEqual(report["config_sha256"], sha256_file(VACE_COMPARE_CONFIG))
+        failed = [check for check in report["checks"] if not check["passed"]]
+        self.assertEqual(len(report["checks"]), 36)
+        self.assertEqual([check["id"] for check in failed], ["gpu_gate"])
+        self.assertEqual(failed[0]["actual"]["safe_gpu_indices"], [])
+        self.assertEqual(
+            {process["owner"] for process in failed[0]["actual"]["processes"]},
+            {"xiong-p"},
+        )
 
 
 if __name__ == "__main__":

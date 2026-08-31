@@ -11,3 +11,4 @@ scripts/build_fork_3d_projection_control.py -text
 configs/vace_fork_3d_projection_compare_v0.json -text
 scripts/preflight_vace_fork_3d_compare.py -text
 scripts/run_vace_fork_3d_compare.py -text
+results/day8_vace_fork_3d_compare_preflight_gp39_v0.json -text

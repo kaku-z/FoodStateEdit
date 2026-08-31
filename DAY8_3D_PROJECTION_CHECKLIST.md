@@ -29,6 +29,8 @@ remains the only preserved `VGGT -> reconstructed 3-D -> projection` example.
 
 - [x] Freeze one same-seed VACE rendering configuration and fail-closed GPU
   preflight before seeing stochastic output.
+- [x] Upload and hash-verify the frozen inputs/launchers on gp39; remote
+  preflight passed 35/36 checks and failed only the occupied-GPU gate.
 - [ ] Run the frozen VACE rendering comparison when one A6000 is genuinely idle.
 - [ ] Compare action/contact and photo realism separately against the Day 6 2-D
   dynamic-multikey control without changing seed or frame selection.
