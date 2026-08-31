@@ -1,0 +1,398 @@
+{
+  "schema_version": "foodstateedit.vace_fork_action_lora_preflight.v1",
+  "ready": true,
+  "selected_gpu": 0,
+  "config_sha256": "99d7cf4dd0e541e8d93bc0e3b2d98c250db00275bdfb3940a16414f04ab3fc05",
+  "checks": [
+    {
+      "id": "method",
+      "passed": true,
+      "actual": "vace_fork_action_lora_blind_eval_v1",
+      "criterion": "vace_fork_action_lora_blind_eval_v1"
+    },
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "blind_cross_family_mechanism_pilot_not_generalization",
+      "criterion": "Blind fork pilot with fork absent from training; not a generalization claim."
+    },
+    {
+      "id": "input_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0",
+      "criterion": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0"
+    },
+    {
+      "id": "output_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day9_action_pseudo_fork_eval_v1",
+      "criterion": "/tmp/foodstateedit_day9_action_pseudo_fork_eval_v1"
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day9_action_pseudo_fork_eval_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "launcher_hash:preflight",
+      "passed": true,
+      "actual": "83dbc20af898fabea3142169f58a0bbc6571c7314204f0c4afc6d5cb2328dceb",
+      "criterion": "83dbc20af898fabea3142169f58a0bbc6571c7314204f0c4afc6d5cb2328dceb"
+    },
+    {
+      "id": "launcher_hash:runner",
+      "passed": true,
+      "actual": "9403a7b35f03528028cc0101e0c7691af60c45bf95211332a78eb530acaf2be8",
+      "criterion": "9403a7b35f03528028cc0101e0c7691af60c45bf95211332a78eb530acaf2be8"
+    },
+    {
+      "id": "control_size:run_manifest.json",
+      "passed": true,
+      "actual": 12440,
+      "criterion": "12440"
+    },
+    {
+      "id": "control_hash:run_manifest.json",
+      "passed": true,
+      "actual": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15",
+      "criterion": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15"
+    },
+    {
+      "id": "control_size:first_frame.png",
+      "passed": true,
+      "actual": 692053,
+      "criterion": "692053"
+    },
+    {
+      "id": "control_hash:first_frame.png",
+      "passed": true,
+      "actual": "505cba86cda5d10139381491bba3d17add095fca2d8d2c445352373d532cf684",
+      "criterion": "505cba86cda5d10139381491bba3d17add095fca2d8d2c445352373d532cf684"
+    },
+    {
+      "id": "control_size:dynamic_control.mp4",
+      "passed": true,
+      "actual": 226748,
+      "criterion": "226748"
+    },
+    {
+      "id": "control_hash:dynamic_control.mp4",
+      "passed": true,
+      "actual": "3ea7b30f0cd3de411fff9c47c41fd4348768f5e3d8652a35860ab16ae1b55b87",
+      "criterion": "3ea7b30f0cd3de411fff9c47c41fd4348768f5e3d8652a35860ab16ae1b55b87"
+    },
+    {
+      "id": "control_size:dynamic_mask.mp4",
+      "passed": true,
+      "actual": 29737,
+      "criterion": "29737"
+    },
+    {
+      "id": "control_hash:dynamic_mask.mp4",
+      "passed": true,
+      "actual": "ee4fa6bd5a7a10dce7561dd66e97753cc213985bf7f9b9096b27a02f929c8b5a",
+      "criterion": "ee4fa6bd5a7a10dce7561dd66e97753cc213985bf7f9b9096b27a02f929c8b5a"
+    },
+    {
+      "id": "control_size:motion_union_alpha.png",
+      "passed": true,
+      "actual": 7849,
+      "criterion": "7849"
+    },
+    {
+      "id": "control_hash:motion_union_alpha.png",
+      "passed": true,
+      "actual": "3776195165bd150d96c08287cc788278faabef93a484b865e2ee138ab7099d43",
+      "criterion": "3776195165bd150d96c08287cc788278faabef93a484b865e2ee138ab7099d43"
+    },
+    {
+      "id": "control_anchor",
+      "passed": true,
+      "actual": "pasta_fork_001",
+      "criterion": "pasta_fork_001"
+    },
+    {
+      "id": "control_geometry",
+      "passed": true,
+      "actual": "relative_3d_normalized_pinhole",
+      "criterion": "relative_3d_normalized_pinhole"
+    },
+    {
+      "id": "control_frames",
+      "passed": true,
+      "actual": 21,
+      "criterion": "21"
+    },
+    {
+      "id": "depth_crossing",
+      "passed": true,
+      "actual": true,
+      "criterion": "Selected helix crosses fork depth."
+    },
+    {
+      "id": "checkpoint_size",
+      "passed": true,
+      "actual": 15354160,
+      "criterion": "15354160"
+    },
+    {
+      "id": "checkpoint_hash",
+      "passed": true,
+      "actual": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0",
+      "criterion": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0"
+    },
+    {
+      "id": "fork_training_occurrences",
+      "passed": true,
+      "actual": 0,
+      "criterion": "0"
+    },
+    {
+      "id": "lora_alpha",
+      "passed": true,
+      "actual": 1.0,
+      "criterion": "1.0"
+    },
+    {
+      "id": "training_manifest_hash",
+      "passed": true,
+      "actual": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e",
+      "criterion": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e"
+    },
+    {
+      "id": "training_status",
+      "passed": true,
+      "actual": "complete_requires_blind_fork_evaluation",
+      "criterion": "complete_requires_blind_fork_evaluation"
+    },
+    {
+      "id": "training_checkpoint_record",
+      "passed": true,
+      "actual": {
+        "path": "step-16.safetensors",
+        "size_bytes": 15354160,
+        "sha256": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0"
+      },
+      "criterion": "Training manifest records the exact evaluation checkpoint."
+    },
+    {
+      "id": "validation_hash",
+      "passed": true,
+      "actual": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c",
+      "criterion": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c"
+    },
+    {
+      "id": "validation_status",
+      "passed": true,
+      "actual": "complete",
+      "criterion": "complete"
+    },
+    {
+      "id": "validation_checkpoint_hash",
+      "passed": true,
+      "actual": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0",
+      "criterion": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0"
+    },
+    {
+      "id": "validation_updated_tensors",
+      "passed": true,
+      "actual": 80,
+      "criterion": "80"
+    },
+    {
+      "id": "runtime_hash:geoedit/inference.py",
+      "passed": true,
+      "actual": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "criterion": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1"
+    },
+    {
+      "id": "runtime_hash:diffsynth/pipelines/wan_video.py",
+      "passed": true,
+      "actual": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "criterion": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5"
+    },
+    {
+      "id": "runtime_hash:diffsynth/utils/data/__init__.py",
+      "passed": true,
+      "actual": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "criterion": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360"
+    },
+    {
+      "id": "runtime_hash:tests/test_masks.py",
+      "passed": true,
+      "actual": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421",
+      "criterion": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    {
+      "id": "model_audit_hash",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_audited_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected SHA-256 occurs in frozen audit."
+    },
+    {
+      "id": "model_size:low_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_audited_hash:low_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected SHA-256 occurs in frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_audited_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected SHA-256 occurs in frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_audited_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected SHA-256 occurs in frozen audit."
+    },
+    {
+      "id": "runtime_import",
+      "passed": true,
+      "actual": {
+        "return_code": 0,
+        "stderr": "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.\n  warnings.warn(\n"
+      },
+      "criterion": "Frozen runtime imports offline."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 223908,
+      "criterion": ">=80000 MiB"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": true,
+      "actual": {
+        "requested": 0,
+        "safe_gpu_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "gpus": [
+          {
+            "index": 0,
+            "uuid": "GPU-e18a6f51-7f14-da5d-45f8-e1adc61338d3",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 1,
+            "uuid": "GPU-50a76049-6955-9af3-0b99-15edd12da263",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 2,
+            "uuid": "GPU-19d67ac1-c74e-0ad8-9f96-97f1aa63fedc",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 3,
+            "uuid": "GPU-7216fc4d-bd58-0bd1-21d8-49d3774c9d28",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 4,
+            "uuid": "GPU-bb365dd9-8000-7d14-a39f-b5baca73d4d6",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 5,
+            "uuid": "GPU-9b5470ea-20ce-49ad-d004-dc629687dcdf",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 6,
+            "uuid": "GPU-97dd18b2-f0c3-188e-7dbf-1e991702cd3f",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 7,
+            "uuid": "GPU-d0dc9a96-72da-f953-7188-d3d9687e537d",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          }
+        ],
+        "processes": []
+      },
+      "criterion": "One conflict-free A6000 satisfies the frozen gate."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "foodstateedit.vace_fork_action_lora_eval.v2",
+  "freeze_date": "2026-08-31",
+  "method": "vace_fork_action_lora_blind_eval_v1",
+  "execution_revision": "v2_vace_block_inner_linear_injection",
+  "scientific_status": "blind_cross_family_mechanism_pilot_not_generalization",
+  "hypothesis": "A VACE LoRA trained only on non-identity chopstick-strand and spoon-liquid synthetic pseudo-targets improves utensil-food binding on the held-out fork-pasta anchor relative to the otherwise identical Day 8 LoRA-off render.",
+  "claim_limit": "This is one blind cross-family mechanism pilot trained from two synthetic pseudo-targets. It cannot establish category generalization, real-data performance, recovered metric depth, or publication-level photo realism.",
+  "isolation_contract": "The Day 8 control, prompt, negative prompt, seed, dimensions, frame count, schedule, VACE scale, TTM setting, selected frame, and projection alpha are unchanged. Runtime injection of the frozen step-16 high-noise VACE LoRA at alpha 1.0 is the only inference change.",
+  "implementation_correction": {
+    "preserved_v1_run_manifest_sha256": "a36c75bb5f2eb451753d39ac72361e48911e16c7d99ea5e52597890a7191aab7",
+    "preserved_v1_stdout_sha256": "da112cdde2cc1562cd3cdd1793cca073838bdd08bb3355c02650a26f187b652a",
+    "observed_v1_hotload_count": 0,
+    "observed_v1_output_equals_day8_byte_for_byte": true,
+    "cause": "The frozen low-VRAM map wraps each VACE attention block as AutoWrappedModule, so BasePipeline.load_lora hot-loading finds zero AutoWrappedLinear descendants.",
+    "correction": "Install each low-rank A/B branch on the wrapped high-noise VACE block's inner Linear before that block is moved to the GPU; do not fuse into BF16 base weights and do not touch vace2."
+  },
+  "launcher": {
+    "preflight": {
+      "path": "scripts/preflight_vace_fork_action_lora_eval.py",
+      "sha256": "83dbc20af898fabea3142169f58a0bbc6571c7314204f0c4afc6d5cb2328dceb"
+    },
+    "runner": {
+      "path": "scripts/run_vace_fork_action_lora_eval_v2.py",
+      "sha256": "0af6a45ba1d8046288b7647291b82846f183b4b9a060e9629409f30c9c7bc209"
+    },
+    "delegated_runner": {
+      "path": "scripts/run_vace_fork_action_lora_eval.py",
+      "sha256": "9403a7b35f03528028cc0101e0c7691af60c45bf95211332a78eb530acaf2be8"
+    }
+  },
+  "control": {
+    "anchor_id": "pasta_fork_001",
+    "geometry_source": "relative_3d_normalized_pinhole",
+    "day8_config_sha256": "e3776437767663a82e48fa980cfc7e2bc187162d7dcf827207529d381e64a219",
+    "remote_root": "/tmp/foodstateedit_day8_fork_3d_vace_inputs_v0",
+    "files": {
+      "run_manifest.json": {"size_bytes": 12440, "sha256": "7a22f15e93f595193dd295f43812c4fe841eb442a6698e843e41d9206ffaab15"},
+      "first_frame.png": {"size_bytes": 692053, "sha256": "505cba86cda5d10139381491bba3d17add095fca2d8d2c445352373d532cf684"},
+      "dynamic_control.mp4": {"size_bytes": 226748, "sha256": "3ea7b30f0cd3de411fff9c47c41fd4348768f5e3d8652a35860ab16ae1b55b87"},
+      "dynamic_mask.mp4": {"size_bytes": 29737, "sha256": "ee4fa6bd5a7a10dce7561dd66e97753cc213985bf7f9b9096b27a02f929c8b5a"},
+      "motion_union_alpha.png": {"size_bytes": 7849, "sha256": "3776195165bd150d96c08287cc788278faabef93a484b865e2ee138ab7099d43"}
+    }
+  },
+  "adapter": {
+    "training_method": "foodstateedit_vace_lora_action_pseudo_v1",
+    "training_config_sha256": "f58f50b6ba4bd2fe7387d6b50a2d3d50ebb474aa9840b4d9b15726a1207db883",
+    "training_manifest": {
+      "path": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1/run_manifest.json",
+      "size_bytes": 2101,
+      "sha256": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e"
+    },
+    "checkpoint": {
+      "path": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1/step-16.safetensors",
+      "size_bytes": 15354160,
+      "sha256": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0"
+    },
+    "validation": {
+      "path": "/tmp/foodstateedit_day9_action_checkpoint_validation_v1.json",
+      "size_bytes": 26784,
+      "sha256": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c",
+      "official_loader_updated_tensor_count": 80
+    },
+    "alpha": 1.0,
+    "runtime_injection": {
+      "target": "high_noise_pipe.vace_only",
+      "mode": "vace_block_inner_linear_low_rank_branch",
+      "expected_pair_count": 80,
+      "expected_tensor_count": 160,
+      "require_nonzero_tensor_abs_max": true,
+      "forbid_bf16_base_weight_fusion": true,
+      "forbid_low_noise_vace2_modification": true
+    },
+    "held_out": {
+      "family": "fork_twirl_and_lift",
+      "anchor": "pasta_fork_001",
+      "training_occurrences": 0
+    }
+  },
+  "day8_lora_off_baseline": {
+    "method": "vace_fork_relative_3d_projection_compare_v0",
+    "run_manifest_sha256": "832c644b00db6a3eaadc556ee55b628d4a5248e86a42d75d68b21d91f42e7c9c",
+    "edited_2d_sha256": "727071883fc3727d3597b67e3e9ba55da3de8f21428a3bc87daee4491b476bf8",
+    "review": "Fork is recognizable but spaghetti is neither visibly wrapped around the tines nor lifted; strict action and photo-realism gates fail."
+  },
+  "inference": {
+    "model": "Wan2.2-VACE-Fun-A14B",
+    "width": 736,
+    "height": 544,
+    "num_frames": 21,
+    "fps": 15,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "seed": 1,
+    "selected_frame_index": 18,
+    "enable_ttm": false,
+    "projection_alpha": "motion_union_alpha.png",
+    "selection_policy": "frozen_before_inference_no_output_dependent_selection",
+    "prompt": "A realistic close-up food photograph of exactly one stainless-steel fork twirling and lifting several continuous spaghetti strands. Pasta visibly wraps the four tines and at least one strand remains connected to the plate. Preserve the sauce, eggplant, parsley, decorated plate, lighting, and background.",
+    "prompt_sha256_utf8": "5db4ee46812ad0230b02f699e719773e90be385166f9991b5529c3dfcfb0e1af",
+    "negative_prompt": "hand, arm, person, fingers, duplicate utensil, extra utensil, malformed utensil, fused chopsticks, third chopstick, disconnected food, duplicated food, floating payload, spill, source crater, background change, plate change, bowl change, blur, ghosting, text, watermark",
+    "negative_prompt_sha256_utf8": "ad22a27fd527b991dd227551b31f3b002e4aac784657227f1b3deef032dc2d7e"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "model_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"},
+      "low_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"},
+      "models_t5_umt5-xxl-enc-bf16.pth": {"size_bytes": 11361920418, "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"},
+      "Wan2.1_VAE.pth": {"size_bytes": 507609880, "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"}
+    },
+    "cache_root": "/tmp/foodstateedit_day9_action_pseudo_fork_eval_cache_v2",
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "output_root": "/tmp/foodstateedit_day9_action_pseudo_fork_eval_v2",
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "require_no_compute_process": true,
+    "min_available_system_memory_mib": 80000
+  }
+}

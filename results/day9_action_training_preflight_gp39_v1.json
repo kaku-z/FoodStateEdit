@@ -1,0 +1,769 @@
+{
+  "schema_version": "foodstateedit.adapter_action_preflight.v1",
+  "ready": true,
+  "selected_gpu": 0,
+  "config_sha256": "f58f50b6ba4bd2fe7387d6b50a2d3d50ebb474aa9840b4d9b15726a1207db883",
+  "dataset_manifest_sha256": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d",
+  "target_audit_sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+  "checks": [
+    {
+      "id": "method",
+      "passed": true,
+      "actual": "foodstateedit_vace_lora_action_pseudo_v1",
+      "criterion": "foodstateedit_vace_lora_action_pseudo_v1"
+    },
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "mechanism_pilot_with_synthetic_pseudotargets",
+      "criterion": "mechanism_pilot_with_synthetic_pseudotargets"
+    },
+    {
+      "id": "claim_limit",
+      "passed": true,
+      "actual": "This two-pseudo-target run tests whether non-identity supervision can improve utensil-food binding. It is not real-data training and cannot establish action generalization or photo realism.",
+      "criterion": "Must explicitly exclude real-data and generalization/photo-realism claims."
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "frozen_output_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1",
+      "criterion": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1"
+    },
+    {
+      "id": "expected_optimizer_steps",
+      "passed": true,
+      "actual": 16,
+      "criterion": "sample_count * dataset_repeat * epochs"
+    },
+    {
+      "id": "preflight_sha256",
+      "passed": true,
+      "actual": "655a74a41acfec32d959c1697836f6538b89f2726d9afc5bdf35358e09a32d35",
+      "criterion": "655a74a41acfec32d959c1697836f6538b89f2726d9afc5bdf35358e09a32d35"
+    },
+    {
+      "id": "runner_sha256",
+      "passed": true,
+      "actual": "a609eca0b4676827982d255d4f4c538e9f7eb4eb75f49a70887e744c6ac9a955",
+      "criterion": "a609eca0b4676827982d255d4f4c538e9f7eb4eb75f49a70887e744c6ac9a955"
+    },
+    {
+      "id": "target_audit_hash",
+      "passed": true,
+      "actual": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+      "criterion": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea"
+    },
+    {
+      "id": "target_audit_counts",
+      "passed": true,
+      "actual": {
+        "eligible_primary_targets": [
+          "udon_chopsticks_imagegen_oracle",
+          "clear_broth_spoon_imagegen_oracle"
+        ],
+        "eligible_count": 2,
+        "real_photo_target_count": 0,
+        "synthetic_pseudotarget_count": 2,
+        "generalization_minimum_met": false,
+        "pilot_allowed": true,
+        "formal_training_allowed": false,
+        "next_test": "Train a small high-noise VACE-LoRA on the two disclosed pseudo-targets, then compare LoRA-off versus LoRA-on on the unchanged Day 8 pasta/fork control and seed."
+      },
+      "criterion": "Exactly two synthetic pseudo-targets and zero real-photo targets."
+    },
+    {
+      "id": "held_out_fork_policy",
+      "passed": true,
+      "actual": {
+        "family": "fork_twirl_and_lift",
+        "anchor": "pasta_fork_001",
+        "training_occurrences": 0,
+        "evaluation_policy": "same Day 8 control, prompt, seed, steps, VACE scale, TTM setting, selected frame, and projection alpha; only LoRA off/on may differ"
+      },
+      "criterion": "Fork twirl/lift is unseen in training."
+    },
+    {
+      "id": "trainer_script",
+      "passed": true,
+      "actual": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py",
+      "criterion": "Frozen trainer exists."
+    },
+    {
+      "id": "trainer_script_sha256",
+      "passed": true,
+      "actual": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+      "criterion": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41"
+    },
+    {
+      "id": "no_audio_wrapper_sha256",
+      "passed": true,
+      "actual": "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90",
+      "criterion": "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90"
+    },
+    {
+      "id": "dataset_builder_sha256_lf",
+      "passed": true,
+      "actual": "7a3adca3e8255f20207d188d7faf63c17b67327c5ae5778be9aa75972d41d178",
+      "criterion": "7a3adca3e8255f20207d188d7faf63c17b67327c5ae5778be9aa75972d41d178"
+    },
+    {
+      "id": "trainer_commit_marker",
+      "passed": true,
+      "actual": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+      "criterion": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191"
+    },
+    {
+      "id": "trainer_archive_marker",
+      "passed": true,
+      "actual": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228",
+      "criterion": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228"
+    },
+    {
+      "id": "model_audit",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_recorded_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full hash is in the frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_recorded_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full hash is in the frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_recorded_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full hash is in the frozen audit."
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": 6623,
+      "criterion": "6623"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "criterion": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": 4548313,
+      "criterion": "4548313"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "criterion": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": 16837417,
+      "criterion": "16837417"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "criterion": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": 61728,
+      "criterion": "61728"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "criterion": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05"
+    },
+    {
+      "id": "frozen_dataset_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3",
+      "criterion": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3"
+    },
+    {
+      "id": "dataset_manifest_hash",
+      "passed": true,
+      "actual": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d",
+      "criterion": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d"
+    },
+    {
+      "id": "dataset_contract",
+      "passed": true,
+      "actual": {
+        "scientific_status": "mechanism_pilot_with_synthetic_pseudotargets",
+        "target_policy": "disclosed_imagegen_pseudotarget_nonidentity",
+        "sample_count": 2,
+        "held_out": {
+          "family": "fork_twirl_and_lift",
+          "anchor": "pasta_fork_001",
+          "training_occurrences": 0
+        }
+      },
+      "criterion": "Two non-fork synthetic pseudo-targets under the frozen policy."
+    },
+    {
+      "id": "manifest_provenance",
+      "passed": true,
+      "actual": {
+        "builder": "build_adapter_action_pseudo_dataset.py",
+        "builder_sha256": "7a3adca3e8255f20207d188d7faf63c17b67327c5ae5778be9aa75972d41d178",
+        "builder_hash_policy": "sha256_lf_normalized",
+        "target_audit": "day9_action_target_audit_v1.json",
+        "target_audit_sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+        "created_at": "2026-08-31T05:30:09.613514+00:00"
+      },
+      "criterion": "Builder and target-audit hashes match the config."
+    },
+    {
+      "id": "metadata_hash",
+      "passed": true,
+      "actual": "9dc0af25eb733b59ca8cab5a8971f31ffd775431c35f52fe6dfb3fc82db61974",
+      "criterion": "9dc0af25eb733b59ca8cab5a8971f31ffd775431c35f52fe6dfb3fc82db61974"
+    },
+    {
+      "id": "metadata_rows",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "manifest_samples",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "pseudo_target_contract:0",
+      "passed": true,
+      "actual": {
+        "target_kind": "synthetic_imagegen_pseudotarget",
+        "real_photo_supervision": false,
+        "audit_candidate_id": "udon_chopsticks_imagegen_oracle",
+        "nonidentity_checks": {
+          "target_vs_control": {
+            "rgb_mae": 1.2543041087962963,
+            "changed_pixel_fraction": 0.048580830103359174,
+            "max_channel_difference": 215.0
+          },
+          "target_vs_reference": {
+            "rgb_mae": 1.1147641782407407,
+            "changed_pixel_fraction": 0.048580830103359174,
+            "max_channel_difference": 210.0
+          },
+          "target_video_hash_differs_from_control": true,
+          "target_outside_edit_support_max_difference": 0,
+          "control_outside_edit_support_max_difference": 0,
+          "edit_support_fraction": 0.05086199935400517
+        }
+      },
+      "criterion": "Disclosed non-identity pseudo-target with exact protected pixels and bounded support."
+    },
+    {
+      "id": "dataset_path:0:video",
+      "passed": true,
+      "actual": "video/udon_chopsticks_imagegen_pseudo_v1.mp4",
+      "criterion": "video/udon_chopsticks_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:0:video",
+      "passed": true,
+      "actual": 227060,
+      "criterion": "227060"
+    },
+    {
+      "id": "dataset_hash:0:video",
+      "passed": true,
+      "actual": "54a0e5348ac63a92caa2e7187a744ee2fbe6f89f15e6fc467d8511aa8750c016",
+      "criterion": "54a0e5348ac63a92caa2e7187a744ee2fbe6f89f15e6fc467d8511aa8750c016"
+    },
+    {
+      "id": "dataset_path:0:vace_video",
+      "passed": true,
+      "actual": "vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4",
+      "criterion": "vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:0:vace_video",
+      "passed": true,
+      "actual": 228080,
+      "criterion": "228080"
+    },
+    {
+      "id": "dataset_hash:0:vace_video",
+      "passed": true,
+      "actual": "c6e13b5cad0824be60001de8e5ed2efd8dfb8389e92bc1f327852b7e442fe8c3",
+      "criterion": "c6e13b5cad0824be60001de8e5ed2efd8dfb8389e92bc1f327852b7e442fe8c3"
+    },
+    {
+      "id": "dataset_path:0:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png",
+      "criterion": "vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png"
+    },
+    {
+      "id": "dataset_size:0:vace_reference_image",
+      "passed": true,
+      "actual": 684088,
+      "criterion": "684088"
+    },
+    {
+      "id": "dataset_hash:0:vace_reference_image",
+      "passed": true,
+      "actual": "3d9c0f00786545fcfde5c4741229f1c4d1054e2dbf92bd200b7ad695689c050d",
+      "criterion": "3d9c0f00786545fcfde5c4741229f1c4d1054e2dbf92bd200b7ad695689c050d"
+    },
+    {
+      "id": "dataset_size:0:target_keyframe",
+      "passed": true,
+      "actual": 684371,
+      "criterion": "684371"
+    },
+    {
+      "id": "dataset_hash:0:target_keyframe",
+      "passed": true,
+      "actual": "4906e4d54b5e78b4d285fe6f1854e59a46e9401844e004b5a3017ee8ab829f6c",
+      "criterion": "4906e4d54b5e78b4d285fe6f1854e59a46e9401844e004b5a3017ee8ab829f6c"
+    },
+    {
+      "id": "dataset_size:0:control_keyframe",
+      "passed": true,
+      "actual": 683242,
+      "criterion": "683242"
+    },
+    {
+      "id": "dataset_hash:0:control_keyframe",
+      "passed": true,
+      "actual": "b201114c7f19bfeb90811bd7e7964ae8c1da3b4eaa2e143e8ef74b2a2e549a73",
+      "criterion": "b201114c7f19bfeb90811bd7e7964ae8c1da3b4eaa2e143e8ef74b2a2e549a73"
+    },
+    {
+      "id": "dataset_size:0:edit_alpha",
+      "passed": true,
+      "actual": 11422,
+      "criterion": "11422"
+    },
+    {
+      "id": "dataset_hash:0:edit_alpha",
+      "passed": true,
+      "actual": "2b8cc7d280c6f3835f8c0a38fc1cc28a26b9487c09b3062590674261c2e04424",
+      "criterion": "2b8cc7d280c6f3835f8c0a38fc1cc28a26b9487c09b3062590674261c2e04424"
+    },
+    {
+      "id": "nonidentity_hash:0",
+      "passed": true,
+      "actual": {
+        "video": "54a0e5348ac63a92caa2e7187a744ee2fbe6f89f15e6fc467d8511aa8750c016",
+        "vace_video": "c6e13b5cad0824be60001de8e5ed2efd8dfb8389e92bc1f327852b7e442fe8c3"
+      },
+      "criterion": "Target and control hashes must differ."
+    },
+    {
+      "id": "pseudo_target_contract:1",
+      "passed": true,
+      "actual": {
+        "target_kind": "synthetic_imagegen_pseudotarget",
+        "real_photo_supervision": false,
+        "audit_candidate_id": "clear_broth_spoon_imagegen_oracle",
+        "nonidentity_checks": {
+          "target_vs_control": {
+            "rgb_mae": 3.1014087287015277,
+            "changed_pixel_fraction": 0.06390689262632197,
+            "max_channel_difference": 155.0
+          },
+          "target_vs_reference": {
+            "rgb_mae": 2.004301771200548,
+            "changed_pixel_fraction": 0.0655662455934195,
+            "max_channel_difference": 250.0
+          },
+          "target_video_hash_differs_from_control": true,
+          "target_outside_edit_support_max_difference": 0,
+          "control_outside_edit_support_max_difference": 0,
+          "edit_support_fraction": 0.06961249632784959
+        }
+      },
+      "criterion": "Disclosed non-identity pseudo-target with exact protected pixels and bounded support."
+    },
+    {
+      "id": "dataset_path:1:video",
+      "passed": true,
+      "actual": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "criterion": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:1:video",
+      "passed": true,
+      "actual": 95415,
+      "criterion": "95415"
+    },
+    {
+      "id": "dataset_hash:1:video",
+      "passed": true,
+      "actual": "95ba9657297f88c6f313ab056edd922409eabd793537b1c321a12de49b0b8c53",
+      "criterion": "95ba9657297f88c6f313ab056edd922409eabd793537b1c321a12de49b0b8c53"
+    },
+    {
+      "id": "dataset_path:1:vace_video",
+      "passed": true,
+      "actual": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "criterion": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:1:vace_video",
+      "passed": true,
+      "actual": 95026,
+      "criterion": "95026"
+    },
+    {
+      "id": "dataset_hash:1:vace_video",
+      "passed": true,
+      "actual": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6",
+      "criterion": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6"
+    },
+    {
+      "id": "dataset_path:1:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png",
+      "criterion": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png"
+    },
+    {
+      "id": "dataset_size:1:vace_reference_image",
+      "passed": true,
+      "actual": 697898,
+      "criterion": "697898"
+    },
+    {
+      "id": "dataset_hash:1:vace_reference_image",
+      "passed": true,
+      "actual": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838",
+      "criterion": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838"
+    },
+    {
+      "id": "dataset_size:1:target_keyframe",
+      "passed": true,
+      "actual": 706343,
+      "criterion": "706343"
+    },
+    {
+      "id": "dataset_hash:1:target_keyframe",
+      "passed": true,
+      "actual": "8f70bcd21f35d4a0582836213a7b146de6ba78d3724b35f486fe879c1e5eae65",
+      "criterion": "8f70bcd21f35d4a0582836213a7b146de6ba78d3724b35f486fe879c1e5eae65"
+    },
+    {
+      "id": "dataset_size:1:control_keyframe",
+      "passed": true,
+      "actual": 689761,
+      "criterion": "689761"
+    },
+    {
+      "id": "dataset_hash:1:control_keyframe",
+      "passed": true,
+      "actual": "4c963843aab1b0b4161a28e56bdba4f2a2b9bb1584ae7bc8159b52c6a6613ce4",
+      "criterion": "4c963843aab1b0b4161a28e56bdba4f2a2b9bb1584ae7bc8159b52c6a6613ce4"
+    },
+    {
+      "id": "dataset_size:1:edit_alpha",
+      "passed": true,
+      "actual": 10091,
+      "criterion": "10091"
+    },
+    {
+      "id": "dataset_hash:1:edit_alpha",
+      "passed": true,
+      "actual": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95",
+      "criterion": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95"
+    },
+    {
+      "id": "nonidentity_hash:1",
+      "passed": true,
+      "actual": {
+        "video": "95ba9657297f88c6f313ab056edd922409eabd793537b1c321a12de49b0b8c53",
+        "vace_video": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6"
+      },
+      "criterion": "Target and control hashes must differ."
+    },
+    {
+      "id": "no_fork_training_family",
+      "passed": true,
+      "actual": [
+        "liquid",
+        "strand"
+      ],
+      "criterion": "No fork family in training rows."
+    },
+    {
+      "id": "video_decode:vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "passed": true,
+      "actual": {
+        "first_dtype": "uint8",
+        "first_frame_sha256": "5aadbc1f60b8bdf8eba6d35ab75f30931292bc4714376772cc14fe033288f3d3",
+        "first_shape": [
+          592,
+          736,
+          3
+        ],
+        "fps": 8.0,
+        "frame_count": 21,
+        "last_dtype": "uint8",
+        "last_frame_sha256": "e721ecbb645acf60a0c8b10fc5d3ac20dffe98ca4ccf02bc1d315068cb30e669",
+        "last_shape": [
+          592,
+          736,
+          3
+        ],
+        "path": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3/vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+      },
+      "criterion": "Exactly 21 decodable frames with stable shape and positive fps."
+    },
+    {
+      "id": "video_decode:vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4",
+      "passed": true,
+      "actual": {
+        "first_dtype": "uint8",
+        "first_frame_sha256": "08a109352f43c9e836c70f7a2739ce27a8e0093af696084ef9d183966862184f",
+        "first_shape": [
+          576,
+          688,
+          3
+        ],
+        "fps": 8.0,
+        "frame_count": 21,
+        "last_dtype": "uint8",
+        "last_frame_sha256": "87113dba883d41d858b2bcf1b983d06000fac5a68834e4ad4beb2b24d0dbbf6b",
+        "last_shape": [
+          576,
+          688,
+          3
+        ],
+        "path": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3/vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4"
+      },
+      "criterion": "Exactly 21 decodable frames with stable shape and positive fps."
+    },
+    {
+      "id": "video_decode:video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "passed": true,
+      "actual": {
+        "first_dtype": "uint8",
+        "first_frame_sha256": "c1ace794005d5c1f7570f0e674ca827a3cfed58b41672b03b4f49a402119fcbd",
+        "first_shape": [
+          592,
+          736,
+          3
+        ],
+        "fps": 8.0,
+        "frame_count": 21,
+        "last_dtype": "uint8",
+        "last_frame_sha256": "fc59cbf1e2eff5da086d44bc7059582bc591bf11177e8f2a553489aad31cb6b5",
+        "last_shape": [
+          592,
+          736,
+          3
+        ],
+        "path": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3/video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+      },
+      "criterion": "Exactly 21 decodable frames with stable shape and positive fps."
+    },
+    {
+      "id": "video_decode:video/udon_chopsticks_imagegen_pseudo_v1.mp4",
+      "passed": true,
+      "actual": {
+        "first_dtype": "uint8",
+        "first_frame_sha256": "7f8a42ba4510f428b1c2d053efa6bf3802eabe7e6677f30483ff05f10e1557e9",
+        "first_shape": [
+          576,
+          688,
+          3
+        ],
+        "fps": 8.0,
+        "frame_count": 21,
+        "last_dtype": "uint8",
+        "last_frame_sha256": "23d1c97de7b7ed78e0ce17f42d1b705f487168e021ad58a80870f02cdbceb5da",
+        "last_shape": [
+          576,
+          688,
+          3
+        ],
+        "path": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3/video/udon_chopsticks_imagegen_pseudo_v1.mp4"
+      },
+      "criterion": "Exactly 21 decodable frames with stable shape and positive fps."
+    },
+    {
+      "id": "python_modules",
+      "passed": true,
+      "actual": {
+        "torch": true,
+        "torchvision": true,
+        "accelerate": true,
+        "peft": true,
+        "transformers": true,
+        "safetensors": true,
+        "pandas": true,
+        "PIL": true,
+        "imageio": true,
+        "einops": true,
+        "ftfy": true
+      },
+      "criterion": "All required modules importable."
+    },
+    {
+      "id": "trainer_help",
+      "passed": true,
+      "actual": "",
+      "criterion": "Frozen trainer --help exits 0."
+    },
+    {
+      "id": "no_audio_wrapper_help",
+      "passed": true,
+      "actual": "",
+      "criterion": "No-audio wrapper --help exits 0."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 223970,
+      "criterion": ">=80000 MiB available"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": true,
+      "actual": {
+        "requested": 0,
+        "safe_gpu_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "gpus": [
+          {
+            "index": 0,
+            "uuid": "GPU-e18a6f51-7f14-da5d-45f8-e1adc61338d3",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 1,
+            "uuid": "GPU-50a76049-6955-9af3-0b99-15edd12da263",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 2,
+            "uuid": "GPU-19d67ac1-c74e-0ad8-9f96-97f1aa63fedc",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 3,
+            "uuid": "GPU-7216fc4d-bd58-0bd1-21d8-49d3774c9d28",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 4,
+            "uuid": "GPU-bb365dd9-8000-7d14-a39f-b5baca73d4d6",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 5,
+            "uuid": "GPU-9b5470ea-20ce-49ad-d004-dc629687dcdf",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 6,
+            "uuid": "GPU-97dd18b2-f0c3-188e-7dbf-1e991702cd3f",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 7,
+            "uuid": "GPU-d0dc9a96-72da-f953-7188-d3d9687e537d",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          }
+        ],
+        "processes": []
+      },
+      "criterion": "At least one idle NVIDIA RTX A6000 with >=48000 MiB free and no compute process."
+    }
+  ]
+}

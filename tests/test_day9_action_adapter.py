@@ -9,6 +9,7 @@ CONFIG = ROOT / "configs" / "adapter_action_pseudo_v1.json"
 AUDIT = ROOT / "results" / "day9_action_target_audit_v1.json"
 SUMMARY = ROOT / "results" / "day9_action_pseudo_dataset_v3" / "summary.json"
 FORK_EVAL_CONFIG = ROOT / "configs" / "vace_fork_action_lora_eval_v1.json"
+FORK_EVAL_V2_CONFIG = ROOT / "configs" / "vace_fork_action_lora_eval_v2.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -136,6 +137,25 @@ class Day9ActionAdapterTests(unittest.TestCase):
         self.assertIn('manifest["adapter"]["lora_load_count"] = 1', runner)
         self.assertIn("extract_selected_and_project", runner)
         self.assertNotIn("modelscope download", runner.lower())
+
+    def test_corrected_fork_eval_injects_inside_wrapped_vace_blocks(self):
+        evaluation = json.loads(FORK_EVAL_V2_CONFIG.read_text(encoding="utf-8"))
+        runner_path = ROOT / evaluation["launcher"]["runner"]["path"]
+        runner = runner_path.read_text(encoding="utf-8")
+        self.assertEqual(evaluation["execution_revision"], "v2_vace_block_inner_linear_injection")
+        self.assertEqual(evaluation["implementation_correction"]["observed_v1_hotload_count"], 0)
+        self.assertTrue(evaluation["implementation_correction"]["observed_v1_output_equals_day8_byte_for_byte"])
+        self.assertEqual(evaluation["adapter"]["runtime_injection"]["expected_pair_count"], 80)
+        self.assertTrue(evaluation["adapter"]["runtime_injection"]["forbid_bf16_base_weight_fusion"])
+        self.assertTrue(evaluation["adapter"]["runtime_injection"]["forbid_low_noise_vace2_modification"])
+        self.assertEqual(sha256_file(runner_path), evaluation["launcher"]["runner"]["sha256"])
+        self.assertIn("EXPECTED_INJECTIONS = 80", runner)
+        self.assertIn("resolve_parent(pipe.vace, target)", runner)
+        self.assertNotIn("pipe.vace2, checkpoint, alpha", runner)
+        self.assertIn("LoRAInjectedLinear", runner)
+        self.assertIn("torch.nn.functional.linear(torch.nn.functional.linear", runner)
+        self.assertIn("Expected {EXPECTED_INJECTIONS} LoRA pairs", runner)
+        self.assertIn("Completed inference did not record all expected LoRA injections", runner)
 
 
 if __name__ == "__main__":
