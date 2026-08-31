@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "adapter_action_pseudo_v1.json"
 AUDIT = ROOT / "results" / "day9_action_target_audit_v1.json"
 SUMMARY = ROOT / "results" / "day9_action_pseudo_dataset_v3" / "summary.json"
+FORK_EVAL_CONFIG = ROOT / "configs" / "vace_fork_action_lora_eval_v1.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -97,6 +98,44 @@ class Day9ActionAdapterTests(unittest.TestCase):
         self.assertIn("tokenizer_config=None", validator)
         self.assertIn("redirect_common_files=False", validator)
         self.assertIn("synthetic pseudo-targets", validator)
+
+    def test_blind_fork_eval_changes_only_the_frozen_lora(self):
+        training = json.loads(CONFIG.read_text(encoding="utf-8"))
+        evaluation = json.loads(FORK_EVAL_CONFIG.read_text(encoding="utf-8"))
+        day8 = json.loads((ROOT / "configs" / "vace_fork_3d_projection_compare_v0.json").read_text(encoding="utf-8"))
+        self.assertEqual(evaluation["method"], "vace_fork_action_lora_blind_eval_v1")
+        self.assertEqual(evaluation["scientific_status"], "blind_cross_family_mechanism_pilot_not_generalization")
+        self.assertEqual(evaluation["adapter"]["training_method"], training["method"])
+        self.assertEqual(evaluation["adapter"]["held_out"]["family"], "fork_twirl_and_lift")
+        self.assertEqual(evaluation["adapter"]["held_out"]["training_occurrences"], 0)
+        self.assertEqual(evaluation["adapter"]["alpha"], 1.0)
+        for key in (
+            "width", "height", "num_frames", "fps", "num_inference_steps", "vace_scale",
+            "seed", "selected_frame_index", "enable_ttm", "projection_alpha", "prompt",
+            "prompt_sha256_utf8", "negative_prompt", "negative_prompt_sha256_utf8",
+        ):
+            self.assertEqual(evaluation["inference"][key], day8["inference"][key], key)
+        self.assertEqual(evaluation["control"]["files"], day8["control"]["files"])
+
+    def test_blind_fork_launchers_are_hashed_and_fail_closed(self):
+        evaluation = json.loads(FORK_EVAL_CONFIG.read_text(encoding="utf-8"))
+        preflight_path = ROOT / evaluation["launcher"]["preflight"]["path"]
+        runner_path = ROOT / evaluation["launcher"]["runner"]["path"]
+        preflight = preflight_path.read_text(encoding="utf-8")
+        runner = runner_path.read_text(encoding="utf-8")
+        self.assertEqual(sha256_file(preflight_path), evaluation["launcher"]["preflight"]["sha256"])
+        self.assertEqual(sha256_file(runner_path), evaluation["launcher"]["runner"]["sha256"])
+        self.assertIn("output_absent", preflight)
+        self.assertIn("fork_training_occurrences", preflight)
+        self.assertIn("training_checkpoint_record", preflight)
+        self.assertIn("validation_updated_tensors", preflight)
+        self.assertIn("gpu_gate", preflight)
+        self.assertIn("Preflight blocked inference", runner)
+        self.assertIn("pipe.load_lora(pipe.vace", runner)
+        self.assertIn('manifest["adapter"]["pipeline_load_count"] = 1', runner)
+        self.assertIn('manifest["adapter"]["lora_load_count"] = 1', runner)
+        self.assertIn("extract_selected_and_project", runner)
+        self.assertNotIn("modelscope download", runner.lower())
 
 
 if __name__ == "__main__":
