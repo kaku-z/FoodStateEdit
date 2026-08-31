@@ -1,0 +1,90 @@
+{
+  "schema_version": "foodstateedit.vace_seen_action_lora_compare.v1",
+  "freeze_date": "2026-08-31",
+  "method": "vace_seen_action_lora_same_seed_compare_v1",
+  "scientific_status": "seen_training_family_underfit_diagnostic_not_generalization",
+  "question": "Does the corrected action LoRA move either of its two seen training families closer to its pseudo-target under a same-seed resident-pipeline LoRA-off/on comparison?",
+  "claim_limit": "Seen synthetic pseudo-target checks can distinguish underfitting from cross-family transfer failure. They cannot establish held-out generalization, real-data performance, or photo realism.",
+  "launcher": {
+    "preflight": {"path": "scripts/preflight_seen_action_lora_eval.py", "sha256": "65d4a05da49b6eeb4887852920e68e88346be94e3f51b8b6afc5e709f0a65a76"},
+    "runner": {"path": "scripts/run_seen_action_lora_compare.py", "sha256": "b531f5a906577e5dee4dca9a4a222f9f816cf4e94f144aaa0c9f248f6e4f888d"}
+  },
+  "dataset": {
+    "remote_root": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3",
+    "manifest_sha256": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d",
+    "sample_count": 2,
+    "target_kind": "synthetic_imagegen_pseudotarget"
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "family": "strand",
+      "action": "lift_single_bowl_connected_strand",
+      "dimensions": [688, 576],
+      "prompt": "A photorealistic close-up food photograph of the same udon bowl. Exactly two separate wooden chopsticks pinch and lift one continuous noodle strand; the strand remains visibly connected to the noodles in the bowl, with physical contact, occlusion, gloss, and a plausible local shadow. No hand and no extra utensil.",
+      "prompt_sha256_utf8": "48006ae5013276815ecbf26087f934e398267da8557c110c141f4e271c75e7b2",
+      "files": {
+        "reference": {"path": "vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png", "size_bytes": 684088, "sha256": "3d9c0f00786545fcfde5c4741229f1c4d1054e2dbf92bd200b7ad695689c050d"},
+        "control": {"path": "vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4", "size_bytes": 228080, "sha256": "c6e13b5cad0824be60001de8e5ed2efd8dfb8389e92bc1f327852b7e442fe8c3"},
+        "alpha": {"path": "edit_alpha/udon_chopsticks_imagegen_pseudo_v1.png", "size_bytes": 11422, "sha256": "2b8cc7d280c6f3835f8c0a38fc1cc28a26b9487c09b3062590674261c2e04424"},
+        "target": {"path": "target_keyframe/udon_chopsticks_imagegen_pseudo_v1.png", "size_bytes": 684371, "sha256": "4906e4d54b5e78b4d285fe6f1854e59a46e9401844e004b5a3017ee8ab829f6c"}
+      }
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "family": "liquid",
+      "action": "scoop_contained_broth",
+      "dimensions": [736, 592],
+      "prompt": "A photorealistic close-up food photograph of the same bowl of clear golden broth. Exactly one connected stainless-steel spoon scoops and contains visible broth and one scallion ring; two scallion rings remain in the bowl. Physical rim occlusion, metal reflection, and contact shadow. No hand and no other utensil.",
+      "prompt_sha256_utf8": "644f721125c72f48847746e4ac252bb13e04d9936804bcd553bee1f3adb0342c",
+      "files": {
+        "reference": {"path": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png", "size_bytes": 697898, "sha256": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838"},
+        "control": {"path": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4", "size_bytes": 95026, "sha256": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6"},
+        "alpha": {"path": "edit_alpha/clear_broth_spoon_imagegen_pseudo_v1.png", "size_bytes": 10091, "sha256": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95"},
+        "target": {"path": "target_keyframe/clear_broth_spoon_imagegen_pseudo_v1.png", "size_bytes": 706343, "sha256": "8f70bcd21f35d4a0582836213a7b146de6ba78d3724b35f486fe879c1e5eae65"}
+      }
+    }
+  ],
+  "adapter": {
+    "alpha": 1.0,
+    "injection_mode": "v2_vace_block_inner_linear_injection",
+    "expected_injected_linear_count": 80,
+    "checkpoint": {"path": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1/step-16.safetensors", "size_bytes": 15354160, "sha256": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0"},
+    "training_manifest": {"path": "/tmp/foodstateedit_day9_action_pseudo_high_noise_lora_v1/run_manifest.json", "size_bytes": 2101, "sha256": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e"},
+    "validation": {"path": "/tmp/foodstateedit_day9_action_checkpoint_validation_v1.json", "size_bytes": 26784, "sha256": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c"}
+  },
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "fps": 15,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "selected_frame_index": 18,
+    "selection_policy": "frozen_before_inference_no_output_dependent_selection",
+    "negative_prompt": "hand, arm, person, fingers, duplicate utensil, extra utensil, malformed utensil, fused chopsticks, third chopstick, disconnected food, duplicated food, floating payload, spill, source crater, background change, plate change, bowl change, blur, ghosting, text, watermark"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "model_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"},
+      "low_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"},
+      "models_t5_umt5-xxl-enc-bf16.pth": {"size_bytes": 11361920418, "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"},
+      "Wan2.1_VAE.pth": {"size_bytes": 507609880, "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"}
+    },
+    "cache_root": "/tmp/foodstateedit_day10_seen_action_lora_cache_v1",
+    "offline_environment": {"DIFFSYNTH_SKIP_DOWNLOAD": "true", "HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1", "TOKENIZERS_PARALLELISM": "false"}
+  },
+  "output_base": "/tmp/foodstateedit_day10_seen_action_lora_compare_v1",
+  "resource_gate": {"required_gpu_name": "NVIDIA RTX A6000", "min_free_memory_mib": 48000, "max_utilization_percent": 5, "require_no_compute_process": true, "min_available_system_memory_mib": 80000}
+}
