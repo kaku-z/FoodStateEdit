@@ -125,3 +125,22 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - This negative single-anchor render is closed without seed or test-set
   expansion. The next eligible gate is non-identity action supervision for the
   VACE adapter, not additional hand-designed geometry alone.
+
+## Sprint additions through the Day 9 freeze
+
+- A stricter target audit found zero real-photo action targets suitable for
+  formal adapter training. Exactly two synthetic ImageGen pseudo-targets are
+  eligible for a claim-limited mechanism pilot: chopsticks/udon and spoon/broth.
+- The older case-20 natural VACE frame is no longer eligible as action
+  supervision under the current visible-lift gate; its pronounced oracle lift
+  collapses to a short bowl-edge contact. This does not invalidate the separate
+  deterministic geometry checks.
+- The first complete raw-oracle dataset changed roughly 96%--99.9% of pixels
+  and was rejected. The frozen v3 data changes only bounded action supports
+  (5.086% and 6.961%) and preserves every pixel outside them exactly for both
+  target and control.
+- Pasta/fork occurs zero times in training. It remains the blind same-seed
+  LoRA-off/on mechanism test after checkpoint validation.
+- The adapter pilot is frozen at two pseudo-targets, rank 8, 16 optimizer steps,
+  offline existing models only. Even a positive fork result will not establish
+  real-data training, broad action generalization, or paper-level photo realism.

@@ -1,0 +1,126 @@
+{
+  "schema_version": "foodstateedit.action_target_audit.v1",
+  "audit_date": "2026-08-31",
+  "scientific_status": "internal_pilot_target_audit",
+  "question": "Which existing artifacts can supervise a non-identity VACE-LoRA mechanism test without silently treating failed outputs or state-only edits as action targets?",
+  "eligibility_policy": {
+    "required": [
+      "the requested utensil-food relation is visibly present",
+      "the target differs from the no-utensil source",
+      "the target and source have hash-locked provenance",
+      "the target is not a failed method output",
+      "synthetic targets are disclosed as pseudo-labels and are not counted as real-data evidence"
+    ],
+    "primary_training_target_classes": [
+      "eligible_synthetic_pseudotarget"
+    ],
+    "held_out_family": "fork_twirl_and_lift",
+    "held_out_rule": "No fork target, fork result, or pasta/fork appearance oracle may enter training."
+  },
+  "candidates": [
+    {
+      "candidate_id": "udon_chopsticks_imagegen_oracle",
+      "family": "strand",
+      "action": "chopsticks_lift_single_bowl_connected_strand",
+      "artifact": "../single_patch_natural_v12/uec256_noodle_20_1897_insert/vace_naturalref_seed20260808_steps40_ctx1p25/src_ref_image_0.png",
+      "sha256": "10ddd3fb7b36dc64bd4ede420f5295a11457f98a559f24517083f46547a46c78",
+      "producer": "built_in_imagegen",
+      "action_status": "visual_pass",
+      "photo_status": "synthetic_oracle_visual_pass_not_real_data",
+      "classification": "eligible_synthetic_pseudotarget",
+      "eligible_for_primary_pilot_training": true,
+      "reason": "Two distinct chopsticks visibly pinch one lifted noodle that remains connected to the bowl. This is a disclosed synthetic pseudo-label, not a method result."
+    },
+    {
+      "candidate_id": "clear_broth_spoon_imagegen_oracle",
+      "family": "liquid",
+      "action": "spoon_scoops_contained_broth",
+      "artifact": "../outputs/foodstateedit_spoon_scoop_v0_3_staged/clear_broth_spoon_scoop/case_736x592/oracle_aligned.png",
+      "sha256": "deb912f8548c8c01310f0c0b7c9ca7bb49071afb34ac6e7e9a7c42c3f44d6204",
+      "producer": "built_in_imagegen",
+      "action_status": "visual_pass",
+      "photo_status": "synthetic_oracle_visual_pass_not_real_data",
+      "classification": "eligible_synthetic_pseudotarget",
+      "eligible_for_primary_pilot_training": true,
+      "reason": "Exactly one connected spoon contains visible broth and one garnish ring. This is a disclosed synthetic pseudo-label, not a method result."
+    },
+    {
+      "candidate_id": "udon_chopsticks_vace_selected_frame",
+      "family": "strand",
+      "action": "chopsticks_lift_single_bowl_connected_strand",
+      "artifact": "../single_patch_natural_v12/uec256_noodle_20_1897_insert/vace_naturalref_seed20260808_steps40_ctx1p25/evaluation/selected_frame.png",
+      "sha256": "79a871e217ecf69f9881a06204cb4482779b50c1f907525b15c76b1f7d474284",
+      "producer": "Wan2.1-VACE-1.3B",
+      "action_status": "ineligible_under_current_visible_lift_gate",
+      "photo_status": "natural_appearance_but_action_weakened",
+      "classification": "excluded_failed_or_weak_action",
+      "eligible_for_primary_pilot_training": false,
+      "reason": "The older report accepted it as the strongest natural case, but the stricter current audit shows the oracle's pronounced lifted loop collapsed to a short bowl-edge contact. Training on it would teach the failure being repaired."
+    },
+    {
+      "candidate_id": "clear_broth_spoon_geoedit_selected_frame",
+      "family": "liquid",
+      "action": "spoon_scoops_contained_broth",
+      "artifact": "../outputs/foodstateedit_spoon_scoop_v0_3_staged/clear_broth_spoon_scoop/staged_rigid18_material8/evaluation_v0_3_regions/edited_2d.png",
+      "sha256": "94aad130d59de6194068864ec773cca1d18d09fcbdb1576541de370ed0b2f667",
+      "producer": "GeoEdit_staged_projection",
+      "action_status": "semantic_and_structural_pass",
+      "photo_status": "partial_soft_neck_reflection_and_contact_shadow",
+      "classification": "excluded_teacher_artifact",
+      "eligible_for_primary_pilot_training": false,
+      "reason": "It is useful as a prior result and evaluation reference, but the known soft artifacts should not be distilled into the first clean pseudo-target pilot."
+    },
+    {
+      "candidate_id": "clear_broth_liquid_fill_strict_pass",
+      "family": "liquid_state",
+      "action": "raise_liquid_level",
+      "artifact": "../outputs/foodstateedit_liquid_fill_v0_2_4_garnish_lock_median/clear_broth_low_to_high/geoedit_no_warm/evaluation_v0_2/edited_2d.png",
+      "sha256": "7d749ef1ea21c16dd6f42e7c35de22f58e1d1242ef5e943599ff7c3bcd5a3ed4",
+      "producer": "GeoEdit_liquid_fill",
+      "action_status": "state_only_not_scooping",
+      "photo_status": "strict_controlled_case_pass",
+      "classification": "excluded_wrong_action",
+      "eligible_for_primary_pilot_training": false,
+      "reason": "It supervises liquid appearance and level change, not containment by a spoon."
+    },
+    {
+      "candidate_id": "pasta_fork_day8_vace",
+      "family": "strand_contact",
+      "action": "fork_twirl_and_lift",
+      "artifact": "artifacts/foodstateedit_day8_fork_3d_vace_compare_v0/edited_2d.png",
+      "sha256": "727071883fc3727d3597b67e3e9ba55da3de8f21428a3bc87daee4491b476bf8",
+      "producer": "Wan2.2-VACE-Fun-A14B",
+      "action_status": "fail_no_wrapped_or_lifted_plate_connected_spaghetti",
+      "photo_status": "fail_contact_smear_and_missing_shadow",
+      "classification": "held_out_failure_not_training_data",
+      "eligible_for_primary_pilot_training": false,
+      "reason": "This is the blind evaluation target family. Including it would both teach a failure and leak the held-out fork case."
+    },
+    {
+      "candidate_id": "fried_rice_state_solver",
+      "family": "granular",
+      "action": "spoon_or_spatula_scoops_fried_rice",
+      "artifact": "../outputs/foodstateedit_universal_v0_1_1_20260823/fried_rice_scoop_mix/acceptance_report.json",
+      "sha256": "32aed375c4bb6c26bd30a20fc7c3c4c8213b10987e7697b06b451ab769b01061",
+      "producer": "FoodStateEdit_state_solver",
+      "action_status": "state_only",
+      "photo_status": "not_evaluated",
+      "classification": "excluded_no_image_target",
+      "eligible_for_primary_pilot_training": false,
+      "reason": "A mass/component trace cannot supervise the image renderer until a corresponding audited action image exists."
+    }
+  ],
+  "decision": {
+    "eligible_primary_targets": [
+      "udon_chopsticks_imagegen_oracle",
+      "clear_broth_spoon_imagegen_oracle"
+    ],
+    "eligible_count": 2,
+    "real_photo_target_count": 0,
+    "synthetic_pseudotarget_count": 2,
+    "generalization_minimum_met": false,
+    "pilot_allowed": true,
+    "formal_training_allowed": false,
+    "next_test": "Train a small high-noise VACE-LoRA on the two disclosed pseudo-targets, then compare LoRA-off versus LoRA-on on the unchanged Day 8 pasta/fork control and seed."
+  }
+}

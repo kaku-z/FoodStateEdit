@@ -1,0 +1,50 @@
+{
+  "schema_version": "foodstateedit.adapter_action_dataset_summary.v1",
+  "dataset_id": "day9_action_pseudo_dataset_v3",
+  "scientific_status": "mechanism_pilot_with_synthetic_pseudotargets",
+  "dataset_manifest_sha256": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d",
+  "metadata_sha256": "9dc0af25eb733b59ca8cab5a8971f31ffd775431c35f52fe6dfb3fc82db61974",
+  "builder_sha256_lf": "7a3adca3e8255f20207d188d7faf63c17b67327c5ae5778be9aa75972d41d178",
+  "target_audit_sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+  "sample_count": 2,
+  "frame_count_per_sample": 21,
+  "real_photo_target_count": 0,
+  "synthetic_pseudotarget_count": 2,
+  "held_out": {
+    "family": "fork_twirl_and_lift",
+    "anchor": "pasta_fork_001",
+    "training_occurrences": 0
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "target_video_sha256": "54a0e5348ac63a92caa2e7187a744ee2fbe6f89f15e6fc467d8511aa8750c016",
+      "control_video_sha256": "c6e13b5cad0824be60001de8e5ed2efd8dfb8389e92bc1f327852b7e442fe8c3",
+      "target_control_rgb_mae": 1.2543041087962963,
+      "target_control_changed_pixel_fraction": 0.048580830103359174,
+      "edit_support_fraction": 0.05086199935400517,
+      "target_outside_support_max_difference": 0,
+      "control_outside_support_max_difference": 0
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "target_video_sha256": "95ba9657297f88c6f313ab056edd922409eabd793537b1c321a12de49b0b8c53",
+      "control_video_sha256": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6",
+      "target_control_rgb_mae": 3.1014087287015277,
+      "target_control_changed_pixel_fraction": 0.06390689262632197,
+      "edit_support_fraction": 0.06961249632784959,
+      "target_outside_support_max_difference": 0,
+      "control_outside_support_max_difference": 0
+    }
+  ],
+  "failed_builds_preserved": [
+    {
+      "dataset_id": "day9_action_pseudo_dataset_v1",
+      "reason": "builder NameError before manifest completion"
+    },
+    {
+      "dataset_id": "day9_action_pseudo_dataset_v2",
+      "reason": "data-contract rejection because raw oracle substitution changed approximately 96-99.9 percent of pixels"
+    }
+  ]
+}
