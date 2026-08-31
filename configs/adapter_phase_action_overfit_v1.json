@@ -1,0 +1,175 @@
+{
+  "schema_version": "foodstateedit.adapter_phase_action_overfit.v1",
+  "freeze_date": "2026-08-31",
+  "scientific_status": "mechanism_pilot_with_synthetic_pseudotargets",
+  "experiment_variant": "phase_varying_overfit_sanity_v1",
+  "claim_limit": "This two-sample run is an intentional overfit-capacity test using synthetic pseudo-motion, not real-data training. It cannot establish generalization or photo realism.",
+  "method": "foodstateedit_vace_lora_action_pseudo_v1",
+  "question": "Can the active high-noise VACE-LoRA branches visibly learn two seen approach-contact-lift-hold pseudo-sequences when optimization is increased from 16 to 64 steps?",
+  "train_families": ["strand", "liquid"],
+  "train_anchors": [
+    "udon_chopsticks_imagegen_pseudo_v1",
+    "clear_broth_spoon_imagegen_pseudo_v1"
+  ],
+  "held_out": {
+    "family": "fork_twirl_and_lift",
+    "anchor": "pasta_fork_001",
+    "training_occurrences": 0,
+    "evaluation_policy": "Do not evaluate the blind fork case unless the seen-family checkpoint sweep first shows a clear semantic LoRA gain."
+  },
+  "target_audit": {
+    "path": "results/day9_action_target_audit_v1.json",
+    "sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+    "eligible_primary_targets": 2,
+    "real_photo_targets": 0,
+    "synthetic_pseudotargets": 2
+  },
+  "launcher": {
+    "preflight": "scripts/preflight_phase_action_overfit_training.py",
+    "preflight_sha256": "4b882515d4ef31a05871912dae3e0e222aa2c571d167a46457c96bbece619f58",
+    "runner": "scripts/run_phase_action_overfit_training.py",
+    "runner_sha256": "4dab62370b6c66edf47e00fdb077fe2ac147382a5f09d7335fac00a1369f4e38"
+  },
+  "trainer": {
+    "name": "DiffSynth-Studio",
+    "source_url": "https://github.com/modelscope/DiffSynth-Studio",
+    "commit": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+    "source_archive_sha256": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228",
+    "remote_root": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle",
+    "train_script": "examples/wanvideo/model_training/train.py",
+    "train_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+    "no_audio_wrapper": "scripts/run_diffsynth_wan_train_no_audio.py",
+    "no_audio_wrapper_sha256": "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90",
+    "dataset_builder": "scripts/build_phase_action_overfit_dataset.py",
+    "dataset_builder_sha256_lf": "3adce2fc0584b8a794c8efd2181ec9ed6b535c198d46fa6740acb13b716862e1",
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python"
+  },
+  "checkpoint_validator": {
+    "path": "scripts/validate_adapter_action_lora_checkpoint.py",
+    "sha256": "940889156eefaf0b5605df29eb821587c2090c55d8d1e954523035816d421b73"
+  },
+  "model": {
+    "name": "PAI/Wan2.2-VACE-Fun-A14B",
+    "root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+    "files": [
+      {
+        "path": "high_noise_model/diffusion_pytorch_model.safetensors",
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      {
+        "path": "models_t5_umt5-xxl-enc-bf16.pth",
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      {
+        "path": "Wan2.1_VAE.pth",
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    ],
+    "tokenizer_root": "google/umt5-xxl",
+    "tokenizer_files": [
+      {
+        "path": "google/umt5-xxl/special_tokens_map.json",
+        "size_bytes": 6623,
+        "sha256": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d"
+      },
+      {
+        "path": "google/umt5-xxl/spiece.model",
+        "size_bytes": 4548313,
+        "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+      },
+      {
+        "path": "google/umt5-xxl/tokenizer.json",
+        "size_bytes": 16837417,
+        "sha256": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"
+      },
+      {
+        "path": "google/umt5-xxl/tokenizer_config.json",
+        "size_bytes": 61728,
+        "sha256": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05"
+      }
+    ]
+  },
+  "dataset": {
+    "local_root": "artifacts/day11_phase_action_overfit_dataset_v1",
+    "remote_root": "/tmp/foodstateedit_day11_phase_action_overfit_dataset_v1",
+    "metadata": "metadata.csv",
+    "metadata_sha256": "9dc0af25eb733b59ca8cab5a8971f31ffd775431c35f52fe6dfb3fc82db61974",
+    "manifest": "dataset_manifest.json",
+    "manifest_sha256": "b7458dcdd5ec84bb44e8e67212c83680c90b97256a389d755d7c828f29e2bcde",
+    "source_manifest_sha256": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d",
+    "target_policy": "disclosed_imagegen_pseudotarget_nonidentity",
+    "frame_policy": "deterministic_patch_motion_pseudo_sequence_approach_contact_lift_hold",
+    "motion_policy": "translated_audited_final_patch_pseudo_motion_not_physical_ground_truth",
+    "sample_count": 2,
+    "frames": 21,
+    "real_photo_target_count": 0,
+    "synthetic_pseudotarget_count": 2,
+    "formal_training_minimum_not_met": true
+  },
+  "training": {
+    "stage": "high_noise",
+    "model_paths": [
+      "high_noise_model/diffusion_pytorch_model.safetensors",
+      "models_t5_umt5-xxl-enc-bf16.pth",
+      "Wan2.1_VAE.pth"
+    ],
+    "lora_base_model": "vace",
+    "lora_target_modules": "q,k,v,o,ffn.0,ffn.2",
+    "lora_rank": 8,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "epochs": 4,
+    "dataset_repeat": 8,
+    "expected_optimizer_steps": 64,
+    "save_steps": 16,
+    "expected_checkpoint_steps": [16, 32, 48, 64],
+    "num_frames": 21,
+    "max_pixels": 153600,
+    "min_timestep_boundary": 0.0,
+    "max_timestep_boundary": 0.358,
+    "gradient_checkpointing_offload": true,
+    "model_cpu_offload": true,
+    "optimizer_cpu_offload": false,
+    "output_root": "/tmp/foodstateedit_day11_phase_action_overfit_high_noise_lora_v1",
+    "overwrite": false
+  },
+  "evaluation_gate": {
+    "conditions": ["lora_off", "step_16", "step_32", "step_48", "step_64"],
+    "seen_samples": 2,
+    "same_seed": 1,
+    "semantic_gain_required_before_blind_test": true,
+    "required_events": ["approach", "contact", "payload_acquisition", "lift", "final_hold"]
+  },
+  "resource_gate": {
+    "gpu_count": 1,
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "require_no_compute_process": true,
+    "min_available_system_memory_mib": 80000
+  },
+  "offline_environment": {
+    "DIFFSYNTH_SKIP_DOWNLOAD": "True",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HOME": "/host/space0/guo-z/cache/huggingface"
+  },
+  "required_modules": [
+    "torch",
+    "torchvision",
+    "accelerate",
+    "peft",
+    "transformers",
+    "safetensors",
+    "pandas",
+    "PIL",
+    "imageio",
+    "einops",
+    "ftfy"
+  ]
+}
