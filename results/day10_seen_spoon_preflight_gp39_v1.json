@@ -1,0 +1,291 @@
+{
+  "schema_version": "foodstateedit.seen_action_lora_preflight.v1",
+  "ready": true,
+  "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+  "selected_gpu": 1,
+  "config_sha256": "ccad43de4dd47fbe03dd4e1ec5b35c57746fb1d7580862a505fe707ccb664390",
+  "checks": [
+    {
+      "id": "method",
+      "passed": true,
+      "actual": "vace_seen_action_lora_same_seed_compare_v1",
+      "criterion": "vace_seen_action_lora_same_seed_compare_v1"
+    },
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "seen_training_family_underfit_diagnostic_not_generalization",
+      "criterion": "Seen-family diagnostic only."
+    },
+    {
+      "id": "sample_id",
+      "passed": true,
+      "actual": "clear_broth_spoon_imagegen_pseudo_v1",
+      "criterion": "One of ['clear_broth_spoon_imagegen_pseudo_v1', 'udon_chopsticks_imagegen_pseudo_v1']"
+    },
+    {
+      "id": "dataset_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3",
+      "criterion": "/tmp/foodstateedit_day9_action_pseudo_dataset_v3"
+    },
+    {
+      "id": "output_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day10_seen_action_lora_compare_v1/clear_broth_spoon_imagegen_pseudo_v1",
+      "criterion": "/tmp/foodstateedit_day10_seen_action_lora_compare_v1/clear_broth_spoon_imagegen_pseudo_v1"
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day10_seen_action_lora_compare_v1/clear_broth_spoon_imagegen_pseudo_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "launcher_hash:preflight",
+      "passed": true,
+      "actual": "65d4a05da49b6eeb4887852920e68e88346be94e3f51b8b6afc5e709f0a65a76",
+      "criterion": "65d4a05da49b6eeb4887852920e68e88346be94e3f51b8b6afc5e709f0a65a76"
+    },
+    {
+      "id": "launcher_hash:runner",
+      "passed": true,
+      "actual": "b531f5a906577e5dee4dca9a4a222f9f816cf4e94f144aaa0c9f248f6e4f888d",
+      "criterion": "b531f5a906577e5dee4dca9a4a222f9f816cf4e94f144aaa0c9f248f6e4f888d"
+    },
+    {
+      "id": "dataset_manifest_hash",
+      "passed": true,
+      "actual": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d",
+      "criterion": "033cbbb2c2ffe1d6a1d5c4a862c90b7412266290bf0602990e6a11306601c32d"
+    },
+    {
+      "id": "sample_is_training_family",
+      "passed": true,
+      "actual": "train_mechanism_pilot",
+      "criterion": "train_mechanism_pilot"
+    },
+    {
+      "id": "sample_prompt",
+      "passed": true,
+      "actual": "A photorealistic close-up food photograph of the same bowl of clear golden broth. Exactly one connected stainless-steel spoon scoops and contains visible broth and one scallion ring; two scallion rings remain in the bowl. Physical rim occlusion, metal reflection, and contact shadow. No hand and no other utensil.",
+      "criterion": "Frozen sample prompt"
+    },
+    {
+      "id": "sample_size:reference",
+      "passed": true,
+      "actual": 697898,
+      "criterion": "697898"
+    },
+    {
+      "id": "sample_hash:reference",
+      "passed": true,
+      "actual": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838",
+      "criterion": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838"
+    },
+    {
+      "id": "sample_size:control",
+      "passed": true,
+      "actual": 95026,
+      "criterion": "95026"
+    },
+    {
+      "id": "sample_hash:control",
+      "passed": true,
+      "actual": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6",
+      "criterion": "5f008e6134fbefeda59c664a350e19413b37ff711c22078dfd09317280b25cc6"
+    },
+    {
+      "id": "sample_size:alpha",
+      "passed": true,
+      "actual": 10091,
+      "criterion": "10091"
+    },
+    {
+      "id": "sample_hash:alpha",
+      "passed": true,
+      "actual": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95",
+      "criterion": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95"
+    },
+    {
+      "id": "sample_size:target",
+      "passed": true,
+      "actual": 706343,
+      "criterion": "706343"
+    },
+    {
+      "id": "sample_hash:target",
+      "passed": true,
+      "actual": "8f70bcd21f35d4a0582836213a7b146de6ba78d3724b35f486fe879c1e5eae65",
+      "criterion": "8f70bcd21f35d4a0582836213a7b146de6ba78d3724b35f486fe879c1e5eae65"
+    },
+    {
+      "id": "adapter_size:checkpoint",
+      "passed": true,
+      "actual": 15354160,
+      "criterion": "15354160"
+    },
+    {
+      "id": "adapter_hash:checkpoint",
+      "passed": true,
+      "actual": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0",
+      "criterion": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0"
+    },
+    {
+      "id": "adapter_size:training_manifest",
+      "passed": true,
+      "actual": 2101,
+      "criterion": "2101"
+    },
+    {
+      "id": "adapter_hash:training_manifest",
+      "passed": true,
+      "actual": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e",
+      "criterion": "ae101b2fbb82a8fd23df172d05407f86045f1fee0e67947f0ef0c3268997000e"
+    },
+    {
+      "id": "adapter_size:validation",
+      "passed": true,
+      "actual": 26784,
+      "criterion": "26784"
+    },
+    {
+      "id": "adapter_hash:validation",
+      "passed": true,
+      "actual": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c",
+      "criterion": "206241f6a94719e1b63c957f74357b529740ae7720fb12a1faf6d77d2403630c"
+    },
+    {
+      "id": "validation_status",
+      "passed": true,
+      "actual": "complete",
+      "criterion": "complete"
+    },
+    {
+      "id": "validation_updated_tensors",
+      "passed": true,
+      "actual": 80,
+      "criterion": "80"
+    },
+    {
+      "id": "runtime_hash:geoedit/inference.py",
+      "passed": true,
+      "actual": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "criterion": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1"
+    },
+    {
+      "id": "runtime_hash:diffsynth/pipelines/wan_video.py",
+      "passed": true,
+      "actual": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "criterion": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5"
+    },
+    {
+      "id": "runtime_hash:diffsynth/utils/data/__init__.py",
+      "passed": true,
+      "actual": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "criterion": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360"
+    },
+    {
+      "id": "runtime_hash:tests/test_masks.py",
+      "passed": true,
+      "actual": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421",
+      "criterion": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    {
+      "id": "model_audit_hash",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_audited_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "model_size:low_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_audited_hash:low_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_audited_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_audited_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "runtime_import",
+      "passed": true,
+      "actual": {
+        "return_code": 0,
+        "stderr": "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.\n  warnings.warn(\n"
+      },
+      "criterion": "Frozen runtime imports offline."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 212252,
+      "criterion": ">=80000 MiB"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": true,
+      "actual": {
+        "requested": 1,
+        "selected": {
+          "index": 1,
+          "uuid": "GPU-50a76049-6955-9af3-0b99-15edd12da263",
+          "name": "NVIDIA RTX A6000",
+          "memory_total_mib": 49140,
+          "memory_used_mib": 1,
+          "memory_free_mib": 48539,
+          "utilization_percent": 0,
+          "compute_processes": []
+        },
+        "processes": [
+          {
+            "gpu_index": 0,
+            "pid": 2055532,
+            "owner": "guo-z",
+            "process_name": "/host/space0/guo-z/envs/geoedit/bin/python",
+            "used_memory_mib": 17844
+          }
+        ]
+      },
+      "criterion": "Requested conflict-free A6000 satisfies the frozen gate."
+    }
+  ]
+}

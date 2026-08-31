@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "vace_seen_action_lora_compare_v1.json"
 DATASET_MANIFEST = ROOT / "artifacts" / "day9_action_pseudo_dataset_v3" / "dataset_manifest.json"
+RESULT = ROOT / "results" / "day10_seen_action_lora_result_v1.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -63,6 +64,41 @@ class Day10SeenActionEvalTests(unittest.TestCase):
         self.assertIn("outside_support_max_pixel_difference", runner)
         self.assertIn("lora_on_closer_to_target", runner)
         self.assertNotIn("modelscope download", runner.lower())
+
+    def test_closed_result_records_underfit_without_generalization_claim(self):
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        self.assertEqual(
+            result["scientific_status"],
+            "closed_seen_family_underfit_diagnostic_not_generalization",
+        )
+        self.assertEqual(result["aggregate"]["technical_complete"], 2)
+        self.assertEqual(result["aggregate"]["technical_failure"], 0)
+        self.assertEqual(result["aggregate"]["lora_on_semantically_improved"], 0)
+        self.assertTrue(result["diagnosis"]["adapter_execution_verified"])
+        self.assertTrue(result["diagnosis"]["current_adapter_underfit"])
+        self.assertFalse(result["decision"]["generalization_claim_allowed"])
+        self.assertFalse(result["decision"]["adapter_benefit_claim_allowed"])
+
+    def test_result_hashes_match_pulled_manifests_and_preflights(self):
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        for sample in result["samples"]:
+            sample_id = sample["sample_id"]
+            manifest = (
+                ROOT
+                / "artifacts"
+                / "day10_seen_action_lora_compare_v1"
+                / sample_id
+                / "run_manifest.json"
+            )
+            self.assertEqual(sample["run_manifest_sha256"], sha256_file(manifest))
+        self.assertEqual(
+            result["samples"][0]["preflight_sha256"],
+            sha256_file(ROOT / "results" / "day10_seen_udon_preflight_gp39_v1.json"),
+        )
+        self.assertEqual(
+            result["samples"][1]["preflight_sha256"],
+            sha256_file(ROOT / "results" / "day10_seen_spoon_preflight_gp39_v1.json"),
+        )
 
 
 if __name__ == "__main__":

@@ -157,3 +157,22 @@ This section updates the dated sprint-start snapshot without rewriting it.
   is allowed.
 - The next gate is a seen-family LoRA-off/on evaluation on the udon and broth
   training anchors, separating underfitting from cross-family transfer failure.
+
+## Sprint additions through the Day 10 seen-family diagnostic
+
+- Both frozen seen-family comparisons completed with one pipeline load per
+  worker, all 80 high-noise VACE LoRA branches active, 21 frames per condition,
+  and exact preservation outside the edit support.
+- The udon/chopsticks result is slightly farther from its target with LoRA and
+  still contains neither two chopsticks nor a lifted noodle.
+- The broth/spoon result is 0.27% closer to its target with LoRA, but the same
+  coherent spoon-with-broth action is already present with LoRA disabled. It is
+  a useful base-renderer single-sample success, not an adapter gain.
+- Across both seen families there are `0/2` visible semantic improvements from
+  LoRA-on. The current adapter is therefore underfit, rather than failing only
+  through cross-family transfer to fork/pasta.
+- All reviewed video frames are effectively static. Repeating a final target
+  for 21 training frames did not supervise approach, contact, acquisition, and
+  lift as temporal events.
+- The next eligible experiment is a bounded phase-varying overfit sanity test.
+  Another blind fork run or broad benchmark expansion is not yet justified.

@@ -1,0 +1,97 @@
+{
+  "schema_version": "foodstateedit.day10_seen_action_lora_result.v1",
+  "review_date": "2026-08-31",
+  "scientific_status": "closed_seen_family_underfit_diagnostic_not_generalization",
+  "frozen_runtime": {
+    "infrastructure_commit": "0eab07ec1e488d52a3fafbe892bd72a67f625c8e",
+    "config_sha256": "ccad43de4dd47fbe03dd4e1ec5b35c57746fb1d7580862a505fe707ccb664390",
+    "preflight_sha256": "65d4a05da49b6eeb4887852920e68e88346be94e3f51b8b6afc5e709f0a65a76",
+    "runner_sha256": "b531f5a906577e5dee4dca9a4a222f9f816cf4e94f144aaa0c9f248f6e4f888d",
+    "adapter_checkpoint_sha256": "c9638ff30b69846bb5a0d6338beff46b8e2179639983b0ecd4b88cc6335c6bd0",
+    "host": "gp39.cs.uec.ac.jp",
+    "pipeline_load_count_per_worker": 1,
+    "runtime_injected_linear_count_per_lora_on_condition": 80,
+    "decoded_frames_per_condition": 21,
+    "outside_support_max_pixel_difference": 0
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "family": "strand",
+      "physical_gpu": 0,
+      "preflight_sha256": "a3adfece643fc343314105835436094d6684fdfe4dcf1471f06535146ad87c1e",
+      "run_manifest_sha256": "3d61ebd90acffc8fa3295a147acc97fc57e4f6bcac8fc7b047376732410740ee",
+      "target_inside_support_mae": {
+        "lora_off": 21.85431964014024,
+        "lora_on": 21.887940728980617,
+        "delta_on_minus_off": 0.033621088840376956,
+        "relative_improvement_fraction": -0.001538421674347046
+      },
+      "reviewed_frames": [0, 5, 10, 15, 18, 20],
+      "lora_off_review": {
+        "action_success": false,
+        "contact_success": false,
+        "photo_realism_success": false,
+        "diagnostic": "A single blurred gray utensil-like head enters from the upper right. There are not two separate chopsticks and no noodle is pinched or lifted."
+      },
+      "lora_on_review": {
+        "action_success": false,
+        "contact_success": false,
+        "photo_realism_success": false,
+        "diagnostic": "The same malformed utensil and no-lift topology persist throughout the six reviewed frames. No visible semantic improvement over LoRA-off."
+      },
+      "lora_on_semantic_improvement": false
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "family": "liquid",
+      "physical_gpu": 1,
+      "preflight_sha256": "f100c925253f8243e704232d7b3b1cd109980656e3db11332f89955cc56bf4a8",
+      "run_manifest_sha256": "76ab33aeec27000308118ee2ee487c42dbc86cd7377b4633eda4758715be3497",
+      "target_inside_support_mae": {
+        "lora_off": 53.11473410042531,
+        "lora_on": 52.97395404042069,
+        "delta_on_minus_off": -0.14078006000461585,
+        "relative_improvement_fraction": 0.002650489783108191
+      },
+      "reviewed_frames": [0, 5, 10, 15, 18, 20],
+      "lora_off_review": {
+        "action_success": true,
+        "contact_success": true,
+        "photo_realism_success": true,
+        "diagnostic": "The base renderer already creates one coherent metal spoon containing broth above the bowl. This is a one-sample static-state success, not a learned-adapter success."
+      },
+      "lora_on_review": {
+        "action_success": true,
+        "contact_success": true,
+        "photo_realism_success": true,
+        "diagnostic": "The spoon result is visually indistinguishable in action semantics from LoRA-off. The 0.27% target-MAE reduction is too small to count as a semantic or causal LoRA gain."
+      },
+      "lora_on_semantic_improvement": false
+    }
+  ],
+  "aggregate": {
+    "technical_complete": 2,
+    "technical_failure": 0,
+    "lora_on_numerically_closer_to_target": 1,
+    "lora_on_semantically_improved": 0,
+    "seen_family_action_success_lora_off": 1,
+    "seen_family_action_success_lora_on": 1,
+    "seen_family_photo_success_lora_off": 1,
+    "seen_family_photo_success_lora_on": 1,
+    "temporal_action_success_lora_off": 0,
+    "temporal_action_success_lora_on": 0
+  },
+  "diagnosis": {
+    "adapter_execution_verified": true,
+    "cross_family_failure_only": false,
+    "current_adapter_underfit": true,
+    "static_repeated_frame_supervision_is_insufficient_for_temporal_action_learning": true,
+    "reason": "The adapter reaches all 80 intended high-noise VACE branches but improves neither seen sample semantically. Udon remains a no-action failure; the broth result is already successful with LoRA disabled. Both 21-frame outputs remain effectively static."
+  },
+  "decision": {
+    "generalization_claim_allowed": false,
+    "adapter_benefit_claim_allowed": false,
+    "next_required_gate": "Run an intentionally bounded overfit sanity experiment with real phase-varying approach/contact/lift targets and checkpointed learning curves. Require a clear seen-sample semantic gain before expanding balanced food/utensil families or attempting another blind fork test."
+  }
+}
