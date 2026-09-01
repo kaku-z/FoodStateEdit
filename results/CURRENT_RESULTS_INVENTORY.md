@@ -190,3 +190,8 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - The next required experiment is the same-seed LoRA-off and four-checkpoint
   sweep on both seen phase-varying samples. A blind fork rerun and balanced
   multi-family expansion remain blocked until a clear seen semantic gain.
+- That five-condition sweep is now hash-frozen. Its first launch produced no
+  evaluable condition: the spoon preflight correctly rejected a newly occupied
+  GPU, while the udon worker preserved an OOM after a separate process occupied
+  its GPU between preflight and model startup. These are resource-race records,
+  not semantic or photo-quality evidence; conflict-free retries remain pending.

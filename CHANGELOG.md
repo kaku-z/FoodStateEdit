@@ -1,5 +1,16 @@
 # Change log
 
+## 2026-09-01 — Day 11 checkpoint-sweep resource gate
+
+- froze the two-seen-sample, five-condition phase-action checkpoint sweep before
+  any inference output;
+- preserved a spoon preflight that failed only because another user's compute
+  process appeared on the requested A6000;
+- preserved an udon pre-condition OOM after a separate process occupied the GPU
+  between passing preflight and pipeline startup;
+- classified both events as resource races rather than model evidence and kept
+  the blind fork and balanced expansion blocked pending conflict-free retries.
+
 ## 2026-08-26 — scope v1
 
 - froze the structured-control task and four material/action families;

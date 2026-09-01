@@ -7,6 +7,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "vace_phase_action_checkpoint_sweep_v1.json"
 DATASET_MANIFEST = ROOT / "artifacts" / "day11_phase_action_overfit_dataset_v1" / "dataset_manifest.json"
+SPOON_BLOCKED_PREFLIGHT = ROOT / "results" / "day11_phase_action_checkpoint_sweep_preflight_spoon_gp40_blocked_v1.json"
+UDON_RACE_PREFLIGHT = ROOT / "results" / "day11_phase_action_checkpoint_sweep_preflight_udon_gp40_race_v1.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -62,6 +64,25 @@ class Day11PhaseActionCheckpointSweepTests(unittest.TestCase):
         self.assertIn("target_rgb_mae_inside_support_by_phase", runner)
         self.assertIn("outside_support_max_pixel_difference", runner)
         self.assertNotIn("modelscope download", runner.lower())
+
+    def test_first_launch_is_preserved_as_resource_evidence_not_results(self):
+        spoon = json.loads(SPOON_BLOCKED_PREFLIGHT.read_text(encoding="utf-8"))
+        udon = json.loads(UDON_RACE_PREFLIGHT.read_text(encoding="utf-8"))
+        self.assertFalse(spoon["ready"])
+        self.assertEqual(
+            [check["id"] for check in spoon["checks"] if not check["passed"]],
+            ["gpu_gate"],
+        )
+        self.assertTrue(udon["ready"])
+        self.assertEqual(udon["selected_gpu"], 0)
+        self.assertEqual(
+            sha256_file(SPOON_BLOCKED_PREFLIGHT),
+            "e719b13ce9218ebdff89a21905e246556ebdc6b6ded3d046bab88cce516c2015",
+        )
+        self.assertEqual(
+            sha256_file(UDON_RACE_PREFLIGHT),
+            "d5359018d9d875a51fca201da6ba8333fe228ed5f1e215ef5ecf02132a59d0a2",
+        )
 
 
 if __name__ == "__main__":

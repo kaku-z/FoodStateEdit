@@ -17,3 +17,11 @@
 - [ ] Compare LoRA-off and all four checkpoints on both seen samples using the same seed.
 - [ ] Review phase events and photo realism separately.
 - [ ] Continue to balanced multi-family training only if seen semantics improve clearly.
+
+Execution note (2026-09-01): the first sweep launch did not produce an
+evaluable condition. The broth/spoon worker was blocked by the fail-closed GPU
+gate after another user's process appeared on the requested card. The udon
+worker passed preflight, but another process then occupied the card during
+pipeline startup and the worker preserved a pre-condition OOM failure. Both
+events are resource evidence, not model results. Retries must use new output
+and preflight paths on a conflict-free A6000; the blind fork remains blocked.
