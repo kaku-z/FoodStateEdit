@@ -176,3 +176,17 @@ This section updates the dated sprint-start snapshot without rewriting it.
   lift as temporal events.
 - The next eligible experiment is a bounded phase-varying overfit sanity test.
   Another blind fork run or broad benchmark expansion is not yet justified.
+
+## Sprint additions through Day 11 training
+
+- The two seen synthetic targets now contain explicit source, approach,
+  contact, lift, and final-hold phases instead of one repeated final image.
+- The frozen 64-step high-noise VACE-LoRA run completed on gp40 using only
+  existing offline models. Checkpoints were saved at steps 16, 32, 48, and 64.
+- The final checkpoint contains 160 finite BF16 tensors in 80 complete rank-8
+  pairs, and the official VACE loader updated all 80 intended targets.
+- This closes the training/plumbing portion of the overfit sanity gate only.
+  Semantic learning and photo realism have not yet been evaluated.
+- The next required experiment is the same-seed LoRA-off and four-checkpoint
+  sweep on both seen phase-varying samples. A blind fork rerun and balanced
+  multi-family expansion remain blocked until a clear seen semantic gain.

@@ -1,0 +1,64 @@
+{
+  "schema_version": "foodstateedit.day11_phase_action_overfit_training_result.v1",
+  "review_date": "2026-09-01",
+  "scientific_status": "training_complete_pending_seen_checkpoint_sweep_not_generalization",
+  "training": {
+    "status": "complete_requires_seen_phase_checkpoint_sweep",
+    "host": "gp40",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA RTX A6000",
+    "dataset_and_runtime_byte_verified": true,
+    "sample_count": 2,
+    "real_photo_target_count": 0,
+    "synthetic_pseudotarget_count": 2,
+    "optimizer_steps": 64,
+    "duration_seconds": 1441.501098,
+    "run_manifest_sha256": "b0e983845bc11635ade6bb410ff171c15cd87fac991c7fa0d2fb01f2b24d7f06",
+    "independent_preflight_sha256": "ac8ac3c1a40db7f27a2c945619f4a07cb4702a624775af6638ab7c836693e8fc",
+    "runner_preflight_sha256": "a97fc1bf3d6a184bfcd7b7654333e9492c7100601117bd808834e619e2df4583",
+    "config_sha256": "80f81aadf5165443ba8e4991a0a8f40b42457aed8bade48e59adc68a9c58dabe",
+    "dataset_manifest_sha256": "b7458dcdd5ec84bb44e8e67212c83680c90b97256a389d755d7c828f29e2bcde",
+    "checkpoints": [
+      {
+        "step": 16,
+        "size_bytes": 15354160,
+        "sha256": "b11253ae53c79e7779e07cffafad472bd88c04816f28e338b126716f66cb9b55"
+      },
+      {
+        "step": 32,
+        "size_bytes": 15354160,
+        "sha256": "b33abb222f5210c749fd438d5f01b5f9750c6841ecb5a1f83230c5fec7180e34"
+      },
+      {
+        "step": 48,
+        "size_bytes": 15354160,
+        "sha256": "2bbbb5eea47c634b5c35cc5357a13627837ca02414d7f3bb7ddf5b21badc09f2"
+      },
+      {
+        "step": 64,
+        "size_bytes": 15354160,
+        "sha256": "fb1f149520e10bf80bcd0795d88ae22589ffc87a9556c0b0af796ff07d5e6b2e"
+      }
+    ]
+  },
+  "step_64_validation": {
+    "status": "complete",
+    "report_sha256": "f50453c505706f7c3bd83c80c5e8a835ff71b8c1bf029f65b1f36a50aa3809e9",
+    "tensor_count": 160,
+    "pair_count": 80,
+    "rank": 8,
+    "official_loader_updated_tensor_count": 80
+  },
+  "claim_boundary": {
+    "action_success_evaluated": false,
+    "photo_realism_evaluated": false,
+    "generalization_claim_allowed": false,
+    "balanced_multifamily_expansion_allowed": false
+  },
+  "decision": {
+    "training_and_checkpoint_gate_passed": true,
+    "semantic_gain_known": false,
+    "blind_fork_evaluation_allowed": false,
+    "next_required_gate": "Run the frozen same-seed LoRA-off/step-16/step-32/step-48/step-64 sweep on both seen phase-varying samples, then review approach, contact, payload acquisition, lift, final hold, and photo realism separately."
+  }
+}

@@ -10,10 +10,10 @@
 - [x] Keep each motion union below 20% of the image.
 - [x] Freeze 64 optimizer steps with checkpoints at 16, 32, 48, and 64.
 - [x] Require a seen-family checkpoint sweep before any new blind fork run.
-- [ ] Upload and byte-verify the frozen dataset and runtime on one candidate A6000 host.
-- [ ] Run fail-closed preflight on a safe idle A6000 with sufficient host memory.
-- [ ] Train without downloads or overwriting any existing remote path.
-- [ ] Validate checkpoint structure and official VACE loadability.
+- [x] Upload and byte-verify the frozen dataset and runtime on one candidate A6000 host.
+- [x] Run fail-closed preflight on a safe idle A6000 with sufficient host memory.
+- [x] Train without downloads or overwriting any existing remote path.
+- [x] Validate checkpoint structure and official VACE loadability.
 - [ ] Compare LoRA-off and all four checkpoints on both seen samples using the same seed.
 - [ ] Review phase events and photo realism separately.
 - [ ] Continue to balanced multi-family training only if seen semantics improve clearly.

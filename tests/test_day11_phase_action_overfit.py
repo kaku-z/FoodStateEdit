@@ -8,6 +8,12 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "adapter_phase_action_overfit_v1.json"
 DATASET_ROOT = ROOT / "artifacts" / "day11_phase_action_overfit_dataset_v1"
 MANIFEST = DATASET_ROOT / "dataset_manifest.json"
+TRAINING_ROOT = ROOT / "artifacts" / "day11_phase_action_overfit_high_noise_lora_gp40_v1"
+RUN_MANIFEST = TRAINING_ROOT / "run_manifest.json"
+RESULT = ROOT / "results" / "day11_phase_action_overfit_training_result_v1.json"
+INDEPENDENT_PREFLIGHT = ROOT / "results" / "day11_phase_action_overfit_preflight_gp40_v1.json"
+RUNNER_PREFLIGHT = ROOT / "results" / "day11_phase_action_overfit_runner_preflight_gp40_v1.json"
+STEP64_VALIDATION = ROOT / "results" / "day11_phase_action_overfit_step64_validation_gp40_v1.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -82,6 +88,39 @@ class Day11PhaseActionOverfitTests(unittest.TestCase):
         self.assertIn("Preflight blocked training", runner_text)
         self.assertIn("HF_HUB_OFFLINE", runner_text)
         self.assertNotIn("modelscope download", runner_text.lower())
+
+    def test_training_completed_four_checkpoints_without_unlocking_blind_evaluation(self):
+        run = json.loads(RUN_MANIFEST.read_text(encoding="utf-8"))
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        validation = json.loads(STEP64_VALIDATION.read_text(encoding="utf-8"))
+        self.assertEqual(run["status"], "complete_requires_seen_phase_checkpoint_sweep")
+        self.assertEqual(run["return_code"], 0)
+        self.assertEqual(run["expected_optimizer_steps"], 64)
+        self.assertEqual(
+            [record["path"] for record in run["checkpoints"]],
+            [f"step-{step}.safetensors" for step in (16, 32, 48, 64)],
+        )
+        for record in run["checkpoints"]:
+            checkpoint = TRAINING_ROOT / record["path"]
+            self.assertEqual(checkpoint.stat().st_size, record["size_bytes"])
+            self.assertEqual(sha256_file(checkpoint), record["sha256"])
+        self.assertEqual(result["training"]["run_manifest_sha256"], sha256_file(RUN_MANIFEST))
+        self.assertEqual(
+            result["training"]["independent_preflight_sha256"],
+            sha256_file(INDEPENDENT_PREFLIGHT),
+        )
+        self.assertEqual(
+            result["training"]["runner_preflight_sha256"], sha256_file(RUNNER_PREFLIGHT)
+        )
+        self.assertEqual(
+            result["step_64_validation"]["report_sha256"], sha256_file(STEP64_VALIDATION)
+        )
+        self.assertEqual(validation["status"], "complete")
+        self.assertEqual(validation["tensor_count"], 160)
+        self.assertEqual(validation["pair_count"], 80)
+        self.assertEqual(validation["official_loader_updated_tensor_count"], 80)
+        self.assertFalse(result["decision"]["blind_fork_evaluation_allowed"])
+        self.assertFalse(result["claim_boundary"]["action_success_evaluated"])
 
 
 if __name__ == "__main__":

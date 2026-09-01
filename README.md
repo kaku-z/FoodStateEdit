@@ -65,6 +65,10 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
 - `DAY8_3D_PROJECTION_CHECKLIST.md`: relative-3-D fork motion/projection gate;
 - `DAY9_ACTION_ADAPTER_CHECKLIST.md`: completed action-supervised LoRA training,
   corrected wrapped-VACE injection, and blind fork result gate;
+- `DAY10_SEEN_ACTION_LORA_CHECKLIST.md`: completed seen-family underfit
+  diagnostic and the requirement for phase-varying supervision;
+- `DAY11_PHASE_ACTION_OVERFIT_CHECKLIST.md`: phase-varying 64-step overfit
+  training and pending seen-checkpoint sweep;
 - `results/DAY5_METHOD_GRID_CAPTION.md`: hash-traceable qualitative comparison caption;
 - `results/DAY6_DYNAMIC_MULTIKEY_PREFLIGHT.md`: pre-output schedule, hashes, and
   deterministic-control invariants;
@@ -84,6 +88,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
 - `results/DAY9_ACTION_ADAPTER_RESULT.md`: checkpoint evidence, the preserved
   zero-patch runtime failure, corrected 80-branch evaluation, and blind negative
   action/photo verdict;
+- `results/DAY11_PHASE_ACTION_OVERFIT_TRAINING.md`: completed 64-step training,
+  four checkpoint hashes, official-loader validation, and the no-claim boundary;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved

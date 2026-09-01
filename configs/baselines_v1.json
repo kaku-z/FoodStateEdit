@@ -325,5 +325,22 @@
     "temporal_action_success_lora_on": 0,
     "diagnostic": "Udon remains a no-action failure; broth/spoon is already a static-state success with LoRA disabled. The 2-sample, 16-step adapter adds no visible semantic benefit and repeated final frames do not teach action phases.",
     "status": "CLOSED_UNDERFIT_REQUIRE_PHASE_VARYING_OVERFIT_SANITY"
+  },
+  "day11_phase_action_overfit_training_gate": {
+    "candidate": "foodstateedit_vace_lora_action_pseudo_v1",
+    "scientific_status": "training_complete_pending_seen_checkpoint_sweep_not_generalization",
+    "training_config": "configs/adapter_phase_action_overfit_v1.json",
+    "sample_count": 2,
+    "real_photo_target_count": 0,
+    "synthetic_pseudotarget_count": 2,
+    "optimizer_steps": 64,
+    "checkpoint_steps": [16, 32, 48, 64],
+    "checkpoint_validation_complete": 1,
+    "official_loader_updated_tensor_count": 80,
+    "semantic_gain_evaluated": false,
+    "blind_fork_evaluation_allowed": false,
+    "balanced_multifamily_expansion_allowed": false,
+    "diagnostic": "The phase-varying two-sample adapter trained and validated successfully; a same-seed seen checkpoint sweep is still required before any semantic, transfer, or photo-realism conclusion.",
+    "status": "TRAINING_COMPLETE_REQUIRE_SEEN_CHECKPOINT_SWEEP"
   }
 }
