@@ -195,3 +195,25 @@ This section updates the dated sprint-start snapshot without rewriting it.
   GPU, while the udon worker preserved an OOM after a separate process occupied
   its GPU between preflight and model startup. These are resource-race records,
   not semantic or photo-quality evidence; conflict-free retries remain pending.
+
+## Sprint additions through the Day 11 checkpoint sweep
+
+- A conflict-free serial retry completed both seen synthetic samples on gp39
+  using the frozen seed, 21 frames, 20 inference steps, VACE scale 1, and TTM
+  disabled. Each sample loaded the pipeline once and preserved every pixel
+  outside the frozen support exactly.
+- All 36 manifest-recorded outputs were pulled back and rehashed with zero
+  mismatches. The retry used new output and preflight paths and did not
+  overwrite either the preserved gp40 failures or the mismatched older gp39
+  LoRA directory.
+- Udon target-support MAE improves monotonically from 13.6511 at LoRA-off to
+  11.9998 at step 64, but the phase/contact review shows no clearer pinch,
+  payload acquisition, connected lift, or final hold.
+- Broth is numerically best at step 16 (20.9574 versus 21.2355 LoRA-off), but
+  the visible spoon action already occurs with LoRA disabled. Steps 48 and 64
+  add a pale/translucent spoon-bowl artifact and are less photographic.
+- The conservative result is `0/2` clear semantic gains and `0/2` clear photo
+  gains. The seen synthetic overfit-capacity gate is negative; balanced family
+  expansion and another blind fork evaluation remain blocked.
+- This result cannot support claims about generalization, real data, physical
+  correctness, or paper-level photo realism.

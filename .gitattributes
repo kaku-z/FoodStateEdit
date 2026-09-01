@@ -14,3 +14,5 @@ scripts/run_vace_fork_3d_compare.py -text
 results/day8_vace_fork_3d_compare_preflight_gp39_v0.json -text
 scripts/make_day8_fork_3d_vace_review.py -text
 results/day8_vace_fork_3d_compare_v0/** -text
+configs/vace_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z.json -text
+results/day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z/** -text

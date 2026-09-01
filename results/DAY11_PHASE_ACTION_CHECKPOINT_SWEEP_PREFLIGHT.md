@@ -1,4 +1,7 @@
-# Day 11 phase-action checkpoint-sweep execution status
+# Day 11 phase-action checkpoint-sweep first-launch status
+
+This file preserves the initial gp40 resource-race evidence. The conflict-free
+gp39 retry later completed; see `DAY11_PHASE_ACTION_CHECKPOINT_SWEEP_RESULT.md`.
 
 ## Outcome
 

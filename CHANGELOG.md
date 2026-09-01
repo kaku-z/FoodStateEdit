@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-09-01 — Day 11 checkpoint-sweep close
+
+- completed the two seen synthetic phase-action samples serially on one safe
+  gp39 A6000 under new output and preflight paths;
+- verified one pipeline load per sample, all five frozen conditions, 21 frames
+  per condition, exact outside-support preservation, and 36/36 pulled output
+  hashes;
+- reviewed phase action/contact and photo realism separately and found no clear
+  checkpoint gain over LoRA-off for either sample;
+- kept balanced family expansion and another blind fork run blocked, with all
+  conclusions limited to a seen synthetic overfit-capacity diagnostic.
+
 ## 2026-09-01 — Day 11 checkpoint-sweep resource gate
 
 - froze the two-seen-sample, five-condition phase-action checkpoint sweep before

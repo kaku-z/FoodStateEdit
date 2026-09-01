@@ -1,0 +1,112 @@
+{
+  "schema_version": "foodstateedit.day11_phase_action_checkpoint_sweep_result.v1",
+  "review_date": "2026-09-01",
+  "scientific_status": "closed_seen_synthetic_overfit_checkpoint_diagnostic_no_clear_semantic_gain_not_generalization",
+  "execution": {
+    "host": "gp39.cs.uec.ac.jp",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA RTX A6000",
+    "config_sha256": "25b85a4d824443d9c51b040f871771f70004f64a5bbb7c4afd041921c8c6d7e0",
+    "runner_sha256": "334f4f79f013c43a2d46c95835012272eeb4618fd4263f7c13947f0ca66b837e",
+    "conditions": ["lora_off", "step_16", "step_32", "step_48", "step_64"],
+    "seed": 1,
+    "decoded_frames_per_condition": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "ttm_enabled": false,
+    "pipeline_load_count_per_sample": 1,
+    "outside_support_max_pixel_difference": 0,
+    "manifest_output_files_verified": 36,
+    "local_sha256_mismatch_count": 0,
+    "model_downloaded": false
+  },
+  "evidence": {
+    "artifact_root": "artifacts/day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z",
+    "supporting_result_root": "results/day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z",
+    "derived_config_sha256": "25b85a4d824443d9c51b040f871771f70004f64a5bbb7c4afd041921c8c6d7e0",
+    "udon_standalone_preflight_sha256": "e68484b79a4e5f2c3302628338a5bd527d266d45beb3fbd1fce24bfdc029682e",
+    "udon_runner_preflight_sha256": "5351ffbf988d5c8c0ad1640d93421ae3adfe1379eec0a7f7f8c6ecfffb111bde",
+    "spoon_standalone_preflight_sha256": "4f88aefa1ed55702a9490e344ea18cd2c8c458746c7bec30d2c322d7dde4e5d1",
+    "spoon_runner_preflight_sha256": "d56d3a14ad3ea767b971758c94871f9e38e5df3565c77d027b65825c0243e5fb",
+    "udon_launcher_log_sha256": "c46b74b6bc02d8127df079e252d388251921691fe7526a9cad0de7fd203f25e6",
+    "spoon_launcher_log_sha256": "96acede31df121b6b179d87e233ecf4ab859fe3069593e814748468eed4a32b6"
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "family": "strand",
+      "run_manifest_sha256": "4befd5608e42b1f685aa666469cc070b0cf3614da616a90f86ac41c15d530bfa",
+      "wall_time_seconds": 2234.516,
+      "best_condition_by_target_support_mae": "step_64",
+      "target_inside_support_mae": {
+        "lora_off": 13.651067314948843,
+        "step_16": 13.49423870145616,
+        "step_32": 12.683294362171992,
+        "step_48": 12.141535587474792,
+        "step_64": 11.999780276880822
+      },
+      "contact_sheet_sha256": {
+        "lora_off": "ab18dd7b02a2db1fc0c748c2823531d43b28d78dddaa3bbe41c5860ed34eb8c6",
+        "step_16": "63008ccf284bfd886cbcb3a268b73be979252ee733a86e81999701a8b4e442a2",
+        "step_32": "e1e9da99121566660852ab03ff2d4188e03c20588ca0531510913c1b4b5b69a2",
+        "step_48": "9e8007ca8397620f647b3839b965e4121c1e3e526e31264eb977ea98d854de6c",
+        "step_64": "027501ca0738885984613ef495305682c4d530ea1b828dc0d53658dc71958f84"
+      },
+      "phase_action_contact_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "All checkpoints retain nearly the same approach and final chopstick/noodle configuration as LoRA-off. Lower support MAE does not produce a visibly clearer pinch, payload acquisition, bowl-connected lift, or final hold."
+      },
+      "photo_realism_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "The food photograph remains broadly coherent, but checkpoint changes are visually slight and do not clearly improve the soft/composited utensil-contact and lifted-noodle geometry."
+      }
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "family": "liquid",
+      "run_manifest_sha256": "222bc1be2e0cb8d6ffadf6f3d1b25834602f39d7a7a619156a1ea09c93ffc94d",
+      "wall_time_seconds": 2336.503,
+      "best_condition_by_target_support_mae": "step_16",
+      "target_inside_support_mae": {
+        "lora_off": 21.235547481755436,
+        "step_16": 20.957444255751575,
+        "step_32": 21.325960890920225,
+        "step_48": 25.78955645365845,
+        "step_64": 23.892769036976556
+      },
+      "contact_sheet_sha256": {
+        "lora_off": "7038af7ee547fb77a73926815e3baa3399a11aec1b2ab8b8a35a8298a0cb8a13",
+        "step_16": "50bd00b50e6ed28bfb2b173378bbb9caee642d820fe89fbd54e1e2ac981d8f77",
+        "step_32": "1e69a92a3fd9a36edc2bd32ea57769ba8fb7100759832562b585ee22a7c72b6d",
+        "step_48": "6c44c891a43ecd5ae393eb445103b9c881bdb5dca013561b8bf9d8a9b100129b",
+        "step_64": "549f522eb71ab950c50e5d6295eedb1247db4366fa9cd3d4f096a4c11166a263"
+      },
+      "phase_action_contact_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "LoRA-off already shows the same spoon approach, containment, and hold sequence. Step 16 is only slightly closer numerically and does not add a visible phase or contact event."
+      },
+      "photo_realism_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "Step 16 is visually similar to LoRA-off, while steps 48 and 64 introduce a conspicuous pale or translucent rim around the spoon bowl and are less photographic."
+      }
+    }
+  ],
+  "aggregate": {
+    "technical_complete": 2,
+    "technical_failure": 0,
+    "samples_with_a_numerically_better_checkpoint": 2,
+    "samples_with_clear_phase_action_contact_improvement": 0,
+    "samples_with_clear_photo_realism_improvement": 0,
+    "clear_seen_semantic_gain": false
+  },
+  "decision": {
+    "seen_synthetic_overfit_capacity_gate_passed": false,
+    "balanced_multifamily_expansion_allowed": false,
+    "blind_fork_evaluation_allowed": false,
+    "generalization_claim_allowed": false,
+    "real_data_performance_claim_allowed": false,
+    "physical_correctness_claim_allowed": false,
+    "paper_level_photo_realism_claim_allowed": false,
+    "next_step": "Revise the supervision or model interface under a newly frozen bounded diagnostic; do not expand families or run another blind fork from this result."
+  }
+}

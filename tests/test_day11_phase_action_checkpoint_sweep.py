@@ -1,3 +1,4 @@
+import copy
 import hashlib
 import json
 import unittest
@@ -6,9 +7,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs" / "vace_phase_action_checkpoint_sweep_v1.json"
+DERIVED_CONFIG = (
+    ROOT
+    / "configs"
+    / "vace_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z.json"
+)
 DATASET_MANIFEST = ROOT / "artifacts" / "day11_phase_action_overfit_dataset_v1" / "dataset_manifest.json"
 SPOON_BLOCKED_PREFLIGHT = ROOT / "results" / "day11_phase_action_checkpoint_sweep_preflight_spoon_gp40_blocked_v1.json"
 UDON_RACE_PREFLIGHT = ROOT / "results" / "day11_phase_action_checkpoint_sweep_preflight_udon_gp40_race_v1.json"
+RUN_ROOT = (
+    ROOT
+    / "artifacts"
+    / "day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z"
+)
+EVIDENCE_ROOT = (
+    ROOT
+    / "results"
+    / "day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z"
+)
+RESULT = ROOT / "results" / "day11_phase_action_checkpoint_sweep_result_v1.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -83,6 +100,111 @@ class Day11PhaseActionCheckpointSweepTests(unittest.TestCase):
             sha256_file(UDON_RACE_PREFLIGHT),
             "d5359018d9d875a51fca201da6ba8333fe228ed5f1e215ef5ecf02132a59d0a2",
         )
+
+    def test_gp39_retry_changes_only_immutable_remote_paths(self):
+        original = json.loads(CONFIG.read_text(encoding="utf-8"))
+        derived = json.loads(DERIVED_CONFIG.read_text(encoding="utf-8"))
+        self.assertEqual(
+            sha256_file(DERIVED_CONFIG),
+            "25b85a4d824443d9c51b040f871771f70004f64a5bbb7c4afd041921c8c6d7e0",
+        )
+        normalized = copy.deepcopy(derived)
+        normalized["output_base"] = original["output_base"]
+        normalized["adapters"]["training_manifest"]["path"] = original["adapters"][
+            "training_manifest"
+        ]["path"]
+        for original_condition, derived_condition in zip(
+            original["adapters"]["conditions"],
+            normalized["adapters"]["conditions"],
+        ):
+            if original_condition["checkpoint"] is not None:
+                derived_condition["checkpoint"]["path"] = original_condition["checkpoint"]["path"]
+        self.assertEqual(normalized, original)
+
+    def test_conflict_free_retry_completed_and_local_hashes_match(self):
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        expected_conditions = [
+            "lora_off",
+            "step_16",
+            "step_32",
+            "step_48",
+            "step_64",
+        ]
+        self.assertEqual(result["aggregate"]["technical_complete"], 2)
+        self.assertEqual(result["aggregate"]["technical_failure"], 0)
+        self.assertEqual(result["execution"]["manifest_output_files_verified"], 36)
+        self.assertEqual(result["execution"]["local_sha256_mismatch_count"], 0)
+        for sample in result["samples"]:
+            sample_root = RUN_ROOT / sample["sample_id"]
+            manifest_path = sample_root / "run_manifest.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            self.assertEqual(sample["run_manifest_sha256"], sha256_file(manifest_path))
+            self.assertEqual(
+                manifest["status"],
+                "complete_requires_seen_phase_action_and_photo_review",
+            )
+            self.assertEqual(manifest["pipeline_load_count"], 1)
+            self.assertEqual(list(manifest["conditions"]), expected_conditions)
+            self.assertTrue((sample_root / "COMPLETE").is_file())
+            self.assertFalse((sample_root / "RUNNING").exists())
+            self.assertFalse((sample_root / "FAILED").exists())
+            for condition in manifest["conditions"].values():
+                self.assertEqual(condition["decoded_frames"], 21)
+                self.assertEqual(condition["outside_support_max_pixel_difference"], 0)
+            for condition_name, expected_hash in sample["contact_sheet_sha256"].items():
+                review = sample_root / f"{condition_name}_projected_review.png"
+                self.assertEqual(sha256_file(review), expected_hash)
+            self.assertEqual(len(manifest["outputs"]), 18)
+            for record in manifest["outputs"]:
+                local_output = sample_root / Path(record["path"]).name
+                self.assertGreater(local_output.stat().st_size, 0)
+                self.assertEqual(local_output.stat().st_size, record["size_bytes"])
+                self.assertEqual(sha256_file(local_output), record["sha256"])
+
+    def test_review_closes_capacity_gate_without_broad_claims(self):
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        self.assertEqual(
+            result["scientific_status"],
+            "closed_seen_synthetic_overfit_checkpoint_diagnostic_no_clear_semantic_gain_not_generalization",
+        )
+        self.assertEqual(
+            result["aggregate"]["samples_with_clear_phase_action_contact_improvement"],
+            0,
+        )
+        self.assertEqual(
+            result["aggregate"]["samples_with_clear_photo_realism_improvement"],
+            0,
+        )
+        self.assertFalse(result["aggregate"]["clear_seen_semantic_gain"])
+        self.assertFalse(result["decision"]["seen_synthetic_overfit_capacity_gate_passed"])
+        self.assertFalse(result["decision"]["balanced_multifamily_expansion_allowed"])
+        self.assertFalse(result["decision"]["blind_fork_evaluation_allowed"])
+        self.assertFalse(result["decision"]["generalization_claim_allowed"])
+        for sample in result["samples"]:
+            self.assertFalse(
+                sample["phase_action_contact_review"][
+                    "clear_improvement_over_lora_off"
+                ]
+            )
+            self.assertFalse(
+                sample["photo_realism_review"]["clear_improvement_over_lora_off"]
+            )
+
+    def test_pulled_retry_preflight_hashes_match_result(self):
+        result = json.loads(RESULT.read_text(encoding="utf-8"))
+        evidence = result["evidence"]
+        expected = {
+            "udon_standalone_preflight_sha256": "udon_standalone_preflight.json",
+            "udon_runner_preflight_sha256": "udon_runner_preflight.json",
+            "spoon_standalone_preflight_sha256": "spoon_standalone_preflight.json",
+            "spoon_runner_preflight_sha256": "spoon_runner_preflight.json",
+            "derived_config_sha256": "derived_config.json",
+        }
+        for key, filename in expected.items():
+            self.assertEqual(evidence[key], sha256_file(EVIDENCE_ROOT / filename))
+        for filename in ("udon_runner_preflight.json", "spoon_runner_preflight.json"):
+            preflight = json.loads((EVIDENCE_ROOT / filename).read_text(encoding="utf-8"))
+            self.assertTrue(preflight["ready"])
 
 
 if __name__ == "__main__":

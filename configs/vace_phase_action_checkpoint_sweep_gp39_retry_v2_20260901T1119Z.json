@@ -1,0 +1,107 @@
+{
+  "schema_version": "foodstateedit.vace_phase_action_checkpoint_sweep.v1",
+  "freeze_date": "2026-09-01",
+  "method": "vace_phase_action_checkpoint_sweep_v1",
+  "scientific_status": "seen_phase_overfit_capacity_diagnostic_not_generalization",
+  "question": "Does any 16/32/48/64-step checkpoint visibly improve the two seen approach-contact-lift-hold pseudo-sequences over the same-seed LoRA-off controls?",
+  "claim_limit": "This seen-sample synthetic pseudo-motion sweep can test overfit capacity only. It cannot establish held-out generalization, real-data performance, physical motion validity, or photo realism.",
+  "launcher": {
+    "preflight": {"path": "scripts/preflight_phase_action_checkpoint_sweep.py", "sha256": "2150d3353bb08a770cf3cbf1ffcb4c4724c4b63e905d1420ba032e02573b1c33"},
+    "runner": {"path": "scripts/run_phase_action_checkpoint_sweep.py", "sha256": "334f4f79f013c43a2d46c95835012272eeb4618fd4263f7c13947f0ca66b837e"},
+    "dependencies": {
+      "preflight_vace_fork_3d_compare.py": "e20523c526d6e7b503ad787e39c33da4af47af8d56274c1d5aa02f90b4412b52",
+      "run_vace_fork_3d_compare.py": "c247301ba4744c398de0e821b26ac14f7f29ab6d14a88d2c4607d4b5f2908202",
+      "run_vace_fork_action_lora_eval.py": "9403a7b35f03528028cc0101e0c7691af60c45bf95211332a78eb530acaf2be8",
+      "run_vace_fork_action_lora_eval_v2.py": "0af6a45ba1d8046288b7647291b82846f183b4b9a060e9629409f30c9c7bc209"
+    }
+  },
+  "dataset": {
+    "remote_root": "/tmp/foodstateedit_day11_phase_action_overfit_dataset_v1",
+    "manifest_sha256": "b7458dcdd5ec84bb44e8e67212c83680c90b97256a389d755d7c828f29e2bcde",
+    "phase_schedule": {"path": "phase_schedule.json", "size_bytes": 2163, "sha256": "e4bf5538f4e066a29acb79e3ad511680fd8b1770b2616d3c1eec774485a1adc0"},
+    "sample_count": 2,
+    "target_kind": "synthetic_imagegen_pseudotarget",
+    "motion_policy": "translated_audited_final_patch_pseudo_motion_not_physical_ground_truth"
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "family": "strand",
+      "action": "lift_single_bowl_connected_strand",
+      "dimensions": [688, 576],
+      "prompt": "A photorealistic close-up food photograph of the same udon bowl. Exactly two separate wooden chopsticks pinch and lift one continuous noodle strand; the strand remains visibly connected to the noodles in the bowl, with physical contact, occlusion, gloss, and a plausible local shadow. No hand and no extra utensil.",
+      "prompt_sha256_utf8": "48006ae5013276815ecbf26087f934e398267da8557c110c141f4e271c75e7b2",
+      "files": {
+        "reference": {"path": "vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png", "size_bytes": 629168, "sha256": "4d1b59dc94598ee25e8bf824509f297dbc199283d7cf240da023e49be2c42ace"},
+        "control": {"path": "vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4", "size_bytes": 419070, "sha256": "65627fe47d36bbcb8d20d4d84e577f0bcab158d5e09c4e11fda1cb6335cfd004"},
+        "alpha": {"path": "edit_alpha/udon_chopsticks_imagegen_pseudo_v1.png", "size_bytes": 14476, "sha256": "8b012f25a5c4e6d056bb6a6103cf5a7a0efeb0cf37d26002c00e5e285c6bc7e5"},
+        "target_video": {"path": "video/udon_chopsticks_imagegen_pseudo_v1.mp4", "size_bytes": 414541, "sha256": "ff2260674e672d31cef123be7b6e9cd5f0841b358cbc5b1b31d17397e09a39ed"},
+        "target_keyframe": {"path": "target_keyframe/udon_chopsticks_imagegen_pseudo_v1.png", "size_bytes": 629941, "sha256": "509acaa7a5adddf3c63882f01afc7e14bcc807c97608994c754a65feee08e743"}
+      }
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "family": "liquid",
+      "action": "scoop_contained_broth",
+      "dimensions": [736, 592],
+      "prompt": "A photorealistic close-up food photograph of the same bowl of clear golden broth. Exactly one connected stainless-steel spoon scoops and contains visible broth and one scallion ring; two scallion rings remain in the bowl. Physical rim occlusion, metal reflection, and contact shadow. No hand and no other utensil.",
+      "prompt_sha256_utf8": "644f721125c72f48847746e4ac252bb13e04d9936804bcd553bee1f3adb0342c",
+      "files": {
+        "reference": {"path": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png", "size_bytes": 621173, "sha256": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c"},
+        "control": {"path": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4", "size_bytes": 201109, "sha256": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"},
+        "alpha": {"path": "edit_alpha/clear_broth_spoon_imagegen_pseudo_v1.png", "size_bytes": 8192, "sha256": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86"},
+        "target_video": {"path": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4", "size_bytes": 205219, "sha256": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3"},
+        "target_keyframe": {"path": "target_keyframe/clear_broth_spoon_imagegen_pseudo_v1.png", "size_bytes": 635289, "sha256": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf"}
+      }
+    }
+  ],
+  "adapters": {
+    "alpha": 1.0,
+    "injection_mode": "v2_vace_block_inner_linear_injection",
+    "expected_injected_linear_count": 80,
+    "training_manifest": {"path": "/tmp/foodstateedit_day11_phase_action_overfit_high_noise_lora_gp40_copy_v1/run_manifest.json", "size_bytes": 2628, "sha256": "b0e983845bc11635ade6bb410ff171c15cd87fac991c7fa0d2fb01f2b24d7f06"},
+    "step64_validation": {"path": "/tmp/foodstateedit_day11_phase_action_overfit_step64_validation_gp40_v1.json", "size_bytes": 26792, "sha256": "f50453c505706f7c3bd83c80c5e8a835ff71b8c1bf029f65b1f36a50aa3809e9"},
+    "conditions": [
+      {"name": "lora_off", "step": 0, "checkpoint": null},
+      {"name": "step_16", "step": 16, "checkpoint": {"path": "/tmp/foodstateedit_day11_phase_action_overfit_high_noise_lora_gp40_copy_v1/step-16.safetensors", "size_bytes": 15354160, "sha256": "b11253ae53c79e7779e07cffafad472bd88c04816f28e338b126716f66cb9b55"}},
+      {"name": "step_32", "step": 32, "checkpoint": {"path": "/tmp/foodstateedit_day11_phase_action_overfit_high_noise_lora_gp40_copy_v1/step-32.safetensors", "size_bytes": 15354160, "sha256": "b33abb222f5210c749fd438d5f01b5f9750c6841ecb5a1f83230c5fec7180e34"}},
+      {"name": "step_48", "step": 48, "checkpoint": {"path": "/tmp/foodstateedit_day11_phase_action_overfit_high_noise_lora_gp40_copy_v1/step-48.safetensors", "size_bytes": 15354160, "sha256": "2bbbb5eea47c634b5c35cc5357a13627837ca02414d7f3bb7ddf5b21badc09f2"}},
+      {"name": "step_64", "step": 64, "checkpoint": {"path": "/tmp/foodstateedit_day11_phase_action_overfit_high_noise_lora_gp40_copy_v1/step-64.safetensors", "size_bytes": 15354160, "sha256": "fb1f149520e10bf80bcd0795d88ae22589ffc87a9556c0b0af796ff07d5e6b2e"}}
+    ]
+  },
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "fps": 15,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20],
+    "selection_policy": "all_conditions_and_review_frames_frozen_before_inference",
+    "negative_prompt": "hand, arm, person, fingers, duplicate utensil, extra utensil, malformed utensil, fused chopsticks, third chopstick, disconnected food, duplicated food, floating payload, spill, source crater, background change, plate change, bowl change, blur, ghosting, text, watermark"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+    "model_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"},
+      "low_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"},
+      "models_t5_umt5-xxl-enc-bf16.pth": {"size_bytes": 11361920418, "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"},
+      "Wan2.1_VAE.pth": {"size_bytes": 507609880, "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"}
+    },
+    "cache_root": "/tmp/foodstateedit_day11_phase_action_checkpoint_sweep_cache_v1",
+    "offline_environment": {"DIFFSYNTH_SKIP_DOWNLOAD": "true", "HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1", "TOKENIZERS_PARALLELISM": "false"}
+  },
+  "output_base": "/tmp/foodstateedit_day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z",
+  "resource_gate": {"required_gpu_name": "NVIDIA RTX A6000", "min_free_memory_mib": 48000, "max_utilization_percent": 5, "require_no_compute_process": true, "min_available_system_memory_mib": 80000},
+  "decision_gate": {"blind_fork_requires_clear_seen_semantic_gain": true, "balanced_multifamily_expansion_requires_clear_seen_semantic_gain": true}
+}
