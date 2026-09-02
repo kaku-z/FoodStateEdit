@@ -69,6 +69,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
   diagnostic and the requirement for phase-varying supervision;
 - `DAY11_PHASE_ACTION_OVERFIT_CHECKLIST.md`: completed phase-varying 64-step
   overfit training and negative seen-checkpoint capacity gate;
+- `DAY12_PHASE_ACTION_ISOLATION_CHECKLIST.md`: frozen single-sample adapter
+  isolation test with a matched per-sample exposure comparison;
 - `results/DAY5_METHOD_GRID_CAPTION.md`: hash-traceable qualitative comparison caption;
 - `results/DAY6_DYNAMIC_MULTIKEY_PREFLIGHT.md`: pre-output schedule, hashes, and
   deterministic-control invariants;
@@ -93,6 +95,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
 - `results/DAY11_PHASE_ACTION_CHECKPOINT_SWEEP_RESULT.md`: completed two-sample,
   five-condition sweep, separate action/contact and photo reviews, and the
   no-expansion decision;
+- `results/DAY12_PHASE_ACTION_ISOLATION_PREFLIGHT.md`: dedicated udon/spoon
+  training arms, immutable hashes, resource gate, and interference decision rule;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved

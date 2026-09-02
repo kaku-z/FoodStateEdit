@@ -1,5 +1,16 @@
 # Change log
 
+## 2026-09-02 — Day 12 single-sample isolation freeze
+
+- froze dedicated udon-only and broth-only phase-action adapter arms after the
+  shared Day 11 sweep closed with no clear semantic gain;
+- copied each selected Day 11 sample and phase schedule byte for byte, then
+  duplicated its metadata row without changing targets, controls, or prompts;
+- kept the model and all training hyperparameters unchanged and declared
+  dedicated step 32 versus shared step 64 as the matched 32-exposure test;
+- retained the strict no-claim boundary and kept the blind fork blocked unless
+  both dedicated samples show a clear visible semantic gain.
+
 ## 2026-09-01 — Day 11 checkpoint-sweep close
 
 - completed the two seen synthetic phase-action samples serially on one safe
