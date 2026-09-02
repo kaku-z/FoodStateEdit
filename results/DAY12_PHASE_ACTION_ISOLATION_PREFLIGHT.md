@@ -53,3 +53,28 @@ not download models, and do not overwrite any existing path.
   bottleneck remains the supervision/loss/render-control interface.
 - Numeric MAE improvement alone never unlocks the blind fork. Both dedicated
   samples must show clear phase-action/contact gains before any blind run.
+
+## Training execution evidence
+
+Both arms completed serially on gp38 GPU0 after fresh resource gates. Udon
+completed 64 steps in 1,378.907 seconds; broth completed 64 steps in 937.095
+seconds with the model bytes retained in the system page cache. Each arm
+produced step-16/32/48/64 checkpoints of 15,354,160 bytes. Both step-64 files
+passed the official VACE loader check with 160 tensors, 80 LoRA pairs, rank 8,
+and 80 updated linear modules.
+
+## Frozen checkpoint sweeps
+
+The deterministic checkpoint-sweep builder has LF-normalized SHA-256
+`3b63cafdedfe4e0bb851f20f5a78c7d59d0ee83bc6ed88877fa936fd154a192c`.
+It generated the following byte-frozen corresponding-sample configurations:
+
+| arm | sweep config | SHA-256 |
+| --- | --- | --- |
+| udon-only | `configs/vace_phase_action_isolated_udon_checkpoint_sweep_v1.json` | `7e40d783f94677b6bcbba3da886f059b03bed3c90d22e61bf5327a9b31c86387` |
+| broth-only | `configs/vace_phase_action_isolated_spoon_checkpoint_sweep_v1.json` | `91ae2ca1942905352b5904cd2470513c2ef7656248e42dd4384014d49315b170` |
+
+Each sweep fixes LoRA-off and steps 16/32/48/64, seed 1, 21 frames, 20
+inference steps, VACE scale 1, TTM disabled, one corresponding seen sample, and
+the previously frozen model/runtime bytes. Inference remains gated on a fresh
+resource audit and new non-overwriting output and preflight paths.

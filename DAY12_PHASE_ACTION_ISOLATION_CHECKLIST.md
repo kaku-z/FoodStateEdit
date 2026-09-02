@@ -10,8 +10,9 @@
 - [x] Declare dedicated step 32 versus shared step 64 as the matched 32-exposure comparison.
 - [x] Reserve dedicated step 64 as an additional single-sample overfit-capacity probe, not a matched comparison.
 - [x] Require new, non-overwriting remote dataset, training, validation, preflight, and sweep paths.
-- [ ] Run both dedicated training arms serially on a conflict-free RTX A6000.
-- [ ] Validate both step-64 checkpoints offline through the official VACE loader.
+- [x] Run both dedicated training arms serially on a conflict-free RTX A6000.
+- [x] Validate both step-64 checkpoints offline through the official VACE loader.
+- [x] Freeze one corresponding-sample checkpoint-sweep config per verified adapter before inference.
 - [ ] Run LoRA-off/step-16/step-32/step-48/step-64 sweeps on the corresponding seen sample with seed 1.
 - [ ] Rehash all pulled outputs and review phase action/contact separately from photo realism.
 - [ ] Diagnose cross-sample interference only from the matched-exposure comparison.

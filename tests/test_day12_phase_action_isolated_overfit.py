@@ -1,5 +1,6 @@
 import csv
 import hashlib
+import importlib.util
 import json
 import unittest
 from pathlib import Path
@@ -10,6 +11,10 @@ SOURCE_CONFIG = ROOT / "configs" / "adapter_phase_action_overfit_v1.json"
 SOURCE_DATASET = ROOT / "artifacts" / "day11_phase_action_overfit_dataset_v1"
 DATASET_BUILDER = ROOT / "scripts" / "build_phase_action_isolated_overfit_dataset.py"
 CONFIG_BUILDER = ROOT / "scripts" / "build_phase_action_isolated_overfit_configs.py"
+SWEEP_SOURCE_CONFIG = ROOT / "configs" / "vace_phase_action_checkpoint_sweep_v1.json"
+SWEEP_CONFIG_BUILDER = (
+    ROOT / "scripts" / "build_phase_action_isolated_checkpoint_sweep_configs.py"
+)
 ARMS = {
     "udon": {
         "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
@@ -19,6 +24,16 @@ ARMS = {
         "config_sha256": "c6e11696bf55528655677b40d9ebbd8c53fa7d65c4841b34eb8576da9a1e49f3",
         "manifest_sha256": "2297d29d301b395663fd6b67f6c21a79e19a72d8f66583791b7f4ae217c02c54",
         "metadata_sha256": "ff19012d6d610d3ba5a248c9525bf7824dab03d9b203ca7488214953f41b7f3a",
+        "sweep_config": ROOT
+        / "configs"
+        / "vace_phase_action_isolated_udon_checkpoint_sweep_v1.json",
+        "sweep_config_sha256": "7e40d783f94677b6bcbba3da886f059b03bed3c90d22e61bf5327a9b31c86387",
+        "checkpoint_sha256": {
+            16: "671f6fc3a29d3a517014c3512acdf334e92d0a38aa4a43c65c639fcf5782ab8a",
+            32: "cec276ab2a9ba367b2b123fba49655a0e2b82b90f015609e98fec7a32ff2e7c6",
+            48: "86e77f093c72516cf24adeaaebfdcd6f0b8a8c76d65c5c752208d85048e1dc57",
+            64: "9f748fd70663ae6678885dbc0ae1b66d3f5ae74840cfa42c59215cf27607985b",
+        },
     },
     "spoon": {
         "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
@@ -28,6 +43,16 @@ ARMS = {
         "config_sha256": "9255aa36bcd5d79d4f8c2c1c6e48db43b377df467fed7f8c27d1d453d12b9112",
         "manifest_sha256": "5bc398202fc2636ecdab9d77916fbf52c233af5650601810b4dc4bbc068fbe2c",
         "metadata_sha256": "2937d0bc49dccca22132221feb5a5e298a4b66d49845b25c389a6a5e2498c728",
+        "sweep_config": ROOT
+        / "configs"
+        / "vace_phase_action_isolated_spoon_checkpoint_sweep_v1.json",
+        "sweep_config_sha256": "91ae2ca1942905352b5904cd2470513c2ef7656248e42dd4384014d49315b170",
+        "checkpoint_sha256": {
+            16: "e3096719a1836352cb4c536c273494faf059a4639cf8d96881d857f15431c1ad",
+            32: "5f0d43747c39ace60a56d3b85c7226b04e457a74a0a6d8a827e513053b889828",
+            48: "effbfe11dd23e6d577a404b9ac8a77a49077db2c30752a3570d2fa0344415d45",
+            64: "542f76461dd6a50bdb8a8a25cddf1b2a5425e261b6c707ab392b826498eef3df",
+        },
     },
 }
 
@@ -153,6 +178,54 @@ class Day12PhaseActionIsolatedOverfitTests(unittest.TestCase):
                 ]
             )
             self.assertIn("cannot establish", config["claim_limit"])
+
+    def test_isolated_checkpoint_sweep_configs_are_frozen_and_deterministic(self):
+        self.assertEqual(
+            sha256_lf(SWEEP_CONFIG_BUILDER),
+            "3b63cafdedfe4e0bb851f20f5a78c7d59d0ee83bc6ed88877fa936fd154a192c",
+        )
+        builder_text = SWEEP_CONFIG_BUILDER.read_text(encoding="utf-8")
+        self.assertIn("Refusing to overwrite frozen config", builder_text)
+        spec = importlib.util.spec_from_file_location(
+            "day12_isolated_sweep_builder", SWEEP_CONFIG_BUILDER
+        )
+        self.assertIsNotNone(spec)
+        self.assertIsNotNone(spec.loader)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        source = json.loads(SWEEP_SOURCE_CONFIG.read_text(encoding="utf-8"))
+        output_bases = set()
+        for arm_name, arm in ARMS.items():
+            path = arm["sweep_config"]
+            self.assertEqual(sha256_file(path), arm["sweep_config_sha256"])
+            config = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(config, module.build_config(arm_name))
+            self.assertEqual(config["launcher"], source["launcher"])
+            self.assertEqual(config["inference"], source["inference"])
+            self.assertEqual(config["runtime"]["model_files"], source["runtime"]["model_files"])
+            self.assertEqual(config["samples"][0]["sample_id"], arm["sample_id"])
+            self.assertEqual(config["dataset"]["sample_count"], 2)
+            self.assertEqual(config["dataset"]["unique_sample_count"], 1)
+            self.assertEqual(config["dataset"]["manifest_sha256"], arm["manifest_sha256"])
+            conditions = config["adapters"]["conditions"]
+            self.assertEqual(
+                [condition["name"] for condition in conditions],
+                ["lora_off", "step_16", "step_32", "step_48", "step_64"],
+            )
+            for condition in conditions[1:]:
+                step = condition["step"]
+                self.assertEqual(
+                    condition["checkpoint"]["sha256"], arm["checkpoint_sha256"][step]
+                )
+            matched = config["comparison_contract"]
+            self.assertEqual(matched["dedicated_step32_selected_sample_exposures"], 32)
+            self.assertEqual(matched["shared_day11_step64_expected_selected_sample_exposures"], 32)
+            self.assertTrue(
+                config["decision_gate"]
+                ["blind_fork_requires_both_dedicated_samples_clear_seen_semantic_gain"]
+            )
+            output_bases.add(config["output_base"])
+        self.assertEqual(len(output_bases), 2)
 
 
 if __name__ == "__main__":
