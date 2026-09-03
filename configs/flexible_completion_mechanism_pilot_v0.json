@@ -1,0 +1,250 @@
+{
+  "schema_version": "foodstateedit.flexible_completion_mechanism_pilot.v0",
+  "freeze_date": "2026-09-03",
+  "scientific_status": "design_frozen_seen_synthetic_mechanism_pilot_no_execution",
+  "execution_allowed": false,
+  "title": "3D-guided topology-weighted diffusion completion for a flexible udon strand",
+  "question": "Does a topology-weighted diffusion objective derived from a relative-3D action scaffold make VACE retain visible pinch contact, one continuous bowl-connected strand, lift, and final hold better than the same 3D control with the stock uniform objective?",
+  "claim_limit": "This is one seen synthetic pseudo-motion mechanism pilot using relative 3D, not reconstructed scene geometry. A positive result can support only a preliminary causal claim about this sample. It cannot establish held-out generalization, real-data performance, physical correctness, or paper-level photo realism.",
+  "hypotheses": {
+    "contextual_3d_representation": "Relative-3D control may improve rigid utensil and depth-order cues over the planar control.",
+    "primary_flexible_completion": "With the same relative-3D control and matched training randomness, topology-weighted FlowMatch supervision improves visible flexible-strand contact and connectivity over uniform FlowMatch supervision."
+  },
+  "sample": {
+    "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+    "family": "strand",
+    "utensil": "chopsticks",
+    "action": "lift_single_bowl_connected_strand",
+    "source_dataset_root": "artifacts/day12_phase_action_isolated_udon_dataset_v2",
+    "source_dataset_manifest_sha256": "2297d29d301b395663fd6b67f6c21a79e19a72d8f66583791b7f4ae217c02c54",
+    "source_training_config": "configs/adapter_phase_action_isolated_udon_v1.json",
+    "source_training_config_sha256": "c6e11696bf55528655677b40d9ebbd8c53fa7d65c4841b34eb8576da9a1e49f3",
+    "files": {
+      "target_video": {
+        "path": "video/udon_chopsticks_imagegen_pseudo_v1.mp4",
+        "sha256": "ff2260674e672d31cef123be7b6e9cd5f0841b358cbc5b1b31d17397e09a39ed"
+      },
+      "planar_vace_control": {
+        "path": "vace_video/udon_chopsticks_imagegen_pseudo_v1.mp4",
+        "sha256": "65627fe47d36bbcb8d20d4d84e577f0bcab158d5e09c4e11fda1cb6335cfd004"
+      },
+      "reference_image": {
+        "path": "vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png",
+        "sha256": "4d1b59dc94598ee25e8bf824509f297dbc199283d7cf240da023e49be2c42ace"
+      },
+      "target_keyframe": {
+        "path": "target_keyframe/udon_chopsticks_imagegen_pseudo_v1.png",
+        "sha256": "509acaa7a5adddf3c63882f01afc7e14bcc807c97608994c754a65feee08e743"
+      },
+      "edit_alpha": {
+        "path": "edit_alpha/udon_chopsticks_imagegen_pseudo_v1.png",
+        "sha256": "8b012f25a5c4e6d056bb6a6103cf5a7a0efeb0cf37d26002c00e5e285c6bc7e5"
+      },
+      "phase_schedule": {
+        "path": "phase_schedule.json",
+        "sha256": "e4bf5538f4e066a29acb79e3ad511680fd8b1770b2616d3c1eec774485a1adc0"
+      }
+    }
+  },
+  "relative_3d_scaffold": {
+    "evidence_level": "relative_3d_normalized_pinhole_not_reconstructed_scene_depth",
+    "projection_module": "foodstateedit/projection3d.py",
+    "projection_module_sha256": "181727cb57c11a4253007268686ff8975695c7eafb683e160720cbb2b52176e0",
+    "prior_fork_config": "configs/fork_3d_projection_v0.json",
+    "prior_fork_config_sha256": "e737caa96490edee7e37babd5ee11af699c249a8e639235289e9fbe5f1be681a",
+    "frame_count": 21,
+    "phase_names": ["source", "approach", "contact", "lift", "final_hold"],
+    "geometry": {
+      "rigid_chopstick_count": 2,
+      "flexible_strand_count": 1,
+      "fixed_bowl_anchor_count": 1,
+      "moving_pinch_anchor_count": 1,
+      "continuous_curve_required": true,
+      "pinch_depth_crossing_required": true,
+      "frame_zero_equals_source": true
+    },
+    "derived_training_inputs": [
+      "relative_3d_vace_control_video",
+      "flexible_strand_mask_video",
+      "pinch_contact_mask_video",
+      "source_connection_mask_video"
+    ],
+    "mask_policy": {
+      "source": "all topology masks are zero",
+      "approach": "all topology masks are zero until the utensil reaches the food",
+      "contact": "pinch contact and local strand masks are active",
+      "lift": "strand, pinch contact, and source connection masks are active",
+      "final_hold": "strand, pinch contact, and source connection masks remain active"
+    }
+  },
+  "trainer_audit": {
+    "runtime_root": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle",
+    "commit": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+    "train_script": "examples/wanvideo/model_training/train.py",
+    "train_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+    "stock_loss_script": "diffsynth/diffusion/loss.py",
+    "stock_loss_script_sha256": "17e93dad587ed77ef7eecb0415b4e57f28989dee15e294e00c43d492910c0c11",
+    "stock_objective": "global_uniform_mean_squared_error_between_noise_prediction_and_flow_matching_target",
+    "extension_point": "Use an independent hash-frozen training entry point; do not modify the frozen upstream runtime in place."
+  },
+  "common_training": {
+    "training_seed": 20260903,
+    "dataset_unique_samples": 1,
+    "metadata_rows": 2,
+    "dataset_repeat": 8,
+    "epochs": 2,
+    "expected_optimizer_steps": 32,
+    "checkpoint_steps": [16, 32],
+    "stage": "high_noise",
+    "lora_base_model": "vace",
+    "lora_target_modules": "q,k,v,o,ffn.0,ffn.2",
+    "lora_rank": 8,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "num_frames": 21,
+    "max_pixels": 153600,
+    "min_timestep_boundary": 0.0,
+    "max_timestep_boundary": 0.358,
+    "gradient_checkpointing_offload": true,
+    "model_cpu_offload": true,
+    "optimizer_cpu_offload": false,
+    "matched_randomness_requirements": [
+      "same initial LoRA tensor hashes",
+      "same dataloader order",
+      "same sampled timesteps",
+      "same sampled diffusion noise",
+      "same mixed precision and optimizer state"
+    ]
+  },
+  "training_arms": [
+    {
+      "id": "planar_uniform",
+      "control": "frozen_planar_day12_control",
+      "loss": "stock_uniform_flowmatch_mse",
+      "role": "contextual planar baseline"
+    },
+    {
+      "id": "relative3d_uniform",
+      "control": "new_relative_3d_udon_control",
+      "loss": "stock_uniform_flowmatch_mse",
+      "role": "3D representation baseline"
+    },
+    {
+      "id": "relative3d_topology_weighted",
+      "control": "new_relative_3d_udon_control",
+      "loss": "topology_weighted_flowmatch_mse_v0",
+      "role": "proposed flexible completion objective"
+    }
+  ],
+  "topology_weighted_loss": {
+    "id": "topology_weighted_flowmatch_mse_v0",
+    "raw_weight_formula": "1 + 3*M_strand + 7*M_contact + 5*M_source_connection",
+    "mask_values": "binary_0_or_1",
+    "overlap_policy": "additive",
+    "latent_alignment": "adaptive_max_pool_each_binary_mask_to_exact_noise_prediction_T_H_W",
+    "first_frame_policy": "match stock loss by excluding the conditioned first-frame latent before reduction",
+    "normalization": "divide the non-first-frame weight volume by its own mean before applying squared error",
+    "reduction": "sum(weight*elementwise_squared_error)/sum(weight)",
+    "reason": "Preserve thin flexible structure and emphasize pinch contact and the bowl-connected source endpoint without changing the global loss scale."
+  },
+  "evaluation": {
+    "inference_seed": 1,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "ttm_enabled": false,
+    "primary_checkpoint_step": 32,
+    "diagnostic_checkpoint_step": 16,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20],
+    "conditions": [
+      "planar_lora_off",
+      "planar_uniform_step32",
+      "relative3d_lora_off",
+      "relative3d_uniform_step32",
+      "relative3d_topology_weighted_step32"
+    ],
+    "primary_causal_comparison": "relative3d_topology_weighted_step32_vs_relative3d_uniform_step32",
+    "contextual_geometry_comparison": "relative3d_uniform_step32_vs_planar_uniform_step32",
+    "machine_metrics": [
+      "target_rgb_mae_inside_edit_support_by_phase",
+      "target_rgb_mae_inside_3d_topology_weight_volume",
+      "target_rgb_mae_inside_pinch_contact_roi",
+      "target_rgb_mae_inside_source_connection_roi",
+      "outside_support_max_pixel_difference",
+      "pipeline_load_count",
+      "decoded_frame_count",
+      "output_sha256"
+    ],
+    "blinded_human_review": {
+      "minimum_independent_reviewers": 2,
+      "condition_names_hidden": true,
+      "required_events": [
+        "two_separate_chopsticks",
+        "visible_pinch_contact",
+        "single_continuous_strand",
+        "strand_visibly_returns_to_bowl",
+        "payload_lift",
+        "final_hold"
+      ],
+      "photo_realism_reviewed_separately": true,
+      "disagreement_policy": "fail_inconclusive_no_expansion"
+    }
+  },
+  "positive_contribution_gate": {
+    "all_required": true,
+    "requirements": [
+      "both blinded reviewers prefer relative3d_topology_weighted_step32 over relative3d_uniform_step32 for pinch, connected lift, and final hold",
+      "relative3d_topology_weighted_step32 visibly improves over relative3d_lora_off",
+      "target_rgb_mae_inside_3d_topology_weight_volume improves by at least 5 percent over relative3d_uniform_step32",
+      "target_rgb_mae_inside_pinch_contact_roi improves by at least 5 percent over relative3d_uniform_step32",
+      "photo realism is not judged worse than relative3d_uniform_step32 by either reviewer",
+      "outside_support_max_pixel_difference equals zero for every condition",
+      "all expected files and hashes verify"
+    ],
+    "numeric_only_improvement_passes": false,
+    "step16_can_select_the_winner": false,
+    "additional_seed_can_rescue_failure": false
+  },
+  "decision_rules": {
+    "if_primary_gate_passes": "Report one-sample preliminary evidence that 3D-derived topology-weighted supervision improves flexible completion under matched control and randomness.",
+    "if_only_relative3d_uniform_beats_planar": "Report only a 3D representation gain; do not claim a flexible completion contribution.",
+    "if_only_numeric_metrics_improve": "Close as a semantic failure.",
+    "if_primary_gate_fails": "Conclude only that this weighting formulation is insufficient; freeze a new experiment before changing weights, masks, seeds, or samples.",
+    "blind_fork_evaluation_allowed": false,
+    "balanced_family_expansion_allowed": false
+  },
+  "resource_gate": {
+    "execution_mode": "serial_only",
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "require_no_compute_process": true,
+    "min_available_system_memory_mib": 80000,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "proposed_paths": {
+    "local_dataset_root": "artifacts/day13_3d_guided_flexible_completion_udon_v1",
+    "remote_dataset_root": "/tmp/foodstateedit_day13_3d_guided_flexible_completion_udon_v1",
+    "planar_uniform_output": "/tmp/foodstateedit_day13_planar_uniform_udon_lora_v1",
+    "relative3d_uniform_output": "/tmp/foodstateedit_day13_relative3d_uniform_udon_lora_v1",
+    "relative3d_topology_weighted_output": "/tmp/foodstateedit_day13_relative3d_topology_weighted_udon_lora_v1",
+    "evaluation_output": "/tmp/foodstateedit_day13_flexible_completion_eval_v1"
+  },
+  "implementation_freeze_gate": {
+    "execution_allowed": false,
+    "pending_hashes": [
+      "relative 3D udon scaffold builder",
+      "derived dataset manifest",
+      "seeded uniform training entry point",
+      "topology-weighted training entry point",
+      "training preflight",
+      "checkpoint validator",
+      "multi-condition inference runner",
+      "topology metric evaluator"
+    ],
+    "unlock_rule": "Create a new immutable execution config containing every pending SHA-256, pass local contract tests, and re-audit all remote paths and resources before any GPU launch."
+  }
+}

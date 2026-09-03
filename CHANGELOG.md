@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-09-03 — Day 13 flexible-completion experiment design
+
+- defined a three-arm seen-udon experiment separating planar control,
+  relative-3D control, and 3D-derived topology-weighted FlowMatch supervision;
+- made the matched relative3d-weighted versus relative3d-uniform comparison the
+  only primary test of the proposed flexible-completion contribution;
+- froze the strand, pinch-contact, and source-connection loss weighting,
+  matched-randomness requirements, blinded semantic review, quantitative
+  thresholds, and no-rescue stop rule before implementation output;
+- kept GPU execution, blind fork evaluation, and family expansion disabled
+  until all implementation artifacts are tested and hash-frozen separately.
+
 ## 2026-09-03 — Day 12 single-sample isolation close
 
 - completed dedicated udon and broth checkpoint sweeps serially on a safe gp38

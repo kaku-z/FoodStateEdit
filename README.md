@@ -71,6 +71,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
   overfit training and negative seen-checkpoint capacity gate;
 - `DAY12_PHASE_ACTION_ISOLATION_CHECKLIST.md`: completed single-sample adapter
   isolation test with a negative matched-exposure semantic gate;
+- `DAY13_3D_GUIDED_FLEXIBLE_COMPLETION_CHECKLIST.md`: frozen three-arm design
+  for testing 3D-derived topology-weighted diffusion completion;
 - `results/DAY5_METHOD_GRID_CAPTION.md`: hash-traceable qualitative comparison caption;
 - `results/DAY6_DYNAMIC_MULTIKEY_PREFLIGHT.md`: pre-output schedule, hashes, and
   deterministic-control invariants;
@@ -99,6 +101,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
   training arms, immutable hashes, resource gate, and interference decision rule;
 - `results/DAY12_PHASE_ACTION_ISOLATION_RESULT.md`: completed dedicated
   checkpoint sweeps, matched-exposure review, and the no-blind-fork decision;
+- `results/DAY13_3D_GUIDED_FLEXIBLE_COMPLETION_DESIGN.md`: causal experiment
+  design, loss definition, positive-contribution gate, and execution lock;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved
