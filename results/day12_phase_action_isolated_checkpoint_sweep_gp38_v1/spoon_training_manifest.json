@@ -1,0 +1,53 @@
+{
+  "schema_version": "foodstateedit.phase_action_overfit_run.v1",
+  "method": "foodstateedit_vace_lora_action_pseudo_v1",
+  "experiment_variant": "phase_varying_overfit_sanity_v1",
+  "scientific_status": "mechanism_pilot_with_synthetic_pseudotargets",
+  "claim_limit": "This dedicated adapter sees one duplicated synthetic pseudo-motion sample. It is not real-data training and tests isolation and overfit capacity only. It cannot establish generalization, real-data performance, physical validity, or paper-level photo realism.",
+  "status": "complete_requires_seen_phase_checkpoint_sweep",
+  "return_code": 0,
+  "started_at": "2026-09-02T05:14:52.117139+00:00",
+  "finished_at": "2026-09-02T05:30:29.211738+00:00",
+  "duration_seconds": 937.094599,
+  "selected_physical_gpu": 0,
+  "expected_optimizer_steps": 64,
+  "expected_checkpoint_names": [
+    "step-16.safetensors",
+    "step-32.safetensors",
+    "step-48.safetensors",
+    "step-64.safetensors"
+  ],
+  "config_sha256": "9255aa36bcd5d79d4f8c2c1c6e48db43b377df467fed7f8c27d1d453d12b9112",
+  "preflight_report_sha256": "20437a3172288c53604755d3a40a1a61cd07d86132298fe76fc3fabf34c5274f",
+  "dataset_manifest_sha256": "5bc398202fc2636ecdab9d77916fbf52c233af5650601810b4dc4bbc068fbe2c",
+  "target_audit_sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+  "trainer_commit": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+  "trainer_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+  "no_audio_wrapper_sha256": "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90",
+  "model_hash_audit_sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+  "command_sha256": "028f6b2dcd25ca229c589efcc9de572f8e6d552b9cc10ed02b366a74f36e3d89",
+  "log_sha256": "2d11c3935d0cf5c9b8815a24017e190c1c6d7dc9c15a13fd03eb08e152f5cbc7",
+  "checkpoints": [
+    {
+      "path": "step-16.safetensors",
+      "size_bytes": 15354160,
+      "sha256": "e3096719a1836352cb4c536c273494faf059a4639cf8d96881d857f15431c1ad"
+    },
+    {
+      "path": "step-32.safetensors",
+      "size_bytes": 15354160,
+      "sha256": "5f0d43747c39ace60a56d3b85c7226b04e457a74a0a6d8a827e513053b889828"
+    },
+    {
+      "path": "step-48.safetensors",
+      "size_bytes": 15354160,
+      "sha256": "effbfe11dd23e6d577a404b9ac8a77a49077db2c30752a3570d2fa0344415d45"
+    },
+    {
+      "path": "step-64.safetensors",
+      "size_bytes": 15354160,
+      "sha256": "542f76461dd6a50bdb8a8a25cddf1b2a5425e261b6c707ab392b826498eef3df"
+    }
+  ],
+  "next_required_gate": "Evaluate LoRA-off and steps 16/32/48/64 on both seen phase-varying samples; do not run a blind fork test unless a clear seen-sample semantic gain appears."
+}

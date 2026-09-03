@@ -217,3 +217,28 @@ This section updates the dated sprint-start snapshot without rewriting it.
   expansion and another blind fork evaluation remain blocked.
 - This result cannot support claims about generalization, real data, physical
   correctness, or paper-level photo realism.
+
+## Sprint additions through the Day 12 isolation result
+
+- Dedicated udon-only and broth-only adapters were compared at step 32 against
+  the shared Day 11 step 64 checkpoint at the same 32 selected-sample
+  exposures. Dedicated step 64 remains an additional capacity probe only.
+- Both five-condition sweeps completed serially on a conflict-free gp38 A6000,
+  with one pipeline load per sample, 21 frames per condition, and exact
+  outside-support preservation.
+- All 40 pulled run-package files, 36 manifest-recorded outputs, and 14
+  supporting evidence files were rehashed with zero mismatch. A client-side
+  SSH reset during the spoon observation did not stop the remote worker; the
+  fresh remote run completed all conditions normally.
+- Udon dedicated step 32 is numerically worse than shared step 64 and has no
+  clearer pinch, acquisition, connected lift, or hold.
+- Broth dedicated step 32 is numerically and visually cleaner than the degraded
+  shared step 64 result, but the same visible spoon action already occurs with
+  LoRA disabled. Later dedicated checkpoints reintroduce a pale spoon-rim
+  artifact.
+- The matched interference diagnosis is not supported: clear semantic gain is
+  `0/2`, and clear photo-realism gain over LoRA-off is `0/2`. Balanced expansion
+  and blind fork evaluation remain blocked.
+- This is only a seen synthetic single-sample isolation result; it cannot
+  support claims about generalization, real data, physical correctness, or
+  paper-level photo realism.

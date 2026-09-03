@@ -1,0 +1,138 @@
+{
+  "schema_version": "foodstateedit.day12_phase_action_isolation_result.v1",
+  "review_date": "2026-09-03",
+  "scientific_status": "closed_seen_synthetic_single_sample_isolation_no_clear_semantic_gain_not_generalization",
+  "experiment": {
+    "question": "Did cross-sample interference in the shared Day 11 adapter hide phase-action learning?",
+    "matched_comparison": "dedicated_step_32_vs_shared_day11_step_64",
+    "selected_sample_exposures_per_matched_condition": 32,
+    "dedicated_step_64_role": "additional_single_sample_overfit_capacity_probe"
+  },
+  "execution": {
+    "host": "gp38.cs.uec.ac.jp",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA RTX A6000",
+    "conditions": ["lora_off", "step_16", "step_32", "step_48", "step_64"],
+    "seed": 1,
+    "decoded_frames_per_condition": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "ttm_enabled": false,
+    "pipeline_load_count_per_sample": 1,
+    "outside_support_max_pixel_difference": 0,
+    "pulled_run_files_verified": 40,
+    "pulled_supporting_evidence_files_verified": 14,
+    "manifest_output_files_verified": 36,
+    "local_sha256_mismatch_count": 0,
+    "model_downloaded": false,
+    "technical_failure_count": 0,
+    "spoon_client_ssh_reset_observed": true,
+    "spoon_remote_complete_marker_verified": true
+  },
+  "evidence": {
+    "artifact_root": "artifacts/day12_phase_action_isolated_checkpoint_sweep_gp38_v1",
+    "supporting_result_root": "results/day12_phase_action_isolated_checkpoint_sweep_gp38_v1",
+    "runner_sha256": "334f4f79f013c43a2d46c95835012272eeb4618fd4263f7c13947f0ca66b837e",
+    "preflight_script_sha256": "2150d3353bb08a770cf3cbf1ffcb4c4724c4b63e905d1420ba032e02573b1c33",
+    "udon_sweep_config_sha256": "7e40d783f94677b6bcbba3da886f059b03bed3c90d22e61bf5327a9b31c86387",
+    "spoon_sweep_config_sha256": "91ae2ca1942905352b5904cd2470513c2ef7656248e42dd4384014d49315b170",
+    "udon_sweep_runner_preflight_sha256": "b665c8136d3bfd10072d9baaa3fb9ebdcd17176638154679c90bc1816592620a",
+    "spoon_sweep_runner_preflight_sha256": "be906f043eb6998f4c265f54f601c85c5e90df521341f21c67bf20dbb0246f3a",
+    "udon_training_manifest_sha256": "414751d3ab9f92cc0d8ecbb169896ba5513762d5ce114bda7dc7c0bda3c98176",
+    "spoon_training_manifest_sha256": "3b48b24dbc605a7355d4e1497c80a3d795a6d2ea5ebaa83cb85774781d439768",
+    "udon_step64_validation_sha256": "f606098deed20bf9ac3eb3f74fc90349509f2e52cb824205838263215fa3bbe3",
+    "spoon_step64_validation_sha256": "92acdf752563e780ec499cb607be6f62b2bddd2aede6ffa93d1d32e15c23acbf",
+    "udon_training_standalone_preflight_sha256": "8c9c2c5d561def569c38e42e510397acf17b25dd4d05dfa1e790eb80ad8708db",
+    "udon_training_runner_preflight_sha256": "52f05fcd8c8e6ed5ec6e560b0ba871d782dac6b3c4724b44dea3e383dd579595",
+    "spoon_training_standalone_preflight_sha256": "692cfd5d8cf0768a08d47962c343ed85db649a8e05750d0f041364976955792b",
+    "spoon_training_runner_preflight_sha256": "20437a3172288c53604755d3a40a1a61cd07d86132298fe76fc3fabf34c5274f",
+    "udon_training_launcher_log_sha256": "263993a1bafd665157e00ca53aafb878f64c009c0b8920d92496c367f97db516",
+    "spoon_training_launcher_log_sha256": "911463fee85dd1ce5b0bba1eb212034ef26a9b322afc3482a3f1bc8ecc725274"
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "family": "strand",
+      "run_manifest_sha256": "257ad5813dec3bd9e56d79b5c830937c276ec31814f2a2cad68e641bec5e28d8",
+      "wall_time_seconds": 2578.724,
+      "best_dedicated_condition_by_target_support_mae": "step_64",
+      "target_inside_support_mae": {
+        "lora_off": 13.651067314948843,
+        "step_16": 13.633233121775602,
+        "step_32": 12.754207524527086,
+        "step_48": 12.434907520815548,
+        "step_64": 12.094378007893207
+      },
+      "matched_shared_day11_step64_target_inside_support_mae": 11.999780276880822,
+      "matched_dedicated_step32_minus_shared_step64_mae": 0.754427247646264,
+      "contact_sheet_sha256": {
+        "lora_off": "ab18dd7b02a2db1fc0c748c2823531d43b28d78dddaa3bbe41c5860ed34eb8c6",
+        "step_16": "62c3a227419ada60db46a89c9c55a5df68dd71eb0701c8856dcd33f46ad1b0f0",
+        "step_32": "f7b6cc6695c8fd47bf0b149d50315290461e8338b292446a3a92fc870e106822",
+        "step_48": "962e7bafe110d79d11d88090dc0fc7df655d3e497bd33aceaf8ef822c5dfd5ea",
+        "step_64": "7c60731dbcacf04c30fd73d7db6c75b49d5296e02858676c7654f76bc8d8d967"
+      },
+      "phase_action_contact_review": {
+        "clear_improvement_over_lora_off": false,
+        "clear_improvement_over_matched_shared_checkpoint": false,
+        "diagnostic": "The dedicated checkpoints retain nearly the same chopstick entry, ambiguous contact, and final noodle configuration as LoRA-off and the shared Day 11 step 64 result. They do not visibly add a clearer pinch, acquisition, bowl-connected lift, or hold."
+      },
+      "photo_realism_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "The output remains broadly food-photographic, but the pale, soft utensil-contact and lifted-noodle geometry is not clearly improved by the dedicated adapter."
+      }
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "family": "liquid",
+      "run_manifest_sha256": "71ebad25e65c8e3d0d565f3159aace161b0f591bbdc1d764e304f9805b21966f",
+      "wall_time_seconds": 3646.705,
+      "best_dedicated_condition_by_target_support_mae": "step_32",
+      "target_inside_support_mae": {
+        "lora_off": 21.235547481755436,
+        "step_16": 20.689063678072248,
+        "step_32": 20.136752673573948,
+        "step_48": 22.447982637035174,
+        "step_64": 20.18300953583433
+      },
+      "matched_shared_day11_step64_target_inside_support_mae": 23.892769036976556,
+      "matched_dedicated_step32_minus_shared_step64_mae": -3.756016363402608,
+      "contact_sheet_sha256": {
+        "lora_off": "7038af7ee547fb77a73926815e3baa3399a11aec1b2ab8b8a35a8298a0cb8a13",
+        "step_16": "adec0a624ae8865f6aad14617185bf6505d44cd43dda689f7bcc8931739363be",
+        "step_32": "d8eb2da62d8687c61ed2a45c7c2237b329540d24ce09e33c0beff7edd44cd024",
+        "step_48": "7622888a3391eec71770a4891bb595f2be72794a04309cacb46be1fc529c4729",
+        "step_64": "a94bc2664983a5a839854ebb80eb8801d69adc0286064f7ed4821a39e2e5115c"
+      },
+      "phase_action_contact_review": {
+        "clear_improvement_over_lora_off": false,
+        "clear_improvement_over_matched_shared_checkpoint": false,
+        "diagnostic": "Dedicated step 32 is numerically closer and more coherent than the shared Day 11 step 64 result, but it shows the same spoon approach, broth payload, and final hold already present with LoRA disabled. It therefore does not establish adapter-driven phase or contact learning."
+      },
+      "photo_realism_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "Step 32 is more photographic than the shared Day 11 step 64 result but not clearly better than LoRA-off. Steps 48 and 64 add a conspicuous pale or translucent spoon-bowl rim and are less photographic."
+      }
+    }
+  ],
+  "aggregate": {
+    "technical_complete": 2,
+    "technical_failure": 0,
+    "matched_samples_numerically_better_than_shared": 1,
+    "samples_with_clear_phase_action_contact_improvement_over_both_baselines": 0,
+    "samples_with_clear_photo_realism_improvement_over_lora_off": 0,
+    "clear_seen_semantic_gain": false,
+    "cross_sample_interference_diagnosis_supported": false
+  },
+  "decision": {
+    "matched_interference_gate_passed": false,
+    "single_sample_overfit_capacity_gate_passed": false,
+    "balanced_multifamily_expansion_allowed": false,
+    "blind_fork_evaluation_allowed": false,
+    "generalization_claim_allowed": false,
+    "real_data_performance_claim_allowed": false,
+    "physical_correctness_claim_allowed": false,
+    "paper_level_photo_realism_claim_allowed": false,
+    "next_step": "Treat the supervision, loss, or render-control interface as the remaining bottleneck and define a newly frozen bounded diagnostic before any further evaluation."
+  }
+}

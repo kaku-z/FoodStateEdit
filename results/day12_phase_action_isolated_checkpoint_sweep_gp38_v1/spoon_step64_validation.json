@@ -1,0 +1,1305 @@
+{
+  "schema_version": "foodstateedit.adapter_action_checkpoint_validation.v1",
+  "method": "foodstateedit_vace_lora_action_pseudo_v1",
+  "status": "complete",
+  "started_at": "2026-09-02T05:31:02.101945+00:00",
+  "checkpoint": "/tmp/foodstateedit_day12_phase_action_isolated_spoon_lora_v1/step-64.safetensors",
+  "expected_checkpoint_sha256": "542f76461dd6a50bdb8a8a25cddf1b2a5425e261b6c707ab392b826498eef3df",
+  "validator_sha256": "940889156eefaf0b5605df29eb821587c2090c55d8d1e954523035816d421b73",
+  "checkpoint_size_bytes": 15354160,
+  "checkpoint_sha256": "542f76461dd6a50bdb8a8a25cddf1b2a5425e261b6c707ab392b826498eef3df",
+  "config_sha256": "9255aa36bcd5d79d4f8c2c1c6e48db43b377df467fed7f8c27d1d453d12b9112",
+  "trainer_commit": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+  "trainer_script_sha256": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+  "base_model_file": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B/high_noise_model/diffusion_pytorch_model.safetensors",
+  "host_memory_available_mib_before_load": 244911,
+  "tensor_count": 160,
+  "pair_count": 80,
+  "rank": 8,
+  "official_loader_updated_tensor_count": 80,
+  "tensor_records": [
+    {
+      "key": "vace_blocks.0.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.0.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.1.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.2.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.3.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.4.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.5.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.6.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.cross_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.ffn.0.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.ffn.0.lora_B.default.weight",
+      "shape": [
+        13824,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.ffn.2.lora_A.default.weight",
+      "shape": [
+        8,
+        13824
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.ffn.2.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.k.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.k.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.o.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.o.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.q.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.q.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.v.lora_A.default.weight",
+      "shape": [
+        8,
+        5120
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    {
+      "key": "vace_blocks.7.self_attn.v.lora_B.default.weight",
+      "shape": [
+        5120,
+        8
+      ],
+      "dtype": "torch.bfloat16"
+    }
+  ],
+  "claim_limit": "Checkpoint structure and official VACE loadability only. Training used two synthetic pseudo-targets; this report makes no action, generalization, or visual-quality claim.",
+  "finished_at": "2026-09-02T05:31:23.645569+00:00",
+  "duration_seconds": 21.543624
+}

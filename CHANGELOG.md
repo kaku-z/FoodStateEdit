@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-09-03 — Day 12 single-sample isolation close
+
+- completed dedicated udon and broth checkpoint sweeps serially on a safe gp38
+  A6000 and verified all five conditions, 21 frames, one pipeline load, and
+  exact outside-support preservation for each sample;
+- pulled and rehashed 40 run-package files, all 36 manifest output records, and
+  14 supporting evidence files with zero mismatch, preserving the completed
+  spoon evidence after a client SSH reset;
+- found no clear phase-action/contact improvement over both required baselines
+  and no clear photo-realism improvement over LoRA-off;
+- rejected cross-sample interference as the supported diagnosis and kept
+  balanced expansion and blind fork evaluation blocked.
+
 ## 2026-09-02 — Day 12 single-sample isolation freeze
 
 - froze dedicated udon-only and broth-only phase-action adapter arms after the

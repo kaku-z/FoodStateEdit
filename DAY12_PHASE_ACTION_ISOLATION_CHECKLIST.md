@@ -13,10 +13,10 @@
 - [x] Run both dedicated training arms serially on a conflict-free RTX A6000.
 - [x] Validate both step-64 checkpoints offline through the official VACE loader.
 - [x] Freeze one corresponding-sample checkpoint-sweep config per verified adapter before inference.
-- [ ] Run LoRA-off/step-16/step-32/step-48/step-64 sweeps on the corresponding seen sample with seed 1.
-- [ ] Rehash all pulled outputs and review phase action/contact separately from photo realism.
-- [ ] Diagnose cross-sample interference only from the matched-exposure comparison.
-- [ ] Permit a blind fork run only if both dedicated samples show a clear semantic gain.
+- [x] Run LoRA-off/step-16/step-32/step-48/step-64 sweeps on the corresponding seen sample with seed 1.
+- [x] Rehash all pulled outputs and review phase action/contact separately from photo realism.
+- [x] Diagnose cross-sample interference only from the matched-exposure comparison; the diagnosis is not supported.
+- [x] Keep the blind fork blocked because neither dedicated sample shows a clear semantic gain over both required baselines.
 
 This is a seen synthetic single-sample isolation diagnostic. It cannot establish
 generalization, real-data performance, physical validity, or paper-level photo

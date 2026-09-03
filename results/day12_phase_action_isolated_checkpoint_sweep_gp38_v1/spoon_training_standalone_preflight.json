@@ -1,0 +1,721 @@
+{
+  "schema_version": "foodstateedit.adapter_action_preflight.v1",
+  "ready": true,
+  "selected_gpu": 0,
+  "config_sha256": "9255aa36bcd5d79d4f8c2c1c6e48db43b377df467fed7f8c27d1d453d12b9112",
+  "dataset_manifest_sha256": "5bc398202fc2636ecdab9d77916fbf52c233af5650601810b4dc4bbc068fbe2c",
+  "target_audit_sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+  "checks": [
+    {
+      "id": "method",
+      "passed": true,
+      "actual": "foodstateedit_vace_lora_action_pseudo_v1",
+      "criterion": "foodstateedit_vace_lora_action_pseudo_v1"
+    },
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "mechanism_pilot_with_synthetic_pseudotargets",
+      "criterion": "mechanism_pilot_with_synthetic_pseudotargets"
+    },
+    {
+      "id": "claim_limit",
+      "passed": true,
+      "actual": "This dedicated adapter sees one duplicated synthetic pseudo-motion sample. It is not real-data training and tests isolation and overfit capacity only. It cannot establish generalization, real-data performance, physical validity, or paper-level photo realism.",
+      "criterion": "Must explicitly exclude real-data and generalization/photo-realism claims."
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day12_phase_action_isolated_spoon_lora_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "frozen_output_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day12_phase_action_isolated_spoon_lora_v1",
+      "criterion": "/tmp/foodstateedit_day12_phase_action_isolated_spoon_lora_v1"
+    },
+    {
+      "id": "expected_optimizer_steps",
+      "passed": true,
+      "actual": 64,
+      "criterion": "sample_count * dataset_repeat * epochs"
+    },
+    {
+      "id": "preflight_sha256",
+      "passed": true,
+      "actual": "274d8d8a4c4f3d924f6936c96f0cf1e2fa5affc9f4664b47950e96d2fbe9cf86",
+      "criterion": "274d8d8a4c4f3d924f6936c96f0cf1e2fa5affc9f4664b47950e96d2fbe9cf86"
+    },
+    {
+      "id": "runner_sha256",
+      "passed": true,
+      "actual": "4dab62370b6c66edf47e00fdb077fe2ac147382a5f09d7335fac00a1369f4e38",
+      "criterion": "4dab62370b6c66edf47e00fdb077fe2ac147382a5f09d7335fac00a1369f4e38"
+    },
+    {
+      "id": "target_audit_hash",
+      "passed": true,
+      "actual": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+      "criterion": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea"
+    },
+    {
+      "id": "target_audit_counts",
+      "passed": true,
+      "actual": {
+        "eligible_primary_targets": [
+          "udon_chopsticks_imagegen_oracle",
+          "clear_broth_spoon_imagegen_oracle"
+        ],
+        "eligible_count": 2,
+        "real_photo_target_count": 0,
+        "synthetic_pseudotarget_count": 2,
+        "generalization_minimum_met": false,
+        "pilot_allowed": true,
+        "formal_training_allowed": false,
+        "next_test": "Train a small high-noise VACE-LoRA on the two disclosed pseudo-targets, then compare LoRA-off versus LoRA-on on the unchanged Day 8 pasta/fork control and seed."
+      },
+      "criterion": "Exactly two synthetic pseudo-targets and zero real-photo targets."
+    },
+    {
+      "id": "held_out_fork_policy",
+      "passed": true,
+      "actual": {
+        "family": "fork_twirl_and_lift",
+        "anchor": "pasta_fork_001",
+        "training_occurrences": 0,
+        "evaluation_policy": "Do not evaluate the blind fork case unless the seen-family checkpoint sweep first shows a clear semantic LoRA gain."
+      },
+      "criterion": "Fork twirl/lift is unseen in training."
+    },
+    {
+      "id": "trainer_script",
+      "passed": true,
+      "actual": "/host/space0/guo-z/tf-ufi/runtime/diffsynth_training_v0_899d2cd_bundle/examples/wanvideo/model_training/train.py",
+      "criterion": "Frozen trainer exists."
+    },
+    {
+      "id": "trainer_script_sha256",
+      "passed": true,
+      "actual": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41",
+      "criterion": "4a8c9c27c23b217f7438b37c71213df58414c39cb2b6998d3d75a4dd7992bc41"
+    },
+    {
+      "id": "no_audio_wrapper_sha256",
+      "passed": true,
+      "actual": "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90",
+      "criterion": "1db6398d61f6cbae1adb896079a38ed3809464ab7ab1b00bab848c55000dff90"
+    },
+    {
+      "id": "dataset_builder_sha256_lf",
+      "passed": true,
+      "actual": "3f32618cb32cfb61239d855238cf7184e458db8769db8c8db626531bcd1016fe",
+      "criterion": "3f32618cb32cfb61239d855238cf7184e458db8769db8c8db626531bcd1016fe"
+    },
+    {
+      "id": "trainer_commit_marker",
+      "passed": true,
+      "actual": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191",
+      "criterion": "899d2cd5740f50f7b6a1ec2cf7360a20897b1191"
+    },
+    {
+      "id": "trainer_archive_marker",
+      "passed": true,
+      "actual": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228",
+      "criterion": "68344f19db71b4e8b0616d0a3aec436fddcc545d9ce03396ad797f29a1b32228"
+    },
+    {
+      "id": "model_audit",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_recorded_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full hash is in the frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_recorded_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full hash is in the frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_recorded_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Expected full hash is in the frozen audit."
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": 6623,
+      "criterion": "6623"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/special_tokens_map.json",
+      "passed": true,
+      "actual": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d",
+      "criterion": "7b8a9f5040adb67b5805abdfd42c1f8d0f3d0e711f10726580eb3789cd0ad61d"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": 4548313,
+      "criterion": "4548313"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/spiece.model",
+      "passed": true,
+      "actual": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+      "criterion": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": 16837417,
+      "criterion": "16837417"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer.json",
+      "passed": true,
+      "actual": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b",
+      "criterion": "6e197b4d3dbd71da14b4eb255f4fa91c9c1f2068b20a2de2472967ca3d22602b"
+    },
+    {
+      "id": "tokenizer_size:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": 61728,
+      "criterion": "61728"
+    },
+    {
+      "id": "tokenizer_hash:google/umt5-xxl/tokenizer_config.json",
+      "passed": true,
+      "actual": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05",
+      "criterion": "ed9a3a8b0faa71a70a32847e0435fe036e6e112d4df4edb7bb48a921e344dc05"
+    },
+    {
+      "id": "frozen_dataset_root",
+      "passed": true,
+      "actual": "/tmp/day12_phase_action_isolated_spoon_dataset_v2",
+      "criterion": "/tmp/day12_phase_action_isolated_spoon_dataset_v2"
+    },
+    {
+      "id": "dataset_manifest_hash",
+      "passed": true,
+      "actual": "5bc398202fc2636ecdab9d77916fbf52c233af5650601810b4dc4bbc068fbe2c",
+      "criterion": "5bc398202fc2636ecdab9d77916fbf52c233af5650601810b4dc4bbc068fbe2c"
+    },
+    {
+      "id": "dataset_contract",
+      "passed": true,
+      "actual": {
+        "scientific_status": "mechanism_pilot_with_synthetic_pseudotargets",
+        "target_policy": "disclosed_imagegen_pseudotarget_nonidentity",
+        "sample_count": 2,
+        "held_out": {
+          "family": "fork_twirl_and_lift",
+          "anchor": "pasta_fork_001",
+          "training_occurrences": 0
+        }
+      },
+      "criterion": "Two non-fork synthetic pseudo-targets under the frozen policy."
+    },
+    {
+      "id": "manifest_provenance",
+      "passed": true,
+      "actual": {
+        "builder": "build_phase_action_isolated_overfit_dataset.py",
+        "builder_sha256": "3f32618cb32cfb61239d855238cf7184e458db8769db8c8db626531bcd1016fe",
+        "builder_hash_policy": "sha256_lf_normalized",
+        "source_dataset_manifest_sha256": "b7458dcdd5ec84bb44e8e67212c83680c90b97256a389d755d7c828f29e2bcde",
+        "target_audit": "day9_action_target_audit_v1.json",
+        "target_audit_sha256": "804425172ef765d38af5f943c2fde5c551564a561dd984dccb3eb8a136aa70ea",
+        "copy_policy": "selected_sample_files_and_phase_schedule_byte_exact"
+      },
+      "criterion": "Builder and target-audit hashes match the config."
+    },
+    {
+      "id": "metadata_hash",
+      "passed": true,
+      "actual": "2937d0bc49dccca22132221feb5a5e298a4b66d49845b25c389a6a5e2498c728",
+      "criterion": "2937d0bc49dccca22132221feb5a5e298a4b66d49845b25c389a6a5e2498c728"
+    },
+    {
+      "id": "metadata_rows",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "manifest_samples",
+      "passed": true,
+      "actual": 2,
+      "criterion": "2"
+    },
+    {
+      "id": "pseudo_target_contract:0",
+      "passed": true,
+      "actual": {
+        "target_kind": "synthetic_imagegen_pseudotarget",
+        "real_photo_supervision": false,
+        "audit_candidate_id": "clear_broth_spoon_imagegen_oracle",
+        "nonidentity_checks": {
+          "target_video_hash_differs_from_control": true,
+          "target_outside_edit_support_max_difference": 0,
+          "control_outside_edit_support_max_difference": 0,
+          "edit_support_fraction": 0.13572497429494712,
+          "frame0_equals_reference": true,
+          "final_target_equals_day9_keyframe": true,
+          "final_control_equals_day9_keyframe": true,
+          "unique_target_frames": 15,
+          "unique_control_frames": 15,
+          "final_target_vs_control": {
+            "rgb_mae": 3.1014087287015277,
+            "changed_pixel_fraction": 0.06390689262632197,
+            "max_channel_difference": 155
+          }
+        }
+      },
+      "criterion": "Disclosed non-identity pseudo-target with exact protected pixels and bounded support."
+    },
+    {
+      "id": "dataset_path:0:video",
+      "passed": true,
+      "actual": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "criterion": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:0:video",
+      "passed": true,
+      "actual": 205219,
+      "criterion": "205219"
+    },
+    {
+      "id": "dataset_hash:0:video",
+      "passed": true,
+      "actual": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3",
+      "criterion": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3"
+    },
+    {
+      "id": "dataset_path:0:vace_video",
+      "passed": true,
+      "actual": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "criterion": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:0:vace_video",
+      "passed": true,
+      "actual": 201109,
+      "criterion": "201109"
+    },
+    {
+      "id": "dataset_hash:0:vace_video",
+      "passed": true,
+      "actual": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698",
+      "criterion": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"
+    },
+    {
+      "id": "dataset_path:0:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png",
+      "criterion": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png"
+    },
+    {
+      "id": "dataset_size:0:vace_reference_image",
+      "passed": true,
+      "actual": 621173,
+      "criterion": "621173"
+    },
+    {
+      "id": "dataset_hash:0:vace_reference_image",
+      "passed": true,
+      "actual": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c",
+      "criterion": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c"
+    },
+    {
+      "id": "dataset_size:0:target_keyframe",
+      "passed": true,
+      "actual": 635289,
+      "criterion": "635289"
+    },
+    {
+      "id": "dataset_hash:0:target_keyframe",
+      "passed": true,
+      "actual": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf",
+      "criterion": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf"
+    },
+    {
+      "id": "dataset_size:0:control_keyframe",
+      "passed": true,
+      "actual": 619068,
+      "criterion": "619068"
+    },
+    {
+      "id": "dataset_hash:0:control_keyframe",
+      "passed": true,
+      "actual": "b602ef8c6fe240c930971ef38ead40c894594c58bd681a0eb068cf2bcc412b55",
+      "criterion": "b602ef8c6fe240c930971ef38ead40c894594c58bd681a0eb068cf2bcc412b55"
+    },
+    {
+      "id": "dataset_size:0:edit_alpha",
+      "passed": true,
+      "actual": 8192,
+      "criterion": "8192"
+    },
+    {
+      "id": "dataset_hash:0:edit_alpha",
+      "passed": true,
+      "actual": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86",
+      "criterion": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86"
+    },
+    {
+      "id": "nonidentity_hash:0",
+      "passed": true,
+      "actual": {
+        "video": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3",
+        "vace_video": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"
+      },
+      "criterion": "Target and control hashes must differ."
+    },
+    {
+      "id": "pseudo_target_contract:1",
+      "passed": true,
+      "actual": {
+        "target_kind": "synthetic_imagegen_pseudotarget",
+        "real_photo_supervision": false,
+        "audit_candidate_id": "clear_broth_spoon_imagegen_oracle",
+        "nonidentity_checks": {
+          "target_video_hash_differs_from_control": true,
+          "target_outside_edit_support_max_difference": 0,
+          "control_outside_edit_support_max_difference": 0,
+          "edit_support_fraction": 0.13572497429494712,
+          "frame0_equals_reference": true,
+          "final_target_equals_day9_keyframe": true,
+          "final_control_equals_day9_keyframe": true,
+          "unique_target_frames": 15,
+          "unique_control_frames": 15,
+          "final_target_vs_control": {
+            "rgb_mae": 3.1014087287015277,
+            "changed_pixel_fraction": 0.06390689262632197,
+            "max_channel_difference": 155
+          }
+        }
+      },
+      "criterion": "Disclosed non-identity pseudo-target with exact protected pixels and bounded support."
+    },
+    {
+      "id": "dataset_path:1:video",
+      "passed": true,
+      "actual": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "criterion": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:1:video",
+      "passed": true,
+      "actual": 205219,
+      "criterion": "205219"
+    },
+    {
+      "id": "dataset_hash:1:video",
+      "passed": true,
+      "actual": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3",
+      "criterion": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3"
+    },
+    {
+      "id": "dataset_path:1:vace_video",
+      "passed": true,
+      "actual": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "criterion": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+    },
+    {
+      "id": "dataset_size:1:vace_video",
+      "passed": true,
+      "actual": 201109,
+      "criterion": "201109"
+    },
+    {
+      "id": "dataset_hash:1:vace_video",
+      "passed": true,
+      "actual": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698",
+      "criterion": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"
+    },
+    {
+      "id": "dataset_path:1:vace_reference_image",
+      "passed": true,
+      "actual": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png",
+      "criterion": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png"
+    },
+    {
+      "id": "dataset_size:1:vace_reference_image",
+      "passed": true,
+      "actual": 621173,
+      "criterion": "621173"
+    },
+    {
+      "id": "dataset_hash:1:vace_reference_image",
+      "passed": true,
+      "actual": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c",
+      "criterion": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c"
+    },
+    {
+      "id": "dataset_size:1:target_keyframe",
+      "passed": true,
+      "actual": 635289,
+      "criterion": "635289"
+    },
+    {
+      "id": "dataset_hash:1:target_keyframe",
+      "passed": true,
+      "actual": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf",
+      "criterion": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf"
+    },
+    {
+      "id": "dataset_size:1:control_keyframe",
+      "passed": true,
+      "actual": 619068,
+      "criterion": "619068"
+    },
+    {
+      "id": "dataset_hash:1:control_keyframe",
+      "passed": true,
+      "actual": "b602ef8c6fe240c930971ef38ead40c894594c58bd681a0eb068cf2bcc412b55",
+      "criterion": "b602ef8c6fe240c930971ef38ead40c894594c58bd681a0eb068cf2bcc412b55"
+    },
+    {
+      "id": "dataset_size:1:edit_alpha",
+      "passed": true,
+      "actual": 8192,
+      "criterion": "8192"
+    },
+    {
+      "id": "dataset_hash:1:edit_alpha",
+      "passed": true,
+      "actual": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86",
+      "criterion": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86"
+    },
+    {
+      "id": "nonidentity_hash:1",
+      "passed": true,
+      "actual": {
+        "video": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3",
+        "vace_video": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"
+      },
+      "criterion": "Target and control hashes must differ."
+    },
+    {
+      "id": "no_fork_training_family",
+      "passed": true,
+      "actual": [
+        "liquid"
+      ],
+      "criterion": "No fork family in training rows."
+    },
+    {
+      "id": "video_decode:vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "passed": true,
+      "actual": {
+        "first_dtype": "uint8",
+        "first_frame_sha256": "2927308c4150583cdb4964bcbd5bb5ef8b7c7765d72a2009ce9d72cbf2b8fc68",
+        "first_shape": [
+          592,
+          736,
+          3
+        ],
+        "fps": 8.0,
+        "frame_count": 21,
+        "last_dtype": "uint8",
+        "last_frame_sha256": "0548444c4a5b6bbc2d8d2064a678203039e36190d2ea25f906d3155cb5c29e7c",
+        "last_shape": [
+          592,
+          736,
+          3
+        ],
+        "path": "/tmp/day12_phase_action_isolated_spoon_dataset_v2/vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+      },
+      "criterion": "Exactly 21 decodable frames with stable shape and positive fps."
+    },
+    {
+      "id": "video_decode:video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+      "passed": true,
+      "actual": {
+        "first_dtype": "uint8",
+        "first_frame_sha256": "2927308c4150583cdb4964bcbd5bb5ef8b7c7765d72a2009ce9d72cbf2b8fc68",
+        "first_shape": [
+          592,
+          736,
+          3
+        ],
+        "fps": 8.0,
+        "frame_count": 21,
+        "last_dtype": "uint8",
+        "last_frame_sha256": "382e941440aace155188204f596695182efe9b9db246405d338b8527c393e5f2",
+        "last_shape": [
+          592,
+          736,
+          3
+        ],
+        "path": "/tmp/day12_phase_action_isolated_spoon_dataset_v2/video/clear_broth_spoon_imagegen_pseudo_v1.mp4"
+      },
+      "criterion": "Exactly 21 decodable frames with stable shape and positive fps."
+    },
+    {
+      "id": "python_modules",
+      "passed": true,
+      "actual": {
+        "torch": true,
+        "torchvision": true,
+        "accelerate": true,
+        "peft": true,
+        "transformers": true,
+        "safetensors": true,
+        "pandas": true,
+        "PIL": true,
+        "imageio": true,
+        "einops": true,
+        "ftfy": true
+      },
+      "criterion": "All required modules importable."
+    },
+    {
+      "id": "trainer_help",
+      "passed": true,
+      "actual": "",
+      "criterion": "Frozen trainer --help exits 0."
+    },
+    {
+      "id": "no_audio_wrapper_help",
+      "passed": true,
+      "actual": "",
+      "criterion": "No-audio wrapper --help exits 0."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 245068,
+      "criterion": ">=80000 MiB available"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": true,
+      "actual": {
+        "requested": 0,
+        "safe_gpu_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "gpus": [
+          {
+            "index": 0,
+            "uuid": "GPU-59e77d08-c333-e13c-b3fe-43e6ead52494",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 1,
+            "uuid": "GPU-3f4eac95-0192-7b8b-a641-ea5f7e302d27",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 2,
+            "uuid": "GPU-70c2f194-1fb1-93b2-54be-3139127b79bf",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 3,
+            "uuid": "GPU-a65c0efe-402c-195e-5051-aeb254551782",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 4,
+            "uuid": "GPU-0ee71d2b-cfa8-cd9f-535f-c36389abbc97",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 5,
+            "uuid": "GPU-5fa08d27-c3a4-8391-794b-94571cceee2b",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 6,
+            "uuid": "GPU-c238605d-daea-c9de-6948-d5512e0ae0aa",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          },
+          {
+            "index": 7,
+            "uuid": "GPU-363dcfd6-5a06-90f5-440d-ff3628f5b80e",
+            "name": "NVIDIA RTX A6000",
+            "memory_total_mib": 49140,
+            "memory_used_mib": 1,
+            "memory_free_mib": 48539,
+            "utilization_percent": 0,
+            "compute_processes": []
+          }
+        ],
+        "processes": []
+      },
+      "criterion": "At least one idle NVIDIA RTX A6000 with >=48000 MiB free and no compute process."
+    }
+  ]
+}

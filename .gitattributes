@@ -20,3 +20,4 @@ configs/adapter_phase_action_isolated_udon_v1.json -text
 configs/adapter_phase_action_isolated_spoon_v1.json -text
 configs/vace_phase_action_isolated_udon_checkpoint_sweep_v1.json -text
 configs/vace_phase_action_isolated_spoon_checkpoint_sweep_v1.json -text
+results/day12_phase_action_isolated_checkpoint_sweep_gp38_v1/** -text
