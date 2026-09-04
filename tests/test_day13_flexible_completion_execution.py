@@ -31,7 +31,7 @@ class Day13FlexibleCompletionExecutionTests(unittest.TestCase):
     def test_execution_config_is_immutable_seen_only_protocol(self):
         self.assertEqual(
             sha256_file(CONFIG_PATH),
-            "72fde41c430d7a38285ba2474dd7c214918afab35b37f6a44abe0e438668d3a7",
+            "5071c11f488667646db33f81c6a38b6066042a350dfb1d8fbb68ec90662753b3",
         )
         self.assertTrue(self.config["execution_allowed"])
         self.assertFalse(self.config["blind_fork_evaluation_allowed"])

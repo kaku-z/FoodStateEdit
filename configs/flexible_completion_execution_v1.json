@@ -25,8 +25,8 @@
     },
     "matched_trainer": {
       "path": "scripts/train_wan_vace_matched_objective.py",
-      "size_bytes": 17467,
-      "sha256": "5f161fa28f3b8e37328f9490a79bcdf2dddc24b1d385a2b22af45f205604219a"
+      "size_bytes": 17532,
+      "sha256": "d96579a481ed612527e4a71172688dee7015a7063ed596d532a192a25ab81ddf"
     },
     "training_preflight": {
       "path": "scripts/preflight_flexible_completion_training.py",
@@ -107,19 +107,19 @@
       "control": "planar",
       "loss_mode": "uniform",
       "metadata": "metadata_planar_uniform.csv",
-      "output_root": "/tmp/foodstateedit_day13_planar_uniform_udon_lora_v1"
+      "output_root": "/tmp/foodstateedit_day13_planar_uniform_udon_lora_v2"
     },
     "relative3d_uniform": {
       "control": "relative3d",
       "loss_mode": "uniform",
       "metadata": "metadata_relative3d_uniform.csv",
-      "output_root": "/tmp/foodstateedit_day13_relative3d_uniform_udon_lora_v1"
+      "output_root": "/tmp/foodstateedit_day13_relative3d_uniform_udon_lora_v2"
     },
     "relative3d_topology_weighted": {
       "control": "relative3d",
       "loss_mode": "topology_weighted",
       "metadata": "metadata_relative3d_topology_weighted.csv",
-      "output_root": "/tmp/foodstateedit_day13_relative3d_topology_weighted_udon_lora_v1"
+      "output_root": "/tmp/foodstateedit_day13_relative3d_topology_weighted_udon_lora_v2"
     }
   },
   "training": {
@@ -240,7 +240,7 @@
     "require_new_non_overwriting_paths": true
   },
   "evaluation": {
-    "output_root": "/tmp/foodstateedit_day13_flexible_completion_eval_v1",
+    "output_root": "/tmp/foodstateedit_day13_flexible_completion_eval_v2",
     "conditions": [
       "planar_lora_off",
       "planar_uniform_step32",

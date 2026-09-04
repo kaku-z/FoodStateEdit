@@ -45,9 +45,11 @@
 Implementation freeze evidence:
 
 - dataset manifest SHA-256: `7dfe13533ff1e64a22793bd9184b923da833d193009a09e747430a6c7e47a902`
-- execution config SHA-256: `72fde41c430d7a38285ba2474dd7c214918afab35b37f6a44abe0e438668d3a7`
+- execution config SHA-256: `5071c11f488667646db33f81c6a38b6066042a350dfb1d8fbb68ec90662753b3`
 - local contracts: 120 tests passed, 3 skipped
 - gp40 v1 planar preflight report: `/tmp/foodstateedit_day13_planar_uniform_preflight_v1.json`; ready=false because imageio frame counting returned null on the uploaded videos, and no training output directory was created.
+- gp40 v1 planar training output: `/tmp/foodstateedit_day13_planar_uniform_udon_lora_v1`; status=technical_failure_preserved because the first forward pass sent a 0-D timestep tensor into the frozen DiffSynth runtime, randomness_trace_count=0, and no checkpoint was created.
+- retry roots: training output roots now use `_v2`; evaluation output root now uses `_v2`.
 
 GPU execution is unlocked only through the immutable execution config and its
 fresh per-arm resource preflight. The automatic heartbeat remains paused.

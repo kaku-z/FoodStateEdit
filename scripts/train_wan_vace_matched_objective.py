@@ -79,6 +79,7 @@ def trainable_state_manifest(model: WanTrainingModule) -> dict[str, object]:
 
 def set_matched_seed(seed: int) -> None:
     os.environ["PYTHONHASHSEED"] = str(seed)
+    os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
     random.seed(seed)
     np.random.seed(seed % (2**32))
     torch.manual_seed(seed)
@@ -146,15 +147,14 @@ class MatchedWanTrainingModule(WanTrainingModule):
         noise_seed = timestep_seed + 1
         timestep_generator = torch.Generator(device="cpu")
         timestep_generator.manual_seed(timestep_seed)
-        timestep_id = int(
-            torch.randint(
-                min_boundary,
-                max_boundary,
-                (1,),
-                generator=timestep_generator,
-            ).item()
+        timestep_index = torch.randint(
+            min_boundary,
+            max_boundary,
+            (1,),
+            generator=timestep_generator,
         )
-        timestep = pipe.scheduler.timesteps[timestep_id].to(
+        timestep_id = int(timestep_index.item())
+        timestep = pipe.scheduler.timesteps[timestep_index].to(
             dtype=pipe.torch_dtype, device=pipe.device
         )
         input_latents = inputs["input_latents"]
