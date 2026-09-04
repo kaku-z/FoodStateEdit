@@ -119,7 +119,7 @@
       "control": "relative3d",
       "loss_mode": "topology_weighted",
       "metadata": "metadata_relative3d_topology_weighted.csv",
-      "output_root": "/tmp/foodstateedit_day13_relative3d_topology_weighted_udon_lora_v2"
+      "output_root": "/tmp/foodstateedit_day13_relative3d_topology_weighted_udon_lora_v3"
     }
   },
   "training": {
