@@ -11,20 +11,20 @@
 
 ## Relative-3D control package
 
-- [ ] Build a 21-frame normalized-pinhole udon scaffold with two rigid chopsticks and one continuous flexible strand.
-- [ ] Keep one strand endpoint fixed in the bowl and bind the other endpoint to the pinch point from contact through final hold.
-- [ ] Encode pinch depth crossing and use depth-aware projection rather than fixed paint order.
-- [ ] Derive strand, pinch-contact, and source-connection mask videos from the same 3D scaffold.
-- [ ] Preserve frame zero and every pixel outside the declared support exactly.
-- [ ] Save camera, 3D arrays, masks, videos, review boards, sizes, and SHA-256 records under a new output root.
+- [x] Build a 21-frame normalized-pinhole udon scaffold with two rigid chopsticks and one continuous flexible strand.
+- [x] Keep one strand endpoint fixed in the bowl and bind the other endpoint to the pinch point from contact through final hold.
+- [x] Encode pinch depth crossing and use depth-aware projection rather than fixed paint order.
+- [x] Derive strand, pinch-contact, and source-connection mask videos from the same 3D scaffold.
+- [x] Preserve frame zero and every pixel outside the declared support exactly before video encoding.
+- [x] Save camera, 3D arrays, masks, videos, review boards, sizes, and SHA-256 records under a new output root.
 
 ## Matched training implementation
 
-- [ ] Add an independent seeded uniform training entry point without modifying the frozen upstream runtime.
-- [ ] Add the topology-weighted FlowMatch entry point with the frozen normalized weight formula.
+- [x] Add an independent seeded uniform training entry point without modifying the frozen upstream runtime.
+- [x] Add the topology-weighted FlowMatch entry point with the frozen normalized weight formula.
 - [ ] Prove identical initial LoRA hashes, dataloader order, timesteps, diffusion noise, precision, and optimizer state across arms.
-- [ ] Freeze all builder, dataset, trainer, preflight, validator, and evaluator hashes in a new execution config.
-- [ ] Keep each arm at exactly 32 optimizer steps and save steps 16 and 32.
+- [x] Freeze all builder, dataset, trainer, preflight, validator, and evaluator hashes in a new execution config.
+- [x] Keep each arm at exactly 32 optimizer steps and save steps 16 and 32.
 - [ ] Confirm every proposed local and remote path is absent before creation.
 
 ## Execution and review
@@ -42,6 +42,11 @@
 - [ ] If the primary gate fails, preserve the negative result and create a new frozen design before changing masks, weights, seeds, or samples.
 - [ ] Do not run the blind fork or expand families from this design alone.
 
-The current configuration is a design freeze only. GPU execution remains
-disabled until every implementation hash in the freeze gate has been filled by
-a new immutable execution configuration.
+Implementation freeze evidence:
+
+- dataset manifest SHA-256: `7dfe13533ff1e64a22793bd9184b923da833d193009a09e747430a6c7e47a902`
+- execution config SHA-256: `0598b784965386f2ea9f9203a605033f840919f70570aae94d025b702b86ddc6`
+- local contracts: 120 tests passed, 3 skipped
+
+GPU execution is unlocked only through the immutable execution config and its
+fresh per-arm resource preflight. The automatic heartbeat remains paused.
