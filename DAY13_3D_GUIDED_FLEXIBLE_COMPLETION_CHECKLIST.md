@@ -25,11 +25,11 @@
 - [ ] Prove identical initial LoRA hashes, dataloader order, timesteps, diffusion noise, precision, and optimizer state across arms.
 - [x] Freeze all builder, dataset, trainer, preflight, validator, and evaluator hashes in a new execution config.
 - [x] Keep each arm at exactly 32 optimizer steps and save steps 16 and 32.
-- [ ] Confirm every proposed local and remote path is absent before creation.
+- [x] Confirm every proposed local and remote path is absent before creation.
 
 ## Execution and review
 
-- [ ] Audit gp38--gp42 read only and run serially only on a qualifying idle RTX A6000.
+- [x] Audit gp38--gp42 read only and run serially only on a qualifying idle RTX A6000.
 - [ ] Run planar-uniform, relative3d-uniform, and relative3d-topology-weighted training without downloading models.
 - [ ] Validate all checkpoints and run the frozen five-condition same-seed evaluation.
 - [ ] Rehash every pulled artifact and require exact preservation outside support.
@@ -45,8 +45,9 @@
 Implementation freeze evidence:
 
 - dataset manifest SHA-256: `7dfe13533ff1e64a22793bd9184b923da833d193009a09e747430a6c7e47a902`
-- execution config SHA-256: `0598b784965386f2ea9f9203a605033f840919f70570aae94d025b702b86ddc6`
+- execution config SHA-256: `72fde41c430d7a38285ba2474dd7c214918afab35b37f6a44abe0e438668d3a7`
 - local contracts: 120 tests passed, 3 skipped
+- gp40 v1 planar preflight report: `/tmp/foodstateedit_day13_planar_uniform_preflight_v1.json`; ready=false because imageio frame counting returned null on the uploaded videos, and no training output directory was created.
 
 GPU execution is unlocked only through the immutable execution config and its
 fresh per-arm resource preflight. The automatic heartbeat remains paused.

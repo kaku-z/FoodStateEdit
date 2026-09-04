@@ -30,8 +30,8 @@
     },
     "training_preflight": {
       "path": "scripts/preflight_flexible_completion_training.py",
-      "size_bytes": 11088,
-      "sha256": "3a0de4e5d571668f15d0f186555fe41dd995fec659689a33149b18cb07dcd14b"
+      "size_bytes": 11834,
+      "sha256": "a547f5110e4337074f194c880bc9059299491e2d7b5155aae0c7c6418faeb85f"
     },
     "training_runner": {
       "path": "scripts/run_flexible_completion_training.py",

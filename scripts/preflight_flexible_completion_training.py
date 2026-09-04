@@ -53,9 +53,36 @@ def verify_file(
 
 
 def count_video_frames(path: Path) -> int | None:
+    if not path.is_file():
+        return None
+    try:
+        probed = subprocess.run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-select_streams",
+                "v:0",
+                "-count_frames",
+                "-show_entries",
+                "stream=nb_read_frames",
+                "-of",
+                "default=nokey=1:noprint_wrappers=1",
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=30,
+        )
+        value = probed.stdout.strip().splitlines()[0]
+        if probed.returncode == 0 and value.isdigit():
+            return int(value)
+    except Exception:
+        pass
     try:
         reader = imageio.get_reader(path)
-        count = int(reader.count_frames())
+        count = sum(1 for _ in reader)
         reader.close()
         return count
     except Exception:
