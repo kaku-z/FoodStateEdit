@@ -1,0 +1,43 @@
+{
+  "schema_version": "foodstateedit.public_progress_figures.v1",
+  "date": "2026-09-05",
+  "scope": "Six seen synthetic diagnostic images; Day 13 images are controls and masks, not evaluated diffusion output",
+  "figures": [
+    {
+      "path": "05_day12_udon_lora_off.png",
+      "source": "artifacts/day12_phase_action_isolated_checkpoint_sweep_gp38_v1/udon_chopsticks_imagegen_pseudo_v1/lora_off_projected_review.png",
+      "size_bytes": 4019525,
+      "sha256": "ab18dd7b02a2db1fc0c748c2823531d43b28d78dddaa3bbe41c5860ed34eb8c6"
+    },
+    {
+      "path": "06_day12_udon_step32.png",
+      "source": "artifacts/day12_phase_action_isolated_checkpoint_sweep_gp38_v1/udon_chopsticks_imagegen_pseudo_v1/step_32_projected_review.png",
+      "size_bytes": 4020711,
+      "sha256": "f7b6cc6695c8fd47bf0b149d50315290461e8338b292446a3a92fc870e106822"
+    },
+    {
+      "path": "07_day12_spoon_lora_off.png",
+      "source": "artifacts/day12_phase_action_isolated_checkpoint_sweep_gp38_v1/clear_broth_spoon_imagegen_pseudo_v1/lora_off_projected_review.png",
+      "size_bytes": 4145765,
+      "sha256": "7038af7ee547fb77a73926815e3baa3399a11aec1b2ab8b8a35a8298a0cb8a13"
+    },
+    {
+      "path": "08_day12_spoon_step32.png",
+      "source": "artifacts/day12_phase_action_isolated_checkpoint_sweep_gp38_v1/clear_broth_spoon_imagegen_pseudo_v1/step_32_projected_review.png",
+      "size_bytes": 4137784,
+      "sha256": "d8eb2da62d8687c61ed2a45c7c2237b329540d24ce09e33c0beff7edd44cd024"
+    },
+    {
+      "path": "09_day13_control.png",
+      "source": "artifacts/day13_3d_guided_flexible_completion_udon_v1/review/relative3d_control_contact_sheet.png",
+      "size_bytes": 1371259,
+      "sha256": "1d8ce588045f2c2e92a42ff2be979d8fc3b43e2a876953d6951bb4c8ba609d16"
+    },
+    {
+      "path": "10_day13_masks.png",
+      "source": "artifacts/day13_3d_guided_flexible_completion_udon_v1/review/topology_mask_contact_sheet.png",
+      "size_bytes": 11906,
+      "sha256": "6eb16c83cc12ca84ba4a96ae7c5fed353a23822b0ba6a1cbf867ed1cbc376e34"
+    }
+  ]
+}

@@ -68,7 +68,11 @@ function Copy-Evidence($sourceRelative,$targetRelative) {
 foreach ($item in $figures.GetEnumerator()) { Copy-Evidence $item.Value ('figures/'+$item.Key) }
 foreach ($name in @('DAY5_METHOD_GRID_CAPTION.md','DAY8_3D_PROJECTION_PILOT.md','DAY8_VACE_FORK_3D_REVIEW.md','DAY11_PHASE_ACTION_CHECKPOINT_SWEEP_RESULT.md','DAY12_PHASE_ACTION_ISOLATION_RESULT.md','DAY13_3D_GUIDED_FLEXIBLE_COMPLETION_DESIGN.md','day11_phase_action_checkpoint_sweep_result_v1.json','day12_phase_action_isolation_result_v1.json')) { Copy-Evidence ('results/'+$name) ('reports/'+$name) }
 $report = Get-Content (Join-Path $repo 'results/LOCAL_PROGRESS_20260905.md') -Raw
-$report.Replace('../artifacts/local_progress_20260905_v1/','./') | Set-Content (Join-Path $destination 'README.md') -Encoding utf8
+$report = $report.Replace('../artifacts/local_progress_20260905_v1/','./').Replace('](local_progress_20260905/','](./figures/')
+$report = $report.Replace('](day8_fork_3d_projection_v0/control_review.png)','](./figures/02_day8_relative3d_control.png)')
+$report = $report.Replace('](day8_vace_fork_3d_compare_v0/day6_planar_raw_selected_frame.png)','](./figures/03_day8_planar_raw.png)')
+$report = $report.Replace('](day8_vace_fork_3d_compare_v0/raw_selected_frame.png)','](./figures/04_day8_relative3d_raw.png)')
+$report | Set-Content (Join-Path $destination 'README.md') -Encoding utf8
 $audit = [ordered]@{
     schema_version='foodstateedit.local_progress_inventory.v1'
     created_at_utc=[DateTime]::UtcNow.ToString('o')

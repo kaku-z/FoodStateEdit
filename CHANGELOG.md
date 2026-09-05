@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-09-05 — GitHub publication preparation
+
+- linked the current report and six hash-verified synthetic diagnostic figures
+  for direct GitHub viewing, reusing existing Day 8 figure paths;
+- excluded the local Day 5 grid with dataset-source columns and the full local
+  ZIP from upload under the existing source-image redistribution policy;
+- kept Day 13 control visualizations explicitly separate from pending
+  diffusion evaluation results.
+
 ## 2026-09-05 — Local progress organization during server outage
 
 - added a Chinese evidence summary, midterm presentation outline, figure

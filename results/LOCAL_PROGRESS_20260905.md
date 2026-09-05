@@ -80,24 +80,24 @@ Day 11 共享 step64 与 Day 12 专用 step32 各对所选样本暴露 32 次，
 
 ## 配图与使用说明
 
-配图包保留原始 PNG 字节；编号仅为整理顺序。完整来源和复制后的哈希在包内 `local_integrity_audit.json`。
+本地配图包保留原始 PNG 字节；编号仅为整理顺序。完整来源和复制后的哈希在包内 `local_integrity_audit.json`。GitHub 展示版复用已发布的 Day 8 图，并补充六张 seen synthetic 诊断图，其哈希见 `local_progress_20260905/figure_manifest.json`。含数据集原图列的 Day 5 总览仅保留在本地，不上传本地完整 ZIP。
 
 | 文件 | 用途 | 图注必须说明 |
 | --- | --- | --- |
-| 01_day5_method_grid.png | 四类方法总览 | pilot 诊断，非正式用户研究 |
-| 02_day8_relative3d_control.png | 3D 几何控制能力 | 程序化相对 3D 控制，非生成照片 |
-| 03_day8_planar_raw.png / 04_day8_relative3d_raw.png | 器具身份变化 | raw 比较，柔性食物动作仍失败；两组最终投影 support 不同 |
-| 05_day12_udon_lora_off.png / 06_day12_udon_step32.png | 普通训练仍未改善连接动作 | 专用单样本诊断，不代表提出方法效果 |
-| 07_day12_spoon_lora_off.png / 08_day12_spoon_step32.png | 数值改善与新增动作的区别 | LoRA-off 已有相似动作 |
-| 09_day13_control.png / 10_day13_masks.png | 新方法输入与监督可视化 | 控制和监督已生成，扩散输出尚未评估 |
+| 01_day5_method_grid.png（仅本地） | 四类方法总览 | pilot 诊断，非正式用户研究 |
+| [02 相对3D控制](day8_fork_3d_projection_v0/control_review.png) | 3D 几何控制能力 | 程序化相对 3D 控制，非生成照片 |
+| [03 平面 raw](day8_vace_fork_3d_compare_v0/day6_planar_raw_selected_frame.png) / [04 相对3D raw](day8_vace_fork_3d_compare_v0/raw_selected_frame.png) | 器具身份变化 | raw 比较，柔性食物动作仍失败；两组最终投影 support 不同 |
+| [05 乌冬 LoRA-off](local_progress_20260905/05_day12_udon_lora_off.png) / [06 乌冬 step32](local_progress_20260905/06_day12_udon_step32.png) | 普通训练仍未改善连接动作 | 专用单样本诊断，不代表提出方法效果 |
+| [07 清汤 LoRA-off](local_progress_20260905/07_day12_spoon_lora_off.png) / [08 清汤 step32](local_progress_20260905/08_day12_spoon_step32.png) | 数值改善与新增动作的区别 | LoRA-off 已有相似动作 |
+| [09 Day13 控制](local_progress_20260905/09_day13_control.png) / [10 Day13 掩码](local_progress_20260905/10_day13_masks.png) | 新方法输入与监督可视化 | 控制和监督已生成，扩散输出尚未评估 |
 
 下面是 Day 13 的控制序列（第 0、3、6、10、15、20 帧）。其连接关系来自程序化 scaffold：
 
-![Day13 相对3D控制序列](../artifacts/local_progress_20260905_v1/figures/09_day13_control.png)
+![Day13 相对3D控制序列](local_progress_20260905/09_day13_control.png)
 
 下面是同一状态导出的监督掩码。红色为面条、绿色为夹持、蓝色为源连接；重叠处混色：
 
-![Day13 拓扑监督掩码](../artifacts/local_progress_20260905_v1/figures/10_day13_masks.png)
+![Day13 拓扑监督掩码](local_progress_20260905/10_day13_masks.png)
 
 ## 服务器恢复后的接续点
 
