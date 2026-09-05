@@ -2,6 +2,10 @@
 
 Snapshot date: 2026-08-26
 
+Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20260905.md).
+The dated sections below retain historical observations; later sections supersede
+earlier pending-work statements.
+
 ## Validated evidence
 
 ### Noodle geometry benchmark
@@ -242,3 +246,20 @@ This section updates the dated sprint-start snapshot without rewriting it.
 - This is only a seen synthetic single-sample isolation result; it cannot
   support claims about generalization, real data, physical correctness, or
   paper-level photo realism.
+
+## Day 13 implementation and 2026-09-05 outage snapshot
+
+- The relative-3D udon dataset, three topology masks, matched training entry
+  point, preflight, and evaluation implementation are hash-frozen in
+  `configs/flexible_completion_execution_v1.json`.
+- Prior task observations recorded complete 32-step planar-uniform and
+  relative3d-uniform training. These Day 13 remote checkpoints have not been
+  pulled and verified in this local consolidation.
+- Topology-weighted v3 was launched remotely; its completion is unknown.
+  User-confirmed server power interruption prevents reading current evidence.
+- The five-condition evaluation has not started. No positive contribution or
+  Day 13 visual-quality result is asserted.
+- Local Day 11/12 evidence and Day 13 frozen inputs are organized by
+  `scripts/package_local_progress.ps1`; generated package:
+  `artifacts/local_progress_20260905_v1/`. The package contains selected figures
+  and reports, not a complete backup of remote training outputs.

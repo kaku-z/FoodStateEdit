@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-09-05 — Local progress organization during server outage
+
+- added a Chinese evidence summary, midterm presentation outline, figure
+  captions, and explicit separation of completed results from the unverified
+  Day 13 topology-weighted outcome;
+- added a local-only packaging script to rehash existing Day 11/12 outputs and
+  Day 13 frozen inputs, preserving original files and refusing package overwrite;
+- recorded the user-confirmed outage and the need to inspect remote temporary
+  paths before resuming; automatic execution remains paused.
+
 ## 2026-09-03 — Day 13 flexible-completion experiment design
 
 - defined a three-arm seen-udon experiment separating planar control,

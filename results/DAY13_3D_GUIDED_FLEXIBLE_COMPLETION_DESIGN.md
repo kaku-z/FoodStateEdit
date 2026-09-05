@@ -110,7 +110,7 @@ If only relative3d-uniform improves over planar-uniform, the result supports a
 3D representation contribution but not the proposed flexible-completion
 contribution.
 
-## Current execution status
+## Execution status at design freeze
 
 The design is frozen but deliberately non-executable. The relative-3D udon
 builder, seeded training entry points, preflight, validator, evaluation runner,
@@ -118,3 +118,9 @@ and topology evaluator must be implemented, tested, and hash-frozen in a new
 execution configuration before any GPU launch. All remote paths must be new,
 and the existing no-download, no-preemption A6000 resource gate remains in
 force.
+
+Later status (2026-09-05): the separately frozen execution config and
+implementation now exist, and prior task records report two completed training
+arms. The weighted third arm is unverified after a user-confirmed server outage;
+evaluation has not started. See `LOCAL_PROGRESS_20260905.md` and the Day 13
+checklist. The non-executable design config remains unchanged.

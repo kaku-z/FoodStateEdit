@@ -46,6 +46,8 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
 
 ## Start here
 
+- `results/LOCAL_PROGRESS_20260905.md`: Chinese progress report, presentation
+  narrative, figure index, and Day 13 recovery status during the server outage;
 - `SCOPE_FREEZE.md`: claims, non-claims, gates, and change policy;
 - `PROVENANCE.md`: upstream code, environment, model, and result hashes;
 - `schemas/`: frozen case, run, and metric contracts;

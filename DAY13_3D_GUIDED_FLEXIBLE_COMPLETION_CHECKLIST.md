@@ -54,3 +54,14 @@ Implementation freeze evidence:
 
 GPU execution is unlocked only through the immutable execution config and its
 fresh per-arm resource preflight. The automatic heartbeat remains paused.
+
+2026-09-05 local organization / outage note:
+
+- User confirmed server power interruption. No remote status was recoverable
+  during the latest read-only check.
+- Earlier observations recorded complete planar v2 and relative3d-uniform v2
+  runs (32 steps each), but those checkpoints are not locally recovered here.
+- Weighted v3 completion is unknown; do not infer continued execution from its
+  historical nohup launch or PID. Inspect temporary paths after restart.
+- Five-condition evaluation and independent blinded review remain pending.
+- Consolidated Chinese report: `results/LOCAL_PROGRESS_20260905.md`.
