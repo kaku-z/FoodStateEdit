@@ -41,3 +41,27 @@ Upload archives:
 Recovery does not establish method effectiveness. Checkpoint validation,
 cross-arm random-trace matching, five-condition evaluation, and independent
 blinded review are required before judging the proposed contribution.
+
+## Posttraining schema compatibility
+
+`scripts/prepare_flexible_completion_posttraining.py` is an independent
+preparation utility, not a replacement for any frozen trainer or evaluator.
+It runs the frozen cross-arm verifier and validates both step 16 and step 32
+for all three arms. Each raw validation report must bind to the exact checkpoint
+path and SHA-256, contain 160 finite LoRA tensors, and report 80 official-loader
+updates before it can be used to freeze evaluation.
+
+The existing checkpoint validator requires its historical Day 9 config schema.
+The utility makes explicitly labelled compatibility configs without altering
+the validator. The raw validator's historical method and two-pseudo-target
+boilerplate are not Day 13 dataset provenance: this experiment still uses one
+unique synthetic sample duplicated into two rows.
+
+The old inference runtime template stores `model_hash_audit` as a string,
+whereas the Day 13 preflight expects a path/size/SHA-256 record. The utility
+normalizes only this representation after verifying the same model audit,
+and checks all frozen Day 13 inference parameters before configuration creation.
+No loss weights, seeds, steps, model files, controls or scientific gate change.
+
+Local verification: 125 tests run, 122 passed and 3 skipped because the local
+interpreter lacks the frozen geometry runtime. Day 13-specific tests: 20 passed.
