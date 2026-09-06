@@ -1,0 +1,45 @@
+{
+  "schema_version": "foodstateedit.flexible_completion_result.v1",
+  "date": "2026-09-06",
+  "status": "complete_negative_primary_gate_preserved",
+  "scientific_scope": "one-sample seen synthetic overfit mechanism diagnostic",
+  "source_evaluation_manifest_sha256": "35ed63ce96fa0cff6a61df3cd2808accf4395565223f9866ca555f7a2c307427",
+  "pipeline_load_count": 1,
+  "all_conditions_decoded_frames": 21,
+  "all_outside_support_max_pixel_difference": 0,
+  "training_match": {
+    "optimizer_steps_per_arm": 32,
+    "initial_trainable_state_aggregate_sha256": "c16056a55c89ec92318674358ea519a2e3425dcb4ff20d80b59b996279f6231e",
+    "matched_randomness_sequence_sha256": "b291714145168af742fd58b9c3f53b8042c993bed6c58c8c4b15e802d04226b7",
+    "cross_arm_match_status": "complete",
+    "validated_checkpoint_count": 6,
+    "checkpoint_tensor_count": 160,
+    "official_loader_updated_tensor_count": 80
+  },
+  "conditions": {
+    "planar_lora_off": {"support_mae": 13.651067393166679, "topology_mae": 21.796758404551436, "pinch_mae": 28.235349655151367, "connection_mae": 15.900992393493652},
+    "planar_uniform_step32": {"support_mae": 12.971196560632615, "topology_mae": 21.745199349561688, "pinch_mae": 29.187307357788086, "connection_mae": 14.626145362854004},
+    "relative3d_lora_off": {"support_mae": 15.271660940987724, "topology_mae": 33.004194430520066, "pinch_mae": 38.96778106689453, "connection_mae": 24.4298038482666},
+    "relative3d_uniform_step32": {"support_mae": 15.07659946169172, "topology_mae": 31.063156908054268, "pinch_mae": 38.05269241333008, "connection_mae": 22.14605140686035},
+    "relative3d_topology_weighted_step32": {"support_mae": 15.00750548498971, "topology_mae": 30.372635131004635, "pinch_mae": 36.97391128540039, "connection_mae": 21.930578231811523}
+  },
+  "primary_comparison": {
+    "baseline": "relative3d_uniform_step32",
+    "proposed": "relative3d_topology_weighted_step32",
+    "topology_mae_improvement_percent": 2.222960721904569,
+    "pinch_mae_improvement_percent": 2.8349666200013335,
+    "required_percent_each": 5.0,
+    "numeric_gate_pass": false,
+    "clear_visible_semantic_gain_in_agent_technical_inspection": false,
+    "positive_contribution_gate_pass": false
+  },
+  "context": {
+    "relative3d_uniform_support_mae_improvement_vs_planar_uniform_percent": -16.231369952784238,
+    "weighted_vs_relative3d_off_percent": {"support": 1.7297100624401927, "topology": 7.973408667965975, "pinch": 5.1167136719212705, "connection": 10.230232023055759},
+    "uniform_vs_relative3d_off_percent": {"support": 1.2772774359629584, "topology": 5.881184364466284, "pinch": 2.3483211733138067, "connection": 9.348222587420782}
+  },
+  "transfer_audit": {"remote_file_count": 60, "local_file_count": 60, "total_bytes": 118922008, "missing": 0, "extra": 0, "sha256_mismatch": 0},
+  "review_status": "anonymized_package_ready; two independent reviewers not yet completed",
+  "decision": "Preserve as a negative primary-gate result. Do not run a blind fork or balanced expansion. Any rescue requires a separately frozen design.",
+  "claim_limit": "The small directional metric trend is not proof of effectiveness. This experiment cannot establish held-out generalization, real-data performance, physical correctness, or paper-level photo realism."
+}

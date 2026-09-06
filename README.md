@@ -1,8 +1,10 @@
 # FoodStateEdit paper release workspace
 
-[Read the current research progress and figures (中文)](results/LOCAL_PROGRESS_20260905.md).
-The proposed Day 13 topology-weighted method is implemented, but its evaluation
-is pending; existing pilot results do not establish its effectiveness.
+[Read the completed Day 13 result](results/DAY13_FLEXIBLE_COMPLETION_RESULT_20260906.md)
+or the [consolidated progress and figures (中文)](results/LOCAL_PROGRESS_20260905.md).
+The Day 13 topology-weighted pilot executed successfully but failed its
+precommitted positive gate: the directional metric improvements were too small
+and no clear visible semantic gain was found. Effectiveness is not established.
 
 This repository is the frozen, lightweight workspace for the 20-day
 FoodStateEdit paper sprint started on 2026-08-26.

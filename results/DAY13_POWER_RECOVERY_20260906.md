@@ -63,8 +63,9 @@ normalizes only this representation after verifying the same model audit,
 and checks all frozen Day 13 inference parameters before configuration creation.
 No loss weights, seeds, steps, model files, controls or scientific gate change.
 
-Local verification: 125 tests run, 122 passed and 3 skipped because the local
-interpreter lacks the frozen geometry runtime. Day 13-specific tests: 20 passed.
+Latest local verification: 131 tests run, 128 passed and 3 skipped because the
+default local interpreter lacks the frozen geometry runtime. Day 13-specific
+tests: 26 passed.
 The three skipped NumPy geometry tests subsequently passed in the bundled
 Python runtime (`test_3d_projection.py`: 11/11 passed). Running the whole suite
 in that bundled interpreter is not supported without its missing `jsonschema`

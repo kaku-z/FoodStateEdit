@@ -22,7 +22,7 @@
 
 - [x] Add an independent seeded uniform training entry point without modifying the frozen upstream runtime.
 - [x] Add the topology-weighted FlowMatch entry point with the frozen normalized weight formula.
-- [ ] Prove identical initial LoRA hashes, dataloader order, timesteps, diffusion noise, precision, and optimizer state across arms.
+- [x] Prove identical initial LoRA hashes, dataloader order, timesteps, diffusion noise, precision, and optimizer construction across arms.
 - [x] Freeze all builder, dataset, trainer, preflight, validator, and evaluator hashes in a new execution config.
 - [x] Keep each arm at exactly 32 optimizer steps and save steps 16 and 32.
 - [x] Confirm every proposed local and remote path is absent before creation.
@@ -30,23 +30,24 @@
 ## Execution and review
 
 - [x] Audit gp38--gp42 read only and run serially only on a qualifying idle RTX A6000.
-- [ ] Run planar-uniform, relative3d-uniform, and relative3d-topology-weighted training without downloading models.
-- [ ] Validate all checkpoints and run the frozen five-condition same-seed evaluation.
-- [ ] Rehash every pulled artifact and require exact preservation outside support.
+- [x] Run planar-uniform, relative3d-uniform, and relative3d-topology-weighted training without downloading models.
+- [x] Validate all checkpoints and run the frozen five-condition same-seed evaluation.
+- [x] Rehash every pulled artifact and require exact preservation outside support.
 - [ ] Perform condition-blinded review by at least two independent reviewers.
 - [ ] Evaluate pinch, strand continuity, bowl connection, lift, final hold, and photo realism separately.
-- [ ] Apply the frozen positive-contribution gate without selecting another seed or checkpoint after seeing output.
+- [x] Apply the frozen positive-contribution gate without selecting another seed or checkpoint after seeing output: numeric and visible-semantic gates failed.
 
 ## Stop rule
 
-- [ ] If the primary gate fails, preserve the negative result and create a new frozen design before changing masks, weights, seeds, or samples.
-- [ ] Do not run the blind fork or expand families from this design alone.
+- [x] The primary gate failed; preserve the negative result and require a new frozen design before changing masks, weights, seeds, or samples.
+- [x] Do not run the blind fork or expand families from this design alone.
 
 Implementation freeze evidence:
 
 - dataset manifest SHA-256: `7dfe13533ff1e64a22793bd9184b923da833d193009a09e747430a6c7e47a902`
 - execution config SHA-256: `061fb3797680cca7c17a3418246ec958433a99b604c9935be638e19adbdb0d4d`
-- local contracts: 120 tests passed, 3 skipped
+- latest local contracts: 128 tests passed, 3 skipped; the three geometry tests
+  subsequently passed under the bundled NumPy runtime (11/11 projection tests)
 - gp40 v1 planar preflight report: `/tmp/foodstateedit_day13_planar_uniform_preflight_v1.json`; ready=false because imageio frame counting returned null on the uploaded videos, and no training output directory was created.
 - gp40 v1 planar training output: `/tmp/foodstateedit_day13_planar_uniform_udon_lora_v1`; status=technical_failure_preserved because the first forward pass sent a 0-D timestep tensor into the frozen DiffSynth runtime, randomness_trace_count=0, and no checkpoint was created.
 - gp40 weighted v2 training output: `/tmp/foodstateedit_day13_relative3d_topology_weighted_udon_lora_v2`; client session interruption left a preserved partial run with step-16 only, no run manifest, and 23 randomness trace rows.
@@ -65,3 +66,15 @@ fresh per-arm resource preflight. The automatic heartbeat remains paused.
   historical nohup launch or PID. Inspect temporary paths after restart.
 - Five-condition evaluation and independent blinded review remain pending.
 - Consolidated Chinese report: `results/LOCAL_PROGRESS_20260905.md`.
+
+2026-09-06 recovery completion:
+
+- all three persistent-storage arms completed with matching initialization and
+  recorded randomness; all six checkpoints passed official-load validation;
+- five-condition evaluation completed with one pipeline and exact support
+  preservation; 60 pulled files matched remote SHA-256 byte for byte;
+- the primary gate failed: weighted versus relative3d-uniform topology and
+  pinch improvements were 2.22% and 2.83%, below the required 5% each;
+- no clear visible semantic gain was found in technical inspection; independent
+  review remains diagnostic only and cannot reverse the failed numeric gate;
+- formal result: `results/DAY13_FLEXIBLE_COMPLETION_RESULT_20260906.md`.

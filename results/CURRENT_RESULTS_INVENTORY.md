@@ -6,6 +6,23 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-06 Day 13 relative-3D topology-weighted diagnostic
+
+- three matched 32-step arms completed with identical trainable initialization
+  aggregate and recorded row/timestep/noise sequence;
+- all six checkpoints passed 160-tensor structure and 80-layer official-load
+  validation;
+- one resident pipeline completed all five 21-frame conditions with exact
+  outside-support preservation;
+- weighted versus matched relative3D-uniform improved topology and pinch MAE by
+  only 2.22% and 2.83%, below the precommitted 5%/5% gate;
+- technical visual inspection found no clear semantic separation; two-person
+  anonymous review package is ready but cannot reverse the failed numeric gate;
+- conclusion: clean negative primary result with a small directional trend;
+  no blind fork or balanced expansion is unlocked.
+
+Result: [DAY13_FLEXIBLE_COMPLETION_RESULT_20260906.md](DAY13_FLEXIBLE_COMPLETION_RESULT_20260906.md).
+
 ## Validated evidence
 
 ### Noodle geometry benchmark

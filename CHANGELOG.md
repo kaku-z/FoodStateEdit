@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-09-06 — Day 13 matched topology-weighted result
+
+- recovered the frozen three-arm experiment into persistent storage after the
+  server outage and completed all arms on a freshly audited RTX A6000;
+- verified matched initialization and recorded stochastic sequence, validated
+  all six checkpoints, and completed the five-condition resident-pipeline run;
+- pulled 60 evidence files with zero SHA-256 mismatches and froze an anonymous
+  two-reviewer package before inspecting the results;
+- recorded a negative primary gate: topology and pinch MAE improved 2.22% and
+  2.83%, below the required 5%/5%, with no clear visible semantic gain;
+- kept blind-fork and balanced-expansion execution prohibited.
+
 ## 2026-09-05 — GitHub publication preparation
 
 - linked the current report and six hash-verified synthetic diagnostic figures
