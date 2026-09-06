@@ -65,3 +65,20 @@ No loss weights, seeds, steps, model files, controls or scientific gate change.
 
 Local verification: 125 tests run, 122 passed and 3 skipped because the local
 interpreter lacks the frozen geometry runtime. Day 13-specific tests: 20 passed.
+The three skipped NumPy geometry tests subsequently passed in the bundled
+Python runtime (`test_3d_projection.py`: 11/11 passed). Running the whole suite
+in that bundled interpreter is not supported without its missing `jsonschema`
+dependency; no environment or dependencies were modified for this recovery.
+
+## One-shot recovery batch
+
+`scripts/run_flexible_completion_recovery_batch.py` can adopt the explicitly
+identified planar launcher owned by the current user, wait for its verified
+32-step manifest, and then run the two remaining arms serially. Every later
+arm invokes the original frozen runner and a new resource preflight. It saves
+non-overwriting tar snapshots and per-file hashes after each completed arm.
+The batch then invokes checkpoint preparation and the five-condition evaluator.
+Any failure stops the batch with preserved evidence; it never retries, changes
+the scientific design, starts a blind fork, or creates a recurring automation.
+Its completion means evaluation execution completed, not that effectiveness
+or independent visual review has passed.
