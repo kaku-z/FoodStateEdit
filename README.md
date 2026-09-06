@@ -6,6 +6,10 @@ The Day 13 topology-weighted pilot executed successfully but failed its
 precommitted positive gate: the directional metric improvements were too small
 and no clear visible semantic gain was found. Effectiveness is not established.
 
+The [Day 14 contact-guidance feasibility experiment](results/DAY14_CONTACT_GUIDANCE_OBSERVER_RESULT_20260907.md)
+validated limited synthetic-mask behavior but rejected the RGB observer: it
+preferred a solid color block to the target. No new VACE inference ran.
+
 This repository is the frozen, lightweight workspace for the 20-day
 FoodStateEdit paper sprint started on 2026-08-26.
 

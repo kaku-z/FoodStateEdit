@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.contact_guidance_observer_pilot.v1",
+  "scientific_status": "pre_inference_measurement_validation",
+  "scope": "one seen synthetic udon sample; CPU objective and RGB observer validation before VACE integration",
+  "dataset_root": "artifacts/day13_3d_guided_flexible_completion_udon_v1",
+  "dataset_manifest_sha256": "7dfe13533ff1e64a22793bd9184b923da833d193009a09e747430a6c7e47a902",
+  "geometry_config": "configs/flexible_completion_udon_relative3d_geometry_v1.json",
+  "geometry_sha256": "5867e8ffeeb2629816f7e3d30630dd47805c7b15fd289b5d2fb17b816b098585",
+  "observer": "frozen_analytic_rgb_color_likelihood_not_semantic_segmentation",
+  "frame": 20,
+  "objective_modes": ["fixed", "phase_visibility"],
+  "minimum_gap": 0.08,
+  "synthetic_mask_optimization": {"steps": 60, "learning_rate": 0.35, "seed": 1},
+  "required_gates": [
+    "broken_strand_has_more_energy_than_connected",
+    "missing_utensil_has_more_energy_than_connected",
+    "phase_guidance_inactive_during_approach",
+    "known_occlusion_is_not_penalized_as_break",
+    "rgb_target_beats_no_edit",
+    "rgb_target_beats_same_color_solid_blob",
+    "rgb_erasing_strand_increases_energy",
+    "rgb_erasing_utensil_increases_contact_energy",
+    "rgb_objective_has_finite_nonzero_gradient"
+  ],
+  "execution_policy": {
+    "vace_requires_all_observer_gates": true,
+    "no_threshold_retuning_after_output_inspection": true,
+    "no_model_downloads": true,
+    "no_existing_outputs_overwritten": true,
+    "no_generation_effectiveness_claim_from_mask_or_rgb_probe": true
+  }
+}

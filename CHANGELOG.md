@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-09-07 — Day 14 contact-guidance observer feasibility
+
+- added differentiable path/contact evidence and action-phase/3D-visibility gating;
+- ran three synthetic-mask optimization arms and five frozen RGB counterfactuals;
+- rejected the analytic RGB observer on four semantic gates, despite finite gradients;
+- identified geometry/target alignment as an additional issue to audit;
+- preserved dependency and raster-fixture failures in separate local directories;
+- kept VACE inference gated; no remote mutation, model download, or GPU job started.
+
 ## 2026-09-06 — Day 13 matched topology-weighted result
 
 - recovered the frozen three-arm experiment into persistent storage after the

@@ -22,3 +22,8 @@ configs/vace_phase_action_isolated_udon_checkpoint_sweep_v1.json -text
 configs/vace_phase_action_isolated_spoon_checkpoint_sweep_v1.json -text
 results/day12_phase_action_isolated_checkpoint_sweep_gp38_v1/** -text
 configs/flexible_completion_mechanism_pilot_v0.json -text
+configs/contact_guidance_observer_pilot_v1.json -text
+foodstateedit/contact_guidance.py -text
+scripts/run_contact_guidance_observer_pilot.py -text
+results/day14_contact_guidance_observer_20260907/** -text
+results/day14_contact_guidance_observer_20260907/*.json whitespace=trailing-space,space-before-tab,cr-at-eol

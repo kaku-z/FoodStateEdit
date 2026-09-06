@@ -6,6 +6,17 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-07 Day 14 contact-guidance observer feasibility
+
+- read-only audit confirmed safe A6000 resources on gp38/gp39/gp40;
+- three CPU synthetic-mask arms tested fixed versus phase/visibility-aware constraints;
+- the visibility-aware objective retained known occlusion while reducing visible-break error;
+- the analytic RGB observer preferred a uniform noodle-colored block and failed all four
+  semantic counterfactual checks; no VACE inference was launched;
+- a curve/target overlay exposed an additional alignment issue for independent review.
+
+Result: [DAY14_CONTACT_GUIDANCE_OBSERVER_RESULT_20260907.md](DAY14_CONTACT_GUIDANCE_OBSERVER_RESULT_20260907.md).
+
 ## 2026-09-06 Day 13 relative-3D topology-weighted diagnostic
 
 - three matched 32-step arms completed with identical trainable initialization
