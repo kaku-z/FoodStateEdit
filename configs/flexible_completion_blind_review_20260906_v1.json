@@ -1,0 +1,26 @@
+{
+  "schema_version": "foodstateedit.flexible_completion_blind_review.v1",
+  "freeze_date": "2026-09-06",
+  "frozen_before_evaluation_output_was_seen": true,
+  "mapping_derivation": "Sort SHA-256(lowercase hex) of execution_config_sha256 + newline + condition name; assign R1..R5.",
+  "execution_config_sha256": "bd17a92e7cfdfe25186949b5e32a0cc3385cfbd2ac7a424c4e90d60dcdf63a7b",
+  "aliases": {
+    "R1": "planar_uniform_step32",
+    "R2": "planar_lora_off",
+    "R3": "relative3d_uniform_step32",
+    "R4": "relative3d_topology_weighted_step32",
+    "R5": "relative3d_lora_off"
+  },
+  "review_dimensions": [
+    "pinch_contact",
+    "strand_continuity",
+    "connection_to_bowl",
+    "lift_motion",
+    "final_hold",
+    "photo_realism"
+  ],
+  "reviewer_count": 2,
+  "independent_review_required": true,
+  "mapping_must_not_be_given_to_reviewers": true,
+  "claim_limit": "Blinding prevents condition-label bias only. It does not establish generalization, real-data performance, physical correctness, or paper-level photo realism."
+}

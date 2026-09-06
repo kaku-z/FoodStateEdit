@@ -82,3 +82,13 @@ Any failure stops the batch with preserved evidence; it never retries, changes
 the scientific design, starts a blind fork, or creates a recurring automation.
 Its completion means evaluation execution completed, not that effectiveness
 or independent visual review has passed.
+
+## Precommitted blinded review
+
+Before viewing any five-condition output, the deterministic anonymous mapping
+and six separate review dimensions were frozen in
+`configs/flexible_completion_blind_review_20260906_v1.json`. The package
+builder copies only R1--R5 review sheets and final-hold images, never the
+condition mapping, and emits a file-hash audit. Two independent human reviewers
+must score pinch contact, strand continuity, bowl connection, lift, final hold,
+and photo realism. Agent inspection cannot substitute for either reviewer.
