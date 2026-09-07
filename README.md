@@ -16,6 +16,13 @@ segmented most of the noodle bowl instead of one lifted strand, did not detect
 chopsticks in the synthetic target, and did not establish two-stick instances.
 No new VACE inference ran and SAM3 guidance remains prohibited.
 
+The [Day 16 geometry-prompted SAM3 pilot](results/DAY16_GEOMETRY_PROMPTED_SAM3_RESULT_20260907.md)
+passed 7/9 checks and isolated a preliminary strand-specific representation
+signal: planar outputs had geometry-aligned lifted-strand IoU 0, whereas the
+matched relative-3D outputs reached 0.695--0.728. The two chopstick masks still
+merged, and topology weighting did not beat LoRA-off, so this remains a
+seen-synthetic diagnostic rather than VACE effectiveness evidence.
+
 This repository is the frozen, lightweight workspace for the 20-day
 FoodStateEdit paper sprint started on 2026-08-26.
 

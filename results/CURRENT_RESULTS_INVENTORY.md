@@ -6,6 +6,21 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-07 Day 16 geometry-prompted SAM3 observer pilot
+
+- relative-3D boxes and positive/negative points corrected the Day 15
+  whole-bowl strand mask failure; seven of nine frozen gates passed;
+- matched planar outputs had geometry-aligned lifted-strand IoU 0, while the
+  three relative-3D outputs reached 0.695--0.728;
+- source, strand-erasure and solid-block controls were 0.319, 0.299 and 0.267,
+  versus 0.779 for the synthetic geometry control;
+- the observer still merged the two chopsticks, and topology-weighted step 32
+  did not beat relative-3D LoRA-off (0.7246 versus 0.7284 strand IoU);
+- this is a preliminary seen-synthetic relative-3D representation signal, not
+  independent VACE effectiveness evidence; no VACE inference ran.
+
+Result: [DAY16_GEOMETRY_PROMPTED_SAM3_RESULT_20260907.md](DAY16_GEOMETRY_PROMPTED_SAM3_RESULT_20260907.md).
+
 ## 2026-09-07 Day 15 frozen SAM3 observer pilot
 
 - the existing direct SAM3 image model and 3.45 GB checkpoint were found in

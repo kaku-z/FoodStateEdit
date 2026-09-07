@@ -1,0 +1,91 @@
+{
+  "schema_version": "foodstateedit.geometry_prompted_sam3_summary.v1",
+  "date": "2026-09-07",
+  "status": "partial_strand_signal_observer_gate_failed_do_not_guide_vace",
+  "scope": "one seen synthetic udon scaffold, matched existing Day 13 final-hold outputs, and frozen source/erasure/solid-block controls",
+  "freeze": {
+    "config_sha256": "1c5c73a158ae82ff5e84c1c13cf2aba43c85515e0d919fe67649579fb608634a",
+    "completed_runner_sha256": "18c2f2c075caa60c5ba56ed3432331f6cf56f4379752aeba48cf645612b888b9",
+    "geometry_config_sha256": "5867e8ffeeb2629816f7e3d30630dd47805c7b15fd289b5d2fb17b816b098585",
+    "thresholds_changed_after_inspection": false
+  },
+  "execution": {
+    "host": "gp38",
+    "physical_gpu": 0,
+    "gpu": "NVIDIA RTX A6000",
+    "preflight_passed": true,
+    "remote_output_root": "/host/space0/guo-z/tf-ufi/outputs/day16_geometry_prompted_sam3_gp38_20260907T1124Z_v3",
+    "new_vace_inference_count": 0
+  },
+  "automated_gates": {
+    "control_strand_aligns": true,
+    "control_near_stick_aligns": true,
+    "control_far_stick_aligns": true,
+    "control_sticks_are_distinct": false,
+    "control_strand_beats_source": true,
+    "strand_erasure_lowers_alignment": true,
+    "stick_erasure_lowers_alignment": true,
+    "solid_block_not_preferred": true,
+    "weighted_output_has_all_three_structures": false
+  },
+  "gate_count": {"passed": 7, "failed": 2, "total": 9},
+  "strand_iou": {
+    "source": 0.3188349514563107,
+    "geometry_control": 0.7792143212332173,
+    "strand_erased_to_source": 0.2988074957410562,
+    "solid_strand_block": 0.26667563206024747,
+    "planar_lora_off": 0.0,
+    "planar_uniform_step32": 0.0,
+    "relative3d_lora_off": 0.7284011916583912,
+    "relative3d_uniform_step32": 0.6953771289537712,
+    "relative3d_topology_weighted_step32": 0.7246161466072313
+  },
+  "matched_descriptive_differences": {
+    "relative3d_weighted_minus_planar_uniform_strand_iou": 0.7246161466072313,
+    "relative3d_uniform_minus_planar_uniform_strand_iou": 0.6953771289537712,
+    "relative3d_weighted_minus_relative3d_uniform_strand_iou": 0.02923901765346015,
+    "relative3d_weighted_minus_relative3d_lora_off_strand_iou": -0.0037850450511598597
+  },
+  "stick_diagnostic": {
+    "geometry_control_near_iou": 0.6598615916955017,
+    "geometry_control_far_iou": 0.36641836118381316,
+    "geometry_control_predicted_pair_iou": 0.5294705294705294,
+    "geometry_control_predicted_centroid_distance_px": 7.299358573638701,
+    "relative3d_weighted_near_iou": 0.5112721417069244,
+    "relative3d_weighted_far_iou": 0.37070193285859615,
+    "relative3d_weighted_predicted_pair_iou": 0.6830873554048664,
+    "relative3d_weighted_predicted_centroid_distance_px": 11.669633865884629,
+    "finding": "The prompted masks overlap too much to establish two separate chopstick instances."
+  },
+  "interpretation": {
+    "supported": "A scaffold-conditioned strand observer passed its frozen control contrasts and produced a large descriptive separation between matched planar and relative-3D outputs at the intended lifted-strand location.",
+    "not_supported": "The observer did not establish two separate chopsticks, and topology-weighted LoRA did not outperform relative-3D LoRA-off. This is not VACE effectiveness or generalization evidence.",
+    "required_next": "Obtain independent strand centerline and per-stick instance annotations, then validate the frozen observer on held-out synthetic controls before any guidance integration."
+  },
+  "technical_visual_audit": {
+    "reviewer_kind": "agent_technical_inspection_not_independent_human_review",
+    "localized_lifted_strand_mask_observed": true,
+    "planar_false_location_masks_observed": true,
+    "two_stick_instance_separation_observed": false
+  },
+  "evidence": {
+    "raw_result_sha256": "e8726a1975c44b5d44eced86f91f3768fd54df49914382407e2acb35e2efa9aa",
+    "remote_file_manifest_sha256": "46e2ea6790ef3d187196c6ad9e1ca2d6562e99b7d8dc99ca1db311e5c22e7b70",
+    "preflight_sha256": "30ca96cfc79c0c1a56b7575905aaeaab31e10d3a3e710187c186d0c647f07306",
+    "manifest_files_verified_after_pull": 68,
+    "hash_mismatches_after_pull": 0,
+    "local_artifact_root": "artifacts/day16_geometry_prompted_sam3_20260907"
+  },
+  "preserved_attempts": [
+    {
+      "attempt": 1,
+      "status": "technical_preflight_parent_missing",
+      "detail": "The requested preflight parent did not exist; failure occurred before output creation or model load. The unused v2 runtime was preserved."
+    },
+    {
+      "attempt": 2,
+      "status": "complete_partial_gate",
+      "output_suffix": "v3"
+    }
+  ]
+}

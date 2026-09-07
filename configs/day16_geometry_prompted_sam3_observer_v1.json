@@ -1,0 +1,96 @@
+{
+  "schema_version": "foodstateedit.geometry_prompted_sam3_observer.v1",
+  "freeze_date": "2026-09-07",
+  "scientific_status": "seen_synthetic_geometry_prompt_feasibility_not_vace_evidence",
+  "question": "Can frozen relative-3D boxes and positive/negative points make direct SAM3 distinguish the rendered flexible strand and two separate chopsticks from source, erasure, and solid-block controls?",
+  "claim_limit": "This one-seen-synthetic-control pilot uses scaffold-derived prompts and labels. It can test observer compatibility only; it cannot establish VACE effectiveness, independent semantic validity, generalization, physical correctness, or photo realism.",
+  "remote_input_root": "/host/space0/guo-z/tf-ufi/outputs/day13_recovery_20260906T0115Z",
+  "inputs": [
+    {"id": "source", "path": "dataset/vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png", "bytes": 629168, "sha256": "4d1b59dc94598ee25e8bf824509f297dbc199283d7cf240da023e49be2c42ace"},
+    {"id": "planar_lora_off", "path": "evaluation_v1/planar_lora_off_projected_final_hold.png", "bytes": 675321, "sha256": "594ae9b97fc54894a77fa3a4842ae7064f9e26b4b37a0a00dc7ff9756edd5b3c"},
+    {"id": "planar_uniform_step32", "path": "evaluation_v1/planar_uniform_step32_projected_final_hold.png", "bytes": 674942, "sha256": "c90065f1cecaf2152497a5b20cfcb3f23c2139e2cf28fee1c3ab0a045f26ee6e"},
+    {"id": "relative3d_lora_off", "path": "evaluation_v1/relative3d_lora_off_projected_final_hold.png", "bytes": 678140, "sha256": "ec7008ab6587c9aaf6242cf6c2a1fd62b8976f00431c949235d3ded937d8d663"},
+    {"id": "relative3d_uniform_step32", "path": "evaluation_v1/relative3d_uniform_step32_projected_final_hold.png", "bytes": 677435, "sha256": "24c16e35ca129df2d2557c48beccca2d34465fc1d6381d7ac7f0109dd61c5a2c"},
+    {"id": "relative3d_topology_weighted_step32", "path": "evaluation_v1/relative3d_topology_weighted_step32_projected_final_hold.png", "bytes": 677358, "sha256": "0e65ea12c3354f00a284f8dfd2e327503ad38ac066e0cb5325dc036506e80a7d"}
+  ],
+  "derived_inputs": {
+    "geometry_control_video": {"path": "dataset/vace_video_relative3d/udon_chopsticks_imagegen_pseudo_v1.mp4", "bytes": 282331, "sha256": "b2a6ca51bf6588bc0fbce4a37a4f516e02de16e230de42ab6b4ad98887ad35b9", "frame": 20},
+    "strand_mask_video": {"path": "dataset/topology_masks/flexible_strand.mp4", "bytes": 4486, "sha256": "f05bb49e26f8293a28326a1800794ab8b8f835a20d236fb43f8030b9c1dc934f", "frame": 20},
+    "geometry_config": {"path": "configs/flexible_completion_udon_relative3d_geometry_v1.json", "bytes": 2014, "sha256": "5867e8ffeeb2629816f7e3d30630dd47805c7b15fd289b5d2fb17b816b098585"}
+  },
+  "prompts_normalized": {
+    "strand": {
+      "box_xyxy": [0.68, 0.29, 0.77, 0.47],
+      "positive_points": [[0.735, 0.430], [0.738, 0.380], [0.720, 0.340], [0.700, 0.315]],
+      "negative_points": [[0.680, 0.380], [0.770, 0.380]]
+    },
+    "near_chopstick": {
+      "box_xyxy": [0.68, 0.20, 1.00, 0.325],
+      "positive_points": [[0.753, 0.296], [0.878, 0.268], [0.995, 0.240]],
+      "negative_points": [[0.753, 0.313], [0.878, 0.292], [0.995, 0.271]]
+    },
+    "far_chopstick": {
+      "box_xyxy": [0.68, 0.245, 1.00, 0.345],
+      "positive_points": [[0.753, 0.313], [0.878, 0.292], [0.995, 0.271]],
+      "negative_points": [[0.753, 0.296], [0.878, 0.268], [0.995, 0.240]]
+    }
+  },
+  "counterfactuals": {
+    "strand_erased_to_source": {"base": "geometry_control", "replacement": "source", "box_xyxy_normalized": [0.66, 0.27, 0.79, 0.49]},
+    "sticks_erased_to_source": {"base": "geometry_control", "replacement": "source", "box_xyxy_normalized": [0.66, 0.18, 1.00, 0.37]},
+    "solid_strand_block": {"base": "geometry_control", "rgb": [245, 224, 164], "box_xyxy_normalized": [0.66, 0.27, 0.79, 0.49]}
+  },
+  "observer": {
+    "confidence_threshold": 0.25,
+    "minimum_mask_pixels": 50,
+    "control_strand_iou_threshold": 0.20,
+    "control_stick_iou_threshold": 0.15,
+    "weighted_strand_iou_threshold": 0.10,
+    "weighted_stick_iou_threshold": 0.10,
+    "contrast_margin_iou": 0.10,
+    "maximum_pair_mask_iou": 0.50,
+    "minimum_pair_centroid_distance_px": 8.0,
+    "manual_independent_labels_required_after_pass": true
+  },
+  "required_gates": [
+    "control_strand_aligns",
+    "control_near_stick_aligns",
+    "control_far_stick_aligns",
+    "control_sticks_are_distinct",
+    "control_strand_beats_source",
+    "strand_erasure_lowers_alignment",
+    "stick_erasure_lowers_alignment",
+    "solid_block_not_preferred",
+    "weighted_output_has_all_three_structures"
+  ],
+  "sam3": {
+    "code_root": "/host/space0/guo-z/Evol-SAM3",
+    "git_commit": "29b46c21c31f892224360c0d6fd1f8038412bf30",
+    "checkpoint": {"path": "sam3/sam3.pt", "bytes": 3450062241, "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"},
+    "bpe": {"path": "assets/bpe_simple_vocab_16e6.txt.gz", "sha256": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a"},
+    "model_builder_sha256": "a656c076b6fcef0515e73ca5bc31bec1a69d200392acea47dd3a184dcae826a1",
+    "image_processor_sha256": "fce5e745afc514f1384d273031b47f13f87ef9400c0daf282e875fb7bc50f60a",
+    "load_from_hf": false,
+    "text_prompt_used": false
+  },
+  "runtime": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/sam3_env/bin/python",
+    "torch_expected": "2.4.0+cu121",
+    "physical_gpu": 0,
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "minimum_free_memory_mib": 48000,
+    "maximum_utilization_percent": 5,
+    "minimum_available_system_memory_mib": 80000,
+    "require_zero_compute_processes": true
+  },
+  "execution_policy": {
+    "no_model_downloads": true,
+    "no_existing_path_overwrite": true,
+    "no_process_termination_or_preemption": true,
+    "no_a40_or_blackwell": true,
+    "no_vace_inference": true,
+    "no_threshold_retuning_after_output_inspection": true,
+    "geometry_labels_are_not_independent_ground_truth": true,
+    "guidance_requires_all_gates_plus_independent_labels": true
+  }
+}

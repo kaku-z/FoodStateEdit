@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-09-07 — Day 16 geometry-prompted SAM3 partial strand signal
+
+- froze scaffold-derived boxes, positive/negative points, erasure controls and
+  nine gates before inference;
+- ran direct SAM3 offline on existing matched Day 13 outputs without new VACE
+  inference, model downloads or process preemption;
+- passed 7/9 gates and measured lifted-strand IoU 0 for both planar outputs
+  versus 0.695--0.728 for the three relative-3D outputs;
+- retained the conservative gate failure because SAM3 did not separate two
+  chopstick instances and topology weighting did not beat LoRA-off;
+- pulled and verified all 68 manifest-covered evidence files.
+
 ## 2026-09-07 — Day 15 frozen SAM3 observer falsification
 
 - found and hash-locked the existing SAM3 source, checkpoint and compatible
