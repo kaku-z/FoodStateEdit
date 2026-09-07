@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-09-07 — Day 15 frozen SAM3 observer falsification
+
+- found and hash-locked the existing SAM3 source, checkpoint and compatible
+  `sam3_env` without downloading or modifying third-party assets;
+- froze four text prompts, three counterfactuals and nine gates before inference;
+- safely preserved one gp40 resource block and two gp38 technical failures, then
+  completed the authoritative run on an idle gp38 RTX A6000;
+- rejected direct text-prompt SAM3 as the guidance observer after only 3/9 gates
+  passed and technical overlays showed whole-bowl rather than lifted-strand masks;
+- pulled 95 manifest-covered files with zero size or SHA-256 mismatches and kept
+  VACE inference disabled.
+
 ## 2026-09-07 — Day 14 contact-guidance observer feasibility
 
 - added differentiable path/contact evidence and action-phase/3D-visibility gating;

@@ -1,0 +1,95 @@
+{
+  "schema_version": "foodstateedit.sam3_observer_summary.v1",
+  "date": "2026-09-07",
+  "status": "observer_gate_failed_do_not_guide_vace",
+  "scope": "one seen synthetic udon image, five existing Day 13 final-hold outputs, and three frozen counterfactuals",
+  "model": {
+    "name": "facebook SAM3 image model through the preserved Evol-SAM3 source tree",
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "source_commit": "29b46c21c31f892224360c0d6fd1f8038412bf30",
+    "qwen_used": false,
+    "model_downloaded": false
+  },
+  "freeze": {
+    "config_sha256": "1303826625989007684996384407edc6d02b77b06734b4f93ded8e9479786181",
+    "completed_runner_sha256": "272ecc5bc46f056de2701a4d1f215bce1694188ab073bb62dd6b2184c9dca7db",
+    "thresholds_changed_after_inspection": false
+  },
+  "execution": {
+    "host": "gp38",
+    "physical_gpu": 0,
+    "gpu": "NVIDIA RTX A6000",
+    "preflight_passed": true,
+    "python": "/home/yanai-lab/guo-z/.conda/envs/sam3_env/bin/python",
+    "torch": "2.4.0+cu121",
+    "remote_output_root": "/host/space0/guo-z/tf-ufi/outputs/day15_sam3_observer_pilot_gp38_retry_v3_20260907T1050Z"
+  },
+  "automated_gates": {
+    "target_has_strand_candidate": true,
+    "target_has_utensil_candidate": false,
+    "target_strand_beats_source": false,
+    "target_utensil_beats_source": false,
+    "strand_erasure_lowers_strand_score": false,
+    "utensil_erasure_lowers_utensil_score": false,
+    "solid_block_not_preferred_as_strand": false,
+    "weighted_output_has_strand_candidate": true,
+    "weighted_output_has_utensil_candidate": true
+  },
+  "gate_count": {"passed": 3, "failed": 6, "total": 9},
+  "group_scores": {
+    "source": {"strand": 0.9239147305488586, "utensil": 0.0},
+    "synthetic_target": {"strand": 0.917699933052063, "utensil": 0.0},
+    "planar_lora_off": {"strand": 0.9179931282997131, "utensil": 0.8915767669677734},
+    "planar_uniform_step32": {"strand": 0.9190431237220764, "utensil": 0.9008846879005432},
+    "relative3d_lora_off": {"strand": 0.9145606160163879, "utensil": 0.5019078850746155},
+    "relative3d_uniform_step32": {"strand": 0.9161141514778137, "utensil": 0.7254397869110107},
+    "relative3d_topology_weighted_step32": {"strand": 0.9149823784828186, "utensil": 0.3804621696472168},
+    "strand_restored_to_source": {"strand": 0.9209703207015991, "utensil": 0.0},
+    "utensil_restored_to_source": {"strand": 0.9188533425331116, "utensil": 0.0},
+    "solid_noodle_color_block": {"strand": 0.9019730091094971, "utensil": 0.0}
+  },
+  "technical_visual_audit": {
+    "reviewer_kind": "agent_technical_inspection_not_independent_human_review",
+    "strand_prompt_scope_correct": false,
+    "two_chopstick_instance_separation_established": false,
+    "finding": "Both strand prompts segment most of the noodle bowl rather than one lifted strand. The synthetic target has no chopstick detection. Generated chopstick masks are single returned instances or absent, not evidence of two separately identified sticks."
+  },
+  "evidence": {
+    "raw_result_sha256": "e8f0ddbb2869048342fe37df68994f9e28fb7a9acbfd6bc44400b58a9dce4f37",
+    "remote_file_manifest_sha256": "04ad696617f2f04043931ae952c4d99043f273fd6ebe08fd4faa34b7769432ec",
+    "remote_manifest_files_verified_after_pull": 95,
+    "hash_mismatches_after_pull": 0,
+    "local_artifact_root": "artifacts/day15_sam3_observer_pilot_20260907"
+  },
+  "preserved_attempts": [
+    {
+      "attempt": 1,
+      "host": "gp40",
+      "status": "resource_preflight_blocked",
+      "detail": "GPU 0 was occupied by another user's four-GPU process after the earlier audit; no model load or output root creation.",
+      "preflight_sha256": "45ba7e8a95a4407265fd1d40a32e13a111f6c3323de31eef764e13d5a30aaca7"
+    },
+    {
+      "attempt": 2,
+      "host": "gp38",
+      "status": "technical_import_failure",
+      "detail": "The preserved Evol-SAM3 environment lacked Triton; no SAM3 result was produced.",
+      "preflight_sha256": "b25327c12204183e222f2e7530f4760e82947bcbf5e64a4d46cc70603ceb4c2d"
+    },
+    {
+      "attempt": 3,
+      "host": "gp38",
+      "status": "technical_result_write_failure",
+      "detail": "Inference completed but a Python boolean typo prevented authoritative result JSON creation; the directory is preserved and was not reused.",
+      "preflight_sha256": "89de9fea69aa97fb5af9107049e4fa7b8dfa778a185fbf38d1c9e7bc87c0c044"
+    },
+    {
+      "attempt": 4,
+      "host": "gp38",
+      "status": "complete_negative_gate",
+      "preflight_sha256": "6157bd6b08b6a141389f3d9668a0cff35ee4a38a0f5306f4997b451ccebaa123"
+    }
+  ],
+  "new_vace_inference_count": 0,
+  "decision": "Do not integrate this observer into VACE guidance. Next require geometry-cropped or instance-conditioned observation with independent labels and the same counterfactual gate family."
+}

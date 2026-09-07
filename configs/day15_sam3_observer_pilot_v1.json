@@ -1,0 +1,135 @@
+{
+  "schema_version": "foodstateedit.sam3_observer_pilot.v1",
+  "freeze_date": "2026-09-07",
+  "scientific_status": "seen_synthetic_observer_falsification_not_generation_evidence",
+  "question": "Can a frozen, direct SAM3 text-prompt observer distinguish a lifted udon strand and wooden chopsticks from no-edit, erased-object, and solid-color counterexamples before any VACE guidance integration?",
+  "claim_limit": "This one-seen-image observer pilot cannot establish VACE effectiveness, held-out generalization, physical correctness, or photo realism. No VACE inference is allowed in this run.",
+  "remote_input_root": "/host/space0/guo-z/tf-ufi/outputs/day13_recovery_20260906T0115Z",
+  "inputs": [
+    {
+      "id": "source",
+      "path": "dataset/vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png",
+      "bytes": 629168,
+      "sha256": "4d1b59dc94598ee25e8bf824509f297dbc199283d7cf240da023e49be2c42ace"
+    },
+    {
+      "id": "synthetic_target",
+      "path": "dataset/target_keyframe/udon_chopsticks_imagegen_pseudo_v1.png",
+      "bytes": 629941,
+      "sha256": "509acaa7a5adddf3c63882f01afc7e14bcc807c97608994c754a65feee08e743"
+    },
+    {
+      "id": "planar_lora_off",
+      "path": "evaluation_v1/planar_lora_off_projected_final_hold.png",
+      "bytes": 675321,
+      "sha256": "594ae9b97fc54894a77fa3a4842ae7064f9e26b4b37a0a00dc7ff9756edd5b3c"
+    },
+    {
+      "id": "planar_uniform_step32",
+      "path": "evaluation_v1/planar_uniform_step32_projected_final_hold.png",
+      "bytes": 674942,
+      "sha256": "c90065f1cecaf2152497a5b20cfcb3f23c2139e2cf28fee1c3ab0a045f26ee6e"
+    },
+    {
+      "id": "relative3d_lora_off",
+      "path": "evaluation_v1/relative3d_lora_off_projected_final_hold.png",
+      "bytes": 678140,
+      "sha256": "ec7008ab6587c9aaf6242cf6c2a1fd62b8976f00431c949235d3ded937d8d663"
+    },
+    {
+      "id": "relative3d_uniform_step32",
+      "path": "evaluation_v1/relative3d_uniform_step32_projected_final_hold.png",
+      "bytes": 677435,
+      "sha256": "24c16e35ca129df2d2557c48beccca2d34465fc1d6381d7ac7f0109dd61c5a2c"
+    },
+    {
+      "id": "relative3d_topology_weighted_step32",
+      "path": "evaluation_v1/relative3d_topology_weighted_step32_projected_final_hold.png",
+      "bytes": 677358,
+      "sha256": "0e65ea12c3354f00a284f8dfd2e327503ad38ac066e0cb5325dc036506e80a7d"
+    }
+  ],
+  "counterfactuals": {
+    "strand_restored_to_source": {
+      "base": "synthetic_target",
+      "replacement": "source",
+      "xyxy": [430, 165, 515, 300]
+    },
+    "utensil_restored_to_source": {
+      "base": "synthetic_target",
+      "replacement": "source",
+      "xyxy": [480, 145, 545, 188]
+    },
+    "solid_noodle_color_block": {
+      "base": "synthetic_target",
+      "xyxy": [448, 160, 532, 285],
+      "rgb": [245, 224, 164]
+    }
+  },
+  "prompt_groups": {
+    "strand": [
+      {"id": "lifted_udon_strand", "text": "a lifted udon noodle strand"},
+      {"id": "single_lifted_noodle", "text": "a single lifted noodle"}
+    ],
+    "utensil": [
+      {"id": "wooden_chopsticks", "text": "wooden chopsticks"},
+      {"id": "two_wooden_chopsticks", "text": "two wooden chopsticks"}
+    ]
+  },
+  "observer": {
+    "confidence_threshold": 0.25,
+    "group_score": "maximum_instance_confidence_across_frozen_prompt_variants",
+    "positive_score_threshold": 0.35,
+    "contrast_margin": 0.05,
+    "minimum_mask_pixels": 50,
+    "manual_review_required": true
+  },
+  "required_gates": [
+    "target_has_strand_candidate",
+    "target_has_utensil_candidate",
+    "target_strand_beats_source",
+    "target_utensil_beats_source",
+    "strand_erasure_lowers_strand_score",
+    "utensil_erasure_lowers_utensil_score",
+    "solid_block_not_preferred_as_strand",
+    "weighted_output_has_strand_candidate",
+    "weighted_output_has_utensil_candidate"
+  ],
+  "sam3": {
+    "code_root": "/host/space0/guo-z/Evol-SAM3",
+    "git_commit": "29b46c21c31f892224360c0d6fd1f8038412bf30",
+    "checkpoint": {
+      "path": "sam3/sam3.pt",
+      "bytes": 3450062241,
+      "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"
+    },
+    "bpe": {
+      "path": "assets/bpe_simple_vocab_16e6.txt.gz",
+      "sha256": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a"
+    },
+    "model_builder_sha256": "a656c076b6fcef0515e73ca5bc31bec1a69d200392acea47dd3a184dcae826a1",
+    "image_processor_sha256": "fce5e745afc514f1384d273031b47f13f87ef9400c0daf282e875fb7bc50f60a",
+    "load_from_hf": false,
+    "qwen_or_evolutionary_agent_used": false
+  },
+  "runtime": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/sam3_env/bin/python",
+    "torch_expected": "2.4.0+cu121",
+    "physical_gpu": 0,
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "minimum_free_memory_mib": 48000,
+    "maximum_utilization_percent": 5,
+    "minimum_available_system_memory_mib": 80000,
+    "require_zero_compute_processes": true
+  },
+  "execution_policy": {
+    "no_model_downloads": true,
+    "no_existing_path_overwrite": true,
+    "no_process_termination_or_preemption": true,
+    "no_a40_or_blackwell": true,
+    "no_vace_inference": true,
+    "no_threshold_retuning_after_output_inspection": true,
+    "do_not_treat_sam3_masks_as_ground_truth": true,
+    "vace_guidance_requires_all_gates_and_independent_manual_review": true
+  }
+}

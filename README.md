@@ -10,6 +10,12 @@ The [Day 14 contact-guidance feasibility experiment](results/DAY14_CONTACT_GUIDA
 validated limited synthetic-mask behavior but rejected the RGB observer: it
 preferred a solid color block to the target. No new VACE inference ran.
 
+The [Day 15 frozen SAM3 observer pilot](results/DAY15_SAM3_OBSERVER_RESULT_20260907.md)
+also failed its prerequisite gate: 3/9 checks passed. Direct text prompting
+segmented most of the noodle bowl instead of one lifted strand, did not detect
+chopsticks in the synthetic target, and did not establish two-stick instances.
+No new VACE inference ran and SAM3 guidance remains prohibited.
+
 This repository is the frozen, lightweight workspace for the 20-day
 FoodStateEdit paper sprint started on 2026-08-26.
 

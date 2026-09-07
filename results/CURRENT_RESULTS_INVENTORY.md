@@ -6,6 +6,21 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-07 Day 15 frozen SAM3 observer pilot
+
+- the existing direct SAM3 image model and 3.45 GB checkpoint were found in
+  persistent storage and used offline without Qwen or model downloads;
+- the frozen one-image pilot covered source, synthetic target, five existing
+  Day 13 outputs and three no-edit/erasure/solid-block counterfactuals;
+- only 3/9 prerequisite gates passed: strand prompts segmented most of the bowl,
+  the synthetic target had no chopstick candidate, and erasure contrasts failed;
+- generated images sometimes produced a chopstick mask, but two separate stick
+  instances were not established and the invalid observer cannot rank methods;
+- no VACE inference ran; geometry-cropped or instance-conditioned observation
+  with independent labels is required before any guidance integration.
+
+Result: [DAY15_SAM3_OBSERVER_RESULT_20260907.md](DAY15_SAM3_OBSERVER_RESULT_20260907.md).
+
 ## 2026-09-07 Day 14 contact-guidance observer feasibility
 
 - read-only audit confirmed safe A6000 resources on gp38/gp39/gp40;
