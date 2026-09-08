@@ -1,0 +1,94 @@
+{
+  "schema_version": "foodstateedit.multimaterial_launch_record.v1",
+  "date": "2026-09-08",
+  "status": "launched_not_an_effectiveness_result",
+  "scope_id": "foodstateedit-multimaterial-pilot-v2-20260908",
+  "snapshot": {
+    "schema_version": "foodstateedit.multimaterial_run.v1",
+    "status": "running",
+    "started_at": "2026-09-08T12:46:30.652322+00:00",
+    "host": "gp40.cs.uec.ac.jp",
+    "pid": 211808,
+    "physical_gpu": 5,
+    "gpu_uuid": "GPU-bf46ee00-2f66-ce42-39c7-b41a2b807d94",
+    "config_sha256": "ea8c0429a585d7f3c92b89d4eedd21ae5c706a1786c699c578465721ee643ac6",
+    "dataset_manifest_sha256": "7a71eb2c63bf52cbe22705d1b1aceca028c045fd9fdf6328a8ed12b3a5e56078",
+    "preflight_sha256": "ee5c22de4372b528fc82238b0aab3bb0210217abe34e661713821bcd54ef6088",
+    "pipeline_load_count": 1,
+    "expected_conditions": 8,
+    "completed_conditions": [],
+    "claim_limit": "Four single-image pilots, mixed real/synthetic sources, no generalization, learned efficacy or physical correctness claim.",
+    "active_condition": "soup__planar"
+  },
+  "preflight": {
+    "schema_version": "foodstateedit.high_lift_vace_preflight.v1",
+    "timestamp_utc": "2026-09-08T12:46:30.361073+00:00",
+    "gpu": {
+      "physical_index": 5,
+      "uuid": "GPU-bf46ee00-2f66-ce42-39c7-b41a2b807d94",
+      "name": "NVIDIA RTX A6000",
+      "total_memory_mib": 49140,
+      "free_memory_mib": 48539,
+      "utilization_percent": 0,
+      "compute_processes": []
+    },
+    "host_available_memory_mib": 248269,
+    "checks": {
+      "output_root_absent": true,
+      "preflight_report_absent": true,
+      "gpu_name": true,
+      "gpu_free_memory": true,
+      "gpu_utilization": true,
+      "zero_compute_processes": true,
+      "host_available_memory": true
+    },
+    "passed": true
+  },
+  "upload_verification": {
+    "dataset_files": 37,
+    "runtime_files": 3,
+    "mismatches": 0
+  },
+  "tests": {
+    "run": 177,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "control_package": {
+    "accepted": "artifacts/day19_multimaterial_dataset_v3",
+    "rejected_retained": [
+      "artifacts/day19_multimaterial_dataset_v1",
+      "artifacts/day19_multimaterial_dataset_v2"
+    ],
+    "review": "agent technical scaffold review, not photo or independent human review"
+  },
+  "source_provenance": {
+    "soup": "Previously used real UECFOOD pilot, upscaled derivative, no public redistribution",
+    "rice": "Previously used real UECFOOD pilot, upscaled derivative, no public redistribution",
+    "noodle": "Previously used synthetic imagegen input",
+    "cake": {
+      "kind": "new synthetic input only",
+      "tool": "built-in imagegen",
+      "path": "artifacts/day19_multimaterial_sources_v1/cake_imagegen_input.png",
+      "sha256": "ab287a7b20fe428e907214509ca36e0fc9f9999f1a85588044f4d9edb31f5e21",
+      "prompt": "Use case: photorealistic-natural. Asset type: clearly synthetic INPUT photograph for a controlled food manipulation research pilot, NOT a method output or result figure. A single plain rectangular slice of pale yellow sponge cake with a thin white cream top resting on a plain matte white ceramic plate on a warm neutral tabletop. A small bite-sized rectangular cube at the front-right corner has already been cut through with two visible narrow cut seams but is still sitting flush in its original place, no piece removed, no gap yet. Natural crumb texture and soft daylight from upper left. Three-quarter overhead camera so the top and two cake side faces are clearly visible. Plate and cake fully in frame, enough empty tabletop above and to the right for a later fork-lift trajectory. Landscape composition. No fork, no knife, no spoon, no hands, no person, no berries, no garnish, no additional plate, no text, no labels, no watermark. One unmanipulated source photograph only, not collage, not before-after."
+    }
+  },
+  "remote": {
+    "host": "gp40",
+    "output_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1",
+    "dataset_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3",
+    "runtime_root": "/host/space0/guo-z/tf-ufi/runtime/day19_multimaterial_v1",
+    "preflight": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1_preflight.json"
+  },
+  "pending": [
+    "finish eight serial conditions",
+    "pull into a new local path",
+    "verify all files against hashes and decode 21 frames",
+    "review native/projected results per material and preserve failures",
+    "report real and synthetic cases separately; no broad efficacy claim"
+  ],
+  "automatic_heartbeat_resumed": false,
+  "claim_limit": "Four single-image pilots, mixed real/synthetic sources, no generalization, learned efficacy or physical correctness claim."
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": "foodstateedit.multimaterial_execution.v1",
+  "freeze_date": "2026-09-08",
+  "scope_id": "foodstateedit-multimaterial-pilot-v2-20260908",
+  "execution_allowed": true,
+  "dataset_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3",
+  "dataset_manifest": {
+    "path": "dataset_manifest.json",
+    "size_bytes": 12156,
+    "sha256": "7a71eb2c63bf52cbe22705d1b1aceca028c045fd9fdf6328a8ed12b3a5e56078"
+  },
+  "builder_sha256": "54e17e21da1e4ab0a88aa37c7da1869d9203ce081f5165caaaecebf9b1e5cf1c",
+  "implementation_files": {
+    "run_multimaterial_pilot.py": "f1f177558d20c0730eccac0a60d009ad9eba496cb506843b9e5436a960f600f6",
+    "run_high_lift_vace_pilot.py": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1",
+  "cache_root": "/tmp/foodstateedit_day19_vace_cache_v1",
+  "case_order": [
+    "soup",
+    "rice",
+    "cake",
+    "noodle"
+  ],
+  "arms": [
+    "planar",
+    "relative3d"
+  ],
+  "expected_conditions": 8,
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "vace_scale": 1,
+    "enable_ttm": false,
+    "lora_enabled": false
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+      "size_bytes": 620,
+      "sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      "low_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"
+      },
+      "models_t5_umt5-xxl-enc-bf16.pth": {
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      "Wan2.1_VAE.pth": {
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    },
+    "cache_root": "/tmp/foodstateedit_day17_high_lift_vace_cache_v1",
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "resident_job_policy": "Strict free-memory/zero-process admission before loading one pipeline. Conditions run serially within the same admitted job; abort own batch on foreign GPU processes, never terminate or preempt them. This is not an exclusive GPU reservation.",
+  "matched_factors": [
+    "source",
+    "prompt",
+    "negative_prompt",
+    "seed",
+    "model",
+    "steps",
+    "resolution",
+    "full swept support union of both arms",
+    "final projection"
+  ],
+  "treatment": "Planar translation vs manually parameterized relative-3D perspective/depth motion for soup/rice/cake; fixed paint order vs depth-varying visibility for noodle. Not one uniform isolated treatment across classes.",
+  "control_review": {
+    "status": "agent_inspected_geometric_scaffolds_not_photoreal_targets",
+    "rejected_versions": [
+      "dataset_v1: invalid precontact noodle divide warning, smeared rice source and cake floor sampling",
+      "dataset_v2: cake floor still sampled cake/shadow instead of clear plate"
+    ],
+    "relative3d_not_reconstructed": true
+  },
+  "review_gates": {
+    "technical": {
+      "decoded_frames": 21,
+      "max_outside_support_difference_before_encoding": 0,
+      "uncovered_control_pixels": 0
+    },
+    "common_action": [
+      "correct utensil count",
+      "supported payload and contact",
+      "no duplicate payload",
+      "plausible corresponding source update"
+    ],
+    "material": {
+      "soup": [
+        "liquid retained in spoon",
+        "no source crater"
+      ],
+      "rice": [
+        "distinct grains/ingredients",
+        "payload supported by blade",
+        "source reduction"
+      ],
+      "cake": [
+        "one pre-cut bite",
+        "fork contact",
+        "matching source gap and plausible cut faces"
+      ],
+      "noodle": [
+        "two distinct sticks",
+        "continuous strand",
+        "visible pinch and bowl attachment"
+      ]
+    },
+    "photo": [
+      "material texture",
+      "natural local boundary",
+      "contact shadow and lighting"
+    ],
+    "uncertain_is_not_pass": true,
+    "agent_review_not_independent_human": true,
+    "no_automatic_success": true
+  },
+  "claim_policy": {
+    "mixed_sources_report_separately": true,
+    "learned_efficacy_established": false,
+    "novelty_established": false,
+    "generalization_established": false,
+    "physical_correctness_established": false,
+    "automatic_heartbeat_resumed": false,
+    "imagegen_used_for_cake_input_only": true,
+    "no_blind_fork": true
+  }
+}

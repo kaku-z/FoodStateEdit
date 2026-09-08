@@ -1,5 +1,10 @@
 # FoodStateEdit paper release workspace
 
+The [Day 19 four-material pilot](results/DAY19_MULTIMATERIAL_LAUNCH_20260908.md)
+was launched on 2026-09-08: soup, fried rice, pre-cut cake and noodles, with
+two same-seed control arms each. This dated launch snapshot is not a completed
+result; consult the remote run manifest before reporting any outcome.
+
 The [Day 18 high-lift support repair](results/DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md)
 identified a concrete compositing defect: the old alpha hid raised sticks
 already present in native Day 17 VACE output. Swept-support repair and one

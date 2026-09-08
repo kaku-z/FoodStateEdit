@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-09-08 — Day 19 four-material pilot launch
+
+- generated and disclosed one cake input (not an experimental output), reused
+  existing soup/rice/noodle pilot sources and kept real/synthetic provenance;
+- built and reviewed four pairs of matched controls with full swept support,
+  preserving two rejected preparation versions before inference;
+- verified 37 data files and three runtime files and passed 177 tests;
+- admitted one serial eight-condition VACE workload on safe gp40 GPU 5;
+  recorded launch only, with effectiveness and per-material review pending.
+
 ## 2026-09-08 — User-requested multi-material scope v2
 
 - defined noodles, soup, fried rice and cake as required exploratory coverage,
