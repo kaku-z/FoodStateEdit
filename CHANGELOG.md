@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-09-08 — User-requested multi-material scope v2
+
+- defined noodles, soup, fried rice and cake as required exploratory coverage,
+  with a shared interface and distinct material/source-update constraints;
+- added cake as a new cohesive-soft-solid pilot class, initially lifting a
+  pre-cut bite; did not claim existing assets or successful cake generation;
+- preserved the v1 scope, existing pasta family, 60-image split and negative
+  gates; recorded a proposed matched pilot design without launching GPU jobs.
+
 ## 2026-09-08 — Day 17/18 high-lift support diagnosis and repair
 
 - retained the Day 17 high-lift pilot and corrected the interpretation of its

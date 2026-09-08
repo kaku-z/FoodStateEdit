@@ -70,10 +70,17 @@ checkpoint is unavailable; the two evidence levels are not interchangeable.
 
 ## Planned material/action families
 
+The [multi-material scope v2](MULTI_MATERIAL_SCOPE_V2.md) makes noodles, soup,
+fried rice and cake the four required exploratory demonstration classes.
+Cake is a new cohesive-soft-solid class, not an already implemented or
+validated adapter. The original pasta family and frozen benchmark stay intact.
+No multi-family efficacy or automatic GPU execution is unlocked by this plan.
+
 - liquid: spoon scooping soup;
 - granular: spoon or spatula scooping fried rice;
 - strand: chopsticks lifting ramen or udon;
 - strand-contact: fork twirling and lifting pasta.
+- cohesive soft solid (new pilot scope): fork lifting a pre-cut cake bite.
 
 ## Start here
 
