@@ -1,5 +1,19 @@
 # Change log
 
+## 2026-09-08 — Day 17/18 high-lift support diagnosis and repair
+
+- retained the Day 17 high-lift pilot and corrected the interpretation of its
+  projected utensil disappearance using an identical-raw final-alpha ablation;
+- found 31.87% of final stick-body pixels outside old support and expanded
+  motion coverage from 16.19% to 17.99% of the image without changing geometry;
+- completed one frozen same-seed LoRA-off VACE repair pilot on safe gp40 GPU 5;
+- verified all eight remote output files, preflight and twelve uploaded data
+  files, and reverified six preserved Day 17 artifacts;
+- found visible utensil/handle repair but retained failure of strict action
+  and photo gates; did not claim learned gains, generalization or novelty;
+- added full-trajectory alpha regression tests and explicit native versus
+  pre-encoding versus lossy-video preservation diagnostics.
+
 ## 2026-09-07 — Day 16 geometry-prompted SAM3 partial strand signal
 
 - froze scaffold-derived boxes, positive/negative points, erasure controls and

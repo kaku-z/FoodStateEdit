@@ -1,0 +1,76 @@
+{
+  "schema_version": "foodstateedit.flexible_completion_udon_relative3d_geometry.v1",
+  "scientific_status": "relative_3d_normalized_pinhole_high_lift_scaffold_not_reconstructed_scene_geometry",
+  "variant": "high_lift_v1",
+  "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+  "frame_count": 21,
+  "fps": 8,
+  "camera": {
+    "focal_scale": 1.2
+  },
+  "timeline": {
+    "source": [0, 0],
+    "approach": [1, 5],
+    "contact": [6, 8],
+    "lift": [9, 15],
+    "final_hold": [16, 20]
+  },
+  "anchors_normalized": {
+    "approach_pinch_uv": [0.94, 0.18],
+    "contact_pinch_uv": [0.755, 0.405],
+    "final_pinch_uv": [0.660, 0.170],
+    "fixed_bowl_connection_uv": [0.735, 0.430]
+  },
+  "relative_depth": {
+    "near_chopstick": 1.000,
+    "far_chopstick": 1.060,
+    "bowl_connection": 1.120,
+    "strand_control_a": 1.080,
+    "strand_control_b": 0.900,
+    "pinch": 1.030
+  },
+  "chopsticks": {
+    "handle_offset_normalized": [0.355, -0.070],
+    "tip_separation_normalized": 0.014,
+    "handle_separation_normalized": 0.035,
+    "line_width_px": 10,
+    "shadow_width_px": 14,
+    "near_color_rgb": [91, 45, 23],
+    "far_color_rgb": [119, 66, 34],
+    "highlight_rgb": [169, 104, 58]
+  },
+  "strand": {
+    "samples": 128,
+    "line_width_px": 13,
+    "shadow_width_px": 18,
+    "color_rgb": [245, 224, 164],
+    "highlight_rgb": [255, 248, 211],
+    "shadow_rgb": [126, 91, 45],
+    "contact_local_fraction": 0.42,
+    "control_a_offset_normalized": [-0.020, 0.030],
+    "control_b_offset_normalized": [0.030, -0.015]
+  },
+  "masks": {
+    "strand_width_px": 22,
+    "pinch_radius_px": 24,
+    "source_connection_radius_px": 28
+  },
+  "review_frame_indices": [0, 3, 6, 10, 15, 20],
+  "amplitude_audit": {
+    "image_size_wh": [688, 576],
+    "original_final_pinch_uv": [0.700, 0.315],
+    "original_contact_to_final_distance_px": 64.181,
+    "high_lift_contact_to_final_distance_px": 150.314,
+    "amplitude_ratio": 2.342,
+    "support_bbox_xyxy": [327, 52, 688, 345]
+  },
+  "constraints": {
+    "frame_zero_equals_source_before_video_encoding": true,
+    "exactly_two_rigid_chopsticks": true,
+    "one_continuous_flexible_strand": true,
+    "one_fixed_bowl_connection": true,
+    "one_moving_pinch_anchor": true,
+    "strand_depth_crosses_both_chopstick_depths": true,
+    "all_rendered_changes_inside_frozen_edit_support": true
+  }
+}

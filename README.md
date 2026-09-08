@@ -1,5 +1,13 @@
 # FoodStateEdit paper release workspace
 
+The [Day 18 high-lift support repair](results/DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md)
+identified a concrete compositing defect: the old alpha hid raised sticks
+already present in native Day 17 VACE output. Swept-support repair and one
+same-seed rerun retained the utensil and removed ragged handle clipping, but
+unambiguous two-stick pinch/bowl attachment and photo realism still did not
+pass. This is a one-seen-synthetic engineering repair, not learned efficacy
+or a new algorithmic contribution.
+
 [Read the completed Day 13 result](results/DAY13_FLEXIBLE_COMPLETION_RESULT_20260906.md)
 or the [consolidated progress and figures (中文)](results/LOCAL_PROGRESS_20260905.md).
 The Day 13 topology-weighted pilot executed successfully but failed its

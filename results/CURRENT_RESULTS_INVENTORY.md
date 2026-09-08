@@ -6,6 +6,22 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-08 Day 17/18 high-lift support repair
+
+- Day 17 raised the specified pinch displacement from 64.181 to 150.314 px;
+  these are scaffold values, not measured generated displacement;
+- its final compositing alpha hid raised sticks already present in native
+  generation; identical-raw reprojection isolated this concrete defect;
+- full swept support increased the nonzero area only from 16.19% to 17.99%;
+- one frozen same-seed VACE rerun retained the high-lift utensil and made the
+  clipped handles more continuous, with 21 frames and one pipeline load;
+- two-stick pinch separation, bowl attachment and photo realism remain
+  unestablished; the finding is a local engineering repair, not learned efficacy;
+- eight output files plus preflight matched remote SHA-256, with six Day 17
+  baseline artifacts also reverified. Automatic execution remains paused.
+
+Result: [DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md](DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md).
+
 ## 2026-09-07 Day 16 geometry-prompted SAM3 observer pilot
 
 - relative-3D boxes and positive/negative points corrected the Day 15

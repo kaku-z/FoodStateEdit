@@ -1,0 +1,144 @@
+{
+  "schema_version": "foodstateedit.high_lift_vace_pilot.v1",
+  "freeze_date": "2026-09-08",
+  "method": "relative3d_high_lift_udon_vace_lora_off_v1",
+  "execution_allowed": true,
+  "scientific_status": "one_seen_synthetic_high_lift_swept_support_repair_pilot",
+  "question": "Does full swept support preserve raised sticks and connected noodle under the same Day17 prompt, seed, geometry and base model?",
+  "claim_limit": "This single-seed, one-seen-synthetic-sample pilot tests control following only. It cannot establish learned improvement, generalization, real-data performance, physical correctness, or photo realism.",
+  "implementation": {
+    "runner": "scripts/run_high_lift_vace_pilot.py",
+    "runner_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+  },
+  "dataset": {
+    "remote_root": "/host/space0/guo-z/tf-ufi/outputs/day18_high_lift_swept_support_v1",
+    "manifest": {
+      "path": "dataset_manifest.json",
+      "size_bytes": 8522,
+      "sha256": "920fe644ccaf366d1ff128a66e6ce3f044ce17831bc225105a32115f94917e52"
+    },
+    "files": {
+      "reference": {
+        "path": "vace_reference_image/udon_chopsticks_imagegen_pseudo_v1.png",
+        "size_bytes": 629168,
+        "sha256": "4d1b59dc94598ee25e8bf824509f297dbc199283d7cf240da023e49be2c42ace"
+      },
+      "edit_alpha": {
+        "path": "edit_alpha/udon_chopsticks_imagegen_pseudo_v1.png",
+        "size_bytes": 7916,
+        "sha256": "a0b8d384033351ed8ca850366d224eff7c4e2d2b8331bf8d111d2d4f59edc42c"
+      },
+      "relative3d_control": {
+        "path": "vace_video_relative3d/udon_chopsticks_imagegen_pseudo_v1.mp4",
+        "size_bytes": 290346,
+        "sha256": "03532130475a21f6fb6b037e5cd23fe124a405380cf6c7cca68b217f949b4c58"
+      },
+      "strand_mask": {
+        "path": "topology_masks/flexible_strand.mp4",
+        "size_bytes": 5639,
+        "sha256": "06a49d7c35594a71cb588950cf6907d6ef98ba89f45afe721e872eb2aae91eae"
+      },
+      "geometry": {
+        "path": "relative3d_geometry/udon_relative3d_geometry.npz",
+        "size_bytes": 9205,
+        "sha256": "e2adaa72cb6ca9b443234de76031d06cac1fbe1bc01fb26e671555833093bb1c"
+      }
+    }
+  },
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "fps": 8,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "review_frame_indices": [
+      0,
+      3,
+      6,
+      10,
+      15,
+      20
+    ],
+    "prompt": "A photorealistic close-up food photograph of the same udon bowl. Exactly two separate wooden chopsticks lift one long continuous udon noodle strand high above the bowl; the strand remains visibly connected to the noodles in the bowl, with a large clear vertical lift, physical pinch contact, occlusion, gloss, and a plausible local shadow. No hand and no extra utensil.",
+    "negative_prompt": "hand, arm, person, fingers, duplicate utensil, extra utensil, malformed utensil, fused chopsticks, third chopstick, disconnected food, duplicated food, floating payload, short lift, no lift, spill, source crater, background change, plate change, bowl change, blur, ghosting, text, watermark"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+      "size_bytes": 620,
+      "sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      "low_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"
+      },
+      "models_t5_umt5-xxl-enc-bf16.pth": {
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      "Wan2.1_VAE.pth": {
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    },
+    "cache_root": "/tmp/foodstateedit_day17_high_lift_vace_cache_v1",
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day18_swept_support_vace_gp38_20260908_v1",
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "review_gate": {
+    "high_lift_visibly_larger_than_day13_standard": true,
+    "one_continuous_strand_returns_to_bowl": true,
+    "two_separate_chopsticks": true,
+    "pinch_contact_visible": true,
+    "photo_realism_reviewed_separately": true,
+    "automatic_success_forbidden": true
+  },
+  "support_repair": {
+    "previous_config_sha256": "15d32f2d559e0e5ad57969e74cba11a129ad35bd6341b56e452463f715d3a5fb",
+    "changes": [
+      "control raster support",
+      "VACE mask",
+      "final projection alpha"
+    ],
+    "unchanged": [
+      "prompt",
+      "negative_prompt",
+      "seed",
+      "geometry",
+      "model",
+      "steps"
+    ],
+    "not_a_mask_stage_isolation": true
+  }
+}

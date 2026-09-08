@@ -27,3 +27,11 @@ foodstateedit/contact_guidance.py -text
 scripts/run_contact_guidance_observer_pilot.py -text
 results/day14_contact_guidance_observer_20260907/** -text
 results/day14_contact_guidance_observer_20260907/*.json whitespace=trailing-space,space-before-tab,cr-at-eol
+configs/flexible_completion_udon_relative3d_geometry_high_lift_v1.json -text
+configs/day17_high_lift_vace_pilot_v1.json -text
+configs/day18_high_lift_swept_support_v1.json -text
+configs/day18_high_lift_swept_support_v1.json whitespace=trailing-space,space-before-tab,cr-at-eol
+configs/day18_high_lift_swept_support_gp40_v1.json -text
+scripts/run_high_lift_vace_pilot.py -text
+scripts/prepare_high_lift_support_pilot.py -text
+scripts/verify_high_lift_support_result.py -text

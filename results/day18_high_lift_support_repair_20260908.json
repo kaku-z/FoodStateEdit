@@ -1,0 +1,181 @@
+{
+  "schema_version": "foodstateedit.high_lift_support_repair_summary.v1",
+  "date": "2026-09-08",
+  "status": "support_repair_visible_gain_strict_action_and_photo_not_passed",
+  "scope": "one seen synthetic udon image, seed 1; geometry/control-following repair, no new training",
+  "freeze": {
+    "config_sha256": "b497aaeac4d595c2938a632f6ac8dfe9bcc5c7a211de4dd84825b57f154136db",
+    "runner_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2",
+    "dataset_manifest_sha256": "920fe644ccaf366d1ff128a66e6ce3f044ce17831bc225105a32115f94917e52",
+    "builder_sha256": "8ce0da16ee41d2ea31039e5f39fd2c3ce05640520caf52d9ec3c13ae53b67cfc",
+    "changed": [
+      "control raster support",
+      "VACE mask",
+      "final projection alpha"
+    ],
+    "unchanged": [
+      "geometry",
+      "reference",
+      "prompt",
+      "negative_prompt",
+      "seed",
+      "model",
+      "runtime",
+      "steps",
+      "LoRA off",
+      "TTM off"
+    ],
+    "mask_stage_isolated_by_fresh_inference": false,
+    "final_alpha_isolated_by_same_raw_cpu_comparison": true
+  },
+  "coverage": {
+    "old_support_fraction": 0.16187722060723514,
+    "new_support_fraction": 0.1798565689599483,
+    "final_hold": {
+      "frame": 20,
+      "phase": "final_hold",
+      "stick_pixels": 4421,
+      "stick_outside_old_support": 1409,
+      "stick_below_full_alpha": 4421,
+      "mean_old_alpha_on_sticks": 47.274598507125084,
+      "total_render_pixels": 9299,
+      "render_outside_old_support": 1849
+    },
+    "swept_render_pixels": 35309,
+    "uncovered_render_pixels_after_fix": 0,
+    "full_margin_px": 8,
+    "feather_margin_px": 8,
+    "control_displacement_px": 150.314,
+    "generated_displacement_measured": false
+  },
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "physical_gpu": 5,
+    "started_at": "2026-09-08T06:54:59.821191+00:00",
+    "finished_at": "2026-09-08T07:07:40.893024+00:00",
+    "wall_time_seconds": 761.072,
+    "pipeline_load_count": 1,
+    "new_vace_inference_count": 1,
+    "frames": 21,
+    "seed": 1,
+    "steps": 20,
+    "vace_scale": 1,
+    "lora_enabled": false,
+    "enable_ttm": false,
+    "remote_root": "/host/space0/guo-z/tf-ufi/outputs/day18_swept_support_vace_gp40_20260908_v1",
+    "preflight_sha256": "daa42990b3b245ec0b05ae04dee9978ea3c81fd22f5d6c5717e5f9eb38bdcb3f",
+    "preflight_passed": true
+  },
+  "verification": {
+    "schema_version": "foodstateedit.high_lift_local_verification.v1",
+    "config_sha256": "b497aaeac4d595c2938a632f6ac8dfe9bcc5c7a211de4dd84825b57f154136db",
+    "run_manifest_sha256": "4af534b338d7b0df48e1f768700695be22e6fc2939d658db725b19b2f6e2221f",
+    "preflight_sha256": "daa42990b3b245ec0b05ae04dee9978ea3c81fd22f5d6c5717e5f9eb38bdcb3f",
+    "verified_artifacts": [
+      {
+        "name": "raw_video",
+        "path": "raw.mp4",
+        "size_bytes": 275879,
+        "sha256": "8c6ef1bea2df4c5a676997f2ebeb90ca8e92867f8aa0adcb3fefe8fdff1f1d45"
+      },
+      {
+        "name": "projected_video",
+        "path": "projected.mp4",
+        "size_bytes": 277300,
+        "sha256": "4f004be4fabb3ecc2e8de42beceb623126aeb9f34e3842e020d9be86239f28ca"
+      },
+      {
+        "name": "review",
+        "path": "projected_review.png",
+        "size_bytes": 4011560,
+        "sha256": "792144bfa982f43f1ab3d9a1299eff719a2fe00b81d24a09179a09b607d1d809"
+      },
+      {
+        "name": "final_hold",
+        "path": "projected_final_hold.png",
+        "size_bytes": 672973,
+        "sha256": "330e7e46f83b19acac2bb5e96652b8248c315d818ed3dfee6ec68d5d1bd93fa1"
+      },
+      {
+        "name": "stdout",
+        "path": "stdout.log",
+        "size_bytes": 4587,
+        "sha256": "84ce863b6cf935ea1001db1626db8e977947a5b0543a2041b046e5a3dfa0abdc"
+      },
+      {
+        "name": "stderr",
+        "path": "stderr.log",
+        "size_bytes": 4875,
+        "sha256": "2fd02a1633fcd86d4f5e56ab09117955d23ebcbafc7d99217be5272986c74a89"
+      }
+    ],
+    "verified_artifact_count": 6,
+    "mismatches": 0,
+    "preserved_day17_artifacts_reverified": 6,
+    "pipeline_load_count": 1,
+    "raw_frames": 21,
+    "projected_frames": 21,
+    "support_fraction": 0.1798565689599483,
+    "native_inside_support_mae_to_source": 15.415581722926515,
+    "native_outside_support_mae_to_source": 6.69603145056127,
+    "recomposited_inside_support_mae_to_source": 14.407868027369956,
+    "recomposited_outside_support_max_difference": 0,
+    "encoded_outside_support_mae_to_source": 3.897742698350674,
+    "encoded_outside_support_max_difference": 94,
+    "metric_limit": "pixel-change diagnostics only, not semantic quality or physical validity",
+    "visualization_limit": "agent technical review required; no automatic visual success",
+    "derived_from_old_raw_sha256": "7199ad64468d7af47ce72cccb58922f93fe2b3360c55e630d6b5ec76a927cc99",
+    "remote_output_directory_files_verified": 8,
+    "complete_marker_sha256": "9cf1b9ba0a119af4ad3852ed911047e84141e4aa6573d5b1a577daf60c2614f0",
+    "uploaded_dataset_files_verified": 12,
+    "uploaded_config_and_runner_files_verified": 2
+  },
+  "review": {
+    "reviewer": "Codex agent technical image inspection; not independent human review",
+    "reviewed_frames": [
+      0,
+      3,
+      6,
+      10,
+      15,
+      20
+    ],
+    "native_and_projected_reviewed": true,
+    "raised_utensil_visible_at_frames_15_and_20": true,
+    "handle_clipping_reduced_vs_day17_same_raw_new_alpha": true,
+    "elongated_strand_body_visible": true,
+    "two_distinct_stick_instances_at_pinch": "not_established",
+    "pinch_contact": "ambiguous",
+    "bowl_noodle_attachment": "ambiguous",
+    "photo_realism": "not_passed_soft_straight_strand_and_weak_contact_shading",
+    "strict_action_gate_passed": false,
+    "overall": "visible support/handle repair; incomplete action and photographic realism",
+    "causal_correction": "Day17 projected disappearance is not evidence of native VACE utensil deletion"
+  },
+  "decision": {
+    "repair_accepted_for_further_control_design": true,
+    "learned_improvement_established": false,
+    "novel_algorithmic_contribution_established": false,
+    "generalization_established": false,
+    "physical_correctness_established": false,
+    "blind_fork_allowed": false,
+    "balanced_expansion_allowed": false,
+    "automatic_execution_resumed": false,
+    "next_design": "Freeze a contact-visibility/two-stick-separation control ablation before any further inference; do not seed-shop"
+  },
+  "local_evidence": {
+    "run": "artifacts/day18_swept_support_vace_gp40_20260908_v1",
+    "input": "artifacts/day18_high_lift_swept_support_v1",
+    "derived": "artifacts/day18_support_result_verification_20260908_v1",
+    "previous": "artifacts/day17_high_lift_vace_gp38_20260907_v1"
+  },
+  "tests": {
+    "status": "passed",
+    "tests_run": 171,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "initial_full_suite_import_errors": 2,
+    "cause": "jsonschema absent from bundled Python; isolated local test dependency cache installed"
+  }
+}
