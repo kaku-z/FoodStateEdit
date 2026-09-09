@@ -1,5 +1,13 @@
 # FoodStateEdit paper release workspace
 
+The [Day 20 non-noodle results](results/DAY20_NON_NOODLE_RESULTS_20260909.md)
+complete six paired soup/rice/cake conditions, with 51 output files plus one
+preflight verified. The original Day 19 batch remains a preserved technical
+failure; only its missing cake relative-3D arm was recovered. These are
+multi-material prototypes, not clear 3D superiority or photorealism evidence.
+The [two-day presentation plan](results/FORMAL_PRESENTATION_PLAN_20260909.md)
+separates demonstrated engineering work from proposed creator/viewer benefits.
+
 The [Day 19 four-material pilot](results/DAY19_MULTIMATERIAL_LAUNCH_20260908.md)
 was launched on 2026-09-08: soup, fried rice, pre-cut cake and noodles, with
 two same-seed control arms each. This dated launch snapshot is not a completed

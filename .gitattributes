@@ -38,3 +38,7 @@ scripts/verify_high_lift_support_result.py -text
 scripts/build_multimaterial_pilot.py -text
 scripts/run_multimaterial_pilot.py -text
 configs/day19_multimaterial_pilot_v1.json -text
+scripts/run_multimaterial_recovery.py -text
+configs/day20_cake_recovery_v1.json -text
+results/day20*.json -text
+results/day20*.txt -text

@@ -1,0 +1,218 @@
+{
+  "schema_version": "foodstateedit.non_noodle_result.v1",
+  "date": "2026-09-09",
+  "status": "six_conditions_verified_and_agent_reviewed",
+  "cases": [
+    "soup",
+    "rice",
+    "cake"
+  ],
+  "conditions_count": 6,
+  "verified_remote_output_files": 51,
+  "verified_preflight_files": 1,
+  "original_batch_status": "technical_failure_preserved",
+  "original_error": "BrokenPipeError after writing fifth complete condition; original 8-arm batch remains incomplete.",
+  "recovery_only_condition": "cake__relative3d",
+  "recovery_gpu": 5,
+  "recovery_host": "gp40",
+  "recovery_start_utc": "2026-09-09T06:39:20.570041+00:00",
+  "recovery_end_utc": "2026-09-09T06:43:14.924119+00:00",
+  "recovery_wall_time_seconds": 234.354,
+  "pipeline_load_count_per_run": [
+    1,
+    1
+  ],
+  "technical_metrics": [
+    {
+      "condition": "soup__planar",
+      "frames": 21,
+      "size": [
+        688,
+        512
+      ],
+      "seed": 1,
+      "steps": 20,
+      "source_dataset_case": "soup",
+      "wall_time_seconds": 477,
+      "support_fraction": 0.17499489007994187,
+      "native_outside_mae": 10.25073540500242,
+      "preencode_outside_max": 0,
+      "encoded_outside_mae": 2.913643022447515,
+      "encoded_outside_max": 57,
+      "preencode_inside_mae": 18.168694858181095,
+      "final_sha256": "95f0c5e909bb168c9fb2c300f5c6fba50fe811c599dddb3a2d3a4cecef361cc7",
+      "metrics_note": "Pixel changes are diagnostics, not semantic scores. Exact outside preservation is imposed by projection.",
+      "root": "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1"
+    },
+    {
+      "condition": "soup__relative3d",
+      "frames": 21,
+      "size": [
+        688,
+        512
+      ],
+      "seed": 1,
+      "steps": 20,
+      "source_dataset_case": "soup",
+      "wall_time_seconds": 235.172,
+      "support_fraction": 0.17499489007994187,
+      "native_outside_mae": 10.25440138330477,
+      "preencode_outside_max": 0,
+      "encoded_outside_mae": 2.9149557921326563,
+      "encoded_outside_max": 57,
+      "preencode_inside_mae": 18.780476368150556,
+      "final_sha256": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854",
+      "metrics_note": "Pixel changes are diagnostics, not semantic scores. Exact outside preservation is imposed by projection.",
+      "root": "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1"
+    },
+    {
+      "condition": "rice__planar",
+      "frames": 21,
+      "size": [
+        688,
+        512
+      ],
+      "seed": 1,
+      "steps": 20,
+      "source_dataset_case": "rice",
+      "wall_time_seconds": 234.193,
+      "support_fraction": 0.23211244095203487,
+      "native_outside_mae": 7.826932704123611,
+      "preencode_outside_max": 0,
+      "encoded_outside_mae": 3.7239796540813574,
+      "encoded_outside_max": 55,
+      "preencode_inside_mae": 17.22352932954305,
+      "final_sha256": "b115b3f5dd15a7e9bfb159cf877a2189a47aed8a957c957a1648278c894a38b4",
+      "metrics_note": "Pixel changes are diagnostics, not semantic scores. Exact outside preservation is imposed by projection.",
+      "root": "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1"
+    },
+    {
+      "condition": "rice__relative3d",
+      "frames": 21,
+      "size": [
+        688,
+        512
+      ],
+      "seed": 1,
+      "steps": 20,
+      "source_dataset_case": "rice",
+      "wall_time_seconds": 236.364,
+      "support_fraction": 0.23211244095203487,
+      "native_outside_mae": 7.868828339834983,
+      "preencode_outside_max": 0,
+      "encoded_outside_mae": 3.724031587473525,
+      "encoded_outside_max": 55,
+      "preencode_inside_mae": 17.375820242361343,
+      "final_sha256": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3",
+      "metrics_note": "Pixel changes are diagnostics, not semantic scores. Exact outside preservation is imposed by projection.",
+      "root": "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1"
+    },
+    {
+      "condition": "cake__planar",
+      "frames": 21,
+      "size": [
+        688,
+        512
+      ],
+      "seed": 1,
+      "steps": 20,
+      "source_dataset_case": "cake",
+      "wall_time_seconds": 235.396,
+      "support_fraction": 0.18947583575581395,
+      "native_outside_mae": 10.75385862079241,
+      "preencode_outside_max": 0,
+      "encoded_outside_mae": 3.129846542463175,
+      "encoded_outside_max": 48,
+      "preencode_inside_mae": 19.996007488456247,
+      "final_sha256": "f5f44ae9a1b4124b8c8adafff9d0dfdba8bed6500faa4e53c688069399b6188b",
+      "metrics_note": "Pixel changes are diagnostics, not semantic scores. Exact outside preservation is imposed by projection.",
+      "root": "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1"
+    },
+    {
+      "condition": "cake__relative3d",
+      "frames": 21,
+      "size": [
+        688,
+        512
+      ],
+      "seed": 1,
+      "steps": 20,
+      "source_dataset_case": "cake",
+      "wall_time_seconds": 213.505,
+      "support_fraction": 0.18947583575581395,
+      "native_outside_mae": 10.703835370998222,
+      "preencode_outside_max": 0,
+      "encoded_outside_mae": 3.1303197107996907,
+      "encoded_outside_max": 48,
+      "preencode_inside_mae": 19.952662530512224,
+      "final_sha256": "3d4dcead955ef5aebb7171687c8ee6bbabf57e58dac28465da3d348673711b73",
+      "metrics_note": "Pixel changes are diagnostics, not semantic scores. Exact outside preservation is imposed by projection.",
+      "root": "artifacts\\day20_cake_recovery_gp40_20260909_v1"
+    }
+  ],
+  "visual_review": {
+    "reviewer": "assistant visual inspection, not independent human evaluation",
+    "frames": [
+      0,
+      3,
+      6,
+      10,
+      15,
+      20
+    ],
+    "categories": {
+      "soup": {
+        "action": "partial",
+        "contact_payload": "partial",
+        "material": "partial",
+        "source_update": "no_visible_crater_not_conservation_proof",
+        "photo": "fail",
+        "clear_3d_gain": false,
+        "notes": "Both arms show one spoon holding soup; spoon rim and handle retain hard procedural edges and liquid looks flat. No clear semantic advantage."
+      },
+      "rice": {
+        "action": "partial",
+        "contact_payload": "partial",
+        "material": "partial",
+        "source_update": "unestablished",
+        "photo": "fail",
+        "clear_3d_gain": false,
+        "notes": "A grain/ingredient patch follows a blade-like utensil. Blade is rectangular/outline-like, support shadow weak and corresponding source reduction is not clear. 3D changes the blade outline but no clear semantic advantage."
+      },
+      "cake": {
+        "action": "partial",
+        "contact_payload": "unestablished",
+        "material": "partial",
+        "source_update": "partial",
+        "photo": "partial",
+        "clear_3d_gain": false,
+        "notes": "A single pre-cut bite and a corresponding gap are visible in both arms. Fork tines/contact are not unambiguous; 3D bite turns/scales but does not clearly improve semantics. Synthetic input; no intact-cake cutting claim."
+      }
+    }
+  },
+  "tests": {
+    "count": 180,
+    "passed": 180,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "claims": {
+    "multi_material_prototype_demonstrated": true,
+    "stable_3d_advantage_established": false,
+    "new_diffusion_algorithm_established": false,
+    "learned_efficacy_established": false,
+    "generalization_established": false,
+    "physical_correctness_established": false,
+    "photorealism_pass_all": false,
+    "societal_benefit_measured": false,
+    "automatic_execution_resumed": false
+  },
+  "figure_hashes": {
+    "cake_comparison.png": "2a02c5f26fa66e919fa262e166882548628a1dfba4f24a92b78bfdb9d88d7872",
+    "non_noodle_comparison.png": "cfb51c1036e516a9f5860780534eb5ec9e85c62e9420bed64410c9e3c2e5a399",
+    "rice_comparison.png": "3c5189d5349c2566212ba1aa95a8eacf1591e08a1eb95678d6728897dca430d1",
+    "soup_comparison.png": "9fbff4f7a77dfd1723f1d16d9b4169035d797e28a1ba3975f356e7b9a74469d9"
+  },
+  "plan_pdf": "output/pdf/FoodStateEdit_presentation_plan_20260909_v2.pdf"
+}

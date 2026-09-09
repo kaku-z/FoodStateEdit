@@ -6,6 +6,21 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-09 Day 20 non-noodle presentation results
+
+- six paired soup/rice/cake conditions are complete and locally verified;
+- the original Day 19 eight-condition batch remains a preserved BrokenPipeError
+  failure after five conditions; only cake relative3d was recovered, no noodles;
+- 51 output files and one preflight match remote hashes; each video has 21
+  decoded frames, and each separate run loaded one pipeline;
+- fixed-frame review finds identifiable action prototypes, but hard utensil
+  boundaries, ambiguous support and source updates persist; no clear 3D gain;
+- real previously-used soup/rice and synthetic cake are reported separately;
+- 180 tests pass; two-day plan distinguishes contributions and potential social
+  value; no public image upload and no automatic heartbeat reactivation.
+
+Result: [DAY20_NON_NOODLE_RESULTS_20260909.md](DAY20_NON_NOODLE_RESULTS_20260909.md).
+
 ## 2026-09-08 Day 17/18 high-lift support repair
 
 - Day 17 raised the specified pinch displacement from 64.181 to 150.314 px;

@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-09-09 — Day 20 non-noodle recovery and presentation plan
+
+- preserved the original five-complete-condition BrokenPipeError batch and
+  recovered only the missing cake relative3d arm with the frozen inference budget;
+- completed six non-noodle conditions, verified 51 output files plus preflight,
+  and reconstructed final PNGs exactly from stored raw videos and edit alpha;
+- composed labelled fixed-frame comparisons without retouching and documented
+  material-specific limitations rather than claiming clear 3D superiority;
+- added restricted-recovery regression tests; all 180 tests pass;
+- wrote and visually checked a five-page presentation plan PDF, with Markdown
+  source, concrete creator/viewer use cases, a two-day schedule and claim limits;
+- retained input rights restrictions and left automatic execution paused.
+
 ## 2026-09-08 — Day 19 four-material pilot launch
 
 - generated and disclosed one cake input (not an experimental output), reused
