@@ -1,5 +1,11 @@
 # FoodStateEdit paper release workspace
 
+The [2026-09-12 post-outage gp40 Day 11 reproduction](results/day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z/REVIEW.md)
+completed both frozen seen-synthetic checkpoint sweeps and verified all 45
+downloaded files against the remote hashes. It reproduces the negative gate:
+`0/2` clear semantic gains and `0/2` clear photo-realism gains. Balanced
+expansion and blind-fork evaluation remain blocked.
+
 The [Day 20 non-noodle results](results/DAY20_NON_NOODLE_RESULTS_20260909.md)
 complete six paired soup/rice/cake conditions, with 51 output files plus one
 preflight verified. The original Day 19 batch remains a preserved technical

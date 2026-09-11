@@ -26,6 +26,18 @@ EVIDENCE_ROOT = (
     / "day11_phase_action_checkpoint_sweep_gp39_retry_v2_20260901T1119Z"
 )
 RESULT = ROOT / "results" / "day11_phase_action_checkpoint_sweep_result_v1.json"
+GP40_RERUN_ROOT = (
+    ROOT
+    / "artifacts"
+    / "day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z"
+)
+GP40_EVIDENCE_ROOT = (
+    ROOT
+    / "results"
+    / "day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z"
+)
+GP40_RESULT = GP40_EVIDENCE_ROOT / "result.json"
+GP40_DERIVED_CONFIG = GP40_EVIDENCE_ROOT / "derived_config.json"
 
 
 def sha256_file(path: Path) -> str:
@@ -205,6 +217,95 @@ class Day11PhaseActionCheckpointSweepTests(unittest.TestCase):
         for filename in ("udon_runner_preflight.json", "spoon_runner_preflight.json"):
             preflight = json.loads((EVIDENCE_ROOT / filename).read_text(encoding="utf-8"))
             self.assertTrue(preflight["ready"])
+
+    def test_gp40_post_outage_config_changes_only_output_base(self):
+        original = json.loads(CONFIG.read_text(encoding="utf-8"))
+        derived = json.loads(GP40_DERIVED_CONFIG.read_text(encoding="utf-8"))
+        self.assertEqual(
+            sha256_file(GP40_DERIVED_CONFIG),
+            "a1547a977d0f12c80d0a18da806f095b4c8fea201a80b2975c3f5821a5d023e8",
+        )
+        self.assertNotEqual(derived["output_base"], original["output_base"])
+        derived["output_base"] = original["output_base"]
+        self.assertEqual(derived, original)
+
+    def test_gp40_post_outage_rerun_is_complete_and_hash_verified(self):
+        result = json.loads(GP40_RESULT.read_text(encoding="utf-8"))
+        expected_conditions = [
+            "lora_off",
+            "step_16",
+            "step_32",
+            "step_48",
+            "step_64",
+        ]
+        self.assertEqual(result["execution"]["physical_gpu"], 4)
+        self.assertEqual(result["execution"]["gpu_name"], "NVIDIA RTX A6000")
+        self.assertEqual(result["execution"]["downloaded_files_verified"], 45)
+        self.assertEqual(result["execution"]["local_remote_sha256_mismatch_count"], 0)
+        for sample in result["samples"]:
+            sample_root = GP40_RERUN_ROOT / sample["sample_id"]
+            manifest_path = sample_root / "run_manifest.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            self.assertEqual(sample["run_manifest_sha256"], sha256_file(manifest_path))
+            self.assertEqual(
+                manifest["status"],
+                "complete_requires_seen_phase_action_and_photo_review",
+            )
+            self.assertEqual(manifest["pipeline_load_count"], 1)
+            self.assertEqual(list(manifest["conditions"]), expected_conditions)
+            self.assertTrue((sample_root / "COMPLETE").is_file())
+            self.assertFalse((sample_root / "RUNNING").exists())
+            self.assertFalse((sample_root / "FAILED").exists())
+            for condition in manifest["conditions"].values():
+                self.assertEqual(condition["decoded_frames"], 21)
+                self.assertEqual(condition["outside_support_max_pixel_difference"], 0)
+            for condition_name, expected_hash in sample["contact_sheet_sha256"].items():
+                self.assertEqual(
+                    sha256_file(sample_root / f"{condition_name}_projected_review.png"),
+                    expected_hash,
+                )
+            self.assertEqual(len(manifest["outputs"]), 18)
+            for record in manifest["outputs"]:
+                local_output = sample_root / Path(record["path"]).name
+                self.assertGreater(local_output.stat().st_size, 0)
+                self.assertEqual(local_output.stat().st_size, record["size_bytes"])
+                self.assertEqual(sha256_file(local_output), record["sha256"])
+
+    def test_gp40_post_outage_review_keeps_positive_gate_closed(self):
+        result = json.loads(GP40_RESULT.read_text(encoding="utf-8"))
+        self.assertEqual(result["aggregate"]["technical_complete"], 2)
+        self.assertEqual(result["aggregate"]["technical_failure"], 0)
+        self.assertEqual(
+            result["aggregate"]["samples_with_clear_phase_action_contact_improvement"],
+            0,
+        )
+        self.assertEqual(
+            result["aggregate"]["samples_with_clear_photo_realism_improvement"],
+            0,
+        )
+        self.assertFalse(result["aggregate"]["clear_seen_semantic_gain"])
+        self.assertFalse(result["decision"]["seen_synthetic_overfit_capacity_gate_passed"])
+        self.assertFalse(result["decision"]["balanced_multifamily_expansion_allowed"])
+        self.assertFalse(result["decision"]["blind_fork_evaluation_allowed"])
+        self.assertFalse(result["decision"]["generalization_claim_allowed"])
+
+    def test_gp40_post_outage_preflights_are_ready_and_hashed(self):
+        result = json.loads(GP40_RESULT.read_text(encoding="utf-8"))
+        expected = {
+            "udon_standalone_preflight_sha256": "udon_gpu4_standalone_preflight.json",
+            "udon_runner_preflight_sha256": "udon_gpu4_runner_preflight.json",
+            "spoon_standalone_preflight_sha256": "spoon_gpu4_standalone_preflight.json",
+            "spoon_runner_preflight_sha256": "spoon_gpu4_runner_preflight.json",
+            "derived_config_sha256": "derived_config.json",
+        }
+        for key, filename in expected.items():
+            path = GP40_EVIDENCE_ROOT / filename
+            self.assertEqual(result["evidence"][key], sha256_file(path))
+            if "preflight" in filename:
+                preflight = json.loads(path.read_text(encoding="utf-8"))
+                self.assertTrue(preflight["ready"])
+                self.assertEqual(preflight["selected_gpu"], 4)
+                self.assertTrue(all(check["passed"] for check in preflight["checks"]))
 
 
 if __name__ == "__main__":

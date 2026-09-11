@@ -74,3 +74,21 @@ or paper-level photo realism. Because both samples failed the clear semantic
 gain gate, no balanced expansion is frozen and no blind fork evaluation is
 launched. Machine-readable evidence is in
 `results/day11_phase_action_checkpoint_sweep_result_v1.json`.
+
+## 2026-09-12 post-outage gp40 reproduction
+
+The frozen sweep was restored after gp40 `/tmp` loss and rerun serially on
+physical GPU4 under a new output root. All 35 restored dataset/runtime/checkpoint
+files were verified before launch; both independent and runner preflights passed.
+The two samples completed all ten conditions with one pipeline load per sample,
+21 frames per condition, and zero outside-support pixel change. All 45 files
+pulled back from gp40 matched their remote SHA-256.
+
+The reproduction preserves the same scientific decision but is not claimed to
+be byte-identical to the 2026-09-01 gp39 run. Udon again selects step 64 by
+support MAE without a clearer pinch or lift. Broth again selects step 16 without
+a clearer transfer; garnish remains in the bowl while also appearing in the
+spoon, and later checkpoints reduce spoon realism. Manual review is therefore
+`0/2` for clear semantic gain and `0/2` for clear photo-realism gain. Balanced
+expansion and blind-fork evaluation remain blocked. Full evidence is in
+[the gp40 reproduction review](day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z/REVIEW.md).

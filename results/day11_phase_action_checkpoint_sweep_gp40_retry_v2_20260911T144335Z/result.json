@@ -1,0 +1,111 @@
+{
+  "schema_version": "foodstateedit.day11_phase_action_checkpoint_sweep_result.v1",
+  "review_date": "2026-09-12",
+  "scientific_status": "closed_seen_synthetic_overfit_checkpoint_diagnostic_no_clear_semantic_gain_not_generalization",
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "physical_gpu": 4,
+    "gpu_name": "NVIDIA RTX A6000",
+    "original_frozen_config_sha256": "e27b558c00760841a9d87155f246339b94edd57ee911eee04bc0d250c4b22671",
+    "derived_config_sha256": "a1547a977d0f12c80d0a18da806f095b4c8fea201a80b2975c3f5821a5d023e8",
+    "runner_sha256": "334f4f79f013c43a2d46c95835012272eeb4618fd4263f7c13947f0ca66b837e",
+    "conditions": ["lora_off", "step_16", "step_32", "step_48", "step_64"],
+    "seed": 1,
+    "decoded_frames_per_condition": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "ttm_enabled": false,
+    "pipeline_load_count_per_sample": 1,
+    "outside_support_max_pixel_difference": 0,
+    "downloaded_files_verified": 45,
+    "local_remote_sha256_mismatch_count": 0,
+    "model_downloaded": false
+  },
+  "evidence": {
+    "artifact_root": "artifacts/day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z",
+    "supporting_result_root": "results/day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z",
+    "derived_config_sha256": "a1547a977d0f12c80d0a18da806f095b4c8fea201a80b2975c3f5821a5d023e8",
+    "udon_standalone_preflight_sha256": "7f47fefb1c3363686154be310cc451c611ca4384c9e32875cb1d3eba29451215",
+    "udon_runner_preflight_sha256": "fb7a3e8d2c95db7d39e212a66456fbe083d04a4bd6bc08cd7356ebd111c48a4d",
+    "spoon_standalone_preflight_sha256": "a545726d083033bcf493babb5c94891f5bdeb37ffff342eca41aebeab2958d0f",
+    "spoon_runner_preflight_sha256": "522983c6f18a898f030da01858f3388cdb6712c7ab01bf65754649ac061f14ed"
+  },
+  "samples": [
+    {
+      "sample_id": "udon_chopsticks_imagegen_pseudo_v1",
+      "family": "strand",
+      "run_manifest_sha256": "e1eeb79ae5e32eeb0ff09571ba010489b9f08a72b57f709e5bc718bc3d746ec7",
+      "wall_time_seconds": 2074.926,
+      "best_condition_by_target_support_mae": "step_64",
+      "target_inside_support_mae": {
+        "lora_off": 13.651067314948843,
+        "step_16": 13.49423870145616,
+        "step_32": 12.683294362171992,
+        "step_48": 12.134132303999802,
+        "step_64": 11.999780276880822
+      },
+      "contact_sheet_sha256": {
+        "lora_off": "ab18dd7b02a2db1fc0c748c2823531d43b28d78dddaa3bbe41c5860ed34eb8c6",
+        "step_16": "63008ccf284bfd886cbcb3a268b73be979252ee733a86e81999701a8b4e442a2",
+        "step_32": "e1e9da99121566660852ab03ff2d4188e03c20588ca0531510913c1b4b5b69a2",
+        "step_48": "f01151ded978a6a87a7b83bf5ff1cfbffccb3b1bdcd83a636bb8f2f2fea4856b",
+        "step_64": "027501ca0738885984613ef495305682c4d530ea1b828dc0d53658dc71958f84"
+      },
+      "phase_action_contact_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "The five conditions are visually nearly indistinguishable. Lower support MAE does not yield a clearer pinch, payload acquisition, bowl-connected lift, or stable high-lift hold."
+      },
+      "photo_realism_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "The chopstick/noodle contact remains soft and composited; no checkpoint clearly improves photographic appearance over LoRA-off."
+      }
+    },
+    {
+      "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+      "family": "liquid",
+      "run_manifest_sha256": "99352f6c7b1bb770e19aca0fbaa495a87f78b82831ed572217c41bae998fa60f",
+      "wall_time_seconds": 2125.202,
+      "best_condition_by_target_support_mae": "step_16",
+      "target_inside_support_mae": {
+        "lora_off": 21.235547481755436,
+        "step_16": 20.957444255751575,
+        "step_32": 21.325960890920225,
+        "step_48": 25.78955645365845,
+        "step_64": 23.892769036976556
+      },
+      "contact_sheet_sha256": {
+        "lora_off": "7038af7ee547fb77a73926815e3baa3399a11aec1b2ab8b8a35a8298a0cb8a13",
+        "step_16": "50bd00b50e6ed28bfb2b173378bbb9caee642d820fe89fbd54e1e2ac981d8f77",
+        "step_32": "1e69a92a3fd9a36edc2bd32ea57769ba8fb7100759832562b585ee22a7c72b6d",
+        "step_48": "6c44c891a43ecd5ae393eb445103b9c881bdb5dca013561b8bf9d8a9b100129b",
+        "step_64": "549f522eb71ab950c50e5d6295eedb1247db4366fa9cd3d4f096a4c11166a263"
+      },
+      "phase_action_contact_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "Step 16 is visually nearly the same as LoRA-off. Two scallion rings remain in the bowl while two also appear in the spoon, indicating duplication rather than a conserved transfer."
+      },
+      "photo_realism_review": {
+        "clear_improvement_over_lora_off": false,
+        "diagnostic": "Step 16 does not clearly improve realism; steps 48 and 64 add a pale spoon-bowl rim and reduce the metallic appearance."
+      }
+    }
+  ],
+  "aggregate": {
+    "technical_complete": 2,
+    "technical_failure": 0,
+    "samples_with_a_numerically_better_checkpoint": 2,
+    "samples_with_clear_phase_action_contact_improvement": 0,
+    "samples_with_clear_photo_realism_improvement": 0,
+    "clear_seen_semantic_gain": false
+  },
+  "decision": {
+    "seen_synthetic_overfit_capacity_gate_passed": false,
+    "balanced_multifamily_expansion_allowed": false,
+    "blind_fork_evaluation_allowed": false,
+    "generalization_claim_allowed": false,
+    "real_data_performance_claim_allowed": false,
+    "physical_correctness_claim_allowed": false,
+    "paper_level_photo_realism_claim_allowed": false,
+    "next_step": "Revise the supervision or model interface under a newly frozen bounded diagnostic; do not expand families or run another blind fork from this result."
+  }
+}

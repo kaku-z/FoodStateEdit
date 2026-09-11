@@ -34,3 +34,13 @@ step 64 and broth's was step 16, but contact-sheet review found `0/2` clear
 phase-action/contact improvements and `0/2` clear photo-realism improvements.
 The seen synthetic overfit-capacity gate is closed negative; balanced expansion
 and another blind fork run remain prohibited.
+
+Post-outage reproduction note (2026-09-12): the frozen assets were restored to
+gp40 after `/tmp` loss and all 35 upload files were byte-verified. A new output
+root and new preflight reports were used on idle RTX A6000 GPU4. Both samples
+completed serially across all five conditions with one pipeline load, 21 frames,
+and exact outside-support preservation. All 45 pulled files matched their remote
+SHA-256. Manual review again found `0/2` clear phase-action/contact gains and
+`0/2` clear photo-realism gains, including a broth/spoon conservation failure
+where garnish remained in the bowl while also appearing in the spoon. The
+negative gate is reproduced; no balanced expansion or blind fork is authorized.

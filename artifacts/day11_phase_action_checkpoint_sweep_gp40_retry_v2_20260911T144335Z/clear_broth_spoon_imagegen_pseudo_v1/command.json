@@ -1,0 +1,24 @@
+{
+  "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+  "conditions": [
+    "lora_off",
+    "step_16",
+    "step_32",
+    "step_48",
+    "step_64"
+  ],
+  "seed": 1,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "vace_scale": 1.0,
+  "enable_ttm": false,
+  "review_frame_indices": [
+    0,
+    3,
+    6,
+    10,
+    15,
+    20
+  ],
+  "cuda_visible_devices": "4"
+}

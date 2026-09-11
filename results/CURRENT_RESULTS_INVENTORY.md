@@ -6,6 +6,22 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-12 Day 11 post-outage gp40 reproduction
+
+- restored the frozen dataset, runtime and LoRA checkpoints after `/tmp` was
+  cleared, then byte-verified all 35 restored files before inference;
+- admitted only idle gp40 RTX A6000 GPU 4 after fail-closed host/GPU preflight;
+- completed both samples serially, five conditions each, with one pipeline load,
+  21 frames, seed 1 and zero outside-support pixel change;
+- verified all 45 downloaded artifact/evidence files against remote SHA-256;
+- manual contact-sheet review found `0/2` clear semantic improvements and `0/2`
+  clear photo-realism improvements; the spoon output duplicates garnish instead
+  of demonstrating conserved transfer;
+- reproduced the earlier negative decision without claiming bit-identical
+  outputs. Balanced expansion and blind-fork evaluation remain blocked.
+
+Result: [day11 gp40 reproduction review](day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z/REVIEW.md).
+
 ## 2026-09-09 Day 20 non-noodle presentation results
 
 - six paired soup/rice/cake conditions are complete and locally verified;

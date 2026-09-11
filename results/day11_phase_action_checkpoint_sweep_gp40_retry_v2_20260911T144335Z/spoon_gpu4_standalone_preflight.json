@@ -1,0 +1,509 @@
+{
+  "schema_version": "foodstateedit.phase_action_checkpoint_sweep_preflight.v1",
+  "ready": true,
+  "sample_id": "clear_broth_spoon_imagegen_pseudo_v1",
+  "selected_gpu": 4,
+  "config_sha256": "a1547a977d0f12c80d0a18da806f095b4c8fea201a80b2975c3f5821a5d023e8",
+  "checks": [
+    {
+      "id": "method",
+      "passed": true,
+      "actual": "vace_phase_action_checkpoint_sweep_v1",
+      "criterion": "vace_phase_action_checkpoint_sweep_v1"
+    },
+    {
+      "id": "scientific_status",
+      "passed": true,
+      "actual": "seen_phase_overfit_capacity_diagnostic_not_generalization",
+      "criterion": "seen_phase_overfit_capacity_diagnostic_not_generalization"
+    },
+    {
+      "id": "claim_limit",
+      "passed": true,
+      "actual": "This seen-sample synthetic pseudo-motion sweep can test overfit capacity only. It cannot establish held-out generalization, real-data performance, physical motion validity, or photo realism.",
+      "criterion": "No generalization or realism claim."
+    },
+    {
+      "id": "sample_id",
+      "passed": true,
+      "actual": "clear_broth_spoon_imagegen_pseudo_v1",
+      "criterion": "One of ['clear_broth_spoon_imagegen_pseudo_v1', 'udon_chopsticks_imagegen_pseudo_v1']"
+    },
+    {
+      "id": "dataset_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day11_phase_action_overfit_dataset_v1",
+      "criterion": "/tmp/foodstateedit_day11_phase_action_overfit_dataset_v1"
+    },
+    {
+      "id": "output_root",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day11_phase_action_checkpoint_sweep_v2_20260911T144335Z/clear_broth_spoon_imagegen_pseudo_v1",
+      "criterion": "/tmp/foodstateedit_day11_phase_action_checkpoint_sweep_v2_20260911T144335Z/clear_broth_spoon_imagegen_pseudo_v1"
+    },
+    {
+      "id": "output_absent",
+      "passed": true,
+      "actual": "/tmp/foodstateedit_day11_phase_action_checkpoint_sweep_v2_20260911T144335Z/clear_broth_spoon_imagegen_pseudo_v1",
+      "criterion": "Output root must not exist."
+    },
+    {
+      "id": "launcher_hash:preflight",
+      "passed": true,
+      "actual": "2150d3353bb08a770cf3cbf1ffcb4c4724c4b63e905d1420ba032e02573b1c33",
+      "criterion": "2150d3353bb08a770cf3cbf1ffcb4c4724c4b63e905d1420ba032e02573b1c33"
+    },
+    {
+      "id": "launcher_hash:runner",
+      "passed": true,
+      "actual": "334f4f79f013c43a2d46c95835012272eeb4618fd4263f7c13947f0ca66b837e",
+      "criterion": "334f4f79f013c43a2d46c95835012272eeb4618fd4263f7c13947f0ca66b837e"
+    },
+    {
+      "id": "dependency_hash:preflight_vace_fork_3d_compare.py",
+      "passed": true,
+      "actual": "e20523c526d6e7b503ad787e39c33da4af47af8d56274c1d5aa02f90b4412b52",
+      "criterion": "e20523c526d6e7b503ad787e39c33da4af47af8d56274c1d5aa02f90b4412b52"
+    },
+    {
+      "id": "dependency_hash:run_vace_fork_3d_compare.py",
+      "passed": true,
+      "actual": "c247301ba4744c398de0e821b26ac14f7f29ab6d14a88d2c4607d4b5f2908202",
+      "criterion": "c247301ba4744c398de0e821b26ac14f7f29ab6d14a88d2c4607d4b5f2908202"
+    },
+    {
+      "id": "dependency_hash:run_vace_fork_action_lora_eval.py",
+      "passed": true,
+      "actual": "9403a7b35f03528028cc0101e0c7691af60c45bf95211332a78eb530acaf2be8",
+      "criterion": "9403a7b35f03528028cc0101e0c7691af60c45bf95211332a78eb530acaf2be8"
+    },
+    {
+      "id": "dependency_hash:run_vace_fork_action_lora_eval_v2.py",
+      "passed": true,
+      "actual": "0af6a45ba1d8046288b7647291b82846f183b4b9a060e9629409f30c9c7bc209",
+      "criterion": "0af6a45ba1d8046288b7647291b82846f183b4b9a060e9629409f30c9c7bc209"
+    },
+    {
+      "id": "dataset_manifest_hash",
+      "passed": true,
+      "actual": "b7458dcdd5ec84bb44e8e67212c83680c90b97256a389d755d7c828f29e2bcde",
+      "criterion": "b7458dcdd5ec84bb44e8e67212c83680c90b97256a389d755d7c828f29e2bcde"
+    },
+    {
+      "id": "dataset_contract",
+      "passed": true,
+      "actual": {
+        "sample_count": 2,
+        "motion_policy": "translated_audited_final_patch_pseudo_motion_not_physical_ground_truth",
+        "held_out": {
+          "family": "fork_twirl_and_lift",
+          "anchor": "pasta_fork_001",
+          "training_occurrences": 0
+        }
+      },
+      "criterion": "Two pseudo-motion samples with zero fork training occurrences."
+    },
+    {
+      "id": "phase_schedule_size",
+      "passed": true,
+      "actual": 2163,
+      "criterion": "2163"
+    },
+    {
+      "id": "phase_schedule_hash",
+      "passed": true,
+      "actual": "e4bf5538f4e066a29acb79e3ad511680fd8b1770b2616d3c1eec774485a1adc0",
+      "criterion": "e4bf5538f4e066a29acb79e3ad511680fd8b1770b2616d3c1eec774485a1adc0"
+    },
+    {
+      "id": "seen_training_sample",
+      "passed": true,
+      "actual": "train_overfit_sanity_only",
+      "criterion": "train_overfit_sanity_only"
+    },
+    {
+      "id": "sample_prompt",
+      "passed": true,
+      "actual": "A photorealistic close-up food photograph of the same bowl of clear golden broth. Exactly one connected stainless-steel spoon scoops and contains visible broth and one scallion ring; two scallion rings remain in the bowl. Physical rim occlusion, metal reflection, and contact shadow. No hand and no other utensil.",
+      "criterion": "Frozen sample prompt"
+    },
+    {
+      "id": "sample_prompt_hash",
+      "passed": true,
+      "actual": "644f721125c72f48847746e4ac252bb13e04d9936804bcd553bee1f3adb0342c",
+      "criterion": "644f721125c72f48847746e4ac252bb13e04d9936804bcd553bee1f3adb0342c"
+    },
+    {
+      "id": "manifest_record:reference",
+      "passed": true,
+      "actual": {
+        "path": "vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png",
+        "size_bytes": 621173,
+        "sha256": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c"
+      },
+      "criterion": "{'path': 'vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png', 'size_bytes': 621173, 'sha256': '8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c'}"
+    },
+    {
+      "id": "sample_size:reference",
+      "passed": true,
+      "actual": 621173,
+      "criterion": "621173"
+    },
+    {
+      "id": "sample_hash:reference",
+      "passed": true,
+      "actual": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c",
+      "criterion": "8ef8b111c431495b2cbad6191cb06f7002b2aff081551ec57e0a1ff8b4c0e78c"
+    },
+    {
+      "id": "manifest_record:control",
+      "passed": true,
+      "actual": {
+        "path": "vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+        "size_bytes": 201109,
+        "sha256": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"
+      },
+      "criterion": "{'path': 'vace_video/clear_broth_spoon_imagegen_pseudo_v1.mp4', 'size_bytes': 201109, 'sha256': 'a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698'}"
+    },
+    {
+      "id": "sample_size:control",
+      "passed": true,
+      "actual": 201109,
+      "criterion": "201109"
+    },
+    {
+      "id": "sample_hash:control",
+      "passed": true,
+      "actual": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698",
+      "criterion": "a6837146ddca3c5133362166df7539bb8037fcad3e8fd1aa66709cc4ed5b4698"
+    },
+    {
+      "id": "manifest_record:alpha",
+      "passed": true,
+      "actual": {
+        "path": "edit_alpha/clear_broth_spoon_imagegen_pseudo_v1.png",
+        "size_bytes": 8192,
+        "sha256": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86"
+      },
+      "criterion": "{'path': 'edit_alpha/clear_broth_spoon_imagegen_pseudo_v1.png', 'size_bytes': 8192, 'sha256': 'f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86'}"
+    },
+    {
+      "id": "sample_size:alpha",
+      "passed": true,
+      "actual": 8192,
+      "criterion": "8192"
+    },
+    {
+      "id": "sample_hash:alpha",
+      "passed": true,
+      "actual": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86",
+      "criterion": "f07302ad7947b41cde7496c7b455b804741b10b9e44555c3bfa2f3f1747dcb86"
+    },
+    {
+      "id": "manifest_record:target_video",
+      "passed": true,
+      "actual": {
+        "path": "video/clear_broth_spoon_imagegen_pseudo_v1.mp4",
+        "size_bytes": 205219,
+        "sha256": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3"
+      },
+      "criterion": "{'path': 'video/clear_broth_spoon_imagegen_pseudo_v1.mp4', 'size_bytes': 205219, 'sha256': 'a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3'}"
+    },
+    {
+      "id": "sample_size:target_video",
+      "passed": true,
+      "actual": 205219,
+      "criterion": "205219"
+    },
+    {
+      "id": "sample_hash:target_video",
+      "passed": true,
+      "actual": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3",
+      "criterion": "a43f2ab794ba67ff1153f59bed74698cf87fcf8dbdd5d671a752826a41789de3"
+    },
+    {
+      "id": "manifest_record:target_keyframe",
+      "passed": true,
+      "actual": {
+        "path": "target_keyframe/clear_broth_spoon_imagegen_pseudo_v1.png",
+        "size_bytes": 635289,
+        "sha256": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf"
+      },
+      "criterion": "{'path': 'target_keyframe/clear_broth_spoon_imagegen_pseudo_v1.png', 'size_bytes': 635289, 'sha256': 'f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf'}"
+    },
+    {
+      "id": "sample_size:target_keyframe",
+      "passed": true,
+      "actual": 635289,
+      "criterion": "635289"
+    },
+    {
+      "id": "sample_hash:target_keyframe",
+      "passed": true,
+      "actual": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf",
+      "criterion": "f08b2a65f90b7f883eded4ac1077f35413af40125b5b90f9e58abe6a0e3582bf"
+    },
+    {
+      "id": "training_manifest:size",
+      "passed": true,
+      "actual": 2628,
+      "criterion": "2628"
+    },
+    {
+      "id": "training_manifest:sha256",
+      "passed": true,
+      "actual": "b0e983845bc11635ade6bb410ff171c15cd87fac991c7fa0d2fb01f2b24d7f06",
+      "criterion": "b0e983845bc11635ade6bb410ff171c15cd87fac991c7fa0d2fb01f2b24d7f06"
+    },
+    {
+      "id": "training_status",
+      "passed": true,
+      "actual": "complete_requires_seen_phase_checkpoint_sweep",
+      "criterion": "complete_requires_seen_phase_checkpoint_sweep"
+    },
+    {
+      "id": "condition_order",
+      "passed": true,
+      "actual": [
+        "lora_off",
+        "step_16",
+        "step_32",
+        "step_48",
+        "step_64"
+      ],
+      "criterion": "Frozen five-condition sweep"
+    },
+    {
+      "id": "checkpoint:step_16:size",
+      "passed": true,
+      "actual": 15354160,
+      "criterion": "15354160"
+    },
+    {
+      "id": "checkpoint:step_16:sha256",
+      "passed": true,
+      "actual": "b11253ae53c79e7779e07cffafad472bd88c04816f28e338b126716f66cb9b55",
+      "criterion": "b11253ae53c79e7779e07cffafad472bd88c04816f28e338b126716f66cb9b55"
+    },
+    {
+      "id": "training_manifest_checkpoint:step_16",
+      "passed": true,
+      "actual": {
+        "path": "step-16.safetensors",
+        "size_bytes": 15354160,
+        "sha256": "b11253ae53c79e7779e07cffafad472bd88c04816f28e338b126716f66cb9b55"
+      },
+      "criterion": "b11253ae53c79e7779e07cffafad472bd88c04816f28e338b126716f66cb9b55"
+    },
+    {
+      "id": "checkpoint:step_32:size",
+      "passed": true,
+      "actual": 15354160,
+      "criterion": "15354160"
+    },
+    {
+      "id": "checkpoint:step_32:sha256",
+      "passed": true,
+      "actual": "b33abb222f5210c749fd438d5f01b5f9750c6841ecb5a1f83230c5fec7180e34",
+      "criterion": "b33abb222f5210c749fd438d5f01b5f9750c6841ecb5a1f83230c5fec7180e34"
+    },
+    {
+      "id": "training_manifest_checkpoint:step_32",
+      "passed": true,
+      "actual": {
+        "path": "step-32.safetensors",
+        "size_bytes": 15354160,
+        "sha256": "b33abb222f5210c749fd438d5f01b5f9750c6841ecb5a1f83230c5fec7180e34"
+      },
+      "criterion": "b33abb222f5210c749fd438d5f01b5f9750c6841ecb5a1f83230c5fec7180e34"
+    },
+    {
+      "id": "checkpoint:step_48:size",
+      "passed": true,
+      "actual": 15354160,
+      "criterion": "15354160"
+    },
+    {
+      "id": "checkpoint:step_48:sha256",
+      "passed": true,
+      "actual": "2bbbb5eea47c634b5c35cc5357a13627837ca02414d7f3bb7ddf5b21badc09f2",
+      "criterion": "2bbbb5eea47c634b5c35cc5357a13627837ca02414d7f3bb7ddf5b21badc09f2"
+    },
+    {
+      "id": "training_manifest_checkpoint:step_48",
+      "passed": true,
+      "actual": {
+        "path": "step-48.safetensors",
+        "size_bytes": 15354160,
+        "sha256": "2bbbb5eea47c634b5c35cc5357a13627837ca02414d7f3bb7ddf5b21badc09f2"
+      },
+      "criterion": "2bbbb5eea47c634b5c35cc5357a13627837ca02414d7f3bb7ddf5b21badc09f2"
+    },
+    {
+      "id": "checkpoint:step_64:size",
+      "passed": true,
+      "actual": 15354160,
+      "criterion": "15354160"
+    },
+    {
+      "id": "checkpoint:step_64:sha256",
+      "passed": true,
+      "actual": "fb1f149520e10bf80bcd0795d88ae22589ffc87a9556c0b0af796ff07d5e6b2e",
+      "criterion": "fb1f149520e10bf80bcd0795d88ae22589ffc87a9556c0b0af796ff07d5e6b2e"
+    },
+    {
+      "id": "training_manifest_checkpoint:step_64",
+      "passed": true,
+      "actual": {
+        "path": "step-64.safetensors",
+        "size_bytes": 15354160,
+        "sha256": "fb1f149520e10bf80bcd0795d88ae22589ffc87a9556c0b0af796ff07d5e6b2e"
+      },
+      "criterion": "fb1f149520e10bf80bcd0795d88ae22589ffc87a9556c0b0af796ff07d5e6b2e"
+    },
+    {
+      "id": "step64_validation:size",
+      "passed": true,
+      "actual": 26792,
+      "criterion": "26792"
+    },
+    {
+      "id": "step64_validation:sha256",
+      "passed": true,
+      "actual": "f50453c505706f7c3bd83c80c5e8a835ff71b8c1bf029f65b1f36a50aa3809e9",
+      "criterion": "f50453c505706f7c3bd83c80c5e8a835ff71b8c1bf029f65b1f36a50aa3809e9"
+    },
+    {
+      "id": "validation_status",
+      "passed": true,
+      "actual": "complete",
+      "criterion": "complete"
+    },
+    {
+      "id": "validation_updated_tensors",
+      "passed": true,
+      "actual": 80,
+      "criterion": "80"
+    },
+    {
+      "id": "runtime_hash:geoedit/inference.py",
+      "passed": true,
+      "actual": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "criterion": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1"
+    },
+    {
+      "id": "runtime_hash:diffsynth/pipelines/wan_video.py",
+      "passed": true,
+      "actual": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "criterion": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5"
+    },
+    {
+      "id": "runtime_hash:diffsynth/utils/data/__init__.py",
+      "passed": true,
+      "actual": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "criterion": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360"
+    },
+    {
+      "id": "runtime_hash:tests/test_masks.py",
+      "passed": true,
+      "actual": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421",
+      "criterion": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    {
+      "id": "model_audit_hash",
+      "passed": true,
+      "actual": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b",
+      "criterion": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    {
+      "id": "model_size:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_audited_hash:high_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "model_size:low_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": 34675325000,
+      "criterion": "34675325000"
+    },
+    {
+      "id": "model_audited_hash:low_noise_model/diffusion_pytorch_model.safetensors",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "model_size:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": 11361920418,
+      "criterion": "11361920418"
+    },
+    {
+      "id": "model_audited_hash:models_t5_umt5-xxl-enc-bf16.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "model_size:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": 507609880,
+      "criterion": "507609880"
+    },
+    {
+      "id": "model_audited_hash:Wan2.1_VAE.pth",
+      "passed": true,
+      "actual": true,
+      "criterion": "Hash occurs in frozen audit."
+    },
+    {
+      "id": "runtime_import",
+      "passed": true,
+      "actual": {
+        "return_code": 0,
+        "stderr": "/host/home/yanai-lab/Sotsuken24/guo-z/.conda/envs/sam3_env/lib/python3.12/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.\n  warnings.warn(\n"
+      },
+      "criterion": "Frozen runtime imports offline."
+    },
+    {
+      "id": "system_memory",
+      "passed": true,
+      "actual": 249496,
+      "criterion": ">=80000 MiB"
+    },
+    {
+      "id": "gpu_gate",
+      "passed": true,
+      "actual": {
+        "requested": 4,
+        "selected": {
+          "index": 4,
+          "uuid": "GPU-a2db3d45-9099-3005-38a3-f4fe71404ee1",
+          "name": "NVIDIA RTX A6000",
+          "memory_total_mib": 49140,
+          "memory_used_mib": 1,
+          "memory_free_mib": 48539,
+          "utilization_percent": 0,
+          "compute_processes": []
+        },
+        "processes": [
+          {
+            "gpu_index": 1,
+            "pid": 527594,
+            "owner": "xiong-p",
+            "process_name": ".venv/bin/python",
+            "used_memory_mib": 20764
+          }
+        ]
+      },
+      "criterion": "Requested conflict-free A6000 satisfies the frozen gate."
+    }
+  ]
+}

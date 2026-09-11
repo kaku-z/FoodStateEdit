@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-09-12 — Day 11 post-outage gp40 reproduction
+
+- restored and byte-verified the frozen dataset, runtime and LoRA checkpoints
+  after server `/tmp` loss, without downloading models or overwriting old runs;
+- passed independent and runner preflights on idle gp40 RTX A6000 GPU 4 and ran
+  the two frozen samples serially under a new output root;
+- completed all ten conditions with one pipeline load per sample, 21 frames per
+  condition and exact outside-support preservation;
+- rehashed all 45 downloaded files against remote evidence with zero mismatch;
+- retained the negative capacity decision after contact/action and photo review:
+  `0/2` clear semantic gains and `0/2` clear photo-realism gains;
+- kept balanced multi-family expansion and blind-fork evaluation prohibited.
+
 ## 2026-09-09 — Day 20 non-noodle recovery and presentation plan
 
 - preserved the original five-complete-condition BrokenPipeError batch and
