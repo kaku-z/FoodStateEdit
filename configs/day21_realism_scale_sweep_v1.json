@@ -1,0 +1,105 @@
+{
+  "schema_version": "foodstateedit.realism_scale_sweep.v1",
+  "freeze_date": "2026-09-12",
+  "execution_allowed": true,
+  "scientific_status": "matched_development_diagnostic_of_proxy_control_strength_not_generalization",
+  "causal_hypothesis": "The visibly graphic utensil boundaries in the existing outputs are partly caused by over-constraining VACE to a non-photographic raster proxy. Lowering only VACE control scale may let the frozen image prior improve local appearance while retaining the required action.",
+  "dataset_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3",
+  "dataset_manifest": {
+    "path": "dataset_manifest.json",
+    "size_bytes": 12156,
+    "sha256": "7a71eb2c63bf52cbe22705d1b1aceca028c045fd9fdf6328a8ed12b3a5e56078"
+  },
+  "cases": ["soup", "rice", "cake"],
+  "control_arm": "relative3d",
+  "existing_baseline": {
+    "vace_scale": 1.0,
+    "same_seed_and_inference_budget": true,
+    "condition_manifest_sha256": {
+      "soup": "586bbf3a1b9c1cee46fecae22d0b732f5caca1625eb3297d3c692656a8ba051c",
+      "rice": "9da457c0d9c1ee0ba73df616f5da43cf8fcce3d7fa083715a38fc22c491ce16b",
+      "cake": "e6c99e647a79a74005aa7e3a92752493e8e3759d782021fdb9db0d36dc7a197a"
+    },
+    "projected_final_hold_sha256": {
+      "soup": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854",
+      "rice": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3",
+      "cake": "3d4dcead955ef5aebb7171687c8ee6bbabf57e58dac28465da3d348673711b73"
+    }
+  },
+  "vace_scales": [0.6, 0.8],
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "enable_ttm": false,
+    "lora_enabled": false
+  },
+  "output_root_template": "/host/space0/guo-z/tf-ufi/outputs/day21_realism_scale_sweep_v1_{case_id}",
+  "cache_root": "/tmp/foodstateedit_day21_realism_scale_sweep_cache_v1",
+  "implementation": {
+    "runner_sha256": "41a9a283d1e72f361d36826d04c764240876ba690c79708139de3cfe0a1a70fd",
+    "dependency_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+      "size_bytes": 620,
+      "sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      "low_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"
+      },
+      "models_t5_umt5-xxl-enc-bf16.pth": {
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      "Wan2.1_VAE.pth": {
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    },
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "review_gate": {
+    "compare_against_existing_scale_1_baseline": true,
+    "require_action_retention": true,
+    "require_no_duplicate_payload": true,
+    "require_plausible_source_update": true,
+    "require_clear_boundary_or_material_improvement": true,
+    "uncertain_is_not_pass": true,
+    "no_automatic_best_frame_selection": true
+  },
+  "claim_limit": "A same-seed three-case development scale sweep can diagnose sensitivity to raster-control strength only. It cannot establish generalization, real-data performance, physical correctness, or paper-level photo realism."
+}

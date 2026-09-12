@@ -1,0 +1,106 @@
+{
+  "schema_version": "foodstateedit.realism_scale_sweep_verification.v1",
+  "status": "technically_verified_requires_manual_action_and_photo_review",
+  "cases": {
+    "soup": {
+      "run_manifest_sha256": "1b45bb59dc63841f80c0a447f1a47ee2fc93fb17841cf46219645fd1e606b87e",
+      "verified_remote_files": 18,
+      "pipeline_load_count": 1,
+      "diagnostics": {
+        "scale_1p0_existing_baseline": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 18.98452379021138,
+          "hard_support_changed_fraction": 0.9896265560165975,
+          "boundary_gradient_mean": 22.7919979095459,
+          "support_laplacian_variance": 191.71633911132812,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        },
+        "vace_scale_0p8": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 24.04025869387711,
+          "hard_support_changed_fraction": 0.9984876100360647,
+          "boundary_gradient_mean": 24.111316680908203,
+          "support_laplacian_variance": 193.3793487548828,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        },
+        "vace_scale_0p6": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 32.682732291852545,
+          "hard_support_changed_fraction": 0.999457090782177,
+          "boundary_gradient_mean": 27.07684898376465,
+          "support_laplacian_variance": 422.62005615234375,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        }
+      },
+      "comparison_figure_sha256": "a179f47f4fa4475e53d80f0aae58afa5e0537aacb4d12a3d478f992095a272cb",
+      "manual_review": null
+    },
+    "rice": {
+      "run_manifest_sha256": "9c58273dfb99f2e35903e2c435dcbf4e9ceac493a5e99da90ad27313d0ee7aa1",
+      "verified_remote_files": 18,
+      "pipeline_load_count": 1,
+      "diagnostics": {
+        "scale_1p0_existing_baseline": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 21.529742467049072,
+          "hard_support_changed_fraction": 0.9888963799722066,
+          "boundary_gradient_mean": 60.67671585083008,
+          "support_laplacian_variance": 444.30792236328125,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        },
+        "vace_scale_0p8": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 24.79266497886167,
+          "hard_support_changed_fraction": 0.9965739759765544,
+          "boundary_gradient_mean": 60.003299713134766,
+          "support_laplacian_variance": 397.2490234375,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        },
+        "vace_scale_0p6": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 48.01194509333888,
+          "hard_support_changed_fraction": 0.9983626632177107,
+          "boundary_gradient_mean": 60.70331954956055,
+          "support_laplacian_variance": 377.9361267089844,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        }
+      },
+      "comparison_figure_sha256": "dc780ebd1573010f5cf85d04cab3153f560881c26b4b0ea2ac3fadc205611792",
+      "manual_review": null
+    },
+    "cake": {
+      "run_manifest_sha256": "1a1605ae23382b90dd7a4c96846b846af929a878548c4ad1977de3df128f5532",
+      "verified_remote_files": 18,
+      "pipeline_load_count": 1,
+      "diagnostics": {
+        "scale_1p0_existing_baseline": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 30.09174857165688,
+          "hard_support_changed_fraction": 0.992015785723421,
+          "boundary_gradient_mean": 24.833465576171875,
+          "support_laplacian_variance": 174.4183349609375,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        },
+        "vace_scale_0p8": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 32.5536128091414,
+          "hard_support_changed_fraction": 0.9959987576051011,
+          "boundary_gradient_mean": 25.461488723754883,
+          "support_laplacian_variance": 307.060791015625,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        },
+        "vace_scale_0p6": {
+          "outside_support_max_pixel_difference": 0,
+          "inside_support_mae": 34.59290223340925,
+          "hard_support_changed_fraction": 0.9972776935304113,
+          "boundary_gradient_mean": 25.989795684814453,
+          "support_laplacian_variance": 449.17633056640625,
+          "metric_note": "Pixel/edge statistics diagnose preservation and texture only; they do not prove action, conservation, contact, or photo realism."
+        }
+      },
+      "comparison_figure_sha256": "1a284eb66236ba935fd3dd08ac507abea3bbb1a54a758970d117f72d44a855cc",
+      "manual_review": null
+    }
+  },
+  "claim_limit": "A same-seed three-case development scale sweep can diagnose sensitivity to raster-control strength only. It cannot establish generalization, real-data performance, physical correctness, or paper-level photo realism."
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "foodstateedit.cross_method_evaluation_status.v1",
+  "date": "2026-09-12",
+  "status": "development_cross_method_pilot_available_formal_strong_model_benchmark_missing",
+  "verification_status": "ANALYZED",
+  "overall_confidence": "CAUTION",
+  "comparison_set": {
+    "anchors": 4,
+    "anchor_ids": [
+      "soup_spoon_001",
+      "fried_rice_spatula_001",
+      "ramen_chopsticks_001",
+      "pasta_fork_001"
+    ],
+    "seed": 1,
+    "frames": 21,
+    "steps": 20,
+    "reviewer": "assistant internal non-blind diagnostic review",
+    "independent_human_review": false,
+    "held_out_test": false
+  },
+  "methods": {
+    "input_no_edit": {
+      "technical_complete": 4,
+      "exact_source_identity": 4,
+      "provisional_action_success": null,
+      "provisional_photo_success": null
+    },
+    "vanilla_geoedit": {
+      "technical_complete": 4,
+      "exact_outside_support": 4,
+      "provisional_action_success": 1,
+      "provisional_photo_success": 0
+    },
+    "geoedit_unified_action_mask": {
+      "technical_complete": 4,
+      "exact_outside_support": 4,
+      "provisional_action_success": 0,
+      "provisional_photo_success": 0
+    },
+    "foodstateedit_staged_exclusive": {
+      "technical_complete": 4,
+      "exact_outside_support": 4,
+      "provisional_action_success": 0,
+      "provisional_photo_success": 0
+    },
+    "vace_direct_static_proxy": {
+      "technical_complete": 4,
+      "exact_outside_support": 4,
+      "provisional_action_success": 0,
+      "provisional_photo_success": 0
+    },
+    "foodstateedit_dynamic_2d": {
+      "technical_complete": 4,
+      "exact_outside_support": 4,
+      "projected_provisional_action_success": 0,
+      "provisional_photo_success": 0,
+      "raw_topology_signal_cases": 1
+    }
+  },
+  "model_scope": {
+    "common_backbone": "Wan2.2-VACE-Fun-A14B",
+    "interpretation": "This compares control and projection methods around one shared generative backbone. It is not a leaderboard of independent foundation models.",
+    "actual_external_method_baseline_present": [
+      "Vanilla GeoEdit"
+    ],
+    "not_executed": {
+      "Qwen-Image-Edit": "No usable local weights were found in the audited runtime.",
+      "FLUX-Kontext": "No frozen local installation or result exists.",
+      "ChronoEdit": "No frozen local installation or result exists."
+    }
+  },
+  "latest_separate_diagnostics": {
+    "day20_planar_vs_relative3d": {
+      "cases": 3,
+      "clear_relative3d_semantic_gain": 0,
+      "strict_photo_pass": 0,
+      "note": "Cake was partial for photo appearance, not a strict pass."
+    },
+    "day21_vace_scale_sweep": {
+      "cases": 3,
+      "clear_final_image_photo_improvement": 2,
+      "strict_final_image_gate_pass": 1,
+      "temporal_action_gate_pass": 0,
+      "selected_positive_case": "cake at VACE scale 0.6"
+    }
+  },
+  "figure": {
+    "path": "artifacts/day21_cross_method_pilot_v1/cross_method_pilot_grid.png",
+    "sha256": "702e16dc7cb8bffaffed631272dfe6710131b4ea0e6a894234b4263a03a93347",
+    "manifest_path": "artifacts/day21_cross_method_pilot_v1/figure_manifest.json",
+    "manifest_sha256": "ce4fc4915f2b836c506796d03bee909af5015c747fbe15ce509a70c0edd0ce75",
+    "builder_path": "scripts/make_cross_method_pilot_grid.py",
+    "builder_sha256": "e1c7ebd501d121ee3627f8921a709381ebcd85889f59e18e1c2b3e22141eed71"
+  },
+  "statistical_interpretation": {
+    "descriptive_only": true,
+    "p_values_reported": false,
+    "effect_sizes_reported": false,
+    "confidence_intervals_reported": false,
+    "reason": "Four selected development anchors, one stochastic seed, adaptive method development, and one internal non-blind reviewer do not support inferential performance claims.",
+    "fallacy_scan_coverage": "11/11",
+    "highest_risks": [
+      "selected-anchor bias",
+      "look-elsewhere effect across iterative development",
+      "garden of forking paths",
+      "confusing exact projection with model preservation",
+      "promoting a one-case appearance gain into general effectiveness"
+    ]
+  },
+  "formal_benchmark_gate": {
+    "passed": false,
+    "missing": [
+      "same-input outputs from Qwen-Image-Edit, FLUX-Kontext, and ChronoEdit",
+      "three fixed seeds",
+      "held-out images per material",
+      "two or more independent blinded reviewers",
+      "frozen action/contact/conservation and photo-realism scoring protocol"
+    ]
+  },
+  "claim_limit": "The current evidence supports a reproducible same-input development comparison and failure analysis. It does not establish superiority over strong image-editing models, generalization, physical correctness, or paper-level photorealism."
+}

@@ -1,0 +1,44 @@
+{
+  "condition": "vace_scale_0p6",
+  "vace_scale": 0.6,
+  "status": "complete_requires_action_and_photo_review",
+  "seed": 1,
+  "frames": 21,
+  "steps": 20,
+  "lora_enabled": false,
+  "ttm_enabled": false,
+  "wall_time_seconds": 429.073,
+  "outside_support_max_pixel_difference": 0,
+  "files": {
+    "stdout.log": {
+      "path": "vace_scale_0p6/stdout.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "projected.mp4": {
+      "path": "vace_scale_0p6/projected.mp4",
+      "size_bytes": 177712,
+      "sha256": "4dd7ec9ec1e49c8704ffe727db9cd060c32ee6af38139710b9469461a88da43e"
+    },
+    "projected_final_hold.png": {
+      "path": "vace_scale_0p6/projected_final_hold.png",
+      "size_bytes": 553298,
+      "sha256": "ea0fab6a3d2712bd9e20689296d33f45bebeef62c934a8e88125043f83221dc6"
+    },
+    "stderr.log": {
+      "path": "vace_scale_0p6/stderr.log",
+      "size_bytes": 4879,
+      "sha256": "ef7c362ac1cd7297a3996bb0b086261a941ed70b10976b07bc4f4202c6a041de"
+    },
+    "raw.mp4": {
+      "path": "vace_scale_0p6/raw.mp4",
+      "size_bytes": 209073,
+      "sha256": "06e0801289b9bd876bc7bbc7a536770d3dd78d300ccd3e9ed043310e1b5b5eb8"
+    },
+    "projected_review.png": {
+      "path": "vace_scale_0p6/projected_review.png",
+      "size_bytes": 3269111,
+      "sha256": "c8bff2ba32e1b2df963d548349573108b495497ded36ba7dd7b075395ffb1f27"
+    }
+  }
+}

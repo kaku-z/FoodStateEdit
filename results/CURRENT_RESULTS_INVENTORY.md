@@ -6,6 +6,26 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-12 Day 21 realism and cross-method evaluation status
+
+- a matched scale-only diagnostic completed six new soup/rice/cake conditions;
+  all 54 remote output files were rehashed locally with zero mismatch;
+- lowering VACE scale improved final-image appearance clearly for rice and cake,
+  but only cake scale `0.6` passed the strict final-image gate and no case passed
+  the full temporal-action gate;
+- the result supports material-adaptive control strength with semantic rollback
+  as the next design, not a universal lower-scale setting;
+- the existing four-anchor single-seed GeoEdit/VACE/FoodStateEdit evidence was
+  consolidated into a hash-verified five-column grid and descriptive table;
+- Vanilla GeoEdit remains the only executed external-method baseline: its
+  internal pilot count is `1/4` provisional action and `0/4` photo success;
+- Qwen-Image-Edit, FLUX Kontext and ChronoEdit have no matched native outputs;
+  the strong-model, three-seed, held-out, independently blinded benchmark gate
+  remains failed.
+
+Results: [realism scale sweep](DAY21_REALISM_SCALE_SWEEP_RESULT_20260912.md) and
+[cross-method evaluation status](DAY21_CROSS_METHOD_EVALUATION_STATUS_20260912.md).
+
 ## 2026-09-12 Day 11 post-outage gp40 reproduction
 
 - restored the frozen dataset, runtime and LoRA checkpoints after `/tmp` was

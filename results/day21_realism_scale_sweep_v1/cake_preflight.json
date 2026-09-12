@@ -1,0 +1,24 @@
+{
+  "schema_version": "foodstateedit.high_lift_vace_preflight.v1",
+  "timestamp_utc": "2026-09-12T00:09:09.447323+00:00",
+  "gpu": {
+    "physical_index": 4,
+    "uuid": "GPU-a2db3d45-9099-3005-38a3-f4fe71404ee1",
+    "name": "NVIDIA RTX A6000",
+    "total_memory_mib": 49140,
+    "free_memory_mib": 48539,
+    "utilization_percent": 0,
+    "compute_processes": []
+  },
+  "host_available_memory_mib": 240295,
+  "checks": {
+    "output_root_absent": true,
+    "preflight_report_absent": true,
+    "gpu_name": true,
+    "gpu_free_memory": true,
+    "gpu_utilization": true,
+    "zero_compute_processes": true,
+    "host_available_memory": true
+  },
+  "passed": true
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "foodstateedit.realism_scale_sweep_run.v1",
+  "status": "complete_requires_matched_baseline_review",
+  "scientific_status": "matched_development_diagnostic_of_proxy_control_strength_not_generalization",
+  "claim_limit": "A same-seed three-case development scale sweep can diagnose sensitivity to raster-control strength only. It cannot establish generalization, real-data performance, physical correctness, or paper-level photo realism.",
+  "case_id": "rice",
+  "host": "gp38.cs.uec.ac.jp",
+  "physical_gpu": 7,
+  "gpu_uuid": "GPU-363dcfd6-5a06-90f5-440d-ff3628f5b80e",
+  "started_at": "2026-09-12T00:09:09.751441+00:00",
+  "config_sha256": "40bc00ad0dc046f7da21cdf9543419a5aa31edf91cf92f25833db7a3f435357d",
+  "runner_sha256": "41a9a283d1e72f361d36826d04c764240876ba690c79708139de3cfe0a1a70fd",
+  "preflight_sha256": "4b038c750b3a2c75f695b6568fd7319eeeb5249563295306af29dd888d2c6b08",
+  "pipeline_load_count": 1,
+  "expected_conditions": [
+    "vace_scale_0p6",
+    "vace_scale_0p8"
+  ],
+  "completed_conditions": [
+    {
+      "condition": "vace_scale_0p6",
+      "vace_scale": 0.6,
+      "status": "complete_requires_action_and_photo_review",
+      "seed": 1,
+      "frames": 21,
+      "steps": 20,
+      "lora_enabled": false,
+      "ttm_enabled": false,
+      "wall_time_seconds": 1035.077,
+      "outside_support_max_pixel_difference": 0,
+      "files": {
+        "stdout.log": {
+          "path": "vace_scale_0p6/stdout.log",
+          "size_bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "projected.mp4": {
+          "path": "vace_scale_0p6/projected.mp4",
+          "size_bytes": 227963,
+          "sha256": "5491555facdc4efa073c30f40980389387b71061546047d1af7f9df7aa1a4284"
+        },
+        "projected_final_hold.png": {
+          "path": "vace_scale_0p6/projected_final_hold.png",
+          "size_bytes": 613006,
+          "sha256": "f409524ba988f0c664b9f3e70869395b1d94e1a7073c8f88b52aad76f96cd929"
+        },
+        "stderr.log": {
+          "path": "vace_scale_0p6/stderr.log",
+          "size_bytes": 4954,
+          "sha256": "8d91a2a968d3dd631a1549e64466d5d6809f9aeae55cf8b905172d88765ccd43"
+        },
+        "raw.mp4": {
+          "path": "vace_scale_0p6/raw.mp4",
+          "size_bytes": 223213,
+          "sha256": "46f65d3ff4aa194844a7e04fb20e03b17b60fa96bca13d8d9be0e100b9ebb8dc"
+        },
+        "projected_review.png": {
+          "path": "vace_scale_0p6/projected_review.png",
+          "size_bytes": 3655609,
+          "sha256": "cbec95dd83ae6cfc440b2f56d2f3399017b8ad02c0abca6d3eb1c1937155ebeb"
+        }
+      }
+    },
+    {
+      "condition": "vace_scale_0p8",
+      "vace_scale": 0.8,
+      "status": "complete_requires_action_and_photo_review",
+      "seed": 1,
+      "frames": 21,
+      "steps": 20,
+      "lora_enabled": false,
+      "ttm_enabled": false,
+      "wall_time_seconds": 258.316,
+      "outside_support_max_pixel_difference": 0,
+      "files": {
+        "stderr.log": {
+          "path": "vace_scale_0p8/stderr.log",
+          "size_bytes": 4871,
+          "sha256": "1b3d9f208eea7bbec4a67ed36739bdaeb97d214b52f170282dccd6fbdb4bb602"
+        },
+        "raw.mp4": {
+          "path": "vace_scale_0p8/raw.mp4",
+          "size_bytes": 201380,
+          "sha256": "8a75ff9d48b5740c1f9965138c1004e1793106185a35d535dfb1118ba5955104"
+        },
+        "projected_review.png": {
+          "path": "vace_scale_0p8/projected_review.png",
+          "size_bytes": 3666409,
+          "sha256": "5da8ecfc492b91225f8070cde9a9ccb9b9f3d97456a54a72f6fcf1ea15e058af"
+        },
+        "stdout.log": {
+          "path": "vace_scale_0p8/stdout.log",
+          "size_bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "projected.mp4": {
+          "path": "vace_scale_0p8/projected.mp4",
+          "size_bytes": 223046,
+          "sha256": "77f86454e15c07b9d6602c81379b996296efe5484fe801bd2bb6549e38744a59"
+        },
+        "projected_final_hold.png": {
+          "path": "vace_scale_0p8/projected_final_hold.png",
+          "size_bytes": 616299,
+          "sha256": "c5e77c50d74a6e544542a2c96c68b433809cddaa1981bd1ae260ae88c62bf46c"
+        }
+      }
+    }
+  ],
+  "finished_at": "2026-09-12T00:34:17.173562+00:00",
+  "wall_time_seconds": 1507.422
+}

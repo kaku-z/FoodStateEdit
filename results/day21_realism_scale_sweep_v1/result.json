@@ -1,0 +1,102 @@
+{
+  "schema_version": "foodstateedit.realism_scale_sweep_result.v1",
+  "date": "2026-09-12",
+  "status": "technical_complete_one_of_three_final_image_gates_passed_temporal_gate_not_passed",
+  "scientific_status": "matched_development_diagnostic_of_proxy_control_strength_not_generalization",
+  "hypothesis": "A lower VACE control scale can reduce the graphic appearance induced by non-photographic raster proxies, but may also weaken action and utensil constraints.",
+  "execution": {
+    "new_conditions": 6,
+    "existing_matched_baselines_reused": 3,
+    "cases": ["soup", "rice", "cake"],
+    "vace_scales": [0.6, 0.8],
+    "existing_baseline_scale": 1.0,
+    "seed": 1,
+    "frames": 21,
+    "steps": 20,
+    "lora_enabled": false,
+    "ttm_enabled": false,
+    "pipeline_load_count_per_case": 1,
+    "new_output_files_verified_against_remote": 54,
+    "remote_sha256_mismatch_count": 0,
+    "outside_support_max_pixel_difference": 0,
+    "model_downloaded": false,
+    "process_preempted_or_terminated": false,
+    "workers": {
+      "soup": {"host": "gp38.cs.uec.ac.jp", "physical_gpu": 6, "wall_time_seconds": 1514.703},
+      "rice": {"host": "gp38.cs.uec.ac.jp", "physical_gpu": 7, "wall_time_seconds": 1507.422},
+      "cake": {"host": "gp40.cs.uec.ac.jp", "physical_gpu": 4, "wall_time_seconds": 732.868}
+    }
+  },
+  "evidence": {
+    "config_sha256": "40bc00ad0dc046f7da21cdf9543419a5aa31edf91cf92f25833db7a3f435357d",
+    "runner_sha256": "41a9a283d1e72f361d36826d04c764240876ba690c79708139de3cfe0a1a70fd",
+    "dependency_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2",
+    "verifier_sha256": "df3d6e7483c237a816e26e37435c44fcb624a5533b10aaff4e60f08a3f0ad5fd",
+    "verification_sha256": "4f1c514fd8e670bfd0471f2eebe83e1a32c169a570a1c511cc99731a7bba3b89",
+    "run_manifest_sha256": {
+      "soup": "1b45bb59dc63841f80c0a447f1a47ee2fc93fb17841cf46219645fd1e606b87e",
+      "rice": "9c58273dfb99f2e35903e2c435dcbf4e9ceac493a5e99da90ad27313d0ee7aa1",
+      "cake": "1a1605ae23382b90dd7a4c96846b846af929a878548c4ad1977de3df128f5532"
+    },
+    "preflight_sha256": {
+      "soup": "9ea2b3daaf2def78f5b55346e73ef4477b76fef66eedfbf792a6bafdfdc4a73a",
+      "rice": "4b038c750b3a2c75f695b6568fd7319eeeb5249563295306af29dd888d2c6b08",
+      "cake": "2d835efe927fae42819af896efeffedf28eed45bce4e17c43886722f5fe9ac83"
+    },
+    "remote_listing_sha256": {
+      "soup": "0617791e035013dbd782128a5832ee3ed58eb935879b08bfe5afd2a430294274",
+      "rice": "3d405641b6161e0685dc178b7cc6663865e373bc28ab1499ebc9b2d902d8ecd9",
+      "cake": "ad3850c6ebd1708940808d9719f868a88db70ea3aa0df7b2a531e2909d0b406a"
+    },
+    "comparison_figure_sha256": {
+      "soup": "a179f47f4fa4475e53d80f0aae58afa5e0537aacb4d12a3d478f992095a272cb",
+      "rice": "dc780ebd1573010f5cf85d04cab3153f560881c26b4b0ea2ac3fadc205611792",
+      "cake": "1a284eb66236ba935fd3dd08ac507abea3bbb1a54a758970d117f72d44a855cc"
+    }
+  },
+  "manual_review": {
+    "reviewer": "assistant visual inspection, not independent blinded human evaluation",
+    "fixed_frames": [0, 3, 6, 10, 15, 20],
+    "cases": {
+      "soup": {
+        "selected_scale_for_final_image": 1.0,
+        "clear_final_image_photo_improvement_at_lower_scale": false,
+        "strict_final_image_gate_passed_at_lower_scale": false,
+        "temporal_action_gate_passed_at_lower_scale": false,
+        "diagnostic": "Scale 0.8 remains visually close to the hard-rim baseline. Scale 0.6 adds detail but forms a hanging liquid blob or spill below the spoon, violating retained-liquid and no-spill requirements."
+      },
+      "rice": {
+        "selected_scale_for_final_image": 1.0,
+        "clear_final_image_photo_improvement_at_lower_scale": true,
+        "strict_final_image_gate_passed_at_lower_scale": false,
+        "temporal_action_gate_passed_at_lower_scale": false,
+        "diagnostic": "Scale 0.6 produces a more photographic metallic utensil and visible source reduction, but changes the serving spatula toward a spoon-like form and creates an oversized payload dominated by egg/vegetable pieces. The appearance gain is rejected by the task-semantic gate."
+      },
+      "cake": {
+        "selected_scale_for_final_image": 0.6,
+        "clear_final_image_photo_improvement_at_lower_scale": true,
+        "strict_final_image_gate_passed_at_lower_scale": true,
+        "temporal_action_gate_passed_at_lower_scale": false,
+        "diagnostic": "Scale 0.6 changes the thin ambiguous metal lines into an identifiable four-tined fork, improves fork/bite contact, retains one lifted pre-cut bite and a corresponding source gap, and is clearly more photographic at fixed frame 20. The fork appears too early in the sequence, so temporal phase correctness is not passed."
+      }
+    }
+  },
+  "aggregate": {
+    "cases_with_clear_final_image_photo_improvement": 2,
+    "cases_passing_strict_final_image_gate": 1,
+    "cases_passing_temporal_action_gate": 0,
+    "universally_safe_scale_found": false,
+    "material_adaptive_scale_supported_as_next_design": true
+  },
+  "decision": {
+    "adopt_scale_0p6_as_cake_final_image_candidate": true,
+    "adopt_lower_scale_for_soup": false,
+    "adopt_lower_scale_for_rice": false,
+    "replace_all_scale_1p0_results": false,
+    "run_blind_benchmark": false,
+    "generalization_claim_allowed": false,
+    "physical_correctness_claim_allowed": false,
+    "paper_level_photo_realism_claim_allowed": false,
+    "next_modification": "Use material-adaptive control strength with a semantic rollback gate: retain scale 0.6 for the cake final-image candidate, but revise soup liquid-retention and rice utensil/payload controls before any broader evaluation. Add an explicit frame-0 source constraint before claiming process validity."
+  }
+}

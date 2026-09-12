@@ -1,5 +1,24 @@
 # Change log
 
+## 2026-09-12 — Day 21 realism diagnosis and cross-method evidence consolidation
+
+- tested VACE scales `0.6` and `0.8` against the existing matched scale `1.0`
+  results for soup, rice and cake while holding source, relative-3D control,
+  prompt, seed and inference budget fixed;
+- completed six new conditions on safe RTX A6000 resources, with one pipeline
+  load per case, 21 frames per condition, 54 remotely rehashed files and zero
+  outside-support change before video encoding;
+- found clear final-image appearance improvement in `2/3` cases, but only cake
+  at scale `0.6` passed the strict final-image gate and `0/3` passed the full
+  temporal-action gate;
+- generated a hash-verified same-four-input pilot grid covering Vanilla
+  GeoEdit, union-mask GeoEdit, static VACE and dynamic-control FoodStateEdit;
+- consolidated descriptive action/photo counts and explicitly marked
+  Qwen-Image-Edit, FLUX Kontext and ChronoEdit as not executed rather than
+  fabricating missing comparison columns;
+- retained a failed formal-benchmark gate because the evidence has one seed,
+  selected development anchors and no independent blinded reviewers.
+
 ## 2026-09-12 — Day 11 post-outage gp40 reproduction
 
 - restored and byte-verified the frozen dataset, runtime and LoRA checkpoints

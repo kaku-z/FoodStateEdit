@@ -1,0 +1,171 @@
+{
+  "schema_version": "foodstateedit.cross_method_pilot_figure.v1",
+  "status": "complete_hash_verified_development_figure",
+  "rows": 4,
+  "columns": [
+    "input",
+    "vanilla_geoedit",
+    "geoedit_unified_action_mask",
+    "vace_direct_static_proxy",
+    "vace_direct_dynamic_multikey"
+  ],
+  "matched_factors": {
+    "inputs": 4,
+    "seed": 1,
+    "frames": 21,
+    "steps": 20
+  },
+  "review_scope": "internal_non_blind_development_pilot_not_foundation_model_leaderboard",
+  "records": [
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "input",
+      "source_path": "artifacts\\day2_anchor_sources_x4_v1\\soup_002.jpg",
+      "source_sha256": "6f633e7416d069c149fecfb37f5e67d7f4b568487788ee73cba75b4702d188e3",
+      "historical_first_frame_png_sha256": "92c064768c4b8f0dee95d92265cbdd48b95e97a39fa852594383532043b102f4",
+      "locally_resized_rgb_sha256": "56cb59baae0c37cf1ddb3a44ad702c9edf64c561352fd3b723ea96eb976c247f"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "vanilla_geoedit",
+      "path": "artifacts\\day3_vanilla_geoedit_smoke_v1\\soup_spoon_001_edited_2d.png",
+      "manifest": "artifacts\\day3_vanilla_geoedit_smoke_v1\\soup_spoon_001_run_manifest.json",
+      "sha256": "76864464166a643c1c1c481a121fd09158c57c96b278eb7bf7ccf835d705613b"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "geoedit_unified_action_mask",
+      "path": "artifacts\\day3_unified_geoedit_smoke_v1\\soup_spoon_001_edited_2d.png",
+      "manifest": "results\\day3_unified_geoedit_smoke_v1\\runs\\soup_spoon_001.json",
+      "sha256": "74a25268c5b7b6502d51373b4f4434c5d598649fe1cec3e2efaadba6ef791488"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "vace_direct_static_proxy",
+      "path": "artifacts\\day5_vace_direct_v1\\gpu0\\soup_spoon_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day5_vace_direct_v1\\gpu0\\soup_spoon_001\\seed_1\\run_manifest.json",
+      "sha256": "6ff1a2a02cf8d297834741cc628d32aad6d94a6e6c777c51128e80c79b6469a8"
+    },
+    {
+      "anchor_id": "soup_spoon_001",
+      "column": "vace_direct_dynamic_multikey",
+      "path": "artifacts\\day6_vace_dynamic_multikey_v1\\gpu0\\soup_spoon_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day6_vace_dynamic_multikey_v1\\gpu0\\soup_spoon_001\\seed_1\\run_manifest.json",
+      "sha256": "58692258dbb5b691d17ff498287a88b299c60b375b74baeef257bff7f857f085"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "input",
+      "source_path": "artifacts\\day2_anchor_sources_x4_v1\\rice_007.jpg",
+      "source_sha256": "60c6e0870bf35caf686db9bcdf636f2cdd302762d5902a4b5937214f5c5b88cc",
+      "historical_first_frame_png_sha256": "aa49b1b0e478e87c4951ec4e7abbc0b4fda7d4855681cfb420a6945eb38fc64f",
+      "locally_resized_rgb_sha256": "af03e79a26e193b5aacc6ba2ba3c068a510829e0c7adb31d2244ceb9936de194"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "vanilla_geoedit",
+      "path": "artifacts\\day3_vanilla_geoedit_smoke_v1\\fried_rice_spatula_001_edited_2d.png",
+      "manifest": "artifacts\\day3_vanilla_geoedit_smoke_v1\\fried_rice_spatula_001_run_manifest.json",
+      "sha256": "9016c35cf5540b440531f569e091409d4d5b11b26ce4f0730b89ce898dd4f7ea"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "geoedit_unified_action_mask",
+      "path": "artifacts\\day3_unified_geoedit_smoke_v1\\fried_rice_spatula_001_edited_2d.png",
+      "manifest": "results\\day3_unified_geoedit_smoke_v1\\runs\\fried_rice_spatula_001.json",
+      "sha256": "8607a01141a6e3fbcd8dcebf208783d9beb73ab4189ecaba7aa1fd45c7f07dfb"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "vace_direct_static_proxy",
+      "path": "artifacts\\day5_vace_direct_v1\\gpu0\\fried_rice_spatula_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day5_vace_direct_v1\\gpu0\\fried_rice_spatula_001\\seed_1\\run_manifest.json",
+      "sha256": "7f57a72a619efc4ee380722be2ae2e8a43087c99a7d43882945060b152eb963b"
+    },
+    {
+      "anchor_id": "fried_rice_spatula_001",
+      "column": "vace_direct_dynamic_multikey",
+      "path": "artifacts\\day6_vace_dynamic_multikey_v1\\gpu0\\fried_rice_spatula_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day6_vace_dynamic_multikey_v1\\gpu0\\fried_rice_spatula_001\\seed_1\\run_manifest.json",
+      "sha256": "55550cac1e3ddef3000f49043b00bc9f378708b06f4224ec02f91c5d763eade5"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "input",
+      "source_path": "artifacts\\day2_anchor_sources_x4_v1\\noodle_001.jpg",
+      "source_sha256": "44b4bc5461d6ac0d7a3a811859db4914e5cd0e29db14a66c12e2ec2a64ee89bf",
+      "historical_first_frame_png_sha256": "5009276c8f68a133a17a9694cfca304395d1afd9ac17b39e2a662016938a9011",
+      "locally_resized_rgb_sha256": "7c90445e8cd9e7dd87b996c10df26ce28dc173904ee522e932ea6807ebdb4388"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "vanilla_geoedit",
+      "path": "artifacts\\day3_vanilla_geoedit_smoke_v1\\ramen_chopsticks_001_edited_2d.png",
+      "manifest": "artifacts\\day3_vanilla_geoedit_smoke_v1\\ramen_chopsticks_001_run_manifest.json",
+      "sha256": "6d10ce299e7daee35fc3651760398be5a3218bfa0031a79cc739f7a8d5f46989"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "geoedit_unified_action_mask",
+      "path": "artifacts\\day3_unified_geoedit_smoke_v1\\ramen_chopsticks_001_edited_2d.png",
+      "manifest": "results\\day3_unified_geoedit_smoke_v1\\runs\\ramen_chopsticks_001.json",
+      "sha256": "c5433e407780ba1f75663f877effc217543a5ea89cf5425479270863119c6ca6"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "vace_direct_static_proxy",
+      "path": "artifacts\\day5_vace_direct_v1\\gpu1\\ramen_chopsticks_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day5_vace_direct_v1\\gpu1\\ramen_chopsticks_001\\seed_1\\run_manifest.json",
+      "sha256": "ac05281d2e30fe92aec50f4b82c3fd6e59b4090d9b99856ea636b7dc6ed6264d"
+    },
+    {
+      "anchor_id": "ramen_chopsticks_001",
+      "column": "vace_direct_dynamic_multikey",
+      "path": "artifacts\\day6_vace_dynamic_multikey_v1\\gpu1\\ramen_chopsticks_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day6_vace_dynamic_multikey_v1\\gpu1\\ramen_chopsticks_001\\seed_1\\run_manifest.json",
+      "sha256": "a012a0387ee9bfc4fe447da7794b4d9c2782d1ed0fcfb690ef9f63481427a49c"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "input",
+      "source_path": "artifacts\\day2_anchor_sources_x4_v1\\pasta_006.jpg",
+      "source_sha256": "9338301493ad89273ce5e881e5e45dac48eb5eb541b3809de9ebddde47b9a8a9",
+      "historical_first_frame_png_sha256": "a778938b0c77594761a936786f1893ff843a6b15e72a63ff824d1231cf5b610a",
+      "locally_resized_rgb_sha256": "8e296457e0c54efc2944b47bfd57c59707707dab8176bf5f22fc347d5353b886"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "vanilla_geoedit",
+      "path": "artifacts\\day3_vanilla_geoedit_smoke_v1\\pasta_fork_001_edited_2d.png",
+      "manifest": "artifacts\\day3_vanilla_geoedit_smoke_v1\\pasta_fork_001_run_manifest.json",
+      "sha256": "ef73bc1967eee550993ca24a34d5fcd8e7cf5dc9dad7755627db11db440f28fe"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "geoedit_unified_action_mask",
+      "path": "artifacts\\day3_unified_geoedit_smoke_v1\\pasta_fork_001_edited_2d.png",
+      "manifest": "results\\day3_unified_geoedit_smoke_v1\\runs\\pasta_fork_001.json",
+      "sha256": "89a61fcf3f4befe929093d98cfbff6d7589992e09bc926004443ec10da86321c"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "vace_direct_static_proxy",
+      "path": "artifacts\\day5_vace_direct_v1\\gpu1\\pasta_fork_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day5_vace_direct_v1\\gpu1\\pasta_fork_001\\seed_1\\run_manifest.json",
+      "sha256": "a0902755ecf6d062529ff32d00485c113e38d18638ebaed624766023ea86ad0c"
+    },
+    {
+      "anchor_id": "pasta_fork_001",
+      "column": "vace_direct_dynamic_multikey",
+      "path": "artifacts\\day6_vace_dynamic_multikey_v1\\gpu1\\pasta_fork_001\\seed_1\\edited_2d.png",
+      "manifest": "results\\day6_vace_dynamic_multikey_v1\\gpu1\\pasta_fork_001\\seed_1\\run_manifest.json",
+      "sha256": "8d9fd19d034e51e6afba8a66f7a5bc7d2a73752c7810111504228c1cb1950f63"
+    }
+  ],
+  "output": {
+    "path": "artifacts\\day21_cross_method_pilot_v1\\cross_method_pilot_grid.png",
+    "sha256": "702e16dc7cb8bffaffed631272dfe6710131b4ea0e6a894234b4263a03a93347",
+    "width": 1883,
+    "height": 1200
+  }
+}

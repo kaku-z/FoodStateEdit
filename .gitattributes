@@ -42,3 +42,11 @@ scripts/run_multimaterial_recovery.py -text
 configs/day20_cake_recovery_v1.json -text
 results/day20*.json -text
 results/day20*.txt -text
+configs/day21_realism_scale_sweep_v1.json -text
+scripts/run_realism_scale_sweep.py -text
+scripts/verify_realism_scale_sweep.py -text
+scripts/make_cross_method_pilot_grid.py -text
+results/day21_realism_scale_sweep_v1/** -text
+artifacts/day21_realism_scale_sweep_v1/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+artifacts/day21_realism_scale_sweep_review_v1/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+artifacts/day21_cross_method_pilot_v1/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

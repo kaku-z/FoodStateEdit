@@ -1,5 +1,19 @@
 # FoodStateEdit paper release workspace
 
+The [Day 21 realism-scale result](results/DAY21_REALISM_SCALE_SWEEP_RESULT_20260912.md)
+tests one controlled cause of the visibly graphic outputs: over-strong VACE
+following of a non-photographic proxy. Lower scale clearly improves the final
+appearance for rice and cake, but only cake at scale `0.6` passes the strict
+final-image gate and none of the three cases passes the full temporal-action
+gate. This is a material-specific development result, not a universal fix.
+
+The [cross-method comparison and evaluation status](results/DAY21_CROSS_METHOD_EVALUATION_STATUS_20260912.md)
+consolidates the existing four-anchor, single-seed GeoEdit/VACE/FoodStateEdit
+pilot and provides a hash-verified comparison grid. It also records the missing
+evidence explicitly: Qwen-Image-Edit, FLUX Kontext and ChronoEdit have not been
+executed on the matched inputs, and no independent blinded or held-out
+benchmark exists yet.
+
 The [2026-09-12 post-outage gp40 Day 11 reproduction](results/day11_phase_action_checkpoint_sweep_gp40_retry_v2_20260911T144335Z/REVIEW.md)
 completed both frozen seen-synthetic checkpoint sweeps and verified all 45
 downloaded files against the remote hashes. It reproduces the negative gate:
