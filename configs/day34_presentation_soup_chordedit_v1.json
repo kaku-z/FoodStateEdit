@@ -1,0 +1,57 @@
+{
+  "schema_version": "foodstateedit.chordedit_direct_baseline.v1",
+  "freeze_date": "2026-09-13",
+  "execution_allowed": true,
+  "scientific_status": "same_input_single_seed_presentation_comparison_not_held_out_effectiveness",
+  "case_order": ["ramen", "soup", "rice", "cake"],
+  "seeds": [1],
+  "cases": {
+    "soup": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day34_presentation_soup_same_input_dataset_v1/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day34_presentation_soup_same_input_dataset_v1/edit_alpha.png",
+      "input_sha256": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838",
+      "allowed_edit_region_sha256": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95",
+      "source_prompt": "the same close-up bowl of clear golden broth with three scallion rings and no utensil",
+      "target_prompt": "the same bowl of clear golden broth with exactly one realistic connected stainless-steel spoon scooping and holding visible broth and one scallion ring above the surface, while two scallion rings remain in the bowl, with natural reflection, rim occlusion and contact shadow, and no hand, spill, extra spoon or duplicate payload"
+    }
+  },
+  "inference": {
+    "image_size": 512,
+    "crop_padding_px": 32,
+    "noise_samples": 1,
+    "n_steps": 1,
+    "t_start": 0.95,
+    "t_end": 0.1,
+    "t_delta": 0.2,
+    "step_scale": 1.0
+  },
+  "backend": {
+    "project_root": "/host/space0/guo-z/chordedit_repro/ChordEdit",
+    "model_root": "/host/space0/guo-z/chordedit_repro/models/sd-turbo-fp16-prepared",
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "text_encoder/model.safetensors": {"size_bytes": 680820392, "sha256": "bc1827c465450322616f06dea41596eac7d493f4e95904dcb51f0fc745c4e13f"},
+      "unet/diffusion_pytorch_model.safetensors": {"size_bytes": 1731904736, "sha256": "40ec400881e27d1376c7c95c5bd495f407b33756e80eb6365e301c33a07af6e5"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 167335342, "sha256": "3e4c08995484ee61270175e9e7a072b66a6e4eeb5f0c266667fe1f45b90daf9a"}
+    }
+  },
+  "output_root_template": "/host/space0/guo-z/tf-ufi/outputs/day34_presentation_soup_same_input_baselines_v1/chordedit_{case_id}",
+  "preflight_template": "/host/space0/guo-z/tf-ufi/outputs/day34_presentation_soup_same_input_baselines_v1/chordedit_{case_id}_preflight.json",
+  "implementation": {
+    "runner_sha256": "7d1a977ab19384efa585c8a0024f7f6e169f2757e160a3d6b0003bb5246f87dc"
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "claim_limit": "One selected synthetic soup input and one seed for a presentation-matched comparison. This does not establish superiority, generalization, physical correctness, or human preference."
+}

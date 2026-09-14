@@ -6,6 +6,175 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-13 Day 25 completed four-case ablation
+
+- completed and verified all 47 new generation jobs and combined them with 13
+  hash-locked seed-1 cells into a complete 60-cell matrix;
+- rehashed 282 newly generated files with zero mismatch and confirmed one
+  pipeline load per case, 21 frames, 20 steps and exact protected pixels;
+- internal review supports the necessity of an explicit motion proxy over
+  native input but finds `0/4` clear relative3D-over-planar gains and `0/4`
+  clear material-adaptive-over-fixed gains;
+- kept held-out effectiveness locked and moved the question to the frozen
+  20-image Day 32 development pilot.
+
+Result: [Day 25 ablation result](DAY25_SAME_CONDITION_ABLATION_RESULT_20260913.md).
+Machine records: `day25_ablation_collection_verified_v1.json`,
+`day25_ablation_matrix_verified_v1.json`, and
+`day25_same_condition_ablation_result_v1.json`.
+
+## 2026-09-13 Day 32 material-policy pilot freeze and resource block
+
+- froze a four-shard, 20-image, three-seed development pilot with 210 unique
+  native/planar/fixed-relative3D/material-adaptive VACE generations;
+- verified the config, runner, dependency and Day 31 dataset hashes on gp39;
+- preserved a launch-time gp39 resource block and a later shared-path
+  fail-closed shard-a attempt; shard_b passed gp40 GPU1 preflight and entered
+  pipeline loading, while shard_a has no output and requires a new retry path;
+- kept the 40-image test split locked pending complete pilot evidence.
+
+Plan and resource record: [Day 32 material-policy pilot](DAY32_MATERIAL_POLICY_PILOT_PLAN_20260913.md).
+
+## 2026-09-13 Day 31 family-template control pilot
+
+- generated deterministic planar and relative-3D 21-frame controls for all 20
+  pilot images, balanced 5/5/5/5 across liquid, granular, strand and
+  strand-contact families, with no per-image parameter tuning;
+- copied and rehashed all 180 manifest-recorded files (88,384,357 bytes) with
+  zero mismatch and exact protected-pixel preservation;
+- internal review accepts the schematic geometry only as VACE intervention
+  input, not as a final image, target, annotation or effectiveness result;
+- kept all 40 held-out test images locked pending complete Day 25 review and a
+  frozen material-level VACE-scale rule.
+
+Result: [Day 31 control pilot](DAY31_FAMILY_TEMPLATE_CONTROLS_PILOT_20260913.md).
+Machine record: `day31_family_template_controls_pilot_v1.json`.
+
+## 2026-09-13 Day 25 v2 retry launch and Day 30 held-out readiness
+
+- gp40 GPUs 0/1 passed the resource gate and the new rice/cake v2 workers both
+  passed runner preflight and entered pipeline loading; this is launch evidence,
+  not completion evidence, and continuous polling was stopped as requested;
+- all 40 frozen real held-out canonical inputs are present on gp40 with 40/40
+  SHA-256 matches and the planned 10/10/10/10 family balance;
+- all 40 annotations remain pending, and the Day 25 review plus material-level
+  Ours rule are not yet complete, so no held-out output was generated.
+
+Results: [Day 30 held-out input readiness](DAY30_HELDOUT_INPUT_READINESS_20260913.md).
+Launch record: `day25_same_condition_ablation_v2_retry_launch_20260913.json`.
+
+## 2026-09-13 Day 25 rice/cake resource-preflight failure
+
+- existing ramen `15/15` and soup `10/10` Day 25 conditions are complete;
+- fresh rice/cake launches were safely blocked when another user occupied gp40
+  after the read-only audit but before runner preflight;
+- no rice/cake output root or model inference was created, no process was
+  disturbed, and all four failure-evidence hashes match locally;
+- v1 failure paths are preserved; any retry requires new versioned paths and an
+  explicit user decision.
+
+Result: [Day 25 gp40 resource failure](DAY25_SAME_CONDITION_ABLATION_GP40_RESOURCE_FAILURE_20260913.md).
+
+## 2026-09-13 Day 29 available-baseline statistics and blind-package start
+
+- the 12 ChordEdit and 12 Qwen development outputs were aggregated without
+  dropping failed seeds, using 10,000 percentile-bootstrap draws clustered by
+  the four source cases;
+- Qwen has internal non-blind rates `3/12` action, `12/12` photo, `0/12`
+  preservation and `0/12` strict end-to-end; ChordEdit has `0/12`, `1/12`,
+  `12/12` and `0/12`, respectively;
+- three independently shuffled 24-item final-image packages and blank ballots
+  are ready; the method mapping is stored separately and no independent reviewer
+  score has yet been collected;
+- the intervals are descriptive for four selected case clusters and are not
+  held-out or population-level inference;
+- gp38--gp42 were unreachable at the SSH banner stage, so the frozen Day 25
+  47-generation ablation did not start and the 40-image held-out set remains
+  correctly locked.
+
+Result: [Day 29 available-baseline statistics](DAY29_AVAILABLE_BASELINE_STATISTICS_20260913.md).
+
+## 2026-09-13 Day 28 Qwen utensil-only refinement diagnostic
+
+- one offline Qwen-Image-Edit-2511 pipeline generated one fixed-seed local
+  proposal for ramen chopsticks, soup spoon, fried-rice spatula and cake fork;
+- the run used a safe gp40 RTX A6000 and completed four candidates in 968.72
+  seconds with no download, retry, seed replacement or best-of selection;
+- all candidates were registered to protected crop pixels and composited only
+  inside frozen utensil masks; outside-support maximum difference is zero in
+  every case;
+- all 55 remote/output/runtime SHA-256 checks matched locally;
+- internal unblinded review found modest material improvement for ramen, soup
+  and cake, but not for rice; every case failed at least one frozen automatic
+  gate, so zero candidates were promoted and all formal finals rolled back;
+- this is a selected development diagnostic, not independent human evaluation
+  or evidence of held-out generalization, superiority or physical correctness.
+
+Result: [Day 28 Qwen utensil refinement](DAY28_QWEN_UTENSIL_REFINEMENT_RESULT_20260913.md).
+
+## 2026-09-12 Day 27 direct-input Qwen-Image-Edit baseline
+
+- the complete local Qwen-Image-Edit-2511 package ran offline on the same ramen,
+  soup, fried-rice and synthetic-cake development inputs, with seeds 1--3 and
+  one candidate per seed;
+- gp40 RTX A6000 GPU 6 passed all 28 resource and integrity checks; all 12
+  outputs completed in 2422.839 seconds with one pipeline load, no downloads,
+  no retries and no seed replacement;
+- all 62 remote output files and four supporting preflight/log/config/runner
+  files matched the downloaded SHA-256 values;
+- the full repository gate passed 220 tests, parsed 655 JSON files and verified
+  all frozen override hashes;
+- `raw_qwen.png` is the actual external-editor endpoint. Internal non-blind
+  counts are `3/12` Action Success, `12/12` Photo Success, `0/12` exact
+  Preservation Success and `0/12` Strict End-to-End Success;
+- source-space hard compositing after the global Qwen edit truncates long
+  utensils and creates seams because the edited frame is not registered to the
+  old mask. Those `final.png` files are retained only as a failed
+  post-processing diagnostic and receive no generator-preservation credit;
+- Qwen is no longer a missing named baseline. FLUX Kontext, ChronoEdit,
+  independent blinded evaluation and the held-out benchmark remain incomplete.
+
+Result: [Day 27 Qwen-Image-Edit direct-input baseline](DAY27_QWEN_IMAGE_EDIT_DIRECT_BASELINE_RESULT_20260912.md).
+
+## 2026-09-12 Day 26 direct-input ChordEdit baseline
+
+- the complete local ChordEdit/SD-Turbo package ran as a direct original-image
+  editor on the same ramen, soup, fried-rice and synthetic-cake inputs used by
+  the current ablation, with three frozen seeds and one candidate per seed;
+- gp40 RTX A6000 GPUs 2--5 passed fresh preflights; all 12 outputs completed
+  with one pipeline load per case and no downloads or seed replacement;
+- all 72 remote files matched their downloaded SHA-256 values, and every output
+  preserved pixels outside its declared support exactly;
+- internal non-blind diagnostic counts were `0/12` Action Success, `1/12`
+  Photo Success, `12/12` Preservation Success and `0/12` Strict End-to-End;
+- typical failures were missing/truncated/malformed utensils, unsupported food,
+  duplicated fork or chopstick fragments and local support-boundary artifacts;
+- this closes one available external-editor development baseline, not the full
+  strong-model comparison. The later Day 27 run adds Qwen-Image-Edit; FLUX
+  Kontext and ChronoEdit remain unavailable, and the held-out test remains
+  locked pending the frozen Ours rule.
+
+Result: [Day 26 ChordEdit direct-input baseline](DAY26_CHORDEDIT_DIRECT_BASELINE_RESULT_20260912.md).
+
+## 2026-09-12 Day 23/24 local refinement and matched soup ablation
+
+- the complete local ChordEdit/SD-Turbo weights were hash-audited and one
+  frozen soup-relative3D appearance candidate ran on an admitted gp40 A6000;
+- the candidate preserved every pixel outside its hard support and retained
+  edge cosine `0.8639`, but changed `99.9197%` of support pixels and generated
+  a second spoon-like object; both the automatic and semantic gates failed;
+- the rollback worked: the pre-refinement and final PNG share SHA-256
+  `324bf43f37316c615db203f855e505595d7b14adb743d731ebfccffad51b07b2`;
+- the matched native/planar/relative-3D soup review supports the need for an
+  explicit motion proxy in this one case because native input produced no
+  spoon, while both proxy arms did;
+- planar and relative-3D remained visually similar and neither passed photo
+  realism or clearly established source change, so no 3-D-over-2-D claim is
+  supported.
+
+Results: [local-refinement negative pilot](DAY23_GEOMETRY_LOCKED_CHORDEDIT_REFINEMENT_RESULT_20260912.md)
+and [matched soup ablation](DAY24_NATIVE_PLANAR_RELATIVE3D_SOUP_COMPARISON_20260912.md).
+
 ## 2026-09-12 Day 21 realism and cross-method evaluation status
 
 - a matched scale-only diagnostic completed six new soup/rice/cake conditions;
@@ -19,9 +188,9 @@ earlier pending-work statements.
   consolidated into a hash-verified five-column grid and descriptive table;
 - Vanilla GeoEdit remains the only executed external-method baseline: its
   internal pilot count is `1/4` provisional action and `0/4` photo success;
-- Qwen-Image-Edit, FLUX Kontext and ChronoEdit have no matched native outputs;
-  the strong-model, three-seed, held-out, independently blinded benchmark gate
-  remains failed.
+- this was the status before Day 27. Qwen-Image-Edit now has matched native
+  outputs; FLUX Kontext and ChronoEdit remain missing, and the held-out,
+  independently blinded benchmark gate remains failed.
 
 Results: [realism scale sweep](DAY21_REALISM_SCALE_SWEEP_RESULT_20260912.md) and
 [cross-method evaluation status](DAY21_CROSS_METHOD_EVALUATION_STATUS_20260912.md).

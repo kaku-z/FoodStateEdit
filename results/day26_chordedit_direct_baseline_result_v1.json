@@ -1,0 +1,63 @@
+{
+  "schema_version": "foodstateedit.chordedit_direct_baseline_result.v1",
+  "date": "2026-09-12",
+  "status": "executed_hash_verified_visual_negative",
+  "verification_status": "EXECUTED_HASH_VERIFIED_INTERNAL_NON_BLIND_REVIEW",
+  "method": "ChordEdit_SD_Turbo_direct_edit",
+  "scope": {
+    "cases": ["ramen", "soup", "rice", "cake"],
+    "real_cases": ["ramen", "soup", "rice"],
+    "synthetic_supplementary_cases": ["cake"],
+    "seeds": [1, 2, 3],
+    "outputs": 12,
+    "held_out": false,
+    "independent_blind_review": false
+  },
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "physical_gpu_by_case": {"ramen": 2, "soup": 3, "rice": 4, "cake": 5},
+    "gpu_name": "NVIDIA RTX A6000",
+    "preflights_passed": 4,
+    "pipeline_load_count_per_case": {"ramen": 1, "soup": 1, "rice": 1, "cake": 1},
+    "completed_outputs": 12,
+    "failed_outputs": 0,
+    "remote_files_rehashed_locally": 72,
+    "remote_to_local_sha256_mismatches": 0,
+    "outside_support_max_pixel_difference": 0
+  },
+  "provisional_internal_review": {
+    "action_success": {"pass": 0, "total": 12},
+    "photo_success": {"pass": 1, "total": 12},
+    "preservation_success": {"pass": 12, "total": 12},
+    "strict_end_to_end_success": {"pass": 0, "total": 12},
+    "per_output": [
+      {"case_id": "ramen", "seed": 1, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "One truncated translucent chopstick-like fragment; no two-stick pinch or lifted connected noodle; visible support-boundary artifact."},
+      {"case_id": "ramen", "seed": 2, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "No utensil or lifted payload; strong warped tray texture inside the edit support."},
+      {"case_id": "ramen", "seed": 3, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Duplicated or warped chopstick-like lines; no supported lifted noodle; conspicuous local seam."},
+      {"case_id": "soup", "seed": 1, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Translucent handleless spoon-like oval remains in the soup; no lifted retained payload."},
+      {"case_id": "soup", "seed": 2, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Handleless spoon-bowl shape on the surface; no above-surface scoop or source correspondence."},
+      {"case_id": "soup", "seed": 3, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Malformed blade or spoon fragment; no retained soup payload and no credible lift."},
+      {"case_id": "rice", "seed": 1, "action_success": false, "photo_success": true, "preservation_success": true, "observation": "No serving utensil or lifted scoop; the failed edit remains visually plausible as an almost unchanged food photograph."},
+      {"case_id": "rice", "seed": 2, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Only a truncated horizontal utensil fragment at the right edge; no supported scoop; local structure is inconsistent."},
+      {"case_id": "rice", "seed": 3, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Malformed fork-like object instead of one serving spatula; no coherent lifted granular payload."},
+      {"case_id": "cake", "seed": 1, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Duplicated fork fragments on the plate and table; the bite is not lifted or attached."},
+      {"case_id": "cake", "seed": 2, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "No fork; displaced bite and wood-texture artifact do not establish the requested manipulation."},
+      {"case_id": "cake", "seed": 3, "action_success": false, "photo_success": false, "preservation_success": true, "observation": "Duplicated fork tines and malformed contact; no intact lifted bite attached to one fork."}
+    ]
+  },
+  "evidence": {
+    "config": {"path": "configs/day26_chordedit_direct_baseline_v1.json", "sha256": "a2acaeb05fb2823386e17d08d630f88f36f9db85b92e66602e1b08a8bcfdde0a"},
+    "runner": {"path": "scripts/run_chordedit_direct_baseline.py", "sha256": "7d1a977ab19384efa585c8a0024f7f6e169f2757e160a3d6b0003bb5246f87dc"},
+    "review_builder": {"path": "scripts/make_day26_chordedit_review.py", "sha256": "e06a8c95934e1ad8950b7dd22720e2b66e24e0be609ecbdb3f56241245472c72"},
+    "review_grid": {"path": "artifacts/day26_chordedit_direct_baseline_v1/review_grid.png", "sha256": "58382955770e86ad8fa99bd89a59a3c888558062be65b9770175ebcd94cfd931"},
+    "review_grid_manifest": {"path": "artifacts/day26_chordedit_direct_baseline_v1/review_grid_manifest.json", "sha256": "f2183e475a6ecc6c9e9e0b7af8b28b3185c16d02f08b955c9b9fe3e52316d518"}
+  },
+  "formal_benchmark_impact": {
+    "available_external_editor_baseline_added": true,
+    "strong_named_editor_requirement_fully_closed": false,
+    "missing_named_editors": ["Qwen-Image-Edit", "FLUX Kontext", "ChronoEdit"],
+    "held_out_test_unlocked": false,
+    "reason": "The available external editor is a development baseline and failed the requested actions. The unique FoodStateEdit rule and held-out protocol still require freezing before test generation."
+  },
+  "claim_limit": "This is a four-case, three-seed, same-input development baseline with one internal non-blind review. Cake is synthetic supplementary evidence. It does not establish superiority, generalization, physical correctness, or paper-level photo realism."
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "foodstateedit.day25_same_condition_ablation_retry_launch.v1",
+  "launch_date": "2026-09-13",
+  "status": "started_and_startup_verified_not_completion_verified",
+  "host": "gp40",
+  "resource_audit": {
+    "gpu_model": "NVIDIA RTX A6000",
+    "selected_gpus": [0, 1],
+    "free_memory_mib_each": 48539,
+    "utilization_percent_each": 0,
+    "selected_gpu_compute_process_count": 0,
+    "host_mem_available_kib": 254623540,
+    "passed": true
+  },
+  "runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_runtime_v2_retry",
+  "files": {
+    "config": {
+      "path": "configs/day25_same_condition_ablation_v2_retry.json",
+      "sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427"
+    },
+    "runner": {
+      "path": "scripts/run_same_condition_ablation.py",
+      "sha256": "ac85ac46bc34a0ae757ec33769d98f390af5273ad8a9d062f01956c2735c3af6"
+    },
+    "dependency": {
+      "path": "scripts/run_high_lift_vace_pilot.py",
+      "sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+    }
+  },
+  "workers": {
+    "rice": {
+      "physical_gpu": 0,
+      "launch_pid": 1248789,
+      "output_root": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_v2_retry_rice",
+      "preflight_report": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_v2_retry_rice_preflight.json",
+      "preflight_passed": true,
+      "startup_manifest_status": "loading_pipeline"
+    },
+    "cake": {
+      "physical_gpu": 1,
+      "launch_pid": 1248790,
+      "output_root": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_v2_retry_cake",
+      "preflight_report": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_v2_retry_cake_preflight.json",
+      "preflight_passed": true,
+      "startup_manifest_status": "loading_pipeline"
+    }
+  },
+  "monitoring_policy": "Per user instruction, one startup verification was performed and continuous polling stopped. Completion must be checked explicitly before these runs are used as evidence.",
+  "claim_limit": "A successful launch is not a completed experiment and supports no ablation, effectiveness, held-out, superiority or generalization claim."
+}

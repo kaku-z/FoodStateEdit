@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="ending">
+<rect x="0" y="0" width="1280" height="720" fill="#EAF6FC" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">NEXT STEP</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">現在の課題と今後の予定</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">13</text>
+<g id="next-step-summary" data-pptx-bounds="72 176 1116 462">
+<rect x="72" y="176" width="388" height="344" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<rect x="72" y="176" width="8" height="344" fill="#E31B23" stroke="none" stroke-width="0"/>
+<text x="106" y="224" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="27" fill="#E31B23" font-weight="700" text-anchor="start">現在の課題</text>
+<text x="106" y="282" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="start">成功例が選択済み合成画像に偏る</text>
+<text x="106" y="330" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="500" text-anchor="start">実画像への一般化を未検証</text>
+<text x="106" y="375" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="500" text-anchor="start">動作・写真評価は内部非盲検</text>
+<text x="106" y="420" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="500" text-anchor="start">時系列の接触・持ち上げも未確立</text>
+<text x="520" y="218" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="27" fill="#0070C0" font-weight="700" text-anchor="start">次の目標</text>
+<text x="520" y="258" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="start">実画像でも動作・写真品質・背景保持を同時に満たす</text>
+<line x1="520" y1="282" x2="1188" y2="282" stroke="#D8DDE3" stroke-width="2"/>
+<text x="520" y="329" font-family="Arial, Yu Gothic, sans-serif" font-size="20" fill="#0070C0" font-weight="700" text-anchor="start">01</text>
+<text x="574" y="329" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="start">held-out 実画像40件を同条件・複数seedで生成</text>
+<text x="520" y="392" font-family="Arial, Yu Gothic, sans-serif" font-size="20" fill="#0070C0" font-weight="700" text-anchor="start">02</text>
+<text x="574" y="392" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="start">2–3名で Action・Photo・Preservation を盲評</text>
+<text x="520" y="455" font-family="Arial, Yu Gothic, sans-serif" font-size="20" fill="#0070C0" font-weight="700" text-anchor="start">03</text>
+<text x="574" y="455" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="start">bootstrap CI と失敗分類から材質制御を修正</text>
+<rect x="116" y="566" width="1048" height="72" fill="#0070C0" stroke="none" stroke-width="0" rx="4"/>
+<text x="640" y="610" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="28" fill="#FFFFFF" font-weight="700" text-anchor="middle">目標：柔軟・流動・粒状食品で再現可能な改善を示す</text>
+</g>
+</svg>

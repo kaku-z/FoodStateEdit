@@ -1,0 +1,114 @@
+{
+  "schema_version": "foodstateedit.qwen_utensil_geometry_repair.v1",
+  "freeze_date": "2026-09-13",
+  "execution_allowed": true,
+  "scientific_status": "single_selected_case_single_seed_development_geometry_repair_not_efficacy_evidence",
+  "hypothesis": "A support-local Qwen edit can replace the implausible square fried-rice utensil head with a recognizable stainless-steel serving spoon while preserving the established handle direction and lifted-food relation.",
+  "case_order": ["rice_square_head_repair"],
+  "cases": {
+    "rice_square_head_repair": {
+      "source_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1/rice__relative3d/projected_final_hold.png",
+      "source_sha256": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3",
+      "seed": 1,
+      "crop_size": 512,
+      "crop_padding_px": 44,
+      "instruction": "Replace the implausible square outlined utensil head with one natural photorealistic stainless-steel serving spoon holding the same fried-rice and egg payload. Remove the square frame and sharp polygon corners. Make the spoon bowl smoothly oval, shallowly concave, correctly connected to the existing handle, and consistent with the camera perspective and scene lighting. Keep exactly one utensil, preserve the existing handle path, angle, length, lifted-food amount, contact relation, plate, fried rice, egg, vegetables, camera, crop, and background. Do not add hands, extra utensils, text, decorations, or new food.",
+      "utensil_support": {
+        "lines": [
+          {"points": [[686, 60], [508, 145]], "width": 20}
+        ],
+        "polygons": [
+          [[369, 94], [491, 91], [562, 139], [562, 183], [531, 221], [425, 228], [369, 190]]
+        ],
+        "dilation_px": 6
+      }
+    }
+  },
+  "inference": {
+    "num_inference_steps": 50,
+    "true_cfg_scale": 4.5,
+    "guidance_scale": 1.0,
+    "negative_prompt": " ",
+    "torch_dtype": "bfloat16",
+    "offload": "model_cpu_offload",
+    "pipeline_loads": 1
+  },
+  "alignment": {
+    "method": "numpy_translation_search_on_protected_crop_pixels",
+    "max_translation_px": 48,
+    "search_downsample": 4,
+    "min_protected_similarity_for_diagnostics_only": 0.80
+  },
+  "composition": {
+    "soft_feather_px": 5,
+    "blend_alpha": 0.92,
+    "exact_outside_hard_support": true
+  },
+  "diagnostic_thresholds": {
+    "min_changed_fraction": 0.0,
+    "max_changed_fraction": 1.0,
+    "min_structure_edge_cosine": 0.0
+  },
+  "output_policy": {
+    "automatic_acceptance_gate": false,
+    "rollback_on_metric_failure": false,
+    "write_candidate_as_development_final": true,
+    "human_review_required_before_paper_claim": true
+  },
+  "manual_review_questions": [
+    "square_head_removed",
+    "utensil_recognizable_as_serving_spoon",
+    "single_utensil_preserved",
+    "handle_connection_plausible",
+    "lifted_food_and_contact_preserved",
+    "local_photo_realism_improved"
+  ],
+  "backend": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "model_root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "pipeline_class": "QwenImageEditPlusPipeline",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "model_index.json": {"size_bytes": 516, "sha256": "5ba11ceee68457ad6a48b899b8c9493e347f4685e11e5eeca952a13f16549e35"},
+      "text_encoder/model.safetensors.index.json": {"size_bytes": 57655, "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c"},
+      "transformer/diffusion_pytorch_model.safetensors.index.json": {"size_bytes": 198887, "sha256": "034f003b74493730e1c595b2e23232e99d9e28bcef3b4c10c56d1b53eee4b435"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 253806966, "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344"}
+    }
+  },
+  "implementation": {
+    "runner_sha256": "8a1d0f937b6056ff16cdcd96dc035d593f0b3040b958cc972912fb71dd32cb9c",
+    "base_runner_sha256": "5598e63da05d394b9d94e7dc6ac503171ec200b2eace56bb6c938b55dda8b0b5",
+    "appearance_refinement_sha256": "ecdc2e8f4795568bf65a285e9c5e4ed5220b7d216e5bc1790d7b492907209eb1"
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day33_qwen_rice_utensil_geometry_repair_v1",
+  "preflight_path": "/host/space0/guo-z/tf-ufi/outputs/day33_qwen_rice_utensil_geometry_repair_v1_preflight.json",
+  "runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day33_qwen_utensil_geometry_repair_runtime_v1",
+  "expected_generation_count": 1,
+  "output_contract_per_case": [
+    "00_pre_repair.png",
+    "01_hard_support.png",
+    "02_soft_mask.png",
+    "03_structure_mask.png",
+    "04_input_crop.png",
+    "05_raw_qwen_crop.png",
+    "06_aligned_qwen_crop.png",
+    "07_candidate.png",
+    "08_diagnostics.json",
+    "09_manual_review.json",
+    "10_final_direct_candidate.png",
+    "condition_manifest.json"
+  ],
+  "claim_limit": "This one-selected-case, one-seed development repair tests whether Qwen can remove a conspicuous square utensil artifact. Direct output without an automatic promotion gate is not evidence of generalization, superiority, physical correctness, or paper-level photo realism; visual findings require explicit human review."
+}

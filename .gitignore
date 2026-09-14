@@ -7,6 +7,18 @@ models/
 *.safetensors
 *.pth
 
+# Local presentation build products
+output/
+tmp/
+.chart-data-*/
+ppt_projects/**/backup/
+ppt_projects/**/exports/
+ppt_projects/**/validation/
+ppt_projects/**/svg_final/
+ppt_projects/**/sources/
+ppt_projects/**/live_preview/
+ppt_projects/**/confirm_ui/
+
 # Local/runtime state
 __pycache__/
 *.py[cod]

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">MULTI-CASE RESULT</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">複数食品での多手法比較</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">09</text>
+<g id="multi-case-comparison" data-pptx-bounds="72 154 1136 530">
+<image href="../images/p09comp_noodle.png" x="72" y="154" width="1136" height="130" preserveAspectRatio="xMidYMid meet"/>
+<image href="../images/p09comp_soup.png" x="72" y="304" width="1136" height="130" preserveAspectRatio="xMidYMid meet"/>
+<image href="../images/p09comp_cake.png" x="72" y="454" width="1136" height="130" preserveAspectRatio="xMidYMid meet"/>
+<rect x="72" y="612" width="1136" height="42" fill="#EAF6FC" stroke="#0070C0" stroke-width="1" rx="4"/>
+<text x="640" y="639" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#0070C0" font-weight="700" text-anchor="middle">Input｜ChordEdit｜Qwen Image｜FoodStateEdit（Ours）を同一入力で比較</text>
+<text x="640" y="672" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="13" fill="#666666" font-weight="400" text-anchor="middle">選択済みseed 1の内部比較。実画像GTなし。統計的優位性・一般化は未証明。</text>
+</g>
+</svg>

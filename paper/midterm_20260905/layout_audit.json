@@ -1,0 +1,86 @@
+{
+  "pdf": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\output\\pdf\\FoodStateEdit_Midterm_GUO_2530030_20260906.pdf",
+  "pdf_sha256": "e24f6d870115a688914b1fe1433ac7084b4d10258ee0e28e9b2ec53f6b608c68",
+  "page_count": 14,
+  "pages": [
+    {
+      "pdf_page": 1,
+      "label": "表紙",
+      "lowest_content_y": 750.89
+    },
+    {
+      "pdf_page": 2,
+      "label": "概要",
+      "lowest_content_y": 342.69
+    },
+    {
+      "pdf_page": 3,
+      "label": "目次",
+      "lowest_content_y": 135.69
+    },
+    {
+      "pdf_page": 4,
+      "label": "第1章　はじめに",
+      "lowest_content_y": 230.09
+    },
+    {
+      "pdf_page": 5,
+      "label": "第1章　はじめに",
+      "lowest_content_y": 265.49
+    },
+    {
+      "pdf_page": 6,
+      "label": "第2章　関連研究",
+      "lowest_content_y": 152.69
+    },
+    {
+      "pdf_page": 7,
+      "label": "第3章　提案手法",
+      "lowest_content_y": 119.89
+    },
+    {
+      "pdf_page": 8,
+      "label": "第3章　提案手法",
+      "lowest_content_y": 129.28
+    },
+    {
+      "pdf_page": 9,
+      "label": "第3章　提案手法",
+      "lowest_content_y": 171.89
+    },
+    {
+      "pdf_page": 10,
+      "label": "第4章　実験",
+      "lowest_content_y": 163.19
+    },
+    {
+      "pdf_page": 11,
+      "label": "第4章　実験",
+      "lowest_content_y": 135.37
+    },
+    {
+      "pdf_page": 12,
+      "label": "第4章　実験",
+      "lowest_content_y": 83.19
+    },
+    {
+      "pdf_page": 13,
+      "label": "第5章　まとめ",
+      "lowest_content_y": 194.69
+    },
+    {
+      "pdf_page": 14,
+      "label": "参考文献",
+      "lowest_content_y": 136.29
+    }
+  ],
+  "source_sha256": "9930867a6f790fd9b6accc2981daabd8f361c8d75b69e1210c8148d184a3b85b",
+  "author": "GUO ZHENGPENG",
+  "student_id": "2530030",
+  "pending_cover_fields": [
+    "affiliation",
+    "principal_supervisor",
+    "supervisor"
+  ],
+  "claim_status": "Day 13 effectiveness unverified; no new experiment performed for report"
+}

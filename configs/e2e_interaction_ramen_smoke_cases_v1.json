@@ -1,0 +1,20 @@
+{
+  "schema_version": "foodstateedit.e2e_cases.v1",
+  "cases": [
+    {
+      "case_id": "ramen_chopsticks_001",
+      "food_type": "ramen",
+      "original_image": "artifacts/e2e_interaction_v1_case_staging/ramen_chopsticks_001/01_input.png",
+      "food_mask": "artifacts/e2e_interaction_v1_case_staging/ramen_chopsticks_001/food_mask.png",
+      "selected_bite_mask": "artifacts/e2e_interaction_v1_case_staging/ramen_chopsticks_001/bite_mask.png",
+      "container_mask": "artifacts/e2e_interaction_v1_case_staging/ramen_chopsticks_001/container_mask.png",
+      "source_point": [0.6246, 0.1497],
+      "target_point": [0.7046, 0.05],
+      "utensil_type": "chopsticks",
+      "allowed_edit_region": "artifacts/e2e_interaction_v1_case_staging/ramen_chopsticks_001/allowed_edit_region.png",
+      "annotation_method": "legacy_masks_resized_plus_manual_container_ellipse",
+      "eligible_for_formal_evaluation": false,
+      "annotation": "Existing no-utensil ramen pilot reused only for interface staging; not SAM output or a new independent development example."
+    }
+  ]
+}

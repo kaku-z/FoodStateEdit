@@ -1,0 +1,39 @@
+{
+  "schema_version": "foodstateedit.geometry_locked_refinement_result.v1",
+  "date": "2026-09-12",
+  "status": "technical_complete_semantic_gate_failed_rollback_preserved",
+  "host": "gp40.cs.uec.ac.jp",
+  "physical_gpu": 0,
+  "gpu_uuid": "GPU-9e2ec4a5-21aa-825b-b84b-d78f8dd3e89f",
+  "config_sha256": "c29f3f28b5357ffbe310e42441707d9fa9b3cb7704291430f68a1d12e0a045b4",
+  "preflight_sha256": "0c41126493074fe9d9c023781d68a9914f8fe9452b329447aca573d7db8dcec8",
+  "pipeline_load_count": 1,
+  "candidate_count": 1,
+  "wall_time_seconds": 10.324,
+  "automatic_metrics": {
+    "outside_support_max_abs_difference": 0,
+    "inside_support_changed_fraction": 0.9991967608150418,
+    "structure_edge_cosine": 0.8638569950987639
+  },
+  "automatic_gate": {
+    "passed": false,
+    "failed_check": "maximum_local_change",
+    "maximum_allowed_changed_fraction": 0.95
+  },
+  "manual_gate": {
+    "passed": false,
+    "failure": "a second spoon-like metallic object was generated and the interaction state changed"
+  },
+  "rollback": {
+    "applied": true,
+    "pre_refinement_sha256": "324bf43f37316c615db203f855e505595d7b14adb743d731ebfccffad51b07b2",
+    "final_sha256": "324bf43f37316c615db203f855e505595d7b14adb743d731ebfccffad51b07b2",
+    "byte_identical": true
+  },
+  "remote_to_local_verification": {
+    "files_checked": 12,
+    "all_sha256_match": true
+  },
+  "resource_race_after_completion": "gp40 physical GPUs 0 and 7 were subsequently occupied by xiong-p processes; no process was modified or terminated",
+  "claim_limit": "This negative one-case development result shows that unconstrained semantic changes can survive crop-local diffusion even when outside-support preservation and an edge metric pass. It is not evidence against all local editors or evidence of generalization."
+}

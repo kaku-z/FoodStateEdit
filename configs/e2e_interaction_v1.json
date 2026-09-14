@@ -1,0 +1,31 @@
+{
+  "schema_version": "foodstateedit.e2e_experiment.v1",
+  "status": "implementation_ready_qwen_absent_chordedit_refinement_frozen",
+  "scope": "semi-automatic training-free interaction editing; no people, hands, mouths, or biting",
+  "methods": {
+    "A_qwen_direct": "original image plus fixed class prompt",
+    "B_vace_text": "first-frame VACE baseline plus ordinary selector",
+    "C_proxy_qwen": "coupled final proxy plus Qwen appearance editing",
+    "D_independent_vace": "independent source repair and target motion plus ordinary selector",
+    "E_coupled_vace": "shared source-target material state plus ordinary selector",
+    "F_event_selection": "reuse E video with event-aware selector; no new generation"
+  },
+  "seeds": [0],
+  "inference": {
+    "vace": {"num_frames": 81, "num_inference_steps": 50, "cfg": 5.0, "candidate_range": [1, 80], "fixed_audit_frame": 72},
+    "qwen": {"variant_required": "Qwen-Image-Edit", "availability": "complete runnable base not found; keep as unavailable comparison rather than substituting another method"},
+    "appearance_refinement": {
+      "config": "configs/day23_geometry_locked_chordedit_refinement_v1.json",
+      "backend": "ChordEdit_SD_Turbo",
+      "placement": "after selected frame and before final image",
+      "single_candidate": true,
+      "exact_outside_support": true,
+      "rollback_on_failed_or_uncertain_structure_or_semantics": true
+    }
+  },
+  "schedule": {"approach": [0, 15], "contact": [16, 28], "lift": [29, 60], "hold": [61, 80]},
+  "selector": {"weights": {"arrival": 0.45, "sharpness": 0.25, "background_preservation": 0.30}, "event_min_contact": 0.5, "event_min_following": 0.5},
+  "resource_gate": {"required_gpu_name": "NVIDIA RTX A6000", "min_free_memory_mib": 48000, "max_utilization_percent": 5, "zero_compute_processes": true, "min_available_system_memory_mib": 80000, "forbid_downloads": true, "forbid_preemption": true},
+  "output_contract": ["01_input.png", "02_proxy.png", "03_generated_video.mp4", "04_contact_frame.png", "05_lift_frame.png", "06_selected_frame.png", "07_final.png", "config.json", "runtime.json", "selection.json"],
+  "claim_limit": "A one-seed development smoke can verify interfaces and artifact completeness only; it cannot establish superiority, generalization, physical correctness, or photo realism."
+}

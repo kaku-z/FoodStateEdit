@@ -1,0 +1,102 @@
+{
+  "schema_version": "foodstateedit.benchmark_vace_execution.v1",
+  "freeze_date": "2026-09-13",
+  "execution_allowed": true,
+  "scientific_status": "twenty_image_development_pilot_not_heldout_effectiveness",
+  "dataset_split": "pilot",
+  "dataset_case_count": 20,
+  "dataset_root": "/host/space0/guo-z/tf-ufi/outputs/day31_family_template_controls_pilot_v1",
+  "dataset_manifest": {
+    "path": "dataset_manifest.json",
+    "size_bytes": 57872,
+    "sha256": "99a8b4de01edc0d76083c8fd8c9e7d5102ce3fd7f2de41af2ab01ede933cd977"
+  },
+  "causal_hypothesis": "Across multiple development images, explicit phase-action controls should outperform native-input VACE on action success; relative-depth controls and a family-level VACE-strength rule are tested without per-image tuning.",
+  "material_scale_policy": {
+    "liquid": 1.0,
+    "granular": 1.0,
+    "strand": 0.8,
+    "strand_contact": 0.8,
+    "status": "candidate_policy_frozen_before_day32_generation",
+    "rationale": "Day25 prespecified liquid/granular/strand anchor strengths are transferred at family level; strand-contact uses the same continuous-flexible-material candidate and is explicitly tested on five pilot pasta images before any held-out execution."
+  },
+  "reported_arms": {
+    "native_input_vace": "native_scale_1p0",
+    "planar_proxy_vace": "planar_scale_1p0",
+    "fixed_relative3d_vace": "relative3d_scale_1p0",
+    "candidate_material_adaptive_relative3d": "relative3d_material_adaptive when the family scale differs from 1.0; otherwise reuse relative3d_scale_1p0"
+  },
+  "shards": {
+    "shard_a": ["rice_007", "rice_032", "soup_002", "noodle_001", "pasta_005"],
+    "shard_b": ["rice_016", "soup_008", "soup_018", "noodle_002", "pasta_006"],
+    "shard_c": ["rice_030", "soup_015", "noodle_003", "noodle_013", "pasta_027"],
+    "shard_d": ["rice_031", "soup_017", "noodle_009", "pasta_029", "pasta_030"]
+  },
+  "inference": {
+    "seeds": [1, 2, 3],
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "enable_ttm": false,
+    "lora_enabled": false,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20]
+  },
+  "output_root_template": "/host/space0/guo-z/tf-ufi/outputs/day32_material_policy_pilot_v1_{shard_id}",
+  "preflight_template": "/host/space0/guo-z/tf-ufi/outputs/day32_material_policy_pilot_v1_{shard_id}_preflight.json",
+  "cache_root_template": "/tmp/foodstateedit_day32_material_policy_pilot_v1_{shard_id}",
+  "implementation": {
+    "runner_sha256": "7bd11c8fce21c41a5ebe3446164dd77032ffa9562919646fbd364e372419ec19",
+    "dependency_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+      "size_bytes": 620,
+      "sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"},
+      "low_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"},
+      "models_t5_umt5-xxl-enc-bf16.pth": {"size_bytes": 11361920418, "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"},
+      "Wan2.1_VAE.pth": {"size_bytes": 507609880, "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"}
+    },
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "execution_policy": {
+    "maximum_concurrent_workers_on_one_host": 2,
+    "conditions_serial_within_case_worker": true,
+    "abort_own_worker_if_foreign_compute_process_appears": true,
+    "never_terminate_or_preempt_foreign_process": true,
+    "never_retry_into_same_output_path": true,
+    "no_seed_replacement": true,
+    "no_output_dependent_rerun": true
+  },
+  "primary_endpoints": ["ActionSuccess", "PhotoSuccess", "PreservationSuccess", "StrictE2ESuccess"],
+  "test_lock": "No test control or model output may be generated until Day32 completes, the material rule is frozen, and the evaluation contract remains unchanged.",
+  "claim_limit": "This is a 20-image selected development pilot. It can freeze a family-level rule and expose failures, but cannot establish held-out generalization, superiority, physical correctness, photo realism or an automatic rollback observer."
+}

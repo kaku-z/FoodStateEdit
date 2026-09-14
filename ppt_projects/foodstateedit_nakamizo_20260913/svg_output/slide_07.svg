@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">CONTROL MECHANISM</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">相対3D代理とVACEの接続</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">07</text>
+<g id="relative3d-vace-control" data-pptx-bounds="60 150 1160 525">
+<rect x="72" y="164" width="1136" height="64" fill="#EAF6FC" stroke="#0070C0" stroke-width="2" rx="5"/>
+<text x="640" y="190" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="25" fill="#0070C0" font-weight="700" text-anchor="middle">相対3D代理は生成モデルではなく、VACEの前段に置く制御信号生成部</text>
+<text x="640" y="217" font-family="Arial, Yu Gothic, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="middle">FoodStateEdit = 相対3D制御器 ＋ 凍結VACE ＋ 局所合成</text>
+<rect x="72" y="258" width="200" height="210" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="5"/>
+<text x="90" y="291" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">01</text>
+<text x="172" y="331" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#0070C0" font-weight="700" text-anchor="middle">入力と編集領域</text>
+<line x1="92" y1="348" x2="252" y2="348" stroke="#D8DDE3" stroke-width="2"/>
+<text x="172" y="382" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">入力画像</text>
+<text x="172" y="416" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">edit_alpha</text>
+<text x="172" y="450" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">代理軌跡から生成</text>
+<line x1="274" y1="363" x2="302" y2="363" stroke="#0070C0" stroke-width="3"/>
+<polygon points="302,356 310,363 302,370" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="306" y="258" width="200" height="210" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2" rx="5"/>
+<text x="324" y="291" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#2E8B57" font-weight="700" text-anchor="start">02</text>
+<text x="406" y="331" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#2E8B57" font-weight="700" text-anchor="middle">相対3D代理</text>
+<line x1="326" y1="348" x2="486" y2="348" stroke="#2E8B57" stroke-width="2"/>
+<text x="406" y="382" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">接触点 Pcontact</text>
+<text x="406" y="416" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">深度順序 z</text>
+<text x="406" y="450" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">接近・接触・持上げ</text>
+<line x1="508" y1="363" x2="536" y2="363" stroke="#0070C0" stroke-width="3"/>
+<polygon points="536,356 544,363 536,370" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="540" y="258" width="200" height="210" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2" rx="5"/>
+<text x="558" y="291" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#2E8B57" font-weight="700" text-anchor="start">03</text>
+<text x="640" y="331" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#2E8B57" font-weight="700" text-anchor="middle">VACE条件へ変換</text>
+<line x1="560" y1="348" x2="720" y2="348" stroke="#2E8B57" stroke-width="2"/>
+<text x="640" y="382" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">21-frame control</text>
+<text x="640" y="416" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">透視投影</text>
+<text x="640" y="450" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">支持領域内だけ描画</text>
+<line x1="742" y1="363" x2="770" y2="363" stroke="#0070C0" stroke-width="3"/>
+<polygon points="770,356 778,363 770,370" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="774" y="258" width="200" height="210" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="5"/>
+<text x="792" y="291" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">04</text>
+<text x="874" y="331" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#0070C0" font-weight="700" text-anchor="middle">凍結VACE</text>
+<line x1="794" y1="348" x2="954" y2="348" stroke="#D8DDE3" stroke-width="2"/>
+<text x="874" y="382" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">Wan2.2-VACE-Fun-A14B</text>
+<text x="874" y="416" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">重みは変更しない</text>
+<text x="874" y="450" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">条件付き拡散生成</text>
+<line x1="976" y1="363" x2="1004" y2="363" stroke="#0070C0" stroke-width="3"/>
+<polygon points="1004,356 1012,363 1004,370" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="1008" y="258" width="200" height="210" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="5"/>
+<text x="1026" y="291" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">05</text>
+<text x="1108" y="331" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#0070C0" font-weight="700" text-anchor="middle">出力</text>
+<line x1="1028" y1="348" x2="1188" y2="348" stroke="#D8DDE3" stroke-width="2"/>
+<text x="1108" y="382" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">21フレーム動画</text>
+<text x="1108" y="416" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">安定フレーム選択</text>
+<text x="1108" y="450" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">局所投影・合成</text>
+<text x="72" y="515" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#0070C0" font-weight="700" text-anchor="start">VACEへ渡す三つの信号</text>
+<line x1="72" y1="530" x2="1208" y2="530" stroke="#D8DDE3" stroke-width="2"/>
+<text x="92" y="567" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="start">vace_video</text>
+<text x="380" y="567" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">道具と食物を、どの位置で、どの時刻に動かすか</text>
+<text x="92" y="601" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="start">vace_video_mask</text>
+<text x="380" y="601" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">21フレームの変化領域を和集合し、膨張・羽化して生成</text>
+<text x="92" y="635" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="start">vace_reference_image + prompt</text>
+<text x="380" y="635" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">元画像の内容と、写真的な道具・食物外観をVACEの事前分布から生成</text>
+<text x="72" y="666" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#E31B23" font-weight="600" text-anchor="start">※ maskはSAM出力ではなく代理軌跡から生成。相対深度は正規化した制御用scaffold。</text>
+</g>
+</svg>

@@ -1,0 +1,494 @@
+{
+  "schema_version": "foodstateedit.day25_ablation_matrix.v1",
+  "status": "complete_final_image_matrix_verified",
+  "case_count": 4,
+  "seed_count": 3,
+  "condition_count": 5,
+  "matrix_cell_count": 60,
+  "newly_generated_cell_count": 47,
+  "legacy_hash_locked_cell_count": 13,
+  "unique_final_image_hash_count": 60,
+  "cells": [
+    {
+      "case_id": "ramen",
+      "seed": 1,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_1/native_scale_1p0/projected_final_hold.png",
+      "sha256": "ca52c258c1f45f3556cda86111bdb169eea42c835c45b0b670f16b33b5be7ffb"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 1,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_1/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "f516765757a8c956ad186eafd953d77fa80c0f5138106d55c6a0344528ae65f8"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 1,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_1/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "e9ef49cf45f24b9d093cf7fe39cecd93b45fb6f6c32971cbf1761d5d1006aa2a"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 1,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_1/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "83bf113fefc39c262fd727eeffd617e0da1541dd5c2d81c5905e716587a4f129"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 1,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_1/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "8b0dbf6a036e761c4b1af3972cf876cd9287c12a6cd544b3a0463a031a1a03cc"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 2,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_2/native_scale_1p0/projected_final_hold.png",
+      "sha256": "a45c5d8765555e6bae8ffbff2a43c8bbb1b6cb212b5940b789c349d54deaa866"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 2,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_2/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "8a35ab9eb144f9c7d21ca0ac499a495eab11b0d9605705b733576310cf4a3678"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 2,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_2/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "bd382dc209efd9f2379e17c630c4a12e02f0d44f662d0e673558ff2504455648"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 2,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_2/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "e03acc00761a4d4dc3c9d77fbe342696b207fbb73563b67100653ee866fbb888"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 2,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_2/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "54df3ba2d4e8da76e7b3cb02d6b33f85724cdf6a5a3df045645e829fe7e7d780"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 3,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_3/native_scale_1p0/projected_final_hold.png",
+      "sha256": "27484edc42740ebb6af77efa1ec990cf0d5b5d0cdacef804dd5e3c0dea2e7368"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 3,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_3/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "e9b5c6a84837272e0f272c57b12009b15e816d4601264211784d956edf0b40de"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 3,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_3/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "f12e7e3fcf6b17b1c8556d11e9327a5c555545a003aac5b09d719a2029ce718f"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 3,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_3/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "2aa622e3ea1be2a2dd8f34260580860ed95f6da4e5e862608f112fb993fe9759"
+    },
+    {
+      "case_id": "ramen",
+      "seed": 3,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/ramen/seed_3/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "8ba3eb522462137d338879674c7316a9c4f58728ab59c423310a2d65cc277561"
+    },
+    {
+      "case_id": "soup",
+      "seed": 1,
+      "condition": "native_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day22_native_input_vace_pilot_v2_soup/native_input_text_mask_only/projected_final_hold.png",
+      "sha256": "5cd9efaf1a34e3dea63cdcb155548af265e22b0111cf5c77481c4507e659b81b"
+    },
+    {
+      "case_id": "soup",
+      "seed": 1,
+      "condition": "planar_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day19_multimaterial_gp40_recovered_20260909_v1/soup__planar/projected_final_hold.png",
+      "sha256": "95f0c5e909bb168c9fb2c300f5c6fba50fe811c599dddb3a2d3a4cecef361cc7"
+    },
+    {
+      "case_id": "soup",
+      "seed": 1,
+      "condition": "relative3d_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day19_multimaterial_gp40_recovered_20260909_v1/soup__relative3d/projected_final_hold.png",
+      "sha256": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854"
+    },
+    {
+      "case_id": "soup",
+      "seed": 1,
+      "condition": "relative3d_scale_0p6",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day21_realism_scale_sweep_v1/soup/vace_scale_0p6/projected_final_hold.png",
+      "sha256": "e1f760fe873bb5dca557f27e2ed7dbfcc27565e66d0cfa0fe5ab72b314d27453"
+    },
+    {
+      "case_id": "soup",
+      "seed": 1,
+      "condition": "relative3d_scale_0p8",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day21_realism_scale_sweep_v1/soup/vace_scale_0p8/projected_final_hold.png",
+      "sha256": "add069b5316fbc18ceb400a68d762046766c41e6de2f2aef28f032069db22eaa"
+    },
+    {
+      "case_id": "soup",
+      "seed": 2,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_2/native_scale_1p0/projected_final_hold.png",
+      "sha256": "5e0a62c2a7d62ac48c3f8584ab287654fb62f685f151ffda7f91e8bfa42d786e"
+    },
+    {
+      "case_id": "soup",
+      "seed": 2,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_2/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "0ec5388720e5f7106c13b83f1a74f85f4f257c9a80b16cd89f33557248f7fc96"
+    },
+    {
+      "case_id": "soup",
+      "seed": 2,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_2/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "8148dcafb090aaca78cea51125ceb32a3ab66b869bf4c88c7b0d7e14b6bb0197"
+    },
+    {
+      "case_id": "soup",
+      "seed": 2,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_2/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "36657fa51f16e513d025e5f2dd2be16efe8de0973c50f30e4e34ead274a10b55"
+    },
+    {
+      "case_id": "soup",
+      "seed": 2,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_2/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "a88c43b3c0ccd5b4143711283e082969026f9052687e333e417283a112da92c5"
+    },
+    {
+      "case_id": "soup",
+      "seed": 3,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_3/native_scale_1p0/projected_final_hold.png",
+      "sha256": "da8ea5ab9d68e4936036a9efe857e682f0f1baa5827936fbf5317be24a645dbe"
+    },
+    {
+      "case_id": "soup",
+      "seed": 3,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_3/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "8215bb20bbd694ed03570e8b92a4445cd2a931a80e51541bb6dbdcfd0bcb71d5"
+    },
+    {
+      "case_id": "soup",
+      "seed": 3,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_3/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "ecee645dfb2545c98077739f54f7e659ae73b52734b23e65fb44ea2a34e0630c"
+    },
+    {
+      "case_id": "soup",
+      "seed": 3,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_3/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "095b2996991d0263bcf4f72be7b4d04719ba0a10237f8b9d5238d948557fa4df"
+    },
+    {
+      "case_id": "soup",
+      "seed": 3,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/soup/seed_3/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "8a7dc705e122030ac9d7b9b093a0865258201dd49b40583da6518eb9fcdccade"
+    },
+    {
+      "case_id": "rice",
+      "seed": 1,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_1/native_scale_1p0/projected_final_hold.png",
+      "sha256": "dbba5be7d6d224e1703edebec844b6381c276eef371456b8a58adbf742a0c194"
+    },
+    {
+      "case_id": "rice",
+      "seed": 1,
+      "condition": "planar_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day19_multimaterial_gp40_recovered_20260909_v1/rice__planar/projected_final_hold.png",
+      "sha256": "b115b3f5dd15a7e9bfb159cf877a2189a47aed8a957c957a1648278c894a38b4"
+    },
+    {
+      "case_id": "rice",
+      "seed": 1,
+      "condition": "relative3d_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day19_multimaterial_gp40_recovered_20260909_v1/rice__relative3d/projected_final_hold.png",
+      "sha256": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3"
+    },
+    {
+      "case_id": "rice",
+      "seed": 1,
+      "condition": "relative3d_scale_0p6",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day21_realism_scale_sweep_v1/rice/vace_scale_0p6/projected_final_hold.png",
+      "sha256": "f409524ba988f0c664b9f3e70869395b1d94e1a7073c8f88b52aad76f96cd929"
+    },
+    {
+      "case_id": "rice",
+      "seed": 1,
+      "condition": "relative3d_scale_0p8",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day21_realism_scale_sweep_v1/rice/vace_scale_0p8/projected_final_hold.png",
+      "sha256": "c5e77c50d74a6e544542a2c96c68b433809cddaa1981bd1ae260ae88c62bf46c"
+    },
+    {
+      "case_id": "rice",
+      "seed": 2,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_2/native_scale_1p0/projected_final_hold.png",
+      "sha256": "5aa7789c8539353069a88c9aebc3c4567eed9095535286bb5db266661c06d59a"
+    },
+    {
+      "case_id": "rice",
+      "seed": 2,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_2/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "a64552e06d8e82f45da9eb8c1e7926b09a45d51422df71c36278e27a472a22f6"
+    },
+    {
+      "case_id": "rice",
+      "seed": 2,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_2/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "97844b368ff8e84708d776c600eb393c6ee7a73b5f31be651421c6611b2b1c9d"
+    },
+    {
+      "case_id": "rice",
+      "seed": 2,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_2/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "a38da786e09269c8a4e083196c4cf21125cb701d3bcaedb5fef421339c741c32"
+    },
+    {
+      "case_id": "rice",
+      "seed": 2,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_2/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "c702b85b420f0e4876c752b902d62aa3805e10f7d56825e9aac0792d2e64bb8e"
+    },
+    {
+      "case_id": "rice",
+      "seed": 3,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_3/native_scale_1p0/projected_final_hold.png",
+      "sha256": "423dbab1449e2667919b320cdd718ae1eb9ec7fbf1172c4ee31ea36f59afb679"
+    },
+    {
+      "case_id": "rice",
+      "seed": 3,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_3/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "3faeb4952095fc411fc10fb8bfc8085fe8519ab44df10b547de96be5024e25dd"
+    },
+    {
+      "case_id": "rice",
+      "seed": 3,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_3/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "5bb16943b988a275ecf5873f178be75d1e845c1fe8addde772dcfd001119f86a"
+    },
+    {
+      "case_id": "rice",
+      "seed": 3,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_3/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "4bc3d2512d5edd5740e4d78178cb73bcc9bfc765c6eff138c233c7c90cad9c07"
+    },
+    {
+      "case_id": "rice",
+      "seed": 3,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/rice/seed_3/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "0dbe903fb54993aebd412eba71ae651a55ff2e49cb35c238432c3b8dd0baebd9"
+    },
+    {
+      "case_id": "cake",
+      "seed": 1,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_1/native_scale_1p0/projected_final_hold.png",
+      "sha256": "648cf7799aa9e639f10cb2386ef259856a48baed1096592c56e3d94dae3d9b97"
+    },
+    {
+      "case_id": "cake",
+      "seed": 1,
+      "condition": "planar_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day19_multimaterial_gp40_recovered_20260909_v1/cake__planar/projected_final_hold.png",
+      "sha256": "f5f44ae9a1b4124b8c8adafff9d0dfdba8bed6500faa4e53c688069399b6188b"
+    },
+    {
+      "case_id": "cake",
+      "seed": 1,
+      "condition": "relative3d_scale_1p0",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day20_cake_recovery_gp40_20260909_v1/cake__relative3d/projected_final_hold.png",
+      "sha256": "3d4dcead955ef5aebb7171687c8ee6bbabf57e58dac28465da3d348673711b73"
+    },
+    {
+      "case_id": "cake",
+      "seed": 1,
+      "condition": "relative3d_scale_0p6",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day21_realism_scale_sweep_v1/cake/vace_scale_0p6/projected_final_hold.png",
+      "sha256": "ea0fab6a3d2712bd9e20689296d33f45bebeef62c934a8e88125043f83221dc6"
+    },
+    {
+      "case_id": "cake",
+      "seed": 1,
+      "condition": "relative3d_scale_0p8",
+      "source": "legacy_seed1_hash_locked_evidence",
+      "path": "artifacts/day21_realism_scale_sweep_v1/cake/vace_scale_0p8/projected_final_hold.png",
+      "sha256": "5b3a138d25e5ebfe74454bc99f2b5064c77c00fe9c4a327060e117cf20b14cac"
+    },
+    {
+      "case_id": "cake",
+      "seed": 2,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_2/native_scale_1p0/projected_final_hold.png",
+      "sha256": "6d05ae06d095c4b040042f5c7febe2f41f7a1b71ffddbc58d62f6fbad907abda"
+    },
+    {
+      "case_id": "cake",
+      "seed": 2,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_2/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "c24d3228d2cd4399dbd95ffdcd14ee9d844cbf1e91dddfb6be6fa0b54c3ff7d7"
+    },
+    {
+      "case_id": "cake",
+      "seed": 2,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_2/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "568bed1f9ea72e6bad319bc92e9798fb9b829996211ac3e6dd7793bb20b0cbee"
+    },
+    {
+      "case_id": "cake",
+      "seed": 2,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_2/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "0955c62afa129b406440c884d5562a99ab932a6a6b1d6455fbd67ba61da29f20"
+    },
+    {
+      "case_id": "cake",
+      "seed": 2,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_2/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "863b8e2875e2be0a098f6277fa5da3e8c75bf54dc1cc3dccdd56846d2a37d566"
+    },
+    {
+      "case_id": "cake",
+      "seed": 3,
+      "condition": "native_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_3/native_scale_1p0/projected_final_hold.png",
+      "sha256": "8a12819918d28be9fbd24895e229151cc586a34aae97b7ee1047d34bad4a53e0"
+    },
+    {
+      "case_id": "cake",
+      "seed": 3,
+      "condition": "planar_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_3/planar_scale_1p0/projected_final_hold.png",
+      "sha256": "5c476d2313e9eebd126dcb56657e63c8993c1588b422d2d6b584d90dd07712d9"
+    },
+    {
+      "case_id": "cake",
+      "seed": 3,
+      "condition": "relative3d_scale_1p0",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_3/relative3d_scale_1p0/projected_final_hold.png",
+      "sha256": "0aa7327953683ab782ce29220f167d0307b0869780820a73d6c99773b80c4c34"
+    },
+    {
+      "case_id": "cake",
+      "seed": 3,
+      "condition": "relative3d_scale_0p6",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_3/relative3d_scale_0p6/projected_final_hold.png",
+      "sha256": "d8d17511c31128be41de586f12e5d5e3e33727ef2fc739986f40be417c2bede1"
+    },
+    {
+      "case_id": "cake",
+      "seed": 3,
+      "condition": "relative3d_scale_0p8",
+      "source": "day25_collected_run",
+      "path": "artifacts/day25_same_condition_ablation_collected_20260913_v1/cake/seed_3/relative3d_scale_0p8/projected_final_hold.png",
+      "sha256": "89aadfebd585ef7746d5e86d346be787b4bbc7f61f020ac58dfb7d66687598f7"
+    }
+  ],
+  "claim_limit": "A complete hash-verified final-image matrix is not an action-success, photo-realism, superiority or held-out result."
+}

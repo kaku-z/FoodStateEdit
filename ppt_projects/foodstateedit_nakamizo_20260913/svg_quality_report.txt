@@ -1,0 +1,124 @@
+PPT Master SVG Quality Check Report
+================================================================================
+
+[OK] Passed - slide_01.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_01.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 9, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 3, 'circle': 0, 'ellipse': 0, 'line': 1, 'polyline': 0, 'polygon': 0, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 9, 'tspan_elements': 0}
+
+Warnings:
+  - Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id="cover-main"> x=90.0, y=242.0..311.1, 2 lines; <g id="cover-main"> x=846.0, y=522.0..584.0, 3 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy="0". Keep semantically independent text frames separate.
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_02.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_02.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 15, 'images': {'placements': 2, 'files': ['p02_cake_fork_scale0p6.png', 'p02_cake_input.png'], 'max_frame_share': 0.0762}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 7, 'circle': 0, 'ellipse': 0, 'line': 3, 'polyline': 0, 'polygon': 1, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 15, 'tspan_elements': 0, 'contextual_values': {'colors': ['#F7F9FB']}}
+
+Warnings:
+  - Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id="slide-content"> x=92.0, y=244.0..329.8, 3 lines; <g id="slide-content"> x=92.0, y=499.0..536.2, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy="0". Keep semantically independent text frames separate.
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_03.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_03.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 19, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 4, 'circle': 4, 'ellipse': 0, 'line': 4, 'polyline': 0, 'polygon': 3, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 19, 'tspan_elements': 0}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_04.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_04.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 19, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 11, 'circle': 0, 'ellipse': 0, 'line': 5, 'polyline': 0, 'polygon': 4, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 19, 'tspan_elements': 0, 'contextual_values': {'colors': ['#5D83A6', '#69A87A']}}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_05.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_05.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 30, 'images': {'placements': 4, 'files': ['p05_ramen_control.png', 'p05_ramen_input.png', 'p05_ramen_output.png'], 'max_frame_share': 0.0295}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 17, 'circle': 0, 'ellipse': 0, 'line': 15, 'polyline': 0, 'polygon': 8, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 30, 'tspan_elements': 0, 'contextual_values': {'colors': ['#2E8B57', '#E79A23', '#F1FAF4', '#F7F9FB', '#F7FBFF', '#FFF3DE', '#FFF9F8']}, 'sparse_typography_sizes': {'22': 2}}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_06.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_06.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 18, 'images': {'placements': 1, 'files': ['p06_family_controls.png'], 'max_frame_share': 0.1776}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 4, 'circle': 0, 'ellipse': 0, 'line': 5, 'polyline': 0, 'polygon': 0, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 18, 'tspan_elements': 0, 'contextual_values': {'colors': ['#F7F9FB']}}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_07.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_07.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 26, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 6, 'circle': 4, 'ellipse': 0, 'line': 2, 'polyline': 0, 'polygon': 0, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 26, 'tspan_elements': 0}
+
+Warnings:
+  - Detected 1 paragraph-like line run(s) split across sibling <text> elements (<g id="slide-content"> x=356.0, y=285.0..413.0, 5 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy="0". Keep semantically independent text frames separate.
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_08.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_08.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 20, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 7, 'circle': 0, 'ellipse': 0, 'line': 2, 'polyline': 0, 'polygon': 0, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 20, 'tspan_elements': 0, 'contextual_values': {'colors': ['#2E8B57', '#FFF7F7']}}
+
+Warnings:
+  - Detected 1 paragraph-like line run(s) split across sibling <text> elements (<g id="slide-content"> x=100.0, y=478.0..512.8, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy="0". Keep semantically independent text frames separate.
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_09.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_09.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 22, 'images': {'placements': 2, 'files': ['p09_chordedit_grid.png', 'p09_qwen_grid.png'], 'max_frame_share': 0.1121}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 22, 'circle': 0, 'ellipse': 0, 'line': 2, 'polyline': 0, 'polygon': 1, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 22, 'tspan_elements': 0, 'contextual_values': {'colors': ['#F7F9FB', '#F8FBFD']}}
+
+Warnings:
+  - Image ../images/p09_qwen_grid.png is 1494x1192 and renders at 0.21x scale in a 420x246 meet frame; the source is 1.9 MiB — file-size advisory only, not an aspect-ratio warning; consider a smaller source asset, or export with svg_to_pptx.py --image-sizing display to downsize at export time
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_10.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_10.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 22, 'images': {'placements': 3, 'files': ['p10_success_soup_control.png', 'p10_success_soup_input.png', 'p10_success_soup_output.png'], 'max_frame_share': 0.0956}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 9, 'circle': 4, 'ellipse': 0, 'line': 3, 'polyline': 0, 'polygon': 2, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 22, 'tspan_elements': 0, 'contextual_values': {'colors': ['#2E8B57', '#F1FAF4', '#F7F9FB', '#FFF7F7']}}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_11.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_11.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 23, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 21, 'circle': 0, 'ellipse': 0, 'line': 1, 'polyline': 0, 'polygon': 0, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 23, 'tspan_elements': 0, 'contextual_values': {'colors': ['#F8FBFD', '#FFF7F7']}}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+[OK] Passed - slide_12.svg
+Path: C:\Users\kaku\Downloads\TF_UFI_EXPERIMENT_20260806\noodle_image_benchmark_v1\paper_release\ppt_projects\foodstateedit_nakamizo_20260913\svg_output\slide_12.svg
+Info: {'viewbox': '0 0 1280 720', 'carrier_receipt': {'text_elements': 19, 'images': {'placements': 0, 'files': [], 'max_frame_share': 0.0}, 'icons': 0, 'effects': {'inline_emphasis_runs': 0, 'gradient_uses': 0, 'filter_uses': 0, 'text_effects': 0}, 'geometry': {'svg_elements': {'rect': 5, 'circle': 0, 'ellipse': 0, 'line': 1, 'polyline': 0, 'polygon': 0, 'path': 0}, 'preset_shapes': 0, 'preset_names': {}, 'page_frame_elements': 0, 'marker_uses': {'start': 0, 'mid': 0, 'end': 0}}, 'native_objects': {'chart': 0, 'table': 0, 'formula_block': 0, 'formula_inline': 0, 'other': 0}}, 'fonts': ['Arial, Yu Gothic, sans-serif', 'Yu Gothic, Arial, Meiryo, sans-serif'], 'text_elements': 19, 'tspan_elements': 0}
+
+Warnings:
+  - 6 ungrouped top-level Slide-local element(s) in svg_output (<line> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id="...">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as "background" or "decoration"
+
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Check Summary
+================================================================================
+
+Total files: 12
+Fully passed: 0
+With warnings: 12
+With errors: 0

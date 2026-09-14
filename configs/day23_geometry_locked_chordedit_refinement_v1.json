@@ -1,0 +1,101 @@
+{
+  "schema_version": "foodstateedit.geometry_locked_refinement.v1",
+  "freeze_date": "2026-09-12",
+  "status": "implementation_frozen_execution_not_started",
+  "scientific_status": "single_case_development_diagnostic_not_efficacy_evidence",
+  "hypothesis": "A crop-local one-step diffusion edit can reduce the graphic appearance of the rendered utensil while geometry locking and rollback preserve the already established interaction state.",
+  "input_stage": "selected_or_fixed_final_hold_frame_after_relative3d_vace",
+  "output_stage": "candidate_then_gated_final",
+  "backend": {
+    "method": "ChordEdit_SD_Turbo",
+    "project_root": "/host/space0/guo-z/chordedit_repro/ChordEdit",
+    "model_root": "/host/space0/guo-z/chordedit_repro/models/sd-turbo-fp16-prepared",
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "complete_components_observed": ["unet", "vae", "text_encoder", "tokenizer", "scheduler", "model_index.json"],
+    "weight_files": {
+      "text_encoder/model.safetensors": {"size_bytes": 680820392, "sha256": "bc1827c465450322616f06dea41596eac7d493f4e95904dcb51f0fc745c4e13f"},
+      "unet/diffusion_pytorch_model.safetensors": {"size_bytes": 1731904736, "sha256": "40ec400881e27d1376c7c95c5bd495f407b33756e80eb6365e301c33a07af6e5"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 167335342, "sha256": "3e4c08995484ee61270175e9e7a072b66a6e4eeb5f0c266667fe1f45b90daf9a"}
+    }
+  },
+  "model_inventory": {
+    "qwen_image_edit": "not_found_as_a_complete_runnable_base_under_guo_z_storage",
+    "physicedit": "lora_present_but_required_qwen_image_edit_2509_and_dinov2_bases_absent",
+    "selected": "ChordEdit with locally complete prepared SD-Turbo fp16 components",
+    "not_selected": {
+      "interactdiffusion": "complete_text_to_image_box_conditioned_model_not_an_input_image_editor",
+      "sdxl_base_1_0": "complete_img2img_capable_base_but_no_existing_geometry_locked_food_edit_entrypoint",
+      "z_image": "incomplete_weight_downloads",
+      "vace": "retained_as_the_video_generator_not_used_as_an_independent_post_hoc_baseline_replacement"
+    }
+  },
+  "pilot": {
+    "case_id": "soup_relative3d_spoon_realism",
+    "source_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1/soup__relative3d/projected_final_hold.png",
+    "reference_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/soup/reference.png",
+    "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/soup/edit_alpha.png",
+    "source_prompt": "a synthetic-looking spoon with flat painted material holding soup above the same bowl",
+    "target_prompt": "the same spoon in exactly the same position, made of realistic stainless steel with natural reflections, sharp clean edges, consistent lighting, and the same soup payload",
+    "seed": 1,
+    "image_size": 512,
+    "crop_padding_px": 32,
+    "support_difference_threshold_255": 8,
+    "support_dilation_px": 7
+  },
+  "candidate_policy": {
+    "candidate_count": 1,
+    "no_best_of_selection": true,
+    "noise_samples": 1,
+    "n_steps": 1,
+    "t_start": 0.95,
+    "t_end": 0.10,
+    "t_delta": 0.20,
+    "step_scale": 1.0,
+    "blend_alpha": 0.65
+  },
+  "composition": {
+    "repair_support": "dilated absolute-difference support intersected with the pre-existing allowed edit region",
+    "soft_feather_px": 5,
+    "exact_outside_hard_support": true
+  },
+  "acceptance_gate": {
+    "min_changed_fraction": 0.01,
+    "max_changed_fraction": 0.95,
+    "min_structure_edge_cosine": 0.75,
+    "required_manual_checks": [
+      "utensil_identity_preserved",
+      "utensil_count_preserved",
+      "contact_relation_preserved",
+      "payload_identity_preserved",
+      "source_correspondence_preserved",
+      "photo_realism_improved"
+    ],
+    "uncertain_is_failure": true,
+    "rollback_on_any_failure": true
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "zero_compute_processes": true,
+    "min_available_system_memory_mib": 80000,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "require_new_non_overwriting_output": true
+  },
+  "output_contract": [
+    "00_pre_refinement.png",
+    "01_hard_support.png",
+    "02_soft_mask.png",
+    "03_input_crop.png",
+    "04_raw_editor_crop.png",
+    "05_candidate.png",
+    "06_automatic_gate.json",
+    "07_manual_review.json",
+    "08_final.png",
+    "run_manifest.json"
+  ],
+  "claim_limit": "This one-case development pilot can show whether the proposed local refinement interface can improve one seen spoon image without violating frozen structural gates. It cannot establish generalization, physical correctness, independent human preference, or paper-level photo realism."
+}

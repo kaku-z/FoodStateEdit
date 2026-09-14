@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">RESULTS</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">評価結果：入力保持と編集量</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">11</text>
+<g id="evaluation-table" data-pptx-bounds="60 145 1160 525">
+<text x="72" y="165" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#0070C0" font-weight="700" text-anchor="start">従来画像指標（入力との類似度、各手法 n=12）｜緑の ★ 行＝提案手法</text>
+<rect x="72" y="182" width="1136" height="357" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="4"/>
+<rect x="72" y="182" width="206" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="88" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="start">手法</text>
+<rect x="278" y="182" width="100" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="294" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="start">区分</text>
+<rect x="378" y="182" width="140" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="448.0" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">PSNR ↑</text>
+<rect x="518" y="182" width="140" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="588.0" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">SSIM ↑</text>
+<rect x="658" y="182" width="185" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="750.5" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">領域外 MAE ↓</text>
+<rect x="843" y="182" width="175" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="930.5" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">領域外完全保持 ↑</text>
+<rect x="1018" y="182" width="190" height="45" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="1113.0" y="212" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">編集領域内変化 MAE</text>
+<rect x="72" y="227" width="206" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="88" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#5D83A6" font-weight="700" text-anchor="start">ChordEdit</text>
+<rect x="278" y="227" width="100" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="288" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#5D83A6" font-weight="400" text-anchor="start">Baseline</text>
+<rect x="378" y="227" width="140" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="448.0" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">26.29</text>
+<rect x="518" y="227" width="140" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="588.0" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">0.9438</text>
+<rect x="658" y="227" width="185" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="750.5" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">0.000</text>
+<rect x="843" y="227" width="175" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="930.5" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">100.0%</text>
+<rect x="1018" y="227" width="190" height="52" fill="#F2F5F8" stroke="#D8DDE3" stroke-width="1"/>
+<text x="1113.0" y="261" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">20.99</text>
+<rect x="72" y="279" width="206" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="88" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#E31B23" font-weight="700" text-anchor="start">Qwen Image</text>
+<rect x="278" y="279" width="100" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="288" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#B04A4A" font-weight="400" text-anchor="start">Baseline</text>
+<rect x="378" y="279" width="140" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="448.0" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">13.90</text>
+<rect x="518" y="279" width="140" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="588.0" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">0.4506</text>
+<rect x="658" y="279" width="185" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="750.5" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">35.468</text>
+<rect x="843" y="279" width="175" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="930.5" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">0.17%</text>
+<rect x="1018" y="279" width="190" height="52" fill="#FFF7F7" stroke="#D8DDE3" stroke-width="1"/>
+<text x="1113.0" y="313" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="400" text-anchor="middle">51.12</text>
+<rect x="72" y="331" width="206" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="88" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">Native VACE</text>
+<rect x="278" y="331" width="100" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="288" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#2E8B57" font-weight="500" text-anchor="start">Ours（条件）</text>
+<rect x="378" y="331" width="140" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="448.0" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">34.60</text>
+<rect x="518" y="331" width="140" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="588.0" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">0.9823</text>
+<rect x="658" y="331" width="185" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="750.5" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">0.000</text>
+<rect x="843" y="331" width="175" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="930.5" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">100.0%</text>
+<rect x="1018" y="331" width="190" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="1113.0" y="365" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">8.33</text>
+<rect x="72" y="383" width="206" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="88" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">2D planar proxy</text>
+<rect x="278" y="383" width="100" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="288" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#2E8B57" font-weight="500" text-anchor="start">Ours（条件）</text>
+<rect x="378" y="383" width="140" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="448.0" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">24.86</text>
+<rect x="518" y="383" width="140" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="588.0" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">0.9473</text>
+<rect x="658" y="383" width="185" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="750.5" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">0.000</text>
+<rect x="843" y="383" width="175" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="930.5" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">100.0%</text>
+<rect x="1018" y="383" width="190" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="1113.0" y="417" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">20.18</text>
+<rect x="72" y="435" width="206" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="88" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">fixed relative3D</text>
+<rect x="278" y="435" width="100" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="288" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#2E8B57" font-weight="500" text-anchor="start">Ours（条件）</text>
+<rect x="378" y="435" width="140" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="448.0" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">24.60</text>
+<rect x="518" y="435" width="140" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="588.0" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">0.9452</text>
+<rect x="658" y="435" width="185" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="750.5" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">0.000</text>
+<rect x="843" y="435" width="175" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="930.5" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">100.0%</text>
+<rect x="1018" y="435" width="190" height="52" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="1113.0" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="500" text-anchor="middle">20.73</text>
+<rect x="72" y="487" width="206" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="88" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#2E8B57" font-weight="700" text-anchor="start">★ FoodStateEdit</text>
+<rect x="278" y="487" width="100" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="288" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#2E8B57" font-weight="700" text-anchor="start">提案手法</text>
+<rect x="378" y="487" width="140" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="448.0" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="700" text-anchor="middle">23.29</text>
+<rect x="518" y="487" width="140" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="588.0" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="700" text-anchor="middle">0.9384</text>
+<rect x="658" y="487" width="185" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="750.5" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="700" text-anchor="middle">0.000</text>
+<rect x="843" y="487" width="175" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="930.5" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="700" text-anchor="middle">100.0%</text>
+<rect x="1018" y="487" width="190" height="52" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="1113.0" y="521" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#222222" font-weight="700" text-anchor="middle">25.86</text>
+<rect x="72" y="562" width="1136" height="62" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2" rx="5"/>
+<text x="640" y="588" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#2E8B57" font-weight="700" text-anchor="middle">FoodStateEditは非編集領域を完全に保持しながら、</text>
+<text x="640" y="614" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#2E8B57" font-weight="700" text-anchor="middle">比較したVACE系条件の中で操作対象領域に最大の変化を与えた。</text>
+<text x="72" y="650" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#E31B23" font-weight="600" text-anchor="start">※ 変化量は動作成功率ではない。4例×3 seedsの選択済み開発データ。Action・Photo・Strictは統一採点中。</text>
+</g>
+</svg>

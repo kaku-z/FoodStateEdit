@@ -1,0 +1,161 @@
+{
+  "schema_version": "foodstateedit.qwen_utensil_refinement.v1",
+  "freeze_date": "2026-09-13",
+  "execution_allowed": true,
+  "scientific_status": "four_selected_cases_single_seed_development_diagnostic_not_efficacy_evidence",
+  "hypothesis": "Crop-local Qwen proposals followed by protected-region registration and utensil-only compositing can improve utensil material realism without changing the interaction geometry established by relative3D-VACE.",
+  "case_order": ["ramen", "soup", "rice", "cake"],
+  "cases": {
+    "ramen": {
+      "source_image": "/host/space0/guo-z/tf-ufi/outputs/day18_swept_support_vace_gp40_20260908_v1/projected_final_hold.png",
+      "source_sha256": "330e7e46f83b19acac2bb5e96652b8248c315d818ed3dfee6ec68d5d1bd93fa1",
+      "seed": 1,
+      "crop_size": 512,
+      "crop_padding_px": 34,
+      "instruction": "Photorealistically refine only the existing two wooden chopsticks. Keep both chopsticks' exact silhouettes, positions, angles, lengths, separation, contact point, and the lifted udon noodle unchanged. Improve only natural wood grain, subtle highlights, clean edges, and lighting consistency. Do not move, add, remove, merge, bend, or redesign the chopsticks. Do not change the noodle, bowl, broth, garnish, table, camera, crop, or background.",
+      "utensil_support": {
+        "lines": [
+          {"points": [[687, 49], [470, 87]], "width": 13},
+          {"points": [[687, 66], [464, 100]], "width": 13}
+        ],
+        "polygons": [],
+        "dilation_px": 3
+      }
+    },
+    "soup": {
+      "source_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1/soup__relative3d/projected_final_hold.png",
+      "source_sha256": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854",
+      "seed": 1,
+      "crop_size": 512,
+      "crop_padding_px": 34,
+      "instruction": "Photorealistically refine only the existing single stainless-steel spoon. Keep its exact silhouette, position, angle, size, rim, contact relation, and the soup payload unchanged. Improve only metal reflections, rim sharpness, edge quality, and lighting consistency. Do not move, add, remove, bend, enlarge, or redesign the spoon. Do not change the soup inside the spoon, bowl, garnish, table, camera, crop, or background.",
+      "utensil_support": {
+        "lines": [
+          {"points": [[27, 8], [151, 132]], "width": 13}
+        ],
+        "polygons": [],
+        "ellipses": [
+          {"bbox": [111, 126, 261, 194], "width": 12}
+        ],
+        "dilation_px": 3
+      }
+    },
+    "rice": {
+      "source_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_gp40_v1/rice__relative3d/projected_final_hold.png",
+      "source_sha256": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3",
+      "seed": 1,
+      "crop_size": 512,
+      "crop_padding_px": 34,
+      "instruction": "Photorealistically refine only the existing single stainless-steel serving spatula. Keep its exact silhouette, position, angle, blade outline, contact relation, and lifted rice payload unchanged. Improve only stainless-steel reflections, edge sharpness, thickness cues, and lighting consistency. Do not move, add, remove, bend, resize, or redesign the spatula. Do not change the rice, egg, vegetables, plate, camera, crop, or background.",
+      "utensil_support": {
+        "lines": [
+          {"points": [[683, 64], [515, 140]], "width": 13},
+          {"points": [[492, 109], [548, 160], [497, 213], [393, 184], [390, 150], [426, 111], [492, 109]], "width": 10}
+        ],
+        "polygons": [
+          [[493, 118], [538, 159], [500, 198], [487, 194], [519, 159], [486, 128]]
+        ],
+        "dilation_px": 3
+      }
+    },
+    "cake": {
+      "source_image": "/host/space0/guo-z/tf-ufi/outputs/day21_realism_scale_sweep_v1_cake/vace_scale_0p6/projected_final_hold.png",
+      "source_sha256": "ea0fab6a3d2712bd9e20689296d33f45bebeef62c934a8e88125043f83221dc6",
+      "seed": 1,
+      "crop_size": 512,
+      "crop_padding_px": 36,
+      "instruction": "Photorealistically refine only the existing single four-tined stainless-steel fork. Keep its exact silhouette, position, angle, size, tine count, contact point, and the attached cake bite unchanged. Improve only metal material, subtle reflections, edge sharpness, and lighting consistency. Do not move, add, remove, bend, or redesign the fork. Do not change the cake, payload, plate, table, camera, crop, or background.",
+      "utensil_support": {
+        "lines": [
+          {"points": [[641, 46], [456, 134]], "width": 15}
+        ],
+        "polygons": [
+          [[380, 101], [463, 122], [458, 145], [433, 163], [416, 180], [369, 174], [371, 151]]
+        ],
+        "dilation_px": 4
+      }
+    }
+  },
+  "inference": {
+    "num_inference_steps": 40,
+    "true_cfg_scale": 4.0,
+    "guidance_scale": 1.0,
+    "negative_prompt": " ",
+    "torch_dtype": "bfloat16",
+    "offload": "model_cpu_offload",
+    "pipeline_loads": 1
+  },
+  "alignment": {
+    "method": "numpy_translation_search_on_protected_crop_pixels",
+    "max_translation_px": 48,
+    "search_downsample": 4,
+    "min_protected_similarity": 0.80
+  },
+  "composition": {
+    "soft_feather_px": 3,
+    "blend_alpha": 0.72,
+    "exact_outside_hard_support": true
+  },
+  "acceptance_gate": {
+    "min_changed_fraction": 0.01,
+    "max_changed_fraction": 0.98,
+    "min_structure_edge_cosine": 0.82,
+    "required_manual_checks": [
+      "utensil_identity_preserved",
+      "utensil_count_preserved",
+      "contact_relation_preserved",
+      "payload_identity_preserved",
+      "source_correspondence_preserved",
+      "photo_realism_improved"
+    ],
+    "uncertain_is_failure": true,
+    "rollback_on_any_failure": true
+  },
+  "backend": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "model_root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "pipeline_class": "QwenImageEditPlusPipeline",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "model_index.json": {"size_bytes": 516, "sha256": "5ba11ceee68457ad6a48b899b8c9493e347f4685e11e5eeca952a13f16549e35"},
+      "text_encoder/model.safetensors.index.json": {"size_bytes": 57655, "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c"},
+      "transformer/diffusion_pytorch_model.safetensors.index.json": {"size_bytes": 198887, "sha256": "034f003b74493730e1c595b2e23232e99d9e28bcef3b4c10c56d1b53eee4b435"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 253806966, "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344"}
+    }
+  },
+  "implementation": {
+    "runner_sha256": "5598e63da05d394b9d94e7dc6ac503171ec200b2eace56bb6c938b55dda8b0b5",
+    "appearance_refinement_sha256": "ecdc2e8f4795568bf65a285e9c5e4ed5220b7d216e5bc1790d7b492907209eb1"
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_four_case_v3",
+  "preflight_path": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_four_case_v3_preflight.json",
+  "runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_runtime_v3",
+  "expected_generation_count": 4,
+  "output_contract_per_case": [
+    "00_pre_refinement.png",
+    "01_utensil_hard_support.png",
+    "02_utensil_soft_mask.png",
+    "03_structure_mask.png",
+    "04_input_crop.png",
+    "05_raw_qwen_crop.png",
+    "06_aligned_qwen_crop.png",
+    "07_candidate.png",
+    "08_automatic_gate.json",
+    "09_manual_review.json",
+    "10_final.png",
+    "condition_manifest.json"
+  ],
+  "claim_limit": "This four-selected-case, one-seed-per-case development sweep tests whether Qwen can refine utensil appearance after relative3D-VACE results. It cannot establish generalization, superiority, physical correctness, or independent photo-realism gains. Candidates are not promoted unless all automatic and semantic checks pass."
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "foodstateedit.family_template_controls_pilot_result.v1",
+  "date": "2026-09-13",
+  "status": "pilot_control_generation_complete",
+  "scientific_status": "development_control_inputs_not_effectiveness_evidence",
+  "split": "pilot",
+  "case_count": 20,
+  "family_counts": {
+    "granular": 5,
+    "liquid": 5,
+    "strand": 5,
+    "strand_contact": 5
+  },
+  "control_modes": [
+    "planar",
+    "relative3d"
+  ],
+  "frame_count": 21,
+  "per_image_parameter_tuning": false,
+  "builder": {
+    "path": "scripts/build_family_template_controls.py",
+    "sha256": "c61b1342ab6479c950686e39623acdba54f41c412fc08d4de670203961fb741d"
+  },
+  "remote_output_root": "/host/space0/guo-z/tf-ufi/outputs/day31_family_template_controls_pilot_v1",
+  "local_artifact_root": "artifacts/day31_family_template_controls_pilot_v1",
+  "manifest_sha256": "99a8b4de01edc0d76083c8fd8c9e7d5102ce3fd7f2de41af2ab01ede933cd977",
+  "transfer_verification": {
+    "manifest_recorded_files": 180,
+    "bytes": 88384357,
+    "sha256_mismatches": 0,
+    "size_mismatches": 0
+  },
+  "support_fraction_ranges": {
+    "granular": [0.2544, 0.2664],
+    "liquid": [0.2343, 0.2494],
+    "strand": [0.2745, 0.2822],
+    "strand_contact": [0.2575, 0.2682]
+  },
+  "review_grids": {
+    "granular": "fd8a40f40b686f2909e558037f78d24db9cb0ff43a1029fa66340e2015ea6acd",
+    "liquid": "dbc57eb4c1f5f56e87f2b99562cd61d606bd6c7c73d3d8483438b4fc635ed523",
+    "strand": "e25696087d79bb16811424c24aea405d47babe917c8c74c5255236d6ea52c3e6",
+    "strand_contact": "218740515ed57085db6fca41544770dbb4b3154aa8b37efc51d81bacb913b43e"
+  },
+  "internal_visual_review": {
+    "reviewer_kind": "internal_unblinded_development_review",
+    "geometry_and_lift_readable": true,
+    "protected_background_exact": true,
+    "photorealistic_endpoint": false,
+    "accepted_role": "VACE intervention controls only",
+    "not_accepted_role": "final images, target images, annotations or effectiveness evidence",
+    "noted_limitation": "The pasta fork and all payload geometry remain visibly schematic family templates."
+  },
+  "heldout_test_generated": false,
+  "decision": "Keep the 40-image held-out split locked until Day25 finishes, its material-level scale rule is frozen, and this pilot-only control builder is admitted as an immutable intervention generator.",
+  "claim_limit": "This record proves deterministic control construction and byte-exact collection only. It does not prove VACE success, relative-3D superiority, physical correctness, photo realism or held-out generalization."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "foodstateedit.same_condition_ablation_resource_failure.v1",
+  "date": "2026-09-13",
+  "status": "preflight_resource_failure_preserved",
+  "verification_status": "HASH_VERIFIED_NO_INFERENCE",
+  "host": "gp40.cs.uec.ac.jp",
+  "completed_existing_cases": {
+    "ramen": {"completed_conditions": 15, "expected_conditions": 15, "pipeline_load_count": 1},
+    "soup": {"completed_conditions": 10, "expected_conditions": 10, "pipeline_load_count": 1}
+  },
+  "failed_new_attempts": {
+    "rice": {
+      "physical_gpu": 0,
+      "output_root_created": false,
+      "inference_count": 0,
+      "failed_checks": ["gpu_free_memory", "gpu_utilization", "zero_compute_processes"],
+      "foreign_owner": "kanayama-r",
+      "preflight_sha256": "5042cc3b755ef22f7c22bf5e34d1503f8c218ddb3661438eed5f8dbf16fdfd32",
+      "launcher_log_sha256": "6b7f7e0dfbaa63ee1b0296dd0cff4853330d76a3398451139c8b45b37b8f5c62"
+    },
+    "cake": {
+      "physical_gpu": 1,
+      "output_root_created": false,
+      "inference_count": 0,
+      "failed_checks": ["gpu_free_memory", "gpu_utilization", "zero_compute_processes"],
+      "foreign_owner": "kanayama-r",
+      "preflight_sha256": "31225a82771b4333c5368f73e925cb4368d5330fb53fc35353ca3bc6adccd4b9",
+      "launcher_log_sha256": "6b7f7e0dfbaa63ee1b0296dd0cff4853330d76a3398451139c8b45b37b8f5c62"
+    }
+  },
+  "evidence_root": "artifacts/day25_same_condition_ablation_resource_failure_20260913_gp40_v1",
+  "remote_to_local_sha256_mismatches": 0,
+  "next_action": "User decision required before freezing new non-overwriting v2 output and preflight paths on a freshly audited safe RTX A6000.",
+  "claim_limit": "This is resource-failure evidence only. It is not a model result and provides no action, realism, ablation, held-out, superiority, or generalization evidence."
+}

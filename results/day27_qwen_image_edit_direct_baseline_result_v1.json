@@ -1,0 +1,97 @@
+{
+  "schema_version": "foodstateedit.qwen_image_edit_direct_baseline_result.v1",
+  "date": "2026-09-12",
+  "status": "executed_hash_verified_internal_non_blind_review",
+  "verification_status": "EXECUTED_HASH_VERIFIED_INTERNAL_NON_BLIND_REVIEW",
+  "method": "Qwen-Image-Edit-2511_direct_edit",
+  "baseline_endpoint": "raw_qwen.png",
+  "diagnostic_endpoint": "final.png",
+  "scope": {
+    "cases": ["ramen", "soup", "rice", "cake"],
+    "real_cases": ["ramen", "soup", "rice"],
+    "synthetic_supplementary_cases": ["cake"],
+    "seeds": [1, 2, 3],
+    "outputs": 12,
+    "held_out": false,
+    "independent_blind_review": false
+  },
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "physical_gpu": 6,
+    "gpu_name": "NVIDIA RTX A6000",
+    "gpu_uuid": "GPU-2e8f30c9-9cad-ee0d-069d-0ec188432bd3",
+    "preflight_passed": true,
+    "preflight_checks_passed": 28,
+    "preflight_checks_total": 28,
+    "pipeline_load_count": 1,
+    "completed_outputs": 12,
+    "failed_outputs": 0,
+    "wall_time_seconds": 2422.839,
+    "remote_output_files_rehashed_locally": 62,
+    "remote_output_sha256_mismatches": 0,
+    "supporting_evidence_files_rehashed_locally": 4,
+    "supporting_evidence_sha256_mismatches": 0,
+    "model_downloads": 0,
+    "seed_replacements": 0
+  },
+  "endpoint_decision": {
+    "raw_qwen_is_model_baseline": true,
+    "support_locked_composite_is_baseline": false,
+    "reason": "Qwen performs a global edit and changes framing and native output dimensions. Applying the source-space support mask after generation misregisters the generated utensil and payload, visibly truncating chopsticks, spoon handles and fork handles and introducing hard seams.",
+    "masked_composite_outside_support_max_pixel_difference": 0,
+    "masked_composite_preservation_credit_allowed": false,
+    "protocol_reason": "Post-hoc exact compositing is retained as a diagnostic and is not treated as autonomous generator preservation."
+  },
+  "raw_output_preservation_diagnostic": {
+    "comparison": "Each raw output was resized to the corresponding input dimensions with LANCZOS and compared without registration.",
+    "outside_support_max_pixel_difference_min": 208,
+    "outside_support_max_pixel_difference_max": 250,
+    "outside_support_mean_absolute_difference_min": 11.837889,
+    "outside_support_mean_absolute_difference_max": 69.292492,
+    "outside_support_fraction_pixels_max_channel_gt_10_min": 0.309664743,
+    "outside_support_fraction_pixels_max_channel_gt_10_max": 0.971492793,
+    "exact_preservation_gate_pass": 0,
+    "total": 12,
+    "interpretation": "The raw Qwen outputs do not preserve protected pixels exactly. The values also include resizing and global reframing effects and are not a perceptual similarity score."
+  },
+  "provisional_internal_review": {
+    "action_success": {"pass": 3, "total": 12},
+    "photo_success": {"pass": 12, "total": 12},
+    "preservation_success": {"pass": 0, "total": 12},
+    "strict_end_to_end_success": {"pass": 0, "total": 12},
+    "per_output": [
+      {"case_id": "ramen", "seed": 1, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "Two realistic chopsticks and a photographic lift are present, but several noodles are lifted instead of one and a matching source reduction is not unambiguous."},
+      {"case_id": "ramen", "seed": 2, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "The chopsticks and lifted bundle are realistic, but the result lifts a broad multi-strand sheet and does not establish one conserved noodle payload."},
+      {"case_id": "ramen", "seed": 3, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "The image is photographic, but the multi-strand payload is draped mainly over the lower stick rather than clearly pinched as one noodle, and source correspondence is unclear."},
+      {"case_id": "soup", "seed": 1, "action_success": true, "photo_success": true, "preservation_success": false, "observation": "One realistic spoon contains soup above the surface with a visible source trail and no second utensil; the globally edited frame is not pixel-preserving."},
+      {"case_id": "soup", "seed": 2, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "The spoon and soup are realistic, but a visible falling drip conflicts with the retained-payload/no-spill target."},
+      {"case_id": "soup", "seed": 3, "action_success": true, "photo_success": true, "preservation_success": false, "observation": "One complete spoon holds a plausible spoonful above a visibly changed surface without an extra utensil or obvious spill."},
+      {"case_id": "rice", "seed": 1, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "A coherent photographic scoop is supported by a serving utensil, but the source reduction is hidden by global reframing and shallow depth of field."},
+      {"case_id": "rice", "seed": 2, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "The spatula and granular payload are realistic, but no unambiguous matching source reduction is visible."},
+      {"case_id": "rice", "seed": 3, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "The requested utensil and scoop are recognizable and photographic, but source-payload correspondence cannot be confirmed."},
+      {"case_id": "cake", "seed": 1, "action_success": true, "photo_success": true, "preservation_success": false, "observation": "One fork lifts the pre-cut bite and leaves a matching gap and crumbs; the globally regenerated frame still fails exact preservation."},
+      {"case_id": "cake", "seed": 2, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "One realistic fork holds a bite, but the remaining cake lacks a clear matching front-right gap, so conserved transfer is not established."},
+      {"case_id": "cake", "seed": 3, "action_success": false, "photo_success": true, "preservation_success": false, "observation": "The image is photographic and contains a lifted bite, but two forks are present, violating the required utensil count."}
+    ],
+    "review_boundary": "This is one author-side, non-blind diagnostic. Independent blinded reviewers must score the frozen ballot before formal statistical claims."
+  },
+  "evidence": {
+    "config": {"path": "configs/day27_qwen_image_edit_direct_baseline_v1.json", "sha256": "d2a8a144bbfa1bf48e370dc7f7c399c92df3c6812da2cf1e31e87b8caa9cab7a"},
+    "runner": {"path": "scripts/run_qwen_image_edit_direct_baseline.py", "sha256": "4a3a63d2873cb77c0061747a0f57f0e7e06bfeae67a51861d23ecb8543a539fb"},
+    "review_builder": {"path": "scripts/make_day27_qwen_review.py", "sha256": "19ce43ddbacb258485871a31ffb5ba09ff8a50210615487506b633fc7f5c09c1"},
+    "raw_qwen_review_grid": {"path": "artifacts/day27_qwen_image_edit_direct_baseline_v1/review_grid_raw_qwen.png", "sha256": "ddbdff577f908a8ba909a5e30e32b27c2ef1d9db0013d307e832236118fc09b3"},
+    "masked_composite_diagnostic_grid": {"path": "artifacts/day27_qwen_image_edit_direct_baseline_v1/review_grid_masked_composite_diagnostic.png", "sha256": "f5c3739102dfa799999487c8da0fb32987d2183605b6dafe1f6c60f10325848f"},
+    "review_grid_manifest": {"path": "artifacts/day27_qwen_image_edit_direct_baseline_v1/review_grid_manifest.json", "sha256": "9263ef030d849015d4d632856948c51b8589bec6785410af285deb65cf1507ce"},
+    "remote_output_root": "/host/space0/guo-z/tf-ufi/outputs/day27_qwen_image_edit_direct_baseline_v1",
+    "remote_preflight": "/host/space0/guo-z/tf-ufi/outputs/day27_qwen_image_edit_direct_baseline_v1_preflight.json",
+    "remote_runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day27_qwen_image_edit_direct_baseline_runtime_v1"
+  },
+  "formal_benchmark_impact": {
+    "qwen_named_editor_baseline_added": true,
+    "strong_named_editor_requirement_fully_closed": false,
+    "missing_named_editors": ["FLUX Kontext", "ChronoEdit"],
+    "held_out_test_unlocked": false,
+    "interpretation": "Qwen is a much stronger final-image realism baseline than the existing ChordEdit pilot, but it does not supply a controllable interaction sequence or exact protected-scene preservation."
+  },
+  "claim_limit": "This is a four-case, three-seed, same-input selected development baseline with one internal non-blind review. Cake is synthetic supplementary evidence. It does not establish superiority, generalization, physical correctness, independent human preference, or paper-level benchmark performance."
+}

@@ -12,12 +12,17 @@ try {
     $compileFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter "*.py" -File |
         Where-Object { $_.FullName -notmatch "[\\/]__pycache__[\\/]" } |
         ForEach-Object FullName
-    python -m py_compile @compileFiles
-    if ($LASTEXITCODE -ne 0) {
-        throw "Python compilation failed with exit code $LASTEXITCODE"
+    $compileBatchSize = 40
+    for ($offset = 0; $offset -lt $compileFiles.Count; $offset += $compileBatchSize) {
+        $lastIndex = [Math]::Min($offset + $compileBatchSize - 1, $compileFiles.Count - 1)
+        $compileBatch = $compileFiles[$offset..$lastIndex]
+        python -m py_compile @compileBatch
+        if ($LASTEXITCODE -ne 0) {
+            throw "Python compilation failed with exit code $LASTEXITCODE"
+        }
     }
 
-    python -c "import json, pathlib; files=list(pathlib.Path('.').rglob('*.json')); [json.loads(p.read_text(encoding='utf-8')) for p in files]; print(f'JSON parsed: {len(files)} files')"
+    python -c "import json, pathlib; excluded={'.git','node_modules'}; files=[p for p in pathlib.Path('.').rglob('*.json') if not excluded.intersection(p.parts)]; [json.loads(p.read_text(encoding='utf-8')) for p in files]; print(f'JSON parsed: {len(files)} files')"
     if ($LASTEXITCODE -ne 0) {
         throw "JSON validation failed with exit code $LASTEXITCODE"
     }

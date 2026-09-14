@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">METHOD</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">提案手法：相対3D制御と凍結VACE</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">06</text>
+<g id="method-framework-from-report" data-pptx-bounds="142 170 996 502">
+<rect x="142" y="170" width="996" height="502" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p05_framework_report_exact.png" x="152" y="178" width="976" height="486" preserveAspectRatio="xMidYMid meet"/>
+</g>
+</svg>

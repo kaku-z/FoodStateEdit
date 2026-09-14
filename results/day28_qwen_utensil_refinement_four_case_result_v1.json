@@ -1,0 +1,77 @@
+{
+  "schema_version": "foodstateedit.qwen_utensil_refinement_result.v1",
+  "date": "2026-09-13",
+  "status": "technical_success_four_candidates_generated_zero_promoted",
+  "material_passport": {
+    "artifact_type": "experiment_result",
+    "verification_status": "ANALYZED",
+    "scope": "four selected development examples, one fixed seed per case",
+    "human_evaluation": "primary-agent unblinded visual review only"
+  },
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "physical_gpu": 6,
+    "gpu_name": "NVIDIA RTX A6000",
+    "pipeline_load_count": 1,
+    "candidate_count": 4,
+    "wall_time_seconds": 968.72,
+    "remote_output_root": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_four_case_v3",
+    "remote_preflight": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_four_case_v3_preflight.json",
+    "remote_runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_runtime_v3"
+  },
+  "integrity": {
+    "remote_local_sha256_files_checked": 55,
+    "remote_local_sha256_mismatches": 0,
+    "outside_support_max_abs_difference_all_cases": 0,
+    "all_finals_equal_pre_refinement_due_to_rollback": true
+  },
+  "cases": {
+    "ramen": {
+      "inside_support_changed_fraction": 0.9980358779625508,
+      "structure_edge_cosine": 0.8286204385614204,
+      "protected_registration_similarity": 0.980394873899572,
+      "translation_xy_pixels": [0, 4],
+      "automatic_gate": "fail_maximum_local_change",
+      "unblinded_photo_observation": "modest improvement",
+      "promoted": false
+    },
+    "soup": {
+      "inside_support_changed_fraction": 0.9867265886287625,
+      "structure_edge_cosine": 0.8888358026695352,
+      "protected_registration_similarity": 0.9901431205225926,
+      "translation_xy_pixels": [0, 0],
+      "automatic_gate": "fail_maximum_local_change",
+      "unblinded_photo_observation": "visible crop-local improvement",
+      "promoted": false
+    },
+    "rice": {
+      "inside_support_changed_fraction": 0.9985699865410498,
+      "structure_edge_cosine": 0.8043485067829097,
+      "protected_registration_similarity": 0.9440192802279603,
+      "translation_xy_pixels": [0, 0],
+      "automatic_gate": "fail_maximum_local_change_and_structure_edge_retention",
+      "unblinded_photo_observation": "no clear net improvement",
+      "promoted": false
+    },
+    "cake": {
+      "inside_support_changed_fraction": 0.9961541823267197,
+      "structure_edge_cosine": 0.8115171397069775,
+      "protected_registration_similarity": 0.9826132288166121,
+      "translation_xy_pixels": [4, 0],
+      "automatic_gate": "fail_maximum_local_change_and_structure_edge_retention",
+      "unblinded_photo_observation": "visible crop-local improvement",
+      "promoted": false
+    }
+  },
+  "interpretation": "Qwen has useful local material-rendering capacity, but the current narrow-support composite makes the gain subtle and the frozen changed-pixel gate is poorly matched to diffusion repainting. The rice proxy geometry remains the dominant failure and cannot be repaired by appearance editing alone.",
+  "artifacts": {
+    "config": "configs/day28_qwen_utensil_refinement_four_case_v3.json",
+    "runner": "scripts/run_qwen_utensil_refinement.py",
+    "remote_run_manifest": "artifacts/day28_qwen_utensil_refinement_four_case_v3/run_manifest.json",
+    "preflight": "artifacts/day28_qwen_utensil_refinement_four_case_v3/preflight.json",
+    "raw_qwen_crop_grid": "artifacts/day28_qwen_utensil_refinement_four_case_v3/review_grid_raw_qwen_crops.png",
+    "before_candidate_diff_grid": "artifacts/day28_qwen_utensil_refinement_four_case_v3/review_grid_before_candidate_diff.png",
+    "local_unblinded_review": "artifacts/day28_qwen_utensil_refinement_four_case_v3/local_unblinded_visual_review.json"
+  },
+  "claim_limit": "Four selected development examples with one fixed seed cannot establish generalization, superiority, physical correctness, or independent photo-realism gains."
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="cover">
+<g id="cover-main" data-pptx-bounds="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="28" height="720" fill="#0070C0" stroke="none" stroke-width="1"/>
+<line x1="90" y1="84" x2="1192" y2="84" stroke="#D8DDE3" stroke-width="2"/>
+<text x="90" y="137" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="2.0">修士研究 予備発表</text>
+<text x="90" y="242.0" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="54" fill="#222222" font-weight="700" text-anchor="start">3次元動作制御に基づく</text>
+<text x="90" y="311.12" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="54" fill="#222222" font-weight="700" text-anchor="start">食物画像編集</text>
+<text x="92" y="398" font-family="Arial, Yu Gothic, sans-serif" font-size="24" fill="#666666" font-weight="400" text-anchor="start">Food Image Editing Based on 3D Motion Control</text>
+<rect x="90" y="440" width="178" height="6" fill="#E31B23" stroke="none" stroke-width="1"/>
+<text x="90" y="495" font-family="Arial, Yu Gothic, sans-serif" font-size="32" fill="#0070C0" font-weight="700" text-anchor="start">FoodStateEdit</text>
+<text x="846" y="522.0" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="400" text-anchor="start">メディア情報学</text>
+<text x="846" y="553.0" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="400" text-anchor="start">GUO ZHENGPENG　2530030</text>
+<text x="846" y="584.0" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="400" text-anchor="start">主指導：柳井 啓司　　副指導：高橋 裕樹</text>
+<text x="1192" y="676" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#666666" font-weight="400" text-anchor="end">2026.09.13</text>
+</g>
+</svg>

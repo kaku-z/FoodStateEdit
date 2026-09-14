@@ -1,0 +1,94 @@
+{
+  "schema_version": "foodstateedit.day34_presentation_soup_same_input_metrics.v1",
+  "date": "2026-09-13",
+  "sample": {
+    "case_id": "clear_broth_spoon_imagegen_pseudo_v1",
+    "source_type": "selected synthetic pseudo input",
+    "seed": 1,
+    "input_path": "artifacts/day9_action_pseudo_dataset_v3/vace_reference_image/clear_broth_spoon_imagegen_pseudo_v1.png",
+    "input_sha256": "1a3401e0aee9a3e83439581256c71eebd09feb20c9c52e5162e50ab09fa11838",
+    "mask_path": "artifacts/day9_action_pseudo_dataset_v3/edit_alpha/clear_broth_spoon_imagegen_pseudo_v1.png",
+    "mask_sha256": "b42369607c7d26de139a50a3ac0f740d87783ac19ca734387ecdd26e9b011a95"
+  },
+  "records": [
+    {
+      "method": "ChordEdit",
+      "path": "artifacts/day34_presentation_soup_same_input_baselines_v1/chordedit_soup/seed_1/final.png",
+      "sha256": "914daba0d221656747f87ae0ab8bf6017d14566bab829f9c449cbcfe2bf067be",
+      "resized_to_input_for_metrics": false,
+      "metrics": {
+        "full_psnr_db": 31.77630257094116,
+        "full_ssim": 0.9822339200802122,
+        "full_rgb_mae": 0.9204895282510772,
+        "outside_psnr_db": null,
+        "outside_ssim": 1.0,
+        "outside_rgb_mae": 0.0,
+        "outside_fraction_pixels_max_channel_gt_10": 0.0,
+        "outside_exact_pixel_fraction": 1.0,
+        "inside_rgb_mae_change_magnitude": 13.22305012473487
+      },
+      "internal_non_blind_review": {
+        "action_success": false,
+        "photo_success": false,
+        "preservation_success": true,
+        "diagnosis": "Malformed/truncated utensil fragment; no complete spoon retaining broth.",
+        "strict_end_to_end_success": false
+      }
+    },
+    {
+      "method": "Qwen-Image-Edit (raw)",
+      "path": "artifacts/day34_presentation_soup_same_input_baselines_v1/qwen/raw_qwen.png",
+      "sha256": "e3498b06482542333baea035113dc9b3112cdcbe45f95ad7c1d4567c985a35bd",
+      "resized_to_input_for_metrics": true,
+      "metrics": {
+        "full_psnr_db": 15.73390038065255,
+        "full_ssim": 0.6281637000607255,
+        "full_rgb_mae": 20.636577984234233,
+        "outside_psnr_db": 16.72143156841502,
+        "outside_ssim": 0.6389943830283545,
+        "outside_rgb_mae": 18.19231291057055,
+        "outside_fraction_pixels_max_channel_gt_10": 0.44621726227918923,
+        "outside_exact_pixel_fraction": 0.0025580873301906107,
+        "inside_rgb_mae_change_magnitude": 53.304759706790634
+      },
+      "internal_non_blind_review": {
+        "action_success": true,
+        "photo_success": true,
+        "preservation_success": false,
+        "diagnosis": "Photorealistic spoon retaining broth, but the raw editor globally reframes/reconstructs the scene.",
+        "strict_end_to_end_success": false
+      }
+    },
+    {
+      "method": "FoodStateEdit controlled VACE",
+      "path": "ppt_projects/foodstateedit_nakamizo_20260913/images/p10_success_soup_output.png",
+      "sha256": "d4523663e4a2e3a90493b06e3d4f4de528538605281256230f067e956a8df57b",
+      "resized_to_input_for_metrics": false,
+      "metrics": {
+        "full_psnr_db": 20.681366528865865,
+        "full_ssim": 0.9648975215732295,
+        "full_rgb_mae": 3.7458030380924403,
+        "outside_psnr_db": null,
+        "outside_ssim": 1.0,
+        "outside_rgb_mae": 0.0,
+        "outside_fraction_pixels_max_channel_gt_10": 0.0,
+        "outside_exact_pixel_fraction": 1.0,
+        "inside_rgb_mae_change_magnitude": 53.80934797182201
+      },
+      "internal_non_blind_review": {
+        "action_success": true,
+        "photo_success": true,
+        "preservation_success": true,
+        "diagnosis": "One coherent spoon retaining broth; exact protected-region preservation is imposed by projection.",
+        "strict_end_to_end_success": true
+      }
+    }
+  ],
+  "metric_scope": {
+    "psnr_ssim_mae": "Input-fidelity/preservation diagnostics only; they do not measure action correctness.",
+    "outside_support": "Pixels outside the frozen edit-alpha support; SSIM excludes an 11-pixel dilated boundary.",
+    "qwen_raw": "The direct baseline is evaluated as its raw global output; its diagnostic masked composite is not credited as generator preservation.",
+    "foodstateedit_projection": "Exact outside-support preservation is imposed by compositing and is not evidence of native generator preservation."
+  },
+  "claim_limit": "One selected synthetic sample, one seed, and non-blind internal review. No statistical superiority, generalization, physical correctness, or human-preference claim is supported."
+}

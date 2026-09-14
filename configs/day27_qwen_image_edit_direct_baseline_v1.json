@@ -1,0 +1,103 @@
+{
+  "schema_version": "foodstateedit.qwen_image_edit_direct_baseline.v1",
+  "freeze_date": "2026-09-12",
+  "execution_allowed": true,
+  "scientific_status": "same_input_strong_external_editor_development_baseline_not_held_out_effectiveness",
+  "method_id": "Qwen-Image-Edit-2511_direct_edit",
+  "case_order": ["ramen", "soup", "rice", "cake"],
+  "seeds": [1, 2, 3],
+  "cases": {
+    "ramen": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/noodle/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/noodle/edit_alpha.png",
+      "input_sha256": "0e0f1576f122dd662ba67d18cfd7d3825ccdae1f35b33ff1b8d13c7e632b93c6",
+      "allowed_edit_region_sha256": "a13bb393459a67e8b261c02dc317b75c859a4e084b38c56c1fc11bbc4b4e357f",
+      "instruction": "Edit this same real udon photograph so that exactly two separate realistic wooden chopsticks lift one long continuous udon noodle high above the bowl. The noodle must be visibly pinched, supported by the chopsticks, and still connected to the noodles below. Preserve the bowl, broth, garnish, camera, background and lighting. Add no hand, extra utensil, duplicate noodle payload or illustration style."
+    },
+    "soup": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/soup/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/soup/edit_alpha.png",
+      "input_sha256": "dfa5d3870d0ae49177f3b7cd9cd2aa23c9ef4b6607f0ce5b7546e960d0df3eff",
+      "allowed_edit_region_sha256": "ce15d4a7af43dfc3aab8ff90ad957da272eb4b14295f9c9f6a15a86e25ffe46f",
+      "instruction": "Edit this same real potage photograph so that exactly one realistic stainless-steel spoon scoops and lifts a visible spoonful above the soup surface. The soup must be retained in the spoon by a natural meniscus with a corresponding shallow source change. Preserve the bowl, garnish, camera, background and lighting. Add no hand, spill, crater, extra spoon or duplicate payload."
+    },
+    "rice": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/rice/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/rice/edit_alpha.png",
+      "input_sha256": "630352af9844e4658f0dd26331f95113f7849cdd86b58ece32ad364e9cc2c7cc",
+      "allowed_edit_region_sha256": "01b784b3c945f6d8a23f17754fe47112f9692dda7a76b68d9f0812335b64ffe5",
+      "instruction": "Edit this same real fried-rice photograph so that exactly one realistic stainless-steel serving spatula lifts a coherent small scoop of distinct rice grains, egg and vegetables supported on its blade. Show a matching shallow source reduction. Preserve the plate, camera, background and lighting. Add no hand, second utensil, floating grains or duplicate payload."
+    },
+    "cake": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/cake/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/cake/edit_alpha.png",
+      "input_sha256": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
+      "allowed_edit_region_sha256": "e3f3a7b41d18644bad9a2835c9037d751729fb8550543c6d3c918844a5f11f8c",
+      "instruction": "Edit this same cake photograph so that exactly one realistic four-tined metal fork lifts the already pre-cut front-right bite above the plate. Keep the intact bite attached to the fork and leave one matching source gap with natural crumb surfaces. Preserve the rest of the cake, plate, camera, background and lighting. Add no hand, second fork, second bite or duplicated food."
+    }
+  },
+  "fairness_contract": {
+    "inputs_match_day25_and_day26": true,
+    "allowed_edit_regions_match_day25_and_day26": true,
+    "target_actions_match_day25_and_day26": true,
+    "original_image_is_the_only_visual_input": true,
+    "no_planar_proxy": true,
+    "no_relative3d_proxy": true,
+    "no_vace_output_as_editor_input": true,
+    "single_candidate_per_seed": true,
+    "no_best_of_selection": true,
+    "no_failed_seed_replacement": true,
+    "exact_protected_region_composite": true
+  },
+  "inference": {
+    "num_inference_steps": 40,
+    "true_cfg_scale": 4.0,
+    "guidance_scale": 1.0,
+    "negative_prompt": " ",
+    "torch_dtype": "bfloat16",
+    "offload": "model_cpu_offload",
+    "pipeline_loads": 1
+  },
+  "backend": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "model_root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "pipeline_class": "QwenImageEditPlusPipeline",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "model_index.json": {"size_bytes": 516, "sha256": "5ba11ceee68457ad6a48b899b8c9493e347f4685e11e5eeca952a13f16549e35"},
+      "text_encoder/model-00001-of-00004.safetensors": {"size_bytes": 4968243304, "sha256": "d725335e4ea2399be706469e4b8807716a8fa64bd03468252e9f7acf2415fee4"},
+      "text_encoder/model-00002-of-00004.safetensors": {"size_bytes": 4991495816, "sha256": "b1830db6908dcc76df3a71492acbcf2b8cac130114cf1f3c2d9edae8de8c6de3"},
+      "text_encoder/model-00003-of-00004.safetensors": {"size_bytes": 4932751040, "sha256": "09c1807c6d00d7cab94f7db39d4c02ebb8537225ccde383861ac48db97945aa6"},
+      "text_encoder/model-00004-of-00004.safetensors": {"size_bytes": 1691924384, "sha256": "5dd068336d14d45ffb43cef374d286cc6ba9d8741b028f90a7d040d847961f4a"},
+      "text_encoder/model.safetensors.index.json": {"size_bytes": 57655, "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c"},
+      "transformer/diffusion_pytorch_model-00001-of-00005.safetensors": {"size_bytes": 9973578592, "sha256": "2a0c30c9ba44a5f11c21ca139e37951430bbde814ff4e0b5b1a68b80530e7a1a"},
+      "transformer/diffusion_pytorch_model-00002-of-00005.safetensors": {"size_bytes": 9987326072, "sha256": "54ec249b07b4376e19cf16b764054f03ca03ae2cfbd9939453e2085f4e9bd259"},
+      "transformer/diffusion_pytorch_model-00003-of-00005.safetensors": {"size_bytes": 9987307440, "sha256": "c55157843525653161e8f6af5acc670ba3aceff04284f7cf657199d24d065e16"},
+      "transformer/diffusion_pytorch_model-00004-of-00005.safetensors": {"size_bytes": 9930685712, "sha256": "ffcfb5a4895702635890a67bad183591e0ae515d794bdcb26e217b27a7f6d12d"},
+      "transformer/diffusion_pytorch_model-00005-of-00005.safetensors": {"size_bytes": 982130472, "sha256": "2b2556b736629e10a5a0dfa14606f2057f4f81c2ba53f94103682c7ac42d4940"},
+      "transformer/diffusion_pytorch_model.safetensors.index.json": {"size_bytes": 198887, "sha256": "034f003b74493730e1c595b2e23232e99d9e28bcef3b4c10c56d1b53eee4b435"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 253806966, "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344"}
+    }
+  },
+  "implementation": {
+    "runner_sha256": "4a3a63d2873cb77c0061747a0f57f0e7e06bfeae67a51861d23ecb8543a539fb"
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 160000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day27_qwen_image_edit_direct_baseline_v1",
+  "preflight_path": "/host/space0/guo-z/tf-ufi/outputs/day27_qwen_image_edit_direct_baseline_v1_preflight.json",
+  "runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day27_qwen_image_edit_direct_baseline_runtime_v1",
+  "expected_generation_count": 12,
+  "evaluation_protocol": "benchmark/FOODSTATEEDIT_BLIND_EVALUATION_PROTOCOL_V1.md",
+  "claim_limit": "This four-case, three-seed same-input Qwen-Image-Edit-2511 comparison is a selected development baseline. Cake is synthetic supplementary evidence. It cannot establish held-out generalization, superiority, physical correctness, or paper-level photo realism without independent blinded evaluation."
+}

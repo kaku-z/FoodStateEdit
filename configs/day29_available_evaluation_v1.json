@@ -1,0 +1,23 @@
+{
+  "schema_version": "foodstateedit.day29_available_evaluation.v1",
+  "freeze_date": "2026-09-13",
+  "scientific_status": "selected_development_baseline_descriptive_analysis_not_held_out",
+  "input_sha256": {
+    "results/day26_chordedit_direct_baseline_result_v1.json": "88957e904f52053af076e6cdff5d6fcdc484006744e5cfa4a098314636c0bc22",
+    "results/day27_qwen_image_edit_direct_baseline_result_v1.json": "99bfc9146066cced0b527fd7a3de500e62a3b8109e7cabaf7759db4613a89b79",
+    "benchmark/FOODSTATEEDIT_BLIND_EVALUATION_PROTOCOL_V1.md": "1c73b6973526fe295080a3c19e6a5c399de3851824df563b16058fae3081e41a"
+  },
+  "bootstrap": {
+    "unit": "source_case_cluster_with_all_three_seeds",
+    "iterations": 10000,
+    "seed": 20260913,
+    "interval": "percentile_95"
+  },
+  "blind_review": {
+    "reviewer_count": 3,
+    "random_seed": 20260913,
+    "uncertain_is_failure": true,
+    "mapping_reveal": "only_after_all_ballots_are_locked"
+  },
+  "claim_limit": "This package covers two available methods on four selected development cases with one internal non-blind label set. It does not establish held-out generalization, superiority, independent human preference, physical correctness, or paper-level benchmark performance."
+}

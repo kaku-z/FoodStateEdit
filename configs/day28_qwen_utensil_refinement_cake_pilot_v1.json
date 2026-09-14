@@ -1,0 +1,106 @@
+{
+  "schema_version": "foodstateedit.qwen_utensil_refinement.v1",
+  "freeze_date": "2026-09-13",
+  "execution_allowed": true,
+  "scientific_status": "single_case_single_seed_development_diagnostic_not_efficacy_evidence",
+  "hypothesis": "A crop-local Qwen-Image-Edit proposal followed by background registration and utensil-only compositing can improve fork realism without changing the established cake-lift geometry.",
+  "pilot": {
+    "case_id": "cake_relative3d_qwen_fork_realism",
+    "source_image": "/host/space0/guo-z/tf-ufi/outputs/day21_realism_scale_sweep_v1_cake/vace_scale_0p6/projected_final_hold.png",
+    "source_sha256": "ea0fab6a3d2712bd9e20689296d33f45bebeef62c934a8e88125043f83221dc6",
+    "seed": 1,
+    "crop_size": 512,
+    "crop_padding_px": 36,
+    "instruction": "Photorealistically refine only the existing single four-tined stainless-steel fork. Keep its exact silhouette, position, angle, size, tine count, contact point, and the attached cake bite unchanged. Improve only metal material, subtle reflections, edge sharpness, and lighting consistency. Do not move, add, remove, bend, or redesign the fork. Do not change the cake, payload, plate, table, camera, crop, or background.",
+    "utensil_support": {
+      "lines": [
+        {"points": [[641, 46], [456, 134]], "width": 15}
+      ],
+      "polygons": [
+        [[380, 101], [463, 122], [458, 145], [433, 163], [416, 180], [369, 174], [371, 151]]
+      ],
+      "dilation_px": 4
+    }
+  },
+  "inference": {
+    "num_inference_steps": 40,
+    "true_cfg_scale": 4.0,
+    "guidance_scale": 1.0,
+    "negative_prompt": " ",
+    "torch_dtype": "bfloat16",
+    "offload": "model_cpu_offload",
+    "pipeline_loads": 1
+  },
+  "alignment": {
+    "method": "numpy_translation_search_on_protected_crop_pixels",
+    "max_translation_px": 48,
+    "search_downsample": 4,
+    "min_protected_similarity": 0.80
+  },
+  "composition": {
+    "soft_feather_px": 3,
+    "blend_alpha": 0.72,
+    "exact_outside_hard_support": true
+  },
+  "acceptance_gate": {
+    "min_changed_fraction": 0.01,
+    "max_changed_fraction": 0.98,
+    "min_structure_edge_cosine": 0.82,
+    "required_manual_checks": [
+      "utensil_identity_preserved",
+      "utensil_count_preserved",
+      "contact_relation_preserved",
+      "payload_identity_preserved",
+      "source_correspondence_preserved",
+      "photo_realism_improved"
+    ],
+    "uncertain_is_failure": true,
+    "rollback_on_any_failure": true
+  },
+  "backend": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "model_root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "pipeline_class": "QwenImageEditPlusPipeline",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "model_index.json": {"size_bytes": 516, "sha256": "5ba11ceee68457ad6a48b899b8c9493e347f4685e11e5eeca952a13f16549e35"},
+      "text_encoder/model.safetensors.index.json": {"size_bytes": 57655, "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c"},
+      "transformer/diffusion_pytorch_model.safetensors.index.json": {"size_bytes": 198887, "sha256": "034f003b74493730e1c595b2e23232e99d9e28bcef3b4c10c56d1b53eee4b435"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 253806966, "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344"}
+    }
+  },
+  "implementation": {
+    "runner_sha256": "835081ecfadadb33f53434c6392a41b011104ca0edf68a390dd1f0eca02a2d9b"
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_cake_pilot_v1",
+  "preflight_path": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_cake_pilot_v1_preflight.json",
+  "runtime_root": "/host/space0/guo-z/tf-ufi/outputs/day28_qwen_utensil_refinement_runtime_v1",
+  "expected_generation_count": 1,
+  "output_contract": [
+    "00_pre_refinement.png",
+    "01_utensil_hard_support.png",
+    "02_utensil_soft_mask.png",
+    "03_structure_mask.png",
+    "04_input_crop.png",
+    "05_raw_qwen_crop.png",
+    "06_aligned_qwen_crop.png",
+    "07_candidate.png",
+    "08_automatic_gate.json",
+    "09_manual_review.json",
+    "10_final.png",
+    "run_manifest.json"
+  ],
+  "claim_limit": "This one-case, one-seed selected development pilot tests whether Qwen can refine the utensil appearance after our relative3D-VACE result. It cannot establish generalization, superiority, physical correctness, or independent photo-realism gains. The candidate is not promoted unless all automatic and semantic checks pass."
+}

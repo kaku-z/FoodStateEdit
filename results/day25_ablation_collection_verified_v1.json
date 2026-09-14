@@ -1,0 +1,64 @@
+{
+  "schema_version": "foodstateedit.day25_ablation_collection.v1",
+  "status": "complete_collection_verified",
+  "case_count": 4,
+  "expected_job_count": 47,
+  "completed_job_count": 47,
+  "verified_file_count": 282,
+  "all_outside_support_exact": true,
+  "cases": [
+    {
+      "case_id": "ramen",
+      "dataset_case_id": "noodle",
+      "config_sha256": "62c262f501433fc1baa3af02c147e14070842dd2b0135ef16fdf1b055ae91336",
+      "run_manifest_sha256": "a9f7927309ab71873fcafcadd8701b3b5caae159e78a82efc667e5409dd23694",
+      "expected_job_count": 15,
+      "completed_job_count": 15,
+      "verified_file_count": 90,
+      "verified_bytes": 78858800,
+      "unique_output_hash_count": 76,
+      "wall_time_seconds": 3834.681,
+      "all_outside_support_exact": true
+    },
+    {
+      "case_id": "soup",
+      "dataset_case_id": "soup",
+      "config_sha256": "62c262f501433fc1baa3af02c147e14070842dd2b0135ef16fdf1b055ae91336",
+      "run_manifest_sha256": "99aaadbb2945b147495c19973e788fdb06523ddc821f65a6d7bd633ad4a5b9e7",
+      "expected_job_count": 10,
+      "completed_job_count": 10,
+      "verified_file_count": 60,
+      "verified_bytes": 35848691,
+      "unique_output_hash_count": 51,
+      "wall_time_seconds": 2462.434,
+      "all_outside_support_exact": true
+    },
+    {
+      "case_id": "rice",
+      "dataset_case_id": "rice",
+      "config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "run_manifest_sha256": "30b3720d5073b651dd950795ffb9f79d21f17c541c04e575b68897ae8a2b5f39",
+      "expected_job_count": 11,
+      "completed_job_count": 11,
+      "verified_file_count": 66,
+      "verified_bytes": 51802912,
+      "unique_output_hash_count": 56,
+      "wall_time_seconds": 3431.647,
+      "all_outside_support_exact": true
+    },
+    {
+      "case_id": "cake",
+      "dataset_case_id": "cake",
+      "config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "run_manifest_sha256": "a588119aa1d7fe5a1891072e44a4cabcec88c769b243fe7624ef37f8568e6a1c",
+      "expected_job_count": 11,
+      "completed_job_count": 11,
+      "verified_file_count": 66,
+      "verified_bytes": 45213824,
+      "unique_output_hash_count": 56,
+      "wall_time_seconds": 3387.217,
+      "all_outside_support_exact": true
+    }
+  ],
+  "claim_limit": "Byte verification and technical completion do not establish semantic action success, photo realism or held-out effectiveness."
+}

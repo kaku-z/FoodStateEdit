@@ -1,5 +1,82 @@
 # FoodStateEdit paper release workspace
 
+The [completed Day 25 ablation](results/DAY25_SAME_CONDITION_ABLATION_RESULT_20260913.md)
+now covers the full 4-case x 3-seed x 5-condition matrix: 47 new and 13
+hash-locked cells, with all 60 final images verified.  Explicit motion controls
+are necessary relative to native input on these selected cases, but internal
+review finds no clear relative3D-over-planar or material-adaptive-over-fixed
+gain in any of the four cases.  Held-out effectiveness therefore remains
+locked; the 20-image Day 32 pilot is the next falsification gate.
+
+The [Day 32 material-policy pilot](results/DAY32_MATERIAL_POLICY_PILOT_PLAN_20260913.md)
+is frozen as 210 unique generations over all 20 development images.  gp39 was
+blocked by newly occupied GPUs; after Day 25 completed, shard_b passed gp40
+GPU1 preflight and began pipeline loading.  Shard_a remains safely unstarted
+because its preserved shared preflight path requires a new non-overwriting
+retry version.  The 40-image held-out split remains locked.
+
+The [Day 31 family-template control pilot](results/DAY31_FAMILY_TEMPLATE_CONTROLS_PILOT_20260913.md)
+completed deterministic planar and relative-3D 21-frame controls for all 20
+pilot images across liquid, granular, strand and strand-contact families.  All
+180 collected files rehashed exactly.  These visibly schematic proxies are
+accepted only as VACE intervention inputs; they are not final images or
+effectiveness evidence.  The held-out split remains locked until the complete
+Day 25 review freezes the material-level VACE-scale rule.
+
+The [Day 30 held-out readiness audit](results/DAY30_HELDOUT_INPUT_READINESS_20260913.md)
+verified all 40 frozen real test inputs on gp40 with zero SHA-256 mismatch and a
+balanced 10-image-per-family split, without opening images or generating test
+outputs.  Day 25 is now complete, but its negative relative3D/material-scale
+gate still prevents test generation.  All 40 annotations remain pending and
+the final material-level Ours rule requires the broader Day 32 pilot.
+
+The [Day 29 available-baseline statistics](results/DAY29_AVAILABLE_BASELINE_STATISTICS_20260913.md)
+now aggregate the executed ChordEdit and Qwen development outputs with a
+case-clustered descriptive bootstrap. Qwen is `3/12` for provisional action and
+`12/12` for photo appearance but `0/12` for exact preservation; ChordEdit is
+`0/12`, `1/12`, and `12/12`, respectively, and both remain `0/12` strict
+end-to-end. Three independently shuffled 24-item blind-review packages are
+ready, with the method key stored separately. These remain selected development
+data: Day 25, frozen Ours, held-out generation and actual independent ballots
+are still required before confirmatory claims.
+
+The [Day 28 Qwen utensil-refinement diagnostic](results/DAY28_QWEN_UTENSIL_REFINEMENT_RESULT_20260913.md)
+ran one crop-local candidate for each selected ramen, soup, fried-rice and
+synthetic-cake result. One offline Qwen pipeline produced all four candidates;
+all 55 transferred evidence hashes matched and every protected pixel stayed
+exact. Qwen visibly improves some local material cues, especially the soup
+spoon and cake fork, but all candidates failed at least one frozen automatic
+gate, so all formal finals conservatively roll back. This is useful negative
+diagnostic evidence, not a promoted final-stage improvement claim.
+
+The [Day 27 Qwen-Image-Edit direct-input baseline](results/DAY27_QWEN_IMAGE_EDIT_DIRECT_BASELINE_RESULT_20260912.md)
+completed 12/12 matched development outputs with one offline pipeline load on a
+safe RTX A6000. All 62 remote output files and four supporting evidence files
+matched local SHA-256 values. The actual Qwen outputs are a strong photographic
+baseline (`12/12` provisional Photo Success), but only `3/12` passed the full
+action rubric and none preserved the frozen outside-support pixels exactly.
+The post-hoc hard composites are retained only as a mask-misregistration
+diagnostic, not as the Qwen endpoint or preservation evidence. FLUX Kontext,
+ChronoEdit, independent blinded scoring and held-out testing remain open.
+
+The [Day 26 ChordEdit direct-input baseline](results/DAY26_CHORDEDIT_DIRECT_BASELINE_RESULT_20260912.md)
+completed 12/12 same-input outputs across ramen, soup, fried rice and synthetic
+cake on four safe RTX A6000 GPUs. All 72 remote evidence files matched local
+SHA-256 values and exact outside-support preservation passed, but the internal
+non-blind review found `0/12` Action Success and `0/12` Strict End-to-End
+Success. This adds one reproducible external-editor negative baseline; it does
+not replace the still-unavailable FLUX Kontext or ChronoEdit comparisons and
+does not unlock held-out testing by itself.
+
+The [Day 23 geometry-locked ChordEdit pilot](results/DAY23_GEOMETRY_LOCKED_CHORDEDIT_REFINEMENT_RESULT_20260912.md)
+tested one local diffusion-refinement candidate after relative-3D VACE. Exact
+outside-support preservation succeeded, but the editor generated a second
+spoon-like object; the semantic gate rejected it and the final image rolled
+back byte-for-byte. The companion [native/planar/relative-3D soup ablation](results/DAY24_NATIVE_PLANAR_RELATIVE3D_SOUP_COMPARISON_20260912.md)
+shows that an explicit motion proxy is necessary for this development case,
+while providing no clear evidence that relative 3-D is better than planar
+control.
+
 The [Day 21 realism-scale result](results/DAY21_REALISM_SCALE_SWEEP_RESULT_20260912.md)
 tests one controlled cause of the visibly graphic outputs: over-strong VACE
 following of a non-photographic proxy. Lower scale clearly improves the final
@@ -94,8 +171,10 @@ pipeline:
    in that 3-D action space;
 3. project with one camera and depth-aware visibility into a temporal 2-D
    control;
-4. render appearance with VACE, optionally conditioned by a task adapter; and
-5. enforce exact scene preservation outside the declared motion support.
+4. render appearance with VACE, optionally conditioned by a task adapter;
+5. optionally propose a geometry-locked local diffusion appearance repair,
+   subject to instance/contact/payload gates and automatic rollback; and
+6. enforce exact scene preservation outside the declared motion support.
 
 The historical ramen case contains reconstructed VGGT geometry. The current
 fork pilot uses a normalized relative-3-D camera because its audited depth
@@ -176,6 +255,12 @@ No multi-family efficacy or automatic GPU execution is unlocked by this plan.
   checkpoint sweeps, matched-exposure review, and the no-blind-fork decision;
 - `results/DAY13_3D_GUIDED_FLEXIBLE_COMPLETION_DESIGN.md`: causal experiment
   design, loss definition, positive-contribution gate, and execution lock;
+- `results/DAY27_QWEN_IMAGE_EDIT_DIRECT_BASELINE_RESULT_20260912.md`: completed
+  Qwen direct-input baseline, endpoint correction, preservation diagnostic and
+  internal action/photo review;
+- `results/DAY28_QWEN_UTENSIL_REFINEMENT_RESULT_20260913.md`: completed
+  four-case Qwen utensil-only refinement diagnostic with exact protected-region
+  preservation and fail-closed rollback;
 - `results/day7_adapter_v0_preflight_initial_v2.json`: machine-readable remote
   preflight evidence; 51/52 checks passed and only the occupied-GPU gate failed;
 - `results/day7_adapter_v0_gp39_failure_missing_librosa_v1/`: preserved

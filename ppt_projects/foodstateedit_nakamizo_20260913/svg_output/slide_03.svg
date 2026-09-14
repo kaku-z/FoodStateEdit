@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">PROBLEM</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">既存画像編集の問題：不要な領域まで変化する</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">03</text>
+<g id="unwanted-global-edit" data-pptx-bounds="60 165 1160 515">
+<rect x="72" y="182" width="500" height="318" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="2" rx="6"/>
+<image href="../images/p09_ramen_input.png" x="78" y="188" width="488" height="306" preserveAspectRatio="xMidYMid meet"/>
+<rect x="72" y="182" width="500" height="34" fill="#0070C0" stroke="none" stroke-width="0" rx="6"/>
+<text x="86" y="206" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="start">入力画像</text>
+<rect x="708" y="182" width="500" height="318" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="2" rx="6"/>
+<image href="../images/p09_ramen_qwen_seed1.png" x="714" y="188" width="488" height="306" preserveAspectRatio="xMidYMid meet"/>
+<rect x="708" y="182" width="500" height="34" fill="#E31B23" stroke="none" stroke-width="0" rx="6"/>
+<text x="722" y="206" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="start">一般的な生成編集例</text>
+<line x1="588" y1="340" x2="678" y2="340" stroke="#E31B23" stroke-width="5"/>
+<polygon points="678,332 690,340 678,348" fill="#E31B23" stroke="none" stroke-width="1"/>
+<text x="322" y="536" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#0070C0" font-weight="700" text-anchor="middle">編集したい部分</text>
+<text x="322" y="568" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="middle">箸と持ち上げる麺</text>
+<text x="958" y="536" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#E31B23" font-weight="700" text-anchor="middle">実際に変化した部分</text>
+<text x="958" y="568" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="24" fill="#222222" font-weight="700" text-anchor="middle">画角・背景・器・麺全体</text>
+<rect x="104" y="592" width="1072" height="52" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2" rx="5"/>
+<text x="640" y="626" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="25" fill="#2E8B57" font-weight="700" text-anchor="middle">本研究：必要な操作領域だけを変え、その他は原画像のまま保持する</text>
+<text x="72" y="661" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="500" text-anchor="start">※ 同一入力・seed 1 の例。右画像は写真らしいが、入力との局所対応が失われている。</text>
+</g>
+</svg>

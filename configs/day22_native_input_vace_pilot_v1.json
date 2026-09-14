@@ -1,0 +1,110 @@
+{
+  "schema_version": "foodstateedit.native_input_vace_pilot.v1",
+  "freeze_date": "2026-09-12",
+  "execution_allowed": true,
+  "scientific_status": "same_seed_single_case_native_input_ablation_not_generalization",
+  "causal_hypothesis": "If the frozen VACE image prior can infer the requested soup-scooping action from the native photograph, prompt and edit support alone, then an explicit rasterized utensil-food motion proxy is not necessary for this case. Failure to create the action would instead support the need for explicit interaction control.",
+  "case_id": "soup",
+  "condition": "native_input_text_mask_only",
+  "dataset_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3",
+  "dataset_manifest": {
+    "path": "dataset_manifest.json",
+    "size_bytes": 12156,
+    "sha256": "7a71eb2c63bf52cbe2275b1b1aceca028c045fd9fdf6328a8ed12b3a5e56078"
+  },
+  "native_input_definition": {
+    "vace_reference_image": "soup/reference.png",
+    "vace_video": "soup/reference.png repeated to 21 frames",
+    "vace_video_mask": "soup/edit_alpha.png repeated to 21 frames",
+    "excluded_controls": [
+      "soup/planar.mp4",
+      "soup/relative3d.mp4",
+      "any utensil-food motion proxy"
+    ]
+  },
+  "matched_comparator": {
+    "method": "relative3d",
+    "same_seed_prompt_mask_and_inference_budget": true,
+    "condition_manifest_sha256": "586bbf3a1b9c1cee46fecae22d0b732f5caca1625eb3297d3c692656a8ba051c",
+    "projected_final_hold_sha256": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854"
+  },
+  "inference": {
+    "seed": 1,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "lora_enabled": false,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20]
+  },
+  "output_root": "/host/space0/guo-z/tf-ufi/outputs/day22_native_input_vace_pilot_v1_soup",
+  "preflight_report": "/host/space0/guo-z/tf-ufi/outputs/day22_native_input_vace_pilot_v1_soup_preflight.json",
+  "cache_root": "/tmp/foodstateedit_day22_native_input_vace_cache_v1",
+  "implementation": {
+    "runner_sha256": "d34a92bc9fed505374ba4afb0fb383755a4e27f6080a9fc927dff7bc4abb2516",
+    "dependency_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+      "size_bytes": 620,
+      "sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"
+      },
+      "low_noise_model/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 34675325000,
+        "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"
+      },
+      "models_t5_umt5-xxl-enc-bf16.pth": {
+        "size_bytes": 11361920418,
+        "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+      },
+      "Wan2.1_VAE.pth": {
+        "size_bytes": 507609880,
+        "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      }
+    },
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "review_gate": {
+    "compare_against_relative3d": true,
+    "require_visible_spoon": true,
+    "require_visible_supported_soup_payload": true,
+    "require_source_surface_change": true,
+    "require_no_duplicate_payload": true,
+    "require_photo_realism_review": true,
+    "uncertain_is_not_pass": true,
+    "no_automatic_best_frame_selection": true
+  },
+  "claim_limit": "One same-seed real-image soup development ablation can test whether native-image plus prompt and mask elicits the requested action. It cannot establish generalization, physical correctness, superiority, or paper-level photo realism."
+}

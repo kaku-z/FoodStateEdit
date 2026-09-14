@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">PROBLEM</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">課題：最終画像だけでは操作の正しさを保証できない</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">04</text>
+<g id="slide-content" data-pptx-bounds="72 160 1136 500">
+<circle cx="184" cy="272" r="42" fill="#EAF6FC" stroke="#0070C0" stroke-width="3"/>
+<text x="184" y="283" font-family="Arial, Yu Gothic, sans-serif" font-size="28" fill="#0070C0" font-weight="700" text-anchor="middle">1</text>
+<text x="184" y="347" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="28" fill="#222222" font-weight="700" text-anchor="middle">道具</text>
+<text x="184" y="382" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="19" fill="#666666" font-weight="400" text-anchor="middle">適切な種類・姿勢</text>
+<line x1="236" y1="272" x2="402" y2="272" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="402,264 414,272 402,280" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<circle cx="468" cy="272" r="42" fill="#EAF6FC" stroke="#0070C0" stroke-width="3"/>
+<text x="468" y="283" font-family="Arial, Yu Gothic, sans-serif" font-size="28" fill="#0070C0" font-weight="700" text-anchor="middle">2</text>
+<text x="468" y="347" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="28" fill="#222222" font-weight="700" text-anchor="middle">接触</text>
+<text x="468" y="382" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="19" fill="#666666" font-weight="400" text-anchor="middle">食物との接点</text>
+<line x1="520" y1="272" x2="686" y2="272" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="686,264 698,272 686,280" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<circle cx="752" cy="272" r="42" fill="#EAF6FC" stroke="#0070C0" stroke-width="3"/>
+<text x="752" y="283" font-family="Arial, Yu Gothic, sans-serif" font-size="28" fill="#0070C0" font-weight="700" text-anchor="middle">3</text>
+<text x="752" y="347" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="28" fill="#222222" font-weight="700" text-anchor="middle">持ち上げ</text>
+<text x="752" y="382" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="19" fill="#666666" font-weight="400" text-anchor="middle">食物の追従・移動</text>
+<line x1="804" y1="272" x2="970" y2="272" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="970,264 982,272 970,280" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<circle cx="1036" cy="272" r="42" fill="#EAF6FC" stroke="#0070C0" stroke-width="3"/>
+<text x="1036" y="283" font-family="Arial, Yu Gothic, sans-serif" font-size="28" fill="#0070C0" font-weight="700" text-anchor="middle">4</text>
+<text x="1036" y="347" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="28" fill="#222222" font-weight="700" text-anchor="middle">保持</text>
+<text x="1036" y="382" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="19" fill="#666666" font-weight="400" text-anchor="middle">背景と容器の保存</text>
+<rect x="104" y="452" width="1072" height="110" fill="#EAF6FC" stroke="#0070C0" stroke-width="2" rx="8"/>
+<text x="640" y="494" font-family="Arial, Yu Gothic, sans-serif" font-size="31" fill="#0070C0" font-weight="700" text-anchor="middle">Strict End-to-End Success</text>
+<text x="640" y="534" font-family="Arial, Yu Gothic, sans-serif" font-size="28" fill="#222222" font-weight="600" text-anchor="middle">= Action × Photo × Preservation</text>
+<rect x="196" y="596" width="888" height="46" fill="#FFFFFF" stroke="#E31B23" stroke-width="2" rx="4"/>
+<text x="640" y="627" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="25" fill="#E31B23" font-weight="700" text-anchor="middle">目標：接近 → 接触 → 持ち上げ → 停留を明示的に制御する</text>
+</g>
+</svg>

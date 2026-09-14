@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">QUALITATIVE RESULT</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">同一入力での生成結果比較</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">08</text>
+<g id="same-input-triptych" data-pptx-bounds="72 174 1136 500">
+<rect x="72" y="174" width="360" height="58" fill="#365F7D" stroke="#365F7D" stroke-width="1" rx="5"/>
+<text x="252" y="212" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle">Input（参照画像）</text>
+<rect x="72" y="244" width="360" height="310" fill="#F7F9FB" stroke="#365F7D" stroke-width="1" rx="5"/>
+<image href="../images/p10_success_soup_input.png" x="80" y="252" width="344" height="294" preserveAspectRatio="xMidYMid meet"/>
+<text x="252" y="586" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#365F7D" font-weight="700" text-anchor="middle">元のスープ画像</text>
+<rect x="460" y="174" width="360" height="58" fill="#E31B23" stroke="#E31B23" stroke-width="1" rx="5"/>
+<text x="640" y="212" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle">Qwen Image</text>
+<rect x="460" y="244" width="360" height="310" fill="#F7F9FB" stroke="#E31B23" stroke-width="1" rx="5"/>
+<image href="../images/p09_soup_qwen_day34_seed1.png" x="468" y="252" width="344" height="294" preserveAspectRatio="xMidYMid meet"/>
+<text x="640" y="586" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#E31B23" font-weight="700" text-anchor="middle">写真らしいが画角・背景も再構成</text>
+<rect x="848" y="174" width="360" height="58" fill="#2E8B57" stroke="#2E8B57" stroke-width="1" rx="5"/>
+<text x="1028" y="212" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="25" fill="#FFFFFF" font-weight="700" text-anchor="middle">FoodStateEdit（提案手法）</text>
+<rect x="848" y="244" width="360" height="310" fill="#F1FAF4" stroke="#2E8B57" stroke-width="3" rx="5"/>
+<image href="../images/p10_success_soup_output.png" x="856" y="252" width="344" height="294" preserveAspectRatio="xMidYMid meet"/>
+<text x="1028" y="586" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="middle">スプーン動作を追加し領域外を保持</text>
+<rect x="72" y="612" width="1136" height="44" fill="#EAF6FC" stroke="#0070C0" stroke-width="1" rx="4"/>
+<text x="640" y="640" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="middle">同一入力・seed 1｜目標動作の実画像GTは存在しないため、Inputを参照画像として表示</text>
+<text x="640" y="668" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="13" fill="#666666" font-weight="400" text-anchor="middle">選択済み合成1例の内部比較。統計的優位性・実画像への一般化は未証明。</text>
+</g>
+</svg>

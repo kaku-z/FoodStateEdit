@@ -1,0 +1,178 @@
+{
+  "schema_version": "foodstateedit.same_condition_ablation.v1",
+  "freeze_date": "2026-09-12",
+  "execution_allowed": true,
+  "scientific_status": "four_case_development_ablation_not_held_out_effectiveness",
+  "causal_hypothesis": "Explicit phase-action motion control is necessary relative to native-input VACE, relative-3D control can improve contact and payload semantics relative to planar control, and a material-level VACE-strength rule with conservative semantic rollback can improve strict end-to-end success without tuning individual test outputs.",
+  "dataset_root": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3",
+  "dataset_manifest": {
+    "path": "dataset_manifest.json",
+    "size_bytes": 12156,
+    "sha256": "7a71eb2c63bf52cbe22705d1b1aceca028c045fd9fdf6328a8ed12b3a5e56078"
+  },
+  "dataset_case_aliases": {
+    "ramen": "noodle"
+  },
+  "source_provenance_correction": {
+    "case_id": "ramen",
+    "dataset_case_id": "noodle",
+    "incorrect_legacy_label": "synthetic_imagegen_input",
+    "correct_source_kind": "real_previously_used_upscaled_pilot",
+    "canonical_input": "artifacts/e2e_interaction_v1_case_staging/ramen_chopsticks_001/01_input.png",
+    "canonical_input_sha256": "0e0f1576f122dd662ba67d18cfd7d3825ccdae1f35b33ff1b8d13c7e632b93c6",
+    "dataset_reference_sha256": "0e0f1576f122dd662ba67d18cfd7d3825ccdae1f35b33ff1b8d13c7e632b93c6",
+    "original_dataset_id": "noodle_001",
+    "original_source_sha256": "b1606066905a34a8b7450a9908548a466328e00ce20126cac421950d4d0d391c",
+    "license": "UECFOOD256_noncommercial_research_only_no_public_redistribution",
+    "verification": "The legacy Day18 PNG and canonical input decode to identical pixels; FFmpeg signalstats difference Y/U/V average and maximum are all zero. The legacy source-kind string is metadata error, not synthetic content."
+  },
+  "case_order": ["ramen", "soup", "rice", "cake"],
+  "unique_generation_conditions": [
+    "native_scale_1p0",
+    "planar_scale_1p0",
+    "relative3d_scale_1p0",
+    "relative3d_scale_0p6",
+    "relative3d_scale_0p8"
+  ],
+  "material_scale_policy": {
+    "ramen": 0.8,
+    "soup": 1.0,
+    "rice": 1.0,
+    "cake": 0.6,
+    "policy_level": "material_family_not_individual_output",
+    "frozen_before_new_seed_2_and_seed_3_generation": true
+  },
+  "reported_ablation_arms": {
+    "native_input_vace": {"source": "native_scale_1p0", "rollback": false},
+    "planar_proxy": {"source": "planar_scale_1p0", "rollback": false},
+    "fixed_relative3d": {"source": "relative3d_scale_1p0", "rollback": false},
+    "material_adaptive_relative3d_ours": {"source": "material_scale_policy", "rollback": true, "fallback": "relative3d_scale_1p0"},
+    "ours_without_rollback": {"source": "material_scale_policy", "rollback": false},
+    "ours_without_material_adaptation": {"source": "relative3d_scale_0p8", "rollback": true, "fallback": "relative3d_scale_1p0"}
+  },
+  "rollback_contract": {
+    "status": "reviewer_triggered_development_gate_not_validated_automatic_observer",
+    "protocol": "benchmark/FOODSTATEEDIT_BLIND_EVALUATION_PROTOCOL_V1.md",
+    "protocol_sha256": "1c73b6973526fe295080a3c19e6a5c399de3851824df563b16058fae3081e41a",
+    "accept_candidate_only_if": [
+      "all final-image action questions 1-6 are yes",
+      "final-image appearance questions 7-9 are yes",
+      "photo-realism rating is at least 4",
+      "all six process questions are yes",
+      "machine-verified outside-support maximum pixel difference is zero"
+    ],
+    "uncertain_is_failure": true,
+    "no_output_dependent_rerun": true,
+    "no_seed_replacement": true,
+    "claim_limit": "This experiment evaluates a frozen human-review-triggered rollback policy; it does not establish a fully automatic semantic observer."
+  },
+  "inference": {
+    "seeds": [1, 2, 3],
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "enable_ttm": false,
+    "lora_enabled": false,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20]
+  },
+  "existing_seed_1_evidence": {
+    "soup": {
+      "native_scale_1p0": {"manifest_sha256": "040add54cf7bd64841a758ccfb632c2d13a54ad6ec819c337c56201b2d331fda", "final_sha256": "5cd9efaf1a34e3dea63cdcb155548af265e22b0111cf5c77481c4507e659b81b"},
+      "planar_scale_1p0": {"manifest_sha256": "a464fb92f55650d21da4026342835c27b028252ee9022fdca62a9fcf5e013d1f", "final_sha256": "95f0c5e909bb168c9fb2c300f5c6fba50fe811c599dddb3a2d3a4cecef361cc7"},
+      "relative3d_scale_1p0": {"manifest_sha256": "586bbf3a1b9c1cee46fecae22d0b732f5caca1625eb3297d3c692656a8ba051c", "final_sha256": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854"},
+      "relative3d_scale_0p6": {"manifest_sha256": "a644fe8b0cd9fce09528f80e788327bd8f769955e4c3b469cf3a369b2854740d", "final_sha256": "e1f760fe873bb5dca557f27e2ed7dbfcc27565e66d0cfa0fe5ab72b314d27453"},
+      "relative3d_scale_0p8": {"manifest_sha256": "9d1a3c5dec6f186c317ccd99ace54bf39d4b1b13c47a70a031a6aade6f993445", "final_sha256": "add069b5316fbc18ceb400a68d762046766c41e6de2f2aef28f032069db22eaa"}
+    },
+    "rice": {
+      "planar_scale_1p0": {"manifest_sha256": "bd169ec2a9f5d6394c8882928ab7a1edef4f763eedab00e78ccf640ae11238ce", "final_sha256": "b115b3f5dd15a7e9bfb159cf877a2189a47aed8a957c957a1648278c894a38b4"},
+      "relative3d_scale_1p0": {"manifest_sha256": "9da457c0d9c1ee0ba73df616f5da43cf8fcce3d7fa083715a38fc22c491ce16b", "final_sha256": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3"},
+      "relative3d_scale_0p6": {"manifest_sha256": "843cc8dcbecb9e97d0701703b91defde15e31bd19ff4d78701e00dc81bf33244", "final_sha256": "f409524ba988f0c664b9f3e70869395b1d94e1a7073c8f88b52aad76f96cd929"},
+      "relative3d_scale_0p8": {"manifest_sha256": "9044417d9c41e6d76bbbfb8b76218ec2703e0dc2b0fa87256be9302abb230051", "final_sha256": "c5e77c50d74a6e544542a2c96c68b433809cddaa1981bd1ae260ae88c62bf46c"}
+    },
+    "cake": {
+      "planar_scale_1p0": {"manifest_sha256": "809d64cc2f16a3e62b298b8959acb7765f9936aa037167da8fc18d80baaf7300", "final_sha256": "f5f44ae9a1b4124b8c8adafff9d0dfdba8bed6500faa4e53c688069399b6188b"},
+      "relative3d_scale_1p0": {"manifest_sha256": "e6c99e647a79a74005aa7e3a92752493e8e3759d782021fdb9db0d36dc7a197a", "final_sha256": "3d4dcead955ef5aebb7171687c8ee6bbabf57e58dac28465da3d348673711b73"},
+      "relative3d_scale_0p6": {"manifest_sha256": "6f7e88654b1c39eca1d301c44c09466e481720b033fb9f600aaa21cfda0dc460", "final_sha256": "ea0fab6a3d2712bd9e20689296d33f45bebeef62c934a8e88125043f83221dc6"},
+      "relative3d_scale_0p8": {"manifest_sha256": "bd337ae43c3b2805284e832ba2c8370046ad6d826bc5bb602e97d632bd99bf5e", "final_sha256": "5b3a138d25e5ebfe74454bc99f2b5064c77c00fe9c4a327060e117cf20b14cac"}
+    },
+    "ramen": {}
+  },
+  "new_generation_jobs": {
+    "ramen": [
+      {"seed": 1, "condition": "native_scale_1p0"}, {"seed": 1, "condition": "planar_scale_1p0"}, {"seed": 1, "condition": "relative3d_scale_1p0"}, {"seed": 1, "condition": "relative3d_scale_0p6"}, {"seed": 1, "condition": "relative3d_scale_0p8"},
+      {"seed": 2, "condition": "native_scale_1p0"}, {"seed": 2, "condition": "planar_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_0p6"}, {"seed": 2, "condition": "relative3d_scale_0p8"},
+      {"seed": 3, "condition": "native_scale_1p0"}, {"seed": 3, "condition": "planar_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_0p6"}, {"seed": 3, "condition": "relative3d_scale_0p8"}
+    ],
+    "soup": [
+      {"seed": 2, "condition": "native_scale_1p0"}, {"seed": 2, "condition": "planar_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_0p6"}, {"seed": 2, "condition": "relative3d_scale_0p8"},
+      {"seed": 3, "condition": "native_scale_1p0"}, {"seed": 3, "condition": "planar_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_0p6"}, {"seed": 3, "condition": "relative3d_scale_0p8"}
+    ],
+    "rice": [
+      {"seed": 1, "condition": "native_scale_1p0"},
+      {"seed": 2, "condition": "native_scale_1p0"}, {"seed": 2, "condition": "planar_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_0p6"}, {"seed": 2, "condition": "relative3d_scale_0p8"},
+      {"seed": 3, "condition": "native_scale_1p0"}, {"seed": 3, "condition": "planar_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_0p6"}, {"seed": 3, "condition": "relative3d_scale_0p8"}
+    ],
+    "cake": [
+      {"seed": 1, "condition": "native_scale_1p0"},
+      {"seed": 2, "condition": "native_scale_1p0"}, {"seed": 2, "condition": "planar_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_1p0"}, {"seed": 2, "condition": "relative3d_scale_0p6"}, {"seed": 2, "condition": "relative3d_scale_0p8"},
+      {"seed": 3, "condition": "native_scale_1p0"}, {"seed": 3, "condition": "planar_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_1p0"}, {"seed": 3, "condition": "relative3d_scale_0p6"}, {"seed": 3, "condition": "relative3d_scale_0p8"}
+    ]
+  },
+  "expected_new_generation_count": 47,
+  "output_root_template": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_v1_{case_id}",
+  "preflight_template": "/host/space0/guo-z/tf-ufi/outputs/day25_same_condition_ablation_v1_{case_id}_preflight.json",
+  "cache_root_template": "/tmp/foodstateedit_day25_same_condition_ablation_cache_v1_{case_id}",
+  "implementation": {
+    "runner_sha256": "ac85ac46bc34a0ae757ec33769d98f390af5273ad8a9d062f01956c2735c3af6",
+    "dependency_sha256": "ef06cf2b7d55375210be7ba4d9f6833aadc7053fc0187d25faf58b6663e86af2"
+  },
+  "runtime": {
+    "python": "/host/space0/guo-z/envs/geoedit/bin/python",
+    "geoedit_root": "/host/space0/guo-z/tf-ufi/runtime/foodstateedit_geoedit_v2_20260827",
+    "geoedit_files": {
+      "geoedit/inference.py": "d093ae7e2245884ccb7fc664b78a919ea5443088e77aa1a53c6a033f1e8c8bf1",
+      "diffsynth/pipelines/wan_video.py": "50bb12685ef9ccb6b89d6600c27ad0cd2f12b5c67c5301fc51ea3f0eff02bfb5",
+      "diffsynth/utils/data/__init__.py": "fe056b4a675a345cf02d6c76d327e8434103ccf2a4066ff208ce41368771e360",
+      "tests/test_masks.py": "fc6400e66c94a22e5048fbf7fc37058e6bac099c8c2024086b7ea408e640f421"
+    },
+    "model_root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "model_hash_audit": {
+      "path": "/host/space0/guo-z/tf-ufi/outputs/paper_sprint_day3_20260827_model_hash_v1/wan_model_sha256.txt",
+      "size_bytes": 620,
+      "sha256": "4c255c04811a2bc1484db5dae01bdc7352ebd4ad0bd7802b13cebe0bc669d34b"
+    },
+    "model_files": {
+      "high_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "66c61b736c5674deeeef17861e494d3652cc9b1463a9656bf18c2c72d2c5f007"},
+      "low_noise_model/diffusion_pytorch_model.safetensors": {"size_bytes": 34675325000, "sha256": "0bf791adfb8330d451d2f5c03577b2a8fb780453f8ef05e23a8fa91f27a2134d"},
+      "models_t5_umt5-xxl-enc-bf16.pth": {"size_bytes": 11361920418, "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"},
+      "Wan2.1_VAE.pth": {"size_bytes": 507609880, "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"}
+    },
+    "offline_environment": {
+      "DIFFSYNTH_SKIP_DOWNLOAD": "true",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_process_termination_or_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_model_download": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "execution_policy": {
+    "maximum_concurrent_workers_on_one_host": 2,
+    "each_worker_uses_one_explicit_physical_gpu": true,
+    "conditions_serial_within_case_worker": true,
+    "abort_own_worker_if_foreign_compute_process_appears": true,
+    "never_terminate_or_preempt_foreign_process": true,
+    "never_retry_into_same_output_path": true
+  },
+  "primary_endpoints": ["ActionSuccess", "PhotoSuccess", "PreservationSuccess", "StrictE2ESuccess"],
+  "claim_limit": "Four development cases with three seeds can compare frozen ablation arms and diagnose material-level sensitivity. Cake is synthetic supplementary evidence. This experiment cannot establish held-out generalization, real-data performance for cake, physical correctness, fully automatic rollback, superiority, or paper-level photo realism."
+}

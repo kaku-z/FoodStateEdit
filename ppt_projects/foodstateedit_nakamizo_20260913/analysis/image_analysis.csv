@@ -1,0 +1,31 @@
+No,Filename,Width,Height,AspectRatio,PixelAspectRatio,SourceDisplayRatio,RatioSource,Format,HasTransparentPixels,UsageCount,DisplayRatioVariants,AssetKind,SvgRenderable,PptxNativeSupported,SizeKB,Category
+1,p02_cake_controlled_output.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,529.8,Standard landscape
+2,p02_cake_fork_scale0p6.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,540.3,Standard landscape
+3,p02_cake_input.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,507.9,Standard landscape
+4,p05_framework_report_exact.png,1030,518,1.99,1.99,,native,PNG,False,1,,bitmap,True,True,187.5,Wide landscape
+5,p05_ramen_control.png,688,560,1.23,1.23,,native,PNG,False,1,,bitmap,True,True,587.9,Standard landscape
+6,p05_ramen_input.png,688,576,1.19,1.19,,native,PNG,False,1,,bitmap,True,True,620.9,Near square
+7,p05_ramen_output.png,688,576,1.19,1.19,,native,PNG,False,1,,bitmap,True,True,660.3,Near square
+8,p06_family_controls.png,960,1392,0.69,0.69,,native,PNG,False,1,,bitmap,True,True,802.3,Portrait
+9,p09_cake_chordedit_seed1.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,519.3,Standard landscape
+10,p09_cake_foodstateedit_scale0p6.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,540.3,Standard landscape
+11,p09_cake_input.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,507.9,Standard landscape
+12,p09_cake_ours_seed1.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,540.3,Standard landscape
+13,p09_cake_qwen_seed1.png,1184,896,1.32,1.32,,native,PNG,False,1,,bitmap,True,True,1252.6,Standard landscape
+14,p09_chordedit_grid.png,1494,1192,1.25,1.25,,native,PNG,False,1,,bitmap,True,True,923.4,Standard landscape
+15,p09_qwen_grid.png,1494,1192,1.25,1.25,,native,PNG,False,1,,bitmap,True,True,1985.2,Standard landscape
+16,p09_ramen_chordedit_seed1.png,688,576,1.19,1.19,,native,PNG,False,1,,bitmap,True,True,627.6,Near square
+17,p09_ramen_input.png,688,576,1.19,1.19,,native,PNG,False,1,,bitmap,True,True,620.9,Near square
+18,p09_ramen_ours_seed1.png,688,576,1.19,1.19,,native,PNG,False,1,,bitmap,True,True,658.0,Near square
+19,p09_ramen_qwen_seed1.png,1120,928,1.21,1.21,,native,PNG,False,1,,bitmap,True,True,1231.4,Standard landscape
+20,p09_soup_chordedit_seed1.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,401.7,Standard landscape
+21,p09_soup_input.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,385.6,Standard landscape
+22,p09_soup_ours_seed1.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,463.5,Standard landscape
+23,p09_soup_qwen_seed1.png,1184,896,1.32,1.32,,native,PNG,False,1,,bitmap,True,True,1144.3,Standard landscape
+24,p10_cake.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,536.7,Standard landscape
+25,p10_ramen.png,688,576,1.19,1.19,,native,PNG,False,1,,bitmap,True,True,663.1,Near square
+26,p10_rice.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,606.2,Standard landscape
+27,p10_soup.png,688,512,1.34,1.34,,native,PNG,False,1,,bitmap,True,True,464.1,Standard landscape
+28,p10_success_soup_control.png,736,592,1.24,1.24,,native,PNG,False,1,,bitmap,True,True,673.6,Standard landscape
+29,p10_success_soup_input.png,736,592,1.24,1.24,,native,PNG,False,1,,bitmap,True,True,681.5,Standard landscape
+30,p10_success_soup_output.png,736,592,1.24,1.24,,native,PNG,False,1,,bitmap,True,True,687.0,Standard landscape

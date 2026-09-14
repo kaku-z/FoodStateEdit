@@ -1,0 +1,320 @@
+{
+  "schema_version": "foodstateedit.day29_available_baseline_statistics.v1",
+  "status": "available_development_baselines_analyzed_blind_package_ready_not_scored",
+  "verification_status": "ANALYZED",
+  "scope": {
+    "held_out": false,
+    "independent_review": false,
+    "methods": [
+      "chordedit",
+      "qwen"
+    ],
+    "cases": [
+      "ramen",
+      "soup",
+      "rice",
+      "cake"
+    ],
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "outputs": 24
+  },
+  "methods": {
+    "chordedit": {
+      "endpoints": {
+        "action_success": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20260913,
+          "pass_count": 0,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 0.0,
+            "soup": 0.0,
+            "rice": 0.0,
+            "cake": 0.0
+          }
+        },
+        "photo_success": {
+          "estimate": 0.08333333333333333,
+          "ci95_percentile": [
+            0.0,
+            0.25
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20260914,
+          "pass_count": 1,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 0.0,
+            "soup": 0.0,
+            "rice": 0.3333333333333333,
+            "cake": 0.0
+          }
+        },
+        "preservation_success": {
+          "estimate": 1.0,
+          "ci95_percentile": [
+            1.0,
+            1.0
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20260915,
+          "pass_count": 12,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 1.0,
+            "soup": 1.0,
+            "rice": 1.0,
+            "cake": 1.0
+          }
+        },
+        "strict_end_to_end_success": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20260916,
+          "pass_count": 0,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 0.0,
+            "soup": 0.0,
+            "rice": 0.0,
+            "cake": 0.0
+          }
+        }
+      }
+    },
+    "qwen": {
+      "endpoints": {
+        "action_success": {
+          "estimate": 0.25,
+          "ci95_percentile": [
+            0.0,
+            0.5
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20261013,
+          "pass_count": 3,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 0.0,
+            "soup": 0.6666666666666666,
+            "rice": 0.0,
+            "cake": 0.3333333333333333
+          }
+        },
+        "photo_success": {
+          "estimate": 1.0,
+          "ci95_percentile": [
+            1.0,
+            1.0
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20261014,
+          "pass_count": 12,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 1.0,
+            "soup": 1.0,
+            "rice": 1.0,
+            "cake": 1.0
+          }
+        },
+        "preservation_success": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20261015,
+          "pass_count": 0,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 0.0,
+            "soup": 0.0,
+            "rice": 0.0,
+            "cake": 0.0
+          }
+        },
+        "strict_end_to_end_success": {
+          "estimate": 0.0,
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "cluster_count": 4,
+          "iterations": 10000,
+          "seed": 20261016,
+          "pass_count": 0,
+          "total": 12,
+          "per_case_rate": {
+            "ramen": 0.0,
+            "soup": 0.0,
+            "rice": 0.0,
+            "cake": 0.0
+          }
+        }
+      }
+    }
+  },
+  "paired_contrasts": {
+    "action_success": {
+      "estimate": 0.25,
+      "ci95_percentile": [
+        0.0,
+        0.5
+      ],
+      "cluster_count": 4,
+      "iterations": 10000,
+      "seed": 20261413,
+      "contrast": "qwen_minus_chordedit"
+    },
+    "photo_success": {
+      "estimate": 0.9166666666666667,
+      "ci95_percentile": [
+        0.75,
+        1.0
+      ],
+      "cluster_count": 4,
+      "iterations": 10000,
+      "seed": 20261414,
+      "contrast": "qwen_minus_chordedit"
+    },
+    "preservation_success": {
+      "estimate": -1.0,
+      "ci95_percentile": [
+        -1.0,
+        -1.0
+      ],
+      "cluster_count": 4,
+      "iterations": 10000,
+      "seed": 20261415,
+      "contrast": "qwen_minus_chordedit"
+    },
+    "strict_end_to_end_success": {
+      "estimate": 0.0,
+      "ci95_percentile": [
+        0.0,
+        0.0
+      ],
+      "cluster_count": 4,
+      "iterations": 10000,
+      "seed": 20261416,
+      "contrast": "qwen_minus_chordedit"
+    }
+  },
+  "bootstrap_warning": "Intervals resample only four selected image clusters and are descriptive, not population-level generalization intervals.",
+  "fallacy_scan_coverage": "11/11",
+  "claim_limit": "These are selected development cases scored once internally and non-blind. They cannot establish superiority, held-out generalization, independent human preference, physical correctness, or paper-level benchmark performance.",
+  "blind_package": {
+    "reviewers": 3,
+    "items_per_reviewer": 24,
+    "method_count": 2,
+    "case_count": 4,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "package_file_count": 77,
+    "package_files": {
+      "PROTOCOL.md": "1c73b6973526fe295080a3c19e6a5c399de3851824df563b16058fae3081e41a",
+      "R1/ballot.csv": "8032d31363a764eb8665c9eee9d6aec21a821636717735187532f31cb93bb47b",
+      "R1/items/01_EF531D109E7E.png": "007af0688c00a2fd99162f3520705e1420d846f6a8e57b8a380771016a10ae06",
+      "R1/items/02_E47AB822D5E2.png": "f6ad2dff7a1de19f86a91c6d0d7abd0ca0021537743160d90f25341d267e6eca",
+      "R1/items/03_E0DD21879440.png": "3804737d1fe85b532ba0ebe31eaead00e103d476d2e61467b6133d8117b34522",
+      "R1/items/04_EAA9E852CABF.png": "910808ed32fb5c7697c8ae49efd15b8c742daad914ccfbdf4bc56f6d1f110363",
+      "R1/items/05_E84A7A27835E.png": "9cf61389a2ffc05de18f11becf08039fc91e11ad0e3a92ef9d806c6185529470",
+      "R1/items/06_E953533C477E.png": "0b1498fe2a6133ff2a09c9f9184082b6e435e11c72d7bae2b65409b4d7d9d999",
+      "R1/items/07_EB5EF65D481A.png": "d1a6ca49aba95335ae1aedd32439ad39a9b5dd985755702c665861209715f561",
+      "R1/items/08_E286516293D2.png": "4389acf755bfe048d0b81f9d3cdf1e2d71f16a966e77435dd9bd797bee6276bc",
+      "R1/items/09_EFF56EE204F1.png": "bd4b9c0f2211cd1e3592a8d30b40ac1fcbe9f6e1f16b81bcc700239c1462fa01",
+      "R1/items/10_E116D52AD743.png": "9e489e61a5b11aae89c3554439d1abeded1c626f1943a0dd5560078c60d41ff5",
+      "R1/items/11_E2EBF1962268.png": "8fdd873143b07e7940acf47269c18a584018ce82f3c2c1a40e1c36ef9a68e1a7",
+      "R1/items/12_EF9CA0EE6B01.png": "d5660d4e30e958a7f64e22008f800a9982573e87594cf6b5e71a9b8172608a09",
+      "R1/items/13_E2D9B5E3208B.png": "efd9c02d7a9d071c8720b383ed3c26a6b2ba0e9a46f69a38a5ce983be6ac3d3d",
+      "R1/items/14_E51157761664.png": "e63239dc07f0acc38a7161457e592945d25ffff1997a5a7834ea2ee83138d648",
+      "R1/items/15_E4B6B5AFF8C3.png": "8c93f82afb2d5468da331ce21ff76b4edd329a28267210ba94b88b53542817e6",
+      "R1/items/16_E37F1C49CEFA.png": "45d5ed31d61a5fc561e1d104c3e7e051ba32d2bcc62129a152004342cb84e9f3",
+      "R1/items/17_E4F25705577A.png": "f4c92b9c0fcb9517e99375fd1fc7a1c1129e1a9e7cafefbfc3e5d2cac0e8359d",
+      "R1/items/18_EF0ED8AFA1F3.png": "20ae3c5279b5d08281b5b6969beb0e3ee7642d85fbc8bed860718284a02d014d",
+      "R1/items/19_E09A80BE9D47.png": "26dfcfc81516fa0a8748c862f5e751736691c57dcef6fff55ff0f30d951020f7",
+      "R1/items/20_ECF852C76F85.png": "5ec5c8a0e4fa4f0ba058c600b761fe3e48e7e71ec885cada51976eb6c3b34fe6",
+      "R1/items/21_E7F464664232.png": "7f4df49a0f1374bfa9cac9836b6c22ca1a839afdf3ff43c911cd55b0b018297d",
+      "R1/items/22_E891905F03A5.png": "79d3f5066dbfd8e550ab9e8bebd2803e78c2fb4d6cc27e27db80619e9c038c28",
+      "R1/items/23_EE9C0D34C5A0.png": "3cc3e775fde9fca7c42defd8c67948bdfb8332654655714651f45eef91519359",
+      "R1/items/24_E88298BCC863.png": "908c5e68d1cdfe42f14540ad2aab40dcadb02dfcf5994e5e2eec152a596bff60",
+      "R2/ballot.csv": "ca90168df80214aac9c338bf3a7a72894b8ad3ac1c57b1571b8729fd2a942d74",
+      "R2/items/01_EE9C0D34C5A0.png": "3cc3e775fde9fca7c42defd8c67948bdfb8332654655714651f45eef91519359",
+      "R2/items/02_E2D9B5E3208B.png": "efd9c02d7a9d071c8720b383ed3c26a6b2ba0e9a46f69a38a5ce983be6ac3d3d",
+      "R2/items/03_E2EBF1962268.png": "8fdd873143b07e7940acf47269c18a584018ce82f3c2c1a40e1c36ef9a68e1a7",
+      "R2/items/04_E88298BCC863.png": "908c5e68d1cdfe42f14540ad2aab40dcadb02dfcf5994e5e2eec152a596bff60",
+      "R2/items/05_EF9CA0EE6B01.png": "d5660d4e30e958a7f64e22008f800a9982573e87594cf6b5e71a9b8172608a09",
+      "R2/items/06_EFF56EE204F1.png": "bd4b9c0f2211cd1e3592a8d30b40ac1fcbe9f6e1f16b81bcc700239c1462fa01",
+      "R2/items/07_EAA9E852CABF.png": "910808ed32fb5c7697c8ae49efd15b8c742daad914ccfbdf4bc56f6d1f110363",
+      "R2/items/08_E0DD21879440.png": "3804737d1fe85b532ba0ebe31eaead00e103d476d2e61467b6133d8117b34522",
+      "R2/items/09_E953533C477E.png": "0b1498fe2a6133ff2a09c9f9184082b6e435e11c72d7bae2b65409b4d7d9d999",
+      "R2/items/10_EB5EF65D481A.png": "d1a6ca49aba95335ae1aedd32439ad39a9b5dd985755702c665861209715f561",
+      "R2/items/11_E891905F03A5.png": "79d3f5066dbfd8e550ab9e8bebd2803e78c2fb4d6cc27e27db80619e9c038c28",
+      "R2/items/12_E7F464664232.png": "7f4df49a0f1374bfa9cac9836b6c22ca1a839afdf3ff43c911cd55b0b018297d",
+      "R2/items/13_E47AB822D5E2.png": "f6ad2dff7a1de19f86a91c6d0d7abd0ca0021537743160d90f25341d267e6eca",
+      "R2/items/14_E4B6B5AFF8C3.png": "8c93f82afb2d5468da331ce21ff76b4edd329a28267210ba94b88b53542817e6",
+      "R2/items/15_E116D52AD743.png": "9e489e61a5b11aae89c3554439d1abeded1c626f1943a0dd5560078c60d41ff5",
+      "R2/items/16_E4F25705577A.png": "f4c92b9c0fcb9517e99375fd1fc7a1c1129e1a9e7cafefbfc3e5d2cac0e8359d",
+      "R2/items/17_E84A7A27835E.png": "9cf61389a2ffc05de18f11becf08039fc91e11ad0e3a92ef9d806c6185529470",
+      "R2/items/18_E09A80BE9D47.png": "26dfcfc81516fa0a8748c862f5e751736691c57dcef6fff55ff0f30d951020f7",
+      "R2/items/19_E51157761664.png": "e63239dc07f0acc38a7161457e592945d25ffff1997a5a7834ea2ee83138d648",
+      "R2/items/20_EF531D109E7E.png": "007af0688c00a2fd99162f3520705e1420d846f6a8e57b8a380771016a10ae06",
+      "R2/items/21_E37F1C49CEFA.png": "45d5ed31d61a5fc561e1d104c3e7e051ba32d2bcc62129a152004342cb84e9f3",
+      "R2/items/22_E286516293D2.png": "4389acf755bfe048d0b81f9d3cdf1e2d71f16a966e77435dd9bd797bee6276bc",
+      "R2/items/23_ECF852C76F85.png": "5ec5c8a0e4fa4f0ba058c600b761fe3e48e7e71ec885cada51976eb6c3b34fe6",
+      "R2/items/24_EF0ED8AFA1F3.png": "20ae3c5279b5d08281b5b6969beb0e3ee7642d85fbc8bed860718284a02d014d",
+      "R3/ballot.csv": "56abd6af5bb0629e1298b0fa706a027ce9958a8395285c0ccc69844515327790",
+      "R3/items/01_E09A80BE9D47.png": "26dfcfc81516fa0a8748c862f5e751736691c57dcef6fff55ff0f30d951020f7",
+      "R3/items/02_EE9C0D34C5A0.png": "3cc3e775fde9fca7c42defd8c67948bdfb8332654655714651f45eef91519359",
+      "R3/items/03_E2D9B5E3208B.png": "efd9c02d7a9d071c8720b383ed3c26a6b2ba0e9a46f69a38a5ce983be6ac3d3d",
+      "R3/items/04_E116D52AD743.png": "9e489e61a5b11aae89c3554439d1abeded1c626f1943a0dd5560078c60d41ff5",
+      "R3/items/05_EB5EF65D481A.png": "d1a6ca49aba95335ae1aedd32439ad39a9b5dd985755702c665861209715f561",
+      "R3/items/06_E37F1C49CEFA.png": "45d5ed31d61a5fc561e1d104c3e7e051ba32d2bcc62129a152004342cb84e9f3",
+      "R3/items/07_EF9CA0EE6B01.png": "d5660d4e30e958a7f64e22008f800a9982573e87594cf6b5e71a9b8172608a09",
+      "R3/items/08_ECF852C76F85.png": "5ec5c8a0e4fa4f0ba058c600b761fe3e48e7e71ec885cada51976eb6c3b34fe6",
+      "R3/items/09_E4B6B5AFF8C3.png": "8c93f82afb2d5468da331ce21ff76b4edd329a28267210ba94b88b53542817e6",
+      "R3/items/10_E891905F03A5.png": "79d3f5066dbfd8e550ab9e8bebd2803e78c2fb4d6cc27e27db80619e9c038c28",
+      "R3/items/11_E51157761664.png": "e63239dc07f0acc38a7161457e592945d25ffff1997a5a7834ea2ee83138d648",
+      "R3/items/12_E953533C477E.png": "0b1498fe2a6133ff2a09c9f9184082b6e435e11c72d7bae2b65409b4d7d9d999",
+      "R3/items/13_E4F25705577A.png": "f4c92b9c0fcb9517e99375fd1fc7a1c1129e1a9e7cafefbfc3e5d2cac0e8359d",
+      "R3/items/14_EF0ED8AFA1F3.png": "20ae3c5279b5d08281b5b6969beb0e3ee7642d85fbc8bed860718284a02d014d",
+      "R3/items/15_E88298BCC863.png": "908c5e68d1cdfe42f14540ad2aab40dcadb02dfcf5994e5e2eec152a596bff60",
+      "R3/items/16_E47AB822D5E2.png": "f6ad2dff7a1de19f86a91c6d0d7abd0ca0021537743160d90f25341d267e6eca",
+      "R3/items/17_EAA9E852CABF.png": "910808ed32fb5c7697c8ae49efd15b8c742daad914ccfbdf4bc56f6d1f110363",
+      "R3/items/18_E7F464664232.png": "7f4df49a0f1374bfa9cac9836b6c22ca1a839afdf3ff43c911cd55b0b018297d",
+      "R3/items/19_E286516293D2.png": "4389acf755bfe048d0b81f9d3cdf1e2d71f16a966e77435dd9bd797bee6276bc",
+      "R3/items/20_E2EBF1962268.png": "8fdd873143b07e7940acf47269c18a584018ce82f3c2c1a40e1c36ef9a68e1a7",
+      "R3/items/21_E84A7A27835E.png": "9cf61389a2ffc05de18f11becf08039fc91e11ad0e3a92ef9d806c6185529470",
+      "R3/items/22_EFF56EE204F1.png": "bd4b9c0f2211cd1e3592a8d30b40ac1fcbe9f6e1f16b81bcc700239c1462fa01",
+      "R3/items/23_E0DD21879440.png": "3804737d1fe85b532ba0ebe31eaead00e103d476d2e61467b6133d8117b34522",
+      "R3/items/24_EF531D109E7E.png": "007af0688c00a2fd99162f3520705e1420d846f6a8e57b8a380771016a10ae06",
+      "README.md": "a5f4b78fb63a454e7ffacd6aac92d8aa05fff4b4092c014c5070170b5771a590"
+    },
+    "private_mapping_sha256": "649088c7f3d6137c6c2180d99c7553023909da0f5a437a9341d145e62f41f5a4"
+  }
+}

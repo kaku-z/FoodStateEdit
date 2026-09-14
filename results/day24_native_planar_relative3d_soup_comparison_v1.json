@@ -1,0 +1,51 @@
+{
+  "schema_version": "foodstateedit.native_planar_relative3d_comparison.v1",
+  "date": "2026-09-12",
+  "status": "comparison_complete_development_only",
+  "case_id": "soup",
+  "matched_factors": {
+    "seed": 1,
+    "frames": 21,
+    "steps": 20,
+    "vace_scale": 1.0,
+    "lora_enabled": false,
+    "ttm_enabled": false,
+    "outside_support_projection": "exact_before_video_encoding"
+  },
+  "fixed_review_frames": [0, 3, 6, 10, 15, 20],
+  "conditions": {
+    "native_input": {
+      "final_sha256": "5cd9efaf1a34e3dea63cdcb155548af265e22b0111cf5c77481c4507e659b81b",
+      "visible_spoon": false,
+      "supported_payload": false,
+      "source_change": false,
+      "action_success": false,
+      "photo_success": "preservation_only"
+    },
+    "planar_proxy": {
+      "final_sha256": "95f0c5e909bb168c9fb2c300f5c6fba50fe811c599dddb3a2d3a4cecef361cc7",
+      "manifest_final_sha256": "95f0c5e909bb168c9fb2c300f5c6fba50fe811c599dddb3a2d3a4cecef361cc7",
+      "visible_spoon": true,
+      "supported_payload": true,
+      "source_change": "not_clearly_established",
+      "action_success": "partial",
+      "photo_success": false
+    },
+    "relative3d_proxy": {
+      "final_sha256": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854",
+      "visible_spoon": true,
+      "supported_payload": true,
+      "source_change": "not_clearly_established",
+      "action_success": "partial",
+      "photo_success": false
+    }
+  },
+  "decisions": {
+    "explicit_motion_proxy_needed_for_this_case": true,
+    "relative3d_clearly_better_than_planar": false,
+    "reason": "Native input does not create the requested utensil or payload, whereas both proxy arms do. Planar and relative-3D outputs are visually very similar and neither resolves synthetic boundaries or source correspondence."
+  },
+  "reviewer": "assistant_internal_non_blind_development_review",
+  "independent_human_review": false,
+  "claim_limit": "One selected real soup image and one seed support only a development-case necessity claim for an explicit motion proxy. They do not establish a general 3-D advantage, superiority, or photo realism."
+}

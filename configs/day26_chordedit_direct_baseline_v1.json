@@ -1,0 +1,103 @@
+{
+  "schema_version": "foodstateedit.chordedit_direct_baseline.v1",
+  "freeze_date": "2026-09-12",
+  "execution_allowed": true,
+  "scientific_status": "same_input_external_diffusion_editor_development_baseline_not_held_out_effectiveness",
+  "hypothesis": "A general prompt-difference image editor may create a plausible final utensil-food state directly from the original image, but without an explicit interaction trajectory it may fail utensil count, contact, payload-source correspondence, or action geometry.",
+  "method_id": "ChordEdit_SD_Turbo_direct_edit",
+  "comparison_role": "available_external_diffusion_image_editor_baseline",
+  "case_order": ["ramen", "soup", "rice", "cake"],
+  "seeds": [1, 2, 3],
+  "cases": {
+    "ramen": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/noodle/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/noodle/edit_alpha.png",
+      "input_sha256": "0e0f1576f122dd662ba67d18cfd7d3825ccdae1f35b33ff1b8d13c7e632b93c6",
+      "allowed_edit_region_sha256": "a13bb393459a67e8b261c02dc317b75c859a4e084b38c56c1fc11bbc4b4e357f",
+      "source_prompt": "the same real udon bowl with noodles in broth and no utensil",
+      "target_prompt": "the same real udon bowl with exactly two separate wooden chopsticks lifting one long continuous udon noodle high above the bowl, visibly pinched and still connected to the noodles below, with natural gloss, occlusion, contact shadow, and no hand or extra utensil"
+    },
+    "soup": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/soup/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/soup/edit_alpha.png",
+      "input_sha256": "dfa5d3870d0ae49177f3b7cd9cd2aa23c9ef4b6607f0ce5b7546e960d0df3eff",
+      "allowed_edit_region_sha256": "ce15d4a7af43dfc3aab8ff90ad957da272eb4b14295f9c9f6a15a86e25ffe46f",
+      "source_prompt": "the same real bowl of thick potage with garnish and no utensil",
+      "target_prompt": "the same real potage with exactly one realistic stainless-steel spoon scooping and lifting a visible spoonful above the surface, liquid retained by a natural meniscus, corresponding source change, preserved bowl and garnish, and no hand, spill, crater, or duplicate utensil"
+    },
+    "rice": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/rice/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/rice/edit_alpha.png",
+      "input_sha256": "630352af9844e4658f0dd26331f95113f7849cdd86b58ece32ad364e9cc2c7cc",
+      "allowed_edit_region_sha256": "01b784b3c945f6d8a23f17754fe47112f9692dda7a76b68d9f0812335b64ffe5",
+      "source_prompt": "the same real plate of fried rice with grains, egg and vegetables and no serving utensil",
+      "target_prompt": "the same real fried rice with exactly one realistic stainless-steel serving spatula lifting a coherent small scoop of distinct grains, egg and vegetables supported on the blade, with matching shallow source reduction, preserved plate and lighting, and no hand or duplicate payload"
+    },
+    "cake": {
+      "input_image": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/cake/reference.png",
+      "allowed_edit_region": "/host/space0/guo-z/tf-ufi/outputs/day19_multimaterial_dataset_v3/cake/edit_alpha.png",
+      "input_sha256": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
+      "allowed_edit_region_sha256": "e3f3a7b41d18644bad9a2835c9037d751729fb8550543c6d3c918844a5f11f8c",
+      "source_prompt": "the same cream-topped sponge cake with a pre-cut front-right bite resting on the plate and no fork",
+      "target_prompt": "the same cake with exactly one realistic four-tined metal fork lifting the already pre-cut front-right bite above the plate, the intact bite attached to the fork, a matching source gap with natural crumb surfaces, preserved plate and lighting, and no hand, second bite, or duplication"
+    }
+  },
+  "fairness_contract": {
+    "inputs_match_day25": true,
+    "allowed_edit_regions_match_day25": true,
+    "target_actions_match_day25": true,
+    "no_planar_proxy": true,
+    "no_relative3d_proxy": true,
+    "no_vace_output_as_editor_input": true,
+    "single_candidate_per_seed": true,
+    "no_best_of_selection": true,
+    "no_failed_seed_replacement": true,
+    "exact_protected_region_composite": true
+  },
+  "inference": {
+    "image_size": 512,
+    "crop_padding_px": 32,
+    "noise_samples": 1,
+    "n_steps": 1,
+    "t_start": 0.95,
+    "t_end": 0.1,
+    "t_delta": 0.2,
+    "step_scale": 1.0
+  },
+  "backend": {
+    "project_root": "/host/space0/guo-z/chordedit_repro/ChordEdit",
+    "model_root": "/host/space0/guo-z/chordedit_repro/models/sd-turbo-fp16-prepared",
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "text_encoder/model.safetensors": {"size_bytes": 680820392, "sha256": "bc1827c465450322616f06dea41596eac7d493f4e95904dcb51f0fc745c4e13f"},
+      "unet/diffusion_pytorch_model.safetensors": {"size_bytes": 1731904736, "sha256": "40ec400881e27d1376c7c95c5bd495f407b33756e80eb6365e301c33a07af6e5"},
+      "vae/diffusion_pytorch_model.safetensors": {"size_bytes": 167335342, "sha256": "3e4c08995484ee61270175e9e7a072b66a6e4eeb5f0c266667fe1f45b90daf9a"}
+    }
+  },
+  "unavailable_named_editors": {
+    "Qwen-Image-Edit": "complete runnable base not found under guo-z storage",
+    "FLUX-Kontext": "no frozen local installation, complete owned weights, or same-input outputs",
+    "ChronoEdit": "no frozen local installation, complete owned weights, or same-input outputs"
+  },
+  "output_root_template": "/host/space0/guo-z/tf-ufi/outputs/day26_chordedit_direct_baseline_v1_{case_id}",
+  "preflight_template": "/host/space0/guo-z/tf-ufi/outputs/day26_chordedit_direct_baseline_v1_{case_id}_preflight.json",
+  "implementation": {
+    "runner_sha256": "7d1a977ab19384efa585c8a0024f7f6e169f2757e160a3d6b0003bb5246f87dc"
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 80000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "expected_generation_count": 12,
+  "evaluation_protocol": "benchmark/FOODSTATEEDIT_BLIND_EVALUATION_PROTOCOL_V1.md",
+  "claim_limit": "This four-case, three-seed development comparison evaluates one locally available external diffusion editor on the same inputs and spatial supports. Cake remains synthetic supplementary evidence. It cannot substitute for unavailable Qwen-Image-Edit, FLUX Kontext or ChronoEdit, and cannot establish held-out generalization, superiority, physical correctness, or paper-level photo realism."
+}

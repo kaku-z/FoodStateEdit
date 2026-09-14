@@ -1,0 +1,47 @@
+{
+  "schema_version": "foodstateedit.day25_same_condition_ablation_result.v1",
+  "date": "2026-09-13",
+  "status": "technical_complete_internal_review_complete",
+  "scientific_status": "four_case_development_ablation_negative_for_relative3d_gain",
+  "matrix": {
+    "cases": 4,
+    "seeds": 3,
+    "conditions": 5,
+    "cells": 60,
+    "newly_generated_cells": 47,
+    "legacy_hash_locked_cells": 13,
+    "unique_final_image_hashes": 60
+  },
+  "collection": {
+    "verified_new_files": 282,
+    "all_outside_support_exact": true,
+    "verification_record": "results/day25_ablation_collection_verified_v1.json",
+    "matrix_record": "results/day25_ablation_matrix_verified_v1.json"
+  },
+  "review_kind": "internal_unblinded_development_review",
+  "case_findings": {
+    "ramen": "Native input does not produce the requested interaction. Explicit controls introduce chopsticks and a lifted strand, but pinch/contact remains inconsistent; scale 0.6 is unstable and relative3D/0.8 does not clearly outperform planar across seeds.",
+    "soup": "Explicit controls consistently introduce a spoon and visible carried liquid while native input does not. Planar and relative3D scale 1.0 are visually similar; scale 0.6 causes spoon deformation in multiple seeds, so no clear relative3D advantage is present.",
+    "rice": "Explicit controls create a scoop-like utensil and payload. Planar and relative3D scale 1.0 remain nearly indistinguishable and schematic; scale 0.6 sometimes looks more metallic but also produces larger local distortion. No stable relative3D gain is visible.",
+    "cake": "Explicit controls lift a pre-cut block while native input does not. Scale 0.6 can create a recognizable fork but also damages or reshapes the source block; fixed-scale controls often retain a rod-like utensil. The material-adaptive arm does not provide a consistent strict improvement."
+  },
+  "development_gates": {
+    "explicit_motion_proxy_necessary_on_selected_cases": true,
+    "clear_relative3d_gain_over_planar_case_count": 0,
+    "clear_material_adaptive_gain_over_fixed_relative3d_case_count": 0,
+    "fully_automatic_rollback_validated": false,
+    "heldout_effectiveness_unlocked": false
+  },
+  "review_grids": {
+    "cake_final_grid.png": "a636e8f3d6bba06832d84558521a0e28ca83acb50b5817c2af64e1abd9b6840a",
+    "cake_process_grid.png": "890471d11cd4b6fdd5604b171827cd22c7c712c6778a22ff2d519d1c154d567f",
+    "ramen_final_grid.png": "2352c082a59c281d1514d6d558a2822044a7e73148c9203fb55b5aab6fc74818",
+    "ramen_process_grid.png": "29698c13ef7c3f0d20d5d60729b420eea35fcdae162c3f277facdc7fc5a21b5f",
+    "rice_final_grid.png": "99a33486c6732d76734581626e98c2c0fbd127bcfff8d19d9966fa3fa8a137ac",
+    "rice_process_grid.png": "43d11e1b280ff5c70b34375d05ee858088dfcdf67860e6387cad7db59e06fd0c",
+    "soup_final_grid.png": "6e8204b28710108acf07d3adf4333aab7e3a52916401fb658399f55199817e0e",
+    "soup_process_grid.png": "6e392b134587e060de475bbac203ad4438b01760921952e1434b72cc8bc92b46"
+  },
+  "decision": "Do not promote a relative3D-superiority or material-adaptation claim and do not unlock the held-out test. Continue with the preregistered 20-image Day32 pilot; preserve a negative outcome if the broader pilot also fails.",
+  "claim_limit": "This selected four-case development ablation supports explicit-control necessity only. It does not establish relative3D superiority, held-out generalization, physical correctness, photo realism or a validated automatic rollback observer."
+}
