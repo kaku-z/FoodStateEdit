@@ -1,0 +1,69 @@
+{
+  "schema": "foodstateedit.spatial_stress_result.v1",
+  "status": "execution_complete_internal_review_complete_no_main_figure_replacement",
+  "origin_skill": "academic-research-suite/experiment-agent",
+  "review_type": "AI visual inspection, internal and non-blind; not a human study",
+  "independent_inputs": 2,
+  "seeds_per_input": 1,
+  "seed": 2,
+  "generation_cells": 6,
+  "raw_frames_per_cell": 21,
+  "total_raw_frames": 126,
+  "all_raw_and_lossless_composite_frame_grids_inspected": true,
+  "technical_failures_this_batch": 0,
+  "verified_evidence_file_count": 171,
+  "file_hash_verification": "all non-cache evidence files matched remote SHA-256 before and after transfer; cache excluded",
+  "evidence_root": "artifacts/spatial_stress_results_v1_20260914T1406Z",
+  "verification_receipt": "artifacts/spatial_stress_results_v1_20260914T1406Z_verified.json",
+  "review_root": "artifacts/spatial_stress_review_v1_20260914T1409Z",
+  "diagnostics": "artifacts/spatial_stress_review_v1_20260914T1409Z/diagnostics.json",
+  "controls_manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+  "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+  "pipeline_load_count_per_job": 1,
+  "inference": {"steps": 20, "vace_scale": 1, "ttm": false, "lora": false, "fps": 8},
+  "jobs": {
+    "soup_toward_camera": {
+      "source_kind": "real_previously_used_upscaled_pilot",
+      "wall_seconds_rounded": 737.41,
+      "planar_translation": {"observed_motion": "approach, fill and lift visible, no marked depth-related growth", "contact": "graphic payload stays within spoon outline; physical support unverified", "photo": "not_accepted_flat_gray_spoon", "source_correspondence": "unverified"},
+      "planar_similarity": {"observed_motion": "lift and apparent size increase visible", "contact": "graphic payload stays within spoon outline; physical support unverified", "photo": "not_accepted_flat_gray_spoon", "source_correspondence": "unverified"},
+      "relative3d": {"observed_motion": "lift and apparent size increase visible; frame 0 also has an early utensil appearance", "contact": "graphic payload stays within spoon outline; physical support unverified", "photo": "not_accepted_flat_gray_spoon", "source_correspondence": "unverified"},
+      "comparison": "Similarity already reproduces size growth. A distinct 3D semantic or photo advantage is not established."
+    },
+    "cake_yaw45": {
+      "source_kind": "synthetic_imagegen_input",
+      "wall_seconds_rounded": 694.02,
+      "planar_translation": {"observed_motion": "bite lifts while largely keeping its orientation", "contact": "handle follows bite but final fork tines and insertion are unclear", "photo": "not_accepted_as_complete_interaction_result", "source_correspondence": "residual block/strip at source and uncertain removal"},
+      "planar_similarity": {"observed_motion": "lift and 2D shape-size change visible, no comparable perspective turn", "contact": "handle follows bite but final fork tines and insertion are unclear", "photo": "not_accepted_as_complete_interaction_result", "source_correspondence": "residual block/strip at source and uncertain removal"},
+      "relative3d": {"observed_motion": "changed bite face proportions/orientation remain visible during the lift", "contact": "handle follows bite but final fork tines and insertion are unclear", "photo": "not_accepted_as_complete_interaction_result", "source_correspondence": "residual block/strip at source and uncertain removal"},
+      "comparison": "A control-representation effect survives generation, but actual 45-degree physical rotation and improved end-to-end quality are not demonstrated."
+    }
+  },
+  "raw_final_outside_mae_0_255": {
+    "soup_toward_camera": {"planar_translation": 4.478302817852138, "planar_similarity": 4.5163319507097, "relative3d": 4.523652407487582},
+    "cake_yaw45": {"planar_translation": 4.651186134320201, "planar_similarity": 4.666453528039637, "relative3d": 4.5323166978039575}
+  },
+  "all_composited_final_outside_max_difference": 0,
+  "preservation_interpretation": "Exactly preserved outside the binary mask by compositing, not by the generator or 3D representation. Lossless review composites differ from delivered MP4-decoded final composites inside the mask.",
+  "mask_description_correction": "Frozen config says dilated 33 pixels. Actual code uses MaxFilter(33): a 33x33 maximum-filter window, about 16 pixels outward per side. Frozen source/config is preserved unchanged.",
+  "pipeline_audit": {
+    "file": "vendor_overrides/GeoEdit/diffsynth/pipelines/wan_video.py",
+    "observed_code": "Lines 1179-1185 encode both C*(1-M) and C*M. A white mask does not erase the RGB control. TTM false skips its latent-copy path; raw is VAE-decoded at lines 502-509 before external compositing.",
+    "interpretation": "Photo conversion failed under this setting; over-retention of control appearance is plausible but is not uniquely diagnosed. No direct control-frame copy-back to raw was found."
+  },
+  "limits": [
+    "Two development inputs and one seed do not establish generalization or statistical superiority.",
+    "Similarity is oracle-assisted from target 3D projected landmarks, not an independently depth-free method and not every possible 2D baseline.",
+    "All arms share the phase trajectory; smoothness alone is not a 3D contribution.",
+    "Fixed face ordering, final fork-tine redraw and fixed pixel-width utensils do not implement full dynamic visibility.",
+    "Zero control-space error for 3D is true by construction, not a generated-output success metric.",
+    "No Qwen appearance repair or additional encoder/LoRA training was performed in this batch."
+  ],
+  "presentation_decision": {
+    "replace": false,
+    "reason": "The requested condition of better overall visual results is not met. Do not replace old main comparisons with this stress diagnostic.",
+    "ppt_unchanged": "output/pptx/FoodStateEdit_GUO_2530030_20260914_v41_motion_video.pptx",
+    "pdf_unchanged": "output/pdf/FoodStateEdit_Formal_GUO_2530030_SeniorFormat_20260914_v8_teacher_evidence.pdf"
+  },
+  "parallel_review": {"experiment_audit": "completed read-only implementation and pipeline review", "ppt_audit": "completed read-only replacement mapping", "integration": "main agent independently inspected source excerpts and all 126 raw frames plus composited sequences; no delegated file edits"}
+}

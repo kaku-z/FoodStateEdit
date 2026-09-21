@@ -1,0 +1,64 @@
+{
+  "schema_version": "foodstateedit.e3_canny_mask_contract_probe.v1",
+  "freeze_date": "2026-09-17",
+  "scientific_status": "two_case_one_seed_interface_correction_probe_not_effectiveness_or_generalization",
+  "research_question": "Does separating the full-frame VACE conditioning mask from the local final-compositing mask remove the black Canny-background artifact observed in E2?",
+  "source_controls": {
+    "path": "artifacts/e2_control_representation_controls_v1_20260917",
+    "manifest_sha256": "1a2e23251b50580e3ea4735d6a881d049280255e41053436be21133e4158eec6",
+    "required_control": "fullframe_canny"
+  },
+  "legacy_evidence": {
+    "path": "artifacts/e2_control_representation_results_gp40_20260917T031505Z",
+    "condition": "fullframe_canny",
+    "seed": 1,
+    "note": "Read-only historical comparator. E3 never overwrites or mutates E2 evidence."
+  },
+  "cases": [
+    "cake",
+    "noodle"
+  ],
+  "mask_contract": {
+    "vace_conditioning_mask_policy": "full_generation_all_white_via_none",
+    "final_projection_mask_policy": "frozen_shared_alpha_after_generation_only",
+    "forbidden_legacy_call": "vace_video_mask=[alpha] * num_frames"
+  },
+  "inference": {
+    "seeds": [
+      1
+    ],
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "lora_enabled": false,
+    "reference_count": 1,
+    "review_frame_indices": [
+      0,
+      3,
+      6,
+      10,
+      15,
+      20
+    ]
+  },
+  "evaluation": {
+    "primary": [
+      "raw_inside_support_black_fraction",
+      "raw_outside_support_mae_to_reference",
+      "raw_outside_support_mae_to_control",
+      "composited_outside_support_exactness",
+      "visual_contact_and_motion_review"
+    ],
+    "rules": [
+      "Use the frozen E2 full-frame Canny tensors without changing geometry, prompt, negative prompt, reference image, seed, frame count, steps or VACE scale.",
+      "Pass no local alpha mask to the VACE condition encoder; None is converted by the frozen runtime to an all-one generation mask.",
+      "Use the frozen shared alpha only after generation for lossless local projection.",
+      "Do not retry, replace the seed, repair an output or overwrite any existing output path.",
+      "A reduced black fraction only confirms correction of the interface mismatch; action quality still requires visual review."
+    ]
+  },
+  "hard_timeout_seconds_per_case": 3600,
+  "claim_limit": "Mask-contract failure-localization only. A positive result does not prove 3D superiority, source conservation, physical correctness, photo realism or generalization."
+}

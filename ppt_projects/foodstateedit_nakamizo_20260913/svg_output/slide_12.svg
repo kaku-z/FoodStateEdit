@@ -18,9 +18,9 @@
 <rect x="662" y="192" width="150" height="54" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
 <text x="737.0" y="227" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="middle">SSIM ↑</text>
 <rect x="812" y="192" width="220" height="54" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
-<text x="922.0" y="227" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="middle">編集領域内変化 MAE</text>
+<text x="922.0" y="227" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="middle">領域内 MAE</text>
 <rect x="1032" y="192" width="176" height="54" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
-<text x="1120.0" y="227" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="middle">領域外完全保持 ↑</text>
+<text x="1120.0" y="227" font-family="Arial, Yu Gothic, sans-serif" font-size="17" fill="#FFFFFF" font-weight="700" text-anchor="middle">領域外保持 ↑</text>
 <rect x="72" y="246" width="350" height="60" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
 <text x="88" y="284" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#222222" font-weight="700" text-anchor="start">Native VACE</text>
 <rect x="422" y="246" width="90" height="60" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
@@ -58,7 +58,7 @@
 <rect x="1032" y="366" width="176" height="60" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
 <text x="1120.0" y="404" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#222222" font-weight="500" text-anchor="middle">100.0%</text>
 <rect x="72" y="426" width="350" height="60" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2"/>
-<text x="88" y="464" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="start">★ material-adaptive relative3D（Ours）</text>
+<text x="88" y="464" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="start">★ adaptive relative3D</text>
 <rect x="422" y="426" width="90" height="60" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2"/>
 <text x="467.0" y="464" font-family="Arial, Yu Gothic, sans-serif" font-size="18" fill="#2E8B57" font-weight="700" text-anchor="middle">12</text>
 <rect x="512" y="426" width="150" height="60" fill="#F1FAF4" stroke="#2E8B57" stroke-width="2"/>

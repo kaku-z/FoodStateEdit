@@ -2,42 +2,57 @@
 <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
 <line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
 <text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">RELATED WORK</text>
-<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">関連研究と位置付け</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">関連手法の役割と本研究</text>
 <rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
 <text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
 <text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">05</text>
-<g id="slide-content" data-pptx-bounds="72 160 1136 500">
-<rect x="72" y="190" width="258" height="176" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
-<rect x="72" y="190" width="258" height="8" fill="#0070C0" stroke="none" stroke-width="1"/>
-<text x="92" y="235" font-family="Arial, Yu Gothic, sans-serif" font-size="26" fill="#0070C0" font-weight="700" text-anchor="start">Qwen Image</text>
-<text x="92" y="278" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">静止画編集</text>
-<text x="92" y="320" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#666666" font-weight="400" text-anchor="start">写真品質に強い</text>
-<rect x="358" y="190" width="258" height="176" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
-<rect x="358" y="190" width="258" height="8" fill="#5BC0EB" stroke="none" stroke-width="1"/>
-<text x="378" y="235" font-family="Arial, Yu Gothic, sans-serif" font-size="26" fill="#5BC0EB" font-weight="700" text-anchor="start">VACE</text>
-<text x="378" y="278" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">動画拡散</text>
-<text x="378" y="320" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#666666" font-weight="400" text-anchor="start">時間連続生成</text>
-<rect x="644" y="190" width="258" height="176" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
-<rect x="644" y="190" width="258" height="8" fill="#5D83A6" stroke="none" stroke-width="1"/>
-<text x="664" y="235" font-family="Arial, Yu Gothic, sans-serif" font-size="26" fill="#5D83A6" font-weight="700" text-anchor="start">GeoEdit 系</text>
-<text x="664" y="278" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">幾何編集</text>
-<text x="664" y="320" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#666666" font-weight="400" text-anchor="start">位置・形状制御</text>
-<rect x="930" y="190" width="258" height="176" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
-<rect x="930" y="190" width="258" height="8" fill="#69A87A" stroke="none" stroke-width="1"/>
-<text x="950" y="235" font-family="Arial, Yu Gothic, sans-serif" font-size="26" fill="#69A87A" font-weight="700" text-anchor="start">SAM</text>
-<text x="950" y="278" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#222222" font-weight="700" text-anchor="start">領域抽出</text>
-<text x="950" y="320" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#666666" font-weight="400" text-anchor="start">食物・容器の分離</text>
-<line x1="214" y1="397" x2="628" y2="397" stroke="#D8DDE3" stroke-width="3"/>
-<polygon points="628,389 640,397 628,405" fill="#D8DDE3" stroke="none" stroke-width="1"/>
-<line x1="498" y1="397" x2="628" y2="397" stroke="#D8DDE3" stroke-width="3"/>
-<polygon points="628,389 640,397 628,405" fill="#D8DDE3" stroke="none" stroke-width="1"/>
-<line x1="782" y1="397" x2="628" y2="397" stroke="#D8DDE3" stroke-width="3"/>
-<polygon points="628,389 640,397 628,405" fill="#D8DDE3" stroke="none" stroke-width="1"/>
-<line x1="1066" y1="397" x2="628" y2="397" stroke="#D8DDE3" stroke-width="3"/>
-<polygon points="628,389 640,397 628,405" fill="#D8DDE3" stroke="none" stroke-width="1"/>
-<rect x="270" y="432" width="740" height="154" fill="#EAF6FC" stroke="#0070C0" stroke-width="3" rx="8"/>
-<text x="640" y="478" font-family="Arial, Yu Gothic, sans-serif" font-size="31" fill="#0070C0" font-weight="700" text-anchor="middle">FoodStateEdit（本研究）</text>
-<text x="640" y="522" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="30" fill="#222222" font-weight="700" text-anchor="middle">相対3D代理 ＋ 段階動作 ＋ 保持評価</text>
-<text x="640" y="558" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="20" fill="#666666" font-weight="400" text-anchor="middle">既存基盤モデルに柔軟物の操作制御と検証を追加</text>
+<g id="related-method-roles" data-pptx-bounds="60 150 1160 525">
+<rect x="72" y="178" width="258" height="254" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
+<rect x="72" y="178" width="258" height="8" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="90" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="23" fill="#0070C0" font-weight="700" text-anchor="start">Qwen Image</text>
+<text x="304" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">[4]</text>
+<rect x="88" y="232" width="226" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p09_soup_qwen_seed1.png" x="92" y="236" width="218" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="90" y="354" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#222222" font-weight="700" text-anchor="start">写真らしい静止画編集</text>
+<text x="90" y="386" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="start">外観・質感の生成</text>
+<rect x="358" y="178" width="258" height="254" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
+<rect x="358" y="178" width="258" height="8" fill="#5BC0EB" stroke="none" stroke-width="1"/>
+<text x="376" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="23" fill="#5BC0EB" font-weight="700" text-anchor="start">VACE</text>
+<text x="590" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#5BC0EB" font-weight="700" text-anchor="end">[1]</text>
+<rect x="374" y="232" width="226" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p10_success_soup_output.png" x="378" y="236" width="218" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="376" y="354" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#222222" font-weight="700" text-anchor="start">時間連続な動画生成</text>
+<text x="376" y="386" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="start">画像・動画・マスク条件</text>
+<rect x="644" y="178" width="258" height="254" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
+<rect x="644" y="178" width="258" height="8" fill="#5D83A6" stroke="none" stroke-width="1"/>
+<text x="662" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="23" fill="#5D83A6" font-weight="700" text-anchor="start">GeoEdit 系</text>
+<text x="876" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#5D83A6" font-weight="700" text-anchor="end">[3]</text>
+<rect x="660" y="232" width="226" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p05_ramen_control.png" x="664" y="236" width="218" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="662" y="354" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#222222" font-weight="700" text-anchor="start">位置と形状の幾何制御</text>
+<text x="662" y="386" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="start">Wan/VACE系 baseline</text>
+<rect x="930" y="178" width="258" height="254" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="6"/>
+<rect x="930" y="178" width="258" height="8" fill="#69A87A" stroke="none" stroke-width="1"/>
+<text x="948" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="23" fill="#69A87A" font-weight="700" text-anchor="start">SAM 3</text>
+<text x="1162" y="215" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#69A87A" font-weight="700" text-anchor="end">[2]</text>
+<rect x="946" y="232" width="226" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p06_family_controls.png" x="950" y="236" width="218" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="948" y="354" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#222222" font-weight="700" text-anchor="start">対象領域の抽出</text>
+<text x="948" y="386" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="start">現行生成経路外の候補観測</text>
+<line x1="214" y1="458" x2="628" y2="458" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="628,450 640,458 628,466" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<line x1="498" y1="458" x2="628" y2="458" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="628,450 640,458 628,466" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<line x1="782" y1="458" x2="628" y2="458" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="628,450 640,458 628,466" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<line x1="1066" y1="458" x2="628" y2="458" stroke="#D8DDE3" stroke-width="3"/>
+<polygon points="628,450 640,458 628,466" fill="#D8DDE3" stroke="none" stroke-width="1"/>
+<rect x="176" y="486" width="928" height="112" fill="#EAF6FC" stroke="#0070C0" stroke-width="3" rx="8"/>
+<text x="640" y="524" font-family="Arial, Yu Gothic, sans-serif" font-size="29" fill="#0070C0" font-weight="700" text-anchor="middle">FoodStateEdit（本研究）</text>
+<text x="640" y="558" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="23" fill="#222222" font-weight="700" text-anchor="middle">相対3D代理で動作を指定し、VACE生成後も非編集領域を保持</text>
+<text x="640" y="586" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#666666" font-weight="500" text-anchor="middle">既存手法を置き換えず、柔軟物操作の制御と評価を追加</text>
+<text x="72" y="632" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="12" fill="#666666" font-weight="400" text-anchor="start">参考文献： [1] Jiang et al., VACE, ICCV 2025　 [2] Carion et al., SAM 3, arXiv:2511.16719</text>
+<text x="72" y="650" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="12" fill="#666666" font-weight="400" text-anchor="start">[3] GeoEdit official repository　 [4] Qwen-Image official model card</text>
+<text x="72" y="670" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="12" fill="#E31B23" font-weight="500" text-anchor="start">※ SAM 3は候補領域抽出用で、現行の生成経路には接続していない。</text>
 </g>
 </svg>

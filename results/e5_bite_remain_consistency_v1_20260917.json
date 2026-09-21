@@ -1,0 +1,66 @@
+{
+  "schema_version": "foodstateedit.e5_bite_remain_result.v1",
+  "date": "2026-09-17",
+  "scope": "single synthetic pre-cut cake development case, seed 1",
+  "status": "partial_mechanism_support_visual_quality_failed",
+  "algorithm": {
+    "name": "bite-remain consistency control",
+    "shared_object": "manual projected removal cuboid",
+    "outputs": [
+      "moving payload projection",
+      "remaining cut-wall surfaces",
+      "exposed plate floor",
+      "lift-conditioned repair support"
+    ],
+    "guarantees": [
+      "planned payload pixels unchanged by the local pass",
+      "pixels outside inward repair alpha unchanged"
+    ],
+    "not_guaranteed": [
+      "true 3D reconstruction",
+      "physical volume conservation in generated RGB",
+      "photographic naturalness",
+      "generalization"
+    ]
+  },
+  "runs": {
+    "e5_original_reference": {
+      "controls_manifest_sha256": "de6e7e68b6e87cd617be27e0353e31ddb35c21db77dbfe37ea0c890474682061",
+      "runner_sha256": "55ff392807748957b7cd0868299a82cc80f8c1fafdefd5a04dea855cb71ffa29",
+      "wall_seconds": 238.94179294502828,
+      "pipeline_load_count": 1,
+      "frames": 21,
+      "steps": 20,
+      "outside_repair_max_difference": 0,
+      "planned_payload_max_difference": 0,
+      "manifest_records_verified": 48,
+      "hash_mismatches": 0,
+      "visual_verdict": "source refilled; failure"
+    },
+    "e5b_cavity_reference": {
+      "controls_manifest_sha256": "14f007d57c42289c428600991b460add04a6c73552c3a774821a061a3ea024b2",
+      "runner_sha256": "97e7c8ce3c45939c5dce1e3d8cf766c1fd8fd931971aaf52775db2f5a0f0f5b8",
+      "wall_seconds": 239.87837110401597,
+      "pipeline_load_count": 1,
+      "frames": 21,
+      "steps": 20,
+      "outside_repair_max_difference": 0,
+      "planned_payload_max_difference": 0,
+      "manifest_records_verified": 48,
+      "hash_mismatches": 0,
+      "visual_verdict": "empty notch appears; wall geometry/texture remain unnatural"
+    }
+  },
+  "review": {
+    "validation_sha256": "6ef2ccc93f783f5d393c6878dacbae5b3e269547188192be419bb69c7aff5ec0",
+    "four_way_crop_sha256": "fd49075cf6d45a85c87ef858b269709d7c558abf067579b5b7500bf8438ff701",
+    "clear_photographic_success": false,
+    "reference_conflict_supported_as_failure_cause": true,
+    "limitations": [
+      "single unblinded development case",
+      "reference mode and prompt wording change together",
+      "payload partly occludes source projection",
+      "manual cuboid cavity walls are overly planar"
+    ]
+  }
+}

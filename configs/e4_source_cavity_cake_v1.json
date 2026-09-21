@@ -1,0 +1,23 @@
+{
+  "schema_version": "foodstateedit.source_cavity_pilot.v1",
+  "case": "cake",
+  "source_controls": "artifacts/e2_control_representation_controls_v1_20260917",
+  "source_manifest_sha256": "1a2e23251b50580e3ea4735d6a881d049280255e41053436be21133e4158eec6",
+  "baseline_condition": "artifacts/e3_canny_mask_contract_probe_gp40_20260917T043645Z/cake/seed_1/fullframe_canny_full_generation_mask",
+  "baseline_manifest_sha256": "64a4c9c97f53ad8eb03ec783f143237439a46b24e592885b22a3a9ed85aff191",
+  "base_config": "configs/day25_same_condition_ablation_v2_retry.json",
+  "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+  "source_dilation_pixels": 4,
+  "payload_exclusion_pixels": 8,
+  "inside_feather_pixels": 4,
+  "first_lift_frame": 9,
+  "seed": 1,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "vace_scale": 1.0,
+  "fps": 8,
+  "hard_timeout_seconds": 3600,
+  "prompt": "A locked-camera close-up of the same cream-topped sponge cake during one fork lift. Keep the existing fork and the lifted bite unchanged. As that bite separates, its original front-right location becomes an empty bite-shaped notch. Reconstruct only this exposed location: two realistic porous sponge cut faces belonging to the remaining cake, a thin frosting edge above the cut faces, and the revealed white ceramic plate below, with subtle contact shadows. The empty notch stays empty after the bite is lifted. No extra food inside the notch, no replacement cube, no second bite, no hand. Preserve the rest of the image and the established motion.",
+  "negative_prompt": "refilled notch, replacement cake cube, extra cake, duplicate bite, floating crumbs, wax, plastic, smooth solid block, flat painted patch, black hole, oversized shadow, deformed fork, extra utensil, hand, text, watermark",
+  "claim_limit": "Single synthetic cake development pilot of an additional local VACE pass. Prompt and conditioning change together; no isolated causal attribution, ground truth, generalization or 3D superiority claim. Newly revealed surfaces are plausible completions, not recovered physical truth."
+}

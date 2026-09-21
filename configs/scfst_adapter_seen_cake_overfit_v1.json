@@ -1,0 +1,43 @@
+{
+  "schema_version": "foodstateedit.scfst_adapter_seen_cake_overfit.v1",
+  "claim_limit": "One seen synthetic E7 cake pseudo-target capacity diagnostic. It cannot establish visual improvement, held-out generalization, real-data performance, or physical correctness.",
+  "runtime": "../runtime",
+  "dataset": {"root": "../dataset"},
+  "controls": {
+    "root": "../scfst_controls",
+    "manifest_sha256": "10d69f6aa2e5093505a86371ca259a782dee3cd4f70d310349a3fbf042ea1f9d",
+    "shape": [1, 9632, 10],
+    "prefix_tokens": 1376,
+    "frame_indices": [0, 4, 8, 12, 16, 20],
+    "grid_hw": [32, 43],
+    "train_active_tokens": 429
+  },
+  "adapter": {
+    "reference_channels": 16,
+    "hidden_dim": 64,
+    "block_ids": [0],
+    "strength": 1.0
+  },
+  "training": {
+    "seed": 20260919,
+    "steps": 16,
+    "save_steps": [1, 8, 16],
+    "learning_rate": 0.00005,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "support_weight": 15.0,
+    "max_pixels": 352256,
+    "min_timestep_boundary": 0.0,
+    "max_timestep_boundary": 0.358,
+    "hard_timeout_seconds": 3600
+  },
+  "model": {
+    "root": "/host/space0/guo-z/models/PAI/Wan2.2-VACE-Fun-A14B",
+    "files": [
+      "high_noise_model/diffusion_pytorch_model.safetensors",
+      "models_t5_umt5-xxl-enc-bf16.pth",
+      "Wan2.1_VAE.pth"
+    ],
+    "tokenizer": "google/umt5-xxl"
+  }
+}

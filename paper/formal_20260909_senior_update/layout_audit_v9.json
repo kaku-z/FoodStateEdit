@@ -1,0 +1,252 @@
+{
+  "reference": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\output\\pdf\\FoodStateEdit_PreDefense_GUO_2530030_SeniorFormat_20260907.pdf",
+  "page_count": 2,
+  "japanese_body_size_pt": 9.212,
+  "body_leading_pt": 12.752,
+  "title_size_pt": 15.0,
+  "left_x_pt": 48.905,
+  "right_x_pt": 304.724,
+  "column_width_pt": 246.25,
+  "blocks": [
+    {
+      "page": 1,
+      "type": "wide_framework",
+      "top": 125,
+      "bottom": 320.275875
+    },
+    {
+      "page": 1,
+      "type": "caption",
+      "x": 48.905,
+      "top": 329,
+      "bottom": 349.6,
+      "text": "図1  提案手法の全体像．赤：手動アンカーと相対深度による操作制御，青：凍結したVACE/Wanによる条件付き生成，緑：元画像との領域限定合成．画像は同じケーキ例の入力，制御列，出力を示す．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 377.1,
+      "bottom": 466.36400000000003,
+      "text": "食物写真に「一匙すくう」「一口持ち上げる」動作を加え，見た人が料理を味わう場面を想像できる編集を目指す．既存の画像編集では，道具の追加と共に器や背景まで変わることがある．本研究は元の料理と周辺場面を保ちながら，食材の接触・変形・持上げを指定する．飲食店や制作者の表現支援を想定するが，見る楽しさや制作負担への効果は未評価である．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 492.86400000000003,
+      "bottom": 543.8720000000001,
+      "text": "VACE [1]は画像・動画・マスクを条件とする生成・編集基盤である．GeoEdit [2]は幾何条件による画像編集を扱う．本研究はVACEの前段に食物操作の制御列生成，後段に固定フレーム選択と領域限定合成を追加する．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 545.8720000000001,
+      "bottom": 596.8800000000001,
+      "text": "SAM3 [3]は領域抽出の候補であり，現行生成経路には未接続である．現在の編集範囲は，手続き的に描画した道具・食物の全フレームの変更領域を合併し，膨張と境界重みを加えて作る．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 623.3800000000001,
+      "bottom": 699.892,
+      "text": "画像座標(u,v)と手動の相対深度ZからX=(u-c_x)Z/f_x，Y=(v-c_y)Z/f_yを計算する．688×512画像ではf_x=f_y=825.6，(c_x,c_y)=(344,256)とする．接触点P（3成分）と食材形状V（ケーキは8×3頂点）を動かし，元画像の食材テクスチャを投影面に写す．麺は曲線，箸は2線分であり，CADメッシュや実深度復元は用いない．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 701.892,
+      "bottom": 765.652,
+      "text": "動作は接近（0〜5），接触（6〜8），持上げ（9〜15），停留（16〜20）の21フレームで指定する．道具と食材の接触点，相対深度，形状を同じ時刻に描画し，既存VACEへ渡す操作条件を構築する．追加部分はこの制御構築と局所合成であり，生成モデルの新規学習ではない．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 304.724,
+      "top": 372.6,
+      "bottom": 436.36,
+      "text": "各時刻の3D点をu=f_xX/Z+c_x，v=f_yY/Z+c_yで画像へ戻し，面の深度順や麺の可視性を使って描画する．RGB制御列C（21×512×688×3）と重みM（21×512×688×1，0〜1）を与える．制御には持上げ形状が既に含まれるが，その外観は手続き的な近似である．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 304.724,
+      "top": 438.36,
+      "bottom": 514.8720000000001,
+      "text": "CをMで保持領域と変更領域に分け，それぞれを学習済みVAEで符号化する．マスクを再配列して結合し，VACE条件分岐のhintを対応するWan DiTブロックへ加える．VACE [1]のAdapter学習はDiTを凍結して条件分岐を学習する方式であるが，本研究は公開済み重みを利用し，全モデルに追加学習を行わない．独自のCondition Encoderはない．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 304.724,
+      "top": 535.8720000000001,
+      "bottom": 574.128,
+      "text": "全動作範囲のマスクαと固定フレームJ（図1のt*=20，0始まり）でIout=αJ+(1−α)Iを作る．領域外の画素差0は合成の性質であり，生成能力を意味しない．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 304.724,
+      "top": 600.628,
+      "bottom": 664.388,
+      "text": "図2は既使用実画像のスープ・炒飯と合成ケーキの選定例である．同じ入力と取食要求でChordEdit [5]，Qwen Image [4]，提案手法を比較する．提案手法はPAI/Wan2.2-VACE-Fun-A14B，688×512画素，21 frames，20 steps，scale 1，追加学習・TTMなしを用いる．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 304.724,
+      "top": 666.388,
+      "bottom": 717.3960000000001,
+      "text": "Actionは道具・接触・食物動作，Photoは写真自然度，Preservationは領域外保持を確認する．表1は選定スープ例の内部判定であり，独立したブラインド評価や統計的成功率ではない．"
+    },
+    {
+      "page": 2,
+      "type": "wide_figure",
+      "top": 90.82,
+      "bottom": 385.4864186046511
+    },
+    {
+      "page": 2,
+      "type": "caption",
+      "x": 48.905,
+      "top": 386.4864186046511,
+      "bottom": 417.38641860465106,
+      "text": "図2  同一入力の外部手法との比較．要求はスープをスプーンですくう，炒飯を一口すくう，ケーキをフォークで持ち上げる操作．ChordEdit・Qwenはseed 1，Oursはスープ・炒飯がseed 2，ケーキがseed 1の既存選定例．Qwenはraw，ChordEdit・Oursは局所合成後であり，同一後処理の消融ではない．画像の縦横比を保持して配置した．"
+    },
+    {
+      "page": 2,
+      "type": "caption",
+      "x": 48.905,
+      "top": 424.38641860465106,
+      "bottom": 444.9864186046511,
+      "text": "表1  別の合成スープ1入力・seed 1．PPTと同じ数値で，✓/×は内部判定．外保持は領域外のRGB完全一致画素率，PSNR/SSIMは入力保持の診断．Qwenのraw出力は入力サイズに調整し，共通の局所合成は適用していない．"
+    },
+    {
+      "page": 2,
+      "type": "table",
+      "top": 451.9864186046511,
+      "bottom": 507.5864186046511
+    },
+    {
+      "page": 2,
+      "type": "body",
+      "x": 48.905,
+      "top": 534.086418604651,
+      "bottom": 585.0944186046511,
+      "text": "表1の選定例ではAction・Photo・Preservationを同時に満たした．領域外MAEはα=0の画素におけるRGB絶対差の平均（0〜255）である．差0と完全一致率100%は局所合成の効果であり，VACE単体の背景保持性能ではない．"
+    },
+    {
+      "page": 2,
+      "type": "body",
+      "x": 48.905,
+      "top": 587.0944186046511,
+      "bottom": 638.1024186046511,
+      "text": "図2では取食状態の配置と周辺領域の保持を示す．Qwenは自然な外観を生成する一方，画角や背景も変化する例がある．提案手法にも道具形状や接触の不自然さが残るため，写真品質全般の優位や全例の成功を意味しない．"
+    },
+    {
+      "page": 2,
+      "type": "body",
+      "x": 48.905,
+      "top": 640.1024186046511,
+      "bottom": 678.3584186046511,
+      "text": "評価対象は開発に用いた選定例であり，3D制御そのものの追加効果，未使用画像への汎化，統計的な優位性は未実証である．"
+    },
+    {
+      "page": 2,
+      "type": "body",
+      "x": 304.724,
+      "top": 534.086418604651,
+      "bottom": 572.342418604651,
+      "text": "食物操作の制御列生成と領域限定合成をVACEへ接続した．3D制御の追加効果と未使用画像への汎化は未実証である．"
+    },
+    {
+      "page": 2,
+      "type": "body",
+      "x": 304.724,
+      "top": 574.342418604651,
+      "bottom": 612.598418604651,
+      "text": "今後は独立画像と複数人のブラインド評価，困難場面，食物の元領域対応，失敗分類を追加し，生成中の接触・元領域検証を去雑音へ戻す誘導法を検討する．"
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 639.098418604651,
+      "bottom": 647.198418604651,
+      "text": "[1] Z. Jiang et al. “VACE.” ICCV, 2025."
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 648.198418604651,
+      "bottom": 656.298418604651,
+      "text": "[2] Y. He et al. “GeoEdit.” arXiv:2606.30003, 2026."
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 657.298418604651,
+      "bottom": 665.398418604651,
+      "text": "[3] N. Carion et al. “SAM 3.” arXiv:2511.16719, 2025."
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 666.398418604651,
+      "bottom": 674.4984186046511,
+      "text": "[4] C. Wu et al. “Qwen-Image.” arXiv:2508.02324, 2025."
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 675.4984186046511,
+      "bottom": 683.5984186046511,
+      "text": "[5] L. Lu et al. “ChordEdit.” CVPR, 2026."
+    }
+  ],
+  "header_style": "Single centered title, centered author row, centered supervisor row, matching the supplied manuscript header.",
+  "layout_deviation": "Page 2 top is a wide three-material Input / ChordEdit / Qwen Image / Ours figure; other text remains two columns.",
+  "revision_scope": "Remove the internal comparison explanation and table; replace the results figure with existing external-model examples; preserve uncertainty and future work.",
+  "original_preserved": true,
+  "new_inference": false,
+  "retouched_results": false,
+  "source_sha256": {
+    "artifacts\\day19_multimaterial_dataset_v3\\cake\\edit_alpha.png": "e3f3a7b41d18644bad9a2835c9037d751729fb8550543c6d3c918844a5f11f8c",
+    "artifacts\\day19_multimaterial_dataset_v3\\cake\\reference.png": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
+    "artifacts\\day20_cake_recovery_gp40_20260909_v1\\cake__relative3d\\projected_final_hold.png": "3d4dcead955ef5aebb7171687c8ee6bbabf57e58dac28465da3d348673711b73",
+    "artifacts\\day26_chordedit_direct_baseline_v1\\cake\\seed_1\\condition_manifest.json": "ed3fd5ef2cbff144d16d465655ea9d7189d45a860629d095a04e37629cc13dc4",
+    "artifacts\\day26_chordedit_direct_baseline_v1\\cake\\seed_1\\final.png": "c6b59c1fb2dd5fbfd5ae318e7d9d06434b859c88cc8f09272495e5871917f578",
+    "artifacts\\day26_chordedit_direct_baseline_v1\\rice\\seed_1\\condition_manifest.json": "14b491b930f20e3713d8cb7576c0788014e065717328f768a8cb3542abcc57d1",
+    "artifacts\\day26_chordedit_direct_baseline_v1\\rice\\seed_1\\final.png": "83bf546873ac346a6a5412aa84b4c9640f3c7cc532c41912ea08431dcd7d77e7",
+    "artifacts\\day26_chordedit_direct_baseline_v1\\soup\\seed_1\\condition_manifest.json": "83720ce47cd330d364027993e5f2897831d46312effdfb9989171a8412e401f0",
+    "artifacts\\day26_chordedit_direct_baseline_v1\\soup\\seed_1\\final.png": "dab44815d3afb527f034e9a2db95a8ee88e30a600ddf47dd1493fa1d06e99b34",
+    "artifacts\\day27_qwen_image_edit_direct_baseline_v1\\cake\\seed_1\\condition_manifest.json": "7bb7901371017ac73f3c294c1fec9abdafde4e2a1f0040cfaabc70ac02c33caf",
+    "artifacts\\day27_qwen_image_edit_direct_baseline_v1\\cake\\seed_1\\raw_qwen.png": "30e8dd3f7ff62e63476133ec25dd87d8823f91e369c9b549584a40a1ec99c646",
+    "artifacts\\day27_qwen_image_edit_direct_baseline_v1\\rice\\seed_1\\condition_manifest.json": "1a7b56cfc559fb2c96683a6bb2c6aefe658634463e3eed101e8083f80937ce38",
+    "artifacts\\day27_qwen_image_edit_direct_baseline_v1\\rice\\seed_1\\raw_qwen.png": "9699fb98d97f261e36cdfd8acaa82fd31a71c17fb29a1efc1a0a5a218f36ca74",
+    "artifacts\\day27_qwen_image_edit_direct_baseline_v1\\soup\\seed_1\\condition_manifest.json": "efdff97ba99a372214884b84b56bf5e3cc8e9af722faa9009ff1f61a75c311d0",
+    "artifacts\\day27_qwen_image_edit_direct_baseline_v1\\soup\\seed_1\\raw_qwen.png": "8a8f91f4d5c25fd60040a44fd75699a74c8dce2a587a68e580f414b8b2bee001",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\cake\\input.png": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\rice\\input.png": "630352af9844e4658f0dd26331f95113f7849cdd86b58ece32ad364e9cc2c7cc",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\rice\\relative3d_final_seed2_f20.png": "44b9f9a5f3d0350a4e9d98f0f62f606c099ca8728cf7e3b396f267dd66e92276",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\soup\\input.png": "dfa5d3870d0ae49177f3b7cd9cd2aa23c9ef4b6607f0ce5b7546e960d0df3eff",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\soup\\relative3d_final_seed2_f20.png": "db19a22b95ad5661a093455187ca53d800b0b153021190f9e9166eae80bbc1ff",
+    "output\\pdf\\FoodStateEdit_PreDefense_GUO_2530030_SeniorFormat_20260907.pdf": "2ce9cd184ac7dbed8817c8e067a019ce64b4a9dfaa93d5fdee5f8b52a82aea49",
+    "results\\DAY16_GEOMETRY_PROMPTED_SAM3_RESULT_20260907.md": "77feecdf1313dc36d4227767c34f1653bee5283908eaef596a1e541d9d47303b",
+    "results\\DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md": "6ee12d66cbfa34d0d093fd557668ba742d09c694e2d784140af82bd2d285e4f1",
+    "results\\day20_non_noodle_result_20260909.json": "a86f52038a9dd15ece5d71dfe7de1716646ee9821f5f6338c65775d32ff1ec34",
+    "results\\day34_presentation_soup_same_input_metrics_v1.json": "d3c3b33a7c9bcbbd3bf3e6d49f997be13a2f2d5b23e5cc4457e1dcd46882a176",
+    "results\\teacher_mechanism_audit_20260914_v1.json": "68339c3359856aa77a4683733013bf04aa317f02e597d27e36905f2caca598d1",
+    "tmp\\paper_framework_v28\\approach.png": "67af7915dfb434f33f3a90fbe64d9631a837e23d59dc852817f1bcf839280503",
+    "tmp\\paper_framework_v28\\contact.png": "0cb3a5be411736b88b5fa4f5c1043c3c4d8afdb763d6a8d332355ca24f66cc9c",
+    "tmp\\paper_framework_v28\\hold.png": "e8383eff7da21d5b39c6dd10562b8bd2a6a2512b2fb0902e8b38c796882d6a97"
+  },
+  "output_sha256": "b3125e5bd721e3da4be27f31aa85f128fe42562b2c08ebb83383397c1b575573"
+}

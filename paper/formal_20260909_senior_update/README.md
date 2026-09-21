@@ -5,18 +5,19 @@ and revising the purpose and social motivation. The original is unchanged.
 
 ## Deliverable
 
-`output/pdf/FoodStateEdit_Formal_GUO_2530030_SeniorFormat_20260909_v2.pdf`
+`output/pdf/FoodStateEdit_Formal_GUO_2530030_SeniorFormat_20260914_v3.pdf`
 
 Two A4 pages. Original Japanese body size 9.212 pt, leading 12.752 pt,
-13.266 pt two-line title, Mincho/Gothic/Roman fonts, header placement,
-column origins and table style are retained. Page 2 uses a wide paired figure
+Mincho/Gothic/Roman fonts, column origins and table style are retained. The
+first-page header now follows the supplied example: a single centered title,
+one centered author row, and one centered supervisor row. Page 2 uses a wide paired figure
 to make all three new cases legible; analysis below remains in two columns.
 
-Title: 食物操作を表現する画像編集
+Title: 3次元動作制御に基づく食物画像編集
 
 Supervisor names supplied by the user: 柳井啓司 and 高橋裕樹.
-Affiliation supplied by the user: メディア情報学. The v2 cover adds it;
-the preceding report PDF is preserved unchanged.
+Affiliation supplied by the user: メディア情報学. The v3 cover retains it;
+the preceding v2 report PDF is preserved unchanged.
 
 ## Evidence and scope
 

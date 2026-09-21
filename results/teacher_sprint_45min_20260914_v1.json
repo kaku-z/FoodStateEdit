@@ -1,0 +1,284 @@
+{
+  "schema": "foodstateedit.teacher_sprint.v1",
+  "started_utc": "2026-09-14T12:45:33+00:00",
+  "snapshot_utc": "2026-09-14T13:29:23.061512+00:00",
+  "elapsed_minutes": 43.83435853333334,
+  "completed": {
+    "existing_outputs_reanalysed": 36,
+    "independent_inputs": 4,
+    "seeds_per_input": 3,
+    "arms": 3,
+    "composites_reproduced_exactly": 36,
+    "local_targeted_tests_passed": 7,
+    "ppt_slides": 18,
+    "pdf_pages": 2,
+    "visual_qa": true,
+    "unchanged_slide_renders_verified": 11,
+    "condition_encoder_runtime_trace_verified": true
+  },
+  "new_inference": {
+    "status": "partial_batch_timeout_preserved",
+    "note": "Two Planar videos completed and verified; four relative3D/counterfactual outputs incomplete. Both own workers exited at1500-second timeout after shared-storage cold reads. No automatic retry, no superiority claim.",
+    "remote_root": "/host/space0/guo-z/tf-ufi/outputs/teacher_counterfactual_rgb_v2_20260914T1304Z",
+    "planned_cases": [
+      "soup",
+      "cake"
+    ],
+    "planned_arms": [
+      "planar_original",
+      "relative_original",
+      "relative_counterfactual"
+    ],
+    "seed": 2,
+    "frames": 21,
+    "steps": 20,
+    "scale": 1,
+    "additional_training": false,
+    "collection": {
+      "remote": "/host/space0/guo-z/tf-ufi/outputs/teacher_counterfactual_rgb_v2_20260914T1304Z",
+      "local": "artifacts\\teacher_counterfactual_partial_20260914T1304Z",
+      "all_file_hashes_verified": true,
+      "file_count": 36,
+      "sha256": {
+        "soup_preflight.json": "52c3d04223d1e0ee9429352f5ada260617c95e3a0739a51914df305628ae8d1f",
+        "cake_preflight.json": "fe4445ba98b4b7179cfb84688478e62eee4186ca57547123a36987b7837b3ad8",
+        "soup/run_manifest.json": "742647dab2833b641bfa9c8327be8e26e81b0dd9f0c599b0264a88ad8dfbb4ee",
+        "soup/shared_alpha.png": "29d7a194f30fafe5be81e29e76869ca333704ee8ffef5bfad5c5f7616e2bb67c",
+        "soup/geometry.json": "2dd162d3c6851528ef4b2174d34d8a2b919f8553eb498f86539fccf1097d8474",
+        "soup/condition_shape_trace.json": "9649f40ca63b0725f207090782c1051dcaf86dd40deb51e7a307956ce11bb105",
+        "soup/pipeline.log": "84ce863b6cf935ea1001db1626db8e977947a5b0543a2041b046e5a3dfa0abdc",
+        "soup/failure.txt": "aa858cd67d4f53ff289b636e11d2dc87b740872791c0cdd39c7820b748197691",
+        "cake/pipeline.log": "84ce863b6cf935ea1001db1626db8e977947a5b0543a2041b046e5a3dfa0abdc",
+        "cake/failure.txt": "04e9a667254cbc8d96bc97eef863ebe35191322d2d6ef59de3a9c5d5bba3540a",
+        "cake/run_manifest.json": "180baed598ecd375c425857d796aac8e288f148ed9d0a32bd384f506c0dc7d88",
+        "cake/shared_alpha.png": "f854198d068d13e90c32cde170c71c5adc088d4f99e9a5f7baa4637e53d507c1",
+        "cake/geometry.json": "af47c1d04e0b6aaa946505199019b2b7da5361037cd4d8aba044e554af18fcd3",
+        "cake/condition_shape_trace.json": "dd7c711466b8ee183c8c4ac0c9855b045802dc4d1b92d62674cadf7aca700611",
+        "soup/planar_original/control_final.png": "6d1a33a7c6f1219232ca823b015716811977da6c5998c6575e159f88f8394923",
+        "soup/planar_original/raw_final_lossless.png": "303b7427225781c9a8c49ec8526f0b8ac27dae79aac86d098750875efcc13e08",
+        "soup/planar_original/raw.mp4": "6dea975f402873e7a819cef932e0508b12c20ff91307e44fcfaa203636e209d8",
+        "soup/planar_original/projected_review.png": "d7fda4e267a5f51b11bd879508201827fe28d523e407ea5a5c72b094fd745631",
+        "soup/planar_original/condition_manifest.json": "5497cb5ee2c4dd22f87bb36efee2918bb7482ad3f52e44c23f49fe7b834dca64",
+        "soup/planar_original/inference.log": "b54caa6ab282a23cc163ed3da73285dd5e3f74589d7192b60384470fbe793b92",
+        "soup/planar_original/projected.mp4": "503733636c367dc7e3e11e3eb0fdd1e7318e7c2d672e9ef9c78af6010b7e4e01",
+        "soup/planar_original/projected_final_hold.png": "2fce61d171057f30c65c6ec56b03ba7ebdfb244909558a84e0e8d93f1edd48b0",
+        "soup/relative_original/inference.log": "0dbca82a4679bad2305c6acdcc3838c984e10ce0072e6e2ce319f3f93403e766",
+        "soup/relative_original/control_final.png": "44db928620a4dfa74fe732ee0b0aaf8a4485aacb53f15eef886ef4d3322eaa30",
+        "soup/relative_counterfactual/control_final.png": "2accc8bf3b5812771ba57c55fc786547d232036b573c3824de736c9fdfe13c81",
+        "cake/planar_original/control_final.png": "599fe0b0cffa63bc030019e5736e9bef4ecddab88b07bd530a1ec88ac3e1e6ba",
+        "cake/planar_original/raw_final_lossless.png": "e7f523e47f62d60e1460d82304cbb6b5ae5abf9d36c5a29ae822b90d3d55ca50",
+        "cake/planar_original/raw.mp4": "418ed13e1278120f17559bf3c02741702e0bef0d681c73aa772f2df5fc84d919",
+        "cake/planar_original/projected_review.png": "b03baa24e55898025332317710d3bd99cbfd2481c5b8af6e79735d15f351f0c2",
+        "cake/planar_original/condition_manifest.json": "3ce92aad6a462ae3d5cc636676025846948150bea09d15d5b7fd85bf9ca7530b",
+        "cake/planar_original/inference.log": "60ca8ec1161cca2f7027fc1d4cc672335848eebfaa24f5ec893e51633d3a02ba",
+        "cake/planar_original/projected.mp4": "50d02e50be9e5b88937c64c78160f4b094a3842d504e464dc1aa24f0db4cde81",
+        "cake/planar_original/projected_final_hold.png": "bcd72be15b429af9e69c3ff5e38902dae2c1f9b8f8a7bcb3cf2026a07fa2f71e",
+        "cake/relative_original/control_final.png": "e03e175aa2c8cf6d6bb3268ed9f9bfae298356a6fb5fff952866b198553cc0cd",
+        "cake/relative_original/inference.log": "72e616cfee82f630f48db90acb2ba6cd7cd89a35cb4f0d86999cfbe3f37dfc11",
+        "cake/relative_counterfactual/control_final.png": "6faba419f70216f79374fa0a3e63c2c7be9abe6d0907fec5d4bbfb951db60418"
+      },
+      "cases": {
+        "soup": {
+          "status": "technical_failure_preserved",
+          "pipeline_load_count": 1,
+          "completed": [
+            {
+              "condition": "planar_original",
+              "frames": 21,
+              "all_manifest_hashes_verified": true,
+              "final_outside_exact": true
+            }
+          ],
+          "shapes": [
+            {
+              "unit": "WanVideoUnit_NoiseInitializer",
+              "shapes": {
+                "noise": [
+                  1,
+                  16,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            },
+            {
+              "unit": "WanVideoUnit_VACE",
+              "shapes": {
+                "vace_context": [
+                  1,
+                  96,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            },
+            {
+              "unit": "WanVideoUnit_NoiseInitializer",
+              "shapes": {
+                "noise": [
+                  1,
+                  16,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            }
+          ]
+        },
+        "cake": {
+          "status": "technical_failure_preserved",
+          "pipeline_load_count": 1,
+          "completed": [
+            {
+              "condition": "planar_original",
+              "frames": 21,
+              "all_manifest_hashes_verified": true,
+              "final_outside_exact": true
+            }
+          ],
+          "shapes": [
+            {
+              "unit": "WanVideoUnit_NoiseInitializer",
+              "shapes": {
+                "noise": [
+                  1,
+                  16,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            },
+            {
+              "unit": "WanVideoUnit_VACE",
+              "shapes": {
+                "vace_context": [
+                  1,
+                  96,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            },
+            {
+              "unit": "WanVideoUnit_NoiseInitializer",
+              "shapes": {
+                "noise": [
+                  1,
+                  16,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            },
+            {
+              "unit": "WanVideoUnit_VACE",
+              "shapes": {
+                "vace_context": [
+                  1,
+                  96,
+                  7,
+                  64,
+                  86
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "completed_outputs": 2
+  },
+  "failures_preserved": {
+    "initial_cases": 2,
+    "cause": "L mask supplied to RGB-only image preprocessing; retry converts mask to RGB with unchanged pixel values",
+    "collected_files": 22,
+    "all_file_hashes_verified": true
+  },
+  "scope": {
+    "three_dimensional_superiority_established": false,
+    "heldout_generalization_established": false,
+    "physical_correctness_established": false,
+    "formal_human_evaluation_completed": false,
+    "background_preservation_source": "explicit alpha compositing, not intrinsic generation fidelity",
+    "new_encoder_trained": false
+  },
+  "agent_reviews": {
+    "experiment": "read-only runner/interface and storage diagnosis",
+    "ppt": "read-only scientific and visual audit",
+    "report": "read-only PDF, citation and metric audit",
+    "all_completed": true,
+    "main_agent_integrated_and_verified": true
+  },
+  "files": {
+    "output/pptx/FoodStateEdit_GUO_2530030_20260914_v39_teacher_verified.pptx": {
+      "sha256": "3e4fe4c77ea5b7d7eb73f4f30099d7a76ae557939f5f31389875a09a937df846",
+      "bytes": 24751244
+    },
+    "output/pdf/FoodStateEdit_Formal_GUO_2530030_SeniorFormat_20260914_v8_teacher_evidence.pdf": {
+      "sha256": "e5bdf3b268cacf9f149e9b08e4eaf8eaaa18da03fa769dfaf38a02f1664bbf9c",
+      "bytes": 15401716
+    },
+    "results/TEACHER_RESPONSE_20260914.md": {
+      "sha256": "76df55d31fb99d3f662f06715e21cb53ad7fe9b85783adfbb856f5e2b74bea3b",
+      "bytes": 8203
+    },
+    "results/teacher_mechanism_audit_20260914_v1.json": {
+      "sha256": "68339c3359856aa77a4683733013bf04aa317f02e597d27e36905f2caca598d1",
+      "bytes": 77830
+    },
+    "artifacts/teacher_counterfactual_failed_20260914T1250Z_collection.json": {
+      "sha256": "ce2836f086c13515fcca6e664046f7e86c1cb33898ff7bd25b97c6bb13bbdfe4",
+      "bytes": 3351
+    },
+    "artifacts/teacher_runtime_trace_snapshot_20260914T1311Z/soup_trace.json": {
+      "sha256": "1f534ad315c8222651ab057904a498c80f82e8973ebdd6cd656c66f7cea60ac3",
+      "bytes": 314
+    },
+    "scripts/run_teacher_counterfactual.py": {
+      "sha256": "edaaa526e862291536fedb3cc33a1e123d30def754a9c02a46eecbf658cfe8d9",
+      "bytes": 7792
+    },
+    "scripts/collect_teacher_counterfactual.py": {
+      "sha256": "26fef503b84775612c1fefa09cab79633121eb7346168082291b57974d5ea5c6",
+      "bytes": 4204
+    },
+    "scripts/audit_teacher_mechanism_20260914.py": {
+      "sha256": "bb0b4b8127fa162da7596d069242fba5282d3010d4ed91f2e6cab1b7f3433263",
+      "bytes": 7784
+    },
+    "tests/test_teacher_mechanism_audit.py": {
+      "sha256": "1f371aa24faa0044b500bc673022a9d342e4aba65488a0489c477cf96043f33d",
+      "bytes": 2052
+    },
+    "tmp/positive_revision_v33/v39.validation.json": {
+      "sha256": "8b3a07e249c75f9ac27f6cec3f2e9dc4f70c32bde9f1b7d2ca8f77ca5465117a",
+      "bytes": 3101
+    },
+    "paper/formal_20260909_senior_update/layout_audit.json": {
+      "sha256": "a4af4a5a551df78f868bdac15ac0e4c2c536ada91b1300cc29a8e0f4ac20f01b",
+      "bytes": 14307
+    },
+    "results/teacher_parallel_audit_20260914.md": {
+      "sha256": "e7654d62b0f71a9740df640d5d540079d795bdf893cdf33067c3ffa2f629df11",
+      "bytes": 2081
+    },
+    "results/teacher_counterfactual_result_20260914_v2.json": {
+      "sha256": "4c95943288ea0ab7b8b8e95d006a69cc314006622b78a15e04754c21b43ea985",
+      "bytes": 3896
+    },
+    "results/teacher_counterfactual_status_20260914T1323Z.json": {
+      "sha256": "10e4eb2a23bd4648f1e151236bd1200dc33a70baf4bb240308ecfe31ed12ab90",
+      "bytes": 9354
+    },
+    "results/teacher_counterfactual_status_20260914T1326Z.json": {
+      "sha256": "c89752b6f08a8853f61ab142f5b10b33168caf59c18c4fa4fdf6dce7ca028d41",
+      "bytes": 9493
+    }
+  }
+}

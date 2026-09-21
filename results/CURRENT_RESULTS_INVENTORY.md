@@ -6,6 +6,48 @@ Latest consolidated status: [2026-09-05 local progress report](LOCAL_PROGRESS_20
 The dated sections below retain historical observations; later sections supersede
 earlier pending-work statements.
 
+## 2026-09-19 E7 correction of E6 cavity regression
+
+- traced the white triangular cut-wall defect to plate-contaminated crumb
+  donors amplified by hard latent projection;
+- completed corrected-donor hard/soft runs with identical prompt/seed/geometry,
+  21 frames each, one pipeline load each, and 98/98 verified file records;
+- visible-wall low-saturation diagnostic changed from E6 40.30% to 0% in both
+  E7 variants; this is a specific defect metric, not photographic success;
+- a separate per-frame compositor restores original background outside current
+  operation support; the soft candidate remains limited by floor/shadow quality;
+- five new and seven existing focused tests pass; all historical evidence kept.
+
+Result: [E7 diagnosis and correction](E7_CAVITY_FIX_RESULT_20260919.md).
+
+## 2026-09-17 E5 shared bite/remain consistency diagnostic
+
+- implemented one shared manual removal volume that produces the moving cake
+  payload, two remaining cut walls, plate floor and lift-conditioned repair
+  support;
+- completed two controlled 21-frame gp40 runs with exact protected-pixel
+  preservation and zero hash mismatch across 48 manifest records per run;
+- the original-state reference regenerated food at the source, while the
+  cavity-state reference exposed an empty notch and plate floor;
+- the latter still has planar/triangular cut walls and partial payload/cavity
+  image-space overlap, so photographic success and 3D superiority remain
+  unestablished.
+
+Result: [E5 bite/remain diagnostic](e5_bite_remain_consistency_v1_20260917.md).
+
+## 2026-09-17 E4 source-cavity completion pilot
+
+- One additional source-only VACE pass on the frozen E3 synthetic cake sequence;
+  the dynamic mask preserves the planned lifted bite and all outside pixels.
+- 21 raw and 21 projected frames, one pipeline load, 50 remote/local file hashes
+  matched; three mask/compositor tests passed.
+- Cut faces appear more continuous, but cavity shading is too dark and fine crumb
+  detail is smoothed; no clear overall naturalness improvement is established.
+- The regular notch follows the pre-cut input; future scooped-bite experiments
+  need a shared removal geometry for the carried piece and remaining material.
+
+Result: [E4 source cavity pilot](e4_source_cavity_v1_20260917.md).
+
 ## 2026-09-13 Day 25 completed four-case ablation
 
 - completed and verified all 47 new generation jobs and combined them with 13

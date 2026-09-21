@@ -1,0 +1,63 @@
+{
+  "schema_version": "foodstateedit.e2_control_representation_paired.v1",
+  "freeze_date": "2026-09-17",
+  "scientific_status": "two_case_three_seed_representation_diagnostic_not_effectiveness_or_generalization",
+  "research_question": "Does a model-compatible full-frame Canny control reduce RGB-proxy appearance leakage while preserving the same action trajectory?",
+  "source_controls": {
+    "path": "artifacts/e1_control_factorization_controls_v1_20260917",
+    "manifest_sha256": "d7f715252f25ccb193eb7199b34846d832053a878727f8354bfe5fe0f550e98e"
+  },
+  "cases": ["cake", "noodle"],
+  "arms": [
+    {
+      "id": "appearance_laden_rgb",
+      "control": "frozen_E1_lossless_relative3d_RGB_proxy"
+    },
+    {
+      "id": "fullframe_canny",
+      "control": "Canny_of_the_same_RGB_proxy_at_every_frame_without_union_blackout_or_changed_region_outline"
+    }
+  ],
+  "control_builder": {
+    "gaussian_blur_kernel": 5,
+    "canny_low": 80,
+    "canny_high": 160
+  },
+  "inference": {
+    "seeds": [1, 2, 3],
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "lora_enabled": false,
+    "reference_count_per_arm": 1,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20]
+  },
+  "evaluation": {
+    "primary": [
+      "utensil_geometry",
+      "utensil_food_contact",
+      "payload_follows_utensil",
+      "source_region_update_plausible",
+      "control_style_leakage",
+      "photo_naturalness"
+    ],
+    "secondary": [
+      "raw_outside_support_mae",
+      "composited_outside_support_exactness",
+      "paired_seed_output_difference",
+      "all_21_lossless_frames_present"
+    ],
+    "rules": [
+      "Within each case and seed, both arms use the same prompt, negative prompt, reference count, reference image, edit mask, VACE scale, frame count, steps and compositor.",
+      "The two arms have identical dimensions and therefore identical seeded noise shape in the frozen runtime.",
+      "Projection and pixel diagnostics use lossless raw PNG frames rather than decoding the MP4.",
+      "No output-dependent retry, seed replacement, repair or arm-specific prompt is allowed.",
+      "Full-frame Canny is a model-compatibility diagnostic derived from the same imperfect renderer; it is not a new geometric ground truth.",
+      "Two development cases and three seeds cannot establish generalization or publication-level effectiveness."
+    ]
+  },
+  "hard_timeout_seconds_per_case": 7200,
+  "claim_limit": "Representation failure-localization only. A positive result supports testing corrected geometry and control scheduling; it does not prove 3D superiority, source conservation, physical correctness or generalization."
+}

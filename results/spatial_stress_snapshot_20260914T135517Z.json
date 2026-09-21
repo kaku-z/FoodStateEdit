@@ -1,0 +1,54 @@
+{
+  "captured_utc": "2026-09-14T13:55:18.030801+00:00",
+  "states": {
+    "soup_toward_camera": {
+      "schema": "foodstateedit.spatial_stress_run.v1",
+      "status": "running",
+      "job": "soup_toward_camera",
+      "pid": 2201409,
+      "gpu": 0,
+      "started_utc": "2026-09-14T13:53:51.538647+00:00",
+      "pipeline_load_count": 1,
+      "completed": [],
+      "manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 3600,
+      "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility.",
+      "active": "planar_translation"
+    },
+    "cake_yaw45": {
+      "schema": "foodstateedit.spatial_stress_run.v1",
+      "status": "running",
+      "job": "cake_yaw45",
+      "pid": 2201419,
+      "gpu": 1,
+      "started_utc": "2026-09-14T13:53:52.020066+00:00",
+      "pipeline_load_count": 1,
+      "completed": [],
+      "manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 3600,
+      "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility.",
+      "active": "planar_translation"
+    }
+  },
+  "logs": {
+    "soup_toward_camera/planar_translation/inference.log": "2 [00:02<00:00,  4.42it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:  25%|\u2588\u2588\u258c       | 3/12 [00:00<00:00, 26.78it/s]\nVAE encoding:  50%|\u2588\u2588\u2588\u2588\u2588     | 6/12 [00:00<00:00, 27.29it/s]\nVAE encoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:00<00:00, 27.42it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:00<00:00, 29.13it/s]\n\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|\u258c         | 1/20 [00:11<03:36, 11.37s/it]\n 10%|\u2588         | 2/20 [00:19<02:49,  9.42s/it]\n 15%|\u2588\u258c        | 3/20 [00:27<02:29,  8.79s/it]\n 20%|\u2588\u2588        | 4/20 [00:35<02:15,  8.50s/it]\n 25%|\u2588\u2588\u258c       | 5/20 [00:43<02:05,  8.35s/it]",
+    "cake_yaw45/planar_translation/inference.log": "2 [00:00<?, ?it/s]\nVAE encoding:  25%|\u2588\u2588\u258c       | 3/12 [00:00<00:00, 27.00it/s]\nVAE encoding:  50%|\u2588\u2588\u2588\u2588\u2588     | 6/12 [00:00<00:00, 26.98it/s]\nVAE encoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:00<00:00, 26.31it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:00<00:00, 27.41it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:00<00:00, 27.12it/s]\n\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|\u258c         | 1/20 [00:11<03:34, 11.28s/it]\n 10%|\u2588         | 2/20 [00:19<02:48,  9.36s/it]\n 15%|\u2588\u258c        | 3/20 [00:27<02:28,  8.75s/it]\n 20%|\u2588\u2588        | 4/20 [00:35<02:15,  8.48s/it]\n 25%|\u2588\u2588\u258c       | 5/20 [00:43<02:05,  8.34s/it]"
+  },
+  "processes": "    PID     ELAPSED STAT   RSS WCHAN\n2201409       01:28 Rsl  13073212 -\n2201419       01:28 Rsl  13080408 -\n",
+  "stopped": false,
+  "files": {}
+}

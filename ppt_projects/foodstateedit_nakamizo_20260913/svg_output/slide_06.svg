@@ -6,8 +6,61 @@
 <rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
 <text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
 <text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">06</text>
-<g id="method-framework-from-report" data-pptx-bounds="142 170 996 502">
-<rect x="142" y="170" width="996" height="502" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1" rx="4"/>
-<image href="../images/p05_framework_report_exact.png" x="152" y="178" width="976" height="486" preserveAspectRatio="xMidYMid meet"/>
+<g id="method-framework-detailed" data-pptx-bounds="60 160 1160 470">
+<rect x="72" y="180" width="250" height="282" fill="#FFFFFF" stroke="#0070C0" stroke-width="3" rx="7"/>
+<rect x="72" y="180" width="250" height="45" fill="#0070C0" stroke="#0070C0" stroke-width="1" rx="7"/>
+<text x="197" y="210" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">入力画像</text>
+<rect x="86" y="240" width="222" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p05_ramen_input.png" x="90" y="244" width="214" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="197" y="360" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#0070C0" font-weight="700" text-anchor="middle">I_ref</text>
+<text x="197" y="387" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="middle">688 × 512 × 3</text>
+<text x="197" y="409" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">食物・容器・背景</text>
+<text x="197" y="431" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">動作と材料を指定</text>
+<line x1="325" y1="320" x2="346" y2="320" stroke="#0070C0" stroke-width="3"/>
+<polygon points="346,313 354,320 346,327" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="356" y="180" width="250" height="282" fill="#FFFFFF" stroke="#E31B23" stroke-width="3" rx="7"/>
+<rect x="356" y="180" width="250" height="45" fill="#E31B23" stroke="#E31B23" stroke-width="1" rx="7"/>
+<text x="481" y="210" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">相対3D代理</text>
+<rect x="370" y="240" width="222" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p05_ramen_control.png" x="374" y="244" width="214" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="481" y="360" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#E31B23" font-weight="700" text-anchor="middle">S_t</text>
+<text x="481" y="387" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="middle">K control points × 3</text>
+<text x="481" y="409" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">接触点・相対深度</text>
+<text x="481" y="431" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">21段階の動作状態</text>
+<line x1="609" y1="320" x2="630" y2="320" stroke="#0070C0" stroke-width="3"/>
+<polygon points="630,313 638,320 630,327" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="640" y="180" width="250" height="282" fill="#FFFFFF" stroke="#5BC0EB" stroke-width="3" rx="7"/>
+<rect x="640" y="180" width="250" height="45" fill="#5BC0EB" stroke="#5BC0EB" stroke-width="1" rx="7"/>
+<text x="765" y="210" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">凍結VACE</text>
+<rect x="654" y="240" width="222" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p06_family_controls.png" x="658" y="244" width="214" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="765" y="360" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#5BC0EB" font-weight="700" text-anchor="middle">C, M, prompt</text>
+<text x="765" y="387" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="middle">C: 21 × 512 × 688 × 3</text>
+<text x="765" y="409" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">M: 21 × 512 × 688 × 1</text>
+<text x="765" y="431" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">Wan2.2-VACE-Fun-A14B</text>
+<line x1="893" y1="320" x2="914" y2="320" stroke="#0070C0" stroke-width="3"/>
+<polygon points="914,313 922,320 914,327" fill="#0070C0" stroke="none" stroke-width="1"/>
+<rect x="924" y="180" width="250" height="282" fill="#FFFFFF" stroke="#2E8B57" stroke-width="3" rx="7"/>
+<rect x="924" y="180" width="250" height="45" fill="#2E8B57" stroke="#2E8B57" stroke-width="1" rx="7"/>
+<text x="1049" y="210" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">局所合成</text>
+<rect x="938" y="240" width="222" height="92" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p05_ramen_output.png" x="942" y="244" width="214" height="84" preserveAspectRatio="xMidYMid meet"/>
+<text x="1049" y="360" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#2E8B57" font-weight="700" text-anchor="middle">I_out</text>
+<text x="1049" y="387" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="middle">支持領域内を更新</text>
+<text x="1049" y="409" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">領域外はI_refに固定</text>
+<text x="1049" y="431" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#666666" font-weight="500" text-anchor="middle">最終静止画を保存</text>
+<rect x="72" y="500" width="1136" height="122" fill="#EAF6FC" stroke="#0070C0" stroke-width="2" rx="7"/>
+<text x="96" y="532" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="22" fill="#0070C0" font-weight="700" text-anchor="start">データの流れ</text>
+<text x="96" y="568" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#222222" font-weight="700" text-anchor="start">I_ref + 操作指定 + 材料指定</text>
+<line x1="390" y1="558" x2="450" y2="558" stroke="#0070C0" stroke-width="3"/>
+<polygon points="450,550 462,558 450,566" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="478" y="568" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#222222" font-weight="700" text-anchor="start">S_t → C, M</text>
+<line x1="630" y1="558" x2="690" y2="558" stroke="#0070C0" stroke-width="3"/>
+<polygon points="690,550 702,558 690,566" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="718" y="568" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="19" fill="#222222" font-weight="700" text-anchor="start">凍結VACE生成</text>
+<line x1="904" y1="558" x2="964" y2="558" stroke="#0070C0" stroke-width="3"/>
+<polygon points="964,550 976,558 964,566" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="992" y="568" font-family="Arial, Yu Gothic, sans-serif" font-size="19" fill="#2E8B57" font-weight="700" text-anchor="start">I_out</text>
+<text x="96" y="600" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#666666" font-weight="500" text-anchor="start">本研究の追加部分は相対3D制御器と局所合成であり、VACEの重みは変更しない。</text>
 </g>
 </svg>

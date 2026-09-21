@@ -86,7 +86,12 @@ def add_line(slide, x1, y1, x2, y2, stroke, sw):
 def add_text(slide, x, y, text, size, fill, weight, anchor, family):
     w = Emu(max(int(len(text) * size * 1.25 * PX_EMU) + 20000, 40000))
     h = Emu(int(size * 1.6 * PX_EMU))
-    box = slide.shapes.add_textbox(Emu(x * PX_EMU), Emu(int((y - size * 1.18) * PX_EMU)), w, h)
+    left = Emu(x * PX_EMU)
+    if anchor == "middle":
+        left -= w // 2
+    elif anchor == "end":
+        left -= w
+    box = slide.shapes.add_textbox(left, Emu(int((y - size * 1.18) * PX_EMU)), w, h)
     tf = box.text_frame
     tf.margin_left = 0
     tf.margin_right = 0

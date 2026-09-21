@@ -1,0 +1,32 @@
+{
+  "schema_version": "foodstateedit.bite_remain_state_projection.v1",
+  "case": "cake",
+  "controls": "artifacts/e5b_bite_remain_controls_v1_20260917",
+  "controls_manifest_sha256": "14f007d57c42289c428600991b460add04a6c73552c3a774821a061a3ea024b2",
+  "base_config": "configs/day25_same_condition_ablation_v2_retry.json",
+  "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+  "causal_baseline": "E5b: identical controls, cavity reference, prompt, negative prompt, seed and VACE parameters; enable_ttm=false",
+  "algorithm": {
+    "name": "cavity state projection",
+    "enable_ttm": true,
+    "warm_start": false,
+    "replace_mode": "mask_new",
+    "disable_vhi": false,
+    "initial_clean": false,
+    "replace_start_index": 0,
+    "rigid_tstrong_index": 0,
+    "cavity_tstrong_index": 8,
+    "reference_latents": "the same 21-frame cavity condition used by VACE",
+    "projection_mask": "the same lift-conditioned generation support used by VACE",
+    "mechanism": "after each of denoising steps 0..7, replace only cavity-mask latents with timestep-matched noisy cavity-reference latents; release the region for steps 8..19"
+  },
+  "seed": 1,
+  "num_frames": 21,
+  "num_inference_steps": 20,
+  "vace_scale": 1.0,
+  "fps": 8,
+  "hard_timeout_seconds": 3600,
+  "prompt": "Locked-camera close-up of the same cream-topped sponge cake and the same fork lifting exactly the pre-cut front-right bite. Preserve the fork and lifted bite shown by the motion condition. The reference image shows the intended remaining state: one empty rectangular notch matching that lifted piece, with realistic porous sponge cut walls, a thin cream frosting rim, and clean white ceramic plate at the bottom. Keep the notch empty and temporally stable. Remove the previous polygonal gray compositing seam around the notch. Use subtle local contact shading only. Preserve the remaining cake, plate, table, camera and established motion.",
+  "negative_prompt": "refilled notch, replacement cake cube, duplicate bite, extra food, floating cake, black hole, large dark shadow, gray polygon, hard compositing seam, wax, plastic, smooth solid wall, deformed fork, extra utensil, hand, camera motion, text, watermark",
+  "claim_limit": "One synthetic pre-cut cake development case. This isolates the cavity latent-state projection switch against E5b. It does not establish generalization, physical correctness, or superiority to VACE on a dataset."
+}

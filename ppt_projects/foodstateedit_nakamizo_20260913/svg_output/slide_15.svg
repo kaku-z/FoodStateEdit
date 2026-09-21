@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-page-role="content">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
+<text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">PILOT COMPARISON</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">追加比較：4入力 pilot の動作・写真判定</text>
+<rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
+<text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
+<text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">15</text>
+<g id="pilot-comparison-table" data-pptx-bounds="60 150 1160 525">
+<text x="72" y="164" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#0070C0" font-weight="700" text-anchor="start">4入力、seed 1、21 frames、20 steps。内部非盲検の開発診断</text>
+<rect x="72" y="184" width="1136" height="366" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="4"/>
+<rect x="72" y="184" width="300" height="46" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="86" y="214" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="start">条件</text>
+<rect x="372" y="184" width="116" height="46" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="430.0" y="214" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">完成</text>
+<rect x="488" y="184" width="116" height="46" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="546.0" y="214" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">領域外保持</text>
+<rect x="604" y="184" width="116" height="46" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="662.0" y="214" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">Action</text>
+<rect x="720" y="184" width="116" height="46" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="778.0" y="214" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="middle">Photo</text>
+<rect x="836" y="184" width="372" height="46" fill="#365F7D" stroke="#365F7D" stroke-width="1"/>
+<text x="850" y="214" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#FFFFFF" font-weight="700" text-anchor="start">解釈</text>
+<rect x="72" y="230" width="300" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="86" y="263" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">Input / no edit</text>
+<rect x="372" y="230" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="430.0" y="263" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="488" y="230" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="546.0" y="263" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="604" y="230" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="662.0" y="263" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">—</text>
+<rect x="720" y="230" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="778.0" y="263" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">—</text>
+<rect x="836" y="230" width="372" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="850" y="263" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">負対照：背景は保持するが操作なし</text>
+<rect x="72" y="283" width="300" height="53" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="86" y="316" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#2E8B57" font-weight="700" text-anchor="start">Vanilla GeoEdit</text>
+<rect x="372" y="283" width="116" height="53" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="430.0" y="316" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="700" text-anchor="middle">4/4</text>
+<rect x="488" y="283" width="116" height="53" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="546.0" y="316" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="700" text-anchor="middle">4/4</text>
+<rect x="604" y="283" width="116" height="53" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="662.0" y="316" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#2E8B57" font-weight="700" text-anchor="middle">1/4</text>
+<rect x="720" y="283" width="116" height="53" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="778.0" y="316" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="700" text-anchor="middle">0/4</text>
+<rect x="836" y="283" width="372" height="53" fill="#F1FAF4" stroke="#D8DDE3" stroke-width="1"/>
+<text x="850" y="316" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="700" text-anchor="start">外部baseline。スープのみ暫定成功</text>
+<rect x="72" y="336" width="300" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="86" y="369" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">GeoEdit + union mask</text>
+<rect x="372" y="336" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="430.0" y="369" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="488" y="336" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="546.0" y="369" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="604" y="336" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="662.0" y="369" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="720" y="336" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="778.0" y="369" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="836" y="336" width="372" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="850" y="369" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">同じバックエンドによるマスク対照</text>
+<rect x="72" y="389" width="300" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="86" y="422" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">FoodStateEdit staged</text>
+<rect x="372" y="389" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="430.0" y="422" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="488" y="389" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="546.0" y="422" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="604" y="389" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="662.0" y="422" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="720" y="389" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="778.0" y="422" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="836" y="389" width="372" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="850" y="422" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">早期の段階投影版</text>
+<rect x="72" y="442" width="300" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="86" y="475" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">Native VACE static</text>
+<rect x="372" y="442" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="430.0" y="475" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="488" y="442" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="546.0" y="475" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="604" y="442" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="662.0" y="475" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="720" y="442" width="116" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="778.0" y="475" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="836" y="442" width="372" height="53" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1"/>
+<text x="850" y="475" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">GeoEdit TTMを外しても動作は未成立</text>
+<rect x="72" y="495" width="300" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="86" y="528" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">FoodStateEdit dynamic 2-D</text>
+<rect x="372" y="495" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="430.0" y="528" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="488" y="495" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="546.0" y="528" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">4/4</text>
+<rect x="604" y="495" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="662.0" y="528" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="720" y="495" width="116" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="778.0" y="528" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="middle">0/4</text>
+<rect x="836" y="495" width="372" height="53" fill="#F4F7FA" stroke="#D8DDE3" stroke-width="1"/>
+<text x="850" y="528" font-family="Arial, Yu Gothic, sans-serif" font-size="15" fill="#222222" font-weight="500" text-anchor="start">制御信号は現れるが、投影結果は未通過</text>
+<rect x="72" y="574" width="1136" height="56" fill="#EAF6FC" stroke="#0070C0" stroke-width="2" rx="5"/>
+<text x="640" y="608" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#0070C0" font-weight="700" text-anchor="middle">明示的な操作代理の必要性を示すが、3D優位性や全baselineへの優位性は未検証</text>
+<text x="72" y="656" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="13" fill="#666666" font-weight="500" text-anchor="start">出典：DAY21_CROSS_METHOD_EVALUATION_STATUS_20260912.md。held-out評価と盲評は未実施。</text>
+</g>
+</svg>

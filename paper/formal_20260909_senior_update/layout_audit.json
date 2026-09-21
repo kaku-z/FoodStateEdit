@@ -3,208 +3,221 @@
   "page_count": 2,
   "japanese_body_size_pt": 9.212,
   "body_leading_pt": 12.752,
-  "title_size_pt": 13.266,
+  "title_size_pt": 15.0,
   "left_x_pt": 48.905,
   "right_x_pt": 304.724,
   "column_width_pt": 246.25,
   "blocks": [
     {
       "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 217.12,
-      "bottom": 268.128,
-      "text": "料理の画像に「一匙すくう」「一口持ち上げる」といった動作を加えられれば，制作者は既存の写真から料理の見せ方を試すことができる．見る側にも，盛り付けだけでは伝えにくい食材の形や動作を，視覚的に示せると考える．"
-    },
-    {
-      "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 270.128,
-      "bottom": 346.64,
-      "text": "本研究の目的は，元の料理と周辺場面を保ちながら，指定した食物操作を表現する画像編集を支援することである．想定する用途は飲食店や食物コンテンツ制作者の表現支援であり，制作負担の軽減と見る楽しさの向上を目指す．これらの社会的効果は未評価であり，今後の利用者評価で検証する．"
-    },
-    {
-      "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 348.64,
-      "bottom": 412.4,
-      "text": "食物操作では，道具の移動に加えて，食材の変形，接触，運ばれる部分と元の領域の対応が必要となる．麺の連続性，スープの保持，炒飯の粒，ケーキの切り口では必要な条件が異なる．そこで，材料に応じた相対3D制御と既存の拡散モデルを組み合わせ，動作成立と自然さを分けて検証する．"
-    },
-    {
-      "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 440.9,
-      "bottom": 491.90799999999996,
-      "text": "VACE [1]は画像・動画・マスク等を条件とする生成・編集基盤であり，本研究では外観生成に用いる．LoRA [2]による局所適応は先行する麺実験で比較したが，今回追加した3材料の実験では使用しない．"
-    },
-    {
-      "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 493.90799999999996,
-      "bottom": 544.9159999999999,
-      "text": "SAM3 [3]は物体領域を得る観測器候補である．ただし分割領域の一致だけでは接触や連続性を保証しない．本研究では幾何学的な期待と画像上の証拠を分け，既存モデルの利用自体を新規性としない．"
-    },
-    {
-      "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 589.4159999999999,
-      "bottom": 653.1759999999999,
-      "text": "図1の入力は食物画像，動作指定，材料の種類と局所制御である．麺は曲線，道具は剛体，ほかの食材は局所的な載荷形状で表し，接触位置，相対深度と動作段階を管理する．これは手動パラメータによる計画用代理表現であり，実シーンの3D復元や物理シミュレーションではない．"
-    },
-    {
-      "page": 1,
-      "type": "body",
-      "x": 48.905,
-      "top": 655.1759999999999,
-      "bottom": 693.4319999999999,
-      "text": "相対3D状態を透視投影してRGB制御系列を作り，元画像と編集マスクと共にVACEへ与える．食材の外観は既存モデルが補完し，材料別の確認項目を図2に整理する．"
+      "type": "wide_framework",
+      "top": 125,
+      "bottom": 320.275875
     },
     {
       "page": 1,
       "type": "caption",
-      "x": 304.724,
-      "top": 323.745,
-      "bottom": 344.345,
-      "text": "図1  相対3D制御と凍結VACEによる編集．赤は制御構築，青は既存モデル，緑は局所合成を示す．"
+      "x": 48.905,
+      "top": 329,
+      "bottom": 349.6,
+      "text": "図1  提案手法の全体像．赤：手動アンカーと相対深度による操作制御，青：凍結したVACE/Wanによる条件付き生成，緑：元画像との領域限定合成．画像は同じケーキ例の入力，制御列，出力を示す．"
     },
     {
       "page": 1,
-      "type": "caption",
-      "x": 304.724,
-      "top": 433.69222222222226,
-      "bottom": 454.2922222222223,
-      "text": "図2  材料ごとの確認項目と出力例．麺は既存の高持上げ実験，ほかは今回の相対3D条件．"
+      "type": "body",
+      "x": 48.905,
+      "top": 377.1,
+      "bottom": 466.36400000000003,
+      "text": "食物写真に「一匙すくう」「一口持ち上げる」動作を加え，見た人が料理を味わう場面を想像できる編集を目指す．既存の画像編集では，道具の追加と共に器や背景まで変わることがある．本研究は元の料理と周辺場面を保ちながら，食材の接触・変形・持上げを指定する．飲食店や制作者の表現支援を想定するが，見る楽しさや制作負担への効果は未評価である．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 492.86400000000003,
+      "bottom": 543.8720000000001,
+      "text": "VACE [1]は画像・動画・マスクを条件とする生成・編集基盤である．GeoEdit [2]は幾何条件による画像編集を扱う．本研究はVACEの前段に食物操作の制御列生成，後段に固定フレーム選択と領域限定合成を追加する．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 545.8720000000001,
+      "bottom": 596.8800000000001,
+      "text": "SAM3 [3]は領域抽出の候補であり，現行生成経路には未接続である．現在の編集範囲は，手続き的に描画した道具・食物の全フレームの変更領域を合併し，膨張と境界重みを加えて作る．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 623.3800000000001,
+      "bottom": 699.892,
+      "text": "画像座標(u,v)と手動の相対深度ZからX=(u-c_x)Z/f_x，Y=(v-c_y)Z/f_yを計算する．688×512画像ではf_x=f_y=825.6，(c_x,c_y)=(344,256)とする．接触点P（3成分）と食材形状V（ケーキは8×3頂点）を動かし，元画像の食材テクスチャを投影面に写す．麺は曲線，箸は2線分であり，CADメッシュや実深度復元は用いない．"
+    },
+    {
+      "page": 1,
+      "type": "body",
+      "x": 48.905,
+      "top": 701.892,
+      "bottom": 765.652,
+      "text": "2D平面制御（Planar）は形状を画像平面で平行移動する．相対3D制御は相対深度と回転を加えて投影する．両者の接触点軌跡は共通であり，比較対象は主に形状と前後関係である．麺の対照は固定描画順と深度に基づく可視性の違いである．"
     },
     {
       "page": 1,
       "type": "body",
       "x": 304.724,
-      "top": 476.2922222222223,
-      "bottom": 501.7962222222223,
-      "text": "全動作の変化領域を覆うマスクSを作り，生成系列Jと元画像Iを合成する．各フレームfの出力は次式となる．"
+      "top": 372.6,
+      "bottom": 436.36,
+      "text": "各時刻の3D点をu=f_xX/Z+c_x，v=f_yY/Z+c_yで画像へ戻し，面の深度順や麺の可視性を使って描画する．RGB制御列C（21×512×688×3）と重みM（21×512×688×1，0〜1）を与える．制御には持上げ形状が既に含まれるが，その外観は手続き的な近似である．"
     },
     {
       "page": 1,
       "type": "body",
       "x": 304.724,
-      "top": 524.7962222222222,
-      "bottom": 575.8042222222223,
-      "text": "領域外の画素差0はこの合成の性質であり，モデルの生成能力ではない．麺の既存実験では，同一の生成系列に対し合成範囲だけを変え，既に生成されていた高い位置の箸が消える不具合を修復した．"
+      "top": 438.36,
+      "bottom": 514.8720000000001,
+      "text": "CをMで保持領域と変更領域に分け，それぞれを学習済みVAEで符号化する．マスクを再配列して結合し，VACE条件分岐のhintを対応するWan DiTブロックへ加える．VACE [1]のAdapter学習はDiTを凍結して条件分岐を学習する方式であるが，本研究は公開済み重みを利用し，全モデルに追加学習を行わない．独自のCondition Encoderはない．"
     },
     {
       "page": 1,
       "type": "body",
       "x": 304.724,
-      "top": 616.3042222222223,
-      "bottom": 667.3122222222223,
-      "text": "スープ，炒飯，予め切れ目のあるケーキ各1画像で，平面移動と相対3D制御を比較した．スープと炒飯は既使用の実画像（UECFOOD256由来），ケーキは合成入力であり，未見データ評価ではない．"
+      "top": 535.8720000000001,
+      "bottom": 574.128,
+      "text": "全動作範囲のマスクαと固定フレームJ（図1のt*=20，0始まり）でIout=αJ+(1−α)Iを作る．領域外の画素差0は合成の性質であり，生成能力を意味しない．"
     },
     {
       "page": 1,
       "type": "body",
       "x": 304.724,
-      "top": 669.3122222222223,
-      "bottom": 733.0722222222223,
-      "text": "各組で画像，プロンプト，編集範囲を揃え，Wan2.2-VACE-Fun-A14B，688×512画素，seed 1，21フレーム，20 steps，VACE scale 1，LoRA・TTM offとした．6条件を取得し，51出力ファイルと1予備検査のハッシュを照合した．"
+      "top": 600.628,
+      "bottom": 664.388,
+      "text": "図2は既使用実画像のスープ・炒飯と合成ケーキを示す．PAI/Wan2.2-VACE-Fun-A14B，seed 2，688×512画素，21 frames，20 steps，scale 1を用い，主比較はLoRA・TTMなしで統一した．4例×3 seeds×5条件の60出力から，表2は3条件36出力を再解析した．"
     },
     {
       "page": 1,
       "type": "body",
       "x": 304.724,
-      "top": 735.0722222222223,
-      "bottom": 773.3282222222223,
-      "text": "動作・接触・材料・元領域・自然度を個別に観察した．所見は固定6時点のエージェントによる確認であり，人間による独立盲検評価ではない．"
+      "top": 666.388,
+      "bottom": 717.3960000000001,
+      "text": "Actionは道具・接触・食物動作，Photoは写真自然度，Preservationは領域外保持を確認する．表1は選定スープ例の内部判定であり，独立したブラインド評価や統計的成功率ではない．"
     },
     {
       "page": 2,
       "type": "wide_figure",
       "top": 90.82,
-      "bottom": 464.75506976744185
+      "bottom": 385.4864186046511
     },
     {
       "page": 2,
       "type": "caption",
       "x": 48.905,
-      "top": 465.75506976744185,
-      "bottom": 486.3550697674419,
-      "text": "図3  スープ・炒飯・ケーキの同条件比較．左から入力，平面制御＋VACE，相対3D制御＋VACE．出力は同じ第20フレームを無加工で掲載した．ケーキは合成入力の切り分け済みブロックであり，未切断のケーキを切る実験ではない．"
+      "top": 386.4864186046511,
+      "bottom": 407.0864186046511,
+      "text": "図2  入力，RGB制御，VACEの原始生成，局所合成後の最終結果（第20フレーム，0始まり）．生成画像は保存MP4から復号し，追加の外観修復はしていない．持上げ配置は制御に含まれ，生成器は外観を再生成する．ケーキは合成の切り分け済みブロックである．"
     },
     {
       "page": 2,
       "type": "caption",
       "x": 48.905,
-      "top": 513.8550697674418,
-      "bottom": 524.1550697674418,
-      "text": "表1  3材料の予備的所見（両制御に共通）．"
+      "top": 414.0864186046511,
+      "bottom": 434.6864186046511,
+      "text": "表1  別の合成スープ1入力・seed 1．PPTと同じ数値で，✓/×は内部判定．外保持は領域外のRGB完全一致画素率，PSNR/SSIMは入力保持の診断．Qwenのraw出力は入力サイズに調整し，共通の局所合成は適用していない．"
     },
     {
       "page": 2,
       "type": "table",
-      "top": 528.1550697674418,
-      "bottom": 586.5550697674418
+      "top": 441.6864186046511,
+      "bottom": 494.0864186046511
+    },
+    {
+      "page": 2,
+      "type": "caption",
+      "x": 48.905,
+      "top": 500.0864186046511,
+      "bottom": 520.6864186046511,
+      "text": "表2  4開発入力×3 seeds（各行12出力）．領域外はα=0，領域内はα>0，MAEはRGB絶対画素差の平均（0〜255）．独立入力数は4であり12ではない．画素変化量は動作・写真品質を表さない．"
+    },
+    {
+      "page": 2,
+      "type": "table",
+      "top": 527.6864186046511,
+      "bottom": 580.086418604651
     },
     {
       "page": 2,
       "type": "body",
       "x": 48.905,
-      "top": 593.5550697674418,
-      "bottom": 644.5630697674418,
-      "text": "ケーキでは一口の持上げと対応する欠けが見える．一方，スープと炒飯の道具は幾何的な輪郭が残り，写真自然度は不十分である．相対3Dによる形状差は見られるが，動作の意味が明瞭に改善したとは判断できない．"
+      "top": 606.586418604651,
+      "bottom": 644.842418604651,
+      "text": "表1の選定例では三条件が成立した．表2では全36出力の合成を再現し，領域外差0を確認した．これは局所合成の効果であり，原始生成の背景保持性能ではない．"
     },
     {
       "page": 2,
       "type": "body",
       "x": 48.905,
-      "top": 646.5630697674418,
-      "bottom": 710.3230697674418,
-      "text": "麺の既存LoRA比較では，局所重みによるTopo.誤差の低減2.22%，把持領域誤差の低減2.83%は，双方5%以上という事前基準に届かなかった．またSAM3の幾何プロンプトによる診断では箸2本が融合したため，生成誘導には接続していない．"
+      "top": 646.842418604651,
+      "bottom": 685.098418604651,
+      "text": "2Dと3Dで操作位置は共通であり，現状の開発4例で明瞭な3D改善は未確認である．図2は制御と生成の役割を示す例であり，写真自然度や汎化の優位を主張しない．"
     },
     {
       "page": 2,
       "type": "body",
       "x": 304.724,
-      "top": 513.8550697674418,
-      "bottom": 577.6150697674418,
-      "text": "本研究では，食材ごとの動作条件を既存拡散モデルに渡す編集原型を構築し，麺に加えスープ・炒飯・ケーキの対照例を整備した．現時点の貢献は材料別制御と診断の実装，および合成範囲の不具合の分離であり，新しい拡散アルゴリズムや安定した3D優位性の実証ではない．"
+      "top": 606.586418604651,
+      "bottom": 644.842418604651,
+      "text": "食物操作の制御列生成と領域限定合成をVACEへ接続した．3D制御の追加効果と未使用画像への汎化は未実証である．"
     },
     {
       "page": 2,
       "type": "body",
       "x": 304.724,
-      "top": 579.6150697674418,
-      "bottom": 643.3750697674418,
-      "text": "今後は独立した画像と人間の評価を追加し，動作の分かりやすさ，自然度，制作時間と見る楽しさを個別に検証する．生成画像であることを明示し，実商品の量や質感を誤認させない表現支援を目指す．実データへの汎化，物理的正しさ，社会的効果は今後の検証課題である．"
+      "top": 646.842418604651,
+      "bottom": 685.098418604651,
+      "text": "今後は独立画像と複数人のブラインド評価，困難場面，食物の元領域対応，失敗分類を追加し，生成中の接触・元領域検証を去雑音へ戻す誘導法を検討する．"
     },
     {
       "page": 2,
       "type": "ref",
       "x": 304.724,
-      "top": 669.8750697674418,
-      "bottom": 677.9750697674418,
-      "text": "[1] Z. Jiang et al. VACE: All-in-One Video Creation and Editing. ICCV, 2025."
+      "top": 711.598418604651,
+      "bottom": 719.698418604651,
+      "text": "[1] Z. Jiang et al. “VACE.” ICCV, 2025."
     },
     {
       "page": 2,
       "type": "ref",
       "x": 304.724,
-      "top": 678.9750697674418,
-      "bottom": 695.1750697674419,
-      "text": "[2] E. J. Hu et al. LoRA: Low-Rank Adaptation of Large Language Models. ICLR, 2022."
+      "top": 720.698418604651,
+      "bottom": 728.798418604651,
+      "text": "[2] Y. He et al. “GeoEdit.” arXiv:2606.30003, 2026."
     },
     {
       "page": 2,
       "type": "ref",
       "x": 304.724,
-      "top": 696.1750697674419,
-      "bottom": 712.3750697674419,
-      "text": "[3] N. Carion et al. SAM 3: Segment Anything with Concepts. arXiv:2511.16719, 2025."
+      "top": 729.798418604651,
+      "bottom": 737.898418604651,
+      "text": "[3] N. Carion et al. “SAM 3.” arXiv:2511.16719, 2025."
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 738.898418604651,
+      "bottom": 746.9984186046511,
+      "text": "[4] C. Wu et al. “Qwen-Image.” arXiv:2508.02324, 2025."
+    },
+    {
+      "page": 2,
+      "type": "ref",
+      "x": 304.724,
+      "top": 747.9984186046511,
+      "bottom": 756.0984186046511,
+      "text": "[5] L. Lu et al. “ChordEdit.” CVPR, 2026."
     }
   ],
+  "header_style": "Single centered title, centered author row, centered supervisor row, matching the supplied manuscript header.",
   "layout_deviation": "Page 2 top is a wide three-material paired figure for legibility; other text remains two columns.",
   "original_preserved": true,
   "new_inference": false,
@@ -213,21 +226,30 @@
     "artifacts\\day18_swept_support_vace_gp40_20260908_v1\\projected_final_hold.png": "330e7e46f83b19acac2bb5e96652b8248c315d818ed3dfee6ec68d5d1bd93fa1",
     "artifacts\\day19_multimaterial_dataset_v3\\cake\\edit_alpha.png": "e3f3a7b41d18644bad9a2835c9037d751729fb8550543c6d3c918844a5f11f8c",
     "artifacts\\day19_multimaterial_dataset_v3\\cake\\reference.png": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
-    "artifacts\\day19_multimaterial_dataset_v3\\cake\\relative3d_final.png": "9588d3a08002c0ebb9351884437013c4be86862e8efc05fed8e90d6a799a716b",
-    "artifacts\\day19_multimaterial_dataset_v3\\rice\\reference.png": "630352af9844e4658f0dd26331f95113f7849cdd86b58ece32ad364e9cc2c7cc",
-    "artifacts\\day19_multimaterial_dataset_v3\\rice\\relative3d_final.png": "464e6db696c0402882bcc84efaaed88727c42bbf4e014437b6aaf85252aaf5db",
-    "artifacts\\day19_multimaterial_dataset_v3\\soup\\reference.png": "dfa5d3870d0ae49177f3b7cd9cd2aa23c9ef4b6607f0ce5b7546e960d0df3eff",
-    "artifacts\\day19_multimaterial_dataset_v3\\soup\\relative3d_final.png": "7b50aa8f7e3d711961088cab48efa192a0eb6c97857556ee6f3ab12af1f4f10b",
-    "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1\\cake__planar\\projected_final_hold.png": "f5f44ae9a1b4124b8c8adafff9d0dfdba8bed6500faa4e53c688069399b6188b",
-    "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1\\rice__planar\\projected_final_hold.png": "b115b3f5dd15a7e9bfb159cf877a2189a47aed8a957c957a1648278c894a38b4",
     "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1\\rice__relative3d\\projected_final_hold.png": "f219c9768d7acde853d51a9c7bd201568880732849fddd39c40d547f3f7157d3",
-    "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1\\soup__planar\\projected_final_hold.png": "95f0c5e909bb168c9fb2c300f5c6fba50fe811c599dddb3a2d3a4cecef361cc7",
     "artifacts\\day19_multimaterial_gp40_recovered_20260909_v1\\soup__relative3d\\projected_final_hold.png": "ac8ec1bf6a09aefe643e1aae6624384c203992df3cff7d4b2637540ce42df854",
     "artifacts\\day20_cake_recovery_gp40_20260909_v1\\cake__relative3d\\projected_final_hold.png": "3d4dcead955ef5aebb7171687c8ee6bbabf57e58dac28465da3d348673711b73",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\cake\\input.png": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\cake\\relative3d_control_f20.png": "15a068526af3fa13a4bf749c1083affef567a9e7b86fd1481be19986b0384f7e",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\cake\\relative3d_final_seed2_f20.png": "3b974ba56ff58a1e80e5ecdefd7618417c972d2db26052f93c1b83f8924a01b8",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\cake\\relative3d_raw_seed2_f20.png": "da9c115a41eecb7860037ed9d6a7f77b33af5a470f4ea7e74b5eaa2b8e9e71cd",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\rice\\input.png": "630352af9844e4658f0dd26331f95113f7849cdd86b58ece32ad364e9cc2c7cc",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\rice\\relative3d_control_f20.png": "959ee9319c5d1f669712fd355837943deb1ae5f20ae271aa2b6d993b12ef5a92",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\rice\\relative3d_final_seed2_f20.png": "44b9f9a5f3d0350a4e9d98f0f62f606c099ca8728cf7e3b396f267dd66e92276",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\rice\\relative3d_raw_seed2_f20.png": "2ab0c8927a3cd341c8d5faada1f03e1319cc1586a70bf9a0ee707295f07db1cd",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\soup\\input.png": "dfa5d3870d0ae49177f3b7cd9cd2aa23c9ef4b6607f0ce5b7546e960d0df3eff",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\soup\\relative3d_control_f20.png": "74d6ca57aeba5ee09d1015f89a91370654fbb0afe01f72a828e0bb393be9feeb",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\soup\\relative3d_final_seed2_f20.png": "db19a22b95ad5661a093455187ca53d800b0b153021190f9e9166eae80bbc1ff",
+    "artifacts\\teacher_mechanism_audit_20260914_v1\\soup\\relative3d_raw_seed2_f20.png": "582cb4a90387d6a5471e593473de2f379977627fd174312620b843d260401d70",
     "output\\pdf\\FoodStateEdit_PreDefense_GUO_2530030_SeniorFormat_20260907.pdf": "2ce9cd184ac7dbed8817c8e067a019ce64b4a9dfaa93d5fdee5f8b52a82aea49",
     "results\\DAY16_GEOMETRY_PROMPTED_SAM3_RESULT_20260907.md": "77feecdf1313dc36d4227767c34f1653bee5283908eaef596a1e541d9d47303b",
     "results\\DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md": "6ee12d66cbfa34d0d093fd557668ba742d09c694e2d784140af82bd2d285e4f1",
-    "results\\day20_non_noodle_result_20260909.json": "a86f52038a9dd15ece5d71dfe7de1716646ee9821f5f6338c65775d32ff1ec34"
+    "results\\day20_non_noodle_result_20260909.json": "a86f52038a9dd15ece5d71dfe7de1716646ee9821f5f6338c65775d32ff1ec34",
+    "results\\day34_presentation_soup_same_input_metrics_v1.json": "d3c3b33a7c9bcbbd3bf3e6d49f997be13a2f2d5b23e5cc4457e1dcd46882a176",
+    "results\\teacher_mechanism_audit_20260914_v1.json": "68339c3359856aa77a4683733013bf04aa317f02e597d27e36905f2caca598d1",
+    "tmp\\paper_framework_v28\\approach.png": "67af7915dfb434f33f3a90fbe64d9631a837e23d59dc852817f1bcf839280503",
+    "tmp\\paper_framework_v28\\contact.png": "0cb3a5be411736b88b5fa4f5c1043c3c4d8afdb763d6a8d332355ca24f66cc9c",
+    "tmp\\paper_framework_v28\\hold.png": "e8383eff7da21d5b39c6dd10562b8bd2a6a2512b2fb0902e8b38c796882d6a97"
   },
-  "output_sha256": "8bd6c651e713da402114dad9c5d856b57cbe37b5b50bfdd1ceead8bab969830e"
+  "output_sha256": "e5bdf3b268cacf9f149e9b08e4eaf8eaaa18da03fa769dfaf38a02f1664bbf9c"
 }

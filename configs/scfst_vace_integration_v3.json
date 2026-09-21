@@ -1,0 +1,15 @@
+{
+  "schema_version": "foodstateedit.scfst_vace_integration.v3",
+  "controls_manifest_sha256": "10d69f6aa2e5093505a86371ca259a782dee3cd4f70d310349a3fbf042ea1f9d",
+  "adapter_init": "zero",
+  "reference_channels": 16,
+  "reference_memory": "explicit reference_latents, with VACE-context fallback",
+  "hidden_dim": 64,
+  "block_ids": [0],
+  "strength": 1.0,
+  "frame_indices": [0, 4, 8, 12, 16, 20],
+  "grid_hw": [32, 43],
+  "prefix_tokens": 1376,
+  "expected_tokens": 9632,
+  "claim_limit": "Full VACE wiring execution only; zero-initialized adapter has no learned efficacy claim."
+}

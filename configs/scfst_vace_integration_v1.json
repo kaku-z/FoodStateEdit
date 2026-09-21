@@ -1,0 +1,11 @@
+{
+  "schema_version": "foodstateedit.scfst_vace_integration.v1",
+  "controls_manifest_sha256": "10d69f6aa2e5093505a86371ca259a782dee3cd4f70d310349a3fbf042ea1f9d",
+  "adapter_init": "zero",
+  "hidden_dim": 64,
+  "block_ids": [0],
+  "strength": 1.0,
+  "frame_indices": [0, 4, 8, 12, 16, 20],
+  "grid_hw": [32, 43],
+  "claim_limit": "Full VACE wiring execution only; no trained weights and no efficacy claim."
+}

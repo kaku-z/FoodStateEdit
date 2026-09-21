@@ -1,0 +1,25 @@
+{
+  "schema": "foodstateedit.spatial_stress.v1",
+  "frozen_before_inference": true,
+  "jobs": [
+    {"id": "soup_toward_camera", "case": "soup", "end_depth": 0.78, "yaw_radians": 0.0, "prompt_suffix": "The loaded spoon moves toward the camera as it rises, appearing larger while retaining the soup."},
+    {"id": "cake_yaw45", "case": "cake", "end_depth": 0.95, "yaw_radians": 0.7853981633974483, "prompt_suffix": "The fork and attached cake bite turn together by about 45 degrees in depth during the lift, showing a changed perspective."}
+  ],
+  "arms": ["planar_translation", "planar_similarity", "relative3d"],
+  "seed": 2,
+  "frames": 21,
+  "steps": 20,
+  "fps": 8,
+  "vace_scale": 1.0,
+  "lora": false,
+  "ttm": false,
+  "mask_policy": "Shared binary union of all three lossless RGB control sequences, dilated 33 pixels within each job",
+  "strong_2d_control": "Anchor-preserving least-squares 2D similarity fitted to the intended projected 3D payload landmarks each frame. Oracle-assisted strong surrogate, not a depth-free deployed method.",
+  "evaluation": {
+    "primary": ["utensil-food contact maintained after frame 6", "payload follows utensil through frames 9-20", "requested depth/rotation response", "no obvious shape break or food duplication"],
+    "secondary": ["photo naturalness", "raw versus composited output", "outside-support exact preservation"],
+    "rules": ["Review all 6 outputs and all 21 frames", "No seed replacement or output-dependent rerun", "A geometric control residual is not generated image quality", "Continuity is shared by all arms through the same phase trajectory", "No statistical or generalization claim from two development inputs and one seed"]
+  },
+  "hard_timeout_seconds_per_job": 3600,
+  "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility."
+}

@@ -1,0 +1,115 @@
+{
+  "captured_utc": "2026-09-14T13:23:43.239774+00:00",
+  "states": {
+    "soup": {
+      "schema": "foodstateedit.teacher_counterfactual.v1",
+      "status": "running",
+      "pid": 2191981,
+      "case": "soup",
+      "gpu": 0,
+      "started_utc": "2026-09-14T13:01:32.375185+00:00",
+      "pipeline_load_count": 1,
+      "completed": [],
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "scale": 1,
+      "training": false,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 1500,
+      "claim_limit": "Two development cases and one seed each. Counterfactual control-response diagnostic, not heldout efficacy or proof of 3D superiority.",
+      "input_sha256": "dfa5d3870d0ae49177f3b7cd9cd2aa23c9ef4b6607f0ce5b7546e960d0df3eff",
+      "mask_sha256": "29d7a194f30fafe5be81e29e76869ca333704ee8ffef5bfad5c5f7616e2bb67c",
+      "mask_policy": "binary dilated union of all three control sequences, identical across arms",
+      "control_endpoints": {
+        "planar_original": [
+          185.76,
+          158.72
+        ],
+        "relative_original": [
+          185.76,
+          158.72
+        ],
+        "relative_counterfactual": [
+          412.8,
+          158.72
+        ]
+      },
+      "prompt": "A realistic close-up photograph of the same potage. One stainless-steel spoon scoops and lifts a visible spoonful of thick soup above the surface. Liquid stays inside the concave spoon, with a natural meniscus. Preserve the soup crock, garnish, table and lighting. No hand, no spill, no crater.",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "edaaa526e862291536fedb3cc33a1e123d30def754a9c02a46eecbf658cfe8d9",
+      "active": "planar_original"
+    },
+    "cake": {
+      "schema": "foodstateedit.teacher_counterfactual.v1",
+      "status": "running",
+      "pid": 2192176,
+      "case": "cake",
+      "gpu": 1,
+      "started_utc": "2026-09-14T13:01:41.433041+00:00",
+      "pipeline_load_count": 1,
+      "completed": [],
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "scale": 1,
+      "training": false,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 1500,
+      "claim_limit": "Two development cases and one seed each. Counterfactual control-response diagnostic, not heldout efficacy or proof of 3D superiority.",
+      "input_sha256": "54afe34eeb97869df7ceb64b4c7209256eacc52fc7c93ccbe93459ab205b4bf8",
+      "mask_sha256": "f854198d068d13e90c32cde170c71c5adc088d4f99e9a5f7baa4637e53d507c1",
+      "mask_policy": "binary dilated union of all three control sequences, identical across arms",
+      "control_endpoints": {
+        "planar_original": [
+          433.44,
+          153.6
+        ],
+        "relative_original": [
+          433.44,
+          153.6
+        ],
+        "relative_counterfactual": [
+          240.79999999999995,
+          153.6
+        ]
+      },
+      "prompt": "A realistic close-up photograph of the same cream-topped sponge cake. Exactly one four-tined metal fork lifts the already pre-cut front-right bite above the plate. The intact cake bite stays attached to the fork, revealing a matching gap and natural crumb cut surfaces in the remaining cake. Preserve the plate, tabletop and lighting. No hand, no second bite, no duplication.",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "edaaa526e862291536fedb3cc33a1e123d30def754a9c02a46eecbf658cfe8d9",
+      "active": "planar_original"
+    }
+  },
+  "logs": {
+    "soup/planar_original/inference.log": "ing:  92%|█████████▏| 11/12 [00:02<00:00,  4.55it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  5.03it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  4.04it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:   8%|▊         | 1/12 [00:00<00:02,  3.71it/s]\nVAE encoding:  17%|█▋        | 2/12 [00:00<00:02,  3.69it/s]\nVAE encoding:  25%|██▌       | 3/12 [00:00<00:02,  4.24it/s]\nVAE encoding:  33%|███▎      | 4/12 [00:01<00:02,  3.98it/s]\nVAE encoding:  42%|████▏     | 5/12 [00:01<00:01,  3.86it/s]\nVAE encoding:  50%|█████     | 6/12 [00:01<00:01,  4.20it/s]\nVAE encoding:  58%|█████▊    | 7/12 [00:01<00:01,  4.03it/s]\nVAE encoding:  67%|██████▋   | 8/12 [00:02<00:01,  3.93it/s]\nVAE encoding:  75%|███████▌  | 9/12 [00:02<00:00,  4.30it/s]\nVAE encoding:  83%|████████▎ | 10/12 [00:02<00:00,  4.58it/s]\nVAE encoding:  92%|█████████▏| 11/12 [00:02<00:00,  4.81it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  5.35it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  4.42it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:  33%|███▎      | 4/12 [00:00<00:00, 34.27it/s]\nVAE encoding:  67%|██████▋   | 8/12 [00:00<00:00, 32.73it/s]\nVAE encoding: 100%|██████████| 12/12 [00:00<00:00, 35.03it/s]\nVAE encoding: 100%|██████████| 12/12 [00:00<00:00, 34.53it/s]\n\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [11:19<3:35:14, 679.69s/it]\n 10%|█         | 2/20 [11:27<1:25:23, 284.62s/it]\n 15%|█▌        | 3/20 [11:35<44:51, 158.35s/it]  \n 20%|██        | 4/20 [11:43<26:24, 99.04s/it] \n 25%|██▌       | 5/20 [11:52<16:34, 66.28s/it]\n 30%|███       | 6/20 [12:00<10:51, 46.53s/it]\n 35%|███▌      | 7/20 [12:08<07:21, 34.00s/it]\n 40%|████      | 8/20 [12:16<05:09, 25.80s/it]\n 45%|████▌     | 9/20 [12:25<03:43, 20.31s/it]",
+    "cake/planar_original/inference.log": "ing:  75%|███████▌  | 9/12 [00:02<00:00,  4.55it/s]\nVAE encoding:  83%|████████▎ | 10/12 [00:02<00:00,  4.71it/s]\nVAE encoding:  92%|█████████▏| 11/12 [00:02<00:00,  4.93it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  5.36it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  4.46it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:   8%|▊         | 1/12 [00:00<00:02,  4.22it/s]\nVAE encoding:  17%|█▋        | 2/12 [00:00<00:02,  4.13it/s]\nVAE encoding:  25%|██▌       | 3/12 [00:00<00:01,  4.72it/s]\nVAE encoding:  33%|███▎      | 4/12 [00:00<00:01,  4.47it/s]\nVAE encoding:  42%|████▏     | 5/12 [00:01<00:01,  4.34it/s]\nVAE encoding:  50%|█████     | 6/12 [00:01<00:01,  4.76it/s]\nVAE encoding:  58%|█████▊    | 7/12 [00:01<00:01,  4.52it/s]\nVAE encoding:  67%|██████▋   | 8/12 [00:01<00:00,  4.30it/s]\nVAE encoding:  75%|███████▌  | 9/12 [00:01<00:00,  4.74it/s]\nVAE encoding:  83%|████████▎ | 10/12 [00:02<00:00,  5.15it/s]\nVAE encoding:  92%|█████████▏| 11/12 [00:02<00:00,  5.47it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  6.17it/s]\nVAE encoding: 100%|██████████| 12/12 [00:02<00:00,  4.99it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:  58%|█████▊    | 7/12 [00:00<00:00, 56.25it/s]\nVAE encoding: 100%|██████████| 12/12 [00:00<00:00, 49.91it/s]\n\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|▌         | 1/20 [11:13<3:33:15, 673.42s/it]\n 10%|█         | 2/20 [11:21<1:24:36, 282.03s/it]\n 15%|█▌        | 3/20 [11:29<44:27, 156.93s/it]  \n 20%|██        | 4/20 [11:37<26:10, 98.17s/it] \n 25%|██▌       | 5/20 [11:45<16:25, 65.71s/it]\n 30%|███       | 6/20 [11:53<10:45, 46.13s/it]\n 35%|███▌      | 7/20 [12:02<07:18, 33.72s/it]\n 40%|████      | 8/20 [12:10<05:07, 25.59s/it]\n 45%|████▌     | 9/20 [12:18<03:41, 20.15s/it]"
+  },
+  "files": {
+    "soup_preflight.json": 666,
+    "cake_preflight.json": 666,
+    "soup/run_manifest.json": 1528,
+    "soup/shared_alpha.png": 2760,
+    "soup/geometry.json": 19617,
+    "soup/condition_shape_trace.json": 314,
+    "soup/pipeline.log": 4587,
+    "cake/pipeline.log": 4587,
+    "cake/run_manifest.json": 1619,
+    "cake/shared_alpha.png": 2689,
+    "cake/geometry.json": 20116,
+    "cake/condition_shape_trace.json": 314,
+    "soup/planar_original/control_final.png": 405621,
+    "soup/planar_original/inference.log": 2906,
+    "soup/relative_original/control_final.png": 404621,
+    "soup/relative_counterfactual/control_final.png": 402576,
+    "cake/planar_original/control_final.png": 522726,
+    "cake/planar_original/inference.log": 2753,
+    "cake/relative_original/control_final.png": 525041,
+    "cake/relative_counterfactual/control_final.png": 522131
+  },
+  "processes": "    PID     ELAPSED STAT   RSS WCHAN\n2191981       22:13 Rsl  50729236 -\n2192176       22:03 Rsl  50726264 -\n",
+  "gpus": "0, 2 %, 35656 MiB\n1, 1 %, 35656 MiB\n2, 0 %, 1 MiB\n3, 0 %, 1 MiB\n4, 0 %, 1 MiB\n5, 0 %, 1 MiB\n6, 0 %, 1 MiB\n7, 0 %, 1 MiB\n",
+  "local_received_utc": "2026-09-14T13:23:42.877250+00:00",
+  "snapshot_only": true
+}

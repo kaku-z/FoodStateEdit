@@ -2,16 +2,37 @@
 <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" stroke="none" stroke-width="1"/>
 <line x1="72" y1="42" x2="1208" y2="42" stroke="#D8DDE3" stroke-width="2"/>
 <text x="72" y="76" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="start" letter-spacing="1.8">MULTI-CASE RESULT</text>
-<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">複数食品での多手法比較</text>
+<text x="72" y="123" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="42" fill="#222222" font-weight="700" text-anchor="start">複数食品での多手法比較：入力・Prompt・出力</text>
 <rect x="72" y="142" width="74" height="4" fill="#0070C0" stroke="none" stroke-width="1"/>
 <text x="72" y="686" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#666666" font-weight="400" text-anchor="start">FoodStateEdit｜メディア情報学</text>
 <text x="1208" y="686" font-family="Arial, Yu Gothic, sans-serif" font-size="16" fill="#0070C0" font-weight="700" text-anchor="end">09</text>
 <g id="multi-case-comparison" data-pptx-bounds="72 154 1136 530">
-<image href="../images/p09comp_noodle.png" x="72" y="154" width="1136" height="130" preserveAspectRatio="xMidYMid meet"/>
-<image href="../images/p09comp_soup.png" x="72" y="304" width="1136" height="130" preserveAspectRatio="xMidYMid meet"/>
-<image href="../images/p09comp_cake.png" x="72" y="454" width="1136" height="130" preserveAspectRatio="xMidYMid meet"/>
-<rect x="72" y="612" width="1136" height="42" fill="#EAF6FC" stroke="#0070C0" stroke-width="1" rx="4"/>
-<text x="640" y="639" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="18" fill="#0070C0" font-weight="700" text-anchor="middle">Input｜ChordEdit｜Qwen Image｜FoodStateEdit（Ours）を同一入力で比較</text>
-<text x="640" y="672" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="13" fill="#666666" font-weight="400" text-anchor="middle">選択済みseed 1の内部比較。実画像GTなし。統計的優位性・一般化は未証明。</text>
+<rect x="72" y="158" width="1136" height="58" fill="#F7F9FB" stroke="#D8DDE3" stroke-width="1" rx="5"/>
+<text x="88" y="181" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="17" fill="#0070C0" font-weight="700" text-anchor="start">共通Prompt</text>
+<text x="220" y="181" font-family="Arial, Yu Gothic, sans-serif" font-size="14" fill="#222222" font-weight="500" text-anchor="start">realistic food photo; add the utensil action; preserve bowl and background.</text>
+<text x="220" y="205" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="13" fill="#666666" font-weight="500" text-anchor="start">材料・道具・動作語のみ置換。seed 1、21 frames、20 steps。</text>
+<rect x="72" y="226" width="828" height="122" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p09comp_noodle.png" x="80" y="231" width="812" height="112" preserveAspectRatio="xMidYMid meet"/>
+<rect x="918" y="226" width="290" height="122" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="5"/>
+<text x="938" y="254" font-family="Arial, Yu Gothic, sans-serif" font-size="21" fill="#0070C0" font-weight="700" text-anchor="start">Noodle</text>
+<text x="938" y="283" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="start">編集目標：箸で麺を持ち上げる</text>
+<text x="938" y="310" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="15" fill="#666666" font-weight="500" text-anchor="start">確認点：細い柔軟物の連続性・把持</text>
+<text x="938" y="334" font-family="Arial, Yu Gothic, sans-serif" font-size="12" fill="#666666" font-weight="500" text-anchor="start">列順：Input / Chord / Qwen / Ours</text>
+<rect x="72" y="361" width="828" height="122" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p09comp_soup.png" x="80" y="366" width="812" height="112" preserveAspectRatio="xMidYMid meet"/>
+<rect x="918" y="361" width="290" height="122" fill="#FFFFFF" stroke="#2E8B57" stroke-width="2" rx="5"/>
+<text x="938" y="389" font-family="Arial, Yu Gothic, sans-serif" font-size="21" fill="#2E8B57" font-weight="700" text-anchor="start">Soup</text>
+<text x="938" y="418" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="start">編集目標：スプーンですくう</text>
+<text x="938" y="445" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="15" fill="#666666" font-weight="500" text-anchor="start">確認点：液体の追従・器の保持</text>
+<text x="938" y="469" font-family="Arial, Yu Gothic, sans-serif" font-size="12" fill="#666666" font-weight="500" text-anchor="start">列順：Input / Chord / Qwen / Ours</text>
+<rect x="72" y="496" width="828" height="122" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="1" rx="4"/>
+<image href="../images/p09comp_cake.png" x="80" y="501" width="812" height="112" preserveAspectRatio="xMidYMid meet"/>
+<rect x="918" y="496" width="290" height="122" fill="#FFFFFF" stroke="#D8DDE3" stroke-width="2" rx="5"/>
+<text x="938" y="524" font-family="Arial, Yu Gothic, sans-serif" font-size="21" fill="#0070C0" font-weight="700" text-anchor="start">Cake</text>
+<text x="938" y="553" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="16" fill="#222222" font-weight="700" text-anchor="start">編集目標：フォークで取り分ける</text>
+<text x="938" y="580" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="15" fill="#666666" font-weight="500" text-anchor="start">確認点：切り口・支持領域の保持</text>
+<text x="938" y="604" font-family="Arial, Yu Gothic, sans-serif" font-size="12" fill="#666666" font-weight="500" text-anchor="start">列順：Input / Chord / Qwen / Ours</text>
+<rect x="72" y="640" width="1136" height="37" fill="#EAF6FC" stroke="#0070C0" stroke-width="1" rx="4"/>
+<text x="640" y="665" font-family="Yu Gothic, Arial, Meiryo, sans-serif" font-size="14" fill="#0070C0" font-weight="700" text-anchor="middle">選択済みseed 1の内部定性比較。目標動作の実画像Ground Truthなし。強モデルの未実行を結果として扱わない。</text>
 </g>
 </svg>

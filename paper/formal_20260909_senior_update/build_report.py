@@ -1,7 +1,7 @@
 """Reference-matched two-page report, with editable vector scientific figures.
 
 All measured images come from frozen local evidence; schematic geometry is
-explicitly labelled as a proxy. No model inference or image retouching occurs.
+explicitly labelled as a procedural control. No model inference or image retouching occurs.
 """
 from pathlib import Path
 import sys, re, json, math, hashlib
@@ -34,7 +34,8 @@ textsplit_engine.ALL_CANNOT_START += '，．！？'
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 FIG=HERE/'figures'
-OUT=ROOT/'output/pdf/FoodStateEdit_Formal_GUO_2530030_SeniorFormat_20260909_v2.pdf'
+TITLE='3次元動作制御に基づく食物画像編集'
+OUT=ROOT/'output/pdf/FoodStateEdit_Formal_GUO_2530030_SeniorFormat_20260914_v8_teacher_evidence.pdf'
 DATA=ROOT/'artifacts/day13_3d_guided_flexible_completion_udon_v1'
 R13=ROOT/'results/day13_flexible_completion_20260906'
 R14=ROOT/'results/day14_contact_guidance_observer_20260907'
@@ -164,7 +165,7 @@ def geom_proxy(c,x,y,w,h):
     c.setFillColor(RED);c.circle(x+107,y+91,5,fill=1,stroke=0)
     txt(c,'source',x+102,y+27,15,col=BLUE)
     txt(c,'pinch',x+35,y+100,15,col=RED)
-    txt(c,'relative 3D proxy',x+w/2,y+h-11,17,'ArialB',align='center')
+    txt(c,'relative 3D control',x+w/2,y+h-11,17,'ArialB',align='center')
 
 
 def placed_figure(c,draw,x,top,native_size):
@@ -206,7 +207,7 @@ def equation(c,s,x,top,num):
     return top+ph+8
 
 
-def table(c,rows,x,top,widths,shade=(),size=8.0):
+def table(c,rows,x,top,widths,shade=(),highlight=(),size=8.0):
     data=[]
     for r,row in enumerate(rows):
         data.append([Paragraph(mixed(str(v),size,size*1.081),ParagraphStyle('t',fontName='FSERefMincho',
@@ -217,7 +218,10 @@ def table(c,rows,x,top,widths,shade=(),size=8.0):
         ('LEFTPADDING',(0,0),(-1,-1),3),('RIGHTPADDING',(0,0),(-1,-1),3),
         ('TOPPADDING',(0,0),(-1,-1),2.5),('BOTTOMPADDING',(0,0),(-1,-1),2.5)]
     for r in shade:styles.append(('BACKGROUND',(0,r),(-1,r),colors.HexColor('#E6E6E6')))
-    t.setStyle(TableStyle(styles));_,th=t.wrap(CW,1000)
+    for r in highlight:
+        styles += [('BACKGROUND',(0,r),(-1,r),colors.HexColor('#F7DEDC')),
+                   ('TEXTCOLOR',(0,r),(-1,r),RED),('FONTNAME',(0,r),(-1,r),'FSERefGothic')]
+    t.setStyle(TableStyle(styles));_,th=t.wrap(sum(widths),1000)
     assert top+th<=775
     t.drawOn(c,x,H-top-th);AUDIT.append({'page':c.getPageNumber(),'type':'table','top':top,'bottom':top+th})
     return top+th+4
@@ -254,7 +258,7 @@ def framework(c):
     txt(c,'Edit',151,102,17,align='center');txt(c,'mask',151,78,17,align='center')
 
     group(c,219,244,668,190,'Relative 3D action control',RED)
-    # Explicit proxy with projected contact, depth, and a lifted solid.
+    # Explicit procedural control with projected contact, depth, and a lifted solid.
     origin=(248,274)
     for dx,dy,t in [(52,0,'x'),(-17,23,'z'),(0,71,'y')]:
         arrow(c,[origin,(origin[0]+dx,origin[1]+dy)],GRAY,lw=1)
@@ -327,41 +331,41 @@ def wide_para(c,s,top):
 
 def paired_results(c,top):
     full=RX+CW-LX
-    label=38;gap=7;pw=(full-label-2*gap)/3;ph=pw*512/688
-    for i,title in enumerate(['Input','Planar + VACE','Relative 3D + VACE']):
-        txt(c,title,LX+label+i*(pw+gap)+pw/2,H-top-8,8.5,'ArialB',align='center')
+    label=29;gap=5;pw=(full-label-3*gap)/4;ph=pw*512/688
+    for i,title in enumerate(['Input','3D control','VACE raw','Final composite']):
+        txt(c,title,LX+label+i*(pw+gap)+pw/2,H-top-8,7.5,'ArialB',align='center')
     y=top+15
     for case,label1,label2 in [('soup','Soup','real'),('rice','Rice','real'),('cake','Cake','synthetic')]:
         txt(c,label1,LX,H-y-17,8.5,'ArialB')
         txt(c,label2,LX,H-y-30,6.2,'Arial')
-        paths=[NONDATA/case/'reference.png',outcome(case,'planar'),outcome(case)]
+        base=ROOT/'artifacts/teacher_mechanism_audit_20260914_v1'/case
+        paths=[base/'input.png',base/'relative3d_control_f20.png',base/'relative3d_raw_seed2_f20.png',base/'relative3d_final_seed2_f20.png']
         for i,p in enumerate(paths):
             image_crop(c,p,None,LX+label+i*(pw+gap),H-y-ph,pw,ph)
         y+=ph+8
     AUDIT.append(dict(page=c.getPageNumber(),type='wide_figure',top=top,bottom=y))
     return y
 
-def first_page(c):
-    txt(c,'2026年度 修士論文中間発表会 資料',LX,H-73.85,9.212,'FSERefMincho')
-    txt(c,'2530030',550.97,H-74.90,9.963,'Roman',align='right')
-    for top,title in [(104.17,'食物操作を表現する画像編集'),
-                      (120.90,'相対3D制御と拡散モデルを用いたFoodStateEdit')]:
-        txt(c,title,W/2,H-top-13.266*.88,13.266,'FSERefGothic',align='center')
-    txt(c,'発表者：メディア情報学  GUO ZHENGPENG    学籍番号：2530030',W/2,H-160.5,11.055,'FSERefMincho',align='center')
-    txt(c,'主指導教員：柳井啓司    副指導教員：高橋裕樹',54.88,H-174.36,11.055,'FSERefMincho')
-    y=head(c,'1  はじめに',LX,196.62)
+def first_page_previous(c):
+    # Match the supplied senior manuscript header: one centered title, followed
+    # by one author row and one supervisor row.  The former running header and
+    # duplicated top-right student number are intentionally omitted.
+    txt(c,TITLE,W/2,H-49.0-15.0*.88,15.0,'FSERefGothic',align='center')
+    txt(c,'発表者： メディア情報学    学籍番号 2530030    GUO ZHENGPENG',W/2,H-91.0,10.4,'FSERefMincho',align='center')
+    txt(c,'主指導教員： 柳井 啓司 教授    指導教員： 高橋 裕樹 教授',W/2,H-108.0,10.4,'FSERefMincho',align='center')
+    y=head(c,'1  はじめに',LX,136.0)
     y=para(c,'料理の画像に「一匙すくう」「一口持ち上げる」といった動作を加えられれば，制作者は既存の写真から料理の見せ方を試すことができる．見る側にも，盛り付けだけでは伝えにくい食材の形や動作を，視覚的に示せると考える．',LX,y)
     y=para(c,'本研究の目的は，元の料理と周辺場面を保ちながら，指定した食物操作を表現する画像編集を支援することである．想定する用途は飲食店や食物コンテンツ制作者の表現支援であり，制作負担の軽減と見る楽しさの向上を目指す．これらの社会的効果は未評価であり，今後の利用者評価で検証する．',LX,y)
     y=para(c,'食物操作では，道具の移動に加えて，食材の変形，接触，運ばれる部分と元の領域の対応が必要となる．麺の連続性，スープの保持，炒飯の粒，ケーキの切り口では必要な条件が異なる．そこで，材料に応じた相対3D制御と既存の拡散モデルを組み合わせ，動作成立と自然さを分けて検証する．',LX,y)
     y=head(c,'2  関連研究',LX,y+6)
-    y=para(c,'VACE [1]は画像・動画・マスク等を条件とする生成・編集基盤であり，本研究では外観生成に用いる．LoRA [2]による局所適応は先行する麺実験で比較したが，今回追加した3材料の実験では使用しない．',LX,y)
-    y=para(c,'SAM3 [3]は物体領域を得る観測器候補である．ただし分割領域の一致だけでは接触や連続性を保証しない．本研究では幾何学的な期待と画像上の証拠を分け，既存モデルの利用自体を新規性としない．',LX,y)
+    y=para(c,'VACE [1]は画像・動画・マスク等を条件とする生成・編集基盤であり，本研究では外観生成に用いる．GeoEdit [2]は幾何条件を扱う画像編集法であるが，本研究は食物操作の時間系列をVACEへ与える点が異なる．',LX,y)
+    y=para(c,'LoRA [3]は先行する麺のseen-sample診断だけでVACE制御分岐へrank 8として学習した．明瞭な意味改善が得られず，材料比較への麺バイアス混入も避けるため，主実験60条件と追加3材料では使用しない．SAM3 [4]は領域抽出の診断候補であり，現行生成経路には接続していない．',LX,y)
     y=head(c,'3  提案する編集フレームワーク',LX,y+6)
     y=head(c,'3.1  材料別の相対3D制御',LX,y,True)
-    y=para(c,'図1の入力は食物画像，動作指定，材料の種類と局所制御である．麺は曲線，道具は剛体，ほかの食材は局所的な載荷形状で表し，接触位置，相対深度と動作段階を管理する．これは手動パラメータによる計画用代理表現であり，実シーンの3D復元や物理シミュレーションではない．',LX,y)
-    y=para(c,'相対3D状態を透視投影してRGB制御系列を作り，元画像と編集マスクと共にVACEへ与える．食材の外観は既存モデルが補完し，材料別の確認項目を図2に整理する．',LX,y)
+    y=para(c,'図1では，画像上で手動指定した接近・接触・最終・器接続の正規化座標U，相対深度D，21フレーム5段階の状態Qから相対3D状態を作る．箸は2本の3D線分，麺は128点のベジエ曲線，他食材は局所載荷形状であり，CADモデル，場面深度推定，物理シミュレーションは用いない．',LX,y)
+    y=para(c,'各時刻の3D点を正規化透視投影し，深度順に描画してRGB制御列C（21×512×688×3）とマスクM（21×512×688×1）を作る．VACEの学習済みVAEとCondition branchがこれを潜在特徴へ符号化し，Wanの各去雑音ブロックへhintとして加える．独自のCondition Encoderは学習せず，模式図の画素をコピーするのではなく，固定重みの生成器が外観を再生成する．',LX,y)
 
-    yy=placed_figure(c,framework,RX,196.62,(900,450))
+    yy=placed_figure(c,framework,RX,136.0,(900,450))
     yy=para(c,'図1  相対3D制御と凍結VACEによる編集．赤は制御構築，青は既存モデル，緑は局所合成を示す．',RX,yy+4,'caption',False,6)
     yy=placed_figure(c,material_figure,RX,yy,(900,290))
     yy=para(c,'図2  材料ごとの確認項目と出力例．麺は既存の高持上げ実験，ほかは今回の相対3D条件．',RX,yy+4,'caption',False,6)
@@ -372,28 +376,70 @@ def first_page(c):
     yy=head(c,'4  実験',RX,yy+2)
     yy=head(c,'4.1  麺以外の3材料の対照実験',RX,yy,True)
     yy=para(c,'スープ，炒飯，予め切れ目のあるケーキ各1画像で，平面移動と相対3D制御を比較した．スープと炒飯は既使用の実画像（UECFOOD256由来），ケーキは合成入力であり，未見データ評価ではない．',RX,yy)
-    yy=para(c,'各組で画像，プロンプト，編集範囲を揃え，Wan2.2-VACE-Fun-A14B，688×512画素，seed 1，21フレーム，20 steps，VACE scale 1，LoRA・TTM offとした．6条件を取得し，51出力ファイルと1予備検査のハッシュを照合した．',RX,yy)
-    yy=para(c,'動作・接触・材料・元領域・自然度を個別に観察した．所見は固定6時点のエージェントによる確認であり，人間による独立盲検評価ではない．',RX,yy)
+    yy=para(c,'図3では画像，プロンプト，編集範囲を揃え，Wan2.2-VACE-Fun-A14B，688×512画素，seed 1，21フレーム，20 steps，VACE scale 1，LoRA・TTM offとした．別の同条件消融は4例×3 seeds×5条件の60セルで実施し，全セルでLoRA・TTMを無効化した．',RX,yy)
+    yy=para(c,'動作・接触・材料・元領域・自然度を個別に観察した．所見は固定6時点のエージェントによる確認であり，人間による独立ブラインド評価ではない．',RX,yy)
+
+def first_page(c):
+    import importlib.util
+    module_path=ROOT/'tmp/paper_framework_v28/render_figure.py'
+    spec=importlib.util.spec_from_file_location('framework_renderer',module_path)
+    renderer=importlib.util.module_from_spec(spec);spec.loader.exec_module(renderer)
+    diagram=json.loads((module_path.parent/'framework.json').read_text(encoding='utf-8'))
+    USED_IMAGES.update(Path(a['file']) for a in diagram['items'] if a['kind']=='image')
+    txt(c,TITLE,W/2,H-49.0-15.0*.88,15.0,'FSERefGothic',align='center')
+    txt(c,'発表者： メディア情報学    学籍番号 2530030    GUO ZHENGPENG',W/2,H-91.0,10.4,'FSERefMincho',align='center')
+    txt(c,'主指導教員： 柳井 啓司 教授    指導教員： 高橋 裕樹 教授',W/2,H-108.0,10.4,'FSERefMincho',align='center')
+    full=RX+CW-LX
+    renderer.render(c,diagram,LX,H-132-diagram['height']*full/1200,full)
+    AUDIT.append(dict(page=1,type='wide_framework',top=125,bottom=132+diagram['height']*full/1200))
+    start=wide_para(c,'図1  提案手法の全体像．赤：手動アンカーと相対深度による操作制御，青：凍結したVACE/Wanによる条件付き生成，緑：元画像との領域限定合成．画像は同じケーキ例の入力，制御列，出力を示す．',329)
+    y=head(c,'1  はじめに',LX,start)
+    y=para(c,'食物写真に「一匙すくう」「一口持ち上げる」動作を加え，見た人が料理を味わう場面を想像できる編集を目指す．既存の画像編集では，道具の追加と共に器や背景まで変わることがある．本研究は元の料理と周辺場面を保ちながら，食材の接触・変形・持上げを指定する．飲食店や制作者の表現支援を想定するが，見る楽しさや制作負担への効果は未評価である．',LX,y)
+    y=head(c,'2  関連研究',LX,y+4)
+    y=para(c,'VACE [1]は画像・動画・マスクを条件とする生成・編集基盤である．GeoEdit [2]は幾何条件による画像編集を扱う．本研究はVACEの前段に食物操作の制御列生成，後段に固定フレーム選択と領域限定合成を追加する．',LX,y)
+    y=para(c,'SAM3 [3]は領域抽出の候補であり，現行生成経路には未接続である．現在の編集範囲は，手続き的に描画した道具・食物の全フレームの変更領域を合併し，膨張と境界重みを加えて作る．',LX,y)
+    y=head(c,'3  相対3D制御による画像編集',LX,y+4)
+    y=para(c,'画像座標(u,v)と手動の相対深度ZからX=(u-c_x)Z/f_x，Y=(v-c_y)Z/f_yを計算する．688×512画像ではf_x=f_y=825.6，(c_x,c_y)=(344,256)とする．接触点P（3成分）と食材形状V（ケーキは8×3頂点）を動かし，元画像の食材テクスチャを投影面に写す．麺は曲線，箸は2線分であり，CADメッシュや実深度復元は用いない．',LX,y)
+    y=para(c,'2D平面制御（Planar）は形状を画像平面で平行移動する．相対3D制御は相対深度と回転を加えて投影する．両者の接触点軌跡は共通であり，比較対象は主に形状と前後関係である．麺の対照は固定描画順と深度に基づく可視性の違いである．',LX,y)
+
+    yy=head(c,'3.1  透視投影と条件付き生成',RX,start,True)
+    yy=para(c,'各時刻の3D点をu=f_xX/Z+c_x，v=f_yY/Z+c_yで画像へ戻し，面の深度順や麺の可視性を使って描画する．RGB制御列C（21×512×688×3）と重みM（21×512×688×1，0〜1）を与える．制御には持上げ形状が既に含まれるが，その外観は手続き的な近似である．',RX,yy)
+    yy=para(c,'CをMで保持領域と変更領域に分け，それぞれを学習済みVAEで符号化する．マスクを再配列して結合し，VACE条件分岐のhintを対応するWan DiTブロックへ加える．VACE [1]のAdapter学習はDiTを凍結して条件分岐を学習する方式であるが，本研究は公開済み重みを利用し，全モデルに追加学習を行わない．独自のCondition Encoderはない．',RX,yy)
+    yy=head(c,'3.2  最終画像の局所合成',RX,yy+3,True)
+    yy=para(c,'全動作範囲のマスクαと固定フレームJ（図1のt*=20，0始まり）でIout=αJ+(1−α)Iを作る．領域外の画素差0は合成の性質であり，生成能力を意味しない．',RX,yy)
+    yy=head(c,'4  実験',RX,yy+4)
+    yy=para(c,'図2は既使用実画像のスープ・炒飯と合成ケーキを示す．PAI/Wan2.2-VACE-Fun-A14B，seed 2，688×512画素，21 frames，20 steps，scale 1を用い，主比較はLoRA・TTMなしで統一した．4例×3 seeds×5条件の60出力から，表2は3条件36出力を再解析した．',RX,yy)
+    yy=para(c,'Actionは道具・接触・食物動作，Photoは写真自然度，Preservationは領域外保持を確認する．表1は選定スープ例の内部判定であり，独立したブラインド評価や統計的成功率ではない．',RX,yy)
 
 def second_page(c):
     y=paired_results(c,90.82)
-    y=wide_para(c,'図3  スープ・炒飯・ケーキの同条件比較．左から入力，平面制御＋VACE，相対3D制御＋VACE．出力は同じ第20フレームを無加工で掲載した．ケーキは合成入力の切り分け済みブロックであり，未切断のケーキを切る実験ではない．',y+1)
-    left=head(c,'4.2  生成結果と残る課題',LX,y)
-    left=para(c,'表1  3材料の予備的所見（両制御に共通）．',LX,left,'caption',False,4)
-    left=table(c,[['材料','見える動作','残る問題'],
-        ['スープ','一匙の保持','硬い匙縁，平坦な液面'],
-        ['炒飯','載荷の移動','枠状の道具，元領域が不明瞭'],
-        ['ケーキ','一口と対応する欠け','フォーク先端・接触が不明瞭']],LX,left,[43,79,CW-122],size=8.0)
-    left=para(c,'ケーキでは一口の持上げと対応する欠けが見える．一方，スープと炒飯の道具は幾何的な輪郭が残り，写真自然度は不十分である．相対3Dによる形状差は見られるが，動作の意味が明瞭に改善したとは判断できない．',LX,left+3)
-    left=para(c,'麺の既存LoRA比較では，局所重みによるTopo.誤差の低減2.22%，把持領域誤差の低減2.83%は，双方5%以上という事前基準に届かなかった．またSAM3の幾何プロンプトによる診断では箸2本が融合したため，生成誘導には接続していない．',LX,left)
+    y=wide_para(c,'図2  入力，RGB制御，VACEの原始生成，局所合成後の最終結果（第20フレーム，0始まり）．生成画像は保存MP4から復号し，追加の外観修復はしていない．持上げ配置は制御に含まれ，生成器は外観を再生成する．ケーキは合成の切り分け済みブロックである．',y+1)
+    y=wide_para(c,'表1  別の合成スープ1入力・seed 1．PPTと同じ数値で，✓/×は内部判定．外保持は領域外のRGB完全一致画素率，PSNR/SSIMは入力保持の診断．Qwenのraw出力は入力サイズに調整し，共通の局所合成は適用していない．',y)
+    y=table(c,[['手法','PSNR','SSIM','外MAE','外保持','Action','Photo','Pres.'],
+        ['ChordEdit [5]','31.78','0.982','0.000','100.0%','×','×','✓'],
+        ['Qwen Image [4]','15.73','0.628','18.192','0.3%','✓','✓','×'],
+        ['FoodStateEdit','20.68','0.965','0.000','100.0%','✓','✓','✓']],LX,y,
+        [76,52,48,60,59,57,57,57],highlight=(3,),size=6.5)
+    audit=json.loads((ROOT/'results/teacher_mechanism_audit_20260914_v1.json').read_text(encoding='utf-8'))
+    y=wide_para(c,'表2  4開発入力×3 seeds（各行12出力）．領域外はα=0，領域内はα>0，MAEはRGB絶対画素差の平均（0〜255）．独立入力数は4であり12ではない．画素変化量は動作・写真品質を表さない．',y+2)
+    names=['原画像反復条件','2D平面制御','相対3D制御']
+    rows=[['VACEへの入力','raw領域外MAE','合成後領域外MAE','合成後領域内MAE']]
+    for name,row in zip(names,audit['summaries']):rows.append([name,f"{row['mean_raw_outside_mae']:.2f}",f"{row['mean_final_outside_mae']:.2f}",f"{row['mean_final_inside_mae']:.2f}"])
+    y=table(c,rows,LX,y,[145,119,119,123],highlight=(3,),size=6.5)
 
-    right=head(c,'5  おわりに',RX,y)
-    right=para(c,'本研究では，食材ごとの動作条件を既存拡散モデルに渡す編集原型を構築し，麺に加えスープ・炒飯・ケーキの対照例を整備した．現時点の貢献は材料別制御と診断の実装，および合成範囲の不具合の分離であり，新しい拡散アルゴリズムや安定した3D優位性の実証ではない．',RX,right)
-    right=para(c,'今後は独立した画像と人間の評価を追加し，動作の分かりやすさ，自然度，制作時間と見る楽しさを個別に検証する．生成画像であることを明示し，実商品の量や質感を誤認させない表現支援を目指す．実データへの汎化，物理的正しさ，社会的効果は今後の検証課題である．',RX,right)
+    left=head(c,'4.2  結果と解釈',LX,y+2)
+    left=para(c,'表1の選定例では三条件が成立した．表2では全36出力の合成を再現し，領域外差0を確認した．これは局所合成の効果であり，原始生成の背景保持性能ではない．',LX,left)
+    left=para(c,'2Dと3Dで操作位置は共通であり，現状の開発4例で明瞭な3D改善は未確認である．図2は制御と生成の役割を示す例であり，写真自然度や汎化の優位を主張しない．',LX,left)
+
+    right=head(c,'5  おわりに',RX,y+2)
+    right=para(c,'食物操作の制御列生成と領域限定合成をVACEへ接続した．3D制御の追加効果と未使用画像への汎化は未実証である．',RX,right)
+    right=para(c,'今後は独立画像と複数人のブラインド評価，困難場面，食物の元領域対応，失敗分類を追加し，生成中の接触・元領域検証を去雑音へ戻す誘導法を検討する．',RX,right)
     right=head(c,'参考文献',RX,right+4)
-    for ref in ['[1] Z. Jiang et al. VACE: All-in-One Video Creation and Editing. ICCV, 2025.',
-                '[2] E. J. Hu et al. LoRA: Low-Rank Adaptation of Large Language Models. ICLR, 2022.',
-                '[3] N. Carion et al. SAM 3: Segment Anything with Concepts. arXiv:2511.16719, 2025.']:
+    for ref in ['[1] Z. Jiang et al. “VACE.” ICCV, 2025.',
+                '[2] Y. He et al. “GeoEdit.” arXiv:2606.30003, 2026.',
+                '[3] N. Carion et al. “SAM 3.” arXiv:2511.16719, 2025.',
+                '[4] C. Wu et al. “Qwen-Image.” arXiv:2508.02324, 2025.',
+                '[5] L. Lu et al. “ChordEdit.” CVPR, 2026.']:
         right=para(c,ref,RX,right,'ref',False,1)
 
 def build():
@@ -407,22 +453,31 @@ def build():
     for rec in result['technical_metrics']:
         path=outcome(rec['source_dataset_case'],rec['condition'].split('__')[1])
         assert hashlib.sha256(path.read_bytes()).hexdigest()==rec['final_sha256']
-    for name,draw,size in [('framework',framework,(900,450)),('material_checks',material_figure,(900,290))]:
+    for name,draw,size in [('material_checks',material_figure,(900,290))]:
         f=canvas.Canvas(str(FIG/(name+'.pdf')),pagesize=size);draw(f);f.showPage();f.save()
     c=canvas.Canvas(str(OUT),pagesize=(W,H),pageCompression=1)
-    c.setTitle('FoodStateEdit - Food Action Image Editing - Updated two-page report')
+    c.setTitle(TITLE)
     c.setAuthor('GUO ZHENGPENG 2530030')
     first_page(c);c.showPage();second_page(c);c.showPage();c.save()
     reader=PdfReader(OUT);assert len(reader.pages)==2
     pdftext='\n'.join(p.extract_text() for p in reader.pages)
-    assert '柳井啓司' in pdftext and '高橋裕樹' in pdftext and 'メディア情報学' in pdftext and '要確認' not in pdftext
-    (HERE/'report_ja.md').write_text('\n\n'.join(BODYTEXT),encoding='utf-8')
+    assert TITLE in pdftext
+    assert '柳井 啓司 教授' in pdftext and '高橋 裕樹 教授' in pdftext and 'メディア情報学' in pdftext and '要確認' not in pdftext
+    assert '2026年度 修士論文中間発表会 資料' not in pdftext
+    manuscript_header=(
+        f'# {TITLE}\n\n'
+        '発表者：メディア情報学　学籍番号 2530030　GUO ZHENGPENG\n\n'
+        '主指導教員：柳井 啓司 教授　指導教員：高橋 裕樹 教授'
+    )
+    (HERE/'report_ja.md').write_text(manuscript_header+'\n\n'+'\n\n'.join(BODYTEXT),encoding='utf-8')
     sources=USED_IMAGES|{REFPDF,ROOT/'results/day20_non_noodle_result_20260909.json',
+        ROOT/'results/day34_presentation_soup_same_input_metrics_v1.json',ROOT/'results/teacher_mechanism_audit_20260914_v1.json',
         ROOT/'results/DAY18_HIGH_LIFT_SUPPORT_REPAIR_20260908.md',
         ROOT/'results/DAY16_GEOMETRY_PROMPTED_SAM3_RESULT_20260907.md'}
     (HERE/'layout_audit.json').write_text(json.dumps(dict(reference=str(REFPDF),page_count=2,
-        japanese_body_size_pt=9.212,body_leading_pt=12.752,title_size_pt=13.266,
+        japanese_body_size_pt=9.212,body_leading_pt=12.752,title_size_pt=15.0,
         left_x_pt=LX,right_x_pt=RX,column_width_pt=CW,blocks=AUDIT,
+        header_style='Single centered title, centered author row, centered supervisor row, matching the supplied manuscript header.',
         layout_deviation='Page 2 top is a wide three-material paired figure for legibility; other text remains two columns.',
         original_preserved=True,new_inference=False,retouched_results=False,
         source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(sources)},

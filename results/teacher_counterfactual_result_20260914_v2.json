@@ -1,0 +1,85 @@
+{
+  "schema": "foodstateedit.teacher_counterfactual_result.v2",
+  "created_utc": "2026-09-14T13:28:33.543721+00:00",
+  "status": "partial_batch_timeout_preserved",
+  "completed_generations": 2,
+  "planned_generations": 6,
+  "all_six_outputs_verified": false,
+  "manual_visual_review_completed": false,
+  "agent_visual_review": {
+    "completed": true,
+    "independent_human_review": false,
+    "viewed": "Both raw lossless final PNGs and both projected six-frame sheets (0,3,6,10,15,20)",
+    "soup": "Coarse utensil approach and lifted filled bowl are visible. Spoon rim remains flat and outlined; liquid support/source correspondence is not established. Do not call this photorealistic or strict success.",
+    "cake": "Coarse approach/contact/lift sequence is visible. Fork tines seen early collapse into a rod in later frames; source area retains an unnatural thin rectangular patch. Do not call this photorealistic or strict success.",
+    "comparative_conclusion": "Only Planar finished. No relative3D or counterfactual pair is available, so no comparative efficacy conclusion."
+  },
+  "additional_training": false,
+  "cases": {
+    "soup": {
+      "batch_status": "technical_failure_preserved",
+      "completed_conditions": [
+        "planar_original"
+      ],
+      "incomplete_conditions": [
+        "relative_original",
+        "relative_counterfactual"
+      ],
+      "pipeline_load_count": 1,
+      "wall_seconds": 1500.5121150090126,
+      "error": "RuntimeError('Own worker stopped: hard deadline or foreign GPU process')",
+      "timeout_evidence": "Approximately1500 seconds; own alarm raised; no resource_stop file",
+      "completed_control_endpoints": {
+        "planar_original": [
+          185.76,
+          158.72
+        ],
+        "relative_original": [
+          185.76,
+          158.72
+        ],
+        "relative_counterfactual": [
+          412.8,
+          158.72
+        ]
+      },
+      "successful_file_generation_not_semantic_success": true
+    },
+    "cake": {
+      "batch_status": "technical_failure_preserved",
+      "completed_conditions": [
+        "planar_original"
+      ],
+      "incomplete_conditions": [
+        "relative_original",
+        "relative_counterfactual"
+      ],
+      "pipeline_load_count": 1,
+      "wall_seconds": 1500.41187866393,
+      "error": "RuntimeError('Own worker stopped: hard deadline or foreign GPU process')",
+      "timeout_evidence": "Approximately1500 seconds; own alarm raised; no resource_stop file",
+      "completed_control_endpoints": {
+        "planar_original": [
+          433.44,
+          153.6
+        ],
+        "relative_original": [
+          433.44,
+          153.6
+        ],
+        "relative_counterfactual": [
+          240.79999999999995,
+          153.6
+        ]
+      },
+      "successful_file_generation_not_semantic_success": true
+    }
+  },
+  "all_collected_files_sha256_verified": true,
+  "collection_manifest": "artifacts\\teacher_counterfactual_partial_20260914T1304Z_collection.json",
+  "collection_sha256": "a22c076f0cc88c08d8b9f3259701517654bba903d5b8fa0943784723042ce1af",
+  "conditions": "Same seed2,21frames,20steps,VACEscale1,TTMoff,LoRAoff;three-armsharedbinarymask;freshuncompressedRGBcontrols",
+  "claim_limit": "Only two Planar controls finished. No paired relative3D or counterfactual result; cannot establish control response, 3D advantage, photorealism, physical validity or generalization.",
+  "failure_history": "Initial two cases failed at L-mask/RGB interface, preserved separately. Retry fixed format and reached generation; both batches stopped at1500-second own timeout after Planar completion.",
+  "next_step": "Resume remaining two arms per case only on safe resources, new output roots and explicit accounting for cold high/low-noise weight loading. Never overwrite this partial run."
+}

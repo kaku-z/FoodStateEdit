@@ -1,0 +1,113 @@
+{
+  "schema_version": "foodstateedit.e1_control_factorization_result.v1",
+  "date": "2026-09-17",
+  "status": "completed_two_case_one_seed_failure_localization_diagnostic",
+  "execution": {
+    "host": "gp40",
+    "physical_gpus": {
+      "cake": 0,
+      "noodle": 1
+    },
+    "seed": 2,
+    "frames_per_condition": 21,
+    "inference_steps": 20,
+    "vace_scale": 1.0,
+    "lora_enabled": false,
+    "ttm_enabled": false,
+    "pipeline_load_count_per_case": 1,
+    "failure_count": 0,
+    "remote_output_root": "/host/space0/guo-z/tf-ufi/outputs/e1_control_factorization_v1_20260917T013752Z",
+    "local_evidence_root": "artifacts/e1_control_factorization_results_gp40_20260917T013752Z",
+    "remote_local_file_count": 168,
+    "remote_local_sha256_match": true
+  },
+  "frozen_inputs": {
+    "control_manifest_sha256": "d7f715252f25ccb193eb7199b34846d832053a878727f8354bfe5fe0f550e98e",
+    "runner_sha256": "89ff8bba28da4345f7250d2edd30a73b85b42253853b323d0677fa0d8e5df0d0",
+    "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+    "cake_preflight_sha256": "4a933612daa87a28ac759c3b273564f254abfe76c64e4431129fd78ccb1b8a4a",
+    "noodle_preflight_sha256": "e289d7c8023735346388401a80ffb0f6fdc807ba32bcde8e543a034a537de13a",
+    "cake_run_manifest_sha256": "57cfc4fdeef9bccc6b86ec2220fba3be92d29510783578e0a61328574b751bce",
+    "noodle_run_manifest_sha256": "db26759b86238878eaea568a8b12b81b4053164de8919661736baca8ec51c75c"
+  },
+  "wall_seconds": {
+    "cake": {
+      "appearance_laden_rgb": 859.976,
+      "structure_scribble": 259.100,
+      "structure_scribble_payload_reference": 279.823
+    },
+    "noodle": {
+      "appearance_laden_rgb": 870.999,
+      "structure_scribble": 255.230,
+      "structure_scribble_payload_reference": 289.926
+    }
+  },
+  "pixel_diagnostics": {
+    "scope": "Final-frame change and compositor diagnostics only; these values are not action-success or photo-quality scores.",
+    "cake": {
+      "support_fraction": 0.1873467024,
+      "appearance_laden_rgb": {
+        "final_outside_max": 0,
+        "final_outside_mae": 0.0,
+        "final_inside_mae": 25.6554,
+        "raw_outside_mae": 5.0580
+      },
+      "structure_scribble": {
+        "final_outside_max": 0,
+        "final_outside_mae": 0.0,
+        "final_inside_mae": 28.2617,
+        "raw_outside_mae": 4.6090
+      },
+      "structure_scribble_payload_reference": {
+        "final_outside_max": 0,
+        "final_outside_mae": 0.0,
+        "final_inside_mae": 30.8058,
+        "raw_outside_mae": 3.7177
+      },
+      "structure_vs_payload_reference_inside_mae": 14.6168
+    },
+    "noodle": {
+      "support_fraction": 0.1257696423,
+      "appearance_laden_rgb": {
+        "final_outside_max": 0,
+        "final_outside_mae": 0.0,
+        "final_inside_mae": 20.2294,
+        "raw_outside_mae": 4.9883
+      },
+      "structure_scribble": {
+        "final_outside_max": 0,
+        "final_outside_mae": 0.0,
+        "final_inside_mae": 31.5037,
+        "raw_outside_mae": 5.1530
+      },
+      "structure_scribble_payload_reference": {
+        "final_outside_max": 0,
+        "final_outside_mae": 0.0,
+        "final_inside_mae": 31.0796,
+        "raw_outside_mae": 5.2708
+      },
+      "structure_vs_payload_reference_inside_mae": 14.5197
+    }
+  },
+  "manual_labeled_review": {
+    "reviewer_count": 1,
+    "not_blind": true,
+    "cake": {
+      "appearance_laden_rgb": "The contact-to-lift sequence is present, but the lifted bite breaks into implausible residual pieces and shows source/payload artifacts.",
+      "structure_scribble": "The source gap and lifted bite are more coherent, but the fork inherits a conspicuous outline/doubled-line appearance from the structural control.",
+      "structure_scribble_payload_reference": "Cake texture remains plausible, but the fork/contact region is still outline-like and dark; no clear overall improvement over structure_scribble."
+    },
+    "noodle": {
+      "appearance_laden_rgb": "Chopsticks contact and lift a strand, but the contact/strand shape is thin and locally awkward.",
+      "structure_scribble": "The approach-contact-lift ordering is readable and the lifted strand is clearer; the source connection is still only visually plausible, not verified.",
+      "structure_scribble_payload_reference": "The sequence is similar to structure_scribble and does not show a clear additional material-identity benefit."
+    }
+  },
+  "interpretation": {
+    "answer": "Structure/appearance separation changes the failure mode but does not consistently remove control-image appearance leakage. The extra payload reference has no clear semantic gain in these two cases.",
+    "useful_signal": "The noodle structural control produces a clearer lifted strand, and the cake structural control produces a more coherent source gap than the appearance-laden control.",
+    "negative_signal": "The cake fork becomes outline-like under the structural scribble, showing that VACE can copy the representation style of a sparse RGB control rather than interpret it as appearance-free geometry.",
+    "decision": "Do not scale this arm or claim effectiveness. Use the result to motivate a representation or conditioning-schedule change, then repeat a matched diagnostic before broader evaluation."
+  },
+  "claim_limit": "Two development cases, one seed, labeled review, and deterministic compositing do not establish superiority, generalization, physical correctness, source conservation, or publication-level effectiveness."
+}

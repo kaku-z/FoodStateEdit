@@ -1,0 +1,77 @@
+{
+  "schema_version": "foodstateedit.e2_control_representation_result.v1",
+  "date": "2026-09-17",
+  "status": "completed_negative_diagnostic_requires_independent_blind_review",
+  "research_question": "Does a full-frame Canny representation reduce RGB-proxy appearance leakage while preserving the same action trajectory under the current VACE local-edit path?",
+  "answer": "No. In the current runtime and mask contract, the Canny arm produced a severe black editable-region artifact in all six paired outputs and did not preserve photo realism.",
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "gpus": [
+      {
+        "case": "cake",
+        "physical_index": 0,
+        "name": "NVIDIA RTX A6000",
+        "preflight_passed": true,
+        "preflight_sha256": "68aec54cd94a36a43b632ffdf71809ddbade0bbae2a8b98ab560224a90c82a1b"
+      },
+      {
+        "case": "noodle",
+        "physical_index": 1,
+        "name": "NVIDIA RTX A6000",
+        "preflight_passed": true,
+        "preflight_sha256": "6c20426a8c5ebb4000a52fe38dfa4245bf1a389651cf647d7a5361de4bbd6e12"
+      }
+    ],
+    "started_utc": "2026-09-17T03:19:27Z",
+    "finished_utc": "2026-09-17T03:47:36Z",
+    "conditions": 12,
+    "cases": ["cake", "noodle"],
+    "seeds": [1, 2, 3],
+    "arms": ["appearance_laden_rgb", "fullframe_canny"],
+    "num_frames_per_condition": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "lora_enabled": false,
+    "enable_ttm": false,
+    "reference_count_per_arm": 1,
+    "pipeline_load_count_per_case": 1,
+    "technical_failures": 0,
+    "automatic_retries": 0
+  },
+  "integrity": {
+    "controls_manifest_sha256": "1a2e23251b50580e3ea4735d6a881d049280255e41053436be21133e4158eec6",
+    "config_sha256": "e95a03591f144e476354119dc9eaedcdaec0b6770db4b40c267363c3e6278014",
+    "runner_sha256": "130ae001322227cacd7024a79399ed8b0ae6f10ca3f67c9aa25bc7d05cebea2a",
+    "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+    "remote_local_file_count": 570,
+    "remote_local_sha256_exact_match": true,
+    "raw_png_frames_per_condition": 21,
+    "projected_png_frames_per_condition": 21,
+    "all_projected_outside_support_max_pixel_difference": 0
+  },
+  "unblinded_internal_screen": {
+    "reviewed_contact_sheets": 12,
+    "appearance_laden_rgb": {
+      "severe_black_edit_region_artifact": "0/6",
+      "summary": "The intended approach-contact-lift sequence is visible for both cases. Cake source removal is plausible in the strongest sample but residual or detached cake fragments remain in other seeds. Noodle lift is visible, but strict source depletion and material transfer are not established. Utensil geometry is seed-sensitive."
+    },
+    "fullframe_canny": {
+      "severe_black_edit_region_artifact": "6/6",
+      "photo_success": "0/6 in internal screening",
+      "summary": "The generated editable support remains largely black while partial utensils and payloads appear. The artifact is consistent across both cases and all three seeds."
+    },
+    "paired_conclusion": "The proposed sparse Canny replacement is falsified for the current VACE local-edit interface. It removes RGB appearance content but also removes context the current generation path relies on to fill the editable region."
+  },
+  "diagnosis": [
+    "This result does not show that Canny or edge conditioning is universally ineffective.",
+    "It shows that directly substituting a sparse black-background edge video into the current RGB VACE-video plus local-mask contract is incompatible with this frozen runtime.",
+    "The persistent black support artifact indicates a representation/interface mismatch before any claim about 3D trajectory quality can be tested.",
+    "The RGB arm remains appearance-laden and therefore cannot by itself establish that relative-3D state caused the visual motion."
+  ],
+  "decision": {
+    "advance_fullframe_canny": false,
+    "claim_3d_superiority": false,
+    "recommended_next_test": "Keep the identical trajectory and mask, but use a reference-anchored dense control representation that preserves scene context while ablating proxy appearance, then test control scheduling only after the dense representation passes a photo-realism gate."
+  },
+  "claim_limit": "Two development cases and an unblinded internal screen cannot establish generalization, physical correctness, source conservation, publication-level photo realism, or superiority over VACE. Independent blind scoring remains required for any formal success-rate claim."
+}

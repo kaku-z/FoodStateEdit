@@ -1,0 +1,94 @@
+{
+  "schema_version": "foodstateedit.e3_canny_mask_contract_probe_result.v1",
+  "date": "2026-09-17",
+  "status": "completed_positive_interface_correction_mixed_visual_quality",
+  "research_question": "Does separating the full-frame VACE conditioning mask from the local final-compositing mask remove the black Canny-background artifact observed in E2?",
+  "answer": "Yes for the interface failure. The severe black-background artifact disappeared in both frozen seed-1 cases, while action and appearance quality remain case-dependent.",
+  "execution": {
+    "host": "gp40.cs.uec.ac.jp",
+    "physical_gpu": 0,
+    "gpu_name": "NVIDIA RTX A6000",
+    "cases": [
+      "cake",
+      "noodle"
+    ],
+    "seed": 1,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "vace_scale": 1.0,
+    "lora_enabled": false,
+    "enable_ttm": false,
+    "pipeline_load_count_per_case": 1,
+    "technical_failures": 0,
+    "automatic_retries": 0
+  },
+  "integrity": {
+    "config_sha256": "15186033393ba30e24917bd001cf66ab95ea9c56ec7ed35b1cb549008726a8a7",
+    "runner_sha256": "f5058b565ddc86e453bb66c6418687ee844bcd0f60ca43a4a2ce66ff65210a2e",
+    "controls_manifest_sha256": "1a2e23251b50580e3ea4735d6a881d049280255e41053436be21133e4158eec6",
+    "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+    "remote_local_file_count": 102,
+    "remote_local_sha256_exact_match": true,
+    "cake_run_manifest_sha256": "abee8caa7eda73bf053516289be787c34f1c05b24e77704463725906a7bf3b3e",
+    "noodle_run_manifest_sha256": "d4c3c04d7f0c0ba47ac146fbd5266bcccaef6bcd60f1e8911653dad31aa7ff3e",
+    "cake_preflight_sha256": "d7d1c9d9ab72a6d7ca580baaf7681e6bbdf7b8ee987e5ffae838c1c31fcb3dea",
+    "noodle_preflight_sha256": "ca3b5ae8878e06ffde97bff0d04972fb37f1525542a204ca93368dcec12c43c9"
+  },
+  "mask_contract": {
+    "vace_conditioning_mask": "None, converted by the frozen runtime to an all-one full-generation mask",
+    "final_projection_mask": "frozen shared_alpha.png, used only after generation",
+    "legacy_error": "E2 passed the local final-compositing alpha to the VACE condition encoder, causing the black-background Canny video to enter the inactive/preserved branch outside the local support."
+  },
+  "paired_seed_1_diagnostics": {
+    "cake": {
+      "legacy_e2_local_mask": {
+        "raw_inside_support_black_fraction_threshold_lt_16": 0.6183130645354484,
+        "raw_outside_support_mae_to_reference": 145.0522782825324,
+        "raw_outside_support_mae_to_control": 3.756997058860387
+      },
+      "e3_full_generation_mask": {
+        "raw_inside_support_black_fraction_threshold_lt_16": 0.0,
+        "raw_outside_support_mae_to_reference": 17.852391742806816,
+        "raw_outside_support_mae_to_control": 131.3376728478174,
+        "outside_support_max_pixel_difference_after_projection": 0
+      }
+    },
+    "noodle": {
+      "legacy_e2_local_mask": {
+        "raw_inside_support_black_fraction_threshold_lt_16": 0.2619033287759838,
+        "raw_outside_support_mae_to_reference": 96.45235508892287,
+        "raw_outside_support_mae_to_control": 13.52376439448055
+      },
+      "e3_full_generation_mask": {
+        "raw_inside_support_black_fraction_threshold_lt_16": 2.8662575561714824e-06,
+        "raw_outside_support_mae_to_reference": 10.470387348466824,
+        "raw_outside_support_mae_to_control": 102.69439632558378,
+        "outside_support_max_pixel_difference_after_projection": 0
+      }
+    }
+  },
+  "unblinded_internal_visual_screen": {
+    "cake": {
+      "black_artifact_removed": true,
+      "action_observation": "The fork approaches, contacts and lifts a separated cake piece across the six review frames.",
+      "remaining_issue": "A conspicuous dark mask-shaped support/shadow region remains around and behind the fork, so strict photo success is not established."
+    },
+    "noodle": {
+      "black_artifact_removed": true,
+      "action_observation": "The chopsticks approach, contact and lift a noodle strand across the six review frames.",
+      "remaining_issue": "The source bowl remains visually full and source depletion is unclear, so source conservation and non-duplication are not established."
+    }
+  },
+  "decision": {
+    "mask_contract_fix_validated_for_seed_1": true,
+    "advance_legacy_local_vace_mask": false,
+    "claim_action_success_rate": false,
+    "claim_3d_superiority": false,
+    "recommended_next_test": "Freeze a separate multi-seed confirmation with the corrected VACE mask, then reduce the final projection support to a per-frame or softly feathered mask and add an explicit source-depletion constraint."
+  },
+  "paths": {
+    "remote_output": "/host/space0/guo-z/tf-ufi/outputs/e3_canny_mask_contract_probe_v1_20260917T043645Z",
+    "local_evidence": "artifacts/e3_canny_mask_contract_probe_gp40_20260917T043645Z"
+  },
+  "claim_limit": "Two development cases and one seed validate only the identified interface correction. They do not establish generalization, statistical effectiveness, source conservation, physical correctness, photo realism or superiority over VACE."
+}

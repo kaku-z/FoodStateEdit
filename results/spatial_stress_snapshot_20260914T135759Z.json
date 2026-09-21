@@ -1,0 +1,278 @@
+{
+  "captured_utc": "2026-09-14T13:58:00.329601+00:00",
+  "states": {
+    "soup_toward_camera": {
+      "schema": "foodstateedit.spatial_stress_run.v1",
+      "status": "running",
+      "job": "soup_toward_camera",
+      "pid": 2201409,
+      "gpu": 0,
+      "started_utc": "2026-09-14T13:53:51.538647+00:00",
+      "pipeline_load_count": 1,
+      "completed": [
+        {
+          "condition": "planar_translation",
+          "wall_seconds": 218.43013521505054,
+          "files": {
+            "inference.log": {
+              "size_bytes": 4877,
+              "sha256": "dfd7ea4f9ef62465c72593c607c017f8c3b5a8bcb264af5645b12f407874e283"
+            },
+            "projected.mp4": {
+              "size_bytes": 137204,
+              "sha256": "9fc5daeea04b4b65c0e1618b343cddf4daa7759198d0694e796864d8cd3a19e8"
+            },
+            "projected_final_hold.png": {
+              "size_bytes": 473393,
+              "sha256": "80734fb39697c6419ea48ad21db8b76142fad954f4d1d7f2d7b4df5b2e3dba2d"
+            },
+            "raw.mp4": {
+              "size_bytes": 165264,
+              "sha256": "d28e6b430be0cee04e0d92ce0f7c4ca0e79e6d83c1fffb7d718e5e29dd2d1c3f"
+            },
+            "projected_review.png": {
+              "size_bytes": 2790165,
+              "sha256": "b29839611878eedf13412fd614c7e70064bf91b40dbe1124730d73c5b6a35c54"
+            },
+            "raw_frames/00.png": {
+              "size_bytes": 447306,
+              "sha256": "bb21a1d7769e08a0ebd4c2ff8f647a5e519363831a305e3a25fd3fed9f7f3378"
+            },
+            "raw_frames/01.png": {
+              "size_bytes": 463807,
+              "sha256": "0282b334dff09baee0cef4f6297e82d670b02e9e3f469ee649c010ebcc4ebb6a"
+            },
+            "raw_frames/02.png": {
+              "size_bytes": 463584,
+              "sha256": "d9ee0fc48aea44ab8c98a7cfc31b551efef646d082189285cc3b05faa9663fd5"
+            },
+            "raw_frames/09.png": {
+              "size_bytes": 463200,
+              "sha256": "7af9675c82a3b63a56468d409129bf68dcf860c6b5e87d7b6a18fe6d899bf7a9"
+            },
+            "raw_frames/10.png": {
+              "size_bytes": 461866,
+              "sha256": "b85b2270f913f9078d77edaaa8d986f851b2b996266f5a2e7eb5d676a2c2995e"
+            },
+            "raw_frames/15.png": {
+              "size_bytes": 469091,
+              "sha256": "d19f9790cc142e387308baa8d6e610023963894a50d32c7894702645ab478600"
+            },
+            "raw_frames/16.png": {
+              "size_bytes": 467253,
+              "sha256": "75a5552b81fbcca5f73a3915163e20ddc7e07cd5bf1d36a92c3e7238f18e7c28"
+            },
+            "raw_frames/19.png": {
+              "size_bytes": 469514,
+              "sha256": "a5dcd4496e67c91c00899bc1310a206bd3b10b1c3cecd40a5e8cc646aed8a4dc"
+            },
+            "raw_frames/20.png": {
+              "size_bytes": 468730,
+              "sha256": "81a013f6d3b5eadfa2ec88aacfd0298d2e1844df204345c3d9b963d9d34c5f6e"
+            },
+            "raw_frames/03.png": {
+              "size_bytes": 458264,
+              "sha256": "8056f7b50280734a9deab2a73b1614c09a6221fc2b355cb9c834a458dc35e17d"
+            },
+            "raw_frames/04.png": {
+              "size_bytes": 457074,
+              "sha256": "2686cd519e989f78038d936522d4f8e2a7682831d3b63c5fd4423eb0ff02e997"
+            },
+            "raw_frames/05.png": {
+              "size_bytes": 460948,
+              "sha256": "1004ad81fc8b0fc087865f853d8754f297b20cc30a33ceaed591791ead118a7a"
+            },
+            "raw_frames/06.png": {
+              "size_bytes": 462055,
+              "sha256": "d84818bb050145f995905bdea117761384b95808fcd16a456eda2055d9642230"
+            },
+            "raw_frames/07.png": {
+              "size_bytes": 460390,
+              "sha256": "d08618415b3c111c0cce9a67a8b3e09ebf364e3edda2919bfca1144cdebbf820"
+            },
+            "raw_frames/08.png": {
+              "size_bytes": 459730,
+              "sha256": "a31bdebd174dfbd20ba14a079fba000c25186f403446c5a08cab7a6997b43c6a"
+            },
+            "raw_frames/11.png": {
+              "size_bytes": 459222,
+              "sha256": "89dc2e8fec65f31aab75d3722f897a9d11134eb19af09741700c8db8c4f03375"
+            },
+            "raw_frames/12.png": {
+              "size_bytes": 459131,
+              "sha256": "7dcb280742641de9ec4af7b6af1ad6efee2f84883a955a5bfd8f4c227b83a3b3"
+            },
+            "raw_frames/13.png": {
+              "size_bytes": 467459,
+              "sha256": "68f819b6d1303eb03cfcacab2eae2458d40bb6c9108f26cac768d91ae54392e3"
+            },
+            "raw_frames/14.png": {
+              "size_bytes": 469131,
+              "sha256": "c58d8952f08b537db960baf8c42b96d41660eb8d882039553c3eb5b881f52b0c"
+            },
+            "raw_frames/17.png": {
+              "size_bytes": 470708,
+              "sha256": "59de28ab83b66c55e1af1d8fb472ce1b417438d94999cb6a5a9fee4a123e3e29"
+            },
+            "raw_frames/18.png": {
+              "size_bytes": 469803,
+              "sha256": "608c428628d01909e4be04ff2017e208a905ddcfb5c184fa1315763623872bf8"
+            }
+          }
+        }
+      ],
+      "manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 3600,
+      "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility.",
+      "active": "planar_similarity"
+    },
+    "cake_yaw45": {
+      "schema": "foodstateedit.spatial_stress_run.v1",
+      "status": "running",
+      "job": "cake_yaw45",
+      "pid": 2201419,
+      "gpu": 1,
+      "started_utc": "2026-09-14T13:53:52.020066+00:00",
+      "pipeline_load_count": 1,
+      "completed": [
+        {
+          "condition": "planar_translation",
+          "wall_seconds": 217.1153561680112,
+          "files": {
+            "inference.log": {
+              "size_bytes": 5024,
+              "sha256": "ea37efe06c6ac1e599244571dee7fbac7acdeefa1f276cda6a113fc79d00e531"
+            },
+            "projected.mp4": {
+              "size_bytes": 162753,
+              "sha256": "ec0852a304088af4c2c358825f0e9f264c846642cbb7f37fa9d1c80a7bade8de"
+            },
+            "projected_final_hold.png": {
+              "size_bytes": 549240,
+              "sha256": "9cc7d8c5a140b409578867d17b95d281d663ff3d1036ba4a90f15d84fad893eb"
+            },
+            "raw.mp4": {
+              "size_bytes": 196637,
+              "sha256": "6c9d2b0f73f9e30196ebb597e4dcb1cfb7436cb833305754adf26d9f36760565"
+            },
+            "projected_review.png": {
+              "size_bytes": 3255610,
+              "sha256": "4caa1fff2d727ac15901c477ef8a80a5ded0151ee8de03fefbc88ad42e9ee13b"
+            },
+            "raw_frames/00.png": {
+              "size_bytes": 504015,
+              "sha256": "be9e5e511a92730c77a3bed1e73548995e84697313aee7455078bfd85fd25ada"
+            },
+            "raw_frames/01.png": {
+              "size_bytes": 517765,
+              "sha256": "6a5e36c1d5253e3c59d297bd9334255f952cb0bc6770d2ea526a2731cab0ae5c"
+            },
+            "raw_frames/02.png": {
+              "size_bytes": 519192,
+              "sha256": "a2f25979f2fea83e1b57bc3550aed8e8ece52da77ce27c49b386aa5a0188e065"
+            },
+            "raw_frames/09.png": {
+              "size_bytes": 514699,
+              "sha256": "05fe78ef02c85e8e890a3e51d95ef7e6e63b7d691c7ce28e67d3ae5ddfc5530b"
+            },
+            "raw_frames/10.png": {
+              "size_bytes": 513058,
+              "sha256": "19a320203c9cf96dbca46277ca3df2f10882d9c8f7daa7402bcaceaff6a91b85"
+            },
+            "raw_frames/15.png": {
+              "size_bytes": 520945,
+              "sha256": "2c4bc152e42e033acfb026fdf5e2b436a28caee58046d60cde5cbfefda9901fe"
+            },
+            "raw_frames/16.png": {
+              "size_bytes": 518564,
+              "sha256": "5906c9eeb9147215f882a138e3d97d233b91c4a2c447012f8200e012df515bd7"
+            },
+            "raw_frames/19.png": {
+              "size_bytes": 520632,
+              "sha256": "a493c4c4a53ab60e3df1f66294d4f2fa1a48e5b78c4dc51bbf975ce1da19a766"
+            },
+            "raw_frames/20.png": {
+              "size_bytes": 519419,
+              "sha256": "6c7d767b0aea6d8ae48e342d0033c87aca6d2e7508a140ec632e80200be35f80"
+            },
+            "raw_frames/03.png": {
+              "size_bytes": 514897,
+              "sha256": "2819164741110497c978c7c71e17170b2f64bea66de0520de1c975c400b599f2"
+            },
+            "raw_frames/04.png": {
+              "size_bytes": 512879,
+              "sha256": "9e11f37c57eb945cc8d06eef08ec1d3c011ce8ce492123343739d4750ccacc32"
+            },
+            "raw_frames/05.png": {
+              "size_bytes": 514212,
+              "sha256": "195fe042d3dd5c1e2cc3eb951378054b968c8ecbfc1e070dc44b686addf3c985"
+            },
+            "raw_frames/06.png": {
+              "size_bytes": 514389,
+              "sha256": "beceff9e2a2e923d90dc902f7231090983663df1cb754051d3a01c06e8c28d34"
+            },
+            "raw_frames/07.png": {
+              "size_bytes": 512591,
+              "sha256": "05a9e3bb5c8750da7e99e2fcafcf7ce3e017ab9b0b12e3dc68b7035a2c21c1e6"
+            },
+            "raw_frames/08.png": {
+              "size_bytes": 511649,
+              "sha256": "c453f7d4ee12ab92b03efed74e65b138e7a54c3b6cb57547e83247917bd35efb"
+            },
+            "raw_frames/11.png": {
+              "size_bytes": 511098,
+              "sha256": "71d2f2a3cf4a87a86391e57311bfa7352bed78bfc7e42ee42c75c38e92de786e"
+            },
+            "raw_frames/12.png": {
+              "size_bytes": 511511,
+              "sha256": "bc23cabae4e27d7cce6668763c08f7a4b82444a8dfaee22315b9c88fec0f4e97"
+            },
+            "raw_frames/13.png": {
+              "size_bytes": 517705,
+              "sha256": "5a7d5b73be66c2c254001dd51cdeeb87fdc7cc08a0347a2490763c188e3eb747"
+            },
+            "raw_frames/14.png": {
+              "size_bytes": 520672,
+              "sha256": "2183867e89aef704dd9324418e678cda8ee2ce2d0c1a4a5ab597f00e08a3b855"
+            },
+            "raw_frames/17.png": {
+              "size_bytes": 522564,
+              "sha256": "8b3011d965564235c7108a7b6e170f30f44d0ef35f4fd81ac51b2200867d10d9"
+            },
+            "raw_frames/18.png": {
+              "size_bytes": 522077,
+              "sha256": "9b4d19ead3b934ad450b0dd2de8e09022cea755ebd63c8cd6f7d7f7b1119eeb8"
+            }
+          }
+        }
+      ],
+      "manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 3600,
+      "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility.",
+      "active": "planar_similarity"
+    }
+  },
+  "logs": {
+    "soup_toward_camera/planar_translation/inference.log": "g:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 7/12 [00:03<00:01,  2.56it/s]\nVAE decoding:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:03<00:01,  2.43it/s]\nVAE decoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:03<00:01,  2.57it/s]\nVAE decoding:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 10/12 [00:04<00:00,  2.77it/s]\nVAE decoding:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11/12 [00:04<00:00,  3.00it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:04<00:00,  3.45it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:04<00:00,  2.62it/s]\n\nSaving video:   0%|          | 0/21 [00:00<?, ?it/s]\nSaving video:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 14/21 [00:00<00:00, 139.03it/s]\nSaving video: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21/21 [00:00<00:00, 186.79it/s]\n",
+    "soup_toward_camera/planar_similarity/inference.log": "",
+    "cake_yaw45/planar_translation/inference.log": "ing:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:03<00:01,  2.22it/s]\nVAE decoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:04<00:01,  2.38it/s]\nVAE decoding:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 10/12 [00:04<00:00,  2.50it/s]\nVAE decoding:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11/12 [00:04<00:00,  2.65it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.91it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.40it/s]\n\nSaving video:   0%|          | 0/21 [00:00<?, ?it/s]\nSaving video:   5%|\u258d         | 1/21 [00:00<00:05,  3.51it/s]\nSaving video:  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 19/21 [00:00<00:00, 62.11it/s]\nSaving video: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21/21 [00:00<00:00, 53.72it/s]\n",
+    "cake_yaw45/planar_similarity/inference.log": ""
+  },
+  "processes": "    PID     ELAPSED STAT   RSS WCHAN\n2201409       04:10 Rsl  73037124 -\n2201419       04:10 Rsl  75862160 -\n",
+  "stopped": false,
+  "files": {}
+}

@@ -1,0 +1,51 @@
+{
+  "started_utc": "2026-09-14T13:53:50.489036+00:00",
+  "host": "gp40",
+  "root": "/host/space0/guo-z/tf-ufi/outputs/spatial_stress_v1_20260914T1358Z",
+  "runtime": "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z",
+  "jobs": [
+    {
+      "job": "soup_toward_camera",
+      "gpu": 0,
+      "pid": 2201409,
+      "command": [
+        "/host/space0/guo-z/envs/geoedit/bin/python",
+        "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z/scripts/run_spatial_stress_v1.py",
+        "--base-config",
+        "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z/configs/day25_same_condition_ablation_v2_retry.json",
+        "--controls",
+        "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z/artifacts/spatial_stress_controls_v1_20260914T1352Z",
+        "--manifest-sha256",
+        "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+        "--job",
+        "soup_toward_camera",
+        "--gpu",
+        "0",
+        "--root",
+        "/host/space0/guo-z/tf-ufi/outputs/spatial_stress_v1_20260914T1358Z"
+      ]
+    },
+    {
+      "job": "cake_yaw45",
+      "gpu": 1,
+      "pid": 2201419,
+      "command": [
+        "/host/space0/guo-z/envs/geoedit/bin/python",
+        "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z/scripts/run_spatial_stress_v1.py",
+        "--base-config",
+        "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z/configs/day25_same_condition_ablation_v2_retry.json",
+        "--controls",
+        "/host/space0/guo-z/tf-ufi/runtime/spatial_stress_v1_20260914T1358Z/artifacts/spatial_stress_controls_v1_20260914T1352Z",
+        "--manifest-sha256",
+        "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+        "--job",
+        "cake_yaw45",
+        "--gpu",
+        "1",
+        "--root",
+        "/host/space0/guo-z/tf-ufi/outputs/spatial_stress_v1_20260914T1358Z"
+      ]
+    }
+  ],
+  "status": "dispatched_not_complete"
+}

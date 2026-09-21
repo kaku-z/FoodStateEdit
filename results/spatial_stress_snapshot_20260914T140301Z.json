@@ -1,0 +1,500 @@
+{
+  "captured_utc": "2026-09-14T14:03:01.971676+00:00",
+  "states": {
+    "soup_toward_camera": {
+      "schema": "foodstateedit.spatial_stress_run.v1",
+      "status": "running",
+      "job": "soup_toward_camera",
+      "pid": 2201409,
+      "gpu": 0,
+      "started_utc": "2026-09-14T13:53:51.538647+00:00",
+      "pipeline_load_count": 1,
+      "completed": [
+        {
+          "condition": "planar_translation",
+          "wall_seconds": 218.43013521505054,
+          "files": {
+            "inference.log": {
+              "size_bytes": 4877,
+              "sha256": "dfd7ea4f9ef62465c72593c607c017f8c3b5a8bcb264af5645b12f407874e283"
+            },
+            "projected.mp4": {
+              "size_bytes": 137204,
+              "sha256": "9fc5daeea04b4b65c0e1618b343cddf4daa7759198d0694e796864d8cd3a19e8"
+            },
+            "projected_final_hold.png": {
+              "size_bytes": 473393,
+              "sha256": "80734fb39697c6419ea48ad21db8b76142fad954f4d1d7f2d7b4df5b2e3dba2d"
+            },
+            "raw.mp4": {
+              "size_bytes": 165264,
+              "sha256": "d28e6b430be0cee04e0d92ce0f7c4ca0e79e6d83c1fffb7d718e5e29dd2d1c3f"
+            },
+            "projected_review.png": {
+              "size_bytes": 2790165,
+              "sha256": "b29839611878eedf13412fd614c7e70064bf91b40dbe1124730d73c5b6a35c54"
+            },
+            "raw_frames/00.png": {
+              "size_bytes": 447306,
+              "sha256": "bb21a1d7769e08a0ebd4c2ff8f647a5e519363831a305e3a25fd3fed9f7f3378"
+            },
+            "raw_frames/01.png": {
+              "size_bytes": 463807,
+              "sha256": "0282b334dff09baee0cef4f6297e82d670b02e9e3f469ee649c010ebcc4ebb6a"
+            },
+            "raw_frames/02.png": {
+              "size_bytes": 463584,
+              "sha256": "d9ee0fc48aea44ab8c98a7cfc31b551efef646d082189285cc3b05faa9663fd5"
+            },
+            "raw_frames/09.png": {
+              "size_bytes": 463200,
+              "sha256": "7af9675c82a3b63a56468d409129bf68dcf860c6b5e87d7b6a18fe6d899bf7a9"
+            },
+            "raw_frames/10.png": {
+              "size_bytes": 461866,
+              "sha256": "b85b2270f913f9078d77edaaa8d986f851b2b996266f5a2e7eb5d676a2c2995e"
+            },
+            "raw_frames/15.png": {
+              "size_bytes": 469091,
+              "sha256": "d19f9790cc142e387308baa8d6e610023963894a50d32c7894702645ab478600"
+            },
+            "raw_frames/16.png": {
+              "size_bytes": 467253,
+              "sha256": "75a5552b81fbcca5f73a3915163e20ddc7e07cd5bf1d36a92c3e7238f18e7c28"
+            },
+            "raw_frames/19.png": {
+              "size_bytes": 469514,
+              "sha256": "a5dcd4496e67c91c00899bc1310a206bd3b10b1c3cecd40a5e8cc646aed8a4dc"
+            },
+            "raw_frames/20.png": {
+              "size_bytes": 468730,
+              "sha256": "81a013f6d3b5eadfa2ec88aacfd0298d2e1844df204345c3d9b963d9d34c5f6e"
+            },
+            "raw_frames/03.png": {
+              "size_bytes": 458264,
+              "sha256": "8056f7b50280734a9deab2a73b1614c09a6221fc2b355cb9c834a458dc35e17d"
+            },
+            "raw_frames/04.png": {
+              "size_bytes": 457074,
+              "sha256": "2686cd519e989f78038d936522d4f8e2a7682831d3b63c5fd4423eb0ff02e997"
+            },
+            "raw_frames/05.png": {
+              "size_bytes": 460948,
+              "sha256": "1004ad81fc8b0fc087865f853d8754f297b20cc30a33ceaed591791ead118a7a"
+            },
+            "raw_frames/06.png": {
+              "size_bytes": 462055,
+              "sha256": "d84818bb050145f995905bdea117761384b95808fcd16a456eda2055d9642230"
+            },
+            "raw_frames/07.png": {
+              "size_bytes": 460390,
+              "sha256": "d08618415b3c111c0cce9a67a8b3e09ebf364e3edda2919bfca1144cdebbf820"
+            },
+            "raw_frames/08.png": {
+              "size_bytes": 459730,
+              "sha256": "a31bdebd174dfbd20ba14a079fba000c25186f403446c5a08cab7a6997b43c6a"
+            },
+            "raw_frames/11.png": {
+              "size_bytes": 459222,
+              "sha256": "89dc2e8fec65f31aab75d3722f897a9d11134eb19af09741700c8db8c4f03375"
+            },
+            "raw_frames/12.png": {
+              "size_bytes": 459131,
+              "sha256": "7dcb280742641de9ec4af7b6af1ad6efee2f84883a955a5bfd8f4c227b83a3b3"
+            },
+            "raw_frames/13.png": {
+              "size_bytes": 467459,
+              "sha256": "68f819b6d1303eb03cfcacab2eae2458d40bb6c9108f26cac768d91ae54392e3"
+            },
+            "raw_frames/14.png": {
+              "size_bytes": 469131,
+              "sha256": "c58d8952f08b537db960baf8c42b96d41660eb8d882039553c3eb5b881f52b0c"
+            },
+            "raw_frames/17.png": {
+              "size_bytes": 470708,
+              "sha256": "59de28ab83b66c55e1af1d8fb472ce1b417438d94999cb6a5a9fee4a123e3e29"
+            },
+            "raw_frames/18.png": {
+              "size_bytes": 469803,
+              "sha256": "608c428628d01909e4be04ff2017e208a905ddcfb5c184fa1315763623872bf8"
+            }
+          }
+        },
+        {
+          "condition": "planar_similarity",
+          "wall_seconds": 240.1963629439706,
+          "files": {
+            "inference.log": {
+              "size_bytes": 4874,
+              "sha256": "20d9f7335fce9e921af6b68a6bddc925fddab2d5b04b135c2f85edb226ed3bb7"
+            },
+            "projected.mp4": {
+              "size_bytes": 140550,
+              "sha256": "2211c3616d28b13e3e17ef23bfc89e439c83da55a93c003838435593234b8b10"
+            },
+            "projected_final_hold.png": {
+              "size_bytes": 473973,
+              "sha256": "a66a2a02a0e0593962139daa3ab62b7ad5dd63ace77371e97a5b763207a906ae"
+            },
+            "raw.mp4": {
+              "size_bytes": 169449,
+              "sha256": "74c1cecaeed55a6038ce606fbff42cc6109fce1c1406a75ae68e8fe72a7ba2c7"
+            },
+            "projected_review.png": {
+              "size_bytes": 2792171,
+              "sha256": "4618e7f32e606253e86d7a88bc261034a927b7ca5db96b10302fcd28cc573cea"
+            },
+            "raw_frames/00.png": {
+              "size_bytes": 447472,
+              "sha256": "716f0ed80ac0612df436280a41817dce6366c1c25b433bb45733cc24d1cc6f29"
+            },
+            "raw_frames/01.png": {
+              "size_bytes": 463773,
+              "sha256": "06ee90864ef65fb1d29c222dd49e0f029e66948bc60edf190b13767a9c51f27d"
+            },
+            "raw_frames/02.png": {
+              "size_bytes": 463996,
+              "sha256": "221d1e18f1f52c0e9a7263530c1e2fb6d874317b8c2b7125d95c8b266213da1e"
+            },
+            "raw_frames/09.png": {
+              "size_bytes": 463824,
+              "sha256": "0ae2d5f31742c655d5b57d3b6161dcd9bb579f1913eef73760fb824a5fffa75a"
+            },
+            "raw_frames/10.png": {
+              "size_bytes": 462565,
+              "sha256": "715f6a98338cb7a1a8913eb75cee45a49d2faf56703dea0c9f58652d1731b23d"
+            },
+            "raw_frames/15.png": {
+              "size_bytes": 469680,
+              "sha256": "03ef857c11857e9e518f85fe2525e79402ccdd8d634606ad5055707a7a39dec4"
+            },
+            "raw_frames/16.png": {
+              "size_bytes": 467657,
+              "sha256": "c50b5c6bccf3c619ca9cf909752c980fab94dbdea1a4ce7cf20cd069c09f9e9a"
+            },
+            "raw_frames/19.png": {
+              "size_bytes": 469485,
+              "sha256": "1402db58744310ff47d3a3b436cbea5ed637a48ade4a9622a3fd5101a717a582"
+            },
+            "raw_frames/20.png": {
+              "size_bytes": 468538,
+              "sha256": "ceda86ea483df7b1b0189268a95a4c8e672341ad01ab3cc794e503c2fa6754d1"
+            },
+            "raw_frames/03.png": {
+              "size_bytes": 458276,
+              "sha256": "1e59b514e53009b9cf0e3de499c98ec576de89905df393f41d8cc2559e6d354d"
+            },
+            "raw_frames/04.png": {
+              "size_bytes": 457470,
+              "sha256": "db59051b88a6e9b98c7305da91fb896dcaa9ccb2fa67fb492f1bddd98459b8fb"
+            },
+            "raw_frames/05.png": {
+              "size_bytes": 461218,
+              "sha256": "f4e7a094dd205bbecc2b4d037e3e41d917883b33d3bfab6f8ee1b4b0d2c10cdc"
+            },
+            "raw_frames/06.png": {
+              "size_bytes": 461892,
+              "sha256": "388de81d0e0c50bc8ba6646d96d205ac71ff4ee5f089cfdcf9a4f5c18cdad9be"
+            },
+            "raw_frames/07.png": {
+              "size_bytes": 460657,
+              "sha256": "257c163a149a774214cb38f36fe73f55565007e7690b48a6d44d3879cda99a9b"
+            },
+            "raw_frames/08.png": {
+              "size_bytes": 459813,
+              "sha256": "4e7c03996bd047675109f580777ec098576438491f7de39fac1a1155894b87b3"
+            },
+            "raw_frames/11.png": {
+              "size_bytes": 460271,
+              "sha256": "e3aa3ca17d5a220d2d8fa0fcb124de84b9392ae53cc05a9ac94287d0291c8ffc"
+            },
+            "raw_frames/12.png": {
+              "size_bytes": 459810,
+              "sha256": "fab301a428451245c1abe3bb0976f6b66c7cc002e33036e7bac02474b354fedb"
+            },
+            "raw_frames/13.png": {
+              "size_bytes": 468793,
+              "sha256": "be9dd4bdca51c9e540b22cc54406d873f7cb0a724a89961291859a610827253b"
+            },
+            "raw_frames/14.png": {
+              "size_bytes": 469954,
+              "sha256": "9090832b3857d89fbcd0d45063e4b58803481a0ba76f571c3a786ffbe2f8e979"
+            },
+            "raw_frames/17.png": {
+              "size_bytes": 470984,
+              "sha256": "20b435917d91d2ad13d023cbc74bf678b00dd237f9d0b5a8055ae8cdae09c936"
+            },
+            "raw_frames/18.png": {
+              "size_bytes": 469994,
+              "sha256": "9b7cfb50ed2b27b85328aaf5ac6d1e95c9178b0f9916950c34fb6a66ba613e1f"
+            }
+          }
+        }
+      ],
+      "manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 3600,
+      "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility.",
+      "active": "relative3d"
+    },
+    "cake_yaw45": {
+      "schema": "foodstateedit.spatial_stress_run.v1",
+      "status": "running",
+      "job": "cake_yaw45",
+      "pid": 2201419,
+      "gpu": 1,
+      "started_utc": "2026-09-14T13:53:52.020066+00:00",
+      "pipeline_load_count": 1,
+      "completed": [
+        {
+          "condition": "planar_translation",
+          "wall_seconds": 217.1153561680112,
+          "files": {
+            "inference.log": {
+              "size_bytes": 5024,
+              "sha256": "ea37efe06c6ac1e599244571dee7fbac7acdeefa1f276cda6a113fc79d00e531"
+            },
+            "projected.mp4": {
+              "size_bytes": 162753,
+              "sha256": "ec0852a304088af4c2c358825f0e9f264c846642cbb7f37fa9d1c80a7bade8de"
+            },
+            "projected_final_hold.png": {
+              "size_bytes": 549240,
+              "sha256": "9cc7d8c5a140b409578867d17b95d281d663ff3d1036ba4a90f15d84fad893eb"
+            },
+            "raw.mp4": {
+              "size_bytes": 196637,
+              "sha256": "6c9d2b0f73f9e30196ebb597e4dcb1cfb7436cb833305754adf26d9f36760565"
+            },
+            "projected_review.png": {
+              "size_bytes": 3255610,
+              "sha256": "4caa1fff2d727ac15901c477ef8a80a5ded0151ee8de03fefbc88ad42e9ee13b"
+            },
+            "raw_frames/00.png": {
+              "size_bytes": 504015,
+              "sha256": "be9e5e511a92730c77a3bed1e73548995e84697313aee7455078bfd85fd25ada"
+            },
+            "raw_frames/01.png": {
+              "size_bytes": 517765,
+              "sha256": "6a5e36c1d5253e3c59d297bd9334255f952cb0bc6770d2ea526a2731cab0ae5c"
+            },
+            "raw_frames/02.png": {
+              "size_bytes": 519192,
+              "sha256": "a2f25979f2fea83e1b57bc3550aed8e8ece52da77ce27c49b386aa5a0188e065"
+            },
+            "raw_frames/09.png": {
+              "size_bytes": 514699,
+              "sha256": "05fe78ef02c85e8e890a3e51d95ef7e6e63b7d691c7ce28e67d3ae5ddfc5530b"
+            },
+            "raw_frames/10.png": {
+              "size_bytes": 513058,
+              "sha256": "19a320203c9cf96dbca46277ca3df2f10882d9c8f7daa7402bcaceaff6a91b85"
+            },
+            "raw_frames/15.png": {
+              "size_bytes": 520945,
+              "sha256": "2c4bc152e42e033acfb026fdf5e2b436a28caee58046d60cde5cbfefda9901fe"
+            },
+            "raw_frames/16.png": {
+              "size_bytes": 518564,
+              "sha256": "5906c9eeb9147215f882a138e3d97d233b91c4a2c447012f8200e012df515bd7"
+            },
+            "raw_frames/19.png": {
+              "size_bytes": 520632,
+              "sha256": "a493c4c4a53ab60e3df1f66294d4f2fa1a48e5b78c4dc51bbf975ce1da19a766"
+            },
+            "raw_frames/20.png": {
+              "size_bytes": 519419,
+              "sha256": "6c7d767b0aea6d8ae48e342d0033c87aca6d2e7508a140ec632e80200be35f80"
+            },
+            "raw_frames/03.png": {
+              "size_bytes": 514897,
+              "sha256": "2819164741110497c978c7c71e17170b2f64bea66de0520de1c975c400b599f2"
+            },
+            "raw_frames/04.png": {
+              "size_bytes": 512879,
+              "sha256": "9e11f37c57eb945cc8d06eef08ec1d3c011ce8ce492123343739d4750ccacc32"
+            },
+            "raw_frames/05.png": {
+              "size_bytes": 514212,
+              "sha256": "195fe042d3dd5c1e2cc3eb951378054b968c8ecbfc1e070dc44b686addf3c985"
+            },
+            "raw_frames/06.png": {
+              "size_bytes": 514389,
+              "sha256": "beceff9e2a2e923d90dc902f7231090983663df1cb754051d3a01c06e8c28d34"
+            },
+            "raw_frames/07.png": {
+              "size_bytes": 512591,
+              "sha256": "05a9e3bb5c8750da7e99e2fcafcf7ce3e017ab9b0b12e3dc68b7035a2c21c1e6"
+            },
+            "raw_frames/08.png": {
+              "size_bytes": 511649,
+              "sha256": "c453f7d4ee12ab92b03efed74e65b138e7a54c3b6cb57547e83247917bd35efb"
+            },
+            "raw_frames/11.png": {
+              "size_bytes": 511098,
+              "sha256": "71d2f2a3cf4a87a86391e57311bfa7352bed78bfc7e42ee42c75c38e92de786e"
+            },
+            "raw_frames/12.png": {
+              "size_bytes": 511511,
+              "sha256": "bc23cabae4e27d7cce6668763c08f7a4b82444a8dfaee22315b9c88fec0f4e97"
+            },
+            "raw_frames/13.png": {
+              "size_bytes": 517705,
+              "sha256": "5a7d5b73be66c2c254001dd51cdeeb87fdc7cc08a0347a2490763c188e3eb747"
+            },
+            "raw_frames/14.png": {
+              "size_bytes": 520672,
+              "sha256": "2183867e89aef704dd9324418e678cda8ee2ce2d0c1a4a5ab597f00e08a3b855"
+            },
+            "raw_frames/17.png": {
+              "size_bytes": 522564,
+              "sha256": "8b3011d965564235c7108a7b6e170f30f44d0ef35f4fd81ac51b2200867d10d9"
+            },
+            "raw_frames/18.png": {
+              "size_bytes": 522077,
+              "sha256": "9b4d19ead3b934ad450b0dd2de8e09022cea755ebd63c8cd6f7d7f7b1119eeb8"
+            }
+          }
+        },
+        {
+          "condition": "planar_similarity",
+          "wall_seconds": 224.30309793096967,
+          "files": {
+            "raw.mp4": {
+              "size_bytes": 189237,
+              "sha256": "f89a9f2c050318ccf492d269d35180a4295c6f622ef4f5c8ec09ffa36160366b"
+            },
+            "projected_review.png": {
+              "size_bytes": 3250365,
+              "sha256": "46e50732598118bc710f91b060765fe97a799adc39a0ad199ac860aee7f1688b"
+            },
+            "inference.log": {
+              "size_bytes": 4867,
+              "sha256": "ddcb6e06cc972075cffa73f7098518a2d2e8a73a3bc5441235a00ac709cf4f6c"
+            },
+            "projected.mp4": {
+              "size_bytes": 161798,
+              "sha256": "1478f710673c5b58c84c6d14da63a4b4edba7882f0ee9dcfdc11cdca62b847ae"
+            },
+            "projected_final_hold.png": {
+              "size_bytes": 549292,
+              "sha256": "d5aa548054dbfbfe4f1a9cf86d13fa12beceb9c884feb0af5c8ae600c2cca7e3"
+            },
+            "raw_frames/03.png": {
+              "size_bytes": 514809,
+              "sha256": "6d9b47c2c3fbc37f6680946635a17377d3624dceed7f04066e9b6cab8f7a3835"
+            },
+            "raw_frames/04.png": {
+              "size_bytes": 512984,
+              "sha256": "14f3a3e06c858b406294aaf9e7583c2333f53d4c4c0710f91f83aa6fa2fd3486"
+            },
+            "raw_frames/05.png": {
+              "size_bytes": 513708,
+              "sha256": "22b93c08ef268b37f8f2bbba1556ffb9500cd5881b963c6381542f760045f94e"
+            },
+            "raw_frames/06.png": {
+              "size_bytes": 514323,
+              "sha256": "811b957e8a2ebf298e925721213a4dc0f2adb6848fdd34f056b929b72ed004b7"
+            },
+            "raw_frames/07.png": {
+              "size_bytes": 512365,
+              "sha256": "4a684014fb596cd098d7aa0e2f5e398dd2d933682b341514f4f735f925bbe8d9"
+            },
+            "raw_frames/08.png": {
+              "size_bytes": 511268,
+              "sha256": "baf0085350c77885bbf2a759667717a1d813b71d699f618e4e10b7377da2c3d3"
+            },
+            "raw_frames/11.png": {
+              "size_bytes": 510478,
+              "sha256": "0711c6e6bcf129d1f999c03a0dd4c5e842997e11a9d4753a992284c0b417ec31"
+            },
+            "raw_frames/12.png": {
+              "size_bytes": 510795,
+              "sha256": "c8207409fe94ecfb37833c2cb7a993f9ca9c86906a5ee8fa53f209ee324028f7"
+            },
+            "raw_frames/13.png": {
+              "size_bytes": 517283,
+              "sha256": "ec3779041b1222002612b38123cdc344aa91b8dfcefdfabd11df6e31ec6cbf15"
+            },
+            "raw_frames/14.png": {
+              "size_bytes": 520371,
+              "sha256": "5109b8121edab6feaf8ebe86f1f7b463fb7de756478e1873a1dfadd618cc93be"
+            },
+            "raw_frames/17.png": {
+              "size_bytes": 522130,
+              "sha256": "5472558f12aeb5bfb0c562468814a7153cff105ccaf328a7fc6d088035f1d5f3"
+            },
+            "raw_frames/18.png": {
+              "size_bytes": 521769,
+              "sha256": "767b711dbce94341854d476bd5b931fb8c6356013be52f3291e717200df10a60"
+            },
+            "raw_frames/00.png": {
+              "size_bytes": 502469,
+              "sha256": "3d4d299005c85483e0827db4f324204d9c8b34c8893014388512dca75dc52220"
+            },
+            "raw_frames/01.png": {
+              "size_bytes": 516324,
+              "sha256": "c7cee782475588e9dd9e92208b55464092571ccb99cd7caae5c8e28cd65129be"
+            },
+            "raw_frames/02.png": {
+              "size_bytes": 518319,
+              "sha256": "b8b36a15ebb5d3db7694293cbf82f64f43d86199bd977e15fb773aa4deaa846e"
+            },
+            "raw_frames/09.png": {
+              "size_bytes": 514793,
+              "sha256": "e1bf5159d7d6efb0c910c1e5729bf341c0acead2c709751bff2c0a91debfe43e"
+            },
+            "raw_frames/10.png": {
+              "size_bytes": 513105,
+              "sha256": "8cb09a85371003e35ed22bb7407e2b7abef32245145f1ee14578610b6ae5a295"
+            },
+            "raw_frames/15.png": {
+              "size_bytes": 520635,
+              "sha256": "bd30c9e58390013523dc13cfe2d2485534d10bc0fac538d8e77db5b3c6798ae7"
+            },
+            "raw_frames/16.png": {
+              "size_bytes": 518116,
+              "sha256": "24d9b4349f729811bfb802fdacf7abdeb4de63383557ffe3ad2f3b428d960b69"
+            },
+            "raw_frames/19.png": {
+              "size_bytes": 520263,
+              "sha256": "06267f6e228f9488485d022b4d66ce3440c4fd12bc0c49cef26a09e90162a26e"
+            },
+            "raw_frames/20.png": {
+              "size_bytes": 518864,
+              "sha256": "5984344ba5e7c8f6fc80f92f240e06d8f16f920b0458fa32d6d3e5059a684a1d"
+            }
+          }
+        }
+      ],
+      "manifest_sha256": "090c2a4cdab600ae5b16ed58a5d9925e464b29adf46f42fc2719c4cd9dcef674",
+      "base_config_sha256": "6b338aa45ea379384a30f799548834381b2328b6071e91abb8cf5bb301096427",
+      "runner_sha256": "71c815c4267627274b5e3f98547093f976e2519b1cb7882b6755919d2a8a7443",
+      "seed": 2,
+      "frames": 21,
+      "steps": 20,
+      "lora": false,
+      "ttm": false,
+      "hard_timeout_seconds": 3600,
+      "claim_limit": "Exploratory paired stress diagnostic. No new encoder training, no physical ground truth, no proven 3D superiority. Occlusion stress requires a later renderer with correct dynamic visibility.",
+      "active": "relative3d"
+    }
+  },
+  "logs": {
+    "soup_toward_camera/planar_translation/inference.log": "g:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 7/12 [00:03<00:01,  2.56it/s]\nVAE decoding:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:03<00:01,  2.43it/s]\nVAE decoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:03<00:01,  2.57it/s]\nVAE decoding:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 10/12 [00:04<00:00,  2.77it/s]\nVAE decoding:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11/12 [00:04<00:00,  3.00it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:04<00:00,  3.45it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:04<00:00,  2.62it/s]\n\nSaving video:   0%|          | 0/21 [00:00<?, ?it/s]\nSaving video:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 14/21 [00:00<00:00, 139.03it/s]\nSaving video: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21/21 [00:00<00:00, 186.79it/s]\n",
+    "soup_toward_camera/relative3d/inference.log": "encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:02<00:00,  5.10it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:02<00:00,  4.27it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:  33%|\u2588\u2588\u2588\u258e      | 4/12 [00:00<00:00, 32.00it/s]\nVAE encoding:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:00<00:00, 32.80it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:00<00:00, 35.69it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:00<00:00, 34.75it/s]\n\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|\u258c         | 1/20 [00:25<08:01, 25.34s/it]\n 10%|\u2588         | 2/20 [00:33<04:34, 15.23s/it]\n 15%|\u2588\u258c        | 3/20 [00:41<03:24, 12.01s/it]",
+    "soup_toward_camera/planar_similarity/inference.log": "ing:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 7/12 [00:03<00:02,  2.19it/s]\nVAE decoding:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:03<00:01,  2.11it/s]\nVAE decoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:04<00:01,  2.28it/s]\nVAE decoding:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 10/12 [00:04<00:00,  2.46it/s]\nVAE decoding:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11/12 [00:04<00:00,  2.54it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.84it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.35it/s]\n\nSaving video:   0%|          | 0/21 [00:00<?, ?it/s]\nSaving video:  10%|\u2589         | 2/21 [00:00<00:01, 18.75it/s]\nSaving video: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21/21 [00:00<00:00, 150.67it/s]\n",
+    "cake_yaw45/planar_translation/inference.log": "ing:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:03<00:01,  2.22it/s]\nVAE decoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:04<00:01,  2.38it/s]\nVAE decoding:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 10/12 [00:04<00:00,  2.50it/s]\nVAE decoding:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11/12 [00:04<00:00,  2.65it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.91it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.40it/s]\n\nSaving video:   0%|          | 0/21 [00:00<?, ?it/s]\nSaving video:   5%|\u258d         | 1/21 [00:00<00:05,  3.51it/s]\nSaving video:  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 19/21 [00:00<00:00, 62.11it/s]\nSaving video: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21/21 [00:00<00:00, 53.72it/s]\n",
+    "cake_yaw45/relative3d/inference.log": "oding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:02<00:00,  4.47it/s]\n\nVAE encoding:   0%|          | 0/12 [00:00<?, ?it/s]\nVAE encoding:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 7/12 [00:00<00:00, 67.85it/s]\nVAE encoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:00<00:00, 56.44it/s]\n\n  0%|          | 0/20 [00:00<?, ?it/s]\n  5%|\u258c         | 1/20 [00:15<04:55, 15.56s/it]\n 10%|\u2588         | 2/20 [00:23<03:21, 11.18s/it]\n 15%|\u2588\u258c        | 3/20 [00:31<02:46,  9.80s/it]\n 20%|\u2588\u2588        | 4/20 [00:40<02:26,  9.15s/it]\n 25%|\u2588\u2588\u258c       | 5/20 [00:48<02:12,  8.80s/it]\n 30%|\u2588\u2588\u2588       | 6/20 [00:56<02:00,  8.60s/it]\n 35%|\u2588\u2588\u2588\u258c      | 7/20 [01:04<01:50,  8.47s/it]",
+    "cake_yaw45/planar_similarity/inference.log": "ding:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 7/12 [00:03<00:02,  2.25it/s]\nVAE decoding:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 8/12 [00:03<00:01,  2.19it/s]\nVAE decoding:  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 9/12 [00:04<00:01,  2.36it/s]\nVAE decoding:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 10/12 [00:04<00:00,  2.51it/s]\nVAE decoding:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 11/12 [00:04<00:00,  2.64it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.94it/s]\nVAE decoding: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 12/12 [00:05<00:00,  2.39it/s]\n\nSaving video:   0%|          | 0/21 [00:00<?, ?it/s]\nSaving video:   5%|\u258d         | 1/21 [00:00<00:04,  4.59it/s]\nSaving video: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21/21 [00:00<00:00, 69.09it/s]\n"
+  },
+  "processes": "    PID     ELAPSED STAT   RSS WCHAN\n2201409       09:12 Rsl  47203584 -\n2201419       09:12 Rsl  47208920 -\n",
+  "stopped": false,
+  "files": {}
+}

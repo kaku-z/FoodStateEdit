@@ -1,0 +1,76 @@
+{
+  "schema_version": "foodstateedit.e1_control_factorization.v1",
+  "freeze_date": "2026-09-17",
+  "scientific_status": "two_case_development_diagnostic_not_effectiveness_or_generalization",
+  "research_question": "Does separating coarse action structure from source appearance reduce proxy-look transfer while retaining utensil-food geometry?",
+  "cases": [
+    {
+      "id": "cake",
+      "payload_polygon_normalized": [[0.455, 0.43], [0.60, 0.47], [0.60, 0.75], [0.44, 0.72]]
+    },
+    {
+      "id": "noodle",
+      "payload_polygon_normalized": [[0.31, 0.34], [0.69, 0.34], [0.69, 0.78], [0.31, 0.78]]
+    }
+  ],
+  "arms": [
+    {
+      "id": "appearance_laden_rgb",
+      "control": "existing_lossless_relative3d_rgb_proxy",
+      "reference": "full_input"
+    },
+    {
+      "id": "structure_scribble",
+      "control": "binary_geometry_scribble_derived_before_generation",
+      "reference": "full_input"
+    },
+    {
+      "id": "structure_scribble_payload_reference",
+      "control": "same_binary_geometry_scribble",
+      "reference": "full_input_plus_frozen_payload_crop"
+    }
+  ],
+  "inference": {
+    "seed": 2,
+    "num_frames": 21,
+    "num_inference_steps": 20,
+    "fps": 8,
+    "vace_scale": 1.0,
+    "enable_ttm": false,
+    "lora_enabled": false,
+    "review_frame_indices": [0, 3, 6, 10, 15, 20]
+  },
+  "control_builder": {
+    "support_dilation_window": 33,
+    "structure_blur_kernel": 11,
+    "structure_canny_low": 60,
+    "structure_canny_high": 150,
+    "structure_edge_dilation": 3,
+    "payload_reference_background_rgb": [127, 127, 127]
+  },
+  "evaluation": {
+    "primary": [
+      "utensil_food_contact",
+      "payload_follows_utensil",
+      "proxy_outline_or_flat_fill_absent",
+      "payload_identity_plausibly_matches_selected_source",
+      "source_region_update_plausible",
+      "photo_naturalness"
+    ],
+    "secondary": [
+      "raw_outside_support_mae",
+      "composited_outside_support_exactness",
+      "all_21_frames_present"
+    ],
+    "rules": [
+      "All three arms use identical prompt, negative prompt, seed, edit mask, VACE scale, frame count, steps and final compositor.",
+      "No output-dependent retry, seed replacement, extra repair or arm-specific prompt.",
+      "Raw and composited outputs are reviewed separately.",
+      "The third arm intentionally adds one frozen payload reference; improvement cannot be attributed to structure separation alone.",
+      "The structure scribble is a diagnostic supported-control representation, not a learned source-contact condition.",
+      "Two development cases and one seed cannot establish superiority or generalization."
+    ]
+  },
+  "hard_timeout_seconds_per_case": 3600,
+  "claim_limit": "Failure-localization diagnostic only. A positive result motivates a larger matched study; it does not prove 3D superiority, physical correctness, source conservation or publication-level effectiveness."
+}
