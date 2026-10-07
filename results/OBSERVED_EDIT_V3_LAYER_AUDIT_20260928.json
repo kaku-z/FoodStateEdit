@@ -1,0 +1,19 @@
+{
+  "stage": "before_model_outputs",
+  "rows": [
+    {
+      "case": "pizza",
+      "free_fraction": 0.19973958333333333,
+      "hole_pixels": 28402,
+      "fixed_target_pixels": 13598,
+      "kept_food_identical": true
+    },
+    {
+      "case": "corn",
+      "free_fraction": 0.11347981770833333,
+      "hole_pixels": 16585,
+      "fixed_target_pixels": 7409,
+      "kept_food_identical": true
+    }
+  ]
+}

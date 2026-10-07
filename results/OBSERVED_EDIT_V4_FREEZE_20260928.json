@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-09-28T05:19:56.473425+00:00",
+  "phase": "before_v4_model_outputs",
+  "tests": "21 passed; relevant 5 passed after parameter validation",
+  "sha256": {
+    "docs/OBSERVED_EDIT_V4_PROTOCOL_20260928.md": "4fd1457b55a63c99dbbf197a94ea56b229e8456f05fdf8151f40ac480c388a10",
+    "foodstateedit/observed_edit/interior.py": "3d6f7fe5368c5d043e6d9d9cc59b081ec8611c2377e2589981a39d8d50e917bf",
+    "scripts/prepare_observed_edit_v4.py": "e1d74218d6f977de3be0100f6e084d656c2da2ab9d2aed344e4cf66dd9ffc265",
+    "scripts/run_observed_edit_v4.py": "9e739b23f5de32c9e1a44bf9402e05f5b9cc582b2a38cea3c642e2d27482f237",
+    "tests/test_observed_edit_interior.py": "3be486b0292ea75066d2bdbaefecd366b57c54a450221744370841a56a75e89f",
+    "outputs/observed_edit_v4_20260928_bundle/config.json": "b29fabe9d54a37debacdb653eebe15ed7951267e3eb47be12274f18e95d78b7d"
+  }
+}

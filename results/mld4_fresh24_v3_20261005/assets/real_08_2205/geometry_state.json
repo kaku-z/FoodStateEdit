@@ -1,0 +1,801 @@
+{
+  "case_id": "real_00_input",
+  "index": 0,
+  "status": "rendered",
+  "prompt": "noodles",
+  "mode": "strand",
+  "branch": "strand",
+  "camera_intrinsics": [
+    [
+      769.79150390625,
+      0.0,
+      320.0
+    ],
+    [
+      0.0,
+      769.7914428710938,
+      240.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "action": {
+    "translation": [
+      -0.44808617257553907,
+      -0.43111868435729167,
+      -0.2579115219246628
+    ],
+    "lift_multiplier": 1.0,
+    "up_axis": [
+      0.09264758974313736,
+      -0.033671241253614426,
+      -0.9951294660568237
+    ],
+    "source_extent": 0.7176798513949263
+  },
+  "spoon": {
+    "aspect_ratio": 1.5,
+    "plate_tilt_degrees": 5.657210587870451,
+    "bowl_normal_camera": [
+      -8.180157300141655e-08,
+      2.972943501794445e-08,
+      -1.0000000086217535
+    ],
+    "radius_ab": [
+      0.09644037266220197,
+      0.06429358177480131
+    ],
+    "shell_thickness": 0.0011572844719464235,
+    "bowl_curvature_height": 0.009001101448472184,
+    "inferred_contact_min_gap": 0.0,
+    "inferred_penetration": 0.0,
+    "food_lower_points_inside_bowl_fraction": 0.9392508655964746,
+    "watertight": true,
+    "connected_components": 1,
+    "lighting": {
+      "ambient": 0.18,
+      "strip_directional_lights": 5,
+      "each_strip_intensity": 0.22,
+      "metallic": 1.0,
+      "roughness": 0.2
+    },
+    "geometry": "One joined closed shallow ellipse, narrow neck, curved widening handle and rounded tip",
+    "appearance": "Separate smooth metallic1 roughness.2 pass, strip directional lights and source-photograph neutral palette. Inferred lighting, not measured HDR; no Qwen image pixels.",
+    "spoon_axes_camera": [
+      [
+        0.9999999999999967,
+        3.944304526105059e-31,
+        -8.180157300141655e-08
+      ],
+      [
+        2.4319145489112608e-15,
+        -1.0000000086217569,
+        2.972943501794445e-08
+      ],
+      [
+        -8.180157370668982e-08,
+        -2.972943501794455e-08,
+        -1.0000000086217535
+      ]
+    ],
+    "center_local": [
+      -0.2576624491168531,
+      0.21348308935674776
+    ],
+    "floor_local": -1.1654880756249637,
+    "bowl_handle_blend": true,
+    "original_constructor_floor": -1.1654880756249637,
+    "initial_support_adjustment_camera": 0.0,
+    "frame_connection": {
+      "old_tip_uv": [
+        663.3577634761889,
+        97.35221008819482
+      ],
+      "new_tip_uv": [
+        663.3577634761889,
+        97.35221008819482
+      ],
+      "distal_axial_extension": 0.0,
+      "fixed_bowl_vertices": 19604,
+      "fixed_bowl_max_change": 0.0,
+      "camera_margin_pixels": 10.0,
+      "already_beyond_right_frame": true,
+      "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+      "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+    }
+  },
+  "solver": {
+    "full": {
+      "curve_count": 14,
+      "node_count": 212,
+      "solver_steps": 45,
+      "edge_strain_mean_abs": 4.686041218359912e-10,
+      "edge_strain_p95": 5.421559368112652e-10,
+      "edge_strain_max_abs": 1.7453627543240202e-08,
+      "nonrigid_displacement_mean": 0.006482331837282745,
+      "nonrigid_displacement_over_support_scale": 0.10082393387240678,
+      "bending_chord_relative_change_mean": 0.015148094861384057,
+      "support_min_gap": -1.0842021724855044e-16,
+      "support_contact_node_count": 206,
+      "tube_surface_min_support_gap": 4.717547792076893e-05,
+      "tube_surface_vertices_inside_bowl": 2044,
+      "support_clearance": "Shared actual spoon surface; slope/curvature sphere clearance and, for blendedneck, exact10-sided tube contact solved through centreline nodes. Actual renderedtube vertices evaluated.",
+      "gravity_acceleration_camera": [
+        -2.084825903737238e-05,
+        7.576956526461722e-06,
+        0.00022393153390816076
+      ],
+      "capsule_volume_proxy_relative_change": 7.575330362996624e-10,
+      "material_ids_preserved": true,
+      "source_uv_max_change": 0.0,
+      "geometry_scope": "Visible source ridge hypotheses; image-derived radii and hidden cylinder surfaces are not measured 3D.",
+      "gravity_strength": 1.0,
+      "contact_enabled": true,
+      "self_collision": true,
+      "remaining_source_anchor_count": 0,
+      "source_ambiguous_overlap_pair_count": 224,
+      "source_ambiguous_overlap_treatment": "Initially overlapping nonadjacent inferred cylinders are unresolved source topology; excluded from self-collision correction, not separated or counted as recovered geometry."
+    },
+    "no_contact": {
+      "curve_count": 14,
+      "node_count": 212,
+      "solver_steps": 45,
+      "edge_strain_mean_abs": 2.9196622672844396e-15,
+      "edge_strain_p95": 9.359180097590065e-15,
+      "edge_strain_max_abs": 1.687538997430238e-14,
+      "nonrigid_displacement_mean": 0.08759568624037231,
+      "nonrigid_displacement_over_support_scale": 1.3624328248998538,
+      "bending_chord_relative_change_mean": 4.6599197930326545e-15,
+      "support_min_gap": null,
+      "support_contact_node_count": 0,
+      "tube_surface_min_support_gap": null,
+      "tube_surface_vertices_inside_bowl": 0,
+      "support_clearance": "Shared actual spoon surface; slope/curvature sphere clearance and, for blendedneck, exact10-sided tube contact solved through centreline nodes. Actual renderedtube vertices evaluated.",
+      "gravity_acceleration_camera": [
+        -2.084825903737238e-05,
+        7.576956526461722e-06,
+        0.00022393153390816076
+      ],
+      "capsule_volume_proxy_relative_change": 1.1102230246251565e-15,
+      "material_ids_preserved": true,
+      "source_uv_max_change": 0.0,
+      "geometry_scope": "Visible source ridge hypotheses; image-derived radii and hidden cylinder surfaces are not measured 3D.",
+      "gravity_strength": 1.0,
+      "contact_enabled": false,
+      "self_collision": true,
+      "remaining_source_anchor_count": 0,
+      "source_ambiguous_overlap_pair_count": 224,
+      "source_ambiguous_overlap_treatment": "Initially overlapping nonadjacent inferred cylinders are unresolved source topology; excluded from self-collision correction, not separated or counted as recovered geometry."
+    },
+    "no_gravity": {
+      "curve_count": 14,
+      "node_count": 212,
+      "solver_steps": 45,
+      "edge_strain_mean_abs": 4.488497116071675e-14,
+      "edge_strain_p95": 8.32556246166385e-14,
+      "edge_strain_max_abs": 1.1515233211412124e-12,
+      "nonrigid_displacement_mean": 0.005734891198886905,
+      "nonrigid_displacement_over_support_scale": 0.08919850225445972,
+      "bending_chord_relative_change_mean": 0.0015711555002980969,
+      "support_min_gap": 8.752092062369252e-05,
+      "support_contact_node_count": 19,
+      "tube_surface_min_support_gap": 0.0006519096306680794,
+      "tube_surface_vertices_inside_bowl": 2078,
+      "support_clearance": "Shared actual spoon surface; slope/curvature sphere clearance and, for blendedneck, exact10-sided tube contact solved through centreline nodes. Actual renderedtube vertices evaluated.",
+      "gravity_acceleration_camera": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "capsule_volume_proxy_relative_change": 6.461498003318411e-14,
+      "material_ids_preserved": true,
+      "source_uv_max_change": 0.0,
+      "geometry_scope": "Visible source ridge hypotheses; image-derived radii and hidden cylinder surfaces are not measured 3D.",
+      "gravity_strength": 0.0,
+      "contact_enabled": true,
+      "self_collision": true,
+      "remaining_source_anchor_count": 0,
+      "source_ambiguous_overlap_pair_count": 224,
+      "source_ambiguous_overlap_treatment": "Initially overlapping nonadjacent inferred cylinders are unresolved source topology; excluded from self-collision correction, not separated or counted as recovered geometry."
+    }
+  },
+  "render": {
+    "rigid": {
+      "changed_pixels": 46662,
+      "food_visible_pixels": 3940,
+      "spoon_visible_pixels": 11181,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    },
+    "full": {
+      "changed_pixels": 46699,
+      "food_visible_pixels": 3859,
+      "spoon_visible_pixels": 11272,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    },
+    "no_contact": {
+      "changed_pixels": 46970,
+      "food_visible_pixels": 456,
+      "spoon_visible_pixels": 15005,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    },
+    "no_gravity": {
+      "changed_pixels": 46799,
+      "food_visible_pixels": 3820,
+      "spoon_visible_pixels": 11243,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    }
+  },
+  "source_observation": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/cases/real_08_2205/geometry_initial/observations/real_00_input",
+  "strand_reconstruction": {
+    "curve_count": 14,
+    "node_count": 212,
+    "graph_path_count": 318,
+    "selected_source_pixels": 4703,
+    "ridge_covered_source_pixels": 3177,
+    "ownership_expanded_beyond_seed_pixels": 131,
+    "tube_source_uv_owned_fraction": 1.0,
+    "ownership_outside_ingredient_pixels": 0,
+    "ownership_scope": "Width-aware observed source cross-section exemplars; hidden circumference repeats these exemplars rather than claiming unseen material observations.",
+    "ingredient_cross_section_rule": "Source normal texture cross-section terminates at first invalid nonzero-weight bilinear ingredient footprint (quarterpixel sampling); cannot jump holes or borrow excluded garnish.",
+    "texture_exemplar_node_count": 0,
+    "texture_exemplar_max_offset_pixels": 0.0,
+    "source_geometry_uv_changed": false,
+    "texture_exemplar_scope": "Geometry nodes retain observed source ray UV. Camera-boundary mixed ingredient samples use separately declared nearest valid source ingredient texel exemplars; hidden ring repeats these observed exemplars.",
+    "source_provenance": "Visible RGB ridge graph sampled through source-estimated camera points; unseen connectivity is not reconstructed.",
+    "hidden_surface": "Observed cross-section texture repeated around an inferred cylinder; no generated noodle colours.",
+    "original_food_mask_used": true,
+    "patch_boundary_cuts": true,
+    "remaining_food_anchors_used": false,
+    "semantic_label_used": false,
+    "reanchored_geometry": true,
+    "source_uv_topology_ownership_frozen": true
+  },
+  "source_topology": null,
+  "tube_sides": 10,
+  "shadow_model": "Prescribed directional illumination, source-plane clipped material/spoon triangle silhouettes with soft blur; source light is not calibrated.",
+  "source_selection": {
+    "status": "selected",
+    "sufficient_visible_bite": true,
+    "candidate_count": 2652,
+    "all_source_visible_curves": 96,
+    "source_graph_density_score": 15.191224206879372,
+    "selected_source_span_pixels": 76.0,
+    "selected_observed_curve_length_pixels": 297.1110918795623,
+    "minimum_span_pixels": 24.0,
+    "radius_pixels": 40.800000000000004,
+    "selected_source_pixels": 4703,
+    "rule": "Ingredient-level source mask; smallest source radius meeting visible span/length, then highest long-path density at that radius. Source region grows only if inadequate; target food is never scaled.",
+    "semantic_scope": "SAM ingredient mask is estimated identity; observed path connectivity and occluded spans remain uncertain.",
+    "generated_shape_used": false,
+    "target_reference_used": false,
+    "ingredient_segmentation": {
+      "rule": "Source SAM3 noodle noun-bank masks intersect source food, minus confident source garnish/other-ingredient masks covering less than 65% of noodle support.",
+      "prompts": [
+        "noodles",
+        "pasta",
+        "noodle strands",
+        "soba noodles",
+        "udon noodles",
+        "ramen noodles",
+        "spaghetti",
+        "ginger",
+        "bonito flakes",
+        "fish flakes",
+        "seaweed",
+        "vegetables",
+        "egg",
+        "meat",
+        "spoon",
+        "chopsticks"
+      ],
+      "detections": [
+        {
+          "prompt": "noodles",
+          "score": 0.31440791487693787,
+          "pixels": 372,
+          "source_food_overlap": 372,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.18099229037761688,
+          "pixels": 316,
+          "source_food_overlap": 316,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.2837950885295868,
+          "pixels": 11232,
+          "source_food_overlap": 11125,
+          "inside_source_food": 0.9904736467236467
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.28687992691993713,
+          "pixels": 439,
+          "source_food_overlap": 430,
+          "inside_source_food": 0.979498861047836
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.18121786415576935,
+          "pixels": 414,
+          "source_food_overlap": 401,
+          "inside_source_food": 0.9685990338164251
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.26227807998657227,
+          "pixels": 859,
+          "source_food_overlap": 859,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.22630271315574646,
+          "pixels": 262,
+          "source_food_overlap": 262,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.19261516630649567,
+          "pixels": 11864,
+          "source_food_overlap": 5861,
+          "inside_source_food": 0.49401550910316927
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.24732141196727753,
+          "pixels": 646,
+          "source_food_overlap": 646,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.25844305753707886,
+          "pixels": 279,
+          "source_food_overlap": 279,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.32541313767433167,
+          "pixels": 1100,
+          "source_food_overlap": 1100,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.2191229909658432,
+          "pixels": 226,
+          "source_food_overlap": 226,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.2052028328180313,
+          "pixels": 271,
+          "source_food_overlap": 271,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.18080638349056244,
+          "pixels": 3258,
+          "source_food_overlap": 3147,
+          "inside_source_food": 0.9659300184162063
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.24594026803970337,
+          "pixels": 221,
+          "source_food_overlap": 221,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.25196579098701477,
+          "pixels": 754,
+          "source_food_overlap": 746,
+          "inside_source_food": 0.9893899204244032
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.258075475692749,
+          "pixels": 800,
+          "source_food_overlap": 754,
+          "inside_source_food": 0.9425
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.22178341448307037,
+          "pixels": 247,
+          "source_food_overlap": 200,
+          "inside_source_food": 0.8097165991902834
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.18572257459163666,
+          "pixels": 272,
+          "source_food_overlap": 181,
+          "inside_source_food": 0.6654411764705882
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.18024702370166779,
+          "pixels": 176,
+          "source_food_overlap": 151,
+          "inside_source_food": 0.8579545454545454
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.30938640236854553,
+          "pixels": 476,
+          "source_food_overlap": 476,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.5953910946846008,
+          "pixels": 52099,
+          "source_food_overlap": 52099,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.1854638308286667,
+          "pixels": 1034,
+          "source_food_overlap": 1026,
+          "inside_source_food": 0.9922630560928434
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.37997689843177795,
+          "pixels": 812,
+          "source_food_overlap": 812,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.21113425493240356,
+          "pixels": 172,
+          "source_food_overlap": 172,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.2445729672908783,
+          "pixels": 217,
+          "source_food_overlap": 217,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.20864708721637726,
+          "pixels": 306,
+          "source_food_overlap": 306,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.22260074317455292,
+          "pixels": 241,
+          "source_food_overlap": 241,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.24233444035053253,
+          "pixels": 526,
+          "source_food_overlap": 526,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "noodles",
+          "score": 0.19153830409049988,
+          "pixels": 318,
+          "source_food_overlap": 194,
+          "inside_source_food": 0.610062893081761
+        },
+        {
+          "prompt": "soba noodles",
+          "score": 0.7078657150268555,
+          "pixels": 53612,
+          "source_food_overlap": 50862,
+          "inside_source_food": 0.9487055136909647
+        },
+        {
+          "prompt": "udon noodles",
+          "score": 0.7500619292259216,
+          "pixels": 50131,
+          "source_food_overlap": 48328,
+          "inside_source_food": 0.9640342303165705
+        },
+        {
+          "prompt": "ramen noodles",
+          "score": 0.20541179180145264,
+          "pixels": 62044,
+          "source_food_overlap": 53318,
+          "inside_source_food": 0.8593578750564116
+        },
+        {
+          "prompt": "seaweed",
+          "score": 0.456762433052063,
+          "pixels": 49785,
+          "source_food_overlap": 49531,
+          "inside_source_food": 0.9948980616651601
+        },
+        {
+          "prompt": "seaweed",
+          "score": 0.19962634146213531,
+          "pixels": 14010,
+          "source_food_overlap": 42,
+          "inside_source_food": 0.0029978586723768737
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.2425404042005539,
+          "pixels": 50321,
+          "source_food_overlap": 49661,
+          "inside_source_food": 0.9868842034140816
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.18989497423171997,
+          "pixels": 403,
+          "source_food_overlap": 403,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.19107280671596527,
+          "pixels": 285,
+          "source_food_overlap": 285,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.4289204180240631,
+          "pixels": 6983,
+          "source_food_overlap": 0,
+          "inside_source_food": 0.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.9004430174827576,
+          "pixels": 13652,
+          "source_food_overlap": 45,
+          "inside_source_food": 0.0032962203340169936
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.2319192886352539,
+          "pixels": 25386,
+          "source_food_overlap": 6319,
+          "inside_source_food": 0.24891672575435278
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.2765783667564392,
+          "pixels": 303,
+          "source_food_overlap": 303,
+          "inside_source_food": 1.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.23567409813404083,
+          "pixels": 1044,
+          "source_food_overlap": 1028,
+          "inside_source_food": 0.9846743295019157
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.30916857719421387,
+          "pixels": 1503,
+          "source_food_overlap": 0,
+          "inside_source_food": 0.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.18764042854309082,
+          "pixels": 21380,
+          "source_food_overlap": 20794,
+          "inside_source_food": 0.9725912067352666
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.18251009285449982,
+          "pixels": 6135,
+          "source_food_overlap": 0,
+          "inside_source_food": 0.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.19181446731090546,
+          "pixels": 584,
+          "source_food_overlap": 271,
+          "inside_source_food": 0.464041095890411
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.19572672247886658,
+          "pixels": 3207,
+          "source_food_overlap": 0,
+          "inside_source_food": 0.0
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.2595837116241455,
+          "pixels": 5940,
+          "source_food_overlap": 2821,
+          "inside_source_food": 0.4749158249158249
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.26749178767204285,
+          "pixels": 5075,
+          "source_food_overlap": 2241,
+          "inside_source_food": 0.44157635467980294
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.5184341669082642,
+          "pixels": 12353,
+          "source_food_overlap": 6320,
+          "inside_source_food": 0.5116166113494698
+        },
+        {
+          "prompt": "vegetables",
+          "score": 0.2034144252538681,
+          "pixels": 269,
+          "source_food_overlap": 95,
+          "inside_source_food": 0.35315985130111527
+        },
+        {
+          "prompt": "meat",
+          "score": 0.7442318797111511,
+          "pixels": 49960,
+          "source_food_overlap": 49620,
+          "inside_source_food": 0.9931945556445156
+        },
+        {
+          "prompt": "meat",
+          "score": 0.26060163974761963,
+          "pixels": 12207,
+          "source_food_overlap": 6141,
+          "inside_source_food": 0.5030720078643401
+        },
+        {
+          "prompt": "meat",
+          "score": 0.18837332725524902,
+          "pixels": 19933,
+          "source_food_overlap": 19836,
+          "inside_source_food": 0.9951336978879245
+        },
+        {
+          "prompt": "spoon",
+          "score": 0.9474383592605591,
+          "pixels": 11018,
+          "source_food_overlap": 0,
+          "inside_source_food": 0.0
+        }
+      ],
+      "noodle_support_pixels": 53118,
+      "excluded_pixels": 6095,
+      "ingredient_pixels": 47023,
+      "target_image_used": false,
+      "semantic_identity": "SAM3 source ingredient hypothesis, independently visually audited.",
+      "original_selected_food_pixels": 52099,
+      "source_food_union_pixels": 103238
+    },
+    "width_aware_ownership": {
+      "curve_count": 14,
+      "node_count": 212,
+      "graph_path_count": 318,
+      "selected_source_pixels": 4703,
+      "ridge_covered_source_pixels": 3177,
+      "ownership_expanded_beyond_seed_pixels": 131,
+      "tube_source_uv_owned_fraction": 1.0,
+      "ownership_outside_ingredient_pixels": 0,
+      "ownership_scope": "Width-aware observed source cross-section exemplars; hidden circumference repeats these exemplars rather than claiming unseen material observations.",
+      "ingredient_cross_section_rule": "Source normal texture cross-section terminates at first invalid nonzero-weight bilinear ingredient footprint (quarterpixel sampling); cannot jump holes or borrow excluded garnish.",
+      "texture_exemplar_node_count": 0,
+      "texture_exemplar_max_offset_pixels": 0.0,
+      "source_geometry_uv_changed": false,
+      "texture_exemplar_scope": "Geometry nodes retain observed source ray UV. Camera-boundary mixed ingredient samples use separately declared nearest valid source ingredient texel exemplars; hidden ring repeats these observed exemplars.",
+      "source_provenance": "Visible RGB ridge graph sampled through source-estimated camera points; unseen connectivity is not reconstructed.",
+      "hidden_surface": "Observed cross-section texture repeated around an inferred cylinder; no generated noodle colours.",
+      "original_food_mask_used": true,
+      "patch_boundary_cuts": true,
+      "remaining_food_anchors_used": false,
+      "semantic_label_used": false
+    }
+  },
+  "source_state_mass_scope": "Unit-density carried reconstruction plus inferred equal-column remaining source material. Fixed lumped weights; no measured food mass or density.",
+  "remaining_material_scope": "Unmoved source-visible food columns; hidden remaining volume is a proxy.",
+  "deformation_scope": "Prescribed material compliance/rod stiffness in inferred source scale; not identified from physical observations.",
+  "geometry_uncertainty": {
+    "patch_camera_footprint_minor": 0.10201451778411866,
+    "food_extent_over_patch_minor": 7.035075663580235,
+    "source_normal_relief_before_over_minor": 0.1397923710190962,
+    "source_normal_relief_after_over_minor": 0.1397923710190962,
+    "source_ray_relief_clipped_fraction": 0.0,
+    "source_uv_projection_max_change": 6.103515625e-05,
+    "closure_bounds_over_minor": [
+      0.025,
+      0.3
+    ],
+    "uniform_closure_over_minor": 0.15
+  },
+  "learned_prior": {
+    "source_anchor_actual_sdf_abs_mean": 0.038942236453294754,
+    "source_anchor_actual_sdf_abs_p90": 0.06209152489900589,
+    "predicted_canonical_toward_depth_quantiles": [
+      0.19816210865974426,
+      0.27279868721961975,
+      0.3869965076446533,
+      0.47498756647109985,
+      0.611970067024231
+    ],
+    "source_ray_nonempty_fraction": 1.0,
+    "source_interval_anchor_distance_mean": 0.07562411473087818,
+    "source_interval_anchor_distance_p90": 0.1328125,
+    "source_prior_anchor_gap_over_point1_fraction": 0.48473402581051306,
+    "posterior_thickness_raw_quantiles_over_extent": [
+      0.003906250000000007,
+      0.03906250000000007,
+      0.0585937500000001,
+      0.07421875000000012,
+      0.1093750000000002
+    ],
+    "posterior_thickness_lower_clip_fraction": 0.0,
+    "posterior_thickness_upper_clip_fraction": 0.731192949323261,
+    "posterior_centered_color_std": 3.0005127447151727,
+    "interior_color_mae_vs_observed": 4.855669537754255,
+    "learned_material_only_mae": 0.6870369945714632,
+    "visible_field_queries_outside_canonical_fraction": 0.0,
+    "hidden_ray_queries_outside_canonical_fraction": 0.011345972252487834,
+    "source_height_cap_active_fraction": 0.9169027384324835,
+    "source_plate_floor_active_fraction": 0.41045011016682403,
+    "minimum_thickness_active_fraction": 0.0,
+    "final_closure_thickness_quantiles_over_extent": [
+      0.004800798450014955,
+      0.012586853424890737,
+      0.01812572823081064,
+      0.01812572823081064,
+      0.01812572823081064
+    ],
+    "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.00038055793910147324,
+    "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+    "hidden_material_query_delta_vs_surface_rgb_mae": 0.07185915892027353,
+    "hidden_learned_material_only_mae": 0.7041854985074718,
+    "hidden_material_queries_outside_canonical_fraction": 0.0,
+    "new_cut_material_field_queries": 3177
+  },
+  "models": {
+    "SAM3": "source food and ingredient masks",
+    "MoGe2": "inferred source points and camera",
+    "MLD2": "frozen65k learned source-conditioned hidden geometry/material closure",
+    "Qwen-Image-2.1 + Fun ControlNet-Union": "optional metal appearance inside unchanged visible spoon; no generated food geometry or RGB"
+  },
+  "generated_food_pixels": 0,
+  "paired_real_ground_truth": false,
+  "blind_holdout": false,
+  "source_uv_convention": "Strand source_uv uses pixel-index sampling coordinates; mesh source_uv uses pixel centers; strand renderer adds .5 for the texture atlas.",
+  "final_appearance": {
+    "accepted_cached_metal_pixels": 0,
+    "visible_spoon_pixels": 11272,
+    "generated_food_pixels": 0
+  },
+  "source_hash": "02ff6a2b036694529800e16122269d9b743884cf9cd59b73caebcfa9adce2c1a",
+  "script_hash": "160ccfffce750ea4f207dd4d965f2ae4b2d02c1b2d9a3197fafc2413e6fd418b"
+}

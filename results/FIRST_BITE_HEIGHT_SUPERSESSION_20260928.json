@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-28T08:45:12.701513+00:00",
+  "old_height_v1_calls": 0,
+  "reason": "Source ROI audit found cup-rim and garnish contamination before height generation.",
+  "replacement": "supplement_bundle_v2 explicit height jobs",
+  "unchanged": "four preselected family_01 photos, heights 0/.08/.16, seed 2027, inference settings",
+  "changed": "source ROI and source coordinates for strand_01 and liquid_01; exact shared neutral prompts updated accordingly",
+  "all_original_files_retained": true
+}

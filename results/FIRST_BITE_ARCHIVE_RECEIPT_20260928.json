@@ -1,0 +1,14 @@
+{
+  "path": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\first_bite_20260928_evaluation_v1.zip",
+  "sha256": "84790f3925d6882b7b96f490fff95b919ae4d96bd4e7d1f80b51903ccc485df6",
+  "bytes": 251970848,
+  "files_hashed": 484,
+  "zip_integrity_verified": true,
+  "server_copy": {
+    "server": "gp40",
+    "path": "/host/space0/guo-z/tf-ufi/first_bite_20260928/first_bite_20260928_evaluation_v1.zip",
+    "verified_utc": "2026-09-28T09:40:53.273715+00:00",
+    "sha256": "84790f3925d6882b7b96f490fff95b919ae4d96bd4e7d1f80b51903ccc485df6",
+    "matches_local_archive": true
+  }
+}

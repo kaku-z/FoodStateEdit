@@ -1,0 +1,232 @@
+{
+  "scope": "Assistant non-blind development diagnostic, not independent human evaluation",
+  "calls": 64,
+  "independent_ballots_received": 0,
+  "formal_unseen_unlocked": false,
+  "methods": {
+    "A_direct": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 14,
+        "source_change": 10,
+        "food_and_scene": 3,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 1,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 3,
+      "photo_at_least_4": 16,
+      "cases_with_a_joint_success": [
+        "granular_01",
+        "granular_02"
+      ],
+      "internal_engineering_gate_met": false
+    },
+    "B_action_spec": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 14,
+        "source_change": 10,
+        "food_and_scene": 3,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 1,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 3,
+      "photo_at_least_4": 16,
+      "cases_with_a_joint_success": [
+        "granular_01",
+        "granular_02"
+      ],
+      "internal_engineering_gate_met": false
+    },
+    "C_planar_guide": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 14,
+        "source_change": 10,
+        "food_and_scene": 7,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 0,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 6,
+      "photo_at_least_4": 16,
+      "cases_with_a_joint_success": [
+        "granular_01",
+        "granular_02",
+        "liquid_01",
+        "liquid_02"
+      ],
+      "internal_engineering_gate_met": false
+    },
+    "D_geometry_guide": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 14,
+        "source_change": 8,
+        "food_and_scene": 8,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 1,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 7,
+      "photo_at_least_4": 16,
+      "cases_with_a_joint_success": [
+        "cohesive_02",
+        "granular_01",
+        "granular_02",
+        "liquid_01",
+        "liquid_02"
+      ],
+      "internal_engineering_gate_met": false
+    }
+  },
+  "families": {
+    "cohesive": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 16,
+        "source_change": 2,
+        "food_and_scene": 3,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 3,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 1,
+      "photo_at_least_4": 16
+    },
+    "granular": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 16,
+        "source_change": 15,
+        "food_and_scene": 12,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 0,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 12,
+      "photo_at_least_4": 16
+    },
+    "strand": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 8,
+        "source_change": 5,
+        "food_and_scene": 0,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 0,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 0,
+      "photo_at_least_4": 16
+    },
+    "liquid": {
+      "n": 16,
+      "pass": {
+        "lift": 16,
+        "bite_and_support": 16,
+        "source_change": 16,
+        "food_and_scene": 6,
+        "hand_and_utensil": 16
+      },
+      "uncertain": {
+        "lift": 0,
+        "bite_and_support": 0,
+        "source_change": 0,
+        "food_and_scene": 0,
+        "hand_and_utensil": 0
+      },
+      "joint_pass": 6,
+      "photo_at_least_4": 16
+    }
+  },
+  "technical": {
+    "completed": 64,
+    "failed": 0,
+    "model_calls": 64,
+    "median_generation_seconds": 213.17316591739655,
+    "generation_seconds_sum": 13628.418350934982,
+    "config_sha256": "76f170fc9501f94a79154cdda98cb3f83a40ad85d84265e2ec2791def1f23ab6",
+    "per_method_generation_seconds": {
+      "A_direct": {
+        "median": 158.77681577205658,
+        "sum": 2539.5612955093384
+      },
+      "B_action_spec": {
+        "median": 159.5695662498474,
+        "sum": 2557.6700847148895
+      },
+      "C_planar_guide": {
+        "median": 265.6229422092438,
+        "sum": 4249.940001487732
+      },
+      "D_geometry_guide": {
+        "median": 267.5239940881729,
+        "sum": 4281.2469692230225
+      }
+    }
+  },
+  "overall": {
+    "n": 64,
+    "pass": {
+      "lift": 64,
+      "bite_and_support": 56,
+      "source_change": 38,
+      "food_and_scene": 21,
+      "hand_and_utensil": 64
+    },
+    "uncertain": {
+      "lift": 0,
+      "bite_and_support": 0,
+      "source_change": 3,
+      "food_and_scene": 0,
+      "hand_and_utensil": 0
+    },
+    "joint_pass": 19,
+    "photo_at_least_4": 64
+  }
+}

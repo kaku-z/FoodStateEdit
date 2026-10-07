@@ -1,5 +1,27 @@
 # FoodStateEdit paper release workspace
 
+## Latest update — 2026-10-07
+
+当前研究目标：从一张真实食物照片生成**入口前的第一口**，食物被勺子托起、明显离开原位置，原位置相应减少，不凭空添加手或人物。
+
+当前实现为 **MLD4 v3**：SAM3 分割与 MoGe2 单图几何 → 冻结 MLD2 材料先验与来源 ID/UV → 接触约束下的取食变形和勺柄出画 → GLM 源语义与保守路由 → Qwen-Image-2.1/Fun ControlNet 两阶段外观 → 可信可见核心的源纹理投影。VACE 和试训材料绑定 LoRA **未进入当前默认流程**。
+
+**完整执行已经跑通，真实第一口的整体视觉目标仍未达标。** 2026-10-06（JST）结束的 24 张真实照片回归耗时 33 分 47.6 秒，24/24 正常完成。逐图 AI 视觉筛查中，合理源减量为 4 通过 / 16 失败 / 4 不确定，七项全部通过为 0/24。全部图片都曾用于观察或开发；这些不是独立盲测或人工评价结果。
+
+- [完整算法、模型职责、训练与失败分析（中文）](docs/MLD4_ALGORITHM_AND_RESULTS_20261006.md)
+- [24 张全部案例及复现说明](results/mld4_fresh24_v3_20261005/README.md)
+- [逐例视觉审查](results/mld4_fresh24_v3_20261005/visual_reviews.json) · [实现审计](results/mld4_fresh24_v3_20261005/audit.json) · [冻结协议](results/mld4_fresh24_v3_20261005/protocol.json)
+- [从新 RGB 开始的入口](scripts/run_mld4_from_image.py) · [材料与三维模块](foodstateedit/material_lineage) · [批量回归入口](scripts/run_mld4_fresh_batch.py)
+
+当前主瓶颈是源缺口被生成器补回、单图隐藏几何歧义，以及纹理运输后的薄片感与接缝。来源索引、代理体积和编辑区外像素检查通过，并不证明真实物理守恒或摄影效果。
+
+模型权重、第三方运行环境与完整中间缓存留在服务器；本仓库提供研究代码、全部 24 例结果和运行证据。运行依赖现有 gp40 部署，尚不是跨机器的一键安装包。
+
+## Historical sprint record (through 2026-09-13)
+
+The dated notes below describe earlier protocols and gates. They do not describe
+the current MLD4 model stack or supersede the completed regression above.
+
 The [completed Day 25 ablation](results/DAY25_SAME_CONDITION_ABLATION_RESULT_20260913.md)
 now covers the full 4-case x 3-seed x 5-condition matrix: 47 new and 13
 hash-locked cells, with all 60 final images verified.  Explicit motion controls

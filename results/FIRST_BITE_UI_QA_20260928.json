@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-09-28T09:05:58.481279+00:00",
+  "main_gallery": {
+    "loads": true,
+    "case_and_method_selectors_update_image_links": true,
+    "source_and_raw_images_visually_rendered": true,
+    "narrow_codex_panel_compared_side_by_side": true,
+    "statistics_collapsible": true
+  },
+  "blind_form": {
+    "package": 1,
+    "items": 64,
+    "rater_identity_empty": true,
+    "all_six_fields_unrated": true,
+    "method_and_seed_not_visible": true,
+    "no_ratings_entered_or_exported": true
+  },
+  "independent_ballots_received": 0,
+  "gallery_sha256": "171343ffeca869764e4f5b6643724ece167beb1757324880c7534383f41bd094",
+  "supplement_gallery": {
+    "checked_utc": "2026-09-28T09:37:55.899931+00:00",
+    "all_24_pairs_selectable": true,
+    "source_original_repaired_visually_rendered": true,
+    "pair_selector_updates_raw_links": true,
+    "four_height_grids_linked": true,
+    "gallery_sha256": "0c650b84f54290df86087a5c8c1753e00d59fad9ca1dcfc0c4b72c00d3f9b9e8"
+  }
+}

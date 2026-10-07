@@ -1,0 +1,22 @@
+{
+  "status": "server_preflight_running",
+  "date_utc": "2026-09-28T03:27:39.331748+00:00",
+  "server": "gp40.cs.uec.ac.jp",
+  "remote_root": "/host/space0/guo-z/tf-ufi/formal_v2_20260928",
+  "python_pid": 4193937,
+  "timeout_pid": 4193932,
+  "hard_timeout_seconds": 7200,
+  "physical_gpu": 0,
+  "expected_model_calls": 4,
+  "tests": "6 passed",
+  "test_pool": "13 reserved cafe/day groups; unannotated; not unlocked",
+  "sha256": {
+    "docs/FORMAL_EXPERIMENT_V2_20260928.md": "db0d4dc6687dee9f9e56a7cd94488cbc05f030a3216b979f6117268717b44b35",
+    "foodstateedit/observed_edit/core.py": "f5c5453396face9cef5b670a31c9cc6d7a6d9198a61bdaff84e6308359e06dd1",
+    "scripts/prepare_observed_edit_v2.py": "ce116826db42d8878fa22e1b466df20fba935860dbccd0712ecec32c7975e360",
+    "scripts/run_observed_edit_v2.py": "3425211ef2973937637b716fdcdb59e8782a341fdc8fa029a01ecd0454fafe82",
+    "scripts/review_observed_edit_v2.py": "08af5f8b31a6e66a88a5c928cef8844735e4dceb4f1756c80329bf7aaad2b9b7",
+    "tests/test_observed_edit.py": "d4ffb0405ae3adfacf199c9894ff3b6341e407e8d37cd3d785dffbd43c5f7d97",
+    "outputs/observed_edit_v2_20260928_bundle_r2/config.json": "29cd3358ec78084c9b07223dfe6b22ae10dc342e32c1ad4266fad105acbb2e86"
+  }
+}

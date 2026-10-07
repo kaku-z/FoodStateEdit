@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FoodStateEdit 匿名开发评阅</title>
+<style>body{font:16px system-ui;margin:24px;background:#f4f6f8;color:#182230}main{max-width:1350px;margin:auto}button,select,input,textarea{font:inherit;padding:8px;margin:4px}button{cursor:pointer}.images{display:grid;grid-template-columns:1fr 1fr;gap:16px}.images img{width:100%;background:white}.card{background:white;padding:16px;border-radius:10px;margin:16px 0}.fields{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}label{display:block}textarea{box-sizing:border-box;width:98%}small{color:#536070}@media(max-width:800px){.images,.fields{grid-template-columns:1fr}}</style>
+<main><h1>匿名开发评阅</h1><p>逐项比较输入与结果。只评价图中可见证据，不能判断时选 UNKNOWN。图像像素无法证明真实质量或运动路径。</p>
+<div class="card"><label>评阅者代号 <input id="reviewer" placeholder="自定代号，无需真实姓名"></label><button id="prev">上一项</button><b id="counter"></b><button id="next">下一项</button><button id="export">下载本次评阅 JSON</button><p id="task"></p><small>所有内容在本机运行，不上传。关闭前请下载记录；这是开发集，不能以本页面的评阅替代正式独立实验。</small></div>
+<div class="images"><div><p>真实输入</p><img id="source"></div><div><p>待评结果</p><img id="result"></div></div>
+<div class="card"><div class="fields" id="fields"></div><label>具体依据 / 缺陷<textarea id="notes" rows="3"></textarea></label></div></main>
+<script>
+const items=__ITEMS_JSON__;
+const fields=[['source_removed','原处目标食物确已移除'],['identity_preserved','可辨识外观仍对应同一源块'],['one_spoon','只有一把完整勺具'],['supported','食物与勺具呈可见承托关系'],['target_position','目标位置与方向符合指令'],['photo_natural','无明显拼贴、重影或不自然光照']];
+const answers=Object.fromEntries(items.map(i=>[i.id,{}]));let position=0;
+const byId=id=>document.getElementById(id);
+for(const [key,title] of fields){const label=document.createElement('label');label.textContent=title;const select=document.createElement('select');select.id=key;for(const value of ['', 'PASS','FAIL','UNKNOWN']){const option=document.createElement('option');option.value=value;option.textContent=value||'尚未评价';select.appendChild(option)}select.onchange=()=>answers[items[position].id][key]=select.value;label.appendChild(select);byId('fields').appendChild(label)}
+byId('notes').oninput=()=>answers[items[position].id].comments=byId('notes').value;
+function show(){const item=items[position];byId('counter').textContent=`${position+1} / ${items.length} · ${item.id}`;byId('source').src=item.id+'_source.png';byId('result').src=item.id+'.png';byId('task').textContent=item.task;for(const [key] of fields)byId(key).value=answers[item.id][key]||'';byId('notes').value=answers[item.id].comments||'';byId('prev').disabled=position===0;byId('next').disabled=position===items.length-1}
+byId('prev').onclick=()=>{position--;show()};byId('next').onclick=()=>{position++;show()};
+byId('export').onclick=()=>{const data={schema:'foodstateedit.development_ballot.v1',reviewer:byId('reviewer').value,exported_at:new Date().toISOString(),answers};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='foodstateedit_v2_ballot.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};show();
+</script></html>

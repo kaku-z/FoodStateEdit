@@ -1,0 +1,433 @@
+{
+  "kind": "AI visual screen; not human study or physical ground truth",
+  "criteria": [
+    "source_material_identity",
+    "visible_lift",
+    "food_spoon_support",
+    "source_removal",
+    "texture_and_seams",
+    "no_added_humans",
+    "handle_frame_connection"
+  ],
+  "cases": [
+    {
+      "case_id": "real_00_2330",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上肉片与源纹理相近，明显离盘且有承托；原位置却新增黄色块，未形成合理缺口。B 主要调整颜色，对源问题没有影响。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_00_2330/comparison.jpg",
+      "final_sha256": "e4557c3b5b99284225dc2e6e08157f42f300cce17455e8893a015ddfce32e1bc",
+      "comparison_sha256": "612db6cf3280f316a51ad01c6e7c10f9b500d51a50e4c0853ce0f63d22e3eecd"
+    },
+    {
+      "case_id": "real_01_2198",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "实际选中棕色条状配料，勺头颜色对应；部分食物薄而悬出勺碗。源区原配料被延长重构，看不出可信减量。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_01_2198/comparison.jpg",
+      "final_sha256": "9f45183c41132fffb3aac1d8f2df6693b9b6f70aff8af996997cc8bcc8a665b6",
+      "comparison_sha256": "1d78e3905256f22851ee3b79df79a84cc9a10a67c273b153a8dad1a984714fe6"
+    },
+    {
+      "case_id": "real_02_16784",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "pass",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "鸡肉第一口明显离盘，勺头承托、柄伸出边框。源鸡肉右侧形成清楚缺口，但亮白下层与较硬边缘仍是推断，局部存在修补感。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_02_16784/comparison.jpg",
+      "final_sha256": "2a8c79d9d88b734bdf1522630a818731d49338efb14ca8844c9d60c503583ebd",
+      "comparison_sha256": "a852044f127427dd7c09e4ae31afca3173d773c340b7740a1492e152578f312e"
+    },
+    {
+      "case_id": "real_03_7889",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上五花肉颜色和条纹相容、离盘明显。源第一块肉被重新画成完整圆厚块，缺少明确减少；局部轮廓较生硬。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_03_7889/comparison.jpg",
+      "final_sha256": "f7347aa788ac4e71effd4a87993228492ced9bad32d4f466c7a11239fd5ddf79",
+      "comparison_sha256": "e0787655a2515100bd0eb98f2b209b1fa8b8c1a5bfd6e65031262e20889af897"
+    },
+    {
+      "case_id": "real_04_11680",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上的棕色面饼片与源颜色相容、离盘清楚，柄已出画；原位置却长出圆润胶状棕色块，未正确表现减少。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_04_11680/comparison.jpg",
+      "final_sha256": "0d95db2de0666871a61aa75db998478bb04e8a4af9cba7b0c9d62bcb2afa87ef",
+      "comparison_sha256": "bf489c783ac2fbb389c27b099b80aae541c0cf7a4dcca4a0bf57d0685e3cf3a2"
+    },
+    {
+      "case_id": "real_05_8131",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "B 将 A 的浅色勺上食物恢复为源橙色，修复明确色差；形状仍像平面片，原鱼片位置出现浅色圆形补丁。自动标签 carrot 与实际源鱼片不符。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_05_8131/comparison.jpg",
+      "final_sha256": "5ff9c0f1de62a3cab4b3280822a82ed7bf7c653c750a06906b1204956eb4b263",
+      "comparison_sha256": "8f40d895fc1de0a4d858546a2d00b792b36f684b93bcd393fec7c54a6b28c0d9"
+    },
+    {
+      "case_id": "real_06_2862",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "pass",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "丸子的一口被勺子托起，原丸子露出较浅的内部，减量可辨；切面偏圆整、边缘有修补感。B 使勺上材料更金黄，未解决切面真实性。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_06_2862/comparison.jpg",
+      "final_sha256": "e47f75cf1977855251ca1c2dfeccf5181c9487278d1cac81a95a44f90a15c087",
+      "comparison_sha256": "e892c7945364a815017bef542b90106df17b3f4eff7da66c46f4f11b47c1a6c7"
+    },
+    {
+      "case_id": "real_07_10704",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "pass",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "鱼形饼尾出现明确开放缺口，第一口在上方勺内；但勺上材料过平且表面纹理弱，无法确信自然，源缺口颜色也较均匀。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_07_10704/comparison.jpg",
+      "final_sha256": "8a09006c2228885dc33bfa915003847a6b20fba2f7313db6afcb100ddf5b6320",
+      "comparison_sha256": "0fcc079afe2a179a2cb8fd52b18aaf666e05dfe8f985169b3d61ad6bd0a30cc6"
+    },
+    {
+      "case_id": "real_08_2205",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "被搬运材料呈几段扁平、不均匀的褐色环带，立体圆条外观不可信；原位置多出灰褐色团块，不能认定为自然減量。柄出画已保持。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_08_2205/comparison.jpg",
+      "final_sha256": "08071dfc02692a13728dfe14a773cc8f3a5250e7b4d500cad3a45c3dc9a32e4d",
+      "comparison_sha256": "0809baea66b58347df976fd31317df02074923d7e56b3f584380c5be6e9611b0"
+    },
+    {
+      "case_id": "real_09_3901",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上黄色蛋皮与源相容且明显抬升；原蛋包边缘留下重绘的黄色卷和黑色小孔，缺口仍像新长出的材料。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_09_3901/comparison.jpg",
+      "final_sha256": "41abf9c1c683d630aed9acf91b1f799da3300dabe40506c3a1b5deb626131174",
+      "comparison_sha256": "d72ff505389ae8b1a61a04de4b5009039f90fe4cf818067ba61a696b958d0bcf"
+    },
+    {
+      "case_id": "real_10_2555",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上深色细条颜色对应源选中纹理，但很小且支撑细节不清楚；源区新出现一块灰棕色肉状物，减量失败。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_10_2555/comparison.jpg",
+      "final_sha256": "67773cb2f3e3d02877031aba4e712e3bb3f64896ba983f558f171f1f0a9343c1",
+      "comparison_sha256": "5179f465d043380fc608ed10253fcb8a3a813e4e31f1b01450a421149119e5f5"
+    },
+    {
+      "case_id": "real_11_7662",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上材料是偏平的弯环和垂片，难以确定合理三维形状；源处出现橙色物，改变了配料而没有可靠取走缺口。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_11_7662/comparison.jpg",
+      "final_sha256": "68c143709eed48ad5739dd6d4e654c56fe1dd4c8d8566d227c3fc20776bb65d6",
+      "comparison_sha256": "97cb41d9d0da0136811fa9d2a51b133c0a81b49cda33f3bbaec3e08cd3e76fcd"
+    },
+    {
+      "case_id": "real_12_4916",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "uncertain",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上鱼皮纹理与源相容；原鱼尾部确有缺失，但露出区域是一片很平的浅色，边界与鱼肉厚度不自然，不能确信合理揭露层。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_12_4916/comparison.jpg",
+      "final_sha256": "2f6465c10343ae624b42bc7bfd2e301be66ab37454d49a8c9802b193af6df045",
+      "comparison_sha256": "71ad90a589078ec74b98f0264d2e447adc1579ec4ff898e5b384cdf446e46773"
+    },
+    {
+      "case_id": "real_13_7118",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "pass",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "蛋白出现明确开放缺口、露出黑锅面，勺上食物明显离盘且被托住；勺上蛋白较平、下缘偏直硬，整体自然度仍不确定。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_13_7118/comparison.jpg",
+      "final_sha256": "f4cddd7c5a3c73d06fad32bd8b74607be922cb472f59a1453f4a681a4491892b",
+      "comparison_sha256": "9336a9b8d381956dabd251c2b47c74b5ae9978a6df83d2e7ba90eef222061257"
+    },
+    {
+      "case_id": "real_14_1904",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "uncertain",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上乌冬条颜色相容且有明显承托。原位置仍被重画的面条填满，底下可能还有面条，单图无法确认合理减量；局部宽扁面与勺柄接缝仍有疑点。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_14_1904/comparison.jpg",
+      "final_sha256": "fe11f22f2f8709b77fb9cfff489053807ce8ac072518655c64d8a13e18aa8308",
+      "comparison_sha256": "08990dda364fa6f8fa3a0c318e876a6add596e25faf69e863947aff6cac583f3"
+    },
+    {
+      "case_id": "real_15_11404",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "uncertain",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "薄肉片被抬起，原位置出现暗色缺口和弯曲配料；可解释为下层食物，但无法确认缺口与被取走的一口一致，勺头边缘有较硬裁切感。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_15_11404/comparison.jpg",
+      "final_sha256": "7bd05195682a98722ea4489103c031dcffd1ef3ac4ccd8880e07f7b765ecf0bd",
+      "comparison_sha256": "2661382b7f253609dbadb6a3cb32609345101637c72e73e452fb444f9d26dce1"
+    },
+    {
+      "case_id": "real_16_3264",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "搬运片的黄色内部与紫皮相容，但原茄子被补成更完整的深紫外皮块，未合理减量；勺头出现矩形银灰色边界，整体有明显拼接感。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_16_3264/comparison.jpg",
+      "final_sha256": "f8ee04afccb3f96a0a73946c260fe316fcd5256fba9f3e99368068a72c284d2d",
+      "comparison_sha256": "97659c400e9e3631652b62cc985d081d3dfd0e073e82afc137eaf075211a605c"
+    },
+    {
+      "case_id": "real_17_6275",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上材料保留褐色但边缘像梳齿状薄片，不能形成可信的鱼肉第一口；源鱼片仍被重新填满。B 没有改善这类几何和缺口问题。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_17_6275/comparison.jpg",
+      "final_sha256": "1d85aeb29c17779356a6cea1230f5d324fe90c86489f2eb5d47a771cdba1dbc8",
+      "comparison_sha256": "0f71ad348600ca454307b326f597081124412918841e5cdd24ac1578f5e72f54"
+    },
+    {
+      "case_id": "real_18_4646",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上烤肉片色泽与源相容，柄从上边框离画；原取食区新增蒜片状配料、主体仍完整，源减量失败。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_18_4646/comparison.jpg",
+      "final_sha256": "92cd09412c2bcbc0fbd0e42e6341b0cb981f372be844db38715d53908bf0ab56",
+      "comparison_sha256": "3e470b1898df5f067453992a1c38e38066ce1266144d21d4e9db1551cc4b83bd"
+    },
+    {
+      "case_id": "real_19_2405",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "uncertain",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "蛋饼边缘形成开放缺口，勺上小片相容且有承托；缺口内灰色影块的层次不清楚，勺上表面过于平滑，真实感仍不确定。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_19_2405/comparison.jpg",
+      "final_sha256": "6f04463f559dcc350f80eab2ebe318334183602c30a3c93c363434fc570bc402",
+      "comparison_sha256": "6da19fd8317e8cb179f99328b6085272032b747b3942d0640faa298daab066f6"
+    },
+    {
+      "case_id": "real_20_8925",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "勺上意面呈宽而扁、近乎纯色的条片，勺子和食物都有明显合成感；源区又画出新的面条环，不能视为自然的第一口编辑。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_20_8925/comparison.jpg",
+      "final_sha256": "8305ca11fef34636432294264ab2751e133954a24c55f4366854a44a1757a437",
+      "comparison_sha256": "ab04e26e8855a078052289a32b9c87eb8b74762b1403db8206f65fbd341a0d96"
+    },
+    {
+      "case_id": "real_21_15805",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "被抬起的细条变粗、变平，像褐色带状片；源位置仍有新生成的完整面条曲线，未看到可信减量。柄出画，但外观问题保留。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_21_15805/comparison.jpg",
+      "final_sha256": "75a72c9af55059e541cbf48a9bd472f3dfe670c30234903593a61007a1b46541",
+      "comparison_sha256": "cc02d926726e90e19d2c8dcec205601ab6c1e56b9aade8d360d7052fb7cbac58"
+    },
+    {
+      "case_id": "real_22_4792",
+      "criteria": {
+        "source_material_identity": "pass",
+        "visible_lift": "pass",
+        "food_spoon_support": "pass",
+        "source_removal": "fail",
+        "texture_and_seams": "uncertain",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "米饭块被勺子托起、色泽相容；原碗中相应位置却重建成另一块突起饭团，缺口被补回。勺上米饭边界偏规则。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_22_4792/comparison.jpg",
+      "final_sha256": "1ed4b0fe2e67976bd26b10d5aa2552e45b9cde32a529d14caf58b72f6f5e9609",
+      "comparison_sha256": "942385a039a7e075984d818b58a6d60f4d3239349e6c67b3fa41fa6c1d9e6bbc"
+    },
+    {
+      "case_id": "real_23_5280",
+      "criteria": {
+        "source_material_identity": "uncertain",
+        "visible_lift": "pass",
+        "food_spoon_support": "uncertain",
+        "source_removal": "fail",
+        "texture_and_seams": "fail",
+        "no_added_humans": "pass",
+        "handle_frame_connection": "pass"
+      },
+      "note": "搬运区域混合鱼肉和葱花颜色，但形状像不规则薄片且细节扭曲；源区形成灰色环状重绘与新配料，无法确认正确取走同一口。",
+      "reviewer": "root assistant direct image inspection",
+      "evidence": "assets/real_23_5280/comparison.jpg",
+      "final_sha256": "8e3f602dca50488cc91f0b60fb551ebf621423b060a449b14a4a0988a74015ac",
+      "comparison_sha256": "d2f453312b3850dbc1f2f5c313bfb73149efdb1d89c98b8d25d8ef4cff1f3d58"
+    }
+  ],
+  "criteria_scope": {
+    "source_material_identity": "Visible color and texture compatibility; not proof of the same physical piece.",
+    "visible_lift": "Clear visible separation of utensil-carried food from the source location; not calibrated 3D height.",
+    "food_spoon_support": "Visually plausible support; not a measured contact force.",
+    "source_removal": "Plausible visible decrease at the edited source area. Remaining-layer ambiguity may be uncertain.",
+    "texture_and_seams": "Natural appearance including source patch and carried-food edges; any material doubt stays uncertain.",
+    "no_added_humans": "No newly generated hand, person or body part.",
+    "handle_frame_connection": "Utensil shaft visibly crosses the photo boundary; no evidence of an actual off-screen hand."
+  },
+  "status": "complete_24_direct_image_reviews",
+  "completed_utc": "2026-10-05T15:09:55.297391+00:00"
+}

@@ -1,0 +1,62 @@
+{
+  "recorded_utc": "2026-09-28T07:13:44.487113+00:00",
+  "status": "FAIL_CORE_OBJECTIVE_LIFT_NOT_DEMONSTRATED",
+  "trigger": "User rejects the displayed results as having no meaningful change and no food elevation.",
+  "scope": "Supersedes any interpretation of v4 texture/boundary changes as achievement of the lift objective; original numeric records remain unchanged.",
+  "checked_bundle_chain": [
+    {
+      "path": "outputs\\observed_edit_v2_20260928_bundle_r2",
+      "config_sha256": "29cd3358ec78084c9b07223dfe6b22ae10dc342e32c1ad4266fad105acbb2e86"
+    },
+    {
+      "path": "outputs\\observed_edit_v3_20260928_bundle_r3",
+      "config_sha256": "2e7afd505a3868642e74668eeeba5e17326c8d0b71f1341bf39c2dd5f412f014"
+    },
+    {
+      "path": "outputs\\observed_edit_v4_20260928_bundle",
+      "config_sha256": "b29fabe9d54a37debacdb653eebe15ed7951267e3eb47be12274f18e95d78b7d"
+    }
+  ],
+  "findings": [
+    {
+      "case": "pizza",
+      "unique_image_plane_translation_xy": [
+        -194,
+        87
+      ],
+      "source_food_pixels": 13598,
+      "target_food_pixels": 13598,
+      "transported_pixel_max_difference": 0,
+      "v4_target_mask_unchanged_from_v2": true,
+      "v4_reference_and_prompt_unchanged_from_v3": true,
+      "explicit_lift_height_parameter": false,
+      "camera_or_plate_plane_parameter": false,
+      "task_verdict": "REJECTED_AS_LIFT_DEMONSTRATION",
+      "physical_height_from_generated_image": "not_measured; not inferred as zero"
+    },
+    {
+      "case": "corn",
+      "unique_image_plane_translation_xy": [
+        236,
+        0
+      ],
+      "source_food_pixels": 7409,
+      "target_food_pixels": 7409,
+      "transported_pixel_max_difference": 0,
+      "v4_target_mask_unchanged_from_v2": true,
+      "v4_reference_and_prompt_unchanged_from_v3": true,
+      "explicit_lift_height_parameter": false,
+      "camera_or_plate_plane_parameter": false,
+      "task_verdict": "REJECTED_AS_LIFT_DEMONSTRATION",
+      "physical_height_from_generated_image": "not_measured; not inferred as zero"
+    }
+  ],
+  "prompt_evidence": [
+    "same orientation, silhouette, toppings, texture, size and color",
+    "Add subtle contact shadow immediately under the spoon and food",
+    "Do not move or rotate any food"
+  ],
+  "missing_primary_endpoint": "A perceptually unambiguous food-and-tool elevation from the plate.",
+  "new_model_calls": 0,
+  "next_priority": "Explicit out-of-plane lift control and visible elevation validation before texture or background ablations."
+}

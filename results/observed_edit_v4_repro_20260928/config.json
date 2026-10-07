@@ -1,0 +1,190 @@
+{
+  "backend": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "model_root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "pipeline_class": "QwenImageEditPlusPipeline",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "model_index.json": {
+        "size_bytes": 516,
+        "sha256": "5ba11ceee68457ad6a48b899b8c9493e347f4685e11e5eeca952a13f16549e35"
+      },
+      "text_encoder/model-00001-of-00004.safetensors": {
+        "size_bytes": 4968243304,
+        "sha256": "d725335e4ea2399be706469e4b8807716a8fa64bd03468252e9f7acf2415fee4"
+      },
+      "text_encoder/model-00002-of-00004.safetensors": {
+        "size_bytes": 4991495816,
+        "sha256": "b1830db6908dcc76df3a71492acbcf2b8cac130114cf1f3c2d9edae8de8c6de3"
+      },
+      "text_encoder/model-00003-of-00004.safetensors": {
+        "size_bytes": 4932751040,
+        "sha256": "09c1807c6d00d7cab94f7db39d4c02ebb8537225ccde383861ac48db97945aa6"
+      },
+      "text_encoder/model-00004-of-00004.safetensors": {
+        "size_bytes": 1691924384,
+        "sha256": "5dd068336d14d45ffb43cef374d286cc6ba9d8741b028f90a7d040d847961f4a"
+      },
+      "text_encoder/model.safetensors.index.json": {
+        "size_bytes": 57655,
+        "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c"
+      },
+      "transformer/diffusion_pytorch_model-00001-of-00005.safetensors": {
+        "size_bytes": 9973578592,
+        "sha256": "2a0c30c9ba44a5f11c21ca139e37951430bbde814ff4e0b5b1a68b80530e7a1a"
+      },
+      "transformer/diffusion_pytorch_model-00002-of-00005.safetensors": {
+        "size_bytes": 9987326072,
+        "sha256": "54ec249b07b4376e19cf16b764054f03ca03ae2cfbd9939453e2085f4e9bd259"
+      },
+      "transformer/diffusion_pytorch_model-00003-of-00005.safetensors": {
+        "size_bytes": 9987307440,
+        "sha256": "c55157843525653161e8f6af5acc670ba3aceff04284f7cf657199d24d065e16"
+      },
+      "transformer/diffusion_pytorch_model-00004-of-00005.safetensors": {
+        "size_bytes": 9930685712,
+        "sha256": "ffcfb5a4895702635890a67bad183591e0ae515d794bdcb26e217b27a7f6d12d"
+      },
+      "transformer/diffusion_pytorch_model-00005-of-00005.safetensors": {
+        "size_bytes": 982130472,
+        "sha256": "2b2556b736629e10a5a0dfa14606f2057f4f81c2ba53f94103682c7ac42d4940"
+      },
+      "transformer/diffusion_pytorch_model.safetensors.index.json": {
+        "size_bytes": 198887,
+        "sha256": "034f003b74493730e1c595b2e23232e99d9e28bcef3b4c10c56d1b53eee4b435"
+      },
+      "vae/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 253806966,
+        "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344"
+      }
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 160000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "claim_limit": "Two previously seen development images; no confirmatory/generalization/physical-mass claim.",
+  "experiment_id": "observed_edit_v4_interior_20260928",
+  "cases": [
+    {
+      "case_id": "pizza",
+      "dataset_index": 5,
+      "target_xy": [
+        230,
+        220
+      ],
+      "handle_xy": [
+        45,
+        390
+      ],
+      "split": "development_seen",
+      "prompt": "Make this rough composite a realistic photograph. The food has ALREADY been moved to its final location, and the old location is already empty. Keep every food piece exactly where it is, with the same orientation, silhouette, toppings, texture, size and color. Replace ONLY the flat gray spoon underneath the moved food with one realistic stainless-steel serving spoon, keeping its bowl and handle in exactly the indicated location and direction. Repair the plain filled patch at the old food location into smooth empty plate matching its surroundings; put no food or object there. Add subtle contact shadow immediately under the spoon and food. Preserve the plate, background, other food and lighting. Do not move or rotate any food. Do not add, copy or duplicate food. No hands, text or colored outlines.",
+      "protected_source_rect": [
+        400,
+        214,
+        110,
+        102
+      ],
+      "files": {
+        "core_weight.png": {
+          "path": "inputs/pizza/core_weight.png",
+          "sha256": "0c10d201b775d1c08b18cbb52152af0ced5d3531efd851faf31bbcd41c927140"
+        },
+        "kept_food_mask.png": {
+          "path": "inputs/pizza/kept_food_mask.png",
+          "sha256": "2956b35a70ad4da4e8b88dc37237b52872d371f2e825127151733a1e11aca688"
+        },
+        "layers.npz": {
+          "path": "inputs/pizza/layers.npz",
+          "sha256": "a82655260716d7fbcee57e380d62bc141dda636b2dabd563b8b504f3fc2ec7e8"
+        },
+        "reference.png": {
+          "path": "inputs/pizza/reference.png",
+          "sha256": "900e9f7de8f12d872b9153ea3a45bb357249b30260c623c0926ab35c2ea68547"
+        },
+        "source.png": {
+          "path": "inputs/pizza/source.png",
+          "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+        }
+      }
+    },
+    {
+      "case_id": "corn",
+      "dataset_index": 7,
+      "target_xy": [
+        440,
+        175
+      ],
+      "handle_xy": [
+        594,
+        385
+      ],
+      "split": "development_seen",
+      "prompt": "Make this rough composite a realistic photograph. The food has ALREADY been moved to its final location, and the old location is already empty. Keep every food piece exactly where it is, with the same orientation, silhouette, toppings, texture, size and color. Replace ONLY the flat gray spoon underneath the moved food with one realistic stainless-steel serving spoon, keeping its bowl and handle in exactly the indicated location and direction. Repair the plain filled patch at the old food location into smooth empty plate matching its surroundings; put no food or object there. Add subtle contact shadow immediately under the spoon and food. Preserve the plate, background, other food and lighting. Do not move or rotate any food. Do not add, copy or duplicate food. No hands, text or colored outlines.",
+      "protected_source_rect": [
+        155,
+        225,
+        185,
+        182
+      ],
+      "files": {
+        "core_weight.png": {
+          "path": "inputs/corn/core_weight.png",
+          "sha256": "124f96f5425fbc3c71cf2af9169f35446a2bbcbd97ed7939908290d88128ba8c"
+        },
+        "kept_food_mask.png": {
+          "path": "inputs/corn/kept_food_mask.png",
+          "sha256": "9e9e1e42085f5be84a7ba66ea1160b7b33a5edd6c90d513aa8e69da3cb7bd436"
+        },
+        "layers.npz": {
+          "path": "inputs/corn/layers.npz",
+          "sha256": "334de39a1b3e41a1af4f60ba420d7c53cca95373d3a7a97aa39896054da74286"
+        },
+        "reference.png": {
+          "path": "inputs/corn/reference.png",
+          "sha256": "80e7f976230ecb5a49847f92bb9654ae5a07c94844e0ad0c559c8f4cb8afb967"
+        },
+        "source.png": {
+          "path": "inputs/corn/source.png",
+          "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+        }
+      }
+    }
+  ],
+  "seeds": [
+    281
+  ],
+  "conditions": [
+    "interior",
+    "detail"
+  ],
+  "expected_generation_count": 4,
+  "inference": {
+    "num_inference_steps": 40,
+    "true_cfg_scale": 4.0,
+    "guidance_scale": null,
+    "negative_prompt": " ",
+    "width": 1184,
+    "height": 896
+  },
+  "target_images_in_generation_bundle": false,
+  "source_bundle_sha256": "2e7afd505a3868642e74668eeeba5e17326c8d0b71f1341bf39c2dd5f412f014",
+  "compositor": "none: native generated image only, no background/food pixel restoration",
+  "projection": {
+    "maximum": 0.8,
+    "release_start": 0.75,
+    "core_zero_within_pixels": 12,
+    "core_full_after_pixels": 24,
+    "detail_kernel": 5
+  },
+  "expected_pipeline_sha256": "04c96a0414a2f454b302085591d30a7de4a529079284704f8b880d8b3982b375",
+  "change_scope": "Model inputs, prompt, seed and resolution are unchanged from v3. Only constraint mechanism changes."
+}

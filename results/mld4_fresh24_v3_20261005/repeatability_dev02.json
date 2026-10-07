@@ -1,0 +1,99 @@
+{
+  "runs": [
+    "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/from_image_dev02_v3_20261005",
+    "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/cases/real_02_16784"
+  ],
+  "source": "Same decoded original RGB, chicken prompt, same seed and source snapshot; physical GPUs3 and4.",
+  "images": [
+    {
+      "artifact": "geometry_initial/observations/real_00_input/source.png",
+      "sha_a": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+      "sha_b": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+      "byte_equal": true,
+      "pixel_mae": 0.0,
+      "pixel_max": 0.0,
+      "different_pixels": 0
+    },
+    {
+      "artifact": "geometry_initial/observations/real_00_input/food_mask.png",
+      "sha_a": "1bef7412f9d8c0d461eb1c811b569e0b17324c041404b95bab9ce099384806d7",
+      "sha_b": "1bef7412f9d8c0d461eb1c811b569e0b17324c041404b95bab9ce099384806d7",
+      "byte_equal": true,
+      "pixel_mae": 0.0,
+      "pixel_max": 0.0,
+      "different_pixels": 0
+    },
+    {
+      "artifact": "geometry_initial/real/real_00_input/moved_food_mask.png",
+      "sha_a": "cdcd258aab0193a62df541d66d4f0bc8952bfeadd87ad0688a12a4b872047bbd",
+      "sha_b": "cdcd258aab0193a62df541d66d4f0bc8952bfeadd87ad0688a12a4b872047bbd",
+      "byte_equal": true,
+      "pixel_mae": 0.0,
+      "pixel_max": 0.0,
+      "different_pixels": 0
+    },
+    {
+      "artifact": "guides_anchored/real_00_input/conditioning_image.png",
+      "sha_a": "ec75f44942564f4dfcc6213edac3f560206051ab104e93e49ae151dc68b16eb6",
+      "sha_b": "324d2333b6341141258f4a0489dd88e82b6aa0cf9c076bfe2f5d9db08207eae3",
+      "byte_equal": false,
+      "pixel_mae": 0.07536944444444445,
+      "pixel_max": 53.0,
+      "different_pixels": 2040
+    },
+    {
+      "artifact": "guides_depth/real_00_input/head/depth_control.png",
+      "sha_a": "49d49c2af357f06e0135bd9e878ab06cc840eaa679eb393eb00d72981215059c",
+      "sha_b": "49d49c2af357f06e0135bd9e878ab06cc840eaa679eb393eb00d72981215059c",
+      "byte_equal": true,
+      "pixel_mae": 0.0,
+      "pixel_max": 0.0,
+      "different_pixels": 0
+    },
+    {
+      "artifact": "production/real/real_00_input/final.png",
+      "sha_a": "e2d3879699d6463d240aef36e1ffa8e3a66862bf2d2f4eca70196bd57f38fd5f",
+      "sha_b": "fb251fd4caff60cdd50534942c873cb8744af475853a1e8e0c805d81255d7a17",
+      "byte_equal": false,
+      "pixel_mae": 0.03467222222222222,
+      "pixel_max": 11.0,
+      "different_pixels": 4561
+    },
+    {
+      "artifact": "material_bound/real/real_00_input/final.png",
+      "sha_a": "b63473c4258a3d497c5d97ed2233fdc139c3c67717b39feea4128f5b93c833e1",
+      "sha_b": "2a8c79d9d88b734bdf1522630a818731d49338efb14ca8844c9d60c503583ebd",
+      "byte_equal": false,
+      "pixel_mae": 0.033577777777777776,
+      "pixel_max": 11.0,
+      "different_pixels": 4340
+    }
+  ],
+  "geometry": {
+    "carried_ids": {
+      "equal": true,
+      "max_absolute_error": 0.0
+    },
+    "source_uv": {
+      "equal": true,
+      "max_absolute_error": 0.0
+    },
+    "rest_xyz": {
+      "equal": true,
+      "max_absolute_error": 0.0
+    },
+    "target_xyz": {
+      "equal": true,
+      "max_absolute_error": 0.0
+    },
+    "faces": {
+      "equal": true,
+      "max_absolute_error": 0.0
+    },
+    "camera_intrinsics": {
+      "equal": true,
+      "max_absolute_error": 0.0
+    }
+  },
+  "limitation": "Seed and frozen code do not provide byte-identical end-to-end reruns. First observed RGB difference is in rendered conditioning; no pixel-identical generation claim. This does not isolate the rendering nondeterminism mechanism."
+}

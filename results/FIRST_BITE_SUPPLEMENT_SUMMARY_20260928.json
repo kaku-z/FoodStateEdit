@@ -1,0 +1,347 @@
+{
+  "scope": "Post-hoc annotation repair and height sensitivity; assistant non-blind development observations only",
+  "independent_ballots_received": 0,
+  "formal_unseen_unlocked": false,
+  "roi_repair": {
+    "original": {
+      "n": 24,
+      "joint_pass": 4,
+      "pass": {
+        "lift": 24,
+        "bite_and_support": 16,
+        "source_change": 13,
+        "food_and_scene": 4,
+        "hand_and_utensil": 24
+      },
+      "photo_at_least_4": 24
+    },
+    "repaired": {
+      "n": 24,
+      "joint_pass": 5,
+      "pass": {
+        "lift": 24,
+        "bite_and_support": 16,
+        "source_change": 15,
+        "food_and_scene": 5,
+        "hand_and_utensil": 22
+      },
+      "photo_at_least_4": 21
+    },
+    "gained_joint": [
+      "strand_01__D_geometry_guide__281"
+    ],
+    "lost_joint": []
+  },
+  "by_method": {
+    "A_direct": {
+      "original": {
+        "n": 6,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 4,
+          "source_change": 4,
+          "food_and_scene": 0,
+          "hand_and_utensil": 6
+        },
+        "photo_at_least_4": 6
+      },
+      "repaired": {
+        "n": 6,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 5,
+          "source_change": 5,
+          "food_and_scene": 0,
+          "hand_and_utensil": 6
+        },
+        "photo_at_least_4": 6
+      },
+      "gained_joint": [],
+      "lost_joint": []
+    },
+    "B_action_spec": {
+      "original": {
+        "n": 6,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 4,
+          "source_change": 4,
+          "food_and_scene": 0,
+          "hand_and_utensil": 6
+        },
+        "photo_at_least_4": 6
+      },
+      "repaired": {
+        "n": 6,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 4,
+          "source_change": 4,
+          "food_and_scene": 0,
+          "hand_and_utensil": 6
+        },
+        "photo_at_least_4": 5
+      },
+      "gained_joint": [],
+      "lost_joint": []
+    },
+    "C_planar_guide": {
+      "original": {
+        "n": 6,
+        "joint_pass": 2,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 4,
+          "source_change": 3,
+          "food_and_scene": 2,
+          "hand_and_utensil": 6
+        },
+        "photo_at_least_4": 6
+      },
+      "repaired": {
+        "n": 6,
+        "joint_pass": 2,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 3,
+          "source_change": 3,
+          "food_and_scene": 2,
+          "hand_and_utensil": 5
+        },
+        "photo_at_least_4": 5
+      },
+      "gained_joint": [],
+      "lost_joint": []
+    },
+    "D_geometry_guide": {
+      "original": {
+        "n": 6,
+        "joint_pass": 2,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 4,
+          "source_change": 2,
+          "food_and_scene": 2,
+          "hand_and_utensil": 6
+        },
+        "photo_at_least_4": 6
+      },
+      "repaired": {
+        "n": 6,
+        "joint_pass": 3,
+        "pass": {
+          "lift": 6,
+          "bite_and_support": 4,
+          "source_change": 3,
+          "food_and_scene": 3,
+          "hand_and_utensil": 5
+        },
+        "photo_at_least_4": 5
+      },
+      "gained_joint": [
+        "strand_01__D_geometry_guide__281"
+      ],
+      "lost_joint": []
+    }
+  },
+  "by_case": {
+    "strand_01": {
+      "original": {
+        "n": 8,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 8,
+          "bite_and_support": 8,
+          "source_change": 5,
+          "food_and_scene": 0,
+          "hand_and_utensil": 8
+        },
+        "photo_at_least_4": 8
+      },
+      "repaired": {
+        "n": 8,
+        "joint_pass": 1,
+        "pass": {
+          "lift": 8,
+          "bite_and_support": 7,
+          "source_change": 6,
+          "food_and_scene": 1,
+          "hand_and_utensil": 7
+        },
+        "photo_at_least_4": 7
+      },
+      "gained_joint": [
+        "strand_01__D_geometry_guide__281"
+      ],
+      "lost_joint": []
+    },
+    "strand_02": {
+      "original": {
+        "n": 8,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 8,
+          "bite_and_support": 0,
+          "source_change": 0,
+          "food_and_scene": 0,
+          "hand_and_utensil": 8
+        },
+        "photo_at_least_4": 8
+      },
+      "repaired": {
+        "n": 8,
+        "joint_pass": 0,
+        "pass": {
+          "lift": 8,
+          "bite_and_support": 1,
+          "source_change": 1,
+          "food_and_scene": 0,
+          "hand_and_utensil": 7
+        },
+        "photo_at_least_4": 6
+      },
+      "gained_joint": [],
+      "lost_joint": []
+    },
+    "liquid_01": {
+      "original": {
+        "n": 8,
+        "joint_pass": 4,
+        "pass": {
+          "lift": 8,
+          "bite_and_support": 8,
+          "source_change": 8,
+          "food_and_scene": 4,
+          "hand_and_utensil": 8
+        },
+        "photo_at_least_4": 8
+      },
+      "repaired": {
+        "n": 8,
+        "joint_pass": 4,
+        "pass": {
+          "lift": 8,
+          "bite_and_support": 8,
+          "source_change": 8,
+          "food_and_scene": 4,
+          "hand_and_utensil": 8
+        },
+        "photo_at_least_4": 8
+      },
+      "gained_joint": [],
+      "lost_joint": []
+    }
+  },
+  "height": [
+    {
+      "family": "cohesive",
+      "levels": [
+        {
+          "height": 0,
+          "run_id": "cohesive_01_h00__D_geometry_guide__2027",
+          "raw_sha256": "3ad4ce91b2a30cf2038ed0c65bbb6987d5e7595d60d90a9015d783ccd8e492d7",
+          "notes": "A small fork-supported tofu bite appears in front of the intact parent block. The low reference condition still depicts a separated bite; no corresponding cavity is visible."
+        },
+        {
+          "height": 0.08,
+          "run_id": "cohesive_01_h08__D_geometry_guide__2027",
+          "raw_sha256": "39b33a4566031e973961012fef5684b6386417fc1b04b68e2f8ac3eca8462846",
+          "notes": "Bite and fork become much larger, hand entry and fork angle change, and camera/plate framing differs. No clear matching cavity in parent tofu."
+        },
+        {
+          "height": 0.16,
+          "run_id": "cohesive_01_h16__D_geometry_guide__2027",
+          "raw_sha256": "441e97ae32a8f51695501ba2dfe13a2be4f4db194b4d9d0c966b403608dc236f",
+          "notes": "Bite is positioned higher in the image and carries sauce; fork returns to a horizontal pose. Parent tofu still lacks a visible matching cavity."
+        }
+      ],
+      "response": "Bite placement moves upward across the images, but scale, fork pose, hand pose and camera framing also change. No clean isolated physical-height response can be established.",
+      "controlled_height_demonstrated": false,
+      "metric_3d_height_measured": false
+    },
+    {
+      "family": "granular",
+      "levels": [
+        {
+          "height": 0,
+          "run_id": "granular_01_h00__D_geometry_guide__2027",
+          "raw_sha256": "65434a26201347979e9bf8a9cc31eaeac32f1c35e894a24596f27a9127edd74a",
+          "notes": "Filled spoon already appears slightly separated over the rice in the low condition; original resting spoon is removed. Plate and egg broadly remain."
+        },
+        {
+          "height": 0.08,
+          "run_id": "granular_01_h08__D_geometry_guide__2027",
+          "raw_sha256": "decd70445c930aa972857adf116abad4a3efb64e6728f8a61d51c7306f982e7d",
+          "notes": "Similar short apparent separation over rice; spoon moves left and hand pose changes. No clearly increased vertical gap relative to the low condition."
+        },
+        {
+          "height": 0.16,
+          "run_id": "granular_01_h16__D_geometry_guide__2027",
+          "raw_sha256": "dda7b5caed18dbb286c88e1dce8a2fa7dfdb8aed3fd7dc258f931f3bef21e63b",
+          "notes": "Spoon and bite move down/right in the image and utensil angle changes. No convincing increase in separation over rice, despite the highest guide setting."
+        }
+      ],
+      "response": "No clear monotonic increase in visible separation from the rice; lateral placement and hand/tool pose vary. Source scene is relatively stable, but requested height control is not demonstrated.",
+      "controlled_height_demonstrated": false,
+      "metric_3d_height_measured": false
+    },
+    {
+      "family": "strand",
+      "levels": [
+        {
+          "height": 0,
+          "run_id": "strand_01_h00__D_geometry_guide__2027",
+          "raw_sha256": "d0e1fca44d7bc91840eca15488a9795f0d8f025c8a2fc34d2e2a43c817938d49",
+          "notes": "Low condition already shows a substantial hanging udon bundle and high horizontal chopsticks above the bowl, rather than a clearly distinct low-contact pose."
+        },
+        {
+          "height": 0.08,
+          "run_id": "strand_01_h08__D_geometry_guide__2027",
+          "raw_sha256": "581a520acc4375fc5f1fd9af6311f3b6a3823dcca8278eb46c6cd48e05c334aa",
+          "notes": "Chopsticks appear somewhat higher relative to bowl, but hanging portion is longer/larger and bowl framing shifts. Two sticks remain plausible."
+        },
+        {
+          "height": 0.16,
+          "run_id": "strand_01_h16__D_geometry_guide__2027",
+          "raw_sha256": "a650b0811578ba3efd060da8632e93cd10462183663a6a9f09fabc6fa747ff3c",
+          "notes": "Tool is higher in the image, but coarse udon changes into much thinner noodle strands and the lifted bundle geometry/length changes."
+        }
+      ],
+      "response": "Chopsticks move upward, but low condition already depicts a large lift, portion geometry varies, and the highest condition loses udon thickness. A food-preserving isolated height response is not demonstrated.",
+      "controlled_height_demonstrated": false,
+      "metric_3d_height_measured": false
+    },
+    {
+      "family": "liquid",
+      "levels": [
+        {
+          "height": 0,
+          "run_id": "liquid_01_h00__D_geometry_guide__2027",
+          "raw_sha256": "628830237a2c768ebea27b92c48acd5b754309e46df3c657b9c0b0be8bf3d525",
+          "notes": "Spoon carrying soup already hovers just above the surface, with nearby dark shadow and small drip. Low control is not visibly at a distinct contact state."
+        },
+        {
+          "height": 0.08,
+          "run_id": "liquid_01_h08__D_geometry_guide__2027",
+          "raw_sha256": "f0d011522742bb3a403178383ff7a3d9f28197acc426572863fdf5b328ffaf50",
+          "notes": "Filled spoon remains close above the soup; hand grip and spoon shape differ, but no clearly larger vertical gap than h=0 is visible."
+        },
+        {
+          "height": 0.16,
+          "run_id": "liquid_01_h16__D_geometry_guide__2027",
+          "raw_sha256": "19dfa33b6f829f5fa219b27d90d5cf83f632d3216f55e68a95a4f66f51c1a9a5",
+          "notes": "Spoon angle and bowl shape change; spoon still appears close above liquid. The highest condition does not show a convincing increase in separation."
+        }
+      ],
+      "response": "All three conditions show a similar near-surface hovering spoon. Grip/angle/shape change, with no clear monotonic visible-height response; no metric geometric claim is possible.",
+      "controlled_height_demonstrated": false,
+      "metric_3d_height_measured": false
+    }
+  ],
+  "calls": 36,
+  "total_calls_including_main": 100
+}

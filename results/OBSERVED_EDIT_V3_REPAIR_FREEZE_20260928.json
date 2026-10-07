@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-09-28T04:44:55.416064+00:00",
+  "stage": "before_all_v3_model_calls",
+  "tests": "14 passed",
+  "sha256": {
+    "docs/OBSERVED_EDIT_V3_REPAIR_PROTOCOL_20260928.md": "a3e3f953d7b67f0750038ee4cb8b22ea5d78e081bd264b437619f28a574b4982",
+    "scripts/run_observed_edit_v3.py": "5b9201bfd34404dd38e224564653facdeb37d2a9d8b456ee5f35a82f830aa7f5",
+    "scripts/prepare_observed_edit_v3.py": "0c9e5d4d113ae1fec93140e6e42f3099fa464943d6662452de328e8167b4b426",
+    "foodstateedit/observed_edit/constrained.py": "9ae2465ca234343b02b46635987ef29f07a2aaf557f00195b3a308afe134da8f",
+    "foodstateedit/observed_edit/projection.py": "e088fd0eacecf5c2260312a8777ff25c5fd3af09d73ec3ad96d81399999d16b2",
+    "tests/test_observed_edit_constraints.py": "bbcdaa93d5e13305e1ec3da9027561973db3883c07580c33f5329528ca8742b9",
+    "outputs/observed_edit_v3_20260928_bundle_r3/config.json": "2e7afd505a3868642e74668eeeba5e17326c8d0b71f1341bf39c2dd5f412f014"
+  }
+}

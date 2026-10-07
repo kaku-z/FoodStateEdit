@@ -1,0 +1,13 @@
+﻿run_id,case_id,method,seed,height,status,output_raw_path
+cohesive_01__D_height_0.00__2027,cohesive_01,D_geometry_guide,2027,0,CONDITIONAL_NOT_RUN,
+cohesive_01__D_height_0.08__2027,cohesive_01,D_geometry_guide,2027,0.08,CONDITIONAL_NOT_RUN,
+cohesive_01__D_height_0.16__2027,cohesive_01,D_geometry_guide,2027,0.16,CONDITIONAL_NOT_RUN,
+granular_01__D_height_0.00__2027,granular_01,D_geometry_guide,2027,0,CONDITIONAL_NOT_RUN,
+granular_01__D_height_0.08__2027,granular_01,D_geometry_guide,2027,0.08,CONDITIONAL_NOT_RUN,
+granular_01__D_height_0.16__2027,granular_01,D_geometry_guide,2027,0.16,CONDITIONAL_NOT_RUN,
+strand_01__D_height_0.00__2027,strand_01,D_geometry_guide,2027,0,CONDITIONAL_NOT_RUN,
+strand_01__D_height_0.08__2027,strand_01,D_geometry_guide,2027,0.08,CONDITIONAL_NOT_RUN,
+strand_01__D_height_0.16__2027,strand_01,D_geometry_guide,2027,0.16,CONDITIONAL_NOT_RUN,
+liquid_01__D_height_0.00__2027,liquid_01,D_geometry_guide,2027,0,CONDITIONAL_NOT_RUN,
+liquid_01__D_height_0.08__2027,liquid_01,D_geometry_guide,2027,0.08,CONDITIONAL_NOT_RUN,
+liquid_01__D_height_0.16__2027,liquid_01,D_geometry_guide,2027,0.16,CONDITIONAL_NOT_RUN,

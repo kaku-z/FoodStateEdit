@@ -1,0 +1,22 @@
+{
+  "case_id": "real_00_input",
+  "base_sha256": "6e34ad7bc452ae1704c0d8ed34f069bfccc0ac8477e8fac2f01c914aa07c9d7a",
+  "texture_sha256": "a6cd48ca087bf518acacc8035198293322ae9ce92b74552e4f43dab6d839d459",
+  "source_sha256": "08a4a51314c46265d5287abbd9377f01a34ff66988aa33c564f0a52e3b776b2e",
+  "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+  "final_sha256": "92cd09412c2bcbc0fbd0e42e6341b0cb981f372be844db38715d53908bf0ab56",
+  "known_pixels": 2135,
+  "bound_core_pixels": 1906,
+  "food_pixels": 2878,
+  "core_fraction": 0.6622654621264767,
+  "scalar_gain_bounds": [
+    0.72,
+    1.4
+  ],
+  "core_contract_max_rgb_error": 0,
+  "changed_outside_known_pixels": 0,
+  "wrong_correspondence_core_mae": 20.525708289611753,
+  "generated_chromatic_content_in_bound_core": false,
+  "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+  "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+}

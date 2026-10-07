@@ -1,0 +1,21 @@
+{
+  "cases": 24,
+  "complete": 24,
+  "all_checks": true,
+  "bound_core_pixels": 34121,
+  "non_strand_closure_cases": 20,
+  "learned_uniform_identical_floor_cases": [
+    "real_00_2330",
+    "real_01_2198",
+    "real_05_8131",
+    "real_10_2555",
+    "real_13_7118",
+    "real_15_11404"
+  ],
+  "non_strand_median_upper_clipped_fraction": 0.8546645064967073,
+  "computed_proxy_volume_relative_change": {
+    "median": 0.002598244002597838,
+    "max": 0.02212363828747843
+  },
+  "scope": "Proxy and implementation diagnostics only; learned-versus-uniform floor values are recorded upstream diagnostics, not a newly rerun causal ablation of the entire model."
+}

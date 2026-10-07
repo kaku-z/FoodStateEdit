@@ -1,0 +1,115 @@
+{
+  "dataset": "Nutrition5k",
+  "license": "CC BY 4.0",
+  "official_url": "https://github.com/google-research-datasets/Nutrition5k",
+  "cases": [
+    {
+      "cafe": "dish_metadata_cafe1.csv",
+      "source_after_addition": "dish_1561665671",
+      "target_before_addition": "dish_1561665626",
+      "added_ingredient": [
+        "ingr_0000000380",
+        "pizza",
+        "40.000000"
+      ],
+      "preserved": [
+        "ingr_0000000205",
+        "corn on the cob",
+        "49.000000"
+      ],
+      "seconds_between_scans": 45,
+      "source_mass_g": 89.0,
+      "target_mass_g": 49.0,
+      "files": [
+        {
+          "tag": "source",
+          "modality": "rgb.png",
+          "relative_path": "pair_005\\source_rgb.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1561665671/rgb.png",
+          "sha256": "d6b561bf69a481ddf83f741f9d3ed2ef15e713949641818dc93ed9865c58a280",
+          "size": 268453
+        },
+        {
+          "tag": "source",
+          "modality": "depth_raw.png",
+          "relative_path": "pair_005\\source_depth_raw.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1561665671/depth_raw.png",
+          "sha256": "ff9ec896afd7dd863e2ec11afbffd6f9ed758cc49f1beb0da10ab5d9a27c66cd",
+          "size": 182234
+        },
+        {
+          "tag": "target",
+          "modality": "rgb.png",
+          "relative_path": "pair_005\\target_rgb.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1561665626/rgb.png",
+          "sha256": "a605216c2c4b4167958e3c672c11b537ec510d32c3870ca2dcc5f485e8a9c143",
+          "size": 235168
+        },
+        {
+          "tag": "target",
+          "modality": "depth_raw.png",
+          "relative_path": "pair_005\\target_depth_raw.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1561665626/depth_raw.png",
+          "sha256": "469a90d97c3ff49f776d90c8b2232e66bc21daeb2d1f57b1a5d4693147e08c30",
+          "size": 177223
+        }
+      ],
+      "case_id": "pizza",
+      "pixels_match_original": true
+    },
+    {
+      "cafe": "dish_metadata_cafe1.csv",
+      "source_after_addition": "dish_1562784266",
+      "target_before_addition": "dish_1562784242",
+      "added_ingredient": [
+        "ingr_0000000205",
+        "corn on the cob",
+        "44.000000"
+      ],
+      "preserved": [
+        "ingr_0000000380",
+        "pizza",
+        "32.000000"
+      ],
+      "seconds_between_scans": 24,
+      "source_mass_g": 76.0,
+      "target_mass_g": 32.0,
+      "files": [
+        {
+          "tag": "source",
+          "modality": "rgb.png",
+          "relative_path": "pair_007\\source_rgb.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562784266/rgb.png",
+          "sha256": "12913b15454c42e56225f57b419ddf599c919403f8635e3bae2c8dbe50e2e486",
+          "size": 245035
+        },
+        {
+          "tag": "source",
+          "modality": "depth_raw.png",
+          "relative_path": "pair_007\\source_depth_raw.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562784266/depth_raw.png",
+          "sha256": "8fa5c491ae4d043ecf2ba756c59bfdece4e0e620caa62501f34d9aa8585edfb9",
+          "size": 182247
+        },
+        {
+          "tag": "target",
+          "modality": "rgb.png",
+          "relative_path": "pair_007\\target_rgb.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562784242/rgb.png",
+          "sha256": "8d069ade02c07618942aed0b18bf6b85d289fbda6fcd4c4eb336966a177f318f",
+          "size": 225885
+        },
+        {
+          "tag": "target",
+          "modality": "depth_raw.png",
+          "relative_path": "pair_007\\target_depth_raw.png",
+          "source_url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead/dish_1562784242/depth_raw.png",
+          "sha256": "fe98c7cb93616728eb3ff855e80545e8a164a411c62104448f5e07102f075a0e",
+          "size": 179692
+        }
+      ],
+      "case_id": "corn",
+      "pixels_match_original": true
+    }
+  ]
+}

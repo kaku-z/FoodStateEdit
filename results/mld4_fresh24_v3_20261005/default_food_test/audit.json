@@ -1,0 +1,178 @@
+{
+  "evaluated_utc": "2026-10-05T14:55:11.459994+00:00",
+  "protocol_sha256": "2237547d1a9b27bd68f152da8bf96e8b7bd37c2e7017ddc236e549ad7fcfd554",
+  "complete": 1,
+  "failed": 0,
+  "pending": 0,
+  "cases": [
+    {
+      "case_id": "real_02_16784",
+      "index": 2,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1414,
+        "known": 1625,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 1623
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "cd01617b1e410a5bbfcc292e22dc5a7033e78830f1b564ed7fc0b8589905e35d",
+        "texture_sha256": "4182a54847b36d3fca0a3cdb1bf33c2d31f4dcd674ed076389a16cd727607a91",
+        "source_sha256": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "f4689dea2c3e55a06d3c68a76a66210060db3ba1bbca5ff88beac554ce02e7f0",
+        "known_pixels": 1625,
+        "bound_core_pixels": 1414,
+        "food_pixels": 2075,
+        "core_fraction": 0.6814457831325301,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 39.78005657708628,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0030088024057081174,
+        "computed_proxy_volume_after": 0.003007527671301509,
+        "computed_proxy_volume_relative_change": 0.0004236683685807652,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.019963394850492477,
+          "source_anchor_actual_sdf_abs_p90": 0.04128604382276535,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.09485285729169846,
+            -0.0547062698751688,
+            -0.009624775033444166,
+            0.06209907587617636,
+            0.2050311118364334
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.021508725649350656,
+          "source_interval_anchor_distance_p90": 0.07968750000000002,
+          "source_prior_anchor_gap_over_point1_fraction": 0.07207792207792207,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.003906250000000007,
+            0.03515625000000006,
+            0.042968750000000076,
+            0.046875000000000076,
+            0.06640625000000011
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.5889610389610389,
+          "posterior_centered_color_std": 2.8128331473992914,
+          "interior_color_mae_vs_observed": 9.59901344063383,
+          "learned_material_only_mae": 0.6832568334604238,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0014285714285714286,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.008340314272284407,
+            0.035396317392787514,
+            0.03910932899327833,
+            0.03912095648238166,
+            0.03912095648238166
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.016694201784308145,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.01956047824119083,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.13209370414932053,
+          "hidden_learned_material_only_mae": 0.6318206664494106,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1540
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            490.75137774425826,
+            64.21380279709697
+          ],
+          "new_tip_uv": [
+            490.75137774425826,
+            64.21380279709697
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "chicken skin",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        26,
+        18,
+        166,
+        118
+      ],
+      "source_bbox": [
+        240,
+        66,
+        373,
+        196
+      ],
+      "artifacts": {
+        "source.png": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+        "base.png": "c0511490299d8cc83b2db046740b98746e6b0bd4d7643d8c47375b1b897cf743",
+        "A.png": "cd01617b1e410a5bbfcc292e22dc5a7033e78830f1b564ed7fc0b8589905e35d",
+        "final.png": "f4689dea2c3e55a06d3c68a76a66210060db3ba1bbca5ff88beac554ce02e7f0",
+        "selected_reference.png": "9d4eed7a13221271e9a07d52390416a20d673d6067141f4189dd92cde021b941",
+        "edit_mask.png": "7872a9d79a6e9bfa2c71a4c423cb40baa7aa2cb71e08c1b3a21c61b723c0c3fc",
+        "source_removed_mask.png": "1129c5de64bf33ad713af5d4e16fab37a9379a3f558487b6758c3a54f52594c5",
+        "core_mask.png": "573f425fdfb9b7ce0cb14cac3f9bc9bd1fbc2f72a710cef35fdcc601c160893c",
+        "status.json": "7b9cc35291da982812b9772e5fb344bfb5a793e7c999f4fd6b7e9c9182417d03",
+        "input_protocol.json": "b104703a661505641dd8579d80386ad1dfb717ef9714942d5aceb7b04e93440b",
+        "material_contract.json": "37b4105b7126fa934aa5c7765dd4667834e00ad61bc0e72b226cbe3a9eb8a59c",
+        "geometry_state.json": "aac2cb520955dfd54cb8c7f524efdfdc04e5c016fea3766548ebfd6c6008a145"
+      },
+      "visual_review": "pending"
+    }
+  ],
+  "interpretation": "All 24 inputs were previously observed. Exact pixel/material contracts do not prove photographic realism, physical mass conservation or generalization.",
+  "evaluator_sha256": "f08678f8c6805e781f364c04715b962a1bdba41418bbf068aef226d7706496d7"
+}

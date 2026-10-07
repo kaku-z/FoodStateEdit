@@ -1,0 +1,153 @@
+{
+  "status": "outputs_verified_independent_review_pending",
+  "verified_output_files": 14,
+  "config_sha256": "29cd3358ec78084c9b07223dfe6b22ae10dc342e32c1ad4266fad105acbb2e86",
+  "cases": 2,
+  "metrics": [
+    {
+      "case": "pizza",
+      "variant": "source",
+      "source_hole_real_target_mae": 83.1308035495416,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 94.90652859317242
+    },
+    {
+      "case": "pizza",
+      "variant": "scaffold",
+      "source_hole_real_target_mae": 14.832083149482767,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 0.0
+    },
+    {
+      "case": "pizza",
+      "variant": "direct_raw",
+      "source_hole_real_target_mae": 82.75498847869785,
+      "protected_vs_source_mae": 3.4912242545831687,
+      "payload_copy_error_internal_only": 9.990813220265276
+    },
+    {
+      "case": "pizza",
+      "variant": "direct_localized",
+      "source_hole_real_target_mae": 82.75498847869785,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 9.990813220265276
+    },
+    {
+      "case": "pizza",
+      "variant": "grounded_raw",
+      "source_hole_real_target_mae": 78.06792665588077,
+      "protected_vs_source_mae": 6.9490573267820395,
+      "payload_copy_error_internal_only": 60.10056534029137
+    },
+    {
+      "case": "pizza",
+      "variant": "grounded_localized",
+      "source_hole_real_target_mae": 78.06792665588077,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 60.10056534029137
+    },
+    {
+      "case": "pizza",
+      "variant": "observed_locked",
+      "source_hole_real_target_mae": 78.06792665588077,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 0.0
+    },
+    {
+      "case": "pizza",
+      "variant": "relit_locked",
+      "source_hole_real_target_mae": 78.06792665588077,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 6.788106110023918
+    },
+    {
+      "case": "pizza",
+      "variant": "original_raw",
+      "source_hole_real_target_mae": 38.702162082659214,
+      "protected_vs_source_mae": 6.45324065649056,
+      "payload_copy_error_internal_only": 96.0226679712981
+    },
+    {
+      "case": "pizza",
+      "variant": "original_localized",
+      "source_hole_real_target_mae": 38.702162082659214,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 96.0226679712981
+    },
+    {
+      "case": "corn",
+      "variant": "source",
+      "source_hole_real_target_mae": 42.32968911683988,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 36.33720054241374
+    },
+    {
+      "case": "corn",
+      "variant": "scaffold",
+      "source_hole_real_target_mae": 23.83641517073829,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 0.0
+    },
+    {
+      "case": "corn",
+      "variant": "direct_raw",
+      "source_hole_real_target_mae": 2.625275565753363,
+      "protected_vs_source_mae": 4.8835687715020155,
+      "payload_copy_error_internal_only": 5.09899050775953
+    },
+    {
+      "case": "corn",
+      "variant": "direct_localized",
+      "source_hole_real_target_mae": 2.625275565753363,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 5.09899050775953
+    },
+    {
+      "case": "corn",
+      "variant": "grounded_raw",
+      "source_hole_real_target_mae": 2.467314527376614,
+      "protected_vs_source_mae": 3.2189885607337283,
+      "payload_copy_error_internal_only": 3.5245844005825924
+    },
+    {
+      "case": "corn",
+      "variant": "grounded_localized",
+      "source_hole_real_target_mae": 2.467314527376614,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 3.5245844005825924
+    },
+    {
+      "case": "corn",
+      "variant": "observed_locked",
+      "source_hole_real_target_mae": 2.467314527376614,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 0.0
+    },
+    {
+      "case": "corn",
+      "variant": "relit_locked",
+      "source_hole_real_target_mae": 2.467314527376614,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 2.601727688212546
+    },
+    {
+      "case": "corn",
+      "variant": "original_raw",
+      "source_hole_real_target_mae": 2.0592522607639356,
+      "protected_vs_source_mae": 6.252571181539784,
+      "payload_copy_error_internal_only": 38.3410175279996
+    },
+    {
+      "case": "corn",
+      "variant": "original_localized",
+      "source_hole_real_target_mae": 2.0592522607639356,
+      "protected_vs_source_mae": 0.0,
+      "payload_copy_error_internal_only": 38.3410175279996
+    }
+  ],
+  "limits": [
+    "Real target metric applies only to the source hole, not the moved food or spoon.",
+    "Copy error and protected-region identity are construction checks, not independent performance.",
+    "No independent ballots exist yet. Two cases are not a confirmatory sample."
+  ]
+}

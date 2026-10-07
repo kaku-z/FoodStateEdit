@@ -1,0 +1,359 @@
+[
+  {
+    "case_id": "cohesive_01",
+    "family": "cohesive",
+    "source": {
+      "file_name": "7489.jpg",
+      "text": "A high quality food photography of cold tofu on a plate, UECFood style.",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/7489.jpg",
+      "sha256": "cd92b2477620cba4688a4cd73bd32d155a357ca77e32effe138bb1b8a665a7e2",
+      "local_path": "outputs/first_bite_20260928_sources/cohesive_v2/7489.jpg"
+    },
+    "food_description": "a large square block of tofu with soy sauce",
+    "bite_description": "the front lower corner of the tofu",
+    "source_box": [
+      0.51,
+      0.68,
+      0.64,
+      0.9
+    ],
+    "source_center": [
+      0.575,
+      0.79
+    ],
+    "container_center": [
+      0.51,
+      0.56
+    ],
+    "container_diameter": 1.1,
+    "elevation_degrees": 49,
+    "target_ground_xy": [
+      0.28,
+      0.59
+    ],
+    "hand_entry_xy": [
+      0.98,
+      0.61
+    ],
+    "existing_utensil_box": null,
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "cohesive_02",
+    "family": "cohesive",
+    "source": {
+      "file_name": "7490.jpg",
+      "text": "A high quality food photography of cold tofu on a plate, UECFood style.",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/7490.jpg",
+      "sha256": "ddf238858635546bdb6a62ceb2e98532ad533b6f2ba705dc4b84bed509eeb347",
+      "local_path": "outputs/first_bite_20260928_sources/cohesive_v2/7490.jpg"
+    },
+    "food_description": "a block of tofu topped with chopped scallions",
+    "bite_description": "the plain front-right corner of the tofu",
+    "source_box": [
+      0.66,
+      0.71,
+      0.82,
+      0.87
+    ],
+    "source_center": [
+      0.74,
+      0.79
+    ],
+    "container_center": [
+      0.5,
+      0.64
+    ],
+    "container_diameter": 1.04,
+    "elevation_degrees": 48,
+    "target_ground_xy": [
+      0.28,
+      0.55
+    ],
+    "hand_entry_xy": [
+      0.98,
+      0.54
+    ],
+    "existing_utensil_box": null,
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "granular_01",
+    "family": "granular",
+    "source": {
+      "name": "883.jpg",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/883.jpg",
+      "sha256": "527d2d58861d2fc579eadd7d79bec53f40e4021bf24cb4d5d52054db2ab47db1",
+      "local_path": "outputs/first_bite_20260928_sources/v1/883.jpg"
+    },
+    "food_description": "fried rice topped with an intact white egg",
+    "bite_description": "a small scoop from the front portion of the rice, leaving the egg untouched",
+    "source_box": [
+      0.46,
+      0.64,
+      0.6,
+      0.76
+    ],
+    "source_center": [
+      0.53,
+      0.7
+    ],
+    "container_center": [
+      0.49,
+      0.49
+    ],
+    "container_diameter": 0.96,
+    "elevation_degrees": 47,
+    "target_ground_xy": [
+      0.34,
+      0.53
+    ],
+    "hand_entry_xy": [
+      0.98,
+      0.5
+    ],
+    "existing_utensil_box": [
+      0.82,
+      0.23,
+      0.94,
+      0.63
+    ],
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "granular_02",
+    "family": "granular",
+    "source": {
+      "name": "9054.jpg",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/9054.jpg",
+      "sha256": "cae159edeaadbe22baab5c117e2b36dec5b7de62b5e57018040793fd41fdbe9c",
+      "local_path": "outputs/first_bite_20260928_sources/v1/9054.jpg"
+    },
+    "food_description": "golden fried rice on a white plate with blue decorations",
+    "bite_description": "a small scoop from the front portion of the rice",
+    "source_box": [
+      0.39,
+      0.55,
+      0.53,
+      0.68
+    ],
+    "source_center": [
+      0.46,
+      0.615
+    ],
+    "container_center": [
+      0.51,
+      0.49
+    ],
+    "container_diameter": 0.96,
+    "elevation_degrees": 48,
+    "target_ground_xy": [
+      0.4,
+      0.58
+    ],
+    "hand_entry_xy": [
+      0.99,
+      0.49
+    ],
+    "existing_utensil_box": [
+      0.58,
+      0.04,
+      0.98,
+      0.32
+    ],
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "strand_01",
+    "family": "strand",
+    "source": {
+      "file_name": "1942.jpg",
+      "text": "A high quality food photography of udon noodle, others on a plate, UECFood style.",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/1942.jpg",
+      "sha256": "9d60a0704cb0c81346585224aa0357e8fb1a4e0b990a2d599d74ca688f790a66",
+      "local_path": "outputs/first_bite_20260928_sources/strand_v2/1942.jpg"
+    },
+    "food_description": "thick udon noodles in a patterned bowl",
+    "bite_description": "a small bundle of exposed udon near the front of the bowl",
+    "source_box": [
+      0.4,
+      0.48,
+      0.58,
+      0.68
+    ],
+    "source_center": [
+      0.49,
+      0.5800000000000001
+    ],
+    "container_center": [
+      0.43,
+      0.53
+    ],
+    "container_diameter": 0.87,
+    "elevation_degrees": 52,
+    "target_ground_xy": [
+      0.5,
+      0.43
+    ],
+    "hand_entry_xy": [
+      0.99,
+      0.45
+    ],
+    "existing_utensil_box": null,
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "strand_02",
+    "family": "strand",
+    "source": {
+      "name": "2084.jpg",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/2084.jpg",
+      "sha256": "9a80c6279afe4b02bbc5e9621887bed6f8266377c7418039ecc9e51c22080d89",
+      "local_path": "outputs/first_bite_20260928_sources/v1/2084.jpg"
+    },
+    "food_description": "udon noodles with tempura garnish in a bowl",
+    "bite_description": "a small bundle of exposed noodles near the front, keeping garnish in the bowl",
+    "source_box": [
+      0.37,
+      0.59,
+      0.55,
+      0.72
+    ],
+    "source_center": [
+      0.46,
+      0.655
+    ],
+    "container_center": [
+      0.5,
+      0.6
+    ],
+    "container_diameter": 0.94,
+    "elevation_degrees": 31,
+    "target_ground_xy": [
+      0.44,
+      0.5
+    ],
+    "hand_entry_xy": [
+      0.98,
+      0.47
+    ],
+    "existing_utensil_box": null,
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "liquid_01",
+    "family": "liquid",
+    "source": {
+      "name": "3615.jpg",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/3615.jpg",
+      "sha256": "b8f3997d9919d5348c7f27a4c815b38e4aa9798782abb61cbb2ce697285160eb",
+      "local_path": "outputs/first_bite_20260928_sources/v1/3615.jpg"
+    },
+    "food_description": "smooth greenish cream soup in a white handled cup",
+    "bite_description": "one spoonful of soup from the front-right area, leaving central garnish",
+    "source_box": [
+      0.52,
+      0.56,
+      0.66,
+      0.68
+    ],
+    "source_center": [
+      0.5900000000000001,
+      0.6200000000000001
+    ],
+    "container_center": [
+      0.45,
+      0.56
+    ],
+    "container_diameter": 0.94,
+    "elevation_degrees": 33,
+    "target_ground_xy": [
+      0.56,
+      0.43
+    ],
+    "hand_entry_xy": [
+      0.99,
+      0.46
+    ],
+    "existing_utensil_box": null,
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  },
+  {
+    "case_id": "liquid_02",
+    "family": "liquid",
+    "source": {
+      "name": "16737.jpg",
+      "remote_source": "/host/space0/guo-z/projects/multimodal_food/uecfood_dataset/16737.jpg",
+      "sha256": "94983f84bfcdc266ac50ce7326fa9e45af9cf4e94d383acdcf3f5aad9f13d376",
+      "local_path": "outputs/first_bite_20260928_sources/v1/16737.jpg"
+    },
+    "food_description": "smooth pale yellow soup in a white cup",
+    "bite_description": "one spoonful from the front portion of the soup",
+    "source_box": [
+      0.48,
+      0.53,
+      0.64,
+      0.67
+    ],
+    "source_center": [
+      0.56,
+      0.6000000000000001
+    ],
+    "container_center": [
+      0.51,
+      0.52
+    ],
+    "container_diameter": 0.91,
+    "elevation_degrees": 37,
+    "target_ground_xy": [
+      0.57,
+      0.43
+    ],
+    "hand_entry_xy": [
+      0.99,
+      0.43
+    ],
+    "existing_utensil_box": null,
+    "annotation_author": "assistant_source_only_manual",
+    "camera_status": "relative assumed orthographic; not calibrated",
+    "source_view": "oblique; degree estimate is a modeling assumption",
+    "license": "UECFOOD non-commercial research; local source copies are not for redistribution",
+    "source_url": "https://foodcam.mobi/dataset256.html",
+    "split": "development_seen_after_source_selection"
+  }
+]

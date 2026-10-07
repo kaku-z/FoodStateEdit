@@ -1,0 +1,135 @@
+{
+  "recorded_utc": "2026-09-28T05:07:11.668104+00:00",
+  "status": "REPAIR_EXECUTED_REMAINING_VISUAL_FAILURES",
+  "new_model_calls": 4,
+  "verified_server_files": 8,
+  "verified_projection_steps": 80,
+  "unit_tests": "16 passed",
+  "legacy_compositions_unchanged": 4,
+  "runs": [
+    {
+      "condition": "scaffold_only",
+      "run_manifest": "outputs\\observed_edit_v3_20260928_gp40\\scaffold_only_v1\\run_manifest.json",
+      "sha256": "4e940bba1694797bd62022c9fc17c4d277116290985bd9ba6fc67cf3be837bdf",
+      "duration_seconds": 784.6811623573303
+    },
+    {
+      "condition": "projected",
+      "run_manifest": "outputs\\observed_edit_v3_20260928_gp40\\projected_v1\\run_manifest.json",
+      "sha256": "b8eccae8d7c11cbc48c1df1ecc42cb44046ef53c70e4d2cffe101da34f2968e4",
+      "duration_seconds": 784.6732437610626
+    }
+  ],
+  "heldout": "not_unlocked",
+  "independent_review": "not_performed",
+  "report": {
+    "path": "docs/OBSERVED_EDIT_V3_REPAIR_RESULT_20260928.md",
+    "sha256": "0f4c208643e3f5140020b3342c7ebe4c149bca8621074f3b7c68ffa5f655c510"
+  },
+  "review_files": [
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/all_variants.png",
+      "sha256": "4fa89aa57178aef407ab194a71c50a91d300fb84c85356b09d4e46fe126865bf"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_projected_hard.png",
+      "sha256": "b8f0e9c5de7dccce569d60734fd0bfe6fe240cae19986d2613771f973d596c6a"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_projected_poisson.png",
+      "sha256": "827151f5cab8f9363fde29bf91a11cbe8741f603fc7b9541ab396d6d388c97fb"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_projected_raw.png",
+      "sha256": "34d58d91f548bef9f96ce6a5178d6e3d4b6d0d507aada7862020725406955c33"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_repair_comparison.png",
+      "sha256": "1eb68f47955e7ec53e03e1933fcd04a55d18c42b26a2ac828794b16607fd37c0"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_scaffold_only_hard.png",
+      "sha256": "5373b47bc014481463acceb0f70965df0c7875532d16cf9c8328ffde9f7eb15b"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_scaffold_only_poisson.png",
+      "sha256": "1bb7e610c60be730cdb2d3d4cc2157d2454000b56c45fde1c8184abbf6bb91a1"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/corn_scaffold_only_raw.png",
+      "sha256": "a9d8b697222fda62aeed8df6893695436fcd5f30475183f316702b359704b816"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/metrics.csv",
+      "sha256": "c8c275011b920b0646cfe81c03109670d380fb1fc2651f982c5f92d83ebdb08d"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_projected_hard.png",
+      "sha256": "07bf58476ed26df38ef92fa1bdbaadfb5a2cea84361b4f918c363a6b43fae482"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_projected_poisson.png",
+      "sha256": "455c12fa6deaf8c906f2eef051a01387f5b6144430e6ccb21eb69e7e7ed6937a"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_projected_raw.png",
+      "sha256": "2abc15340200162a940c62df3608ee1d64a2e14863a2e7adc1252fe8fd2143a6"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_repair_comparison.png",
+      "sha256": "98edfb91af02baa51692832da0374d9874d961f937189074debdfe075fd65ea0"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_scaffold_only_hard.png",
+      "sha256": "612ee8f91b5b52bbefd109f91eeb33f947957f8e799011e392680c549345524e"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_scaffold_only_poisson.png",
+      "sha256": "54fac6379148089db509f0eb7b82864bda8a7690c6c2a819e5a504b62321e5e2"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/pizza_scaffold_only_raw.png",
+      "sha256": "9d5ded64e62982373a95efa4ef4878667cc49675da63aa29bc7fa36590a3950f"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_review/review_manifest.json",
+      "sha256": "1f02b765405c6303f82ecf7f4c67feea04804a667ed248f6ed0dfc5968e107e2"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/corn_boundary_comparison.png",
+      "sha256": "6b10795cf79d38b2e43d7be3f36f46fcaba012f66b7626f7699bc0802f575516"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/corn_projected_screened.png",
+      "sha256": "8b6115e9d547a8ddf21f6af7a81a8f6cbdf0389148a11a55fdd7a7d674a058e3"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/corn_scaffold_only_screened.png",
+      "sha256": "93a776ce54cea7213155128f9867b4616a706022022a02684784141c9f560e8b"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/manifest.json",
+      "sha256": "95420f9b8997344c7399e42ae054fabce89e25df352683c2e4a465e82729b9a9"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/metrics.csv",
+      "sha256": "7b9dc17767fe80dbe59ec36cdbf34838d084f78f6fd7b913e5a09cb384e1c64c"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/pizza_boundary_comparison.png",
+      "sha256": "259709186fd6973363c913608cfd877e8be3afd23e668a1ef1864b77a1b037a0"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/pizza_projected_screened.png",
+      "sha256": "0ca459f772082beece9c09ddd61df6c4c277cfe5a1864106bece31b69c43b74e"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/pizza_scaffold_only_screened.png",
+      "sha256": "fea8932b5ae042010efddd1f55300cdf91eca85061cee880bdd600d2a57d4ee8"
+    },
+    {
+      "path": "outputs/observed_edit_v3_20260928_screened/repair_summary.png",
+      "sha256": "7cf56ca69613886fad88b028ca47d178b692dbd355c617c1f3898979feea92dd"
+    }
+  ]
+}

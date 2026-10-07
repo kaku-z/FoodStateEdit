@@ -1,0 +1,187 @@
+{
+  "schema_version": "foodstateedit.first_bite_design.v1",
+  "status": "DESIGN_COMPLETE_INPUTS_AND_IMPLEMENTATION_PENDING",
+  "user_confirmed_endpoint": "Before entering the mouth: a first mouthful is supported by a utensil, clearly above the original plate or food surface.",
+  "execution_ready": false,
+  "execution_blockers": [
+    "Eight real source photos and their provenance are not yet bound.",
+    "Per-case action annotations and matched C/D controls need implementation and verification.",
+    "Exact prompts, code, preprocessing sizes and hashes must be frozen before generation."
+  ],
+  "new_model_calls_in_this_design_turn": 0,
+  "image_contract": {
+    "real_source_required": true,
+    "same_camera": true,
+    "one_cropped_hand": true,
+    "face_or_mouth": false,
+    "raw_generation_endpoint": true,
+    "hard_pixel_restoration": false,
+    "first_bite_is_history_condition_not_proven_from_one_frame": true
+  },
+  "families": {
+    "cohesive": {
+      "utensil": "fork",
+      "payload": "one small bite-sized piece",
+      "source_change": "matching local gap and natural cut or broken surface",
+      "contact": "bite securely supported by fork tines"
+    },
+    "granular": {
+      "utensil": "eating_spoon",
+      "payload": "one modest spoonful of distinguishable grains",
+      "source_change": "small shallow reduction and plausible local rearrangement",
+      "contact": "grains supported in the spoon bowl"
+    },
+    "strand": {
+      "utensil": "two_chopsticks",
+      "payload": "one mouthful-sized bundle",
+      "source_change": "local rearrangement; trailing strands may stay connected",
+      "contact": "bundle visibly gripped between two chopsticks with natural hanging curves"
+    },
+    "liquid": {
+      "utensil": "soup_spoon",
+      "payload": "one spoonful with a plausible liquid surface",
+      "source_change": "smooth or lightly disturbed source surface; no permanent hole required",
+      "contact": "liquid retained inside the spoon bowl without floating or impossible spill"
+    }
+  },
+  "methods": [
+    {
+      "id": "A_direct",
+      "input": "source photo + concise complete instruction",
+      "generation_calls_per_cell": 1
+    },
+    {
+      "id": "B_action_spec",
+      "input": "source photo + structured version of the same action information",
+      "generation_calls_per_cell": 1
+    },
+    {
+      "id": "C_planar_guide",
+      "input": "B + 2D layout guide derived from shared source annotations",
+      "generation_calls_per_cell": 1
+    },
+    {
+      "id": "D_geometry_guide",
+      "input": "B + projected relative geometry/contact guide derived from shared source annotations",
+      "generation_calls_per_cell": 1
+    }
+  ],
+  "model": {
+    "name": "Qwen-Image-Edit-2511",
+    "root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "version_policy": "Reuse the inspected offline pipeline and weight hashes, do not update silently.",
+    "model_changes_during_comparison": false,
+    "steps": 40,
+    "true_cfg_scale": 4.0,
+    "resolution_policy": "Freeze per input, preserve aspect ratio, identical across methods; values pending input binding."
+  },
+  "common_annotations": [
+    "food_family",
+    "source_bite_region",
+    "utensil",
+    "payload_extent",
+    "target_contact_xy",
+    "normalized_lift_height",
+    "handle_direction",
+    "hand_entry",
+    "source_change_rule",
+    "allowed_change_region",
+    "camera_and_plate_assumptions"
+  ],
+  "pilot": {
+    "case_count": 8,
+    "per_family": 2,
+    "view": "oblique",
+    "seeds": [
+      281,
+      913
+    ],
+    "calls": 64,
+    "candidate_selection": "source-only eligibility, before generation",
+    "one_candidate_per_cell": true,
+    "retries": 0,
+    "replace_failed_seed": false,
+    "all_results_retained": true,
+    "default_normalized_lift_height": 0.16
+  },
+  "height_diagnostic": {
+    "condition": "Run only if D visibly lifts in the main experiment.",
+    "case_selection": "First slot of each family, fixed before generation",
+    "seed": 2027,
+    "normalized_heights": [
+      0,
+      0.08,
+      0.16
+    ],
+    "calls": 12,
+    "scope": "separate diagnostic, not main success denominator",
+    "prompt_policy": "Identical neutral instruction across three heights: follow the height in the guide; no conflicting fixed positive-height text."
+  },
+  "human_review": {
+    "raters_per_output": 3,
+    "raters_status": "unassigned; placeholders are not ratings",
+    "blinded_to": [
+      "method",
+      "seed",
+      "parameters"
+    ],
+    "input_and_output_both_visible": true,
+    "binary_dimensions": [
+      "lift",
+      "bite_and_support",
+      "source_change",
+      "food_and_scene",
+      "hand_and_utensil"
+    ],
+    "answers": [
+      "pass",
+      "fail",
+      "uncertain"
+    ],
+    "photo_score_range": [
+      1,
+      5
+    ],
+    "minimum_photo_score": 4,
+    "per_rater_success": "All five binary dimensions pass AND photo score >=4",
+    "output_success": "At least two raters individually pass the complete conjunction",
+    "uncertain_counts_as_nonpass": true,
+    "unrated_output": "not evaluated; never converted to pass",
+    "assistant_review": "development diagnostic only, not independent review"
+  },
+  "pilot_promotion": {
+    "scope": "practical development gate, not a significance claim",
+    "minimum_joint_successes_per_method": 12,
+    "denominator_per_method": 16,
+    "at_least_one_success_per_input": true,
+    "at_least_one_success_per_family": true,
+    "prefer_simpler_method_if_no_demonstrated_benefit": true
+  },
+  "future_unseen": {
+    "status": "planned; no inputs allocated or unlocked",
+    "target_cases": 40,
+    "per_family": 10,
+    "oblique_per_family": 8,
+    "overhead_per_family": 2,
+    "seeds": [
+      41,
+      163,
+      907
+    ],
+    "methods": 4,
+    "calls": 480,
+    "cluster_unit": "dish/sequence, not seed or frame",
+    "old_40_image_split_automatically_reused": false
+  },
+  "sources": [
+    {
+      "url": "https://github.com/google-research-datasets/Nutrition5k",
+      "use": "Potential licensed real source photos; scans are not eating ground truth."
+    },
+    {
+      "url": "https://github.com/QwenLM/Qwen-Image/blob/main/Qwen-Image-Edit-2509.md",
+      "use": "Official control/multi-image documentation; actual local integration still requires verification."
+    }
+  ],
+  "report": "docs/FIRST_BITE_EXPERIMENT_PLAN_20260928.md"
+}

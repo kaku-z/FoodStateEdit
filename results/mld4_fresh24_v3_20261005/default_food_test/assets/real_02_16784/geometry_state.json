@@ -1,0 +1,551 @@
+{
+  "case_id": "real_00_input",
+  "index": 0,
+  "status": "rendered",
+  "prompt": "food",
+  "mode": "cohesive",
+  "branch": "cohesive",
+  "camera_intrinsics": [
+    [
+      558.860107421875,
+      0.0,
+      200.0
+    ],
+    [
+      0.0,
+      558.860107421875,
+      150.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "action": {
+    "translation": [
+      -1.13474493406587,
+      -0.3878750240772049,
+      -0.17734502770977967
+    ],
+    "lift_multiplier": 1.0,
+    "up_axis": [
+      -0.03368804231286049,
+      -0.7397637963294983,
+      -0.672022819519043
+    ],
+    "source_extent": 1.388572316297101
+  },
+  "spoon": {
+    "aspect_ratio": 1.5,
+    "plate_tilt_degrees": 12.000000000000002,
+    "bowl_normal_camera": [
+      -0.026595703647560698,
+      -0.5840214315114115,
+      -0.8113024422720424
+    ],
+    "radius_ab": [
+      0.2591378240170106,
+      0.17275854934467372
+    ],
+    "shell_thickness": 0.0031096538882041266,
+    "bowl_curvature_height": 0.024186196908254323,
+    "inferred_contact_min_gap": 0.0,
+    "inferred_penetration": 0.0,
+    "food_lower_points_inside_bowl_fraction": 0.9584415584415584,
+    "watertight": true,
+    "connected_components": 1,
+    "lighting": {
+      "ambient": 0.18,
+      "strip_directional_lights": 5,
+      "each_strip_intensity": 0.22,
+      "metallic": 1.0,
+      "roughness": 0.2
+    },
+    "geometry": "One joined closed shallow ellipse, narrow neck, curved widening handle and rounded tip",
+    "appearance": "Separate smooth metallic1 roughness.2 pass, strip directional lights and source-photograph neutral palette. Inferred lighting, not measured HDR; no Qwen image pixels.",
+    "spoon_axes_camera": [
+      [
+        0.9996462717059672,
+        0.0,
+        -0.026595703647560698
+      ],
+      [
+        -0.015537957131186237,
+        -0.8115895244403563,
+        -0.5840214315114115
+      ],
+      [
+        -0.021584794475480437,
+        0.5842280895099139,
+        -0.8113024422720424
+      ]
+    ],
+    "center_local": [
+      -0.6162929666413969,
+      2.0615945073919004
+    ],
+    "floor_local": -2.1753058884145418,
+    "bowl_handle_blend": true,
+    "original_constructor_floor": -2.1665113299589502,
+    "initial_support_adjustment_camera": -0.008794558455591517,
+    "frame_connection": {
+      "old_tip_uv": [
+        490.75137774425826,
+        64.21380279709697
+      ],
+      "new_tip_uv": [
+        490.75137774425826,
+        64.21380279709697
+      ],
+      "distal_axial_extension": 0.0,
+      "fixed_bowl_vertices": 19604,
+      "fixed_bowl_max_change": 0.0,
+      "camera_margin_pixels": 10.0,
+      "already_beyond_right_frame": true,
+      "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+      "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+    }
+  },
+  "solver": {
+    "full": {
+      "model": "Quasi-static material graph elastic energy descent; spring strain + rest-curvature bending + gravity + unilateral elliptical bowl + coupled volume pressure + tangential action prior",
+      "units": "Source camera proxy units, normalized by lifted bite diameter; stiffness and gravity are prescribed, not measured",
+      "compliance": 0.08,
+      "iterations": 180,
+      "requested_iterations": 180,
+      "gravity_strength": 0.09,
+      "contact_enabled": true,
+      "preserve_volume": true,
+      "watertight_edge_topology": true,
+      "vertex_count": 3080,
+      "face_count": 6156,
+      "edge_count": 19256,
+      "internal_material_column_count": 1540,
+      "tangential_pose_stiffness": 0.8,
+      "tangential_pose_prior": "Soft per-material-vertex anchor to the prescribed action in spoon tangent axes; source footprint conditioning, not measured static friction",
+      "material_vertex_ids_preserved": true,
+      "face_topology_preserved": true,
+      "characteristic_length": 0.4103536676,
+      "displacement_rms": 0.018755270384473194,
+      "nonrigid_displacement_rms": 0.0026483128865332217,
+      "normalized_nonrigid_displacement_rms": 0.00645373270823234,
+      "centroid_displacement_camera": [
+        -0.0017896243775114735,
+        0.030783181954606335,
+        0.009134154119904833
+      ],
+      "edge_strain_rms": 0.005637108668524246,
+      "edge_strain_p95": 0.00928256990761464,
+      "edge_strain_max": 0.2629931737393201,
+      "rest_signed_volume_camera": 0.0030088024560675193,
+      "deformed_signed_volume_camera": 0.0030075277216888084,
+      "volume_relative_error": 0.00042366835221774313,
+      "face_orientation_reversal_count": 0,
+      "face_orientation_metric": "Normal dot rest normal < 0; detects large flips as well as valid rotations, not tetrahedral inversion",
+      "degenerate_face_count": 0,
+      "support_footprint_vertex_fraction": 0.9782467532467533,
+      "supported_vertex_fraction": 0.001948051948051948,
+      "contact_tolerance_camera": 0.002051768338,
+      "bowl_handle_blend": true,
+      "bowl_min_gap_camera": 4.440892098500626e-16,
+      "penetration_depth_camera": 0.0,
+      "penetration_depth_normalized": 0.0,
+      "final_update_rms_normalized": 0.0022843219993613885,
+      "relaxation_history": [
+        {
+          "step": 1,
+          "energy": -0.002223708058089899,
+          "step_length": 1.0,
+          "update_rms": 0.021383929000632327,
+          "volume_relative_error": 1.633760221231295e-05
+        },
+        {
+          "step": 11,
+          "energy": -0.0032777034406887536,
+          "step_length": 0.000244140625,
+          "update_rms": 3.3004234684655336e-07,
+          "volume_relative_error": 4.553630756620741e-05
+        },
+        {
+          "step": 21,
+          "energy": -0.0032233275360687244,
+          "step_length": 1.0,
+          "update_rms": 0.00783785399477303,
+          "volume_relative_error": 5.626526873936388e-05
+        },
+        {
+          "step": 31,
+          "energy": -0.0035117272289150233,
+          "step_length": 7.62939453125e-06,
+          "update_rms": 1.6243453851207206e-08,
+          "volume_relative_error": 5.508147845689759e-05
+        },
+        {
+          "step": 41,
+          "energy": -0.0025428256724875425,
+          "step_length": 0.5,
+          "update_rms": 0.0037487053797250025,
+          "volume_relative_error": 6.888421184925164e-05
+        },
+        {
+          "step": 51,
+          "energy": -0.003777243387958698,
+          "step_length": 0.00390625,
+          "update_rms": 7.263198731661163e-06,
+          "volume_relative_error": 6.332809987208421e-05
+        },
+        {
+          "step": 61,
+          "energy": -0.0027415314515034576,
+          "step_length": 1.0,
+          "update_rms": 0.004517941003683992,
+          "volume_relative_error": 7.099290160017535e-05
+        },
+        {
+          "step": 71,
+          "energy": -0.003984933194628983,
+          "step_length": 0.25,
+          "update_rms": 0.0020366818580660087,
+          "volume_relative_error": 6.445099040031099e-05
+        },
+        {
+          "step": 81,
+          "energy": -0.0039987434276224304,
+          "step_length": 3.814697265625e-06,
+          "update_rms": 7.127424829050555e-09,
+          "volume_relative_error": 6.4715655927583e-05
+        },
+        {
+          "step": 91,
+          "energy": -0.0031419914761581717,
+          "step_length": 1.0,
+          "update_rms": 0.0022666815654807542,
+          "volume_relative_error": 7.4009841515843e-05
+        },
+        {
+          "step": 101,
+          "energy": -0.004233778291160409,
+          "step_length": 0.001953125,
+          "update_rms": 1.181193838674354e-06,
+          "volume_relative_error": 6.357999696504635e-05
+        },
+        {
+          "step": 111,
+          "energy": -0.0031707910212974773,
+          "step_length": 0.5,
+          "update_rms": 0.007023462199469972,
+          "volume_relative_error": 7.405097746360223e-05
+        },
+        {
+          "step": 121,
+          "energy": -0.004353861865710943,
+          "step_length": 1.0,
+          "update_rms": 0.001953844811370796,
+          "volume_relative_error": 6.149224383222851e-05
+        },
+        {
+          "step": 131,
+          "energy": -0.004433312245002203,
+          "step_length": 1.52587890625e-05,
+          "update_rms": 9.983167902844497e-09,
+          "volume_relative_error": 6.241743040080738e-05
+        },
+        {
+          "step": 141,
+          "energy": -0.0035844872122889736,
+          "step_length": 1.0,
+          "update_rms": 0.0008198533486953458,
+          "volume_relative_error": 7.081848751688824e-05
+        },
+        {
+          "step": 151,
+          "energy": -0.004597955411846693,
+          "step_length": 0.0625,
+          "update_rms": 4.8783012739452095e-05,
+          "volume_relative_error": 6.141031060802327e-05
+        },
+        {
+          "step": 161,
+          "energy": -0.004601092560717774,
+          "step_length": 1.1920928955078125e-07,
+          "update_rms": 8.54941608806762e-11,
+          "volume_relative_error": 6.137566515740378e-05
+        },
+        {
+          "step": 171,
+          "energy": -0.0038871166343892533,
+          "step_length": 0.5,
+          "update_rms": 0.0028846433145392762,
+          "volume_relative_error": 6.976094216704087e-05
+        },
+        {
+          "step": 180,
+          "energy": -0.00404724173283273,
+          "step_length": 1.0,
+          "update_rms": 0.0022843219993613885,
+          "volume_relative_error": 6.625145614025385e-05
+        }
+      ]
+    },
+    "no_contact": {
+      "model": "Quasi-static material graph elastic energy descent; spring strain + rest-curvature bending + gravity + unilateral elliptical bowl + coupled volume pressure + tangential action prior",
+      "units": "Source camera proxy units, normalized by lifted bite diameter; stiffness and gravity are prescribed, not measured",
+      "compliance": 0.08,
+      "iterations": 1,
+      "requested_iterations": 180,
+      "gravity_strength": 0.09,
+      "contact_enabled": false,
+      "preserve_volume": true,
+      "watertight_edge_topology": true,
+      "vertex_count": 3080,
+      "face_count": 6156,
+      "edge_count": 19256,
+      "internal_material_column_count": 1540,
+      "tangential_pose_stiffness": 0.8,
+      "tangential_pose_prior": "Soft per-material-vertex anchor to the prescribed action in spoon tangent axes; source footprint conditioning, not measured static friction",
+      "material_vertex_ids_preserved": true,
+      "face_topology_preserved": true,
+      "characteristic_length": 0.4103536676,
+      "displacement_rms": 4.171334192935673,
+      "nonrigid_displacement_rms": 8.28432024880415e-10,
+      "normalized_nonrigid_displacement_rms": 2.0188244684776276e-09,
+      "centroid_displacement_camera": [
+        0.19250484440691684,
+        4.227260015515811,
+        5.85604828306289
+      ],
+      "edge_strain_rms": 1.3311880925067977e-13,
+      "edge_strain_p95": 2.6248447859700264e-13,
+      "edge_strain_max": 1.3644640972643174e-12,
+      "rest_signed_volume_camera": 0.0030088024560675193,
+      "deformed_signed_volume_camera": 0.0030088024560675124,
+      "volume_relative_error": 2.220446049250313e-15,
+      "face_orientation_reversal_count": 0,
+      "face_orientation_metric": "Normal dot rest normal < 0; detects large flips as well as valid rotations, not tetrahedral inversion",
+      "degenerate_face_count": 0,
+      "support_footprint_vertex_fraction": 0.9720779220779221,
+      "supported_vertex_fraction": 0.0,
+      "contact_tolerance_camera": 0.002051768338,
+      "bowl_handle_blend": true,
+      "bowl_min_gap_camera": -7.222453926624047,
+      "penetration_depth_camera": 7.222453926624047,
+      "penetration_depth_normalized": 17.600558973593163,
+      "final_update_rms_normalized": 10.165217145659627,
+      "relaxation_history": [
+        {
+          "step": 1,
+          "energy": -1.0344753330840855,
+          "step_length": 1.0,
+          "update_rms": 10.165217145659627,
+          "volume_relative_error": 2.220446049250313e-15
+        },
+        {
+          "step": 1,
+          "energy": -1.0344753330840855,
+          "step_length": 0.0,
+          "update_rms": 0.0,
+          "volume_relative_error": 2.220446049250313e-15
+        }
+      ]
+    },
+    "no_gravity": {
+      "model": "Quasi-static material graph elastic energy descent; spring strain + rest-curvature bending + gravity + unilateral elliptical bowl + coupled volume pressure + tangential action prior",
+      "units": "Source camera proxy units, normalized by lifted bite diameter; stiffness and gravity are prescribed, not measured",
+      "compliance": 0.08,
+      "iterations": 0,
+      "requested_iterations": 180,
+      "gravity_strength": 0.0,
+      "contact_enabled": true,
+      "preserve_volume": true,
+      "watertight_edge_topology": true,
+      "vertex_count": 3080,
+      "face_count": 6156,
+      "edge_count": 19256,
+      "internal_material_column_count": 1540,
+      "tangential_pose_stiffness": 0.8,
+      "tangential_pose_prior": "Soft per-material-vertex anchor to the prescribed action in spoon tangent axes; source footprint conditioning, not measured static friction",
+      "material_vertex_ids_preserved": true,
+      "face_topology_preserved": true,
+      "characteristic_length": 0.4103536676,
+      "displacement_rms": 2.853989679949916e-08,
+      "nonrigid_displacement_rms": 9.532918557051318e-10,
+      "normalized_nonrigid_displacement_rms": 2.3230981735354463e-09,
+      "centroid_displacement_camera": [
+        7.411154356152415e-12,
+        -7.513760952694191e-09,
+        4.883025878809456e-08
+      ],
+      "edge_strain_rms": 2.0055874860982042e-08,
+      "edge_strain_p95": 1.6756842302623198e-08,
+      "edge_strain_max": 1.3500945592603841e-06,
+      "rest_signed_volume_camera": 0.0030088024560675193,
+      "deformed_signed_volume_camera": 0.003008802553368987,
+      "volume_relative_error": 3.2338935307407723e-08,
+      "face_orientation_reversal_count": 0,
+      "face_orientation_metric": "Normal dot rest normal < 0; detects large flips as well as valid rotations, not tetrahedral inversion",
+      "degenerate_face_count": 0,
+      "support_footprint_vertex_fraction": 0.9636363636363636,
+      "supported_vertex_fraction": 0.0003246753246753247,
+      "contact_tolerance_camera": 0.002051768338,
+      "bowl_handle_blend": true,
+      "bowl_min_gap_camera": 8.881784197001252e-16,
+      "penetration_depth_camera": 0.0,
+      "penetration_depth_normalized": 0.0,
+      "final_update_rms_normalized": 0.0,
+      "relaxation_history": [
+        {
+          "step": 0,
+          "energy": 0.0,
+          "step_length": 0.0,
+          "update_rms": 0.0,
+          "volume_relative_error": 0.0
+        }
+      ]
+    }
+  },
+  "render": {
+    "rigid": {
+      "changed_pixels": 19459,
+      "food_visible_pixels": 1994,
+      "spoon_visible_pixels": 4143,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    },
+    "full": {
+      "changed_pixels": 19245,
+      "food_visible_pixels": 2075,
+      "spoon_visible_pixels": 3875,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    },
+    "no_contact": {
+      "changed_pixels": 18777,
+      "food_visible_pixels": 0,
+      "spoon_visible_pixels": 5743,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    },
+    "no_gravity": {
+      "changed_pixels": 19459,
+      "food_visible_pixels": 1994,
+      "spoon_visible_pixels": 4143,
+      "accepted_cached_metal_pixels": 0,
+      "source_target_overlap": 0
+    }
+  },
+  "source_observation": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/from_image_default_food_20261005/geometry_initial/observations/real_00_input",
+  "strand_reconstruction": null,
+  "source_topology": {
+    "rule": "Largest source triangulated material component before target solving; no target outlier clamp",
+    "connectivity": "Triangles share material vertices; no proximity edges between separate islands",
+    "cohesive_single_piece_prior": true,
+    "original_selected_pixels": 1540,
+    "original_top_triangles": 2890,
+    "source_triangulated_component_count": 1,
+    "triangulated_component_vertex_counts": [
+      1540
+    ],
+    "triangulated_component_triangle_counts": [
+      2890
+    ],
+    "source_unreferenced_pixels": 0,
+    "discarded_triangulated_island_pixels": 0,
+    "retained_source_pixels": 1540,
+    "retained_top_triangles": 2890,
+    "discarded_source_pixels": 0,
+    "retained_top_vertex_coverage": 1.0,
+    "retained_source_order_preserved": true,
+    "selected_top_area_pixels": 1445.0,
+    "discarded_pixels_remain_in_source": true,
+    "initial_largest_component_pixels": 1540,
+    "manifold_trimmed_source_pixels": 0,
+    "boundary_pinch_repair": [],
+    "manifold_repair_scope": "Source-only single-solid hypothesis: ambiguous boundary pinch samples and disconnected remnants stay on the source. No new source UVs, coincident vertex-ID splitting, or hidden observed material is introduced.",
+    "closed_column_edge_incidence_valid": true,
+    "closed_column_edge_count": 9234
+  },
+  "tube_sides": null,
+  "shadow_model": "Prescribed directional illumination, source-plane clipped material/spoon triangle silhouettes with soft blur; source light is not calibrated.",
+  "source_selection": {
+    "rule": "Original source bite selection retained"
+  },
+  "source_state_mass_scope": "Unit-density carried reconstruction plus inferred equal-column remaining source material. Fixed lumped weights; no measured food mass or density.",
+  "remaining_material_scope": "Unmoved source-visible food columns; hidden remaining volume is a proxy.",
+  "deformation_scope": "Prescribed material compliance/rod stiffness in inferred source scale; not identified from physical observations.",
+  "geometry_uncertainty": {
+    "patch_camera_footprint_minor": 0.18107425719499592,
+    "food_extent_over_patch_minor": 7.668524161343211,
+    "source_normal_relief_before_over_minor": 0.4493477893332184,
+    "source_normal_relief_after_over_minor": 0.2499999999999997,
+    "source_ray_relief_clipped_fraction": 0.41493506493506493,
+    "source_uv_projection_max_change": 3.0517578125e-05,
+    "closure_bounds_over_minor": [
+      0.025,
+      0.3
+    ],
+    "uniform_closure_over_minor": 0.15
+  },
+  "learned_prior": {
+    "source_anchor_actual_sdf_abs_mean": 0.019963394850492477,
+    "source_anchor_actual_sdf_abs_p90": 0.04128604382276535,
+    "predicted_canonical_toward_depth_quantiles": [
+      -0.09485285729169846,
+      -0.0547062698751688,
+      -0.009624775033444166,
+      0.06209907587617636,
+      0.2050311118364334
+    ],
+    "source_ray_nonempty_fraction": 1.0,
+    "source_interval_anchor_distance_mean": 0.021508725649350656,
+    "source_interval_anchor_distance_p90": 0.07968750000000002,
+    "source_prior_anchor_gap_over_point1_fraction": 0.07207792207792207,
+    "posterior_thickness_raw_quantiles_over_extent": [
+      0.003906250000000007,
+      0.03515625000000006,
+      0.042968750000000076,
+      0.046875000000000076,
+      0.06640625000000011
+    ],
+    "posterior_thickness_lower_clip_fraction": 0.0,
+    "posterior_thickness_upper_clip_fraction": 0.5889610389610389,
+    "posterior_centered_color_std": 2.8128331473992914,
+    "interior_color_mae_vs_observed": 9.59901344063383,
+    "learned_material_only_mae": 0.6832568334604238,
+    "visible_field_queries_outside_canonical_fraction": 0.0,
+    "hidden_ray_queries_outside_canonical_fraction": 0.0014285714285714286,
+    "source_height_cap_active_fraction": 0.0,
+    "source_plate_floor_active_fraction": 0.0,
+    "minimum_thickness_active_fraction": 0.0,
+    "final_closure_thickness_quantiles_over_extent": [
+      0.008340314272284407,
+      0.035396317392787514,
+      0.03910932899327833,
+      0.03912095648238166,
+      0.03912095648238166
+    ],
+    "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.016694201784308145,
+    "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.01956047824119083,
+    "hidden_material_query_delta_vs_surface_rgb_mae": 0.13209370414932053,
+    "hidden_learned_material_only_mae": 0.6318206664494106,
+    "hidden_material_queries_outside_canonical_fraction": 0.0,
+    "new_cut_material_field_queries": 1540
+  },
+  "models": {
+    "SAM3": "source food and ingredient masks",
+    "MoGe2": "inferred source points and camera",
+    "MLD2": "frozen65k learned source-conditioned hidden geometry/material closure",
+    "Qwen-Image-2.1 + Fun ControlNet-Union": "optional metal appearance inside unchanged visible spoon; no generated food geometry or RGB"
+  },
+  "generated_food_pixels": 0,
+  "paired_real_ground_truth": false,
+  "blind_holdout": false,
+  "source_uv_convention": "Strand source_uv uses pixel-index sampling coordinates; mesh source_uv uses pixel centers; strand renderer adds .5 for the texture atlas.",
+  "final_appearance": {
+    "accepted_cached_metal_pixels": 0,
+    "visible_spoon_pixels": 3875,
+    "generated_food_pixels": 0
+  },
+  "source_hash": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+  "script_hash": "160ccfffce750ea4f207dd4d965f2ae4b2d02c1b2d9a3197fafc2413e6fd418b"
+}

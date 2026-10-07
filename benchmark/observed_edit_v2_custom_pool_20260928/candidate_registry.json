@@ -1,0 +1,943 @@
+{
+  "status": "candidate_reservation_only_not_unlocked_test",
+  "selection_uses": "metadata only; no candidate images downloaded or viewed",
+  "scope": "custom-unseen",
+  "official_split_files": [
+    {
+      "url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/dish_ids/splits/depth_test_ids.txt",
+      "sha256": "6e43a5334a72bd06fa9c0d4b3bc86e2f57e5342b0b260d3fa003a76f7e39eca2"
+    },
+    {
+      "url": "https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/dish_ids/splits/depth_train_ids.txt",
+      "sha256": "d9702b71ade32b012fcb272f1f58b1d19178acd4536eccc651857760eab4bc30"
+    }
+  ],
+  "metadata_sha256": {
+    "dish_metadata_cafe1.csv": "881df31f27c2343d0ce219964527e0796f6ddadd60701ce6840fa801e8c2a960",
+    "dish_metadata_cafe2.csv": "ef9f800d7b9c2e7e9a9e7cda5cbb4cfe51c760a8c1af4c05786ccf051bf5d77d"
+  },
+  "allowed_food_names": [
+    "apple",
+    "bagel",
+    "baked potato",
+    "bread",
+    "brownie",
+    "cake",
+    "chicken",
+    "corn on the cob",
+    "grilled chicken",
+    "orange",
+    "pizza",
+    "potatoes",
+    "salmon",
+    "sausage",
+    "steak",
+    "tofu"
+  ],
+  "prior_dishes_excluded": [
+    "dish_1558640190",
+    "dish_1558640238",
+    "dish_1558640294",
+    "dish_1558642420",
+    "dish_1558642458",
+    "dish_1558642490",
+    "dish_1559578551",
+    "dish_1559578579",
+    "dish_1559589873",
+    "dish_1559589902",
+    "dish_1559668238",
+    "dish_1559668272",
+    "dish_1559674689",
+    "dish_1559674781",
+    "dish_1559675101",
+    "dish_1559675146",
+    "dish_1559751458",
+    "dish_1559751552",
+    "dish_1559751710",
+    "dish_1559751744",
+    "dish_1559838214",
+    "dish_1559838279",
+    "dish_1559850283",
+    "dish_1559850314",
+    "dish_1560357267",
+    "dish_1560357297",
+    "dish_1560360030",
+    "dish_1560360055",
+    "dish_1561146758",
+    "dish_1561146781",
+    "dish_1561577083",
+    "dish_1561577119",
+    "dish_1561665626",
+    "dish_1561665671",
+    "dish_1562783605",
+    "dish_1562783691",
+    "dish_1562784242",
+    "dish_1562784266",
+    "dish_1563563240",
+    "dish_1563563264",
+    "dish_1563568263",
+    "dish_1563568292",
+    "dish_1563813806",
+    "dish_1563813833",
+    "dish_1564086602",
+    "dish_1564086624",
+    "dish_1565810969",
+    "dish_1565811000",
+    "dish_1565987015",
+    "dish_1565987054",
+    "dish_1566413321",
+    "dish_1566413356",
+    "dish_1573665025",
+    "dish_1573665056"
+  ],
+  "excluded_cafe_day_groups": [
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-05-23"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-03"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-04"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-05"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-06"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-12"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-21"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-26"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-06-27"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-07-10"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-07-19"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-07-22"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-07-25"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-08-14"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-08-16"
+    ],
+    [
+      "dish_metadata_cafe1.csv",
+      "2019-08-21"
+    ],
+    [
+      "dish_metadata_cafe2.csv",
+      "2019-11-13"
+    ]
+  ],
+  "eligible_dishes": 149,
+  "independent_day_groups": 39,
+  "candidates": [
+    {
+      "dish_id": "dish_1557862783",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-14",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000007",
+          "cauliflower",
+          77.0
+        ],
+        [
+          "ingr_0000000010",
+          "steak",
+          118.0
+        ],
+        [
+          "ingr_0000000028",
+          "chicken",
+          63.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "00248fe049ee96ed7430bbf59085aa1895bed3e5536f00ba36ac5bb4aceff371"
+    },
+    {
+      "dish_id": "dish_1558722398",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-24",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000054",
+          "apple",
+          161.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "02dd068b1d6da5c95742bad0837460b432452aa6e37bce51bc61b12e3bf4fb1d"
+    },
+    {
+      "dish_id": "dish_1558379273",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-20",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000039",
+          "sausage",
+          66.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "037f6d3519534e25148d4029b515769a4893e702872d4c3d6246e2de0c2655f5"
+    },
+    {
+      "dish_id": "dish_1568318361",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-09-12",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000010",
+          "steak",
+          182.0
+        ],
+        [
+          "ingr_0000000029",
+          "mixed greens",
+          115.0
+        ],
+        [
+          "ingr_0000000027",
+          "broccoli",
+          44.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "0590b4519189a5c695e966d78775e057c46a417ac2d4415619212ded164711cc"
+    },
+    {
+      "dish_id": "dish_1559239369",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-30",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000013",
+          "berries",
+          108.0
+        ],
+        [
+          "ingr_0000000036",
+          "spinach (raw)",
+          40.0
+        ],
+        [
+          "ingr_0000000058",
+          "orange",
+          128.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "05bdeda8eff675c2efeeba0e5cbdff278ac82f89497311c56b1dcce03271826b"
+    },
+    {
+      "dish_id": "dish_1558549086",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-22",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000005",
+          "potatoes",
+          95.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "06a2e7fabd60766489188902c9306e616d0288823a3b70d208f2c7d6c481ca11"
+    },
+    {
+      "dish_id": "dish_1560799277",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-17",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000380",
+          "pizza",
+          37.0
+        ],
+        [
+          "ingr_0000000027",
+          "broccoli",
+          36.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "08ffaef5b3661649db0d70734c6c9dd3267d6cb50c62252ae71f7d564696a4ca"
+    },
+    {
+      "dish_id": "dish_1562173381",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-03",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000039",
+          "sausage",
+          113.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "0e98d5129a024f53509dcc61cc431aafb02abddfcd8c40dd1494079a64de1dea"
+    },
+    {
+      "dish_id": "dish_1562947436",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-12",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000013",
+          "berries",
+          117.0
+        ],
+        [
+          "ingr_0000000039",
+          "sausage",
+          52.0
+        ],
+        [
+          "ingr_0000000038",
+          "pineapple",
+          73.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "133b588c45ad5c1e8735ad2f6ca0e8ba899accb3bf767de54b83125f3e481c34"
+    },
+    {
+      "dish_id": "dish_1562602627",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-08",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000015",
+          "hash browns",
+          65.0
+        ],
+        [
+          "ingr_0000000039",
+          "sausage",
+          106.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "1965aa454fc96c43c94100d7bce99b612fbe30e3f9b26e22658dec2b8e8be500"
+    },
+    {
+      "dish_id": "dish_1565894910",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-15",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000380",
+          "pizza",
+          105.0
+        ],
+        [
+          "ingr_0000000011",
+          "cheese pizza",
+          47.0
+        ],
+        [
+          "ingr_0000000455",
+          "cookies",
+          27.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "2040a626e6dde2387d2a401c495c784439793252623f95c6d23c515dde0a4505"
+    },
+    {
+      "dish_id": "dish_1567023161",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-28",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000028",
+          "chicken",
+          50.0
+        ],
+        [
+          "ingr_0000000512",
+          "kimchi",
+          44.0
+        ],
+        [
+          "ingr_0000000012",
+          "olives",
+          40.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "23c150e49601ab8adf849072152c0c8fcd40d413552a68e5df19ad36ec61c421"
+    },
+    {
+      "dish_id": "dish_1561737176",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-28",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000039",
+          "sausage",
+          117.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "245b5b799d99bbdd9fb620db61ad52c653ce74af6cb20b61b683d6922177851f"
+    },
+    {
+      "dish_id": "dish_1568401018",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-09-13",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000027",
+          "broccoli",
+          71.0
+        ],
+        [
+          "ingr_0000000028",
+          "chicken",
+          334.0
+        ],
+        [
+          "ingr_0000000029",
+          "mixed greens",
+          42.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "2466ca2a0a5ed80df62e411156b4eb2265e1ee85a99e13656164f061e41ecb59"
+    },
+    {
+      "dish_id": "dish_1558115601",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-17",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000005",
+          "potatoes",
+          111.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "257578328c3fd63873dc19ce0f52d9fc9941cbee49772916b531a99be38162b0"
+    },
+    {
+      "dish_id": "dish_1562085672",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-02",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000019",
+          "bread",
+          46.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "25ee3dd0917b9ba6379c977beda502cf240c1c7f508fd58da08c03463b130177"
+    },
+    {
+      "dish_id": "dish_1563389548",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-17",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000105",
+          "grilled chicken",
+          194.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "2867b6d84553185235b78fe4ecdeb95623475d4e3948e5e2fa19ba89444b7b1f"
+    },
+    {
+      "dish_id": "dish_1558459945",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-21",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000054",
+          "apple",
+          142.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "29b7d1141b0079b814efd26f868a4319566fa0e5fa033e0ebe29107bf80caaad"
+    },
+    {
+      "dish_id": "dish_1565640772",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-12",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000028",
+          "chicken",
+          137.0
+        ],
+        [
+          "ingr_0000000029",
+          "mixed greens",
+          54.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "2a69e0bbcb198600d3fb48b2b1164887a76985a88d2471a36e998b989356fe2b"
+    },
+    {
+      "dish_id": "dish_1564588567",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-31",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000039",
+          "sausage",
+          51.0
+        ],
+        [
+          "ingr_0000000008",
+          "scrambled eggs",
+          145.0
+        ],
+        [
+          "ingr_0000000128",
+          "egg whites",
+          116.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "3327be255961dc9a97e539b780b72771421bb3d63f0df2cbba41693fc6d9d828"
+    },
+    {
+      "dish_id": "dish_1558029324",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-05-16",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000005",
+          "potatoes",
+          115.0
+        ],
+        [
+          "ingr_0000000004",
+          "bacon",
+          27.0
+        ],
+        [
+          "ingr_0000000112",
+          "honeydew melons",
+          108.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "356192f6db1dba4b3c33802b4c8708501826c068c94816593a5a778cded3bb70"
+    },
+    {
+      "dish_id": "dish_1563218201",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-15",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000105",
+          "grilled chicken",
+          156.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "38c4690ae899a2aab58c48b4459b3c48c33eaed0aa4c3afc3442fe7ead84363e"
+    },
+    {
+      "dish_id": "dish_1561392410",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-24",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000039",
+          "sausage",
+          51.0
+        ],
+        [
+          "ingr_0000000027",
+          "broccoli",
+          33.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "39e98bd712b682e63ffd6e323af08b853ba5f0a74382b55f8bf5b52b7c1a567f"
+    },
+    {
+      "dish_id": "dish_1562875159",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-11",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000380",
+          "pizza",
+          98.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "3e1289b86c061950686c6a588f2356594235c995bb508b978cb1b1f8df2e8ec6"
+    },
+    {
+      "dish_id": "dish_1567110756",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-29",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000380",
+          "pizza",
+          42.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "42ff9865b6632b88848c70303e6aa0c9f4cf0d3c245e1def23f9cbc1a596e5ac"
+    },
+    {
+      "dish_id": "dish_1560441288",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-13",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000525",
+          "bok choy",
+          17.0
+        ],
+        [
+          "ingr_0000000005",
+          "potatoes",
+          29.0
+        ],
+        [
+          "ingr_0000000004",
+          "bacon",
+          26.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "48104d015aa37ac860f49ff745e71b9eda4e6c4dfd6e21b15aa9d302e93ad491"
+    },
+    {
+      "dish_id": "dish_1564691380",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-01",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000043",
+          "green beans",
+          39.0
+        ],
+        [
+          "ingr_0000000161",
+          "olive oil",
+          1.0
+        ],
+        [
+          "ingr_0000000205",
+          "corn on the cob",
+          71.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "58f548008c13ac2dccc17b16650afc911e182a372dd6e9331fe086485a2c26b3"
+    },
+    {
+      "dish_id": "dish_1559932674",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-07",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000058",
+          "orange",
+          124.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "5c08f361c002c8b0a5486f4d19e0898e86015077d3dff815a1f59d41f8cb8df3"
+    },
+    {
+      "dish_id": "dish_1566328776",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-20",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000028",
+          "chicken",
+          167.0
+        ],
+        [
+          "ingr_0000000471",
+          "cherry tomatoes",
+          36.0
+        ],
+        [
+          "ingr_0000000380",
+          "pizza",
+          233.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "5c27ad6b5047d15f400b6e521b1c6a9e78ca9d67bfaf880a4bdbd33faee7d72d"
+    },
+    {
+      "dish_id": "dish_1560887408",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-18",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000380",
+          "pizza",
+          122.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "5d20783ba710ed4de364fcd21bfdbff3c3f3823396bf34a7f33b2aa3b184c9ae"
+    },
+    {
+      "dish_id": "dish_1564159588",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-26",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000080",
+          "turkey bacon",
+          15.0
+        ],
+        [
+          "ingr_0000000039",
+          "sausage",
+          56.0
+        ],
+        [
+          "ingr_0000000004",
+          "bacon",
+          42.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "664b6b90c46b4fa763aeb767a911192d707255dabe4696cca5f3ed3b6d2d79ab"
+    },
+    {
+      "dish_id": "dish_1560527070",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-06-14",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000005",
+          "potatoes",
+          69.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "6f64cb8a737df9ad1245ed36de9776801850542f4418af33ab35fd8e59cd9a3c"
+    },
+    {
+      "dish_id": "dish_1564427455",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-29",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000105",
+          "grilled chicken",
+          135.0
+        ],
+        [
+          "ingr_0000000012",
+          "olives",
+          35.0
+        ],
+        [
+          "ingr_0000000471",
+          "cherry tomatoes",
+          48.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "80852556847d069749cd2520eb14754df9618e1a3de0eec098137496b3306c3a"
+    },
+    {
+      "dish_id": "dish_1565021104",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-05",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000337",
+          "waffles",
+          73.0
+        ],
+        [
+          "ingr_0000000050",
+          "tofu",
+          71.0
+        ],
+        [
+          "ingr_0000000128",
+          "egg whites",
+          53.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "84c50cc7d7e3312a1bad02699d7f2562201ea94f5636a1afae93020faa77e696"
+    },
+    {
+      "dish_id": "dish_1562009098",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-01",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000050",
+          "tofu",
+          96.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "88879606f98cb963a37b5b47098538272c725dfa3b1811a69df06f521e01920a"
+    },
+    {
+      "dish_id": "dish_1566502033",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-22",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000205",
+          "corn on the cob",
+          69.0
+        ],
+        [
+          "ingr_0000000525",
+          "bok choy",
+          179.512207
+        ],
+        [
+          "ingr_0000000161",
+          "olive oil",
+          4.487805
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "9690778f3e15795aa1b6ad0cae8f5ccf4063ae1ec4accd139c00e2501dfd5258"
+    },
+    {
+      "dish_id": "dish_1567789154",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-09-06",
+      "original_dataset_split": "depth_train_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000039",
+          "sausage",
+          111.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "d86153da1fb486e045e52046162aa6edf8e7ef83d6a9baa84ca380dd98f1b403"
+    },
+    {
+      "dish_id": "dish_1566589933",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-08-23",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000050",
+          "tofu",
+          122.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "db3b089c8e4d494fcfe17e58e92116e8fe17fcb10829252c948083b2ee680f2d"
+    },
+    {
+      "dish_id": "dish_1562703382",
+      "cafe": "dish_metadata_cafe1.csv",
+      "day_group": "2019-07-09",
+      "original_dataset_split": "depth_test_ids.txt",
+      "ingredients": [
+        [
+          "ingr_0000000380",
+          "pizza",
+          58.0
+        ],
+        [
+          "ingr_0000000013",
+          "berries",
+          87.0
+        ]
+      ],
+      "source_only_annotation": "pending",
+      "rank": "e10e10a8dd0db44750120df5ed58c1eed7791f5724052d241bea59e969015fe8"
+    }
+  ],
+  "limitations": [
+    "Source masks/targets/utensil size and suitability require annotation before any output generation.",
+    "Calendar-day grouping is conservative; it is not an observed plate identity label.",
+    "Foundation-model pretraining overlap is unknown.",
+    "No real spoon-lift target photographs or physical measurements are supplied."
+  ]
+}

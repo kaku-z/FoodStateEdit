@@ -1,0 +1,73 @@
+{
+  "launched_utc": "2026-10-05T14:32:12.716863+00:00",
+  "protocol_sha256": "5a97e6f97dc09aeef1f1340a279edff487102381bc5de8d2df14a60b735a16c3",
+  "smoke_final_sha256": "b63473c4258a3d497c5d97ed2233fdc139c3c67717b39feea4128f5b93c833e1",
+  "smoke_outside_edit_pixels_changed": 0,
+  "smoke_core_contract_max_rgb_error": 0,
+  "jobs": [
+    {
+      "shard": 0,
+      "gpu": 0,
+      "pid": 551131,
+      "command": [
+        "/usr/bin/python3",
+        "-u",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/run_mld4_fresh_batch.py",
+        "--protocol",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/protocol.json",
+        "--shard",
+        "0",
+        "--gpu",
+        "0"
+      ]
+    },
+    {
+      "shard": 1,
+      "gpu": 2,
+      "pid": 551132,
+      "command": [
+        "/usr/bin/python3",
+        "-u",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/run_mld4_fresh_batch.py",
+        "--protocol",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/protocol.json",
+        "--shard",
+        "1",
+        "--gpu",
+        "2"
+      ]
+    },
+    {
+      "shard": 2,
+      "gpu": 4,
+      "pid": 551135,
+      "command": [
+        "/usr/bin/python3",
+        "-u",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/run_mld4_fresh_batch.py",
+        "--protocol",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/protocol.json",
+        "--shard",
+        "2",
+        "--gpu",
+        "4"
+      ]
+    },
+    {
+      "shard": 3,
+      "gpu": 6,
+      "pid": 551136,
+      "command": [
+        "/usr/bin/python3",
+        "-u",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/run_mld4_fresh_batch.py",
+        "--protocol",
+        "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/protocol.json",
+        "--shard",
+        "3",
+        "--gpu",
+        "6"
+      ]
+    }
+  ]
+}

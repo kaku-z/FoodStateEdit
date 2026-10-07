@@ -1,0 +1,9 @@
+﻿case_id,family,split,required_view,status,source_path,source_sha256,source_url,license,dish_or_sequence_id,frame_or_camera_id,previously_seen,utensil,bite_region_path,payload_extent,target_contact_xy,normalized_lift_height,hand_entry,source_change_rule,allowed_change_region_path,camera_and_plate_assumptions,human_input_check
+cohesive_01,cohesive,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,fork,,,,0.16,,matching local gap and natural cut or broken surface,,,
+cohesive_02,cohesive,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,fork,,,,0.16,,matching local gap and natural cut or broken surface,,,
+granular_01,granular,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,eating_spoon,,,,0.16,,small shallow reduction and plausible local rearrangement,,,
+granular_02,granular,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,eating_spoon,,,,0.16,,small shallow reduction and plausible local rearrangement,,,
+strand_01,strand,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,two_chopsticks,,,,0.16,,local rearrangement; trailing strands may stay connected,,,
+strand_02,strand,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,two_chopsticks,,,,0.16,,local rearrangement; trailing strands may stay connected,,,
+liquid_01,liquid,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,soup_spoon,,,,0.16,,smooth or lightly disturbed source surface; no permanent hole required,,,
+liquid_02,liquid,development,oblique,UNBOUND_REAL_INPUT,,,,,,,,soup_spoon,,,,0.16,,smooth or lightly disturbed source surface; no permanent hole required,,,

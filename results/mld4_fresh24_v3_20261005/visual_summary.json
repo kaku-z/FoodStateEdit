@@ -1,0 +1,36 @@
+{
+  "cases": 24,
+  "all_criteria": {
+    "fail": 17,
+    "uncertain": 7
+  },
+  "criteria": {
+    "source_material_identity": {
+      "pass": 16,
+      "uncertain": 8
+    },
+    "visible_lift": {
+      "pass": 24
+    },
+    "food_spoon_support": {
+      "pass": 16,
+      "uncertain": 8
+    },
+    "source_removal": {
+      "fail": 16,
+      "pass": 4,
+      "uncertain": 4
+    },
+    "texture_and_seams": {
+      "fail": 11,
+      "uncertain": 13
+    },
+    "no_added_humans": {
+      "pass": 24
+    },
+    "handle_frame_connection": {
+      "pass": 24
+    }
+  },
+  "scope": "AI visual screen of previously observed regression data"
+}

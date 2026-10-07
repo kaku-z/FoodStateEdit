@@ -1,0 +1,16 @@
+{
+  "case_id": "real_02_16784",
+  "reviewer": "root assistant direct image inspection",
+  "final_sha256": "f4689dea2c3e55a06d3c68a76a66210060db3ba1bbca5ff88beac554ce02e7f0",
+  "criteria": {
+    "source_material_identity": "pass",
+    "visible_lift": "pass",
+    "food_spoon_support": "pass",
+    "source_removal": "fail",
+    "texture_and_seams": "fail",
+    "no_added_humans": "pass",
+    "handle_frame_connection": "pass"
+  },
+  "note": "仅 RGB、默认 food 的入口完整运行且实现检查全部通过；选中材料和勺上那一口与鸡肉相容，但源区域重画为几块新的深棕色块，没有形成合理缺口。它证明接口可执行，不证明默认提示可替代食物名称而保持质量。",
+  "comparison_scope": "Same original JPEG and frozen v3 code; changing coarse input text is allowed to alter selected segmentation, source bite and downstream guides. Not a pure text-only rendering ablation."
+}

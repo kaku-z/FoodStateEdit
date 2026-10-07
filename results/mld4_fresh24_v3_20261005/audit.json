@@ -1,0 +1,4044 @@
+{
+  "evaluated_utc": "2026-10-05T15:07:26.707286+00:00",
+  "protocol_sha256": "5a97e6f97dc09aeef1f1340a279edff487102381bc5de8d2df14a60b735a16c3",
+  "complete": 24,
+  "failed": 0,
+  "pending": 0,
+  "cases": [
+    {
+      "case_id": "real_00_2330",
+      "index": 0,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "meat",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1165,
+        "known": 1353,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 1353
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "4ddf3d81549e9d5fe8dc398ded4083eed10e261659faf8f5b21435cc778a6717",
+        "texture_sha256": "0df68c9e7a225c1944d493741c4ce574b93c686f6c28d099a9612ca3b0f1e54d",
+        "source_sha256": "e2083be016437562f41c30da4aaed427c859ce5a97e1fbfb9f07771959182419",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "e4557c3b5b99284225dc2e6e08157f42f300cce17455e8893a015ddfce32e1bc",
+        "known_pixels": 1353,
+        "bound_core_pixels": 1165,
+        "food_pixels": 1384,
+        "core_fraction": 0.8417630057803468,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 24.55050071530758,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 2.752548107238289e-05,
+        "computed_proxy_volume_after": 2.7436662087362586e-05,
+        "computed_proxy_volume_relative_change": 0.003226791378749705,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.03790941461920738,
+          "source_anchor_actual_sdf_abs_p90": 0.09037292748689651,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.06654994934797287,
+            0.11623083427548409,
+            0.15929845720529556,
+            0.181342501193285,
+            0.2319970577955246
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.0037034254807692337,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.0,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.003906250000000007,
+            0.08984375000000015,
+            0.10937500000000018,
+            0.12109375000000021,
+            0.13281250000000022
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0020604395604395605,
+          "posterior_thickness_upper_clip_fraction": 0.8914835164835165,
+          "posterior_centered_color_std": 4.008740519744135,
+          "interior_color_mae_vs_observed": 4.7459440517427005,
+          "learned_material_only_mae": 0.911085256966916,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 0.5054945054945055,
+          "minimum_thickness_active_fraction": 0.4732142857142857,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.00533483082355936,
+            0.00533483082355936,
+            0.008142459074732922,
+            0.008734932693533332,
+            0.008734932693533332
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.06642293831804315,
+          "hidden_learned_material_only_mae": 0.8983098825255593,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1456
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            381.09176059746244,
+            122.42401141465541
+          ],
+          "new_tip_uv": [
+            650.0,
+            148.50469895398342
+          ],
+          "distal_axial_extension": 0.9834646014619755,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "chicken",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        96,
+        58,
+        224,
+        140
+      ],
+      "source_bbox": [
+        223,
+        269,
+        361,
+        409
+      ],
+      "artifacts": {
+        "source.png": "e2083be016437562f41c30da4aaed427c859ce5a97e1fbfb9f07771959182419",
+        "base.png": "49bf98a171a7d2a6ad3eb453b4556796e9547a1df959766d3b746f7b1573d3ff",
+        "A.png": "4ddf3d81549e9d5fe8dc398ded4083eed10e261659faf8f5b21435cc778a6717",
+        "final.png": "e4557c3b5b99284225dc2e6e08157f42f300cce17455e8893a015ddfce32e1bc",
+        "selected_reference.png": "0bde4e543d7f365c2e48c845982ce746a083acb285bfe68bff682e0fbba2f610",
+        "edit_mask.png": "14712478929318c7316d5f0f54e01ed7d03a43114c3573451fb1e27b1151e474",
+        "source_removed_mask.png": "ec738a50e9ee26bcbf81755f142cd2d65f5614ffd4ebf51f05ed341fa92a8541",
+        "core_mask.png": "aad677cef29bb1f2052a70c30ddfb6cff3daa8f39b15a55e70f4a06b2897c3bd",
+        "status.json": "b24c0a0836b2389c13256e169671f42e9eb025bbeb835a0646a98b3aaeceadac",
+        "input_protocol.json": "29b31b674bc9179177cadede3773722ef08199aeb0e857addf9cc28ca957e4c3",
+        "material_contract.json": "e6a15957b0e80d0a18589619f16ca13bae1a14b86d2dbd00c0388db908823a0a",
+        "geometry_state.json": "bdf5b660cff9db26850abd02c06ffee8beb160cff211085d26c7756943bbd429"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_01_2198",
+      "index": 1,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "noodles",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 227,
+        "known": 459,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 457
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "1175a15f22ba24a061fd1298f3c220dd60d58c5e69e9b5593fbaf7b9d14853a4",
+        "texture_sha256": "61d584748e871e1498daab405ee57dc8e39b1d14ab2bef1c5b220e5bdc950301",
+        "source_sha256": "06bf1551afa925ccdd1d5824302f26d183d7b7b264fc5402027ff1e3d298e9e8",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "9f45183c41132fffb3aac1d8f2df6693b9b6f70aff8af996997cc8bcc8a665b6",
+        "known_pixels": 459,
+        "bound_core_pixels": 227,
+        "food_pixels": 502,
+        "core_fraction": 0.45219123505976094,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 16.095447870778266,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 1.633908166831329e-05,
+        "computed_proxy_volume_after": 1.626909169408543e-05,
+        "computed_proxy_volume_relative_change": 0.004283592900058419,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.03714299574494362,
+          "source_anchor_actual_sdf_abs_p90": 0.05819648504257202,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.10151401907205582,
+            0.2581609636545181,
+            0.37401124835014343,
+            0.5072734951972961,
+            0.6694080829620361
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.061574497257769666,
+          "source_interval_anchor_distance_p90": 0.10624999999999996,
+          "source_prior_anchor_gap_over_point1_fraction": 0.16087751371115175,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.042968750000000076,
+            0.07031250000000012,
+            0.07812500000000014,
+            0.08984375000000015,
+            0.13281250000000022
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.9241316270566727,
+          "posterior_centered_color_std": 2.2681603177138268,
+          "interior_color_mae_vs_observed": 3.795068330821092,
+          "learned_material_only_mae": 0.5461364711224483,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0036422444100689074,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 1.0,
+          "minimum_thickness_active_fraction": 1.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.004969338188727642,
+            0.004969338188727642,
+            0.004969338188727642,
+            0.004969338188727642,
+            0.004969338188727642
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.034768551315642326,
+          "hidden_learned_material_only_mae": 0.558542419395237,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1094
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            293.20620465332024,
+            55.746060313993816
+          ],
+          "new_tip_uv": [
+            360.0,
+            57.00691437678857
+          ],
+          "distal_axial_extension": 0.2348998635920447,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "food",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "cohesive_packet",
+      "initial_mode": "strand",
+      "head_bbox": [
+        45,
+        21,
+        138,
+        87
+      ],
+      "source_bbox": [
+        160,
+        115,
+        269,
+        218
+      ],
+      "artifacts": {
+        "source.png": "06bf1551afa925ccdd1d5824302f26d183d7b7b264fc5402027ff1e3d298e9e8",
+        "base.png": "0a9483fddd7125253af436d07def518dad26bfa59019ae544e432c5f09cdb115",
+        "A.png": "1175a15f22ba24a061fd1298f3c220dd60d58c5e69e9b5593fbaf7b9d14853a4",
+        "final.png": "9f45183c41132fffb3aac1d8f2df6693b9b6f70aff8af996997cc8bcc8a665b6",
+        "selected_reference.png": "43f26fcee990bb1487218ce8d46bc782dffd2dad6335c5b757b60bf530705803",
+        "edit_mask.png": "26c912f720105c20a56d77027c571e9e423b4426bf2f79c80685825331df5d1a",
+        "source_removed_mask.png": "6d261d63ea34ca87d3d23a671b77ede4bc355248839c3be408cea678656fb2c8",
+        "core_mask.png": "39b7d97dc429adb77bd1d170649ce954f3e14f4ecac046eade72271c61539bb4",
+        "status.json": "dd47c4de7f179108fc6771be9abaad346499de003abaec780a25bcb5ad5c4926",
+        "input_protocol.json": "5a9a675d180b79d9ee7aaf2016d3dc384c14bc5dbd8a99090c1e88089fe39f4a",
+        "material_contract.json": "5730cc0c8990bc4725fabff10007f26df9bec151626821f66eb6e6ba5f9c7e1a",
+        "geometry_state.json": "d0a50feff09ec8e010460585dc868274b0c98b103c755878d02c87c81cec00f8"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_02_16784",
+      "index": 2,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "chicken",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 821,
+        "known": 975,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 971
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "fb251fd4caff60cdd50534942c873cb8744af475853a1e8e0c805d81255d7a17",
+        "texture_sha256": "f02d168c5fdd5667e36673f5ae64a704576e5291c43d43cab4467d02355dd024",
+        "source_sha256": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "2a8c79d9d88b734bdf1522630a818731d49338efb14ca8844c9d60c503583ebd",
+        "known_pixels": 975,
+        "bound_core_pixels": 821,
+        "food_pixels": 1245,
+        "core_fraction": 0.659437751004016,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 38.02192448233861,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0013738051981035265,
+        "computed_proxy_volume_after": 0.0013733486677244735,
+        "computed_proxy_volume_relative_change": 0.00033231085432139373,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.023159191012382507,
+          "source_anchor_actual_sdf_abs_p90": 0.04976629614830017,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.03136535733938217,
+            0.01485583744943142,
+            0.042257048189640045,
+            0.07633394747972488,
+            0.13416002690792084
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.009254410143329663,
+          "source_interval_anchor_distance_p90": 0.026562500000000044,
+          "source_prior_anchor_gap_over_point1_fraction": 0.015435501653803748,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.011718750000000019,
+            0.03906250000000007,
+            0.06250000000000011,
+            0.08203125000000014,
+            0.10937500000000017
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.7960308710033076,
+          "posterior_centered_color_std": 1.3964728620599574,
+          "interior_color_mae_vs_observed": 9.518504769432148,
+          "learned_material_only_mae": 0.32184989197382957,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.010092443389025528,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.017518408326792103,
+            0.03581900384248321,
+            0.03621100598406286,
+            0.03621100598406286,
+            0.03621100598406286
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.016864525693449747,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.018105502992031237,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.16552938358260613,
+          "hidden_learned_material_only_mae": 0.2936046247051199,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 907
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            350.11833941568204,
+            73.32151255659649
+          ],
+          "new_tip_uv": [
+            410.0,
+            74.15707654741156
+          ],
+          "distal_axial_extension": 0.32145901586786707,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "chicken skin",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        46,
+        28,
+        147,
+        103
+      ],
+      "source_bbox": [
+        258,
+        82,
+        367,
+        188
+      ],
+      "artifacts": {
+        "source.png": "ac69adc448d3745ce6ff0bdd05c022b459ef395638d3b5f6e27894aff9c6d5dc",
+        "base.png": "576fce86a3c2fc787a0eb1cdbc02b301d1ef2c3065e57538817182872deb3740",
+        "A.png": "fb251fd4caff60cdd50534942c873cb8744af475853a1e8e0c805d81255d7a17",
+        "final.png": "2a8c79d9d88b734bdf1522630a818731d49338efb14ca8844c9d60c503583ebd",
+        "selected_reference.png": "eda00e161e2b7de928708a2b2f31f92c20d6bfd3ce4b3e1c925bde74b145a9ce",
+        "edit_mask.png": "0466171130def2750703178f6c11ee7dc31a133f34f83aa6c8c3d53339237142",
+        "source_removed_mask.png": "32b1f5c6c449a8662bcf86bb492364ca4babcc5f3d35e93328cddeb7bc6d0db6",
+        "core_mask.png": "5595e954a68696d6658e1df7f2736abcba43048544fe8a4fda3a9ee2f182cab9",
+        "status.json": "5ccc65d39fc0da5a1ca4f560dc71a449a59fd934b04307c0b7d0364c46fd319f",
+        "input_protocol.json": "a63005a1f92fe67f7d2384464a4a85a59507d6131095b18df773e93bef425d51",
+        "material_contract.json": "ff26d6a64d43bc3c5490aa4cc06e4fbc66fb6d2de8ebce550548ab1cc6f5dfbd",
+        "geometry_state.json": "2c4d75ea608f7a3639c4e6c53a94d65fc96bac0760e377d87cb135fb89430db7"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_03_7889",
+      "index": 3,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "pork",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 443,
+        "known": 557,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 554
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "145f8427e18d56ad9f0491483b7e8e715dfe17e947d022f7920833eb2312c685",
+        "texture_sha256": "17e92e04528984777a725075630c5374937b1c1b192ba88d5e54eb0742952225",
+        "source_sha256": "9f533900a4ff1fdea911cc646e6422becd1f1a92ebee84e4735d53082442326d",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "f7347aa788ac4e71effd4a87993228492ced9bad32d4f466c7a11239fd5ddf79",
+        "known_pixels": 557,
+        "bound_core_pixels": 443,
+        "food_pixels": 656,
+        "core_fraction": 0.6753048780487805,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 26.475545522949584,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0004314217611176182,
+        "computed_proxy_volume_after": 0.00043068951649615,
+        "computed_proxy_volume_relative_change": 0.0016972825375597411,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.11799587309360504,
+          "source_anchor_actual_sdf_abs_p90": 0.25654016733169555,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.11985253542661667,
+            0.10378801636397839,
+            0.21530751138925552,
+            0.3279075101017952,
+            0.5504688620567322
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.006782586104513064,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.030878859857482184,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.011718750000000019,
+            0.10156250000000017,
+            0.12890625000000022,
+            0.14843750000000025,
+            0.1718750000000003
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0011876484560570072,
+          "posterior_thickness_upper_clip_fraction": 0.0,
+          "posterior_centered_color_std": 3.126395266702468,
+          "interior_color_mae_vs_observed": 5.567065175001022,
+          "learned_material_only_mae": 0.6745286575688887,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.006358487118582131,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.021478204662959147,
+            0.10261246875513551,
+            0.12977537372806758,
+            0.14966821187177673,
+            0.17012167952040075
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.04421444491838426,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.07472455083922673,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.49653764960318425,
+          "hidden_learned_material_only_mae": 0.5499612254371553,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 842
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            267.9801278346189,
+            36.42859879790694
+          ],
+          "new_tip_uv": [
+            267.9801278346189,
+            36.42859879790694
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "cooked meat",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        16,
+        1,
+        100,
+        60
+      ],
+      "source_bbox": [
+        40,
+        34,
+        130,
+        129
+      ],
+      "artifacts": {
+        "source.png": "9f533900a4ff1fdea911cc646e6422becd1f1a92ebee84e4735d53082442326d",
+        "base.png": "66a5d427b3dade8f1a132523ac55396bc6de5b853a704c5f78e9dd11cbc23f45",
+        "A.png": "145f8427e18d56ad9f0491483b7e8e715dfe17e947d022f7920833eb2312c685",
+        "final.png": "f7347aa788ac4e71effd4a87993228492ced9bad32d4f466c7a11239fd5ddf79",
+        "selected_reference.png": "9c10e326a87cf530be368b6a01a78b91e96738f2e779dbc8d51a7232df4e24c5",
+        "edit_mask.png": "be34d9dd22eefcb6e65b5b4ed07bc1d72a674e2dd1b7ff443663ffb71e9d25a7",
+        "source_removed_mask.png": "e212b9b36dc96bea2411b0bd34203c193ed346232e44af08e3c9dbed84a3c3d5",
+        "core_mask.png": "118b183af3eca0bbedef677abd75c801ecfbad90ccdc81d6faf6c05771c0e6f2",
+        "status.json": "d9cde7267c8b08ebc996ce613cad0c999b8f83dc1a1958677fb2f231ec536a7b",
+        "input_protocol.json": "95fdffac764adbd1c4fba25b37667f765893c5427fb8eebab52c86356f828be2",
+        "material_contract.json": "a89a60ba7d42f194711c8becdfa42c77caa4910cb356e7020c0d7e84c4b91861",
+        "geometry_state.json": "cba77364e1ed4eb7539a2c39460fba3af8def58fe1b2798fdd277022cc635e2a"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_04_11680",
+      "index": 4,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 5053,
+        "known": 5451,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 5447
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "7db802e747232225a1168f55857926b3dbbdb946c7fe03cf72242e4038df14f0",
+        "texture_sha256": "9bc49dda9e72c00f64af5f45937f9972cdb51a531cc72ade0244c3522900eae5",
+        "source_sha256": "07374d42e2b6c8d7591c4b8444d210a825641f7860f6a37d58da5a7ab6e58c70",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "0d95db2de0666871a61aa75db998478bb04e8a4af9cba7b0c9d62bcb2afa87ef",
+        "known_pixels": 5451,
+        "bound_core_pixels": 5053,
+        "food_pixels": 6766,
+        "core_fraction": 0.746822347029264,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 33.635464080744114,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.004474585234066089,
+        "computed_proxy_volume_after": 0.004469263800882855,
+        "computed_proxy_volume_relative_change": 0.001189257306514313,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.02592160925269127,
+          "source_anchor_actual_sdf_abs_p90": 0.050997281074523955,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.03998066857457161,
+            0.09594863653182983,
+            0.2112065851688385,
+            0.3336925506591797,
+            0.4861544370651245
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.0009058106491175592,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.005982650314089142,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.019531250000000035,
+            0.05859375000000009,
+            0.08593750000000015,
+            0.1054687500000002,
+            0.12890625000000022
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.8537241998205205,
+          "posterior_centered_color_std": 3.9723387538885606,
+          "interior_color_mae_vs_observed": 7.530056451292112,
+          "learned_material_only_mae": 0.9862609750312357,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.020163420773070873,
+            0.04338430232278902,
+            0.04338430240351207,
+            0.04338430240351207,
+            0.04338430240351207
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.02096484808715333,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.021692151201756035,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.677516241241921,
+          "hidden_learned_material_only_mae": 0.7628604977351268,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 3343
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            634.9468392276087,
+            109.31288325102882
+          ],
+          "new_tip_uv": [
+            650.0,
+            109.19456138528413
+          ],
+          "distal_axial_extension": 0.054094727444129256,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "food",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        51,
+        22,
+        299,
+        193
+      ],
+      "source_bbox": [
+        367,
+        88,
+        568,
+        281
+      ],
+      "artifacts": {
+        "source.png": "07374d42e2b6c8d7591c4b8444d210a825641f7860f6a37d58da5a7ab6e58c70",
+        "base.png": "797c3c56be3a71f87d03d0466b91c37109404078e14e710ee61a303e0c7fc8b8",
+        "A.png": "7db802e747232225a1168f55857926b3dbbdb946c7fe03cf72242e4038df14f0",
+        "final.png": "0d95db2de0666871a61aa75db998478bb04e8a4af9cba7b0c9d62bcb2afa87ef",
+        "selected_reference.png": "eaf849eb49f48c7f840fdd8ad34e019da5b573e93cf9f60e435a5ae6c2dfcfe1",
+        "edit_mask.png": "cafaf11119d54f3195ee876d6214e90136d4ab7bb02a2f716e2d03f0ddda15eb",
+        "source_removed_mask.png": "b3fd514f43ea9989c7b53f14bac8473b8d2e1b0872d490f906f08b2be81f6651",
+        "core_mask.png": "0f1d7e46b8863a7baa4c9703f2c95351ce325dfecf57737f948e11d439e89e12",
+        "status.json": "e17801444c1aae5b01217ac3fceef63b7ba2b6d385d857fbc9b2d4f1dbe50e6f",
+        "input_protocol.json": "b4355247216996616d9f699bf922e1e80c6d3f81e0373de6dbd14545d62a83af",
+        "material_contract.json": "a839f266edb20e5c20c33ffd9f3350a7795c5c70bc59fd23a1ea328dad8b612e",
+        "geometry_state.json": "0e0a004c27b4aa1c9fcc7b38855c28813a793d98c46fd8db38b7c79bb4506546"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_05_8131",
+      "index": 5,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "sashimi",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 554,
+        "known": 688,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 688
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "5b70420e5136b3e1c689adf8b3487d66cc1a4b67aa90da605bef7ae276416261",
+        "texture_sha256": "52db3bbf893b7e6fd44396fa4c76503217757392ec69e7a42b43905f9bdea9d9",
+        "source_sha256": "2d816e2226f2c352f1d532e5d3899a89d8bbd8916509eb557001322102673484",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "5ff9c0f1de62a3cab4b3280822a82ed7bf7c653c750a06906b1204956eb4b263",
+        "known_pixels": 688,
+        "bound_core_pixels": 554,
+        "food_pixels": 710,
+        "core_fraction": 0.780281690140845,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 19.127557160048134,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "soft",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 2.092008836392472e-05,
+        "computed_proxy_volume_after": 2.0724400601741914e-05,
+        "computed_proxy_volume_relative_change": 0.009354060020141164,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.03288532793521881,
+          "source_anchor_actual_sdf_abs_p90": 0.08357807546854017,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.035985030233860016,
+            0.2042822763323784,
+            0.24252918362617493,
+            0.27743564546108246,
+            0.31053078174591064
+          ],
+          "source_ray_nonempty_fraction": 0.9960886571056062,
+          "source_interval_anchor_distance_mean": 0.07684770208604953,
+          "source_interval_anchor_distance_p90": 0.2656249999999999,
+          "source_prior_anchor_gap_over_point1_fraction": 0.29726205997392435,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.0,
+            0.03906250000000007,
+            0.05078125000000008,
+            0.0585937500000001,
+            0.10156250000000017
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.01303780964797914,
+          "posterior_thickness_upper_clip_fraction": 0.4784876140808344,
+          "posterior_centered_color_std": 4.061882046946287,
+          "interior_color_mae_vs_observed": 4.411114767876152,
+          "learned_material_only_mae": 0.9573972428482236,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 1.0,
+          "minimum_thickness_active_fraction": 1.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.004428672466468642,
+            0.004428672466468642,
+            0.004428672466468642,
+            0.004428672466468642,
+            0.004428672466468642
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.01620241597858205,
+          "hidden_learned_material_only_mae": 0.9508217876240358,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 767
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            329.85099793676545,
+            23.591723367469037
+          ],
+          "new_tip_uv": [
+            409.99999999999994,
+            9.28891415290783
+          ],
+          "distal_axial_extension": 0.21030242761481002,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "carrot",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "soft",
+      "head_bbox": [
+        54,
+        37,
+        143,
+        95
+      ],
+      "source_bbox": [
+        74,
+        65,
+        173,
+        162
+      ],
+      "artifacts": {
+        "source.png": "2d816e2226f2c352f1d532e5d3899a89d8bbd8916509eb557001322102673484",
+        "base.png": "3636e343730c8272aad393c0e4a6cb08cfe0408557b7007f7302425d11aba1e1",
+        "A.png": "5b70420e5136b3e1c689adf8b3487d66cc1a4b67aa90da605bef7ae276416261",
+        "final.png": "5ff9c0f1de62a3cab4b3280822a82ed7bf7c653c750a06906b1204956eb4b263",
+        "selected_reference.png": "7472a6f7652cf17fd7b85246dc34ffa4c48248bacb7ce3a15501de73697f91d9",
+        "edit_mask.png": "1ec54e004d2460ba5f97634b6429101f03a8a5920f682e2a55422f3f313da971",
+        "source_removed_mask.png": "2cc94cf3579336556bf79e0c1c7241ebb1fa1a3017369a400a8002d7f558e41c",
+        "core_mask.png": "b3412ddcccf6946af041d83a5d6eaa6129132b7e0a07086fc22b639a5472cfde",
+        "status.json": "1f0658e23be3bb22477468af36f153c555fea991417f4259bc21ac62c22799f6",
+        "input_protocol.json": "e7e7fc10aa310f362d5ec8b8db69f94faa60d106c0d9833d15e5f5c529f2859a",
+        "material_contract.json": "ed201828c61aa4c69c2a022af4ba2f7ef13533def63bb37e9ab61941027ea152",
+        "geometry_state.json": "6c9282404d0d32d272839cf195365bda161ffe7e37f2f902cb6c9ff3d4a5f741"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_06_2862",
+      "index": 6,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 863,
+        "known": 1005,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 1004
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "10c7dfe8f94157a88867c578d070c6cadf387dbae84b82419fc4c9154c096201",
+        "texture_sha256": "0b1fc107977716bea39a6698574b350aa7ae54cded2c915c0fa79b7f7d2040c4",
+        "source_sha256": "92f694ee940bb4a4b6e91d262229f65861112ecd0ac7c708d527cbe9deb8ae8e",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "e47f75cf1977855251ca1c2dfeccf5181c9487278d1cac81a95a44f90a15c087",
+        "known_pixels": 1005,
+        "bound_core_pixels": 863,
+        "food_pixels": 1122,
+        "core_fraction": 0.7691622103386809,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 27.301660872923907,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 7.251948148009126e-05,
+        "computed_proxy_volume_after": 7.24614294955766e-05,
+        "computed_proxy_volume_relative_change": 0.0008005019248599199,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.1216868907213211,
+          "source_anchor_actual_sdf_abs_p90": 0.22486298829317092,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.0974062904715538,
+            0.4370439052581787,
+            0.5681888461112976,
+            0.6571779996156693,
+            0.773240327835083
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.2112505444250871,
+          "source_interval_anchor_distance_p90": 0.42499999999999993,
+          "source_prior_anchor_gap_over_point1_fraction": 0.7290940766550522,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.015625000000000028,
+            0.0585937500000001,
+            0.07812500000000014,
+            0.10937500000000018,
+            0.15234375000000025
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0008710801393728223,
+          "posterior_thickness_upper_clip_fraction": 0.0,
+          "posterior_centered_color_std": 5.721252032729206,
+          "interior_color_mae_vs_observed": 6.039922619629399,
+          "learned_material_only_mae": 1.1732252715356686,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0638166711337443,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.02167884753413369,
+            0.05795036934624325,
+            0.07876828184502283,
+            0.10792636463371061,
+            0.14891481538820595
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.029101755139359177,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.05153999792750347,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.4007674938294943,
+          "hidden_learned_material_only_mae": 1.1831038037658994,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1148
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            400.64580864411676,
+            86.49433176935516
+          ],
+          "new_tip_uv": [
+            510.00000000000006,
+            91.45382147087054
+          ],
+          "distal_axial_extension": 0.28218755137756224,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "takoyaki",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        65,
+        38,
+        166,
+        108
+      ],
+      "source_bbox": [
+        38,
+        56,
+        151,
+        173
+      ],
+      "artifacts": {
+        "source.png": "92f694ee940bb4a4b6e91d262229f65861112ecd0ac7c708d527cbe9deb8ae8e",
+        "base.png": "ca4ff6ad7e3ee0aeb81a3e2b9cfebf402b3d5700c9cc9f5437765ab56ad80850",
+        "A.png": "10c7dfe8f94157a88867c578d070c6cadf387dbae84b82419fc4c9154c096201",
+        "final.png": "e47f75cf1977855251ca1c2dfeccf5181c9487278d1cac81a95a44f90a15c087",
+        "selected_reference.png": "fd5f304eaf6915fb50de725e038c221c328a47bc341a2d46244061b513a8a9a2",
+        "edit_mask.png": "9c7b2168537eac179422c05db320dc2b0284937aa641cdc2ee676a4b12c30f42",
+        "source_removed_mask.png": "d2032ce9cac2298a8d7442d3d656656eac632f3ed56ef2c4a04c1c30b13c0b1d",
+        "core_mask.png": "9a86f433cb51e907be86d6abe23f7923bcedf33071f90391476a456bd3b1246b",
+        "status.json": "8a08a012e38fe8390343472b7781e111f0b77fcf9a1aad477ce717cad83ddf0a",
+        "input_protocol.json": "3575e6eba2b58586d5efb93a297ec7f67cc2d2325fb986a64e45274d0db94d51",
+        "material_contract.json": "2ed27b791ab5d089f0acd9b8983f962827e678b37ef0e6bf615ea85d5db8971c",
+        "geometry_state.json": "be15891f330481dafe92ca3e27433c18a4bb4b40cf64e62f0c79eeff7150393e"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_07_10704",
+      "index": 7,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "fish shaped pancake",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 995,
+        "known": 1169,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 1168
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "298ae8ddb446d667a1f635dc050e83497acc9823016bf801398094791e8fc58f",
+        "texture_sha256": "4511b4f1f4f8d1c3fdc9e8e307c7f9d2483b4b6079528d36b3c5d992775daa28",
+        "source_sha256": "6e4d31b72ba5fbe1559b5a10ea45fe2efe3ecc8e503d49a93e0c6fbd6debc4b2",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "8a09006c2228885dc33bfa915003847a6b20fba2f7313db6afcb100ddf5b6320",
+        "known_pixels": 1169,
+        "bound_core_pixels": 995,
+        "food_pixels": 1419,
+        "core_fraction": 0.7011980267794221,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 6.039865996649916,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "soft",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 7.71540550993433e-06,
+        "computed_proxy_volume_after": 7.713051051774001e-06,
+        "computed_proxy_volume_relative_change": 0.00030516324220386526,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.03398846834897995,
+          "source_anchor_actual_sdf_abs_p90": 0.06353580802679062,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.182890385389328,
+            -0.1208855751901865,
+            -0.09088072925806046,
+            -0.05645782873034477,
+            -3.606543759815395e-05
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.012701704545454549,
+          "source_interval_anchor_distance_p90": 0.05312499999999998,
+          "source_prior_anchor_gap_over_point1_fraction": 0.00909090909090909,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.03906250000000007,
+            0.05078125000000008,
+            0.06640625000000011,
+            0.07812500000000014,
+            0.10156250000000017
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 1.0,
+          "posterior_centered_color_std": 2.549062631192152,
+          "interior_color_mae_vs_observed": 1.2651141291162793,
+          "learned_material_only_mae": 0.618561996199868,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.03696503496503496,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.029688573998105167,
+            0.029688573998105167,
+            0.029688573998105167,
+            0.029688573998105167,
+            0.029688573998105167
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.014844286999052584,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.014844286999052584,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.19616698239066374,
+          "hidden_learned_material_only_mae": 0.517278747558594,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1100
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            313.4520005037977,
+            103.70268435553429
+          ],
+          "new_tip_uv": [
+            370.0,
+            103.86600840029222
+          ],
+          "distal_axial_extension": 0.049749197884912374,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "fish surface",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "soft",
+      "head_bbox": [
+        40,
+        61,
+        147,
+        137
+      ],
+      "source_bbox": [
+        237,
+        173,
+        358,
+        290
+      ],
+      "artifacts": {
+        "source.png": "6e4d31b72ba5fbe1559b5a10ea45fe2efe3ecc8e503d49a93e0c6fbd6debc4b2",
+        "base.png": "b395be074e3d2814c49b8ecc43b8847a889352322420e3be2347e7f431f41584",
+        "A.png": "298ae8ddb446d667a1f635dc050e83497acc9823016bf801398094791e8fc58f",
+        "final.png": "8a09006c2228885dc33bfa915003847a6b20fba2f7313db6afcb100ddf5b6320",
+        "selected_reference.png": "4b50cb5db98d4f78dc52ae6c51cde2fe5000caf114c87909f3f507d947723218",
+        "edit_mask.png": "eb7aac285890af7ef186dbe559bfb24384ed45b120e2b620b13ab3797a45b86f",
+        "source_removed_mask.png": "5740594b2bc6aef157cb4b975ac57ef66d9097ef88ec9ec84877b5f39e14adcb",
+        "core_mask.png": "b1548eed8e946ae39f1d8a1c8dab049a3b72e40af59243d47dad578458d2351e",
+        "status.json": "03436efaeda81e5a2e59a7e7a91939a02bb17dd0b02348570b3fb98e66d1d3d9",
+        "input_protocol.json": "0b850e821bf21260e7a29de01357c676c42631bf93768ba7f030d82c5ee6a3e9",
+        "material_contract.json": "151018c5e321941d3fcccd28947e0ce38f0ba004877d69d3a3423bec5158e2e7",
+        "geometry_state.json": "7e614fe4dad004cdbc27537e81442b3255424ba5b031bbbf46aa9dfa03b0033c"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_08_2205",
+      "index": 8,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "noodles",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1099,
+        "known": 2136,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 2121
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "4360ce1f39e37b92831eec7f7bc69211a0de203efc496f13d0b85cd52e514d3b",
+        "texture_sha256": "7a912d2ba49e900adf2807f01f92d895f0fc189fffd5d30e192ce123f7bedc65",
+        "source_sha256": "02ff6a2b036694529800e16122269d9b743884cf9cd59b73caebcfa9adce2c1a",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "08071dfc02692a13728dfe14a773cc8f3a5250e7b4d500cad3a45c3dc9a32e4d",
+        "known_pixels": 2136,
+        "bound_core_pixels": 1099,
+        "food_pixels": 3859,
+        "core_fraction": 0.2847888053899974,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 27.015165301789505,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "strand",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.00010599098990722476,
+        "computed_proxy_volume_after": 0.00010481051702524803,
+        "computed_proxy_volume_relative_change": 0.011137483318251928,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.038942236453294754,
+          "source_anchor_actual_sdf_abs_p90": 0.06209152489900589,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.19816210865974426,
+            0.27279868721961975,
+            0.3869965076446533,
+            0.47498756647109985,
+            0.611970067024231
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.07562411473087818,
+          "source_interval_anchor_distance_p90": 0.1328125,
+          "source_prior_anchor_gap_over_point1_fraction": 0.48473402581051306,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.003906250000000007,
+            0.03906250000000007,
+            0.0585937500000001,
+            0.07421875000000012,
+            0.1093750000000002
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.731192949323261,
+          "posterior_centered_color_std": 3.0005127447151727,
+          "interior_color_mae_vs_observed": 4.855669537754255,
+          "learned_material_only_mae": 0.6870369945714632,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.011345972252487834,
+          "source_height_cap_active_fraction": 0.9169027384324835,
+          "source_plate_floor_active_fraction": 0.41045011016682403,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.004800798450014955,
+            0.012586853424890737,
+            0.01812572823081064,
+            0.01812572823081064,
+            0.01812572823081064
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.00038055793910147324,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.07185915892027353,
+          "hidden_learned_material_only_mae": 0.7041854985074718,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 3177
+        },
+        "prior_applies_to_final_closure": false,
+        "frame_connection": {
+          "old_tip_uv": [
+            663.3577634761889,
+            97.35221008819482
+          ],
+          "new_tip_uv": [
+            663.3577634761889,
+            97.35221008819482
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "noodle",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "strand",
+      "head_bbox": [
+        48,
+        19,
+        283,
+        182
+      ],
+      "source_bbox": [
+        316,
+        264,
+        532,
+        468
+      ],
+      "artifacts": {
+        "source.png": "02ff6a2b036694529800e16122269d9b743884cf9cd59b73caebcfa9adce2c1a",
+        "base.png": "0763360618e8ae0b067ceabe1b7ca68dfff5d2101cce4625a6ab7bc4b0622332",
+        "A.png": "4360ce1f39e37b92831eec7f7bc69211a0de203efc496f13d0b85cd52e514d3b",
+        "final.png": "08071dfc02692a13728dfe14a773cc8f3a5250e7b4d500cad3a45c3dc9a32e4d",
+        "selected_reference.png": "dc3c6413f69c0665096cd2b41a78c158b02fc48799979da969a1d4ab6c4d4e4e",
+        "edit_mask.png": "f6f20d06c7e9bfaadbfa3f50cdd001a2478ef5fac12b7e4fe28e47588f277f32",
+        "source_removed_mask.png": "fe54b721d34bdea29eafd6d0c618873a5be5f36235ecd17b26a686f852ead323",
+        "core_mask.png": "f81a420527d54b5a4ee05aa316ef2d05d7896ffb26b12c1e82b5c4dab8394d72",
+        "status.json": "fb353d6cb67f0711072d10023ed5748304779b8367fd21b2b2529405fcb3e164",
+        "input_protocol.json": "f140f055db10902aeb24b7192cf5a73795e30d465f32d4cd05a0b2dea2e055a9",
+        "material_contract.json": "731e28b4c684aa15b7ea1c429c914ba95a977242bedfcfcd01c0b8fa0925163e",
+        "geometry_state.json": "cf69585cf3867d97ef6c58557e3cf794d91125b5ecff1c3c8b355df7d236bfa6"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_09_3901",
+      "index": 9,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "omelet",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 473,
+        "known": 590,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 589
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "2db4f5630316e1cabcd08603d844e7a1203a61fb6265563f460ac3681dd2f104",
+        "texture_sha256": "fd9569948edf1a2e1e1dd90cc551d5e2ef3c5cfa1c3903138ade249016034638",
+        "source_sha256": "79625eccb4989e592deabb2967170c372e65666687cffb7c262a18ae0793643b",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "41abf9c1c683d630aed9acf91b1f799da3300dabe40506c3a1b5deb626131174",
+        "known_pixels": 590,
+        "bound_core_pixels": 473,
+        "food_pixels": 751,
+        "core_fraction": 0.62982689747004,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 22.09090909090909,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "soft",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0015351222090678985,
+        "computed_proxy_volume_after": 0.001533867540147448,
+        "computed_proxy_volume_relative_change": 0.0008173088194798339,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.0192934051156044,
+          "source_anchor_actual_sdf_abs_p90": 0.03383119851350785,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.10950662940740585,
+            -0.03143410198390484,
+            0.04418926686048508,
+            0.12063940986990929,
+            0.2205645740032196
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.012901785714285722,
+          "source_interval_anchor_distance_p90": 0.05312499999999998,
+          "source_prior_anchor_gap_over_point1_fraction": 0.005357142857142857,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.015625000000000028,
+            0.03515625000000006,
+            0.03515625000000006,
+            0.03906250000000007,
+            0.05078125000000009
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.9839285714285714,
+          "posterior_centered_color_std": 1.5771313293665024,
+          "interior_color_mae_vs_observed": 5.146237027995442,
+          "learned_material_only_mae": 0.33559624603816385,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.018261535303947384,
+            0.022720810934389175,
+            0.022720810934389175,
+            0.022720810934389175,
+            0.022720810934389175
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.011302714126657308,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.011360405467194587,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.0608303526469643,
+          "hidden_learned_material_only_mae": 0.3330101891926348,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 560
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            305.2706414688985,
+            61.9270954196092
+          ],
+          "new_tip_uv": [
+            359.99999999999994,
+            63.28833594156775
+          ],
+          "distal_axial_extension": 0.3807607231933192,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "egg",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "soft",
+      "head_bbox": [
+        41,
+        27,
+        125,
+        84
+      ],
+      "source_bbox": [
+        230,
+        92,
+        311,
+        176
+      ],
+      "artifacts": {
+        "source.png": "79625eccb4989e592deabb2967170c372e65666687cffb7c262a18ae0793643b",
+        "base.png": "8f9c2167c3b7afc69acb7ac41e3fe9ca50df82fb98fd372d6011368cb1da53aa",
+        "A.png": "2db4f5630316e1cabcd08603d844e7a1203a61fb6265563f460ac3681dd2f104",
+        "final.png": "41abf9c1c683d630aed9acf91b1f799da3300dabe40506c3a1b5deb626131174",
+        "selected_reference.png": "b2c93ea9d9b44addf86fb0027ec3759112e696451ac767f9d0211fdfcf69b6d7",
+        "edit_mask.png": "810a7921d89d885ab45b6b47b2ed08dd7e8a43f42a39fc10202c367601a6d52e",
+        "source_removed_mask.png": "d62fb1ca9dbd63a046a35fe13871e5781bdba0dc6858e4e4aeb9cd551da46dc7",
+        "core_mask.png": "13bd770129e8ab0bf1b185fe4086ebcc4533fffa770f88bcdf687ae1150dd172",
+        "status.json": "072ffd78694e57f9812aa7380f82ac34748ad64469cd1db427e9e0bcd89e819e",
+        "input_protocol.json": "f396017801b2a0d82ba0fa31ed09d168c3e9236a0133f499f6ed5c300178f2c5",
+        "material_contract.json": "441359db65454197d014a23cda74fcae35ea55eb5e7cdac7df0dd97248306e23",
+        "geometry_state.json": "4eae45dbe80c4c6c47e41eafde15459df39c4746c8a6c41f21f73a47ce64c876"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_10_2555",
+      "index": 10,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "noodles",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 105,
+        "known": 225,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 225
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "559b3c22255f88766a5ebe5eafc89bbfb05f82de9273b66b289921823f8e4a7d",
+        "texture_sha256": "6d4f58c77e260d7248618730c245f5f451834a0a3212ce1871b0145608c3eb4b",
+        "source_sha256": "d697a27ff4c73714ad537eb4660e961447c2f8a44ef90e04ae0d1d246681716d",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "67773cb2f3e3d02877031aba4e712e3bb3f64896ba983f558f171f1f0a9343c1",
+        "known_pixels": 225,
+        "bound_core_pixels": 105,
+        "food_pixels": 238,
+        "core_fraction": 0.4411764705882353,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 44.59047619047619,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 1.1347328103512638e-05,
+        "computed_proxy_volume_after": 1.1287838526900988e-05,
+        "computed_proxy_volume_relative_change": 0.005242606547459783,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.016972241923213005,
+          "source_anchor_actual_sdf_abs_p90": 0.030537579953670506,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.04327387362718582,
+            0.155661478638649,
+            0.21318036317825317,
+            0.2634420692920685,
+            0.31799134612083435
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.011750000000000005,
+          "source_interval_anchor_distance_p90": 0.05312499999999998,
+          "source_prior_anchor_gap_over_point1_fraction": 0.002352941176470588,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.02734375000000005,
+            0.042968750000000076,
+            0.06640625000000011,
+            0.08203125000000014,
+            0.12109375000000021
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.8164705882352942,
+          "posterior_centered_color_std": 3.3098302914075703,
+          "interior_color_mae_vs_observed": 9.54514411190099,
+          "learned_material_only_mae": 0.7867787325241987,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 0.5623529411764706,
+          "minimum_thickness_active_fraction": 0.5623529411764706,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.003569755144362805,
+            0.003569755144362805,
+            0.003569755144362805,
+            0.003569755144362805,
+            0.003569755144362805
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.026867733001708773,
+          "hidden_learned_material_only_mae": 0.7937248149198642,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 425
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            204.8921729391791,
+            29.185477051966867
+          ],
+          "new_tip_uv": [
+            226.0,
+            29.52013446719531
+          ],
+          "distal_axial_extension": 0.08606618418460574,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "cooked meat",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "cohesive_packet",
+      "initial_mode": "strand",
+      "head_bbox": [
+        19,
+        5,
+        95,
+        50
+      ],
+      "source_bbox": [
+        139,
+        43,
+        211,
+        107
+      ],
+      "artifacts": {
+        "source.png": "d697a27ff4c73714ad537eb4660e961447c2f8a44ef90e04ae0d1d246681716d",
+        "base.png": "cf513f36a431d8456e47d44675da0678a41d7f9f78cc47e7cfd698f067cf1adb",
+        "A.png": "559b3c22255f88766a5ebe5eafc89bbfb05f82de9273b66b289921823f8e4a7d",
+        "final.png": "67773cb2f3e3d02877031aba4e712e3bb3f64896ba983f558f171f1f0a9343c1",
+        "selected_reference.png": "0030153f048f897b164a8ba7e2936c60b34ab4912d3a2685912fff5111710545",
+        "edit_mask.png": "46f39ed3af51981f25a249dec684bd63481904e7cbb580123c1baf3e4f5cacf4",
+        "source_removed_mask.png": "7f27fb0728594ed734ad08b3f9ab802a72dbc97cdda40351a06e823150187864",
+        "core_mask.png": "d3610bd8d11d09c28b0db57fae4fa8ddf7b99241cfd675eaa784d06818f6b673",
+        "status.json": "ba7f776b9393cfa629a9cac3fcf4a49aec551996e39487a3d9473e7ed4498347",
+        "input_protocol.json": "09aac8f4e2b18cc6df57d042c110dcfc149c06e3d5feed1e570085e992d9f9d9",
+        "material_contract.json": "5bde0b106a34883a43ab4c4e0b17165ef27484505540021c82aaee8c5de636af",
+        "geometry_state.json": "548267cc2725e16de73a4e3b02bd4a6768dc811f1b9a4425b1be0aa09ebda86d"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_11_7662",
+      "index": 11,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "noodles",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 111,
+        "known": 277,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 276
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "27c4258de22a1e23a92d76560a94c61075ad4f5174118d85520e385f8bb8d988",
+        "texture_sha256": "0c1ee62f7f196f1e6de1180a8c38e9ea67d4392f841eb2343d3eae6984ea938e",
+        "source_sha256": "97c7607d896fa2f55f43678f6233aa3ee300eb8f56c75122ca1d4665d5796174",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "68c143709eed48ad5739dd6d4e654c56fe1dd4c8d8566d227c3fc20776bb65d6",
+        "known_pixels": 277,
+        "bound_core_pixels": 111,
+        "food_pixels": 431,
+        "core_fraction": 0.25754060324825984,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 24.966966966966968,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 2.5874397498008487e-05,
+        "computed_proxy_volume_after": 2.5855801252554586e-05,
+        "computed_proxy_volume_relative_change": 0.0007187122117657818,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.14246995747089386,
+          "source_anchor_actual_sdf_abs_p90": 0.22671576291322706,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.04642195999622345,
+            0.08911540918052197,
+            0.37982815504074097,
+            0.42406945675611496,
+            0.4633501470088959
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.0,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.0,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.08203125000000014,
+            0.10156250000000017,
+            0.10546875000000017,
+            0.1132812500000002,
+            0.12109375000000021
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 1.0,
+          "posterior_centered_color_std": 2.0744666746231677,
+          "interior_color_mae_vs_observed": 6.824523163432793,
+          "learned_material_only_mae": 0.47560292621554373,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.00741897696212417,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 0.42385786802030456,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.019252309620845554,
+            0.019252433751695865,
+            0.03565682351139773,
+            0.03565682351139773,
+            0.03565682351139773
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0066403218994169925,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.01043812706033985,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.15320634672484426,
+          "hidden_learned_material_only_mae": 0.40079331180165817,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 394
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            228.3630425892053,
+            32.39655989177166
+          ],
+          "new_tip_uv": [
+            228.3630425892053,
+            32.39655989177166
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "food",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "cohesive_packet",
+      "initial_mode": "strand",
+      "head_bbox": [
+        8,
+        5,
+        82,
+        61
+      ],
+      "source_bbox": [
+        49,
+        51,
+        125,
+        131
+      ],
+      "artifacts": {
+        "source.png": "97c7607d896fa2f55f43678f6233aa3ee300eb8f56c75122ca1d4665d5796174",
+        "base.png": "1f3a8a5ed0a78bea3f19a5f2d0ae969da44ce11cee1bd12f017940348e6ea108",
+        "A.png": "27c4258de22a1e23a92d76560a94c61075ad4f5174118d85520e385f8bb8d988",
+        "final.png": "68c143709eed48ad5739dd6d4e654c56fe1dd4c8d8566d227c3fc20776bb65d6",
+        "selected_reference.png": "015df1d89764f67eb8a56154e96e7a4f8c4f64770b9c2a175a95b7940209e843",
+        "edit_mask.png": "9d78d655d9612a2b15a83e924a839bd1695af6ece6b3c594f0550d489c8ea066",
+        "source_removed_mask.png": "5924024c9d16d9a2259e2db34bc0846bd19b61644b00caa8ebaccbd162a1f63f",
+        "core_mask.png": "0049e0a0b77c681facf331a16e97914fa7b8776b32260085e36b267adddcaa3f",
+        "status.json": "8b81decacfaf0641c3eaf5473a3e731a77529e83116ddd15a8a686f19f3e2b0c",
+        "input_protocol.json": "aa8f084f2e736ab3d6495e4232a648a85e11dbcc7bd366b9ff531327dd3d0113",
+        "material_contract.json": "babc54b7f02cec4aadf33f1a005b27419aca223b72d70d3b20b91ee0d85fc7ba",
+        "geometry_state.json": "59c2c434bd947bc45d21d15285603144260325d240ce4a41b78383c2c3f352e3"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_12_4916",
+      "index": 12,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "grilled fish",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 4413,
+        "known": 4777,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 4757
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "0b3b8bd7913c6ba80bcdde2e623721e02eab6e811ac8e56181189c1c189043ca",
+        "texture_sha256": "ae5c3feaf138096547246c37e187d6a6a9ce5997db46dc3d8d40304145e7c011",
+        "source_sha256": "94d6366382dcdf4f79a62ce239344460716c15d6a292c899dc25550dce5e7238",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "2f6465c10343ae624b42bc7bfd2e301be66ab37454d49a8c9802b193af6df045",
+        "known_pixels": 4777,
+        "bound_core_pixels": 4413,
+        "food_pixels": 6633,
+        "core_fraction": 0.6653098145635459,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 36.83918724979228,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.00044069234961641824,
+        "computed_proxy_volume_after": 0.0004403106223127235,
+        "computed_proxy_volume_relative_change": 0.0008661990706827494,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.007921822369098663,
+          "source_anchor_actual_sdf_abs_p90": 0.01488088443875313,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.027765542268753052,
+            0.08019090443849564,
+            0.1003188043832779,
+            0.11504223942756653,
+            0.16386745870113373
+          ],
+          "source_ray_nonempty_fraction": 0.9702343255224826,
+          "source_interval_anchor_distance_mean": 0.053612848321722605,
+          "source_interval_anchor_distance_p90": 0.026562500000000044,
+          "source_prior_anchor_gap_over_point1_fraction": 0.029765674477517417,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.0,
+            0.019531250000000035,
+            0.023437500000000038,
+            0.027343750000000045,
+            0.06640625000000011
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.029765674477517417,
+          "posterior_thickness_upper_clip_fraction": 0.8556048131728943,
+          "posterior_centered_color_std": 1.3158118381912571,
+          "interior_color_mae_vs_observed": 9.508699339864238,
+          "learned_material_only_mae": 0.30376094144080695,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.0014021386981402078,
+            0.016674797577552403,
+            0.016706185201080668,
+            0.016706185201080668,
+            0.016706185201080668
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.007855302565227495,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.008353092600540334,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.02984291943966219,
+          "hidden_learned_material_only_mae": 0.3067385401130853,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1579
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            834.0650052628804,
+            131.58610638147493
+          ],
+          "new_tip_uv": [
+            834.0650052628804,
+            131.58610638147493
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "fish skin",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        17,
+        37,
+        312,
+        196
+      ],
+      "source_bbox": [
+        375,
+        120,
+        530,
+        255
+      ],
+      "artifacts": {
+        "source.png": "94d6366382dcdf4f79a62ce239344460716c15d6a292c899dc25550dce5e7238",
+        "base.png": "5706769d615b0edbffd5ab19c88c8d62819633759c20668867d0efbf18f6f375",
+        "A.png": "0b3b8bd7913c6ba80bcdde2e623721e02eab6e811ac8e56181189c1c189043ca",
+        "final.png": "2f6465c10343ae624b42bc7bfd2e301be66ab37454d49a8c9802b193af6df045",
+        "selected_reference.png": "1a51c5f9a3531d177f8ca4d25ae3e65faf379b620cafe8b190ed54acd5668e05",
+        "edit_mask.png": "04eee413b542447a4017c3f8c34c85af981c960bac385b0e39e0fd3cba7926fd",
+        "source_removed_mask.png": "3e180578491c1ebbf79a7172bd5acb77d6b7fdc8479b1a11b8e75a5eebc98456",
+        "core_mask.png": "59f7fd5ff304b7c5df5c2987dae48f97aec6cb0a779c03b4d1f1eebbb9ef5613",
+        "status.json": "8a0e71feeefd6f335812d92692e5b0c3f2853c0996e50ea39cec11e1922af9dd",
+        "input_protocol.json": "4a494175f30477065edf664f53e1815636a81ee6049f63acb1154f07a41bf680",
+        "material_contract.json": "66240a77ed169976bda3f022fb64013ec0e8173ebbd832fd76b2b43885c0171c",
+        "geometry_state.json": "aadadc1ae3520a8c376f2ebaf3773f6880b16187306765c5759b40556db94a2c"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_13_7118",
+      "index": 13,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "fried egg",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 452,
+        "known": 585,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 582
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "5846d2dd858ed20a47888850c76791b56ad384b3208160b99b7f2d758c97f9f0",
+        "texture_sha256": "655bd327a1eddf5e7a83a8622c13387811cbda42bcfca9da2184c6b0fceb40be",
+        "source_sha256": "1f8e78558fae8f7d91d89095cd726ace1546ac2c8674f0ddd79104918a39331a",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "f4cddd7c5a3c73d06fad32bd8b74607be922cb472f59a1453f4a681a4491892b",
+        "known_pixels": 585,
+        "bound_core_pixels": 452,
+        "food_pixels": 614,
+        "core_fraction": 0.7361563517915309,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 15.018436578171091,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "soft",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 5.173832617783524e-06,
+        "computed_proxy_volume_after": 5.130821902603583e-06,
+        "computed_proxy_volume_relative_change": 0.008313124593962273,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.042507413774728775,
+          "source_anchor_actual_sdf_abs_p90": 0.09221753776073457,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.014917334541678429,
+            0.2965395748615265,
+            0.4260706603527069,
+            0.5451126992702484,
+            0.6238511204719543
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.09450004709871891,
+          "source_interval_anchor_distance_p90": 0.2656249999999999,
+          "source_prior_anchor_gap_over_point1_fraction": 0.38432554634513943,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.023437500000000038,
+            0.07812500000000014,
+            0.09765625000000017,
+            0.12109375000000021,
+            0.14453125000000025
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.9155990957045969,
+          "posterior_centered_color_std": 2.7224090438630135,
+          "interior_color_mae_vs_observed": 3.0048549585348394,
+          "learned_material_only_mae": 0.622552757148196,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0005564894788707901,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 0.975885455915599,
+          "minimum_thickness_active_fraction": 0.975885455915599,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.004680605639144461,
+            0.004680605639144461,
+            0.004680605639144461,
+            0.004680605639144461,
+            0.004680605639144461
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.01650141146098577,
+          "hidden_learned_material_only_mae": 0.6239429738347295,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1327
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            329.71051645752834,
+            76.54262464726115
+          ],
+          "new_tip_uv": [
+            510.0,
+            76.66007419163549
+          ],
+          "distal_axial_extension": 0.3950039736878195,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "egg white",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "soft",
+      "head_bbox": [
+        75,
+        49,
+        170,
+        106
+      ],
+      "source_bbox": [
+        310,
+        174,
+        436,
+        303
+      ],
+      "artifacts": {
+        "source.png": "1f8e78558fae8f7d91d89095cd726ace1546ac2c8674f0ddd79104918a39331a",
+        "base.png": "08d4f65cc95d7c18f21946923ba513616db6215d6e4403fe88540edfe51524d7",
+        "A.png": "5846d2dd858ed20a47888850c76791b56ad384b3208160b99b7f2d758c97f9f0",
+        "final.png": "f4cddd7c5a3c73d06fad32bd8b74607be922cb472f59a1453f4a681a4491892b",
+        "selected_reference.png": "1f56420058d9a9196cedfde95f8bf45ef2cfaa5c2261e57c4fb638625dda60db",
+        "edit_mask.png": "3da34eab5fd6f94fd206decca44060c87a60f4f38c9bd86ab47a6e50174c7d10",
+        "source_removed_mask.png": "492b6d3e98c00971809eb6bd6ebbfb41e7354f30cc34817d95d98d10a38f991c",
+        "core_mask.png": "fe6793e2831090f238306c4303e752732aafef793c89fbbcfcab6f8e386523e6",
+        "status.json": "4993e4e0038e3568a30caa8db44781df1e0d46f5f3c51d7c2a52fcc1e92941fc",
+        "input_protocol.json": "5c269c25f970ebc480d260b1d9ab7daaaa191087c8c6c9cb6916021a28e8b1c4",
+        "material_contract.json": "70a6f0ad974f2ddf9d22f0efc36e25185732326805671d4c920a3ff047d69513",
+        "geometry_state.json": "1b7e09e9a053f08a326194a25c869d80177ed9de58804983819571ae41aee912"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_14_1904",
+      "index": 14,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "noodles",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1116,
+        "known": 1992,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 1989
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "e235fdfb1e6d6f3b266d790d4f296f6163780d078f937e6850910e6cac306f81",
+        "texture_sha256": "3f09643959da511a2e89994ebde4c83bbd7197beea40f05b03c352a714ca264d",
+        "source_sha256": "b168d3a7456ff3da32fdd8c397e93d3b5388d69f4e69fd01899627288c459e0b",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "fe11f22f2f8709b77fb9cfff489053807ce8ac072518655c64d8a13e18aa8308",
+        "known_pixels": 1992,
+        "bound_core_pixels": 1116,
+        "food_pixels": 3891,
+        "core_fraction": 0.28681572860447185,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 14.892174432497013,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "strand",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.00044262090442950326,
+        "computed_proxy_volume_after": 0.00043566456795623103,
+        "computed_proxy_volume_relative_change": 0.015716240249064373,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.015350422821938992,
+          "source_anchor_actual_sdf_abs_p90": 0.025164039805531502,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.11823835223913193,
+            -0.0007526902772951871,
+            0.06815892830491066,
+            0.13632410392165184,
+            0.2573370337486267
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.1287098504174397,
+          "source_interval_anchor_distance_p90": 0.21250000000000002,
+          "source_prior_anchor_gap_over_point1_fraction": 0.6456400742115028,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.003906250000000007,
+            0.042968750000000076,
+            0.046875000000000076,
+            0.05468750000000009,
+            0.06640625000000011
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.8692022263450835,
+          "posterior_centered_color_std": 2.1716380147854055,
+          "interior_color_mae_vs_observed": 4.601146787710978,
+          "learned_material_only_mae": 0.46022191525390305,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.00025688597117168543,
+          "source_height_cap_active_fraction": 0.8692022263450835,
+          "source_plate_floor_active_fraction": 0.3585343228200371,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.003955090570335398,
+            0.012996172645699437,
+            0.021720167478097206,
+            0.021720167478097206,
+            0.021720167478097206
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.004997768641183972,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.007767967172148675,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.06924725215819869,
+          "hidden_learned_material_only_mae": 0.43433047729874386,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 2156
+        },
+        "prior_applies_to_final_closure": false,
+        "frame_connection": {
+          "old_tip_uv": [
+            955.5596315846173,
+            -0.9929370402487914
+          ],
+          "new_tip_uv": [
+            955.5596315846173,
+            -0.9929370402487914
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "noodle",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "strand",
+      "head_bbox": [
+        15,
+        0,
+        263,
+        180
+      ],
+      "source_bbox": [
+        242,
+        33,
+        412,
+        204
+      ],
+      "artifacts": {
+        "source.png": "b168d3a7456ff3da32fdd8c397e93d3b5388d69f4e69fd01899627288c459e0b",
+        "base.png": "960f137317037962f31791a0f79fbfda9b9d687cdb62f6cb0ca180a7ac077328",
+        "A.png": "e235fdfb1e6d6f3b266d790d4f296f6163780d078f937e6850910e6cac306f81",
+        "final.png": "fe11f22f2f8709b77fb9cfff489053807ce8ac072518655c64d8a13e18aa8308",
+        "selected_reference.png": "3aedd9bf51044d93bff54940e0f380267659c4ce0611de46584e435554a344f3",
+        "edit_mask.png": "3e8dfac5a6b4ddaa361c58761bdc56802fd9c917cffcaf5ce7e995564093354d",
+        "source_removed_mask.png": "b69c04078a7fa8df10577e77ca7c44d1f85abdbf7cc943ae4e95a3b857154abc",
+        "core_mask.png": "9c617f2520bbd0f2539c59f9ee0503122caafb4fc20260e9dcd1cd587ffe1bbd",
+        "status.json": "7883b57e55e78a8707b465a9a90f3f93e2b4a1a4ab24d786ee0f374bb80aa5d4",
+        "input_protocol.json": "b2b31ef09fe04f1b6492f3934019ae217756ac8c2724f29ae18fcbc0f6c6edc4",
+        "material_contract.json": "c200fc0ec063dce3d887ce9e7d1385d509e8b2e23da5f40de6c1f00a32505b9b",
+        "geometry_state.json": "aabd31c2a968ed2a86f8c85478d3950df6b50dd130a63d27e63a58acd3e4b8cd"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_15_11404",
+      "index": 15,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "meat",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1831,
+        "known": 2106,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 2105
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "fa10e10853ca74e6fe5164fb95d32c10698a8bdc0929d38b50ac061a1eba16ff",
+        "texture_sha256": "99f163a2e25bd267aaf9cbc916929332a9b2337ad6f0f00559d65762e20be9bd",
+        "source_sha256": "142ad2726ba5f4f3d63532e789b43e503e0240adbd67dfb18f4d0afd62a2b8c6",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "7bd05195682a98722ea4489103c031dcffd1ef3ac4ccd8880e07f7b765ecf0bd",
+        "known_pixels": 2106,
+        "bound_core_pixels": 1831,
+        "food_pixels": 2193,
+        "core_fraction": 0.8349293205654355,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 40.141816857819045,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 6.899346522348613e-06,
+        "computed_proxy_volume_after": 6.8660674766026686e-06,
+        "computed_proxy_volume_relative_change": 0.004823506927524979,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.04954672232270241,
+          "source_anchor_actual_sdf_abs_p90": 0.08809025958180428,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.2420022189617157,
+            0.39635343849658966,
+            0.46588075160980225,
+            0.5402533710002899,
+            0.6255578398704529
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.1198655312197483,
+          "source_interval_anchor_distance_p90": 0.21250000000000002,
+          "source_prior_anchor_gap_over_point1_fraction": 0.6447241045498547,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.019531250000000038,
+            0.07812500000000015,
+            0.09375000000000015,
+            0.1132812500000002,
+            0.13671875000000022
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.995159728944821,
+          "posterior_centered_color_std": 5.119811454733738,
+          "interior_color_mae_vs_observed": 8.196044461439362,
+          "learned_material_only_mae": 1.2483389866894463,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.016322883312234717,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 1.0,
+          "minimum_thickness_active_fraction": 1.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.003241516793727128,
+            0.003241516793727128,
+            0.003241516793727128,
+            0.003241516793727128,
+            0.003241516793727128
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.01146196095779589,
+          "hidden_learned_material_only_mae": 1.2516140941959608,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 2066
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            419.2569690497601,
+            95.241426494192
+          ],
+          "new_tip_uv": [
+            419.2569690497601,
+            95.241426494192
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "cooked meat",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        19,
+        49,
+        168,
+        149
+      ],
+      "source_bbox": [
+        214,
+        123,
+        360,
+        271
+      ],
+      "artifacts": {
+        "source.png": "142ad2726ba5f4f3d63532e789b43e503e0240adbd67dfb18f4d0afd62a2b8c6",
+        "base.png": "a1efb28c8b2ddebc185c0348e72b1aa4148bd6930aa4f0e88f10dc37a1d71993",
+        "A.png": "fa10e10853ca74e6fe5164fb95d32c10698a8bdc0929d38b50ac061a1eba16ff",
+        "final.png": "7bd05195682a98722ea4489103c031dcffd1ef3ac4ccd8880e07f7b765ecf0bd",
+        "selected_reference.png": "cafe876bdfce86ed5d90ddcf48a47461d67732de573103871cbbe62012497e60",
+        "edit_mask.png": "df2b7dea113805bc9fae87efd51e79c4722f62eb531a09e391e5a9087db208cc",
+        "source_removed_mask.png": "aad4ebfcbea6efadcbb785143bf112502aca8faf4eb2f4586dd65016fc602a04",
+        "core_mask.png": "4013fc66a74f426297a239bd6300ebf903d7e6506587e94c7ee577d828cdd521",
+        "status.json": "053659e5f0d8d4a31f17c701d44ef205ae27846b6be71b01a35594fbf47d76bc",
+        "input_protocol.json": "77f74c2540b72a308e3a0d8f8878ce1aaee278df58d1822dfb84d01c9128bdd4",
+        "material_contract.json": "4b5f7c6868507c28994e50b875a1145fc4300001158b97d135658453f86a33c3",
+        "geometry_state.json": "d1c8ebe91a77e4cb5ec3b1854e69838c4ecb9620080852bd8d900d986d49d34d"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_16_3264",
+      "index": 16,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "grilled eggplant",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 233,
+        "known": 317,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 317
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "29bc1f028019ad7fbddf668666f23cd577d0e364fa1b240d63abc4c0bfe5ac53",
+        "texture_sha256": "47d147f0cf458e331e5ddf8dde4f58da0a209f0febb75c9a7eeb192bd958ee65",
+        "source_sha256": "794e8215ea813aac8cd245fe9a515c1c42dd881de19746044b0e60ce212ddcb3",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "f8ee04afccb3f96a0a73946c260fe316fcd5256fba9f3e99368068a72c284d2d",
+        "known_pixels": 317,
+        "bound_core_pixels": 233,
+        "food_pixels": 398,
+        "core_fraction": 0.585427135678392,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 44.21745350500715,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "soft",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.00027497132094045,
+        "computed_proxy_volume_after": 0.00027092075161217014,
+        "computed_proxy_volume_relative_change": 0.01473087925833938,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.07092133909463882,
+          "source_anchor_actual_sdf_abs_p90": 0.18268552720546724,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.19789527356624603,
+            0.13100110739469528,
+            0.3534303903579712,
+            0.5650092363357544,
+            0.8376129865646362
+          ],
+          "source_ray_nonempty_fraction": 0.9996550534667127,
+          "source_interval_anchor_distance_mean": 0.07723191186616074,
+          "source_interval_anchor_distance_p90": 0.2656249999999999,
+          "source_prior_anchor_gap_over_point1_fraction": 0.30596757502587096,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.0,
+            0.042968750000000076,
+            0.07421875000000012,
+            0.09375000000000015,
+            0.16796875000000028
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.057261124525698516,
+          "posterior_thickness_upper_clip_fraction": 0.025181096929975853,
+          "posterior_centered_color_std": 7.016477907793785,
+          "interior_color_mae_vs_observed": 10.342501018573609,
+          "learned_material_only_mae": 1.6786299214358158,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.046493485817390615,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.012796643615040007,
+            0.04329316039686112,
+            0.0723293137525093,
+            0.09330698675393692,
+            0.15331121069553696
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.027719107943018576,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.05844673422466811,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.32223558985146616,
+          "hidden_learned_material_only_mae": 1.6561021787374335,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 2899
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            480.74659519945504,
+            114.29839152687158
+          ],
+          "new_tip_uv": [
+            480.74659519945504,
+            114.29839152687158
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "eggplant",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "soft",
+      "head_bbox": [
+        52,
+        41,
+        131,
+        92
+      ],
+      "source_bbox": [
+        10,
+        77,
+        171,
+        252
+      ],
+      "artifacts": {
+        "source.png": "794e8215ea813aac8cd245fe9a515c1c42dd881de19746044b0e60ce212ddcb3",
+        "base.png": "6cde2257f390bf48788dff42385633638c50ce7b14ad4b4a78f142e9a2546931",
+        "A.png": "29bc1f028019ad7fbddf668666f23cd577d0e364fa1b240d63abc4c0bfe5ac53",
+        "final.png": "f8ee04afccb3f96a0a73946c260fe316fcd5256fba9f3e99368068a72c284d2d",
+        "selected_reference.png": "5f0035f3f3bdfd0b4e5e8a10d773dbba789241fb202c6e63ba2ff622901d5db1",
+        "edit_mask.png": "621d164bf125e562f0dbc18e3d071175b47d90ed052d4e9a86222bb6e506404e",
+        "source_removed_mask.png": "dbe42a421de96b5521d15a8c5d156c299be34c9305255b92f007beeb603a13b6",
+        "core_mask.png": "2fd35d7b33809ed9dacdf4225f514bfc1ec113876178f343de31e3273625a3dd",
+        "status.json": "fbdcd36239df22e5d3e07f75368f3c75ff997c48acbe80b8e1607450c7deaf00",
+        "input_protocol.json": "1f2ac6af2328ee96726052a763e9709dd81c31734f4917fe2a23da71071d3458",
+        "material_contract.json": "00601a7585ac46573e54cfd9d0cf273752f05e927bba3d0f68f313242d453469",
+        "geometry_state.json": "35748dc23cc898d521b2c67bb0140aea9fdf952055eca4cdfade0950489d25b2"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_17_6275",
+      "index": 17,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 2266,
+        "known": 2743,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 2740
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "d45eca11a9600693b456056b2d257b97764a21970294b2259039406528e799fb",
+        "texture_sha256": "4a9c6be57ca17184de5c1fa8f5059fb916338710a4823c5e15affd795a7a82e1",
+        "source_sha256": "c711012d9bb51e9c76ed0d861d0ccb9f6c736e43314a404e5c5ef41c701f844e",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "1d85aeb29c17779356a6cea1230f5d324fe90c86489f2eb5d47a771cdba1dbc8",
+        "known_pixels": 2743,
+        "bound_core_pixels": 2266,
+        "food_pixels": 4159,
+        "core_fraction": 0.5448425102188026,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 21.718593704030596,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0007022624624020082,
+        "computed_proxy_volume_after": 0.0007019861517275523,
+        "computed_proxy_volume_relative_change": 0.0003934578441097125,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.028004569932818413,
+          "source_anchor_actual_sdf_abs_p90": 0.06827438473701479,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.12199351191520691,
+            0.013763985596597195,
+            0.09951833635568619,
+            0.17981262877583504,
+            0.26215699315071106
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.1530691056910569,
+          "source_interval_anchor_distance_p90": 0.3453125,
+          "source_prior_anchor_gap_over_point1_fraction": 0.6398373983739838,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.003906250000000007,
+            0.05078125000000008,
+            0.07812500000000014,
+            0.08203125000000014,
+            0.10546875000000018
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.9699186991869919,
+          "posterior_centered_color_std": 3.874739752173789,
+          "interior_color_mae_vs_observed": 4.980871824582609,
+          "learned_material_only_mae": 0.9043553459353563,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0027392120075046904,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.007158302484215389,
+            0.026949820263418165,
+            0.026949820263418165,
+            0.026949820263418165,
+            0.026949820263418165
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.012929585179358126,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.013474910131709122,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.1539873923324957,
+          "hidden_learned_material_only_mae": 0.9277881257902317,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1230
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            553.9763283859761,
+            56.158332762073016
+          ],
+          "new_tip_uv": [
+            553.9763283859761,
+            56.158332762073016
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "fish skin",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        15,
+        4,
+        210,
+        137
+      ],
+      "source_bbox": [
+        260,
+        49,
+        382,
+        166
+      ],
+      "artifacts": {
+        "source.png": "c711012d9bb51e9c76ed0d861d0ccb9f6c736e43314a404e5c5ef41c701f844e",
+        "base.png": "e8f7f673dda499a63c91ad0f39673b5fc24dabf40b668097f442095c6a7c18a3",
+        "A.png": "d45eca11a9600693b456056b2d257b97764a21970294b2259039406528e799fb",
+        "final.png": "1d85aeb29c17779356a6cea1230f5d324fe90c86489f2eb5d47a771cdba1dbc8",
+        "selected_reference.png": "dc79be2cd85f9a86d846de87903f8b383351f40b922db95dd3be1cb368fee407",
+        "edit_mask.png": "cc986a31c5b3291af932e17e28d1318c6398c96a8258dce32b1df48563446da3",
+        "source_removed_mask.png": "c2667a87031015dcf70392804801e15a72f8f3f47a8fefd0693f35249c9c1d28",
+        "core_mask.png": "dcc31c4edd7256b704c4dfaefb048c4c72e418279e29cb42c80a5d14cd4b0771",
+        "status.json": "12dc25828f22e4492e0c4a4fc1e0a6091b8352b546b1647c4da24b21583eccf2",
+        "input_protocol.json": "4863b2c3b933db232596473e4a2a7160ae4de4f20bca1de3f8b98bf802580730",
+        "material_contract.json": "3041ff97ed70d18eadac6b80cd7514b687706d868bd1be560fd00172e6b428e3",
+        "geometry_state.json": "6ddac499f4301e74f30916d6742469a78b205e6cb184123917eff02e6d5a004c"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_18_4646",
+      "index": 18,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1906,
+        "known": 2135,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 2134
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "6e34ad7bc452ae1704c0d8ed34f069bfccc0ac8477e8fac2f01c914aa07c9d7a",
+        "texture_sha256": "a6cd48ca087bf518acacc8035198293322ae9ce92b74552e4f43dab6d839d459",
+        "source_sha256": "08a4a51314c46265d5287abbd9377f01a34ff66988aa33c564f0a52e3b776b2e",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "92cd09412c2bcbc0fbd0e42e6341b0cb981f372be844db38715d53908bf0ab56",
+        "known_pixels": 2135,
+        "bound_core_pixels": 1906,
+        "food_pixels": 2878,
+        "core_fraction": 0.6622654621264767,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 20.525708289611753,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0001834089943847436,
+        "computed_proxy_volume_after": 0.00018312991919574106,
+        "computed_proxy_volume_relative_change": 0.0015216003442944936,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.053704921156167984,
+          "source_anchor_actual_sdf_abs_p90": 0.10886746495962143,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.37410080432891846,
+            0.44231661409139633,
+            0.47798779606819153,
+            0.5081279426813126,
+            0.5443914532661438
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.00454566592261905,
+          "source_interval_anchor_distance_p90": 0.026562500000000044,
+          "source_prior_anchor_gap_over_point1_fraction": 0.0,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.03515625000000006,
+            0.07031250000000012,
+            0.09765625000000015,
+            0.12500000000000022,
+            0.16015625000000028
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 1.0,
+          "posterior_centered_color_std": 3.7058907156550456,
+          "interior_color_mae_vs_observed": 4.33612700159858,
+          "learned_material_only_mae": 0.8902815004757473,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.0004578754578754579,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.03177884349157432,
+            0.03177884349157432,
+            0.03177884349157432,
+            0.03177884349157432,
+            0.03177884349157432
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.01588942174578716,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.01588942174578716,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.28098659217357635,
+          "hidden_learned_material_only_mae": 0.8669113338845118,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 3360
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            549.3450579540562,
+            7.514997339703555
+          ],
+          "new_tip_uv": [
+            650.0000000000001,
+            -14.232461634153559
+          ],
+          "distal_axial_extension": 0.11032978398200254,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "food",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        104,
+        26,
+        250,
+        146
+      ],
+      "source_bbox": [
+        305,
+        72,
+        503,
+        265
+      ],
+      "artifacts": {
+        "source.png": "08a4a51314c46265d5287abbd9377f01a34ff66988aa33c564f0a52e3b776b2e",
+        "base.png": "cd14942db28a1da696a239a9874a4268fcd2f6ac718d488ded387126b5184b5f",
+        "A.png": "6e34ad7bc452ae1704c0d8ed34f069bfccc0ac8477e8fac2f01c914aa07c9d7a",
+        "final.png": "92cd09412c2bcbc0fbd0e42e6341b0cb981f372be844db38715d53908bf0ab56",
+        "selected_reference.png": "4863d8065925e3c7214b189aeb20c490869771ab815e2cbd5fc4c52625f1616f",
+        "edit_mask.png": "f47cb64130fe60477f9eb4ce2f2b6e1ca6f4077eebfa0f6226d28578ecd08ca7",
+        "source_removed_mask.png": "98262cf863ce7df272bc4c3f902435bf5928867ff392d09b162959f4f1c560b0",
+        "core_mask.png": "fd4cad3c941c7048f6d517ebe46880832fae3698c72375110d02f968131cde4c",
+        "status.json": "5808b121881477faa0fd3d95b1f73c5b6c96abe51cef3b433ba2dd93ccf26051",
+        "input_protocol.json": "015084f55139c91ae0ed6a6cb0e49027513d0dcb92258d08f45cfadcb299beba",
+        "material_contract.json": "3e682903a0309ac1cd0d9b36b3e8322e92f1919c436ff73e47f4a3b852b98686",
+        "geometry_state.json": "b76c7b4d89cc44cca204676703a5e75f403444dbe71f19f5349fb3b499bc5a5e"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_19_2405",
+      "index": 19,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 3022,
+        "known": 3314,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 3314
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "48931b3d1a6b3815b554d9a9a01899a84f3cc045821faa217e79d71359fa2b88",
+        "texture_sha256": "e3bb87440f8866e106f7e77ac936693a65cd1dd46f0f686d0ab44c197b6e9e71",
+        "source_sha256": "504c59bc085946e46718959e4291ea3529e9e6f60871b7063c641ab9b74d6d63",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "6f04463f559dcc350f80eab2ebe318334183602c30a3c93c363434fc570bc402",
+        "known_pixels": 3314,
+        "bound_core_pixels": 3022,
+        "food_pixels": 3773,
+        "core_fraction": 0.8009541478929234,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 19.596073240679463,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0003699541992183476,
+        "computed_proxy_volume_after": 0.0003676343354521888,
+        "computed_proxy_volume_relative_change": 0.006270678292232601,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.0557185560464859,
+          "source_anchor_actual_sdf_abs_p90": 0.08218607902526856,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.12451039999723434,
+            -0.0247703418135643,
+            0.05535149574279785,
+            0.12301382422447205,
+            0.18182069063186646
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.0,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.0,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.015625000000000028,
+            0.03515625000000006,
+            0.05078125000000008,
+            0.06250000000000011,
+            0.08593750000000015
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.7915157785825142,
+          "posterior_centered_color_std": 3.0720397804524735,
+          "interior_color_mae_vs_observed": 4.937508835671413,
+          "learned_material_only_mae": 0.6773981385445627,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.01871144892355446,
+          "source_height_cap_active_fraction": 0.9679255043973098,
+          "source_plate_floor_active_fraction": 0.43507501293326434,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.00976421527114895,
+            0.013869766316243263,
+            0.021522566449461544,
+            0.021522566449461544,
+            0.021522566449461544
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.002608050942827592,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.004237683828221551,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.18470705272123977,
+          "hidden_learned_material_only_mae": 0.6935728346444258,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 1933
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            589.3355234447636,
+            76.97396181218161
+          ],
+          "new_tip_uv": [
+            589.3355234447636,
+            76.97396181218161
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "food",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        17,
+        9,
+        214,
+        143
+      ],
+      "source_bbox": [
+        296,
+        43,
+        447,
+        177
+      ],
+      "artifacts": {
+        "source.png": "504c59bc085946e46718959e4291ea3529e9e6f60871b7063c641ab9b74d6d63",
+        "base.png": "b43156bf7563384b2288fab9b8aec6d50e47aac826a6f5f3f8c087ea1e43e130",
+        "A.png": "48931b3d1a6b3815b554d9a9a01899a84f3cc045821faa217e79d71359fa2b88",
+        "final.png": "6f04463f559dcc350f80eab2ebe318334183602c30a3c93c363434fc570bc402",
+        "selected_reference.png": "3d420f39d7fbbb1d8ab3dafdcab76f1fb4e379b93f687af068e05e2d4826b06f",
+        "edit_mask.png": "db75cd404ff15f62ba181bd63ed2f54aab2262e926cf17e5953d70b843eb221e",
+        "source_removed_mask.png": "436eeee0bd610998418352f6092811ee4082eb35d77922a730d59c1b8247c414",
+        "core_mask.png": "e34846d98e669eb180f2ee662fc4f20bb6efbed1658ccfb9634f6ccace73787b",
+        "status.json": "f98af716b7ef95ff607980d94585dba12071a6087c5c5a4d7da832213218f44a",
+        "input_protocol.json": "63badeaa1e66dd68e89fd2e1ad05a7b3bbe098854c5d456868c2deedd3ce81b8",
+        "material_contract.json": "8b161a5c549bd2b1015f6beca46ed73389a1f8ce831c31c7e6fb75e7ccfef10b",
+        "geometry_state.json": "52cf99c9fba5b23735b26010908b9943a74b16acb8d210fbbc84ebe329fe727b"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_20_8925",
+      "index": 20,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "spaghetti meat sauce",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 1925,
+        "known": 2973,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 2971
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "77f4e463c30a8a0b191ea1bff96481010d194bc1f19bad683200ca7366527c46",
+        "texture_sha256": "6bc314a7ad6371a364622c33e5ff5cbf6c9ab1027a4f4d3d12ef6b7120d6dd04",
+        "source_sha256": "3a5961f7ee1a3b03fc70812da49d0ef3c245e0f1e0b2c053ca9637e18d91c6fd",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "8305ca11fef34636432294264ab2751e133954a24c55f4366854a44a1757a437",
+        "known_pixels": 2973,
+        "bound_core_pixels": 1925,
+        "food_pixels": 5085,
+        "core_fraction": 0.3785644051130777,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 37.87601731601732,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "strand",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0010836221969087205,
+        "computed_proxy_volume_after": 0.001075690415894858,
+        "computed_proxy_volume_relative_change": 0.0073196922658926855,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.02396669238805771,
+          "source_anchor_actual_sdf_abs_p90": 0.03657838404178619,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.4885701537132263,
+            0.5248416662216187,
+            0.5463039875030518,
+            0.5631476640701294,
+            0.5839230418205261
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.005385367552507506,
+          "source_interval_anchor_distance_p90": 0.026562500000000044,
+          "source_prior_anchor_gap_over_point1_fraction": 0.0,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.027343750000000045,
+            0.05078125000000008,
+            0.07031250000000012,
+            0.08984375000000015,
+            0.12500000000000022
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 1.0,
+          "posterior_centered_color_std": 4.139757525220053,
+          "interior_color_mae_vs_observed": 7.314781271115023,
+          "learned_material_only_mae": 1.0310248552347723,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.229753701078176,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 0.49635662237462497,
+          "minimum_thickness_active_fraction": 0.41920274324903556,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.001713807389775531,
+            0.001713807389775531,
+            0.0049356111158411235,
+            0.0049356111158411235,
+            0.0049356111158411235
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.02274723461754478,
+          "hidden_learned_material_only_mae": 1.024368352231884,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 2333
+        },
+        "prior_applies_to_final_closure": false,
+        "frame_connection": {
+          "old_tip_uv": [
+            756.5993856275179,
+            103.01089825813784
+          ],
+          "new_tip_uv": [
+            756.5993856275179,
+            103.01089825813784
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "noodle",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "strand",
+      "head_bbox": [
+        0,
+        6,
+        280,
+        181
+      ],
+      "source_bbox": [
+        114,
+        209,
+        293,
+        375
+      ],
+      "artifacts": {
+        "source.png": "3a5961f7ee1a3b03fc70812da49d0ef3c245e0f1e0b2c053ca9637e18d91c6fd",
+        "base.png": "15a41d2ada19ebc0b34c27427a2364d54b0e457e70e47de664a955210baa3e41",
+        "A.png": "77f4e463c30a8a0b191ea1bff96481010d194bc1f19bad683200ca7366527c46",
+        "final.png": "8305ca11fef34636432294264ab2751e133954a24c55f4366854a44a1757a437",
+        "selected_reference.png": "c789095b158e323809d4b5de889ad1e34493c5bbdfe4a41e83b6fd5273fba0f0",
+        "edit_mask.png": "6c00df9bc6a29dceda13118e0c5cfe12fc8bea57def450bc8369e1cd431c3928",
+        "source_removed_mask.png": "cda8511d34478a2cceaa280ffbd5f6bd902e604ab046ea2b99162f4268fd0a0f",
+        "core_mask.png": "71646b8623a8ecdbc524265bc270ed54c296ef691f24e199478f446cf40c3e09",
+        "status.json": "3af121d0b53592ef7ee5935e6ee3bced0250901008847f90098f09bbc3a913a5",
+        "input_protocol.json": "243f04f21ed339e17147d90362cc9dc5b2860b2e37e671cfa674cc3678383a42",
+        "material_contract.json": "5c7b605cf2b92b3d6780a37ba58f4bc2ae219f02cc28caa453f6630abb103595",
+        "geometry_state.json": "f243bca7771d7570bef18785a0d549e6dcd23a09b179918e0943875f4036098c"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_21_15805",
+      "index": 21,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "spaghetti",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 599,
+        "known": 1485,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 1482
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "ecd58e3de73ff1536ec59d64c9616362e71ad974589ab0f3987473c245bb9f8c",
+        "texture_sha256": "caee5cca27e1aa4b0ed3fbc0e122057e9f0121eac90c18229a3fe87fca9b1a11",
+        "source_sha256": "b3d92e1b60079a7e38f7cbf370dbfbf45078bf06b3ad021aab702e0dacc5ba6f",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "75a72c9af55059e541cbf48a9bd472f3dfe670c30234903593a61007a1b46541",
+        "known_pixels": 1485,
+        "bound_core_pixels": 599,
+        "food_pixels": 2709,
+        "core_fraction": 0.22111480251015134,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 27.32220367278798,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "strand",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 9.477838643199713e-05,
+        "computed_proxy_volume_after": 9.268154369310477e-05,
+        "computed_proxy_volume_relative_change": 0.02212363828747843,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.08273337781429291,
+          "source_anchor_actual_sdf_abs_p90": 0.11649192124605179,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.2714087963104248,
+            0.33732787519693375,
+            0.3703843653202057,
+            0.41045860201120377,
+            0.5245683193206787
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.0002796052631578952,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.0,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.042968750000000076,
+            0.06640625000000011,
+            0.08593750000000015,
+            0.10546875000000018,
+            0.12500000000000022
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 1.0,
+          "posterior_centered_color_std": 4.940025909894555,
+          "interior_color_mae_vs_observed": 6.0748911264756895,
+          "learned_material_only_mae": 1.1888332919405216,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.13406207827260458,
+          "source_height_cap_active_fraction": 1.0,
+          "source_plate_floor_active_fraction": 1.0,
+          "minimum_thickness_active_fraction": 1.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.003510322255832,
+            0.003510322255832,
+            0.003510322255832,
+            0.003510322255832,
+            0.003510322255832
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.0,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.0,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.035769762875741164,
+          "hidden_learned_material_only_mae": 1.1777044778455765,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 2850
+        },
+        "prior_applies_to_final_closure": false,
+        "frame_connection": {
+          "old_tip_uv": [
+            577.6441690565215,
+            90.05231015041927
+          ],
+          "new_tip_uv": [
+            610.0,
+            89.90093715206731
+          ],
+          "distal_axial_extension": 0.0562362800422447,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": false,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "noodle",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "strand",
+      "head_bbox": [
+        58,
+        23,
+        247,
+        158
+      ],
+      "source_bbox": [
+        91,
+        229,
+        290,
+        431
+      ],
+      "artifacts": {
+        "source.png": "b3d92e1b60079a7e38f7cbf370dbfbf45078bf06b3ad021aab702e0dacc5ba6f",
+        "base.png": "d0e4ee3de67fbd0c5eadafc1557e7812cf89c0b7c3fddc82caf27ffe81cf76da",
+        "A.png": "ecd58e3de73ff1536ec59d64c9616362e71ad974589ab0f3987473c245bb9f8c",
+        "final.png": "75a72c9af55059e541cbf48a9bd472f3dfe670c30234903593a61007a1b46541",
+        "selected_reference.png": "fe71ff186575dab17448b5b0b083dcb4f69f4ae8db7fbe035c8cb5cd8e0660f1",
+        "edit_mask.png": "758e2a67ac8b1f239291e16ef8f6c5f1963c18cb24f7d7936bfc8f860ac931b9",
+        "source_removed_mask.png": "6b9ddedb4ef9a51d8b5d7149e28ea5820ea4a584a3c6c4f830d63bccf5949ebc",
+        "core_mask.png": "b83c031a9cda86ebca5a807eac9b6217b888e88b546eb152eb3f1e321009827d",
+        "status.json": "d116f28a4c3a76fdc2f30edaa0ca77c3445f4a04f59bb8862d74b40e65839e3a",
+        "input_protocol.json": "356570bc6db17bb7834fb6ea6923c74a905e1916e80680816107adcffd8beef8",
+        "material_contract.json": "bebb755821cd8d399de0e1efc6555aac6c91e5f4ef124530cfd8d2d49fedcdf5",
+        "geometry_state.json": "d4eb6346bdf7c965894a32a1f85e179db7b51f88a103b23822cb7578293902cb"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_22_4792",
+      "index": 22,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "rice",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 656,
+        "known": 789,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 777
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "308334371df16bfc3d2b21f1fad46b594a0e34d3b3dd57c74afd3e4a3c5c2531",
+        "texture_sha256": "6fcf6322d0fc1f87a58871b9986a952e32185f3cd15f632fedaa861667f0efa9",
+        "source_sha256": "87f40711ead81d073ee49f1aa1e6b2d3abaf53d746d1cf8048c01e08e22ab56c",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "1ed4b0fe2e67976bd26b10d5aa2552e45b9cde32a529d14caf58b72f6f5e9609",
+        "known_pixels": 789,
+        "bound_core_pixels": 656,
+        "food_pixels": 945,
+        "core_fraction": 0.6941798941798942,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 18.947154471544714,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.0003929115334206748,
+        "computed_proxy_volume_after": 0.0003926673317678285,
+        "computed_proxy_volume_relative_change": 0.0006215181588594687,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.043019670993089676,
+          "source_anchor_actual_sdf_abs_p90": 0.06400057673454285,
+          "predicted_canonical_toward_depth_quantiles": [
+            -0.22699035704135895,
+            0.015266447328031063,
+            0.17633245885372162,
+            0.3231072425842285,
+            0.46492597460746765
+          ],
+          "source_ray_nonempty_fraction": 0.993485342019544,
+          "source_interval_anchor_distance_mean": 0.01274769272529859,
+          "source_interval_anchor_distance_p90": 0.0,
+          "source_prior_anchor_gap_over_point1_fraction": 0.006514657980456026,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.0,
+            0.05078125000000009,
+            0.0585937500000001,
+            0.07812500000000014,
+            0.1132812500000002
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.006514657980456026,
+          "posterior_thickness_upper_clip_fraction": 0.23995656894679696,
+          "posterior_centered_color_std": 2.448916022505153,
+          "interior_color_mae_vs_observed": 4.609608477358868,
+          "learned_material_only_mae": 0.4370593639460763,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.01327987972939113,
+          "source_height_cap_active_fraction": 0.0,
+          "source_plate_floor_active_fraction": 0.0,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.007746045328540613,
+            0.05107559019249736,
+            0.06043599923175442,
+            0.07599643821642087,
+            0.08039338823579094
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.022498325177183334,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.040129875617343866,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.17855447154091686,
+          "hidden_learned_material_only_mae": 0.345296825777566,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 921
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            380.02277784015,
+            63.06769048262728
+          ],
+          "new_tip_uv": [
+            380.02277784015,
+            63.06769048262728
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "rice",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        36,
+        30,
+        132,
+        100
+      ],
+      "source_bbox": [
+        81,
+        45,
+        177,
+        147
+      ],
+      "artifacts": {
+        "source.png": "87f40711ead81d073ee49f1aa1e6b2d3abaf53d746d1cf8048c01e08e22ab56c",
+        "base.png": "7664cf8d3ba0e9041c4e6b93a7611ea5efece11dffaa7b444cc9790cf190ac56",
+        "A.png": "308334371df16bfc3d2b21f1fad46b594a0e34d3b3dd57c74afd3e4a3c5c2531",
+        "final.png": "1ed4b0fe2e67976bd26b10d5aa2552e45b9cde32a529d14caf58b72f6f5e9609",
+        "selected_reference.png": "31c9b1375d8726fe63e57f1f4674c7610602e5f858f0aa3b9f3a29e6d15e89b9",
+        "edit_mask.png": "217b9e65a451080311747b003fe7d28ab9b0de4310dace17046f535b3ec0f27a",
+        "source_removed_mask.png": "a2146682cf58e6077615c9fb2e2ca3af9888942939880110cc268b1523e687e0",
+        "core_mask.png": "eef8601e4471a52ba595f9eddd7b5dced1eff97d0b9ce56b3629185590a3dba1",
+        "status.json": "7e546d5a3517044a81cec605379c28bb9ddd24a4492b9f23dfeb3984a012ec33",
+        "input_protocol.json": "1c33b1525903baf252318917172defa5a00ce11a60ae961df575c8900e03eabe",
+        "material_contract.json": "f8aed9629c62669c9502317bf6d410addbcf02bb55d01db28b644c0658c2ee00",
+        "geometry_state.json": "3e052e15155c5418326fe0c7e68dcec81ee273d86a4878d32b16185648c18196"
+      },
+      "visual_review": "pending"
+    },
+    {
+      "case_id": "real_23_5280",
+      "index": 23,
+      "status": "complete",
+      "stage": "complete",
+      "food_prompt": "food",
+      "group": "regression_previously_observed",
+      "checks": {
+        "source_hash": true,
+        "source_pixels_unchanged": true,
+        "final_hash": true,
+        "A_hash": true,
+        "exterior_unchanged": true,
+        "B_outside_known_unchanged": true,
+        "source_snapshot_unchanged": true,
+        "production_provenance": true,
+        "material_core_contract": true,
+        "known_map": true,
+        "alpha_map": true,
+        "core_map": true,
+        "gain_finite_bounded": true,
+        "material_texture_hash": true,
+        "upstream_extended_handle": true,
+        "fresh_perception": true,
+        "geometry_contracts": true,
+        "same_frozen_generation_code": true
+      },
+      "all_checks": true,
+      "pixels": {
+        "changed_outside_edit": 0,
+        "bound_core": 3793,
+        "known": 4165,
+        "core_contract_max_rgb_error": 0,
+        "changed_B_from_A": 4162
+      },
+      "material_contract": {
+        "case_id": "real_00_input",
+        "base_sha256": "98a3bdb7ec4c2c2eb4dc3e12e26913b42b448b4810cad86c7758cb9ce15983f8",
+        "texture_sha256": "e3519b0d08a37747cc65bd762f944a365ae57f7e125714719c1ca8123602f3ee",
+        "source_sha256": "7c2c2ff7ecf1ce22d7221657c9923e00b9e05f26defb3497521b72401b516dcb",
+        "runner_sha256": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+        "final_sha256": "8e3f602dca50488cc91f0b60fb551ebf621423b060a449b14a4a0988a74015ac",
+        "known_pixels": 4165,
+        "bound_core_pixels": 3793,
+        "food_pixels": 5439,
+        "core_fraction": 0.6973708402279831,
+        "scalar_gain_bounds": [
+          0.72,
+          1.4
+        ],
+        "core_contract_max_rgb_error": 0,
+        "changed_outside_known_pixels": 0,
+        "wrong_correspondence_core_mae": 57.83065295720186,
+        "generated_chromatic_content_in_bound_core": false,
+        "wrong_control": "Reverse raster-order selected observed atlas samples; same gain and alpha. Constructed diagnostic, not a natural result.",
+        "limitation": "Core identity follows by construction. Source RGB includes original lighting; natural appearance and unobserved surfaces remain unverified."
+      },
+      "geometry_diagnostics": {
+        "mode": "cohesive",
+        "checks": {
+          "source_ID_partition": true,
+          "carried_target_ID_equal": true,
+          "material_UV_equal": true,
+          "material_RGB_equal": true,
+          "finite_geometry": true,
+          "closed_edge_incidence": true
+        },
+        "all_checks": true,
+        "computed_proxy_volume_before": 0.015196474749807337,
+        "computed_proxy_volume_after": 0.01516654230475877,
+        "computed_proxy_volume_relative_change": 0.0019696966264459714,
+        "prior_diagnostics": {
+          "source_anchor_actual_sdf_abs_mean": 0.04828498139977455,
+          "source_anchor_actual_sdf_abs_p90": 0.10790542513132105,
+          "predicted_canonical_toward_depth_quantiles": [
+            0.028432775288820267,
+            0.11575093679130077,
+            0.204585462808609,
+            0.302801750600338,
+            0.4036731421947479
+          ],
+          "source_ray_nonempty_fraction": 1.0,
+          "source_interval_anchor_distance_mean": 0.08089904259896728,
+          "source_interval_anchor_distance_p90": 0.18593749999999998,
+          "source_prior_anchor_gap_over_point1_fraction": 0.4281411359724613,
+          "posterior_thickness_raw_quantiles_over_extent": [
+            0.003906250000000007,
+            0.03906250000000007,
+            0.05468750000000009,
+            0.06640625000000011,
+            0.09375000000000015
+          ],
+          "posterior_thickness_lower_clip_fraction": 0.0,
+          "posterior_thickness_upper_clip_fraction": 0.7358003442340791,
+          "posterior_centered_color_std": 5.699197052295282,
+          "interior_color_mae_vs_observed": 13.818871888078709,
+          "learned_material_only_mae": 1.4112386596387514,
+          "visible_field_queries_outside_canonical_fraction": 0.0,
+          "hidden_ray_queries_outside_canonical_fraction": 0.007043558850787767,
+          "source_height_cap_active_fraction": 0.786144578313253,
+          "source_plate_floor_active_fraction": 0.28184165232358005,
+          "minimum_thickness_active_fraction": 0.0,
+          "final_closure_thickness_quantiles_over_extent": [
+            0.007918611414589476,
+            0.029465713451808165,
+            0.03778845519367598,
+            0.03778845519367598,
+            0.03778845519367598
+          ],
+          "learned_vs_uniform_floor_mean_absolute_delta_over_extent": 0.014494326123717285,
+          "learned_vs_uniform_floor_p90_absolute_delta_over_extent": 0.01817562966833696,
+          "hidden_material_query_delta_vs_surface_rgb_mae": 0.21112565292548788,
+          "hidden_learned_material_only_mae": 1.3242745662104858,
+          "hidden_material_queries_outside_canonical_fraction": 0.0,
+          "new_cut_material_field_queries": 2324
+        },
+        "prior_applies_to_final_closure": true,
+        "frame_connection": {
+          "old_tip_uv": [
+            822.3773537441176,
+            74.86876175983338
+          ],
+          "new_tip_uv": [
+            822.3773537441176,
+            74.86876175983338
+          ],
+          "distal_axial_extension": 0.0,
+          "fixed_bowl_vertices": 19604,
+          "fixed_bowl_max_change": 0.0,
+          "camera_margin_pixels": 10.0,
+          "already_beyond_right_frame": true,
+          "rule": "C1 monotone distal axial extension; fixed x<=bowl radius; can leave through top before reaching the projected right boundary.",
+          "scope": "Frame connection and unchanged bowl geometry; no evidence of an actual off-screen hand."
+        },
+        "automatic_source_label": "food",
+        "automatic_label_is_truth": false,
+        "scope": "Actual saved proxy vertices/IDs/UV/colors, not measured physical mass or generated-image identity."
+      },
+      "route": "retain_existing",
+      "initial_mode": "cohesive",
+      "head_bbox": [
+        0,
+        0,
+        225,
+        161
+      ],
+      "source_bbox": [
+        270,
+        6,
+        425,
+        158
+      ],
+      "artifacts": {
+        "source.png": "7c2c2ff7ecf1ce22d7221657c9923e00b9e05f26defb3497521b72401b516dcb",
+        "base.png": "dcc8e0398e2b4026469301c1c7ee506fc7776a70a0b9c23990296e4ba9dd425f",
+        "A.png": "98a3bdb7ec4c2c2eb4dc3e12e26913b42b448b4810cad86c7758cb9ce15983f8",
+        "final.png": "8e3f602dca50488cc91f0b60fb551ebf621423b060a449b14a4a0988a74015ac",
+        "selected_reference.png": "d6ab0546a333e176edb1eedf7b44aa5343d851854fb8625167a8b1b6cf833a5b",
+        "edit_mask.png": "cc06a278e01bdb47b8bfc449f23cb37661c5fbe25d8fbe2f53cd42f59eb76a8b",
+        "source_removed_mask.png": "8f87f496c97df7ff99b861e0e86b7eafee8db64725f47f5ab4ac3d2cf7a6b106",
+        "core_mask.png": "2685710279d4c3562c76feedb1078382669b14bf04db53149fcdee70ae5b371a",
+        "status.json": "94b417d1dd4c1478cddc6e0fb6e69751cd37bbb54d8dd0c4213d5461fd63ea1c",
+        "input_protocol.json": "868482b5c2e4cc6a64011e7d49c25269536904b1d5f04e22c37db7c77bded2db",
+        "material_contract.json": "17a8e5a7fe87899936123a5ec0c6404488eb6950478fcb1d00372c4c778e0cf4",
+        "geometry_state.json": "bcb64c8ab899bdd291f5bd122b8c7f107c0554f43a354543902b03b52101a65b"
+      },
+      "visual_review": "pending"
+    }
+  ],
+  "frozen_outer_code_mismatches": [],
+  "interpretation": "All 24 inputs were previously observed. Exact pixel/material contracts do not prove photographic realism, physical mass conservation or generalization.",
+  "evaluator_sha256": "f5be48fe51858d347b446728e8948d25ad7b05a7e9c89e3fc9308de55b68cfd5"
+}

@@ -1,5 +1,20 @@
 # Change log
 
+## 2026-10-07 — Publish MLD4 v3 and the complete 24-photo regression
+
+- publish the first-bite, observed-edit, material-transfer and material-lineage
+  implementations, training/evaluation scripts, and associated regression tests;
+- add the full RGB entry point, finite-support depth smoothing, connected material
+  topology, contact deformation, frame-connected handle, and visible-source
+  texture projection used by the frozen v3 experiment;
+- publish all 24 source/A/B comparisons, the frozen protocol, implementation
+  audits, per-image AI reviews, default-food test, and negative source-probe records;
+- record 24/24 completed runs in 33m 47.6s, while retaining the negative visual
+  conclusion: source removal 4 pass / 16 fail / 4 uncertain; all seven criteria
+  pass in 0/24 cases, on previously observed development/regression photos;
+- document the actual model stack and deployment dependencies; keep weights,
+  runtime caches, and unrelated thesis layout changes out of this update.
+
 ## 2026-09-13 — Day 25 complete ablation result
 
 - completed the rice and cake v2 retry workers, each with 11/11 expected jobs,

@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "case_id": "real_02_16784",
+      "index": 2,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/from_image_default_food_20261005/input/original.jpg",
+      "source_sha256": "bbb938d45d2f26fa7303deab5644161a97221ff7a304c8245eeaa1235f5cce3c",
+      "food_prompt": "food"
+    }
+  ],
+  "scope": "Post-execution audit envelope for single default-food interface test; actual pre-execution protocol belongs to input_protocol.json, not this envelope."
+}

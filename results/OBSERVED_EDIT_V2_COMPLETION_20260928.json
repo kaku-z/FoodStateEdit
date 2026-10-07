@@ -1,0 +1,241 @@
+{
+  "schema": "foodstateedit.v2.development_completion.v1",
+  "recorded_utc": "2026-09-28T04:07:29.876144+00:00",
+  "status": "COMPLETED_DEVELOPMENT_GATE_FAILED",
+  "model_calls": 6,
+  "verified_server_images": 14,
+  "postprocessed_images": 2,
+  "verified_input_asset_checks": 24,
+  "independent_review": "not_performed_blank_ballots_only",
+  "heldout_status": "not_unlocked",
+  "source_photos": 2,
+  "tests": "8 passed (recorded before generation)",
+  "runs": [
+    {
+      "bundle": "outputs/observed_edit_v2_20260928_bundle_r2",
+      "run": "outputs/observed_edit_v2_20260928_gp40",
+      "config_sha256": "29cd3358ec78084c9b07223dfe6b22ae10dc342e32c1ad4266fad105acbb2e86",
+      "manifest_sha256": "ddd927f147df654b10ec2a3dd8ed25c1a15fa588f4b11163f0b6550a50142d4c",
+      "runner_sha256": "3425211ef2973937637b716fdcdb59e8782a341fdc8fa029a01ecd0454fafe82",
+      "count": 4,
+      "duration_seconds": 2099.669820547104
+    },
+    {
+      "bundle": "outputs/observed_edit_v2_20260928_original_bundle",
+      "run": "outputs/observed_edit_v2_20260928_original_gp40",
+      "config_sha256": "81764c1d9ef9bb0912954cc8e67328e53c6522f831d4e6480e4abeb4261ecd1e",
+      "manifest_sha256": "3425d0610f6dccbc4b08efe67e08579b97b8d9492718f9f5a3a03796e0af87b8",
+      "runner_sha256": "58e33c4085ca2dfdacf829077c4199e2823662a9e0d1ec1912a649ce7ce9e5c6",
+      "count": 2,
+      "duration_seconds": 1103.4561207294464
+    }
+  ],
+  "report": {
+    "path": "docs/OBSERVED_EDIT_V2_RESULT_20260928.md",
+    "sha256": "a5c196de2b19f4d7b40ab918e875139041a7d6e30b9a6ae6d53c8ec60c2feceb"
+  },
+  "review_files": [
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/ballot.csv",
+      "sha256": "b11a33b5d3533ff0b28c631ec7241cc5c3d7651a48ed0e63c57278de60bdb7fc"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/index.html",
+      "sha256": "4c76cd94930243526a389f2a86bcb289c5f605f15ef6756c638e3ce46c968f3d"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/INSTRUCTIONS.md",
+      "sha256": "ef507874dc1b4e552376e472b9bccd66a8340d7d8c6ba27d29660d661af0fa85"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_000.png",
+      "sha256": "69110d2d1338c27e01eca1bf59152bf2a331bd96b60aaefad3c55c431ead5c98"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_000_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_001.png",
+      "sha256": "09cc01a229209355f917abb89d57ae8d4e24ee848ccac6c8f57e2d2ab31bc4c3"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_001_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_002.png",
+      "sha256": "cb07d514fd741ce3899be69405b0991bde52252d389d2ce230941a578a6d1c43"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_002_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_003.png",
+      "sha256": "424d5d5bfcd0a08d07791303dc0a2fa520a829abb41077177686494719a1f792"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_003_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_004.png",
+      "sha256": "02d36ba7754e61154db6b3519829bdd9f1b9ef5101ffd5c662f8245d63aa6057"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_004_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_005.png",
+      "sha256": "894b16dec0d744f84b06dd3d245d11445a70c878b7a9c0b4411f27a47a1e167b"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_005_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_006.png",
+      "sha256": "ade6d3ceb43dfd713a04bd4537148e9799529099ba79fb497b17219933d90f79"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_006_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_007.png",
+      "sha256": "228d29fc6068036aab375a37da154d2a1a5bfe3cbc80543242b1e063c94d1c86"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_007_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_008.png",
+      "sha256": "325537d7fcdafb18227aeab9947c1f2dedabeaa8b3d7b0f06c362999ef0ed297"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_008_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_009.png",
+      "sha256": "39e0b4d2f3ce934bf78862c648e6917caad83c5e2808b343206cc5bca72c5d35"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_009_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_010.png",
+      "sha256": "07518646fde3e8ffa59778b06cf59db3c33a6a564bec18aaea58fa7645008875"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_010_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_011.png",
+      "sha256": "2ecd933580fe766422b6089ff50edbc27083ca2527f8971cfb64066f7579d7bc"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_011_source.png",
+      "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_012.png",
+      "sha256": "94fabbe24875a17e5835e06556017116aa565064eff3cc9353f60d42b482b56d"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_012_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_013.png",
+      "sha256": "a36a8c632d5258d9a37d0452a80546416dd6a8fe5d0090043be8b4d19b542b67"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_013_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_014.png",
+      "sha256": "e02489e5ef434b7c16f200186f9704d7a026801606565548e1751da5d69eaaae"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_014_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_015.png",
+      "sha256": "e75ceed3d0ada9f5a4da2bf63a64683a3d3f9e6357d509c6cbd6fe36f2181f10"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blind/item_015_source.png",
+      "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/blinding_key.json",
+      "sha256": "e1d49d1164a7fe4256ae091f8636e997dcf7c90940c5bcb1ef8134ee12903e18"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/corn_appearance_parameters.json",
+      "sha256": "607987be144ef4c933ea5ad8bd039c40c1feeb85fa7c208d73035a63a27382f7"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/corn_comparison.png",
+      "sha256": "2ae1d5263eee92553c7240014134c8a6cda00e24d85ee799d45c12cfc771c1c7"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/corn_relit_locked.png",
+      "sha256": "94fabbe24875a17e5835e06556017116aa565064eff3cc9353f60d42b482b56d"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/labeled_overview.png",
+      "sha256": "9972a7c1469ba5b2fa05e38b2262864b41b90551ff6a0391b770ab57d99093e4"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/metrics.csv",
+      "sha256": "1aa2683af73add735196a48d957fd52ca56beb76c0d9b7e817f6934484001288"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/pizza_appearance_parameters.json",
+      "sha256": "b80863a8737e0db811d9509eedd5c5dd92aec8c43c6d7d9dc7248e543185e728"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/pizza_comparison.png",
+      "sha256": "ce0adf2dfc8e91d2317a9e81f00338c074d398a5f2347805b5254fb399ff7b44"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/pizza_relit_locked.png",
+      "sha256": "228d29fc6068036aab375a37da154d2a1a5bfe3cbc80543242b1e063c94d1c86"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/reference_diagnostics.json",
+      "sha256": "cf12f77f48b4489ab6d055657787001941d04151119101feea25f4f4db75aaff"
+    },
+    {
+      "path": "outputs/observed_edit_v2_20260928_review/review_manifest.json",
+      "sha256": "ef89d18155e2ea9ca4bd0410b21d28ec327592f59a91bac47b37bc8717474bd2"
+    }
+  ],
+  "gate_evidence": [
+    {
+      "case": "pizza",
+      "defects": [
+        "source remains in Grounded raw",
+        "duplicated/rotated payload",
+        "anchored double contour"
+      ],
+      "basis": "author-side non-blind visual review"
+    },
+    {
+      "case": "corn",
+      "defects": [
+        "visible background composition boundaries"
+      ],
+      "basis": "author-side non-blind visual review"
+    }
+  ]
+}

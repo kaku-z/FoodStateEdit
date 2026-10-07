@@ -1,0 +1,43 @@
+{
+  "recorded_utc": "2026-09-28T07:21:57.152659+00:00",
+  "status": "DESIGN_ARTIFACTS_VALIDATED_NOT_EXECUTED",
+  "checks": {
+    "pilot_matrix_complete": true,
+    "pilot_cells": 64,
+    "conditional_height_cells": 12,
+    "empty_review_slots": 192,
+    "real_inputs_bound": 0,
+    "new_model_calls": 0,
+    "future_test_unlocked": false
+  },
+  "files": [
+    {
+      "path": "configs/first_bite_experiment_v1_20260928.json",
+      "sha256": "b7409a6e5f0b7cb1e8ea68b6bb196c2b09a4b8ed1f6a6f4a3e0a2e780db4a84b"
+    },
+    {
+      "path": "docs/FIRST_BITE_EXPERIMENT_PLAN_20260928.md",
+      "sha256": "4bd25ba5709bab69eaf92370b2d27776cca740bda10c88d576bc29ba51deaf89"
+    },
+    {
+      "path": "benchmark/first_bite_20260928/cases.template.csv",
+      "sha256": "2537404897cfbb672b1b34ce601c7321a32ac17711b1c9988fd809e87fd1ffa2"
+    },
+    {
+      "path": "benchmark/first_bite_20260928/height_diagnostic_matrix.csv",
+      "sha256": "c1d5b427edab0d0f340e6adfb2897ae33c660f2789bffe59dfef0e26f3139810"
+    },
+    {
+      "path": "benchmark/first_bite_20260928/ratings.template.csv",
+      "sha256": "46d4500c83ce5e2859ef953a68dd30fa680bc7a56cfd291b857a74c9ee76845f"
+    },
+    {
+      "path": "benchmark/first_bite_20260928/README.md",
+      "sha256": "f40e636ce0f630e1af40c1bc60580504e0846078fb55d4503fb8d3623f1620fe"
+    },
+    {
+      "path": "benchmark/first_bite_20260928/run_matrix.csv",
+      "sha256": "c14fb6aa7e2a1e2c8ca0af94052371096906b997e1b324b3880df393017ed48d"
+    }
+  ]
+}

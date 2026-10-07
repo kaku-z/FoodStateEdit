@@ -1,0 +1,12 @@
+{
+  "status": "execution_and_implementation_audit_complete",
+  "count": 24,
+  "failed": 0,
+  "started_utc": "2026-10-05T14:32:12.767775+00:00",
+  "finished_utc": "2026-10-05T15:06:00.362637+00:00",
+  "wall_seconds": 2027.594862,
+  "protocol_sha256": "5a97e6f97dc09aeef1f1340a279edff487102381bc5de8d2df14a60b735a16c3",
+  "all_audit_checks": true,
+  "total_bound_core_pixels": 34121,
+  "appearance_claim": "Requires separate per-image visual review; execution completion is not task success."
+}

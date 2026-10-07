@@ -1,0 +1,193 @@
+{
+  "experiment_id": "observed_edit_v2_original_baseline_20260928",
+  "status": "frozen_before_new_generation",
+  "seeds": [
+    281
+  ],
+  "cases": [
+    {
+      "case_id": "pizza",
+      "dataset_index": 5,
+      "split": "development_seen",
+      "target_xy": [
+        230,
+        220
+      ],
+      "handle_xy": [
+        45,
+        390
+      ],
+      "delta_xy": [
+        -194,
+        87
+      ],
+      "prompts": {
+        "direct": "Edit the first real photograph: lift the single pizza portion from its original position onto exactly one realistic stainless-steel serving spoon, with the food centered at pixel (230, 220) in the original 640 by 480 coordinate system and the handle pointing toward pixel (45, 390). Show the same intact food piece supported by the spoon and remove it completely from its old position, revealing the underlying plate. Preserve all other food, the plate, camera and photographic lighting. No hands, duplicate payload, extra utensil, outlines or labels. Do not change the identity or size of the food. The second image is a control diagram: yellow outlines the source food; cyan marks its destination and spoon handle direction. Use the first image for photographic content, never render the control lines.",
+        "grounded": "Edit the first real photograph: lift the single pizza portion from its original position onto exactly one realistic stainless-steel serving spoon, with the food centered at pixel (230, 220) in the original 640 by 480 coordinate system and the handle pointing toward pixel (45, 390). Show the same intact food piece supported by the spoon and remove it completely from its old position, revealing the underlying plate. Preserve all other food, the plate, camera and photographic lighting. No hands, duplicate payload, extra utensil, outlines or labels. Do not change the identity or size of the food. The second image is a rough state preview: the actual source food pixels have already been translated to their requested destination, the old footprint is roughly filled, and a flat gray spoon shape marks support. Turn that preview into a real photograph. Retain the exact food placement and appearance; repair the revealed plate and render a realistic spoon underneath, with natural contact shadows.",
+        "original": "Edit the first real photograph: lift the single pizza portion from its original position onto exactly one realistic stainless-steel serving spoon, with the food centered at pixel (230, 220) in the original 640 by 480 coordinate system and the handle pointing toward pixel (45, 390). Show the same intact food piece supported by the spoon and remove it completely from its old position, revealing the underlying plate. Preserve all other food, the plate, camera and photographic lighting. No hands, duplicate payload, extra utensil, outlines or labels. Do not change the identity or size of the food. "
+      },
+      "files": {
+        "control.png": {
+          "path": "inputs/pizza/control.png",
+          "sha256": "dcfd0114e74057743d6a7918b7eb5457e1bc6ec8b9964d409315f2645214ce75"
+        },
+        "editable.png": {
+          "path": "inputs/pizza/editable.png",
+          "sha256": "72adb9ef4768d004c545edee447ece91116b879cf9580953d30acf6580d6f4cb"
+        },
+        "mask.png": {
+          "path": "inputs/pizza/mask.png",
+          "sha256": "a0ca2e8e0c9eba028074396c666b687f015041c99011abe56b28394fe2fc96e4"
+        },
+        "scaffold.png": {
+          "path": "inputs/pizza/scaffold.png",
+          "sha256": "06cc737449cfdc32f0067f908b3b86ff90f44d3db96f4e889dfe277d3c2afe05"
+        },
+        "source.png": {
+          "path": "inputs/pizza/source.png",
+          "sha256": "033e3c6acf7c621215b5018e77a1dff65deab0862673ba2ee763779fdf509356"
+        },
+        "state.npz": {
+          "path": "inputs/pizza/state.npz",
+          "sha256": "3d453f70cc045db2fdffd73aa8f0e7be18afad78186607cda84d6270c088b190"
+        }
+      }
+    },
+    {
+      "case_id": "corn",
+      "dataset_index": 7,
+      "split": "development_seen",
+      "target_xy": [
+        440,
+        175
+      ],
+      "handle_xy": [
+        594,
+        385
+      ],
+      "delta_xy": [
+        236,
+        0
+      ],
+      "prompts": {
+        "direct": "Edit the first real photograph: lift the single round corn slice from its original position onto exactly one realistic stainless-steel serving spoon, with the food centered at pixel (440, 175) in the original 640 by 480 coordinate system and the handle pointing toward pixel (594, 385). Show the same intact food piece supported by the spoon and remove it completely from its old position, revealing the underlying plate. Preserve all other food, the plate, camera and photographic lighting. No hands, duplicate payload, extra utensil, outlines or labels. Do not change the identity or size of the food. The second image is a control diagram: yellow outlines the source food; cyan marks its destination and spoon handle direction. Use the first image for photographic content, never render the control lines.",
+        "grounded": "Edit the first real photograph: lift the single round corn slice from its original position onto exactly one realistic stainless-steel serving spoon, with the food centered at pixel (440, 175) in the original 640 by 480 coordinate system and the handle pointing toward pixel (594, 385). Show the same intact food piece supported by the spoon and remove it completely from its old position, revealing the underlying plate. Preserve all other food, the plate, camera and photographic lighting. No hands, duplicate payload, extra utensil, outlines or labels. Do not change the identity or size of the food. The second image is a rough state preview: the actual source food pixels have already been translated to their requested destination, the old footprint is roughly filled, and a flat gray spoon shape marks support. Turn that preview into a real photograph. Retain the exact food placement and appearance; repair the revealed plate and render a realistic spoon underneath, with natural contact shadows.",
+        "original": "Edit the first real photograph: lift the single round corn slice from its original position onto exactly one realistic stainless-steel serving spoon, with the food centered at pixel (440, 175) in the original 640 by 480 coordinate system and the handle pointing toward pixel (594, 385). Show the same intact food piece supported by the spoon and remove it completely from its old position, revealing the underlying plate. Preserve all other food, the plate, camera and photographic lighting. No hands, duplicate payload, extra utensil, outlines or labels. Do not change the identity or size of the food. "
+      },
+      "files": {
+        "control.png": {
+          "path": "inputs/corn/control.png",
+          "sha256": "68fcc9596604d039673b8f01b6b07d4d41618d166a265334d00df30f18dbde55"
+        },
+        "editable.png": {
+          "path": "inputs/corn/editable.png",
+          "sha256": "8b286af237efcaa8098ef002732da7569bef620fe4a3047c041d136e50c3187a"
+        },
+        "mask.png": {
+          "path": "inputs/corn/mask.png",
+          "sha256": "16602a20d155a53673bbd2c3999c77d91651e724f03e3d857e9fa8a049596b09"
+        },
+        "scaffold.png": {
+          "path": "inputs/corn/scaffold.png",
+          "sha256": "a79e29b1b8021bdbc52e8f0f8a48c5f4789ba6e5548d94bc29dbb556a9246774"
+        },
+        "source.png": {
+          "path": "inputs/corn/source.png",
+          "sha256": "4bc08c84d9181893b316adbb763d7a30923062533e201967f54f38bdf6258417"
+        },
+        "state.npz": {
+          "path": "inputs/corn/state.npz",
+          "sha256": "b1d5a8532d26dfe52039c423450a01829d1746b9be7d7dbcd75e91db3198eca5"
+        }
+      }
+    }
+  ],
+  "conditions": [
+    "original"
+  ],
+  "inference": {
+    "num_inference_steps": 40,
+    "true_cfg_scale": 4.0,
+    "guidance_scale": 1.0,
+    "negative_prompt": " ",
+    "torch_dtype": "bfloat16",
+    "offload": "model_cpu_offload",
+    "pipeline_loads": 1
+  },
+  "backend": {
+    "python": "/home/yanai-lab/guo-z/.conda/envs/flux_pure_env/bin/python",
+    "model_root": "/host/space0/guo-z/projects/multimodal_food/models/qwen-image-edit-2511",
+    "pipeline_class": "QwenImageEditPlusPipeline",
+    "offline_only": true,
+    "downloads_forbidden": true,
+    "weight_files": {
+      "model_index.json": {
+        "size_bytes": 516,
+        "sha256": "5ba11ceee68457ad6a48b899b8c9493e347f4685e11e5eeca952a13f16549e35"
+      },
+      "text_encoder/model-00001-of-00004.safetensors": {
+        "size_bytes": 4968243304,
+        "sha256": "d725335e4ea2399be706469e4b8807716a8fa64bd03468252e9f7acf2415fee4"
+      },
+      "text_encoder/model-00002-of-00004.safetensors": {
+        "size_bytes": 4991495816,
+        "sha256": "b1830db6908dcc76df3a71492acbcf2b8cac130114cf1f3c2d9edae8de8c6de3"
+      },
+      "text_encoder/model-00003-of-00004.safetensors": {
+        "size_bytes": 4932751040,
+        "sha256": "09c1807c6d00d7cab94f7db39d4c02ebb8537225ccde383861ac48db97945aa6"
+      },
+      "text_encoder/model-00004-of-00004.safetensors": {
+        "size_bytes": 1691924384,
+        "sha256": "5dd068336d14d45ffb43cef374d286cc6ba9d8741b028f90a7d040d847961f4a"
+      },
+      "text_encoder/model.safetensors.index.json": {
+        "size_bytes": 57655,
+        "sha256": "4be35310ddc165e46e88de4c3fec8c1210014b0b8717f4544d82cc740814ae0c"
+      },
+      "transformer/diffusion_pytorch_model-00001-of-00005.safetensors": {
+        "size_bytes": 9973578592,
+        "sha256": "2a0c30c9ba44a5f11c21ca139e37951430bbde814ff4e0b5b1a68b80530e7a1a"
+      },
+      "transformer/diffusion_pytorch_model-00002-of-00005.safetensors": {
+        "size_bytes": 9987326072,
+        "sha256": "54ec249b07b4376e19cf16b764054f03ca03ae2cfbd9939453e2085f4e9bd259"
+      },
+      "transformer/diffusion_pytorch_model-00003-of-00005.safetensors": {
+        "size_bytes": 9987307440,
+        "sha256": "c55157843525653161e8f6af5acc670ba3aceff04284f7cf657199d24d065e16"
+      },
+      "transformer/diffusion_pytorch_model-00004-of-00005.safetensors": {
+        "size_bytes": 9930685712,
+        "sha256": "ffcfb5a4895702635890a67bad183591e0ae515d794bdcb26e217b27a7f6d12d"
+      },
+      "transformer/diffusion_pytorch_model-00005-of-00005.safetensors": {
+        "size_bytes": 982130472,
+        "sha256": "2b2556b736629e10a5a0dfa14606f2057f4f81c2ba53f94103682c7ac42d4940"
+      },
+      "transformer/diffusion_pytorch_model.safetensors.index.json": {
+        "size_bytes": 198887,
+        "sha256": "034f003b74493730e1c595b2e23232e99d9e28bcef3b4c10c56d1b53eee4b435"
+      },
+      "vae/diffusion_pytorch_model.safetensors": {
+        "size_bytes": 253806966,
+        "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344"
+      }
+    }
+  },
+  "resource_gate": {
+    "required_gpu_name": "NVIDIA RTX A6000",
+    "min_free_memory_mib": 48000,
+    "max_utilization_percent": 5,
+    "min_available_system_memory_mib": 160000,
+    "require_zero_compute_process": true,
+    "forbid_preemption": true,
+    "forbid_a40_or_blackwell": true,
+    "forbid_downloads": true,
+    "require_new_non_overwriting_paths": true
+  },
+  "expected_generation_count": 2,
+  "target_images_in_generation_bundle": false,
+  "claim_limit": "Two previously seen development images; no confirmatory/generalization/physical-mass claim.",
+  "amendment_reason": "First control-diagram baseline retained control line and source food; add clean original-only baseline. Development only."
+}

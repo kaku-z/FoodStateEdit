@@ -1,0 +1,232 @@
+{
+  "recorded_utc": "2026-09-28T09:12:30.733758+00:00",
+  "unittest": {
+    "command": "py -3.13 -m unittest discover -s tests -p test_first_bite*.py -v",
+    "passed_test_methods": 6,
+    "failed": 0,
+    "scope": "relative camera/height/contact geometry and per-person ballot conjunction; not generated-image quality"
+  },
+  "height_bundle_v2_invariants": [
+    {
+      "family": "cohesive",
+      "same_source_and_prompt": true,
+      "distinct_monotonic_controls": true,
+      "levels": [
+        {
+          "height": 0,
+          "target_uv": [
+            322.56000000000006,
+            509.76
+          ],
+          "hand_uv": [
+            1128.96,
+            485.4720999231614
+          ],
+          "guide_sha256": "bf4c8330c3f2d05ff7253f4836eba751c8306163012d5791c82f05a0e52a31ee",
+          "source_sha256": "7464d86cc1496651cfbe9c323a0dc23c7f52844ba97ba98a17364312aad7de07",
+          "prompt_sha256": "48dca49aade63d526a03885461afa5eb3c214ce1568f5b4e63f95207a3c00a63"
+        },
+        {
+          "height": 0.08,
+          "target_uv": [
+            322.56000000000006,
+            443.25135987705835
+          ],
+          "hand_uv": [
+            1128.96,
+            418.96345980021977
+          ],
+          "guide_sha256": "227560ab422fd250e319ef193a3a7dd77496177ab85b289337be1d3ed31db986",
+          "source_sha256": "7464d86cc1496651cfbe9c323a0dc23c7f52844ba97ba98a17364312aad7de07",
+          "prompt_sha256": "48dca49aade63d526a03885461afa5eb3c214ce1568f5b4e63f95207a3c00a63"
+        },
+        {
+          "height": 0.16,
+          "target_uv": [
+            322.56000000000006,
+            376.74271975411665
+          ],
+          "hand_uv": [
+            1128.96,
+            352.45481967727807
+          ],
+          "guide_sha256": "3c401f92d62044712a01f9e10aa933915452ecbbfca707ca2b6a586bd7568b13",
+          "source_sha256": "7464d86cc1496651cfbe9c323a0dc23c7f52844ba97ba98a17364312aad7de07",
+          "prompt_sha256": "48dca49aade63d526a03885461afa5eb3c214ce1568f5b4e63f95207a3c00a63"
+        }
+      ]
+    },
+    {
+      "family": "granular",
+      "same_source_and_prompt": true,
+      "distinct_monotonic_controls": true,
+      "levels": [
+        {
+          "height": 0,
+          "target_uv": [
+            391.68,
+            457.92
+          ],
+          "hand_uv": [
+            1128.96,
+            394.28821868198406
+          ],
+          "guide_sha256": "59722022836a8c4b3552f095fefea07dc817367deb5f40ee750f5df1b8a7ead3",
+          "source_sha256": "276d40a7892a78891df9e3526cd820a49f08a4c5ea825eada4db7d5901792414",
+          "prompt_sha256": "38263ab1f8ab584eee7375ba1b26fcf1943fa44f9fc6fca1dcc222c2563409f4"
+        },
+        {
+          "height": 0.08,
+          "target_uv": [
+            391.68,
+            397.58114989117456
+          ],
+          "hand_uv": [
+            1128.96,
+            333.9493685731586
+          ],
+          "guide_sha256": "bccb8754e04bdb311f9efbcd3d2a982ec5d4f11afc0614cf2b37a84b75ee0063",
+          "source_sha256": "276d40a7892a78891df9e3526cd820a49f08a4c5ea825eada4db7d5901792414",
+          "prompt_sha256": "38263ab1f8ab584eee7375ba1b26fcf1943fa44f9fc6fca1dcc222c2563409f4"
+        },
+        {
+          "height": 0.16,
+          "target_uv": [
+            391.68,
+            337.24229978234905
+          ],
+          "hand_uv": [
+            1128.96,
+            273.61051846433315
+          ],
+          "guide_sha256": "d924d52bf3e636f8f910508e0a140c1934f1760ab602ede77abc1faf00eaa282",
+          "source_sha256": "276d40a7892a78891df9e3526cd820a49f08a4c5ea825eada4db7d5901792414",
+          "prompt_sha256": "38263ab1f8ab584eee7375ba1b26fcf1943fa44f9fc6fca1dcc222c2563409f4"
+        }
+      ]
+    },
+    {
+      "family": "strand",
+      "same_source_and_prompt": true,
+      "distinct_monotonic_controls": true,
+      "levels": [
+        {
+          "height": 0,
+          "target_uv": [
+            576.0,
+            371.52
+          ],
+          "hand_uv": [
+            1140.48,
+            357.94797214848063
+          ],
+          "guide_sha256": "1fd7a64b81941931c3ee0860260cc44603e049457f8b0e1e4dfc4cbddd1c782b",
+          "source_sha256": "0cd6a699072e4cd6193c108ec018c63a5ad06a1f575582ed234b9582443c1d4e",
+          "prompt_sha256": "0319b6654288030926b34afa6e46b4f20d7976c3585585c0a583c96ff256faaa"
+        },
+        {
+          "height": 0.08,
+          "target_uv": [
+            576.0,
+            322.15675543756896
+          ],
+          "hand_uv": [
+            1140.48,
+            308.5847275860496
+          ],
+          "guide_sha256": "825a11ebaddb588fc0c04166006a95f9909473af6d0eebc54df2480b218e8b0d",
+          "source_sha256": "0cd6a699072e4cd6193c108ec018c63a5ad06a1f575582ed234b9582443c1d4e",
+          "prompt_sha256": "0319b6654288030926b34afa6e46b4f20d7976c3585585c0a583c96ff256faaa"
+        },
+        {
+          "height": 0.16,
+          "target_uv": [
+            576.0,
+            272.79351087513794
+          ],
+          "hand_uv": [
+            1140.48,
+            259.2214830236186
+          ],
+          "guide_sha256": "ffdda72be0e428212adc575a9cbfb6bef5580da0a408cfaa2d47b679009fbcf6",
+          "source_sha256": "0cd6a699072e4cd6193c108ec018c63a5ad06a1f575582ed234b9582443c1d4e",
+          "prompt_sha256": "0319b6654288030926b34afa6e46b4f20d7976c3585585c0a583c96ff256faaa"
+        }
+      ]
+    },
+    {
+      "family": "liquid",
+      "same_source_and_prompt": true,
+      "distinct_monotonic_controls": true,
+      "levels": [
+        {
+          "height": 0,
+          "target_uv": [
+            645.0000000000002,
+            371.52
+          ],
+          "hand_uv": [
+            1139.5,
+            352.1098558025499
+          ],
+          "guide_sha256": "03156c7172697e900b94323627f2327bf65d3a14cecf818188535b3e8761a016",
+          "source_sha256": "09762b7bd6ed274ab1bb24d5c141e9a731c5063ce8ebbf4e4806b85b1cf0bf20",
+          "prompt_sha256": "b116a40f97c5edbbbe8acf6a971a406ab05d891d856b327989fbc2a2f82cfebe"
+        },
+        {
+          "height": 0.08,
+          "target_uv": [
+            645.0000000000002,
+            298.99176928407974
+          ],
+          "hand_uv": [
+            1139.5,
+            279.5816250866296
+          ],
+          "guide_sha256": "0c4eb5b9d26c11ccf09def7d9fc26ef6d76bbe250be36c3e666553691387af21",
+          "source_sha256": "09762b7bd6ed274ab1bb24d5c141e9a731c5063ce8ebbf4e4806b85b1cf0bf20",
+          "prompt_sha256": "b116a40f97c5edbbbe8acf6a971a406ab05d891d856b327989fbc2a2f82cfebe"
+        },
+        {
+          "height": 0.16,
+          "target_uv": [
+            645.0000000000002,
+            226.46353856815944
+          ],
+          "hand_uv": [
+            1139.5,
+            207.05339437070927
+          ],
+          "guide_sha256": "47d54483b9d6e6a7533780cf49b67f849117bb2a688d5d4a98cebef35646ed5a",
+          "source_sha256": "09762b7bd6ed274ab1bb24d5c141e9a731c5063ce8ebbf4e4806b85b1cf0bf20",
+          "prompt_sha256": "b116a40f97c5edbbbe8acf6a971a406ab05d891d856b327989fbc2a2f82cfebe"
+        }
+      ]
+    }
+  ],
+  "supplement_matrix": {
+    "unique_cells": 36,
+    "shards": 4,
+    "cells_per_shard": 9,
+    "repair": 24,
+    "height": 12,
+    "inference_body_identical_to_main": true
+  },
+  "main_outputs": {
+    "verified": 64,
+    "missing": 0,
+    "duplicate": 0,
+    "technical_failed": 0
+  },
+  "earlier_pytest_attempt": "Not executed because pytest was unavailable in Python 3.13; replaced by stdlib unittest, not counted as pytest pass.",
+  "post_run_freeze_audit": {
+    "main_files": 68,
+    "supplement_files": 65,
+    "hash_mismatches": 0
+  },
+  "new_reporting_scripts_syntax_checked": [
+    "scripts/review_first_bite_supplement.py",
+    "scripts/report_first_bite_supplement.py",
+    "scripts/archive_first_bite.py"
+  ]
+}

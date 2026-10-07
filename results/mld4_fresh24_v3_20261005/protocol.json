@@ -1,0 +1,325 @@
+{
+  "prepared_utc": "2026-10-05T14:21:24.901481+00:00",
+  "output": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005",
+  "cases": [
+    {
+      "case_id": "real_00_2330",
+      "index": 0,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_00_2330.png",
+      "source_sha256": "251dcee6572af3ccba1821947bc918be0f349bac4166f55d3e8ea62d3654d71c",
+      "food_prompt": "meat",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_00_2330/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_01_2198",
+      "index": 1,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_01_2198.png",
+      "source_sha256": "06bf1551afa925ccdd1d5824302f26d183d7b7b264fc5402027ff1e3d298e9e8",
+      "food_prompt": "noodles",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/packet_guides_auto/real_01_2198/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_02_16784",
+      "index": 2,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_02_16784.png",
+      "source_sha256": "b962d0fa0feb5e7f6f5d3aa102d53e398d16ffe009bbb02af7eb4aa38cf7a6b6",
+      "food_prompt": "chicken",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_02_16784/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_03_7889",
+      "index": 3,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_03_7889.png",
+      "source_sha256": "5448655abb93fd6e55270abc7be661ca5057281b9348ed6430ac74d50b4c82f3",
+      "food_prompt": "pork",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_03_7889/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_04_11680",
+      "index": 4,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_04_11680.png",
+      "source_sha256": "0db63ff45797418fc67a62ba66385837fd73614c2ba57a04e75ccaaaa1e7c8a6",
+      "food_prompt": "food",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_04_11680/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_05_8131",
+      "index": 5,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_05_8131.png",
+      "source_sha256": "890b293028740c23cb8698f03a40f27da2ef6da50d6c3979c6dba77e30f74699",
+      "food_prompt": "sashimi",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_05_8131/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_06_2862",
+      "index": 6,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_06_2862.png",
+      "source_sha256": "2b6261b03094bc116b533f8ba16f552c17dcc3873abcd4a5723c72668b0f92ce",
+      "food_prompt": "food",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_06_2862/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_07_10704",
+      "index": 7,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_07_10704.png",
+      "source_sha256": "5f51a303d07b0061282c95e5a475fa493a8c6d1b97441e58e3130d964ebcca8c",
+      "food_prompt": "fish shaped pancake",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_07_10704/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_08_2205",
+      "index": 8,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_08_2205.png",
+      "source_sha256": "09417461336d1d89d8d99f388407cb509c6c65d5997ca2b04e401eee326a8c55",
+      "food_prompt": "noodles",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_08_2205/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_09_3901",
+      "index": 9,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_09_3901.png",
+      "source_sha256": "bc2ed6d79d9148e2fcdb6b482354ebc79db7015ec2ee1048031d2db1449c9921",
+      "food_prompt": "omelet",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_09_3901/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_10_2555",
+      "index": 10,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_10_2555.png",
+      "source_sha256": "98aa0a4a3cec8b5beb337682eb7a3ef3fa7fd64fef11f452e9b7d0d6c43270e5",
+      "food_prompt": "noodles",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/packet_guides_repaired/real_10_2555/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_11_7662",
+      "index": 11,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_11_7662.png",
+      "source_sha256": "6792cc621553f5c2ebed1cbef9f6daae7252dcee0394aa80703e63a3803f5bb7",
+      "food_prompt": "noodles",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/packet_guides_repaired/real_11_7662/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_12_4916",
+      "index": 12,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_12_4916.png",
+      "source_sha256": "350fcede26185273b9a59cfa3588f59d0b935d1077bd8e9d1cff940ffcf0979b",
+      "food_prompt": "grilled fish",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_12_4916/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_13_7118",
+      "index": 13,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_13_7118.png",
+      "source_sha256": "047531f4970ea02a25ac053e4df0ac8a33fda5793038548c51a7f8f1091f9ed5",
+      "food_prompt": "fried egg",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_13_7118/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_14_1904",
+      "index": 14,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_14_1904.png",
+      "source_sha256": "da29787b74e4f8014445d609b65c8a494a954b1a1efd5b8f64ea968b9a83c9b5",
+      "food_prompt": "noodles",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_14_1904/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_15_11404",
+      "index": 15,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_15_11404.png",
+      "source_sha256": "c8c9408b00b110463650a13f1a9459487643a501ab0edd4d084791ea583ff356",
+      "food_prompt": "meat",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/guides_boundary/real_15_11404/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_16_3264",
+      "index": 16,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_16_3264.png",
+      "source_sha256": "794e8215ea813aac8cd245fe9a515c1c42dd881de19746044b0e60ce212ddcb3",
+      "food_prompt": "grilled eggplant",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_16_3264/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_17_6275",
+      "index": 17,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_17_6275.png",
+      "source_sha256": "c711012d9bb51e9c76ed0d861d0ccb9f6c736e43314a404e5c5ef41c701f844e",
+      "food_prompt": "food",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_17_6275/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_18_4646",
+      "index": 18,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_18_4646.png",
+      "source_sha256": "08a4a51314c46265d5287abbd9377f01a34ff66988aa33c564f0a52e3b776b2e",
+      "food_prompt": "food",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_18_4646/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_19_2405",
+      "index": 19,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_19_2405.png",
+      "source_sha256": "504c59bc085946e46718959e4291ea3529e9e6f60871b7063c641ab9b74d6d63",
+      "food_prompt": "food",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_19_2405/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_20_8925",
+      "index": 20,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_20_8925.png",
+      "source_sha256": "3a5961f7ee1a3b03fc70812da49d0ef3c245e0f1e0b2c053ca9637e18d91c6fd",
+      "food_prompt": "spaghetti meat sauce",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_20_8925/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_21_15805",
+      "index": 21,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_21_15805.png",
+      "source_sha256": "b3d92e1b60079a7e38f7cbf370dbfbf45078bf06b3ad021aab702e0dacc5ba6f",
+      "food_prompt": "spaghetti",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_21_15805/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_22_4792",
+      "index": 22,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_22_4792.png",
+      "source_sha256": "87f40711ead81d073ee49f1aa1e6b2d3abaf53d746d1cf8048c01e08e22ab56c",
+      "food_prompt": "rice",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_22_4792/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    },
+    {
+      "case_id": "real_23_5280",
+      "index": 23,
+      "image": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/inputs/real_23_5280.png",
+      "source_sha256": "7c2c2ff7ecf1ce22d7221657c9923e00b9e05f26defb3497521b72401b516dcb",
+      "food_prompt": "food",
+      "source_origin": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/holdout_guides_boundary/real_23_5280/source.png",
+      "input_kind": "Original source photograph normalized to <=640; not a generated output"
+    }
+  ],
+  "shards": [
+    [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    [
+      1,
+      5,
+      9,
+      13,
+      17,
+      21
+    ],
+    [
+      2,
+      6,
+      10,
+      14,
+      18,
+      22
+    ],
+    [
+      3,
+      7,
+      11,
+      15,
+      19,
+      23
+    ]
+  ],
+  "geometry_python": "/host/space0/guo-z/tf-ufi/food3d_pilot_20260928/venv/bin/python",
+  "entrypoint": "/host/space0/guo-z/tf-ufi/material_lineage_reform_20261004/fresh_full24_v3_20261005/code/scripts/run_mld4_from_image.py",
+  "code_hashes": {
+    "scripts/mld2_real_geometry.py": "7c9088b95b2bb2d00d20dc823409e7a2fb835497f0123eb98d63980e9d44eb38",
+    "scripts/mld2_real_geometry_v2.py": "a3de515d6308028ac40f24d54ef2d3c04be9997635b251a5a0bdb2e84c0dcdb9",
+    "scripts/mld2_real_spoon_v3.py": "81217391d29d937cd918e995e6b91488d97e5654b3990676d8bb078d18b3acaf",
+    "scripts/prepare_mld3_ingredients.py": "91d937dc0c1bd02d580ff02e72907e5b908532af009f5f194bf76c7a726aea5d",
+    "scripts/prepare_mld4_head_depth.py": "dc78dc08369c1fb8ee49ffcd5e9b5f40f1c7f7553e05e36d3dbc4c71b924f905",
+    "scripts/diagnose_mld4_semantics.py": "f230498ffa418ac71001aa1daf016a777f096e7d6b627ab936d437b10af7c463",
+    "scripts/compile_mld4_captions.py": "e18f51ac139f0c881d13d7fcb98e9a682d21e09e5dbd6da26b7ca11a5365f616",
+    "scripts/run_mld4_reconstruction.py": "011c9274527c9f9dd3d4111e7f32e2d39cfb19eb5cfcce9e00dc3e312af8f71d",
+    "scripts/run_mld4_factorized.py": "7ed5d047e2983211e9390d1b028104a6be7e805a178f3b342205da30d4364210",
+    "scripts/probe_mld3_metal_conditioning.py": "37d44f5c85b03d8a976aef01de719bed9ab534ff549a0082870ed1890629168c",
+    "scripts/refine_mld4_source_seam.py": "2095b8249ac19043063f7568a7cfef1eadfe120c7de194a5a2e2450e0b509452",
+    "scripts/mld4_binding_adapter.py": "bba63a3a28767b3098617c330fc6ce3832ab0082d6b3181c29b96c75243e6a8f",
+    "scripts/project_mld4_visible_material.py": "aa0b6019603b4f50f511635370cfa364b063ff961fa075dc070a8aaa982a9e49",
+    "scripts/probe_mld4_locked_material.py": "32d9eacdaa25a567e2b86ae605a6ce1a361028c3d2fbdd325586d91c7ed8482b",
+    "scripts/run_mld4_from_image.py": "a4a879ca62782a9497267909b8f8ddd0cc608d60e4b554d426328a526047a822",
+    "scripts/run_mld3.py": "160ccfffce750ea4f207dd4d965f2ae4b2d02c1b2d9a3197fafc2413e6fd418b",
+    "scripts/prepare_mld4_guides.py": "3c7441a3aa50424b74e2a51e0a74f1eb87d84fe9b37f47b91ae665e197f365cc",
+    "scripts/prepare_mld4_anchors.py": "14f2ca44dc38cb044d1a08be5f2bf3dd6e9bba25ab8448cdcedc5df88ccdd2a2",
+    "scripts/prepare_mld4_factorized.py": "945231c874e409d735512a14f7bae59b17af776b1068695f7192105dafa4e15d",
+    "scripts/prepare_mld4_dense_guides.py": "7ae9fb57254ff4b2cd3e56b72ad0d4eb7de4b32e35d8e08dc45906d5785ed4b8",
+    "scripts/prepare_mld4_routing.py": "91f2edc820c271a93fb6ebdcc2dadbf5f5cd89805ec34932e5ecfcd00f4a8709",
+    "scripts/run_mld4_pipeline.py": "21050fa99a20b6368daf906d31872d9df2d7867b2d1c899ef77c826fb23ffa6b",
+    "scripts/mld4_latent_transport.py": "04c0adb068628388ba5b5c7d7ccf5f1c84151de3b5600a27a71a399d30523c05",
+    "foodstateedit/acceptance.py": "728b895c2a5037f8d9eac56be0c3464bbc0604f34c33bfbbdc54b0e28a6cd968",
+    "foodstateedit/appearance_refinement.py": "ecdc2e8f4795568bf65a285e9c5e4ed5220b7d216e5bc1790d7b492907209eb1",
+    "foodstateedit/contact_guidance.py": "63aa58a906c868bd1fb94436e18980258ee455ff120937b27259e6cc42fe1ca0",
+    "foodstateedit/e2e_pipeline.py": "8518c1b34b5159ac363c910cacab3a1bf0b86f0972b36fc078f23a0326efde45",
+    "foodstateedit/engine.py": "3ca682fb001d169dfbecbfe3a12218e2008ae8ff712dffbdb3cbd0e9fce2c839",
+    "foodstateedit/model.py": "2a8a71a5a253a52ebab259b04ed65137d50d203dc68fb06abc2d99a2d736737f",
+    "foodstateedit/projection3d.py": "181727cb57c11a4253007268686ff8975695c7eafb683e160720cbb2b52176e0",
+    "foodstateedit/__init__.py": "558e56f5e0e7a88130db97ed0ced79406f62d37cfaef78f69b06bfaf4b2072bf",
+    "foodstateedit/first_bite/geometry.py": "6d93a36d09660f0be5863f3d67a17bc574e12a5f24e4296fb5ac2223d267edae",
+    "foodstateedit/first_bite/__init__.py": "553c5f6d2a7cb47d28a39ab19b39096940d029defb25121ec512baeed26b643d",
+    "foodstateedit/material_transfer/identifiability.py": "aefd6a0b7e2276482b72f79a324ea0315ec12de26d5f54b5d751de87b06f69d4",
+    "foodstateedit/material_transfer/sensitivity.py": "4ef7382689d6b121ecd96dca93277744295f670380deb9c6f12009df8921ce1b",
+    "foodstateedit/material_transfer/core.py": "9da3498954ffda83669189dbdc4e79adfe940bb5336afdea73051e79536869b3",
+    "foodstateedit/material_transfer/__init__.py": "5ce5fbea6ca1947bc79d9f890f0d056b5b18a63a5b18b8b95fac73b25a060aed",
+    "foodstateedit/observed_edit/core.py": "f5c5453396face9cef5b670a31c9cc6d7a6d9198a61bdaff84e6308359e06dd1",
+    "foodstateedit/observed_edit/interior.py": "3d6f7fe5368c5d043e6d9d9cc59b081ec8611c2377e2589981a39d8d50e917bf",
+    "foodstateedit/observed_edit/projection.py": "e088fd0eacecf5c2260312a8777ff25c5fd3af09d73ec3ad96d81399999d16b2",
+    "foodstateedit/observed_edit/__init__.py": "4c8018970e97734d293677b625eae86eeea67b142c7b52dbf8c31645b6e3cb18",
+    "foodstateedit/observed_edit/appearance.py": "fdb321a10b08b9ced38e8a7e3f33392b8561e22e571dd4a6880300cb079b3a82",
+    "foodstateedit/observed_edit/constrained.py": "ac260c17dffd1ba637b2134f6f7be168741b2bcb20a781d916e045e34cbed4a7",
+    "foodstateedit/material_lineage/learned_mld.py": "feb81fad4d5467304149e84db843c17f8fc89592e5bbe3dad74a6d4ca7bf569a",
+    "foodstateedit/material_lineage/mld2.py": "637c8cddaa49e28492d5b7e209fd6fb38b3a18dc39ad7f05c424c13c62944454",
+    "foodstateedit/material_lineage/photographic_state.py": "4045006c5f7493c46fb5e8303bd09b880776dfa23e07709ec24406f9b869d7f0",
+    "foodstateedit/material_lineage/spoon_surface.py": "4ee3091071042cf6ec9367d6095259e0a6ff591be2cc1931e18bfd8693f2ccfe",
+    "foodstateedit/material_lineage/core.py": "ed203fc7882f5cf63820ec769758c88fb6b117f4dffc138491fd7ecfe9839289",
+    "foodstateedit/material_lineage/deformable.py": "1daca04d955df88244399dec658a845f16eef7a2108d22fede2e7e51b9e85ee6",
+    "foodstateedit/material_lineage/exact_partition.py": "781638059db2d3b3136e2883cf95655bbb9cfa6496a8c1d2b1642cdf380e033f",
+    "foodstateedit/material_lineage/mld2_depth.py": "690806f5ef0960eed1a0bcecfb2958451a14946cf61861b9766cfdf3732aebee",
+    "foodstateedit/material_lineage/observations.py": "84e6aa072dccbc9671a7feb7ef0dd93b62509c4f67f3f718a222dfd138a85df0",
+    "foodstateedit/material_lineage/strands.py": "f4371246b1cc9a2eb4491dee92ff24d15f9bad9be8b915fa461894b1815a0045",
+    "foodstateedit/material_lineage/strand_selection.py": "e1331b01d1949fc4e85f3a189fc3cb0edb4ac8fb6ab6748822b0db75a240362e",
+    "foodstateedit/material_lineage/topology.py": "e1e896c69025ad5ed833c5cccce60d6c700e4e8af2b90f4c4e1c480e818bb920",
+    "foodstateedit/material_lineage/utensil_placement.py": "eb260ba31608736b572daf155725bdc22767e2976274f2e4dd6c895f77cfa1f9",
+    "foodstateedit/material_lineage/__init__.py": "3fe6f35b8bf03c8b27c1b1647f0ba879eea8b811e2728fb331db45a4b971f67f",
+    "foodstateedit/state_transfer/bridge.py": "36e7e4eef003960395569f0f49a0a3c8d95d2b4526aa11dd3af97cb4fff7cd9f",
+    "foodstateedit/state_transfer/geometry.py": "756fd4be41a91cb58e90cd37dd78e5a48bbda7c7dca379fdd5e80c80e993c985",
+    "foodstateedit/state_transfer/routing.py": "b2138d2ad202968b0426ffdf72c862c82772f067de7aaf1e65d88809a163e25e",
+    "foodstateedit/state_transfer/__init__.py": "3e10696332da394ed3c5eb664f1d449eaff235b95a199d1e873a41c106011b21"
+  },
+  "method": "Fresh source perception/closure/geometry, source-only captions and routing, upstream frame-connected shaft, two Qwen stages, explicit observed material",
+  "classification": "All24 are now regression/development images; no new blind-holdout claim",
+  "protocol_choices": "Default v3 globally; no per-case geometry or semantic override, no precomputed guides",
+  "status": "prepared_waiting_v3_smoke"
+}

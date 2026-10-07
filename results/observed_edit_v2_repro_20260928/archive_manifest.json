@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "source": "outputs/observed_edit_v2_20260928_runtime/protocol_launch_freeze.md",
+      "archive": "protocol_launch_freeze.md",
+      "sha256": "db0d4dc6687dee9f9e56a7cd94488cbc05f030a3216b979f6117268717b44b35"
+    },
+    {
+      "source": "outputs/observed_edit_v2_20260928_runtime/protocol_appearance_freeze.md",
+      "archive": "protocol_appearance_freeze.md",
+      "sha256": "518969547c3fa9d8aa8789130ccd7157b4d90f98777e66245448f484e3b0ed7b"
+    },
+    {
+      "source": "outputs/observed_edit_v2_20260928_runtime/runner_frozen_v1.py",
+      "archive": "runner_main_frozen.py",
+      "sha256": "3425211ef2973937637b716fdcdb59e8782a341fdc8fa029a01ecd0454fafe82"
+    },
+    {
+      "source": "scripts/run_observed_edit_v2.py",
+      "archive": "runner_original_baseline.py",
+      "sha256": "58e33c4085ca2dfdacf829077c4199e2823662a9e0d1ec1912a649ce7ce9e5c6"
+    },
+    {
+      "source": "foodstateedit/observed_edit/core.py",
+      "archive": "core.py",
+      "sha256": "f5c5453396face9cef5b670a31c9cc6d7a6d9198a61bdaff84e6308359e06dd1"
+    },
+    {
+      "source": "foodstateedit/observed_edit/appearance.py",
+      "archive": "appearance.py",
+      "sha256": "fdb321a10b08b9ced38e8a7e3f33392b8561e22e571dd4a6880300cb079b3a82"
+    },
+    {
+      "source": "outputs/observed_edit_v2_20260928_bundle_r2/config.json",
+      "archive": "config_main.json",
+      "sha256": "29cd3358ec78084c9b07223dfe6b22ae10dc342e32c1ad4266fad105acbb2e86"
+    },
+    {
+      "source": "outputs/observed_edit_v2_20260928_original_bundle/config.json",
+      "archive": "config_original_baseline.json",
+      "sha256": "81764c1d9ef9bb0912954cc8e67328e53c6522f831d4e6480e4abeb4261ecd1e"
+    },
+    {
+      "source": "scripts/review_observed_edit_v2.py",
+      "archive": "review_final.py",
+      "sha256": "6720dd36fce336fd3f9a9b7a891f3b9e56982498d2f99e5ef71dab662b6f3054"
+    },
+    {
+      "source": "scripts/prepare_observed_edit_v2.py",
+      "archive": "prepare.py",
+      "sha256": "ce116826db42d8878fa22e1b466df20fba935860dbccd0712ecec32c7975e360"
+    },
+    {
+      "source": "benchmark/observed_edit_v2_review_template.html",
+      "archive": "review_template.html",
+      "sha256": "43102af1e74be8e3eff81d888c73442f1e069462c25556b0e61697b6bf70bbc7"
+    }
+  ],
+  "note": "Protocol snapshots reconstructed and matched byte-for-byte to historical receipts. Final review adds disclosed Original baseline and review UI; not represented as the historical review script."
+}

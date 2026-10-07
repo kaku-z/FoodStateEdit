@@ -1,0 +1,35 @@
+{
+  "geometry": {
+    "executable": "/host/space0/guo-z/tf-ufi/food3d_pilot_20260928/venv/bin/python",
+    "packages": {
+      "python": "3.12.12 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 20:16:04) [GCC 11.2.0]",
+      "torch": "2.4.0",
+      "numpy": "1.26.4",
+      "scipy": "1.17.0",
+      "Pillow": "12.0.0",
+      "transformers": "4.45.0",
+      "diffusers": "0.38.0.dev0",
+      "trimesh": "4.11.3",
+      "pyrender": "0.1.45",
+      "opencv-python": "4.12.0.88",
+      "safetensors": "0.8.0rc0",
+      "accelerate": "0.34.0"
+    }
+  },
+  "generation": {
+    "executable": "/mnt/tmp/guo-z_first_bite_structure_20260930_runtime/venv/bin/python",
+    "packages": {
+      "python": "3.12.12 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 20:16:04) [GCC 11.2.0]",
+      "torch": "2.6.0",
+      "numpy": "1.26.4",
+      "scipy": "1.15.3",
+      "Pillow": "11.3.0",
+      "transformers": "5.17.0",
+      "diffusers": "0.40.0",
+      "safetensors": "0.8.0",
+      "accelerate": "1.15.0"
+    }
+  },
+  "gpu": "NVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\nNVIDIA RTX A6000, 580.119.02, 49140 MiB\n",
+  "scope": "Installed runtime inventory, not a portable environment lock; geometry adds compat_packages and generation adds vendor code."
+}

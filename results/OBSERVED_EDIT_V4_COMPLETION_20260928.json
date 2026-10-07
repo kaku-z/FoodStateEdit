@@ -1,0 +1,232 @@
+{
+  "recorded_utc": "2026-09-28T05:37:32.449588+00:00",
+  "status": "DEVELOPMENT_ABLATION_COMPLETE_REMAINING_VISUAL_FAILURES",
+  "new_model_calls": 4,
+  "new_output_files_verified": 8,
+  "previous_raws_verified": 4,
+  "verified_callback_steps": 160,
+  "unit_tests": "21 passed; relevant 5 passed after parameter validation (recorded before model execution)",
+  "frozen_files_match": true,
+  "review_script_matches_prefreeze": true,
+  "gpu_compute_processes_after_run": [],
+  "heldout": "not_unlocked",
+  "independent_review": "not_performed",
+  "visual_review": "Assistant reviewed all v4 native outputs and complete comparison; not independent or blinded.",
+  "remaining_failures": [
+    "Extra crumb or stain beside transported pizza.",
+    "Far-background appearance drift, most pronounced in pizza case."
+  ],
+  "interpretation": "Soft interior constraints improve source-interior correspondence versus no-lock baseline while avoiding visible v3 strict halos on these two cases. Detail branch has no established advantage. No generalization or physical correctness claim.",
+  "runs": [
+    {
+      "condition": "interior",
+      "duration_seconds": 559.4402000904083
+    },
+    {
+      "condition": "detail",
+      "duration_seconds": 568.6065781116486
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/OBSERVED_EDIT_V4_PROTOCOL_20260928.md",
+      "sha256": "4fd1457b55a63c99dbbf197a94ea56b229e8456f05fdf8151f40ac480c388a10"
+    },
+    {
+      "path": "docs/OBSERVED_EDIT_V4_RESULT_20260928.md",
+      "sha256": "faaf7487d12b101d83342e064ffc988aaeee97bf1003c5ca22025dc4b61b36dd"
+    },
+    {
+      "path": "foodstateedit/observed_edit/interior.py",
+      "sha256": "3d6f7fe5368c5d043e6d9d9cc59b081ec8611c2377e2589981a39d8d50e917bf"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_bundle/config.json",
+      "sha256": "b29fabe9d54a37debacdb653eebe15ed7951267e3eb47be12274f18e95d78b7d"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/COMPLETE",
+      "sha256": "002580d9bd5f4920298f408917577a4a1f3e1fefe7f679b4214397add59dee09"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/corn_281_detail/projection_audit.json",
+      "sha256": "c419dd3084c18b8826aed96e8bd1f06c1004f2cc0eaa5246f5c19bd4bdd31770"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/corn_281_detail/raw.png",
+      "sha256": "a3412c0467601afac5f4f733f73b75e58e2ebe9913745e5e677f2329c76917ee"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/pizza_281_detail/projection_audit.json",
+      "sha256": "e7295a777ad090d4aef59d7edb172b3232dc4a54fceae2324262b3a37791f846"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/pizza_281_detail/raw.png",
+      "sha256": "ec34a4b8c5fca05118d5a2ff0633be2b37904a89f3025807c420631db849c3df"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/preflight.json",
+      "sha256": "a9969ea6a122cae7d86c1f4d203fd04af64fbc37ac294f55d6b709c34e167a8d"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/detail_v1/run_manifest.json",
+      "sha256": "8de842c4b15908516b102e9857d5fb1a41103ed3bbe8f28457fe110f0f5d3342"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/COMPLETE",
+      "sha256": "002580d9bd5f4920298f408917577a4a1f3e1fefe7f679b4214397add59dee09"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/corn_281_interior/projection_audit.json",
+      "sha256": "a470977aaf97bd3de42996ad1e5a448df87cad1375d4889c54d6237aa74d52a2"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/corn_281_interior/raw.png",
+      "sha256": "6a99ef71182e47e40a6cee0874ee248acf11654455ed261bb5fc4b536a64a2d4"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/pizza_281_interior/projection_audit.json",
+      "sha256": "cae9dc831999f30d9dc75fea7df6d2ee546491919d79a00a3393b8b3a1c981e9"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/pizza_281_interior/raw.png",
+      "sha256": "e1de33abdbea73047e8b9c82c6527e225931d724e699799023c17cf130234e5b"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/preflight.json",
+      "sha256": "b0a8e7dc19d1155d93b6f72d7241618a370042ddf1303dbe4b72a3472e8ab394"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_gp40/interior_v1/run_manifest.json",
+      "sha256": "9fc319fb4e6990cc49e9f1f9e7e6ebcb142cc9e8ea142c05419e4cbacaf87d33"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/comparison.png",
+      "sha256": "8851b6d87591b33472f4f0277629beae682ae8d2519f0e18c7443ed51b8f3b2b"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/comparison_zh.png",
+      "sha256": "903117f878f17f30112a6b446c59cc660e0eecb468392a200ec3c32a86bff3a9"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/corn_comparison.png",
+      "sha256": "4e362daa35c55827c3ba2eeec2d3da76021764930223f9481549ebf698849e46"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/corn_metric_regions.png",
+      "sha256": "315c5445e32b525aa831cebc8e412a493f0862edc07287ea70c0fc2061c2da46"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/corn_v3_projected.png",
+      "sha256": "34d58d91f548bef9f96ce6a5178d6e3d4b6d0d507aada7862020725406955c33"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/corn_v3_scaffold_only.png",
+      "sha256": "a9d8b697222fda62aeed8df6893695436fcd5f30475183f316702b359704b816"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/corn_v4_detail.png",
+      "sha256": "8985c2bf36c591ee294575b9f68a2197874ff7d9d4820112f7d906fc510c5915"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/corn_v4_interior.png",
+      "sha256": "99cf9804c35b3c274cbee873d56c3de61de4fec3883b6821f29b5f228c6bf012"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/metrics.csv",
+      "sha256": "a87b45e03b0c80ed27c4f45b939dff9a4e03a229e707ee338bab765c31102ea4"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/pizza_comparison.png",
+      "sha256": "c9ad16221575a21944cfe7b56984c8ebe1b01d1c20457a1c844917ff93a58600"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/pizza_metric_regions.png",
+      "sha256": "ebef5ee0c83805e7358ca39358673a97d4f4bd4ad8a40ada721579816aac5d53"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/pizza_v3_projected.png",
+      "sha256": "2abc15340200162a940c62df3608ee1d64a2e14863a2e7adc1252fe8fd2143a6"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/pizza_v3_scaffold_only.png",
+      "sha256": "9d5ded64e62982373a95efa4ef4878667cc49675da63aa29bc7fa36590a3950f"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/pizza_v4_detail.png",
+      "sha256": "e173863761563e8d4b9fe7798c9ce496366a6ed69553bec39ea5565b1d1b1df6"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/pizza_v4_interior.png",
+      "sha256": "836426e5091ef5b34f1ab5216df890d924f887216858264ca7b2d87d0ce4e13e"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_review/review_manifest.json",
+      "sha256": "487dc2626695a19301f0b3e16e99cc9dc456919cf7b8c5edf4dc297e05641511"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_runtime/detail_v1.log",
+      "sha256": "475f580876f4d2eb173cc8d201dc7beced51288712b199ecc170b98c3afbba1e"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_runtime/interior_v1.log",
+      "sha256": "9d8cda8bab39f5c84aa7454af79923016cda99fcfd295d8c0751b5543281e9b7"
+    },
+    {
+      "path": "outputs/observed_edit_v4_20260928_runtime/launch_v1.json",
+      "sha256": "2c59ac381b86bcb438a3a1e214f79ac5011e687f5b23c8e4760a8d1cdf96302d"
+    },
+    {
+      "path": "results/OBSERVED_EDIT_V4_FREEZE_20260928.json",
+      "sha256": "bec64ff6d9e7e4e5d0c36d6a791b2e9b91fabd342b0b3e4f5ba75a622ab6e419"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/config.json",
+      "sha256": "b29fabe9d54a37debacdb653eebe15ed7951267e3eb47be12274f18e95d78b7d"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/interior.py",
+      "sha256": "3d6f7fe5368c5d043e6d9d9cc59b081ec8611c2377e2589981a39d8d50e917bf"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/OBSERVED_EDIT_V4_PROTOCOL_20260928.md",
+      "sha256": "4fd1457b55a63c99dbbf197a94ea56b229e8456f05fdf8151f40ac480c388a10"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/prepare_observed_edit_v4.py",
+      "sha256": "e1d74218d6f977de3be0100f6e084d656c2da2ab9d2aed344e4cf66dd9ffc265"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/review_freeze.json",
+      "sha256": "b7698a075d1bef88aecd605734fcbb46e9f5f335927ce27c9137b4e99350b7d6"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/review_observed_edit_v4.py",
+      "sha256": "c9c34486cbee577ee9c235f7e636ae86a3f3cc8f7277d675e213a1a460347cf9"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/run_observed_edit_v4.py",
+      "sha256": "9e739b23f5de32c9e1a44bf9402e05f5b9cc582b2a38cea3c642e2d27482f237"
+    },
+    {
+      "path": "results/observed_edit_v4_repro_20260928/test_observed_edit_interior.py",
+      "sha256": "3be486b0292ea75066d2bdbaefecd366b57c54a450221744370841a56a75e89f"
+    },
+    {
+      "path": "scripts/prepare_observed_edit_v4.py",
+      "sha256": "e1d74218d6f977de3be0100f6e084d656c2da2ab9d2aed344e4cf66dd9ffc265"
+    },
+    {
+      "path": "scripts/render_observed_edit_v4_comparison.py",
+      "sha256": "98f7f0746be59342b0a68b047845d910c5dffe7046b60bdbdd208838b6a64005"
+    },
+    {
+      "path": "scripts/run_observed_edit_v4.py",
+      "sha256": "9e739b23f5de32c9e1a44bf9402e05f5b9cc582b2a38cea3c642e2d27482f237"
+    },
+    {
+      "path": "tests/test_observed_edit_interior.py",
+      "sha256": "3be486b0292ea75066d2bdbaefecd366b57c54a450221744370841a56a75e89f"
+    }
+  ]
+}

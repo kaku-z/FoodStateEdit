@@ -1,0 +1,13 @@
+{
+  "date_utc": "2026-09-28T03:30:18.717258+00:00",
+  "phase": "first direct generation; no completed outputs inspected",
+  "server_last_observed_completed": [],
+  "change": "Add fixed bounded photometric postprocess and its no-anchor/exact-copy controls; generation inputs unchanged",
+  "tests": "8 passed",
+  "sha256": {
+    "docs/FORMAL_EXPERIMENT_V2_20260928.md": "518969547c3fa9d8aa8789130ccd7157b4d90f98777e66245448f484e3b0ed7b",
+    "foodstateedit/observed_edit/appearance.py": "fdb321a10b08b9ced38e8a7e3f33392b8561e22e571dd4a6880300cb079b3a82",
+    "scripts/review_observed_edit_v2.py": "3908ced584771b379793e343c9dbe510e0d38811bc5a630b7812b1276cabd8bc",
+    "tests/test_observed_edit.py": "a57057438493ce0834ffe9cb65b2e7cf94b6fc5fed79879ede487cdf64b9ab22"
+  }
+}

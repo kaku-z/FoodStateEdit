@@ -1,0 +1,208 @@
+{
+  "status": "complete",
+  "cases": [
+    {
+      "case_id": "real_00_2330",
+      "index": 0,
+      "inputs": {
+        "source": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_00_2330\\source.png",
+        "food": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_00_2330\\source_food_mask.png",
+        "removed": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_00_2330\\source_removed_mask.png",
+        "depth": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_00_2330\\guide_channels.npz",
+        "baseline": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\production_head_only_20261005\\evaluation\\assets\\real_00_2330\\final.png"
+      },
+      "hashes": {
+        "source": "251dcee6572af3ccba1821947bc918be0f349bac4166f55d3e8ea62d3654d71c",
+        "food": "6fddad7639b39e79098a9e44da0a05f2576b66c974b5447e1d3dbfd4d2bb44db",
+        "removed": "ec738a50e9ee26bcbf81755f142cd2d65f5614ffd4ebf51f05ed341fa92a8541",
+        "depth": "1220da7b619ea635a11a1d3a1601bef505b748a998953cfed221653f61936852",
+        "baseline": "ffbfcb90912e5581982fabcfab183af1db8a27bfacb38ba6788141a55aba4754"
+      },
+      "source_shape": [
+        480,
+        640
+      ],
+      "scale": 1.0,
+      "donor_radius": 24.0,
+      "fill_radius": 24.0,
+      "depth_tolerance": 0.024888463020324707,
+      "adjacent_exterior_pixels": 64,
+      "seed_pixels": 64,
+      "potential_donor_pixels": 2150,
+      "depth_rejected_pixels": 0,
+      "donors": 2132,
+      "seeded_components": 1,
+      "removed_pixels": 1456,
+      "coverage_pixels": 1172,
+      "coverage_fraction": 0.804945054945055,
+      "unknown_pixels": 284,
+      "donor_outside_F": true,
+      "changed_outside_R": 0,
+      "changed_unknown": 0,
+      "input_hashes_unchanged": true,
+      "mean_accepted_rgb": [
+        115.71998123827392,
+        81.90806754221389,
+        34.46482176360225
+      ],
+      "status": "partial_support",
+      "interpretation": "A visible-local-layer hypothesis only. Unknown pixels retain A and must not be counted as reconstructed support; local donors require visual audit."
+    },
+    {
+      "case_id": "real_02_16784",
+      "index": 2,
+      "inputs": {
+        "source": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_02_16784\\source.png",
+        "food": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_02_16784\\source_food_mask.png",
+        "removed": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_02_16784\\source_removed_mask.png",
+        "depth": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_02_16784\\guide_channels.npz",
+        "baseline": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\production_head_only_20261005\\evaluation\\assets\\real_02_16784\\final.png"
+      },
+      "hashes": {
+        "source": "b962d0fa0feb5e7f6f5d3aa102d53e398d16ffe009bbb02af7eb4aa38cf7a6b6",
+        "food": "1bef7412f9d8c0d461eb1c811b569e0b17324c041404b95bab9ce099384806d7",
+        "removed": "32b1f5c6c449a8662bcf86bb492364ca4babcc5f3d35e93328cddeb7bc6d0db6",
+        "depth": "adfcd53ea52a67c8e9c5a5a4a9da020e319b5c06ad2a2ff6144d44dc0f23e6df",
+        "baseline": "731fe5c6cd2aa5386fe719460f1c833b01fec04d20b4edaf2bdfd37aaf28eff0"
+      },
+      "source_shape": [
+        300,
+        400
+      ],
+      "scale": 0.625,
+      "donor_radius": 15.0,
+      "fill_radius": 15.0,
+      "depth_tolerance": 0.06136738777160645,
+      "adjacent_exterior_pixels": 56,
+      "seed_pixels": 56,
+      "potential_donor_pixels": 948,
+      "depth_rejected_pixels": 0,
+      "donors": 948,
+      "seeded_components": 1,
+      "removed_pixels": 906,
+      "coverage_pixels": 550,
+      "coverage_fraction": 0.6070640176600441,
+      "unknown_pixels": 356,
+      "donor_outside_F": true,
+      "changed_outside_R": 0,
+      "changed_unknown": 0,
+      "input_hashes_unchanged": true,
+      "mean_accepted_rgb": [
+        213.1012658227848,
+        199.13924050632912,
+        157.64240506329114
+      ],
+      "status": "partial_support",
+      "interpretation": "A visible-local-layer hypothesis only. Unknown pixels retain A and must not be counted as reconstructed support; local donors require visual audit."
+    },
+    {
+      "case_id": "real_13_7118",
+      "index": 13,
+      "inputs": {
+        "source": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_13_7118\\source.png",
+        "food": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_13_7118\\source_food_mask.png",
+        "removed": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_13_7118\\source_removed_mask.png",
+        "depth": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_13_7118\\guide_channels.npz",
+        "baseline": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\production_head_only_20261005\\evaluation\\assets\\real_13_7118\\final.png"
+      },
+      "hashes": {
+        "source": "047531f4970ea02a25ac053e4df0ac8a33fda5793038548c51a7f8f1091f9ed5",
+        "food": "e808c2713657d9fcad2d0c2214ef43dcbcf504027d619f762e3c07c7a06630cc",
+        "removed": "ba4e09e28181c9c0e68f3068d1f9396d53ad3fb5023c1e4243e527ec1b2b006c",
+        "depth": "11620375889dd339e2163baff546aca5045436fe77cfd9fdb02815cf7b49cb3f",
+        "baseline": "05ba985ed17872c40f4b846642e85d186ea1c5aefc0011b59a520cf4e346b30e"
+      },
+      "source_shape": [
+        375,
+        500
+      ],
+      "scale": 0.78125,
+      "donor_radius": 18.75,
+      "fill_radius": 18.75,
+      "depth_tolerance": 0.014563523530960083,
+      "adjacent_exterior_pixels": 57,
+      "seed_pixels": 57,
+      "potential_donor_pixels": 1121,
+      "depth_rejected_pixels": 106,
+      "donors": 1011,
+      "seeded_components": 1,
+      "removed_pixels": 1330,
+      "coverage_pixels": 879,
+      "coverage_fraction": 0.6609022556390978,
+      "unknown_pixels": 451,
+      "donor_outside_F": true,
+      "changed_outside_R": 0,
+      "changed_unknown": 0,
+      "input_hashes_unchanged": true,
+      "mean_accepted_rgb": [
+        24.58259149357072,
+        23.542037586547973,
+        15.886251236399604
+      ],
+      "status": "partial_support",
+      "interpretation": "A visible-local-layer hypothesis only. Unknown pixels retain A and must not be counted as reconstructed support; local donors require visual audit."
+    },
+    {
+      "case_id": "real_14_1904",
+      "index": 14,
+      "inputs": {
+        "source": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_14_1904\\source.png",
+        "food": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_14_1904\\source_food_mask.png",
+        "removed": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_deformable_20261004\\real\\real_14_1904\\source_removed_mask.png",
+        "depth": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\guides_boundary\\real_14_1904\\guide_channels.npz",
+        "baseline": "C:\\Users\\kaku\\Downloads\\TF_UFI_EXPERIMENT_20260806\\noodle_image_benchmark_v1\\paper_release\\outputs\\material_lineage_reform_20261004\\production_head_only_20261005\\evaluation\\assets\\real_14_1904\\final.png"
+      },
+      "hashes": {
+        "source": "da29787b74e4f8014445d609b65c8a494a954b1a1efd5b8f64ea968b9a83c9b5",
+        "food": "4d44c787e80b9c87bae97385e4a27864cdcef1fe3da000a26f15abc65c1f7581",
+        "removed": "b69c04078a7fa8df10577e77ca7c44d1f85abdbf7cc943ae4e95a3b857154abc",
+        "depth": "39f5547226faaf76441f88a197f18f5e12a8f96081cd2de29aa87a500f3e6f57",
+        "baseline": "988cab72fb961a06749549e9f28b72d00e7d97ede21fa018200d838cc57a9a4d"
+      },
+      "source_shape": [
+        374,
+        500
+      ],
+      "scale": 0.78125,
+      "donor_radius": 18.75,
+      "fill_radius": 18.75,
+      "depth_tolerance": 0.02874574899673462,
+      "adjacent_exterior_pixels": 0,
+      "seed_pixels": 0,
+      "potential_donor_pixels": 0,
+      "depth_rejected_pixels": 0,
+      "donors": 0,
+      "seeded_components": 0,
+      "removed_pixels": 2156,
+      "coverage_pixels": 0,
+      "coverage_fraction": 0.0,
+      "unknown_pixels": 2156,
+      "donor_outside_F": true,
+      "changed_outside_R": 0,
+      "changed_unknown": 0,
+      "input_hashes_unchanged": true,
+      "mean_accepted_rgb": null,
+      "status": "unknown_no_local_support",
+      "interpretation": "A visible-local-layer hypothesis only. Unknown pixels retain A and must not be counted as reconstructed support; local donors require visual audit."
+    }
+  ],
+  "config": {
+    "indices": [
+      0,
+      2,
+      13,
+      14
+    ],
+    "neighborhood": 8,
+    "donor_radius_at640": 24.0,
+    "fill_radius_at640": 24.0,
+    "front_depth_tolerance_relative": 0.02,
+    "nearest_neighbors": 4,
+    "soft_distance_temperature_at640": 1.5,
+    "candidate_rule": "Outside F, valid positive source depth, within local R radius, not clearly in front of nearest R; connected to a direct R neighbor.",
+    "confidence_rule": "exp(-nearest_donor_distance/fill_radius); a geometric support indicator, not calibrated correctness.",
+    "acceptance_rule": "R only, with all four donor distances <= fill radius. Otherwise retain baseline and mark unknown.",
+    "negative_control": "14 is a prespecified interior-noodle negative control. No per-image parameter changes.",
+    "hypothesis": "An adjacent visible exterior component may continue the revealed support. F complement alone is not verified nonfood."
+  }
+}

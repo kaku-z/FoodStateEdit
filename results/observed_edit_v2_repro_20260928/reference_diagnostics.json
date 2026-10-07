@@ -1,0 +1,18 @@
+{
+  "status": "posthoc_nuisance_diagnostic",
+  "registered": false,
+  "rows": [
+    {
+      "case": "pizza",
+      "protected_source_vs_reference_mae": 2.674812878293586,
+      "source_mask_pixels": 13598,
+      "editable_fraction": 0.26660481770833333
+    },
+    {
+      "case": "corn",
+      "protected_source_vs_reference_mae": 1.9711585007545929,
+      "source_mask_pixels": 7409,
+      "editable_fraction": 0.16167317708333334
+    }
+  ]
+}
